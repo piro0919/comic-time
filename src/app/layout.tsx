@@ -7,6 +7,7 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
+import { Suspense } from "react";
 import Layout from "./_components/Layout";
 
 const notoSansJP = Noto_Sans_JP({
@@ -66,7 +67,9 @@ export default function RootLayout({
       <body className={notoSansJP.className}>
         <ThemeProvider enableSystem={false}>
           <NuqsAdapter>
-            <Layout>{children}</Layout>
+            <Suspense>
+              <Layout>{children}</Layout>
+            </Suspense>
           </NuqsAdapter>
         </ThemeProvider>
       </body>
