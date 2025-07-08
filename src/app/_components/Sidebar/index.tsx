@@ -1,11 +1,12 @@
 "use client";
 import clsx from "clsx";
-import Link from "next/link";
+import { useQueryState } from "nuqs";
 import useCurrentDay, { days } from "@/app/useCurrentDay";
 import styles from "./style.module.css";
 
 export default function Sidebar(): React.JSX.Element {
   const currentDay = useCurrentDay();
+  const [, setDay] = useQueryState("day");
 
   return (
     <aside className={styles.container}>
@@ -18,9 +19,14 @@ export default function Sidebar(): React.JSX.Element {
               })}
               key={day.en}
             >
-              <Link className={styles.link} href={`/?day=${day.en}`}>
+              <button
+                onClick={() => {
+                  setDay(day.en);
+                }}
+                className={styles.link}
+              >
                 {`${day.ja}曜日`}
-              </Link>
+              </button>
             </li>
           ))}
           <li
@@ -28,9 +34,14 @@ export default function Sidebar(): React.JSX.Element {
               [styles.currentDay]: currentDay?.index === 8,
             })}
           >
-            <Link className={styles.link} href={"/?day=irregular"}>
+            <button
+              onClick={() => {
+                setDay("irregular");
+              }}
+              className={styles.link}
+            >
               不定期
-            </Link>
+            </button>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { useSearchParams } from "next/navigation";
+import { useQueryState } from "nuqs";
 import { useEffect, useMemo, useState } from "react";
 
 export const days = [
@@ -21,8 +21,7 @@ export type CurrentDay =
   | undefined;
 
 export default function useCurrentDay(): CurrentDay {
-  const searchParams = useSearchParams();
-  const day = searchParams.get("day");
+  const [day] = useQueryState("day");
   const [todayDay, setTodayDay] = useState<null | number>(null);
   const currentDay = useMemo(() => {
     if (typeof day === "string") {

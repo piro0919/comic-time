@@ -3,10 +3,11 @@ import { type Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
-import Layout from "./_components/Layout";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
+import Layout from "./_components/Layout";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -64,7 +65,9 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning={true}>
       <body className={notoSansJP.className}>
         <ThemeProvider enableSystem={false}>
-          <Layout>{children}</Layout>
+          <NuqsAdapter>
+            <Layout>{children}</Layout>
+          </NuqsAdapter>
         </ThemeProvider>
       </body>
     </html>

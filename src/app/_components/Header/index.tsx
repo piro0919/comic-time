@@ -2,7 +2,7 @@ import { Menu, MenuButton, MenuDivider, MenuItem } from "@szhsin/react-menu";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { Grape_Nuts } from "next/font/google";
-import Link from "next/link";
+import { useQueryState } from "nuqs";
 import { BsFileEarmarkSpreadsheetFill } from "react-icons/bs";
 import { CgMenuGridO } from "react-icons/cg";
 import { FaMoon, FaSun } from "react-icons/fa";
@@ -26,12 +26,18 @@ export default function Header(): React.JSX.Element {
     isPwa,
     showInstallPrompt,
   } = usePwa();
+  const [, setDay] = useQueryState("day");
 
   return (
     <header className={styles.header}>
-      <Link href="/">
-        <h1 className={clsx(grapeNuts.className, styles.h1)}>ComicTime</h1>
-      </Link>
+      <h1
+        onClick={() => {
+          setDay(null);
+        }}
+        className={clsx(grapeNuts.className, styles.h1)}
+      >
+        ComicTime
+      </h1>
       <Spacer grow={1} />
       <Menu
         menuButton={
