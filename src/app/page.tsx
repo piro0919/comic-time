@@ -1,95 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { parse } from "csv-parse/sync";
+import fs from "fs/promises";
+import ogs from "open-graph-scraper";
+import { type OgObject } from "open-graph-scraper/types";
+import pLimit from "p-limit";
+import env from "@/env";
+import App from "./_components/App";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+type Site = {
+  name: string;
+  ogp: null | OgObject;
+  updateDay: string;
+  updateTime: string;
+  url: string;
+};
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+export async function getSites(): Promise<Site[]> {
+  if (process.env.NODE_ENV === "development") {
+    try {
+      const data = await fs.readFile("sites.json", "utf-8");
+
+      return JSON.parse(data) as Site[];
+    } catch {
+      console.warn("ローカルJSON読み込み失敗、リモートから取得します");
+    }
+  }
+
+  const res = await fetch(env.NEXT_PUBLIC_SITES_CSV_URL, {
+    next: {
+      revalidate: 86400,
+    },
+  });
+  const csv = await res.text();
+  const parsed = parse(csv, {
+    columns: true,
+    skip_empty_lines: true,
+  }) as Site[];
+  const limit = pLimit(5);
+  const sitesWithOgp = await Promise.all(
+    parsed.map(async (site) =>
+      limit(async () => {
+        try {
+          const { result } = await ogs({ url: site.url });
+
+          return { ...site, ogp: result };
+        } catch {
+          return { ...site, ogp: null };
+        }
+      }),
+    ),
   );
+
+  if (process.env.NODE_ENV === "development") {
+    try {
+      await fs.writeFile("sites.json", JSON.stringify(sitesWithOgp, null, 2));
+    } catch (err) {
+      console.warn("sites.json の保存に失敗しました:", err);
+    }
+  }
+
+  return sitesWithOgp;
+}
+
+export default async function Page(): Promise<React.JSX.Element> {
+  const sites = await getSites();
+
+  return <App sites={sites} />;
 }

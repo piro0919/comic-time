@@ -1,0 +1,35 @@
+.header {
+  align-items: center;
+  background: var(--background);
+  display: flex;
+  gap: 12px;
+  height: var(--header-height);
+  padding: 0 12px 0 clamp(12px, 2.5dvw, 24px);
+
+  @media (width >= 768px) {
+    border-bottom: 1px solid hsl(from var(--background) h s calc(l - 24));
+
+    [data-theme="dark"] & {
+      border-color: hsl(from var(--background) h s calc(l + 24));
+    }
+  }
+}
+
+.h1 {
+  font-size: 2.7rem;
+}
+
+.menuItem {
+  font-size: 1.2rem;
+  gap: 12px;
+}
+
+.menuItem:disabled {
+  opacity: 0.5;
+}
+
+.name {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}

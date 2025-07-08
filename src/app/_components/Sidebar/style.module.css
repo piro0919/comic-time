@@ -1,0 +1,19 @@
+.container {
+  padding: 12px 0;
+}
+
+.item {
+  border-radius: 0 50dvmax 50dvmax 0;
+  transition: background 0.25s ease-in-out;
+  width: var(--sidebar-width);
+}
+
+.currentDay {
+  background: var(--highlight);
+}
+
+.link {
+  display: block;
+  font-size: 1.4rem;
+  padding: 12px 24px;
+}

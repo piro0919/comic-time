@@ -1,0 +1,35 @@
+.container {
+  align-items: center;
+  background: var(--background);
+  border-bottom: 1px solid hsl(from var(--background) h s calc(l - 24));
+  display: flex;
+  height: var(--mobile-nav-height);
+  overflow-x: auto;
+  padding: 0 12px;
+  scrollbar-width: none;
+
+  [data-theme="dark"] & {
+    border-color: hsl(from var(--background) h s calc(l + 24));
+  }
+}
+
+.list {
+  display: flex;
+  gap: 6px;
+}
+
+.item {
+  border-radius: 6px;
+  transition: background 0.25s ease-in-out;
+}
+
+.currentDay {
+  background: var(--highlight);
+}
+
+.link {
+  display: block;
+  font-size: 1.4rem;
+  padding: 3px 12px;
+  white-space: nowrap;
+}

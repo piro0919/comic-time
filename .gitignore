@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# service worker
+public/sw*
+public/swe-worker*
+
+# sitemap
+public/sitemap*
+public/robots.txt
+
+# other
+sites.json

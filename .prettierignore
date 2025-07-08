@@ -1,0 +1,20 @@
+# Output
+.next
+out
+coverage
+
+# Static
+.husky
+.lefthook
+*.woff2
+public
+_static
+favicon.ico
+*.png
+
+# Configs & deps
+node_modules
+package-lock.json
+
+# Env
+.env*
