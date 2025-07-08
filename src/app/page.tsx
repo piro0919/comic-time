@@ -14,7 +14,7 @@ type Site = {
   url: string;
 };
 
-export async function getSites(): Promise<Site[]> {
+async function getSites(): Promise<Site[]> {
   if (process.env.NODE_ENV === "development") {
     try {
       const data = await fs.readFile("sites.json", "utf-8");
