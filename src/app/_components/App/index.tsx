@@ -152,9 +152,9 @@ export default function App({ sites }: AppProps): React.JSX.Element {
                   return;
                 }
 
-                favoriteSite[currentDay.en]
-                  .reverse()
-                  .forEach((url) => window.open(url, "_blank"));
+                favoriteSite[currentDay.en].forEach((url) =>
+                  window.open(url, "_blank"),
+                );
               }}
               className={styles.button}
             >
