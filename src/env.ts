@@ -5,6 +5,7 @@ const env = createEnv({
   client: {
     NEXT_PUBLIC_IS_SHOWN_PWA_PROMPT: z
       .string()
+      .default("false")
       .refine((s) => s === "true" || s === "false")
       .transform((s) => s === "true"),
     NEXT_PUBLIC_SITES_CSV_URL: z.string().url(),
