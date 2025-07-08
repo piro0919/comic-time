@@ -180,7 +180,14 @@ export default function App({ sites }: AppProps): React.JSX.Element {
         </section>
       ) : null}
       {hasFavorite && hasNotFavorite ? <hr className={styles.hr} /> : null}
-      {hasNotFavorite ? getList(false) : null}
+      {hasNotFavorite ? (
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.h2}>サイト一覧</h2>
+          </div>
+          {getList(false)}
+        </section>
+      ) : null}
     </div>
   );
 }

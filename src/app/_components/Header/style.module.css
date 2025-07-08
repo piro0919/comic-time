@@ -21,8 +21,9 @@
 }
 
 .menuItem {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   gap: 12px;
+  line-height: 1.8;
 }
 
 .menuItem:disabled {
