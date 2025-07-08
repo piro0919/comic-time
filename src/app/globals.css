@@ -112,3 +112,12 @@ ol,
 ul {
   list-style: none;
 }
+
+.swal2-popup {
+  @media (width < 768px) {
+    font-size: 120%;
+  }
+  @media (width >= 768px) {
+    font-size: 140%;
+  }
+}

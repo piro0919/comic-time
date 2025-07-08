@@ -1,13 +1,18 @@
 "use client";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { type OgObject } from "open-graph-scraper/types";
 import { type ReactNode, useCallback, useMemo } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Spacer from "react-spacer";
 import sortArray from "sort-array";
+import Swal, { type SweetAlertTheme } from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import { useLocalStorage } from "usehooks-ts";
 import useCurrentDay, { type CurrentDay, days } from "@/app/useCurrentDay";
 import styles from "./style.module.css";
+
+const MySwal = withReactContent(Swal);
 
 type Site = {
   name: string;
@@ -40,6 +45,7 @@ export default function App({ sites }: AppProps): React.JSX.Element {
       } as unknown as FavoriteSite,
     ),
   );
+  const { theme } = useTheme();
   const sitesByDay = useMemo(
     () =>
       typeof currentDay?.ja === "string"
@@ -161,16 +167,36 @@ export default function App({ sites }: AppProps): React.JSX.Element {
               すべて開く
             </button>
             <button
-              onClick={() =>
-                setFavoriteSite((prev) =>
-                  currentDay?.en
-                    ? {
-                        ...prev,
-                        [currentDay.en]: [],
-                      }
-                    : prev,
-                )
-              }
+              onClick={() => {
+                void (async (): Promise<void> => {
+                  const result = await MySwal.fire({
+                    cancelButtonText: "キャンセル",
+                    html: (
+                      <p>
+                        {`${currentDay?.ja}${currentDay?.ja && "曜日"}のお気に入りをすべて外します。`}
+                        <br />
+                        よろしいですか？
+                      </p>
+                    ),
+                    icon: "question",
+                    showCancelButton: true,
+                    theme: theme as SweetAlertTheme,
+                  });
+
+                  if (!result.isConfirmed) {
+                    return;
+                  }
+
+                  setFavoriteSite((prev) =>
+                    currentDay?.en
+                      ? {
+                          ...prev,
+                          [currentDay.en]: [],
+                        }
+                      : prev,
+                  );
+                })();
+              }}
               className={styles.button}
             >
               すべて外す
