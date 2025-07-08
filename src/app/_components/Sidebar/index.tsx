@@ -23,7 +23,7 @@ export default function Sidebar(): React.JSX.Element {
                 onClick={() => {
                   setDay(day.en);
                 }}
-                className={styles.link}
+                className={styles.button}
               >
                 {`${day.ja}曜日`}
               </button>
@@ -38,7 +38,7 @@ export default function Sidebar(): React.JSX.Element {
               onClick={() => {
                 setDay("irregular");
               }}
-              className={styles.link}
+              className={styles.button}
             >
               不定期
             </button>

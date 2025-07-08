@@ -3,6 +3,7 @@ import fs from "fs/promises";
 import ogs from "open-graph-scraper";
 import { type OgObject } from "open-graph-scraper/types";
 import pLimit from "p-limit";
+import { Suspense } from "react";
 import env from "@/env";
 import App from "./_components/App";
 
@@ -64,5 +65,9 @@ async function getSites(): Promise<Site[]> {
 export default async function Page(): Promise<React.JSX.Element> {
   const sites = await getSites();
 
-  return <App sites={sites} />;
+  return (
+    <Suspense>
+      <App sites={sites} />
+    </Suspense>
+  );
 }
