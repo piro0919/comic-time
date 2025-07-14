@@ -1,4 +1,5 @@
 "use client";
+import { config, useSpring } from "@react-spring/web";
 import { createUseGesture, dragAction } from "@use-gesture/react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -14,6 +15,10 @@ import { useLocalStorage } from "usehooks-ts";
 import useCurrentDay, { type CurrentDay, days } from "@/app/useCurrentDay";
 import styles from "./style.module.css";
 
+const _config = {
+  soft: config.default,
+  stiff: { friction: 20, tension: 200 },
+};
 const MySwal = withReactContent(Swal);
 const useGesture = createUseGesture([dragAction]);
 
@@ -149,22 +154,32 @@ export default function App({ sites }: AppProps): React.JSX.Element {
     [currentDay?.en, sitesByDay, favoriteSite],
   );
   const [day, setDay] = useQueryState("day");
+  const [props, api] = useSpring(() => ({ x: 0 }));
   const bind = useGesture(
     {
-      onDragEnd: ({ swipe: [swipeX] }) => {
-        if (!swipeX) {
-          return;
+      onDrag: ({ active, offset: [x], swipe: [swipeX] }) => {
+        if (swipeX) {
+          const en = typeof day === "string" ? day : currentDay?.en;
+          const dayIndex = days.findIndex((d) => d.en === en);
+          const nextDayIndex = dayIndex + (swipeX > 0 ? 1 : -1);
+
+          setDay(
+            days.at(nextDayIndex >= days.length ? 0 : nextDayIndex)?.en ?? null,
+          );
         }
 
-        const en = typeof day === "string" ? day : currentDay?.en;
-        const dayIndex = days.findIndex((d) => d.en === en);
-
-        setDay(days.at(dayIndex + (swipeX > 0 ? -1 : 1))?.en ?? null);
+        api.start(
+          active
+            ? { config: _config.stiff, x }
+            : { config: _config.soft, x: 0 },
+        );
       },
     },
     {
       drag: {
         axis: "x",
+        from: () => [props.x.get(), 0],
+        pointer: { capture: false },
       },
     },
   );
