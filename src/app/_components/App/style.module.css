@@ -2,8 +2,9 @@
   align-content: flex-start;
   display: grid;
   gap: 12px;
+  min-height: 100%;
   padding: 12px;
-  touch-action: none;
+  /* touch-action: none; */
 }
 
 .section {
