@@ -38,7 +38,7 @@
     "@secretlint/secretlint-rule-preset-recommend": "9.3.4",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "^22.0.0",
-    "@types/open-graph-scraper": "4.8.5",
+    "@types/open-graph-scraper": "5.2.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/sort-array": "4.1.2",
