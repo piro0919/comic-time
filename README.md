@@ -2,7 +2,7 @@
 
 > Update schedule tracker for web manga sites.
 
-[🔗 Live Site](https://comic-time.vercel.app)
+[🔗 Live Site](https://comictime.kkweb.io/)
 
 ## ✨ Features
 
