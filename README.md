@@ -2,8 +2,6 @@
 
 > Update schedule tracker for web manga sites.
 
-毎日更新されるWeb漫画サイトの更新曜日・時間を一覧でチェック。
-
 [🔗 Live Site](https://comic-time.vercel.app)
 
 ## ✨ Features
@@ -26,3 +24,7 @@
 pnpm install
 pnpm dev
 ```
+
+## 📄 License
+
+MIT
