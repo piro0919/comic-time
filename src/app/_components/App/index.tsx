@@ -1,18 +1,20 @@
 "use client";
 import { config, useSpring } from "@react-spring/web";
 import { createUseGesture, dragAction } from "@use-gesture/react";
+import clsx from "clsx";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { useQueryState } from "nuqs";
-import { type OgObject } from "open-graph-scraper/types";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { type ReactNode, useCallback, useMemo } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Spacer from "react-spacer";
-import sortArray from "sort-array";
 import Swal, { type SweetAlertTheme } from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { useLocalStorage } from "usehooks-ts";
-import useCurrentDay, { type CurrentDay, days } from "@/app/useCurrentDay";
+import { dayHref, dayLabel, days } from "@/app/days";
+import useFavorites from "@/app/useFavorites";
+import useOpened from "@/app/useOpened";
+import { type DayKey, type SiteGroup } from "@/types/work";
 import styles from "./style.module.css";
 
 const _config = {
@@ -22,150 +24,187 @@ const _config = {
 const MySwal = withReactContent(Swal);
 const useGesture = createUseGesture([dragAction]);
 
-type Site = {
-  name: string;
-  ogp: null | OgObject;
-  updateDay: string;
-  updateTime: string;
+/** カードひとつぶん。作品のこともあれば、作品一覧を取れないサイトそのもののこともある */
+type Card = {
+  siteName: string;
+  subtitle: string;
+  thumbnailUrl: null | string;
+  title: string;
   url: string;
 };
 
-type FavoriteSite = {
-  [day in NonNullable<CurrentDay>["en"]]: string[];
+type GroupEntry = {
+  cards: Card[];
+  group: SiteGroup;
 };
 
 export type AppProps = {
-  sites: Site[];
+  day: DayKey;
+  groups: SiteGroup[];
 };
 
-export default function App({ sites }: AppProps): React.JSX.Element {
-  const currentDay = useCurrentDay();
-  const [favoriteSite, setFavoriteSite] = useLocalStorage<FavoriteSite>(
-    "favorite-sites",
-    days.reduce(
-      (acc, day) => {
-        acc[day.en] = [];
-
-        return acc;
-      },
+/** 作品を1件も取れていないサイトは、サイト自身を1枚のカードにする */
+function toCards(group: SiteGroup): Card[] {
+  if (group.works.length === 0) {
+    return [
       {
-        irregular: [],
-      } as unknown as FavoriteSite,
-    ),
-  );
+        siteName: group.siteName,
+        subtitle: group.updateTime === "" ? "" : `${group.updateTime} 更新`,
+        thumbnailUrl: group.thumbnailUrl,
+        title: group.siteName,
+        url: group.siteUrl,
+      },
+    ];
+  }
+
+  return group.works.map<Card>((work) => ({
+    siteName: group.siteName,
+    subtitle: work.author ?? "",
+    thumbnailUrl: work.thumbnailUrl,
+    title: work.title,
+    url: work.url,
+  }));
+}
+
+export default function App({ day, groups }: AppProps): React.JSX.Element {
+  const router = useRouter();
   const { theme } = useTheme();
-  const sitesByDay = useMemo(
-    () =>
-      typeof currentDay?.ja === "string"
-        ? sortArray(sites, { by: ["name"] }).filter((site) =>
-            site.updateDay.includes(currentDay.ja),
-          )
-        : [],
-    [currentDay?.ja, sites],
+  const favorites = useFavorites();
+  const opened = useOpened();
+  const cardsByGroup = useMemo<GroupEntry[]>(
+    () => groups.map((group) => ({ cards: toCards(group), group })),
+    [groups],
   );
-  const getList = useCallback<(isFavorite: boolean) => ReactNode>(
-    (isFavorite) =>
-      currentDay?.en ? (
-        <ul className={styles.list}>
-          {sortArray(
-            sitesByDay.filter((site) =>
-              isFavorite
-                ? favoriteSite[currentDay.en].includes(site.url)
-                : !favoriteSite[currentDay.en].includes(site.url),
-            ),
-            { by: ["updateTime"] },
-          ).map((site) => (
-            <li className={styles.item} key={site.url}>
-              <a
-                className={styles.link}
-                href={site.url}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <div className={styles.thumbnail}>
-                  <Image
-                    alt={site.name}
-                    fill={true}
-                    quality={100}
-                    src={site.ogp?.ogImage?.[0]?.url ?? "/no-image.png"}
-                  />
-                </div>
-                <div>
-                  <div className={styles.name}>{site.name}</div>
-                  <div>
-                    {site.updateDay.length === 7 ? "毎日" : site.updateDay}
-                  </div>
-                  {site.updateTime ? (
-                    <div>{`${site.updateTime} 更新`}</div>
-                  ) : null}
-                </div>
-              </a>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-
-                  setFavoriteSite((prev) => {
-                    if (prev[currentDay.en].includes(site.url)) {
-                      return {
-                        ...prev,
-                        [currentDay.en]: prev[currentDay.en].filter(
-                          (url) => url !== site.url,
-                        ),
-                      };
-                    }
-
-                    return {
-                      ...prev,
-                      [currentDay.en]: [...prev[currentDay.en], site.url],
-                    };
-                  });
-                }}
-                className={styles.favoriteButton}
-              >
-                {favoriteSite[currentDay.en].includes(site.url) ? (
-                  <FaStar color="#ffcd3b" size={21} />
-                ) : (
-                  <FaRegStar color="#ffcd3b" size={21} />
+  const followedGroups = useMemo(
+    () =>
+      cardsByGroup.filter(({ group }) => favorites.followsSite(group.siteUrl)),
+    [cardsByGroup, favorites],
+  );
+  const otherGroups = useMemo(
+    () =>
+      cardsByGroup.filter(({ group }) => !favorites.followsSite(group.siteUrl)),
+    [cardsByGroup, favorites],
+  );
+  const favoriteCards = useMemo(
+    () =>
+      otherGroups
+        .flatMap(({ cards }) => cards)
+        .filter((card) => favorites.hasWork(card.url)),
+    [favorites, otherGroups],
+  );
+  /** 何も登録していない人に空の画面を見せないよう、先頭のサイトだけ開いておく */
+  const isEmpty = favoriteCards.length === 0 && followedGroups.length === 0;
+  const openCount = 3;
+  const getList = useCallback<(cards: Card[], showSite: boolean) => ReactNode>(
+    (cards, showSite) => (
+      <ul className={styles.grid}>
+        {cards.map((card) => (
+          <li
+            className={clsx(styles.card, {
+              [styles.isOpened]: opened.isOpened(card.url),
+            })}
+            key={card.url}
+          >
+            <a
+              onClick={() => {
+                opened.markOpened(card.url);
+              }}
+              className={styles.cardLink}
+              href={card.url}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div className={styles.cover}>
+                <Image
+                  alt=""
+                  fill={true}
+                  quality={100}
+                  sizes="(width < 768px) 45vw, 180px"
+                  src={card.thumbnailUrl ?? "/no-image.png"}
+                />
+                {opened.isOpened(card.url) ? (
+                  <span className={styles.openedMark}>開いた</span>
+                ) : null}
+              </div>
+              <div className={styles.cardBody}>
+                <span className={styles.cardTitle}>{card.title}</span>
+                {showSite ? (
+                  <span className={styles.cardMeta}>{card.siteName}</span>
+                ) : null}
+                {card.subtitle === "" ? null : (
+                  <span className={styles.cardMeta}>{card.subtitle}</span>
                 )}
-              </button>
-            </li>
-          ))}
-        </ul>
-      ) : null,
-    [currentDay?.en, favoriteSite, setFavoriteSite, sitesByDay],
+              </div>
+            </a>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                favorites.toggleWork(card.url);
+              }}
+              aria-label={`${card.title}をお気に入りに入れる`}
+              className={styles.cardStar}
+              type="button"
+            >
+              {favorites.hasWork(card.url) ? (
+                <FaStar color="#ffcd3b" size={18} />
+              ) : (
+                <FaRegStar color="#fff" size={18} />
+              )}
+            </button>
+          </li>
+        ))}
+      </ul>
+    ),
+    [favorites, opened],
   );
-  const hasFavorite = useMemo(
-    () =>
-      currentDay?.en
-        ? sitesByDay.some((site) =>
-            favoriteSite[currentDay.en].includes(site.url),
-          )
-        : false,
-    [currentDay?.en, sitesByDay, favoriteSite],
+  const getSiteSection = useCallback<
+    (entry: GroupEntry, open: boolean) => ReactNode
+  >(
+    ({ cards, group }, open) => (
+      <details className={styles.details} key={group.siteUrl} open={open}>
+        <summary className={styles.summary}>
+          <span className={styles.siteName}>{group.siteName}</span>
+          <span className={styles.meta}>
+            {group.works.length === 0
+              ? "サイトを開く"
+              : `${cards.length}作品${group.updateTime === "" ? "" : ` / ${group.updateTime} 更新`}`}
+          </span>
+          <Spacer grow={1} />
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              favorites.toggleSite(group.siteUrl);
+            }}
+            aria-label={`${group.siteName}をまるごと追う`}
+            className={styles.siteStar}
+            type="button"
+          >
+            {favorites.followsSite(group.siteUrl) ? (
+              <FaStar color="#ffcd3b" size={21} />
+            ) : (
+              <FaRegStar color="#ffcd3b" size={21} />
+            )}
+          </button>
+        </summary>
+        {getList(cards, false)}
+      </details>
+    ),
+    [favorites, getList],
   );
-  const hasNotFavorite = useMemo(
-    () =>
-      currentDay?.en
-        ? sitesByDay.some(
-            (site) => !favoriteSite[currentDay.en].includes(site.url),
-          )
-        : false,
-    [currentDay?.en, sitesByDay, favoriteSite],
-  );
-  const [day, setDay] = useQueryState("day");
   const [props, api] = useSpring(() => ({ x: 0 }));
   const bind = useGesture(
     {
       onDrag: ({ active, offset: [x], swipe: [swipeX] }) => {
         if (swipeX) {
-          const en = typeof day === "string" ? day : currentDay?.en;
-          const dayIndex = days.findIndex((d) => d.en === en);
-          const nextDayIndex = dayIndex + (swipeX > 0 ? 1 : -1);
+          const dayIndex = days.findIndex(({ key }) => key === day);
+          const nextIndex = dayIndex + (swipeX > 0 ? 1 : -1);
+          const next = days.at(nextIndex >= days.length ? 0 : nextIndex);
 
-          setDay(
-            days.at(nextDayIndex >= days.length ? 0 : nextDayIndex)?.en ?? null,
-          );
+          if (next !== undefined) {
+            router.push(dayHref(next.key));
+          }
         }
 
         api.start(
@@ -186,73 +225,95 @@ export default function App({ sites }: AppProps): React.JSX.Element {
 
   return (
     <div {...bind()} className={styles.container}>
-      {hasFavorite ? (
-        <section className={styles.section}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.h2}>お気に入り</h2>
-            <Spacer grow={1} />
-            <button
-              onClick={() => {
-                if (!currentDay?.en) {
-                  return;
-                }
+      {isEmpty ? null : (
+        <>
+          <section className={styles.section}>
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.h2}>{`${dayLabel(day)}のお気に入り`}</h2>
+              <Spacer grow={1} />
+              {favoriteCards.length > 0 ? (
+                <>
+                  <button
+                    onClick={() => {
+                      favoriteCards.forEach((card) => {
+                        window.open(card.url, "_blank");
+                      });
+                    }}
+                    className={styles.button}
+                    type="button"
+                  >
+                    すべて開く
+                  </button>
+                  <button
+                    onClick={() => {
+                      void (async (): Promise<void> => {
+                        const result = await MySwal.fire({
+                          cancelButtonText: "キャンセル",
+                          html: (
+                            <p>
+                              {`${dayLabel(day)}に更新されるお気に入りをすべて外します。`}
+                              <br />
+                              よろしいですか？
+                            </p>
+                          ),
+                          icon: "question",
+                          showCancelButton: true,
+                          theme: theme as SweetAlertTheme,
+                        });
 
-                favoriteSite[currentDay.en].forEach((url) =>
-                  window.open(url, "_blank"),
-                );
-              }}
-              className={styles.button}
-            >
-              すべて開く
-            </button>
-            <button
-              onClick={() => {
-                void (async (): Promise<void> => {
-                  const result = await MySwal.fire({
-                    cancelButtonText: "キャンセル",
-                    html: (
-                      <p>
-                        {`${currentDay?.ja}${currentDay?.ja && "曜日"}のお気に入りをすべて外します。`}
-                        <br />
-                        よろしいですか？
-                      </p>
-                    ),
-                    icon: "question",
-                    showCancelButton: true,
-                    theme: theme as SweetAlertTheme,
-                  });
-
-                  if (!result.isConfirmed) {
-                    return;
-                  }
-
-                  setFavoriteSite((prev) =>
-                    currentDay?.en
-                      ? {
-                          ...prev,
-                          [currentDay.en]: [],
+                        if (!result.isConfirmed) {
+                          return;
                         }
-                      : prev,
-                  );
-                })();
-              }}
-              className={styles.button}
-            >
-              すべて外す
-            </button>
-          </div>
-          {getList(true)}
-        </section>
-      ) : null}
-      {hasFavorite && hasNotFavorite ? <hr className={styles.hr} /> : null}
-      {hasNotFavorite ? (
-        <section className={styles.section}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.h2}>サイト一覧</h2>
-          </div>
-          {getList(false)}
-        </section>
-      ) : null}
+
+                        favoriteCards.forEach((card) => {
+                          favorites.toggleWork(card.url);
+                        });
+                      })();
+                    }}
+                    className={styles.button}
+                    type="button"
+                  >
+                    すべて外す
+                  </button>
+                </>
+              ) : null}
+            </div>
+            {favoriteCards.length > 0 ? (
+              getList(favoriteCards, true)
+            ) : (
+              <p className={styles.empty}>
+                {`登録した作品のうち、${dayLabel(day)}に更新されるものはありません。`}
+              </p>
+            )}
+            {followedGroups.map(
+              (entry): ReactNode => getSiteSection(entry, true),
+            )}
+          </section>
+          <hr className={styles.hr} />
+        </>
+      )}
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.h2}>
+            {isEmpty
+              ? `${dayLabel(day)}に更新される作品`
+              : `${dayLabel(day)}に更新されるその他の作品`}
+          </h2>
+          <Spacer grow={1} />
+          <Link className={styles.button} href="/search">
+            作品を探す
+          </Link>
+        </div>
+        {isEmpty ? (
+          <p className={styles.empty}>
+            星を押すと、その作品やサイトが更新される曜日のページの先頭に出ます。
+          </p>
+        ) : null}
+        {otherGroups.map(
+          (entry, index): ReactNode =>
+            getSiteSection(entry, isEmpty && index < openCount),
+        )}
+      </section>
     </div>
   );
 }

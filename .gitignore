@@ -49,4 +49,4 @@ public/sitemap*
 public/robots.txt
 
 # other
-sites.json
+.playwright-mcp/
