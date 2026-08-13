@@ -1,5 +1,10 @@
 import { defaultCache } from "@serwist/next/worker";
-import { type PrecacheEntry, Serwist, type SerwistGlobalConfig } from "serwist";
+import {
+  NetworkFirst,
+  type PrecacheEntry,
+  Serwist,
+  type SerwistGlobalConfig,
+} from "serwist";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
@@ -13,11 +18,33 @@ declare global {
 
 declare const self: ServiceWorkerGlobalScope;
 
+/**
+ * 既定のページ取得はネットワーク優先で、待ち時間の上限が無い。
+ * 電波が悪く応答が返らない場所で固まるため、数秒でキャッシュに切り替える。
+ */
+const pageCache = {
+  handler: new NetworkFirst({
+    cacheName: "pages",
+    networkTimeoutSeconds: 4,
+  }),
+  matcher: ({
+    request,
+    sameOrigin,
+    url: { pathname },
+  }: {
+    request: Request;
+    sameOrigin: boolean;
+    url: URL;
+  }): boolean =>
+    sameOrigin &&
+    !pathname.startsWith("/api/") &&
+    (request.mode === "navigate" || request.headers.get("RSC") === "1"),
+};
 const serwist = new Serwist({
   clientsClaim: true,
   navigationPreload: true,
   precacheEntries: self.__SW_MANIFEST,
-  runtimeCaching: defaultCache,
+  runtimeCaching: [pageCache, ...defaultCache],
   skipWaiting: true,
 });
 
