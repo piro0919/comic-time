@@ -1,6 +1,10 @@
 name: scrape
 
 on:
+  # CI から取得できるかを確かめるための一時的な起動条件（マージ前に外す）
+  push:
+    branches:
+      - feat/works-level
   schedule:
     # 日本時間 5:00（更新曜日が切り替わったあとに走らせる）
     - cron: "0 20 * * *"
