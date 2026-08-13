@@ -1,0 +1,38 @@
+name: scrape
+
+on:
+  schedule:
+    # 日本時間 5:00（更新曜日が切り替わったあとに走らせる）
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "曜日に関係なく全サイトを取り直す"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # 取得できなかったサイトがあると異常終了する。データは据え置かれる
+      - run: npm run ${{ inputs.all && 'scrape:all' || 'scrape' }}
+      - run: npm run scrape:ogp
+        if: always()
+      - name: commit
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --staged --quiet || git commit -m "chore(data): update works"
+          git push
