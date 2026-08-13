@@ -1,23 +1,17 @@
 .header {
   align-items: center;
-  background: var(--background);
+  backdrop-filter: blur(8px);
+  background: hsl(from var(--background) h s l / 88%);
+  border-bottom: 1px solid var(--border);
   display: flex;
-  gap: 12px;
+  gap: var(--space-3);
   height: var(--header-height);
-  padding: 0 12px 0 clamp(12px, 2.5dvw, 24px);
-
-  @media (width >= 768px) {
-    border-bottom: 1px solid hsl(from var(--background) h s calc(l - 24));
-
-    [data-theme="dark"] & {
-      border-color: hsl(from var(--background) h s calc(l + 24));
-    }
-  }
+  padding: 0 var(--space-3) 0 clamp(var(--space-3), 2.5dvw, var(--space-5));
 }
 
 .h1 {
-  cursor: pointer;
   font-size: 2.7rem;
+  line-height: 1;
 }
 
 .menuItem {
@@ -34,4 +28,28 @@
   align-items: center;
   display: flex;
   gap: 6px;
+}
+
+.search {
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  padding: var(--space-1) var(--space-3);
+  transition: background 0.2s ease;
+}
+
+.search:hover {
+  background: var(--surface);
+}
+
+.searchLabel {
+  font-size: 1.3rem;
+
+  @media (width < 768px) {
+    display: none;
+  }
 }

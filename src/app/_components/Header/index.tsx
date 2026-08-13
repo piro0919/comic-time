@@ -2,10 +2,11 @@ import { Menu, MenuButton, MenuDivider, MenuItem } from "@szhsin/react-menu";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { Grape_Nuts } from "next/font/google";
-import { useQueryState } from "nuqs";
+import Link from "next/link";
 import { BsFileEarmarkSpreadsheetFill } from "react-icons/bs";
 import { CgMenuGridO } from "react-icons/cg";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 import { GrDownload } from "react-icons/gr";
 import { RiExternalLinkFill, RiFileAddFill } from "react-icons/ri";
 import Spacer from "react-spacer";
@@ -26,19 +27,17 @@ export default function Header(): React.JSX.Element {
     isPwa,
     showInstallPrompt,
   } = usePwa();
-  const [, setDay] = useQueryState("day");
 
   return (
     <header className={styles.header}>
-      <h1
-        onClick={() => {
-          setDay(null);
-        }}
-        className={clsx(grapeNuts.className, styles.h1)}
-      >
-        ComicTime
+      <h1 className={clsx(grapeNuts.className, styles.h1)}>
+        <Link href="/">ComicTime</Link>
       </h1>
       <Spacer grow={1} />
+      <Link aria-label="作品を探す" className={styles.search} href="/search">
+        <FaMagnifyingGlass size={16} />
+        <span className={styles.searchLabel}>作品を探す</span>
+      </Link>
       <Menu
         menuButton={
           <MenuButton>
