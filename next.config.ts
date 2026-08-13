@@ -2,7 +2,24 @@
 import withSerwistInit from "@serwist/next";
 import type { NextConfig } from "next";
 
+/**
+ * データ更新のたびにビルドし直すので、ビルド単位でキャッシュを入れ替える。
+ * コミットSHAが無い環境ではビルド時刻を使う（同日に二度ビルドしても入れ替わる）。
+ */
+const revision = process.env.VERCEL_GIT_COMMIT_SHA ?? `${Date.now()}`;
 const withSerwist = withSerwistInit({
+  // 曜日ページは分かれているため、オフラインでも全曜日を開けるよう先に取っておく
+  additionalPrecacheEntries: [
+    "/",
+    "/day/sun",
+    "/day/mon",
+    "/day/tue",
+    "/day/wed",
+    "/day/thu",
+    "/day/fri",
+    "/day/sat",
+    "/day/irregular",
+  ].map((url) => ({ revision, url })),
   disable: process.env.NODE_ENV === "development",
   swDest: "public/sw.js",
   // eslint-disable-next-line write-good-comments/write-good-comments
