@@ -3,7 +3,6 @@ import { type Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
@@ -67,11 +66,9 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning={true}>
       <body className={notoSansJP.className}>
         <ThemeProvider enableSystem={false}>
-          <NuqsAdapter>
-            <Suspense>
-              <Layout>{children}</Layout>
-            </Suspense>
-          </NuqsAdapter>
+          <Suspense>
+            <Layout>{children}</Layout>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>

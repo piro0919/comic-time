@@ -1,47 +1,33 @@
 "use client";
 import clsx from "clsx";
-import { useQueryState } from "nuqs";
-import useCurrentDay, { days } from "@/app/useCurrentDay";
+import Link from "next/link";
+import { dayHref, days } from "@/app/days";
+import useSelectedDay from "@/app/useSelectedDay";
 import styles from "./style.module.css";
 
 export default function Sidebar(): React.JSX.Element {
-  const currentDay = useCurrentDay();
-  const [, setDay] = useQueryState("day");
+  const selectedDay = useSelectedDay();
 
   return (
     <aside className={styles.container}>
       <nav>
-        <ul>
-          {days.map((day, index) => (
+        <ul className={styles.list}>
+          {days.map((day) => (
             <li
               className={clsx(styles.item, {
-                [styles.currentDay]: currentDay?.index === index,
+                [styles.currentDay]: selectedDay === day.key,
               })}
-              key={day.en}
+              key={day.key}
             >
-              <button
-                onClick={() => {
-                  setDay(day.en);
-                }}
-                className={styles.button}
-              >
-                {`${day.ja}曜日`}
-              </button>
+              <Link className={styles.button} href={dayHref(day.key)}>
+                {day.label}
+              </Link>
             </li>
           ))}
-          <li
-            className={clsx(styles.item, {
-              [styles.currentDay]: currentDay?.index === 8,
-            })}
-          >
-            <button
-              onClick={() => {
-                setDay("irregular");
-              }}
-              className={styles.button}
-            >
-              不定期
-            </button>
+          <li className={clsx(styles.item, styles.searchItem)}>
+            <Link className={styles.button} href="/search">
+              作品を探す
+            </Link>
           </li>
         </ul>
       </nav>

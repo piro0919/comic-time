@@ -1,19 +1,45 @@
 .container {
-  padding: 12px 0;
+  padding: var(--space-4) var(--space-2);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-1);
 }
 
 .item {
-  border-radius: 0 50dvmax 50dvmax 0;
-  transition: background 0.25s ease-in-out;
+  border-radius: var(--radius-pill);
+  transition: background 0.2s ease;
+}
+
+.item:hover {
+  background: var(--surface);
+}
+
+.button {
+  border-radius: var(--radius-pill);
+  display: block;
+  font-size: 1.4rem;
+  padding: var(--space-2) var(--space-4);
+  text-align: start;
+  width: 100%;
 }
 
 .currentDay {
   background: var(--highlight);
+  font-weight: 700;
 }
 
-.button {
-  font-size: 1.4rem;
-  padding: 12px 24px;
-  text-align: start;
-  width: var(--sidebar-width);
+.searchItem {
+  margin-top: var(--space-4);
+  position: relative;
+}
+
+/* 曜日と検索の間を区切る線。項目自体は丸いので、線だけ別に引く */
+.searchItem::before {
+  background: var(--border);
+  content: "";
+  height: 1px;
+  inset: calc(var(--space-2) * -1) var(--space-4) auto;
+  position: absolute;
 }

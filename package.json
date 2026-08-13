@@ -46,6 +46,7 @@
     "@typescript-eslint/parser": "8.34.0",
     "@uphold/commitlint-config": "1.1.1",
     "better-typescript-lib": "2.11.0",
+    "cheerio": "1.2.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
     "eslint-config-prettier": "10.1.5",
@@ -95,6 +96,9 @@
     "lint:style": "stylelint --fix '**/*.css'",
     "postbuild": "next-sitemap",
     "prettier": "prettier --write .",
+    "scrape": "node scripts/scrape/index.ts",
+    "scrape:all": "node scripts/scrape/index.ts --all",
+    "scrape:ogp": "node scripts/scrape/ogp.ts",
     "secretlint": "secretlint '**/*'",
     "start": "next start",
     "type-check": "tsc --noemit"
