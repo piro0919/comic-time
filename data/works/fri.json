@@ -144,15 +144,6 @@
     "url": "https://comic-ogyaaa.com/episode/316190247000912898"
   },
   {
-    "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2604/title_thumbnail_list_single/415164.webp?hash=7NoIoV6popOi3VYHL9xb8Q&expires=1787184000",
-    "title": "6年生なのに！",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/2604"
-  },
-  {
     "author": "高橋美由紀",
     "siteName": "チャンピオンクロス",
     "siteUrl": "https://championcross.jp/",
@@ -478,21 +469,21 @@
   },
   {
     "author": "岩永亮太郎",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/594afb94217cb3d44d4cc3b5539daafe89b8b9f9/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F10834108156633069782-05df0fa57268467f8eeb082977a44dd6",
-    "title": "Pumpkin Scissors",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/10834108156633078112"
-  },
-  {
-    "author": "岩永亮太郎",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/10834108156633069782-69e121803244e83163d0eef80106039f?1687533056",
     "title": "Pumpkin Scissors",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/10834108156633078112?from=gmagakichi"
+  },
+  {
+    "author": "岩永亮太郎",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/594afb94217cb3d44d4cc3b5539daafe89b8b9f9/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F10834108156633069782-05df0fa57268467f8eeb082977a44dd6",
+    "title": "Pumpkin Scissors",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/10834108156633078112"
   },
   {
     "author": "加藤元浩",
@@ -883,15 +874,6 @@
   },
   {
     "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/35/title_thumbnail_list_single/416616.webp?hash=lYWO5_cxTvoCAwA8G80FLg&expires=1787184000",
-    "title": "アラフォー賢者の異世界生活日記～気ままな異世界教師ライフ～",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/35"
-  },
-  {
-    "author": null,
     "siteName": "COMIC FUZ",
     "siteUrl": "https://comic-fuz.com/",
     "thumbnailUrl": "https://img.comic-fuz.com/d/1BmOkf/li.webp?h=owGP7vE4UUxGCL8GB7yZ_Q&e=5000000000",
@@ -907,6 +889,15 @@
     "title": "アルマギア Episode.0",
     "updateTime": "12:00",
     "url": "https://comic-action.com/episode/2551460909652848963"
+  },
+  {
+    "author": null,
+    "siteName": "ガンガンONLINE",
+    "siteUrl": "https://www.ganganonline.com/",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2169/title_thumbnail_list_single/387183.webp?hash=dRl2G_DNz8jJdNd_Bj4VLQ&expires=1787270400",
+    "title": "あるるくJKまちある記 気ままにおきらくウォーキング",
+    "updateTime": "0:00",
+    "url": "https://www.ganganonline.com/title/2169"
   },
   {
     "author": "なんじゃもんじゃ/マツオカヨシノリ/るれくちぇ",
@@ -1440,6 +1431,15 @@
     "url": "https://comic-walker.com/detail/KC_008412_S"
   },
   {
+    "author": null,
+    "siteName": "ガンガンONLINE",
+    "siteUrl": "https://www.ganganonline.com/",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1650/web_list_asset_image/426758.webp?hash=011MpI1Ttjb49Lbo8rtWMw&expires=1787270400",
+    "title": "オタクも恋も連鎖する",
+    "updateTime": "0:00",
+    "url": "https://www.ganganonline.com/title/1650"
+  },
+  {
     "author": "芹澤知",
     "siteName": "webアクション",
     "siteUrl": "https://comic-action.com/",
@@ -1729,15 +1729,6 @@
   },
   {
     "author": null,
-    "siteName": "カドコミ",
-    "siteUrl": "https://comic-walker.com/",
-    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019795/resized/cd227d16-0b6e-4fb8-bb85-f5d4c2e0fba7.jpg",
-    "title": "キッチン常夜灯",
-    "updateTime": "11:00",
-    "url": "https://comic-walker.com/detail/KC_019795_S"
-  },
-  {
-    "author": null,
     "siteName": "COMIC FUZ",
     "siteUrl": "https://comic-fuz.com/",
     "thumbnailUrl": "https://img.comic-fuz.com/d/1xjn53/7H.webp?h=kJNhD6-k_X387wptWhTlRA&e=5000000000",
@@ -2023,15 +2014,6 @@
     "title": "ココロメイク コスメティカ",
     "updateTime": "11:00",
     "url": "https://comic-walker.com/detail/KC_009488_S"
-  },
-  {
-    "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2583/title_thumbnail_list_single/421086.webp?hash=woTA7tKU7X7smNMPlVpelA&expires=1787184000",
-    "title": "こじらせ幼馴染みは気付いて欲しい",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/2583"
   },
   {
     "author": null,
@@ -2746,6 +2728,15 @@
   },
   {
     "author": null,
+    "siteName": "竹コミ！",
+    "siteUrl": "https://takecomic.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2335374/2026073113245233113433CDD86496E90D02FE867399588FB-sm.webp",
+    "title": "ちょっとエッチなBCアンソロジーコレクション",
+    "updateTime": "",
+    "url": "https://takecomic.jp/series/2e6eb851c0a8a"
+  },
+  {
+    "author": null,
     "siteName": "くらげバンチ",
     "siteUrl": "https://kuragebunch.com/",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5fb7410306bcad2f5ebc35970ec88f35f613278f/enlarge=0;height=160;no_unsharpmask=1;quality=90;version=1;width=160/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-thumbnail%2F10834108156629298292-a152b9305479defd27cbad2bce4b9111%3F1759971792",
@@ -2764,21 +2755,21 @@
   },
   {
     "author": "くぼたふみお",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/1a678bf2ce9a461fff91869e74ffe95f44a3ea28/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550689798733397159-d1a89187444fa67a3320cb40b731cc6e",
-    "title": "チンチンデビルを追え！",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2550689798733447156"
-  },
-  {
-    "author": "くぼたふみお",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2550689798733397159-0ca4702c63b2f271614ef0012d7a54db?1720151894",
     "title": "チンチンデビルを追え！",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2550689798733447156?from=gmagakichi"
+  },
+  {
+    "author": "くぼたふみお",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/1a678bf2ce9a461fff91869e74ffe95f44a3ea28/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550689798733397159-d1a89187444fa67a3320cb40b731cc6e",
+    "title": "チンチンデビルを追え！",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2550689798733447156"
   },
   {
     "author": "稚野まちこ",
@@ -2793,7 +2784,7 @@
     "author": null,
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1926/title_thumbnail_list_single/373755.webp?hash=WSLmUlm_NvqFxjyLLRnY_A&expires=1787184000",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1926/title_thumbnail_list_single/373755.webp?hash=sxexEnaDUSxS8OFYBIhctA&expires=1787270400",
     "title": "つくもの万処",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/title/1926"
@@ -3045,7 +3036,7 @@
     "author": "島袋光年",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/0e6a21ca64873e353afbbee012142630b0ec9d9a/enlarge=0;height=216;no_unsharpmask=1;quality=90;version=1;width=216/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Frppp-thumbnail_image%2F9253191255393120516-76133fa97f8fce7786263f99ff8d729d%3F1784105880",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/acdc063501085271b0a320a6d149463986f3a4ca/enlarge=0;height=216;no_unsharpmask=1;quality=90;version=1;width=216/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F10833519556325021792-3bd4f015d82e6c57e6059f825ede75d7%3F1773822611",
     "title": "トリコ",
     "updateTime": "0:00",
     "url": "https://shonenjumpplus.com/episode/10833519556325021793"
@@ -3868,15 +3859,6 @@
     "title": "ぽむ☆マギ",
     "updateTime": "0:00",
     "url": "https://comic-fuz.com/manga/185"
-  },
-  {
-    "author": "井出智香恵",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/20250523184549780C4C47CCA93D513A2172242646466272A-sm.webp",
-    "title": "ホワイトハッカーセレクション　～ロマンス詐欺にご用心～",
-    "updateTime": "0:00",
-    "url": "https://championcross.jp/series/62fd1a70ae683"
   },
   {
     "author": null,
@@ -4998,7 +4980,7 @@
     "author": null,
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2652/title_thumbnail_list_single/425171.webp?hash=VdhyYgsdLalYsq9f-eeNVg&expires=1787184000",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2652/title_thumbnail_list_single/425171.webp?hash=Y53PemTKiPpw0fJ31o6SlQ&expires=1787270400",
     "title": "異常犯罪捜査記録バースデイ",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/title/2652"
@@ -5095,15 +5077,6 @@
   },
   {
     "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/733/title_thumbnail_list_single/399504.webp?hash=JrqpF0r303ieXPqJOZtdhA&expires=1787184000",
-    "title": "異世界賢者の転生無双 ～ゲームの知識で異世界最強～",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/733"
-  },
-  {
-    "author": null,
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/519/title_grid_wide_o_201804061805139284aa79d9265b4f916f1d1eeb440824.png",
@@ -5128,6 +5101,15 @@
     "title": "異世界転移で女神様から祝福を！～いえ、手持ちの異能があるので結構です～@COMIC",
     "updateTime": "12:00",
     "url": "https://magcomi.com/episode/2550912964551996055"
+  },
+  {
+    "author": null,
+    "siteName": "ガンガンONLINE",
+    "siteUrl": "https://www.ganganonline.com/",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1204/title_thumbnail_list_single/388764.webp?hash=lll_KC3-zVhcMxkocgtAbg&expires=1787270400",
+    "title": "異世界転生で賢者になって冒険者生活 ～【魔法改良】で異世界最強～",
+    "updateTime": "0:00",
+    "url": "https://www.ganganonline.com/title/1204"
   },
   {
     "author": "しばの番茶/ケンイチ/ネム",
@@ -5214,7 +5196,7 @@
     "author": null,
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/39/title_thumbnail_list_single/414273.webp?hash=Jlab4oQda72NdWABkWZ09g&expires=1787184000",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/39/title_thumbnail_list_single/414273.webp?hash=K_Nu75leGSvQAPEbk6GIeg&expires=1787270400",
     "title": "英雄教室",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/title/39"
@@ -5479,15 +5461,6 @@
     "title": "花燭の白",
     "updateTime": "12:00",
     "url": "https://zerosumonline.com/detail/kashoku"
-  },
-  {
-    "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2175/title_thumbnail_list_single/404646.webp?hash=89rd6RufQNdezvbSOolNuQ&expires=1787184000",
-    "title": "華麗なるエロ漫画部",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/2175"
   },
   {
     "author": "温泉卵(原作)山田モジ美(漫画)植田リョウ(キャラクター原案)",
@@ -5878,6 +5851,15 @@
   },
   {
     "author": "成家慎一郎",
+    "siteName": "月マガ基地",
+    "siteUrl": "https://getsumagakichi.com/",
+    "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/14079602755329167940-b310e94dcc563f53f67ee78678f24b3a?1703468518",
+    "title": "教え子くんとはデキません",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/14079602755346262357?from=gmagakichi"
+  },
+  {
+    "author": "成家慎一郎",
     "siteName": "コミックDAYS",
     "siteUrl": "https://comic-days.com/",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/80dfadc8028b555391406258ea749ad3beba3b72/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F14079602755329167940-29d14758ffcbd804f046857ebe543f8d",
@@ -5893,15 +5875,6 @@
     "title": "教え子くんとはデキません",
     "updateTime": "0:00",
     "url": "https://yanmaga.jp/comics/%E6%95%99%E3%81%88%E5%AD%90%E3%81%8F%E3%82%93%E3%81%A8%E3%81%AF%E3%83%87%E3%82%AD%E3%81%BE%E3%81%9B%E3%82%93"
-  },
-  {
-    "author": "成家慎一郎",
-    "siteName": "月マガ基地",
-    "siteUrl": "https://getsumagakichi.com/",
-    "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/14079602755329167940-b310e94dcc563f53f67ee78678f24b3a?1703468518",
-    "title": "教え子くんとはデキません",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/14079602755346262357?from=gmagakichi"
   },
   {
     "author": "海月れおな",
@@ -6670,21 +6643,21 @@
   },
   {
     "author": "青空あかな/七福あくび/黒裄",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e79d8edc2691d7739bcd17589547e11229a20f7c/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550912965602811076-2b21efff5a5c7ce4c00dec112ae90614%3F1746688175",
-    "title": "婚約破棄された飯炊き令嬢の私は冷酷公爵と専属契約しました～ですが胃袋を掴んだ結果、冷たかった公爵様がどんどん優しくなっています～",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/series"
-  },
-  {
-    "author": "青空あかな/七福あくび/黒裄",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2550912965602811076-6f00eedbed8359e6f4689dbb632b7cde?1746688182",
     "title": "婚約破棄された飯炊き令嬢の私は冷酷公爵と専属契約しました～ですが胃袋を掴んだ結果、冷たかった公爵様がどんどん優しくなっています～",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2550912965740068326?from=gmagakichi"
+  },
+  {
+    "author": "青空あかな/七福あくび/黒裄",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e79d8edc2691d7739bcd17589547e11229a20f7c/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550912965602811076-2b21efff5a5c7ce4c00dec112ae90614%3F1746688175",
+    "title": "婚約破棄された飯炊き令嬢の私は冷酷公爵と専属契約しました～ですが胃袋を掴んだ結果、冷たかった公爵様がどんどん優しくなっています～",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/series"
   },
   {
     "author": "コミック：コヤマナユ/原作：杓子ねこ/キャラクター原案：ねぎしきょうこ",
@@ -6760,21 +6733,21 @@
   },
   {
     "author": "斯道歩/明石六郎",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a50b92c2e32217746f6d978694f384048b735c67/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460909469536699-0d0fde5166883d9c8d4a69e7a0c77284%3F1755509234",
-    "title": "最強出戻り中年冒険者は、今さら命なんてかけたくない",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2551460909469539922"
-  },
-  {
-    "author": "斯道歩/明石六郎",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2551460909469536699-00169126f14ec762411b2709d5d769f8?1755509228",
     "title": "最強出戻り中年冒険者は、今さら命なんてかけたくない",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2551460909469539922?from=gmagakichi"
+  },
+  {
+    "author": "斯道歩/明石六郎",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a50b92c2e32217746f6d978694f384048b735c67/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460909469536699-0d0fde5166883d9c8d4a69e7a0c77284%3F1755509234",
+    "title": "最強出戻り中年冒険者は、今さら命なんてかけたくない",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2551460909469539922"
   },
   {
     "author": "八鷺一郎",
@@ -6823,21 +6796,21 @@
   },
   {
     "author": "井龍一/瀬尾知汐",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/50721e05923734ca2cc6f65c2b02690608737331/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550689798884227395-4607058729b3a73a0cb7e76c3a85e092",
-    "title": "罪と罰のスピカ",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2550689798902002735"
-  },
-  {
-    "author": "井龍一/瀬尾知汐",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2550689798884227395-12abc3202a46e5391806f915c6f60c5d?1722213758",
     "title": "罪と罰のスピカ",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2550689798902002735?from=gmagakichi"
+  },
+  {
+    "author": "井龍一/瀬尾知汐",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/50721e05923734ca2cc6f65c2b02690608737331/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550689798884227395-4607058729b3a73a0cb7e76c3a85e092",
+    "title": "罪と罰のスピカ",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2550689798902002735"
   },
   {
     "author": null,
@@ -7254,15 +7227,6 @@
     "url": "https://pocket.shonenmagazine.com/title/02818/episode/416711"
   },
   {
-    "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2253/title_thumbnail_list_single/421041.webp?hash=5jhzDGiOnZk2DFaAktpDEA&expires=1787184000",
-    "title": "蛇神くんは寒いと変身しちゃうから",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/2253"
-  },
-  {
     "author": "コミック：田中ててて/原作：天の葉/キャラクター原案：花綵いおり",
     "siteName": "ゼロサムオンライン",
     "siteUrl": "https://zerosumonline.com/",
@@ -7309,21 +7273,21 @@
   },
   {
     "author": "Reppuu/まるやす",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/6ffd6f6da2fe47604522e6b7ef8c2c1659305e76/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421983398134753-b2ba81173b01bf5845d7f963f80aa519%3F1774939070",
-    "title": "種生産　～このスキルがチートだとまだ誰も気付いていない～",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/12207421983410089641"
-  },
-  {
-    "author": "Reppuu/まるやす",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/12207421983398134753-27985a77dcecd3cad32ef19ef64d82e0?1774939059",
     "title": "種生産　～このスキルがチートだとまだ誰も気付いていない～",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/12207421983410089641?from=gmagakichi"
+  },
+  {
+    "author": "Reppuu/まるやす",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/6ffd6f6da2fe47604522e6b7ef8c2c1659305e76/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421983398134753-b2ba81173b01bf5845d7f963f80aa519%3F1774939070",
+    "title": "種生産　～このスキルがチートだとまだ誰も気付いていない～",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/12207421983410089641"
   },
   {
     "author": null,
@@ -7453,21 +7417,21 @@
   },
   {
     "author": "三浦有為子/夏輝一生/pomodorosa",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ca09b857443841deee7f8abf42125eb35f6adff3/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460910070695028-82cc0a58f9299dedf35e3c78136e5711%3F1769569358",
-    "title": "渋沢栄一が転生したらアラサー派遣OLだった件",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2551460910070696138"
-  },
-  {
-    "author": "三浦有為子/夏輝一生/pomodorosa",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2551460910070695028-38421c03cb137538b9456bcd2752fd3f?1769569350",
     "title": "渋沢栄一が転生したらアラサー派遣OLだった件",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2551460910070696138?from=gmagakichi"
+  },
+  {
+    "author": "三浦有為子/夏輝一生/pomodorosa",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ca09b857443841deee7f8abf42125eb35f6adff3/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460910070695028-82cc0a58f9299dedf35e3c78136e5711%3F1769569358",
+    "title": "渋沢栄一が転生したらアラサー派遣OLだった件",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2551460910070696138"
   },
   {
     "author": "武本糸会/上橋菜穂子",
@@ -7482,7 +7446,7 @@
     "author": null,
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2541/title_thumbnail_list_single/414792.webp?hash=2-ItkHV5cBBoNq5s-H-IXg&expires=1787184000",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2541/title_thumbnail_list_single/414792.webp?hash=V7GKyZS5IhzyA7ygRDn5Cw&expires=1787270400",
     "title": "宿屋の看板娘、公爵令嬢と入れかわる",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/title/2541"
@@ -7567,15 +7531,6 @@
     "title": "女子かう生",
     "updateTime": "12:00",
     "url": "https://comic-action.com/episode/3269754496421866389"
-  },
-  {
-    "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2394/title_thumbnail_list_single/408711.webp?hash=YbW2yjg1p2jxygTBEbSxSw&expires=1787184000",
-    "title": "女子高校生の日常",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/2394"
   },
   {
     "author": null,
@@ -7941,7 +7896,7 @@
     "author": null,
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2190/title_thumbnail_list_single/407007.webp?hash=DsYtVyARq8-SpsaDFweUGA&expires=1787184000",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2190/title_thumbnail_list_single/407007.webp?hash=dtj2fnjV66DXnRWzxO8VoQ&expires=1787270400",
     "title": "推しの死を覆す。",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/title/2190"
@@ -8029,6 +7984,15 @@
   },
   {
     "author": "坂木持丸/riritto/戸賀環",
+    "siteName": "月マガ基地",
+    "siteUrl": "https://getsumagakichi.com/",
+    "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/4856001361157374503-31c9cd973820c708f45975ec93344f89?1699499102",
+    "title": "世界最強の魔女、始めました　～私だけ『攻略サイト』を見れる世界で自由に生きます～",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/4856001361157619447?from=gmagakichi"
+  },
+  {
+    "author": "坂木持丸/riritto/戸賀環",
     "siteName": "コミックDAYS",
     "siteUrl": "https://comic-days.com/",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f19355b2872d76bbe008c3cff92b542873576cd3/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F4856001361157374503-e228de98170e82e1951ea2d7e7b9d743",
@@ -8044,15 +8008,6 @@
     "title": "世界最強の魔女、始めました　～私だけ『攻略サイト』を見れる世界で自由に生きます～",
     "updateTime": "0:00",
     "url": "https://pocket.shonenmagazine.com/title/02363/episode/386992"
-  },
-  {
-    "author": "坂木持丸/riritto/戸賀環",
-    "siteName": "月マガ基地",
-    "siteUrl": "https://getsumagakichi.com/",
-    "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/4856001361157374503-31c9cd973820c708f45975ec93344f89?1699499102",
-    "title": "世界最強の魔女、始めました　～私だけ『攻略サイト』を見れる世界で自由に生きます～",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/4856001361157619447?from=gmagakichi"
   },
   {
     "author": "日野村羽根",
@@ -8191,21 +8146,21 @@
   },
   {
     "author": "伊賀海栗/足戸手斗",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a6f25448eba49612e5f17d71fd23896f6875d793/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550912964422327379-1ddd8d6fefcd77b9f1577664bb4387ed",
-    "title": "聖女様をお探しでしたら妹で間違いありません。さあどうぞお連れください、今すぐ。",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2550912964457140343"
-  },
-  {
-    "author": "伊賀海栗/足戸手斗",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2550912964422327379-695468ba7e812be454dcdf09a7a3d691?1722836387",
     "title": "聖女様をお探しでしたら妹で間違いありません。さあどうぞお連れください、今すぐ。",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2550912964457140343?from=gmagakichi"
+  },
+  {
+    "author": "伊賀海栗/足戸手斗",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a6f25448eba49612e5f17d71fd23896f6875d793/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2550912964422327379-1ddd8d6fefcd77b9f1577664bb4387ed",
+    "title": "聖女様をお探しでしたら妹で間違いありません。さあどうぞお連れください、今すぐ。",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2550912964457140343"
   },
   {
     "author": "車田正美(原作)サイトウケンジ(脚本)上田信舟(作画)",
@@ -8245,21 +8200,21 @@
   },
   {
     "author": "久生夕貴/和田あつむ",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d25ef017fc181264187563967353f7241a58c9fc/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421983726646478-9aea01cc356d53503585408c86c589c4%3F1779783787",
-    "title": "青麦と時鳥",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/12207421983800314950"
-  },
-  {
-    "author": "久生夕貴/和田あつむ",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/12207421983726646478-ce9bca3482a993cab70a163fb0a98219?1779783777",
     "title": "青麦と時鳥",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/12207421983800314950?from=gmagakichi"
+  },
+  {
+    "author": "久生夕貴/和田あつむ",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d25ef017fc181264187563967353f7241a58c9fc/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421983726646478-9aea01cc356d53503585408c86c589c4%3F1779783787",
+    "title": "青麦と時鳥",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/12207421983800314950"
   },
   {
     "author": "石田リンネ(原作)高瀬わか(ネーム構成)五ツ星かかお(作画)",
@@ -8416,21 +8371,21 @@
   },
   {
     "author": "三川みり/小葉かんば",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f779d060c04a72042ebf699dd24ff8691c11328c/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421984001199957-8c7c4db2f8a967db9486de4678ced2d1%3F1784856473",
-    "title": "蒼天の巨城国",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/12207421984055493881"
-  },
-  {
-    "author": "三川みり/小葉かんば",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/12207421984001199957-224609bf6e54efc4f6da0abb1ac86016?1784856472",
     "title": "蒼天の巨城国",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/12207421984055493881?from=gmagakichi"
+  },
+  {
+    "author": "三川みり/小葉かんば",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f779d060c04a72042ebf699dd24ff8691c11328c/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421984001199957-8c7c4db2f8a967db9486de4678ced2d1%3F1784856473",
+    "title": "蒼天の巨城国",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/12207421984055493881"
   },
   {
     "author": "飛高達哉",
@@ -8740,21 +8695,21 @@
   },
   {
     "author": "業務用餅/六志麻あさ/ｋｉｓｕｉ",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/38b69cd5c475eb9f94f69e81d7fc089e200ead50/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F3269754496723134437-19b0aede08cfbbd363f0b142bec1aaa4",
-    "title": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。 ～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/3269754496723442126"
-  },
-  {
-    "author": "業務用餅/六志麻あさ/ｋｉｓｕｉ",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/3269754496723134437-6bfac4fd50e87b54bd76e028fd6ec1eb?1770614045",
     "title": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。 ～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/3269754496723442126?from=gmagakichi"
+  },
+  {
+    "author": "業務用餅/六志麻あさ/ｋｉｓｕｉ",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/38b69cd5c475eb9f94f69e81d7fc089e200ead50/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F3269754496723134437-19b0aede08cfbbd363f0b142bec1aaa4",
+    "title": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。 ～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/3269754496723442126"
   },
   {
     "author": null,
@@ -8856,6 +8811,15 @@
     "url": "https://pocket.shonenmagazine.com/title/02952/episode/423568"
   },
   {
+    "author": "富安陽子/深山和香",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/6bd8d9639d9178f85ccaf01b1234d621ed86e82f/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421984001199959-044ecd1ac5d7b9e93de4f043f84af866%3F1785299822",
+    "title": "天と地の方程式",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/12207421984030904039"
+  },
+  {
     "author": "コミック：環/原作：里海慧/キャラクター原案：條",
     "siteName": "ゼロサムオンライン",
     "siteUrl": "https://zerosumonline.com/",
@@ -8904,7 +8868,7 @@
     "author": null,
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1644/title_thumbnail_list_single/424089.webp?hash=N3W7usXutmH0gdpNWoefag&expires=1787184000",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1644/title_thumbnail_list_single/424089.webp?hash=cxaMCkY4hpwytoGDX8pJbA&expires=1787270400",
     "title": "転生したら序盤で死ぬ中ボスだった ―ヒロイン眷属化で生き残る―",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/title/1644"
@@ -9496,21 +9460,21 @@
   },
   {
     "author": "和武はざの",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5189af699d40fd08e8a43fdf436ba0cf234d70b6/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F10834108156634548480-a76b57361f585f6f515f4ff2b5705409",
-    "title": "白聖女と黒牧師",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/10834108156634772591"
-  },
-  {
-    "author": "和武はざの",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/10834108156634548480-e93322d423940a5474886eb9d18183c2?1700804275",
     "title": "白聖女と黒牧師",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/10834108156634772591?from=gmagakichi"
+  },
+  {
+    "author": "和武はざの",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5189af699d40fd08e8a43fdf436ba0cf234d70b6/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F10834108156634548480-a76b57361f585f6f515f4ff2b5705409",
+    "title": "白聖女と黒牧師",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/10834108156634772591"
   },
   {
     "author": null,
@@ -9583,6 +9547,15 @@
     "title": "飯炊き女にヤクザの愛は重すぎる",
     "updateTime": "12:00",
     "url": "https://magcomi.com/episode/14079602755160763705"
+  },
+  {
+    "author": null,
+    "siteName": "ガンガンONLINE",
+    "siteUrl": "https://www.ganganonline.com/",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2082/title_thumbnail_list_single/391275.webp?hash=tGCD1Mzx8Ky8GClneoLAbQ&expires=1787270400",
+    "title": "彼女がクズを愛するワケは。",
+    "updateTime": "0:00",
+    "url": "https://www.ganganonline.com/title/2082"
   },
   {
     "author": "磐秋ハル",
@@ -9732,7 +9705,7 @@
     "author": null,
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/481/title_thumbnail_list_single/401739.webp?hash=0j6TZaM7gmVkWgQEoOcMkw&expires=1787184000",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/481/title_thumbnail_list_single/401739.webp?hash=k1C-TUtdCgB5-5Jt6kVLtw&expires=1787270400",
     "title": "不徳のギルド",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/title/481"
@@ -9817,6 +9790,15 @@
     "title": "聞いてくれますよね？先輩",
     "updateTime": "12:00",
     "url": "https://tonarinoyj.jp/episode/3269754496881993582"
+  },
+  {
+    "author": "鍋敷/うろざね",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/74f2c6ea378299030a783a43cfa5af6d451d8c81/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F12207421983893924879-ae949037018e3bf58796ceb720ef0228%3F1783493998",
+    "title": "平穏に生きたい【ステータスオール１】は今日も今日とて世界を救う。",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/12207421983943213196"
   },
   {
     "author": null,
@@ -10242,13 +10224,13 @@
     "url": "https://comic-fuz.com/manga/1958"
   },
   {
-    "author": "佐倉涼/内田ぱる/ウラシマ/伊藤テリヤキ",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/64f967ce1a510b1eb81ece3833c22aadb719104d/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460909660834600-dec69fb3e28e3987930d1d2d9d7e1cc1%3F1760493250",
-    "title": "万能メイドと公爵様の楽しい日々",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2551460909687467656"
+    "author": null,
+    "siteName": "ガンガンONLINE",
+    "siteUrl": "https://www.ganganonline.com/",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/71/title_thumbnail_list_single/407850.webp?hash=DWrN3XnOMkHmrrCNjXx1pw&expires=1787270400",
+    "title": "万年Dランクの中年冒険者、酔った勢いで伝説の剣を引っこ抜く",
+    "updateTime": "0:00",
+    "url": "https://www.ganganonline.com/title/71"
   },
   {
     "author": "佐倉涼/内田ぱる/ウラシマ/伊藤テリヤキ",
@@ -10258,6 +10240,15 @@
     "title": "万能メイドと公爵様の楽しい日々",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2551460909687467656?from=gmagakichi"
+  },
+  {
+    "author": "佐倉涼/内田ぱる/ウラシマ/伊藤テリヤキ",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/64f967ce1a510b1eb81ece3833c22aadb719104d/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460909660834600-dec69fb3e28e3987930d1d2d9d7e1cc1%3F1760493250",
+    "title": "万能メイドと公爵様の楽しい日々",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2551460909687467656"
   },
   {
     "author": "山崎京/戯曲 ミュージカル『刀剣乱舞』 ～阿津賀志山異聞～（脚本：御笠ノ忠次）/ミュージカル『刀剣乱舞』製作委員会/「刀剣乱舞-ONLINE-」より（DMM GAMES／Nitroplus）",
@@ -10359,13 +10350,13 @@
     "url": "https://magcomi.com/episode/3269754496708574463"
   },
   {
-    "author": null,
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/72/title_thumbnail_list_single/382616.webp?hash=jtTy_Oq3GDfoODzKAG3eTw&expires=1787184000",
-    "title": "無能なナナ",
-    "updateTime": "0:00",
-    "url": "https://www.ganganonline.com/title/72"
+    "author": "遠藤浩輝",
+    "siteName": "月マガ基地",
+    "siteUrl": "https://getsumagakichi.com/",
+    "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2550689798333862446-d8daabeb1238dd641718aceb871f6777?1711348419",
+    "title": "無敗のふたり",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2550689798333888056?from=gmagakichi"
   },
   {
     "author": null,
@@ -10375,15 +10366,6 @@
     "title": "無敗のふたり",
     "updateTime": "0:00",
     "url": "https://pocket.shonenmagazine.com/title/02694/episode/406352"
-  },
-  {
-    "author": "遠藤浩輝",
-    "siteName": "月マガ基地",
-    "siteUrl": "https://getsumagakichi.com/",
-    "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2550689798333862446-d8daabeb1238dd641718aceb871f6777?1711348419",
-    "title": "無敗のふたり",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2550689798333888056?from=gmagakichi"
   },
   {
     "author": "山本真也",
@@ -10564,6 +10546,15 @@
     "title": "友達の姉ちゃんに恋した話",
     "updateTime": "0:00",
     "url": "https://pocket.shonenmagazine.com/title/02272/episode/381783"
+  },
+  {
+    "author": null,
+    "siteName": "ガンガンONLINE",
+    "siteUrl": "https://www.ganganonline.com/",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/505/title_thumbnail_list_single/408465.webp?hash=CI_AmSUf0o4WMLtmU04X5w&expires=1787270400",
+    "title": "友達の妹が俺にだけウザい",
+    "updateTime": "0:00",
+    "url": "https://www.ganganonline.com/title/505"
   },
   {
     "author": "さかめがね",
@@ -10747,21 +10738,21 @@
   },
   {
     "author": "黒井白",
-    "siteName": "コミックDAYS",
-    "siteUrl": "https://comic-days.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/02341ba3b7c9a012fdc138a02f801d25a5aeeb7a/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460909616336065-e4e2718e7cb4b0776f5e231ae5801ed4%3F1758690851",
-    "title": "龍狩のナト",
-    "updateTime": "12:00",
-    "url": "https://comic-days.com/episode/2551460909656239185"
-  },
-  {
-    "author": "黒井白",
     "siteName": "月マガ基地",
     "siteUrl": "https://getsumagakichi.com/",
     "thumbnailUrl": "https://cdn-img.comic-days.com/public/series-thumbnail/2551460909616336065-b7b4a544bc039ebb9628e8c42c720b29?1771238225",
     "title": "龍狩のナト",
     "updateTime": "12:00",
     "url": "https://comic-days.com/episode/2551460909656239185?from=gmagakichi"
+  },
+  {
+    "author": "黒井白",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/02341ba3b7c9a012fdc138a02f801d25a5aeeb7a/enlarge=0;height=280;no_unsharpmask=1;quality=90;version=1;width=280/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F2551460909616336065-e4e2718e7cb4b0776f5e231ae5801ed4%3F1758690851",
+    "title": "龍狩のナト",
+    "updateTime": "12:00",
+    "url": "https://comic-days.com/episode/2551460909656239185"
   },
   {
     "author": null,
