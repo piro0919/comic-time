@@ -68,15 +68,12 @@ All commits are automatically checked for:
 - Secret detection
 - Conventional commit message format
 
-### サイト一覧の管理
+### サイトの追加と取得
 
-対象サイトの台帳は Notion の「ComicTime サイト一覧」に置く。
-<https://app.notion.com/p/dc773636fbac4ddcb9094cfdc05011af>
-
-- `src/data/sites.json` は書き出した結果であり、直接編集しない
-- Notion を直したら Claude Code に読ませて `src/data/sites.json` を書き直し、差分をコミットする。Notion へ繋ぐのは Claude Code（`notion-personal` MCP）だけで、リポジトリ側にトークンは置かない
-- ビルドや GitHub Actions から Notion は叩かない
-- 「取得設定」列は `itemSelector=.foo; headingText=今日の更新` の形。値にセミコロンは使えない
+- サイトの台帳は `src/data/sites.json`。名前・更新曜日・更新時刻・URL だけを持つ
+- 取得の仕方は `scripts/scrape/sources/` に1サイト1ファイルで書き、`sources/index.ts` に URL とともに登録する
+- 各ソースは「その日更新された作品」だけを返す。取れなければ例外を投げ、そのサイトはその日が空になる
+- `data/works/<日付>.json` に7日ぶんを保存し、古い日は消す
 
 ### Application Structure
 
