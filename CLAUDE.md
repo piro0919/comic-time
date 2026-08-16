@@ -68,6 +68,17 @@ All commits are automatically checked for:
 - Secret detection
 - Conventional commit message format
 
+### サイト一覧の管理
+
+対象サイトの台帳は Notion の「ComicTime サイト一覧」に置く。
+<https://app.notion.com/p/dc773636fbac4ddcb9094cfdc05011af>
+
+- `src/data/sites.json` は書き出した結果であり、直接編集しない
+- Notion を直したら `npm run sites:pull` で書き出し、差分をコミットする
+- ビルドや GitHub Actions から Notion は叩かない
+- 実行には `.env.local` に `NOTION_TOKEN` と `NOTION_SITES_DATABASE_ID` が要る
+- 「取得設定」列は `itemSelector=.foo; headingText=今日の更新` の形。値にセミコロンは使えない
+
 ### Application Structure
 
 - `src/app/` - Next.js App Router pages and components
