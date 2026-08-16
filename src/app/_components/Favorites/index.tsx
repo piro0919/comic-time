@@ -34,9 +34,9 @@ export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
     return (
       <div className={styles.container}>
         <p className={styles.empty}>
-          この一週間で、登録した作品の更新はありません。
-          <br />
-          日付のページで作品の星を押すと、ここに集まります。
+          {favorites.workUrls.length === 0
+            ? "お気に入り登録した作品が、ここに表示されます。"
+            : "この一週間、更新はありません。"}
         </p>
       </div>
     );
