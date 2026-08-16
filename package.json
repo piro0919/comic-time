@@ -99,6 +99,7 @@
     "scrape": "node scripts/scrape/index.ts",
     "scrape:ogp": "node scripts/scrape/ogp.ts",
     "secretlint": "secretlint '**/*'",
+    "sites:pull": "node --env-file-if-exists=.env.local scripts/sites/pull.ts",
     "start": "next start",
     "type-check": "tsc --noemit"
   },
