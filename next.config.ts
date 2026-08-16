@@ -18,7 +18,6 @@ const withSerwist = withSerwistInit({
     "/day/thu",
     "/day/fri",
     "/day/sat",
-    "/day/irregular",
   ].map((url) => ({ revision, url })),
   disable: process.env.NODE_ENV === "development",
   swDest: "public/sw.js",

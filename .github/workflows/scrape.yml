@@ -2,10 +2,11 @@ name: scrape
 
 on:
   schedule:
-    # 日本時間 1:00 / 13:00 / 19:00。0時更新と12時更新の両方を当日中に拾う
-    - cron: "0 16 * * *"
-    - cron: "0 4 * * *"
-    - cron: "0 10 * * *"
+    # 日本時間 0:30 / 6:30 / 12:30 / 18:30。0時・11時・12時・17時の更新をその直後に拾う
+    - cron: "30 15 * * *"
+    - cron: "30 21 * * *"
+    - cron: "30 3 * * *"
+    - cron: "30 9 * * *"
   workflow_dispatch:
 
 permissions:
@@ -21,10 +22,8 @@ jobs:
           node-version: 24.19.0
           cache: npm
       - run: npm ci
-      # 取得できなかったサイトがあると異常終了する。データは据え置かれる
+      # 取れなかったサイトはその日を空にしたうえで、異常終了する
       - run: npm run scrape
-      - run: npm run scrape:ogp
-        if: always()
       - name: commit
         if: always()
         run: |

@@ -29,17 +29,3 @@
   background: var(--highlight);
   font-weight: 700;
 }
-
-.searchItem {
-  margin-top: var(--space-4);
-  position: relative;
-}
-
-/* 曜日と検索の間を区切る線。項目自体は丸いので、線だけ別に引く */
-.searchItem::before {
-  background: var(--border);
-  content: "";
-  height: 1px;
-  inset: calc(var(--space-2) * -1) var(--space-4) auto;
-  position: absolute;
-}

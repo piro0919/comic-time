@@ -3,7 +3,7 @@ import { useDeferredValue, useMemo, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { dayLabel, days } from "@/app/days";
 import useFavorites from "@/app/useFavorites";
-import { type DayKey, daysOf, type SearchIndex } from "@/types/work";
+import { daysOf, type SearchIndex, type Weekday } from "@/types/work";
 import styles from "./style.module.css";
 
 export type SearchProps = {
@@ -11,8 +11,8 @@ export type SearchProps = {
 };
 
 /** 「月・金」のように、更新曜日を短く並べる */
-function daysText(dayKeys: DayKey[]): string {
-  if (dayKeys.length === days.length - 1) {
+function daysText(dayKeys: Weekday[]): string {
+  if (dayKeys.length === days.length) {
     return "毎日";
   }
 
@@ -34,7 +34,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
   const [onlyFavorite, setOnlyFavorite] = useState(false);
   const found = useMemo(() => {
     const needle = normalize(deferred);
-    const filtered = works.filter(([title, url, siteIndex, author]) => {
+    const filtered = works.filter(([title, url, siteIndex]) => {
       if (onlyFavorite && !favorites.hasWork(url)) {
         return false;
       }
@@ -42,7 +42,6 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
       return (
         needle === "" ||
         normalize(title).includes(needle) ||
-        normalize(author).includes(needle) ||
         normalize(siteNames[siteIndex] ?? "").includes(needle)
       );
     });
@@ -79,7 +78,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
           : `${found.length}件`}
       </p>
       <ul className={styles.list}>
-        {found.slice(0, 200).map(([title, url, siteIndex, author, dayBits]) => (
+        {found.slice(0, 200).map(([title, url, siteIndex, dayBits]) => (
           <li className={styles.item} key={url}>
             <button
               onClick={() => {
@@ -104,7 +103,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
                 {title}
               </a>
               <div className={styles.meta}>
-                {[siteNames[siteIndex], author, daysText(daysOf(dayBits))]
+                {[siteNames[siteIndex], daysText(daysOf(dayBits))]
                   .filter((text) => text !== undefined && text !== "")
                   .join(" / ")}
               </div>

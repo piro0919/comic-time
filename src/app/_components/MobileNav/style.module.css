@@ -35,7 +35,3 @@
   background: var(--highlight);
   font-weight: 700;
 }
-
-.searchItem .button {
-  border-color: var(--border);
-}

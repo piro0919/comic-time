@@ -1,5 +1,5 @@
 import { type IndexedWork, type SearchIndex, weekdays } from "@/types/work";
-import { recentDateOf, worksOfDate } from "./groupsOfDay";
+import { recentDateOf, worksOfDate } from "./worksOfDay";
 
 /** 直近7日ぶんの更新から、検索用の一覧を組み立てる */
 export default function searchIndex(): SearchIndex {
@@ -7,13 +7,11 @@ export default function searchIndex(): SearchIndex {
   const byUrl = new Map<string, IndexedWork>();
 
   weekdays.forEach((weekday, index) => {
-    const date = recentDateOf(weekday);
-
-    (date === null ? [] : worksOfDate(date)).forEach((work) => {
+    worksOfDate(recentDateOf(weekday)).forEach((work) => {
       const found = byUrl.get(work.url);
 
       if (found !== undefined) {
-        found[4] |= 1 << index;
+        found[3] |= 1 << index;
 
         return;
       }
@@ -26,7 +24,6 @@ export default function searchIndex(): SearchIndex {
         work.title,
         work.url,
         siteNames.indexOf(work.siteName),
-        work.author ?? "",
         1 << index,
       ]);
     });
