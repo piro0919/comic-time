@@ -74,9 +74,8 @@ All commits are automatically checked for:
 <https://app.notion.com/p/dc773636fbac4ddcb9094cfdc05011af>
 
 - `src/data/sites.json` は書き出した結果であり、直接編集しない
-- Notion を直したら `npm run sites:pull` で書き出し、差分をコミットする
+- Notion を直したら Claude Code に読ませて `src/data/sites.json` を書き直し、差分をコミットする。Notion へ繋ぐのは Claude Code（`notion-personal` MCP）だけで、リポジトリ側にトークンは置かない
 - ビルドや GitHub Actions から Notion は叩かない
-- 実行には `.env.local` に `NOTION_TOKEN` と `NOTION_SITES_DATABASE_ID` が要る
 - 「取得設定」列は `itemSelector=.foo; headingText=今日の更新` の形。値にセミコロンは使えない
 
 ### Application Structure
