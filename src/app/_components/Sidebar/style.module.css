@@ -17,12 +17,21 @@
 }
 
 .button {
+  align-items: center;
   border-radius: var(--radius-pill);
-  display: block;
+  display: flex;
   font-size: 1.4rem;
+  gap: var(--space-2);
   padding: var(--space-2) var(--space-4);
   text-align: start;
   width: 100%;
+}
+
+/* 星を押したときに増える。登録できたことが分かるように置く */
+.count {
+  color: var(--muted);
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .currentDay {

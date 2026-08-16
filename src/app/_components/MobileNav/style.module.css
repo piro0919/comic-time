@@ -35,3 +35,11 @@
   background: var(--highlight);
   font-weight: 700;
 }
+
+/* 星を押したときに増える。登録できたことが分かるように置く */
+.count {
+  color: var(--muted);
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+  margin-left: var(--space-1);
+}
