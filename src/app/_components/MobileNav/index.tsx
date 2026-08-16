@@ -5,12 +5,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { dayHref } from "@/app/days";
 import useDayMenu from "@/app/useDayMenu";
+import useFavorites from "@/app/useFavorites";
 import useSelectedDay from "@/app/useSelectedDay";
 import styles from "./style.module.css";
 
 export default function MobileNav(): React.JSX.Element {
   const items = useDayMenu();
   const selectedDay = useSelectedDay();
+  const favorites = useFavorites();
   const pathname = usePathname();
   const currentRef = useRef<HTMLLIElement>(null);
 
@@ -32,6 +34,9 @@ export default function MobileNav(): React.JSX.Element {
         >
           <Link className={styles.button} href="/favorites">
             お気に入り
+            {favorites.workUrls.length === 0 ? null : (
+              <span className={styles.count}>{favorites.workUrls.length}</span>
+            )}
           </Link>
         </li>
         {items.map((day) => (
