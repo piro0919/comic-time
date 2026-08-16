@@ -1,5 +1,8 @@
+import fs from "fs";
+import path from "path";
 import sites from "@/data/sites.json";
 import {
+  type DateKey,
   type DayKey,
   type SiteEntry,
   type SiteGroup,
@@ -8,27 +11,58 @@ import {
   type Work,
 } from "@/types/work";
 import siteOgp from "../../data/site-ogp.json";
-import fri from "../../data/works/fri.json";
-import mon from "../../data/works/mon.json";
-import sat from "../../data/works/sat.json";
-import sun from "../../data/works/sun.json";
-import thu from "../../data/works/thu.json";
-import tue from "../../data/works/tue.json";
-import wed from "../../data/works/wed.json";
 
-const buckets: Record<string, Work[]> = {
-  fri,
-  mon,
-  sat,
-  sun,
-  thu,
-  tue,
-  wed,
-};
 const ogpByUrl = siteOgp as Record<string, null | string>;
+const dataDir = path.join(process.cwd(), "data", "works");
+const dayMs = 24 * 60 * 60 * 1000;
 
 function jaOf(day: DayKey): string {
   return day === "irregular" ? "不定期" : weekdayJa[day];
+}
+
+function dateKeyOf(date: Date): DateKey {
+  return new Intl.DateTimeFormat("en-CA", {
+    day: "2-digit",
+    month: "2-digit",
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+  }).format(date);
+}
+
+/** 曜日ごとに、直近のその曜日の日付を返す。今日はその曜日ぶんとして扱う */
+export function recentDateOf(day: DayKey, from = new Date()): DateKey | null {
+  if (day === "irregular") {
+    return null;
+  }
+
+  const target = weekdays.indexOf(day);
+
+  for (let back = 0; back < 7; back += 1) {
+    const date = new Date(from.getTime() - back * dayMs);
+    const weekday = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Tokyo",
+      weekday: "short",
+    })
+      .format(date)
+      .toLowerCase();
+
+    if (weekdays.indexOf(weekday as DayKey) === target) {
+      return dateKeyOf(date);
+    }
+  }
+
+  return null;
+}
+
+/** その日に更新された作品。ファイルが無ければ空 */
+export function worksOfDate(date: DateKey): Work[] {
+  try {
+    return JSON.parse(
+      fs.readFileSync(path.join(dataDir, `${date}.json`), "utf-8"),
+    ) as Work[];
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -53,8 +87,10 @@ export default function groupsOfDay(day: DayKey): SiteGroup[] {
     });
   });
 
-  if (day !== "irregular") {
-    (buckets[day] ?? []).forEach((work) => {
+  const date = recentDateOf(day);
+
+  if (date !== null) {
+    worksOfDate(date).forEach((work) => {
       const group = groups.get(work.siteUrl) ?? {
         siteName: work.siteName,
         siteUrl: work.siteUrl,

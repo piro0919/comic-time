@@ -39,6 +39,8 @@ type GroupEntry = {
 };
 
 export type AppProps = {
+  /** 画面に出している更新日。「8/17（月）」の形 */
+  dateLabel: null | string;
   day: DayKey;
   groups: SiteGroup[];
 };
@@ -66,7 +68,11 @@ function toCards(group: SiteGroup): Card[] {
   }));
 }
 
-export default function App({ day, groups }: AppProps): React.JSX.Element {
+export default function App({
+  dateLabel: date,
+  day,
+  groups,
+}: AppProps): React.JSX.Element {
   const router = useRouter();
   const { theme } = useTheme();
   const favorites = useFavorites();
@@ -229,7 +235,9 @@ export default function App({ day, groups }: AppProps): React.JSX.Element {
         <>
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
-              <h2 className={styles.h2}>{`${dayLabel(day)}のお気に入り`}</h2>
+              <h2
+                className={styles.h2}
+              >{`${date ?? dayLabel(day)}のお気に入り`}</h2>
               <Spacer grow={1} />
               {favoriteCards.length > 0 ? (
                 <>
@@ -251,7 +259,7 @@ export default function App({ day, groups }: AppProps): React.JSX.Element {
                           cancelButtonText: "キャンセル",
                           html: (
                             <p>
-                              {`${dayLabel(day)}に更新されるお気に入りをすべて外します。`}
+                              {`${date ?? dayLabel(day)}に更新されたお気に入りをすべて外します。`}
                               <br />
                               よろしいですか？
                             </p>
@@ -282,7 +290,7 @@ export default function App({ day, groups }: AppProps): React.JSX.Element {
               getList(favoriteCards, true)
             ) : (
               <p className={styles.empty}>
-                {`登録した作品のうち、${dayLabel(day)}に更新されるものはありません。`}
+                {`登録した作品のうち、${date ?? dayLabel(day)}に更新されたものはありません。`}
               </p>
             )}
             {followedGroups.map(
@@ -296,8 +304,8 @@ export default function App({ day, groups }: AppProps): React.JSX.Element {
         <div className={styles.sectionHeader}>
           <h2 className={styles.h2}>
             {isEmpty
-              ? `${dayLabel(day)}に更新される作品`
-              : `${dayLabel(day)}に更新されるその他の作品`}
+              ? `${date ?? dayLabel(day)}に更新された作品`
+              : `${date ?? dayLabel(day)}に更新されたその他の作品`}
           </h2>
           <Spacer grow={1} />
           <Link className={styles.button} href="/search">
@@ -306,7 +314,7 @@ export default function App({ day, groups }: AppProps): React.JSX.Element {
         </div>
         {isEmpty ? (
           <p className={styles.empty}>
-            星を押すと、その作品やサイトが更新される曜日のページの先頭に出ます。
+            星を押すと、その作品やサイトが更新された日のページの先頭に出ます。
           </p>
         ) : null}
         {otherGroups.map(

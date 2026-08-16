@@ -2,7 +2,7 @@ import { type Metadata } from "next";
 import { type DayKey, weekdays } from "@/types/work";
 import App from "./_components/App";
 import { dayLabel } from "./days";
-import groupsOfDay from "./groupsOfDay";
+import groupsOfDay, { recentDateOf } from "./groupsOfDay";
 
 /** 日付が変わったら当日の曜日になるよう、1時間ごとに作り直す */
 export const revalidate = 3600;
@@ -19,12 +19,27 @@ function todayInJapan(): DayKey {
 
 export function generateMetadata(): Metadata {
   return {
-    description: `${dayLabel(todayInJapan())}に更新されるWeb漫画の一覧です。`,
+    description: `${dayLabel(todayInJapan())}に更新されたWeb漫画の一覧です。`,
   };
+}
+
+/** 「8/17（月）」の形 */
+function labelOfToday(day: DayKey): null | string {
+  const date = recentDateOf(day);
+
+  if (date === null) {
+    return null;
+  }
+
+  const [, month, dayOfMonth] = date.split("-");
+
+  return `${Number(month)}/${Number(dayOfMonth)}（${dayLabel(day).replace("曜日", "")}）`;
 }
 
 export default function Page(): React.JSX.Element {
   const day = todayInJapan();
 
-  return <App day={day} groups={groupsOfDay(day)} />;
+  return (
+    <App dateLabel={labelOfToday(day)} day={day} groups={groupsOfDay(day)} />
+  );
 }

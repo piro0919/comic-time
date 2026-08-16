@@ -2,9 +2,8 @@
 import { useDeferredValue, useMemo, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { dayLabel, days } from "@/app/days";
-import { daysOf, type SearchIndex } from "@/app/searchIndex";
 import useFavorites from "@/app/useFavorites";
-import { type DayKey } from "@/types/work";
+import { type DayKey, daysOf, type SearchIndex } from "@/types/work";
 import styles from "./style.module.css";
 
 export type SearchProps = {

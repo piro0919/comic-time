@@ -2,14 +2,11 @@ name: scrape
 
 on:
   schedule:
-    # 日本時間 5:00（更新曜日が切り替わったあとに走らせる）
-    - cron: "0 20 * * *"
+    # 日本時間 1:00 / 13:00 / 19:00。0時更新と12時更新の両方を当日中に拾う
+    - cron: "0 16 * * *"
+    - cron: "0 4 * * *"
+    - cron: "0 10 * * *"
   workflow_dispatch:
-    inputs:
-      all:
-        description: "曜日に関係なく全サイトを取り直す"
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -25,7 +22,7 @@ jobs:
           cache: npm
       - run: npm ci
       # 取得できなかったサイトがあると異常終了する。データは据え置かれる
-      - run: npm run ${{ inputs.all && 'scrape:all' || 'scrape' }}
+      - run: npm run scrape
       - run: npm run scrape:ogp
         if: always()
       - name: commit
