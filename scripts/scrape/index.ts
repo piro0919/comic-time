@@ -1,39 +1,17 @@
 import fs from "fs/promises";
 import path from "path";
-import {
-  type DailyWorks,
-  type DateKey,
-  type SiteEntry,
-  type Work,
-} from "../../src/types/work.ts";
-import comicFuz from "./adapters/comicFuz.ts";
-import comici from "./adapters/comici.ts";
-import comicWalker from "./adapters/comicWalker.ts";
-import gigaviewer from "./adapters/gigaviewer.ts";
-import zerosumOnline from "./adapters/zerosumOnline.ts";
-import { recentKeys, todayKey } from "./dates.ts";
-import fetchHtml from "./fetchHtml.ts";
-import parseDailyList from "./parseDailyList.ts";
+import { type SiteEntry, type Work } from "../../src/types/work.ts";
+import todayKey from "./date.ts";
+import sources from "./sources/index.ts";
 
-/** 一覧ページの HTML では取れず、専用の処理が要るサイト */
-const adapters: Record<string, (site: SiteEntry) => Promise<DailyWorks>> = {
-  comicFuz,
-  comici,
-  comicWalker,
-  gigaviewer,
-  zerosumOnline,
-};
-
-type MetaEntry = {
-  /** 直近 keepDays 日ぶんの合計。取得できたかの目安に使う */
-  count: number;
-  scrapedAt: string;
-};
-
-type Meta = Record<string, MetaEntry>;
-
+/**
+ * その日更新された作品を集めて data/works/<日付>.json に書く。
+ * 見に行くのは当日ぶんだけで、過去の日のファイルには触らない。
+ * 取れなかったサイトはその日を空にする。古いまま残すより、壊れたと分かる方を選ぶ。
+ */
 const dataDir = path.join(process.cwd(), "data", "works");
-const metaPath = path.join(dataDir, "meta.json");
+/** 画面に出す日数。これより古い日のファイルは消す */
+const keepDays = 7;
 
 async function readJson<T>(filePath: string, fallback: T): Promise<T> {
   try {
@@ -43,135 +21,102 @@ async function readJson<T>(filePath: string, fallback: T): Promise<T> {
   }
 }
 
-async function collect(site: SiteEntry): Promise<DailyWorks> {
-  const adapter =
-    typeof site.adapter === "string" ? adapters[site.adapter] : undefined;
-
-  if (adapter !== undefined) {
-    return adapter(site);
-  }
-
-  if (site.daily === undefined) {
-    return {};
-  }
-
-  const url = site.daily.url ?? site.url;
-
-  return parseDailyList(await fetchHtml(url), url, site.daily);
-}
-
 export default async function scrape(): Promise<void> {
   const today = todayKey();
-  const dates = recentKeys(today);
   const sites = await readJson<SiteEntry[]>(
     path.join(process.cwd(), "src", "data", "sites.json"),
     [],
   );
-  const meta = await readJson<Meta>(metaPath, {});
-  const targets = sites.filter(
-    (site) => site.daily !== undefined || typeof site.adapter === "string",
-  );
-
-  console.log(`[scrape] ${today} 対象 ${targets.length} サイト`);
-
-  const buckets = new Map<DateKey, Work[]>();
-
-  await Promise.all(
-    dates.map(async (date) => {
-      buckets.set(
-        date,
-        await readJson<Work[]>(path.join(dataDir, `${date}.json`), []),
-      );
-    }),
-  );
-
-  const touched = new Set<DateKey>();
+  const filePath = path.join(dataDir, `${today}.json`);
+  const previous = await readJson<Work[]>(filePath, []);
   const failed: string[] = [];
 
-  for (const site of targets) {
+  console.log(`[scrape] ${today} 対象 ${sources.length} サイト`);
+
+  const collected: Work[] = [];
+
+  for (const source of sources) {
+    const site = sites.find((entry) => entry.url === source.siteUrl);
+
+    if (site === undefined) {
+      console.error(`[scrape] ${source.siteUrl}: sites.json に無い`);
+      failed.push(source.siteUrl);
+      continue;
+    }
+
     try {
-      const daily = await collect(site);
-      const total = Object.values(daily).reduce(
-        (sum, works) => sum + works.length,
-        0,
-      );
+      const works = await source.fetchToday();
 
-      if (total === 0) {
-        // その日更新が無いことはあるが、7日ぶんまるごと空なら取得の失敗を疑う
-        console.error(`[scrape] ${site.name}: 0件のため据え置き`);
-        failed.push(site.name);
-        continue;
-      }
-
-      // 取れた日だけを入れ替える。取れなかった日の履歴はそのまま残す
-      Object.entries(daily).forEach(([date, works]) => {
-        if (!buckets.has(date)) {
-          return;
-        }
-
-        const kept = (buckets.get(date) ?? []).filter(
-          (work) => work.siteUrl !== site.url,
-        );
-        const fresh = works.map<Work>((work) => ({
-          author: work.author,
+      collected.push(
+        ...works.map<Work>((work) => ({
           siteName: site.name,
           siteUrl: site.url,
           thumbnailUrl: work.thumbnailUrl,
           title: work.title,
           updateTime: site.updateTime,
           url: work.url,
-        }));
+        })),
+      );
 
-        buckets.set(date, [...kept, ...fresh]);
-        touched.add(date);
-      });
-
-      meta[site.url] = { count: total, scrapedAt: new Date().toISOString() };
-
-      const summary = Object.entries(daily)
-        .filter(([date]) => dates.includes(date))
-        .map(([date, works]) => `${date.slice(5)}:${works.length}`)
-        .join(" ");
-
-      console.log(`[scrape] ${site.name}: ${summary}`);
+      console.log(`[scrape] ${site.name}: ${works.length}件`);
     } catch (error) {
+      // このサイトは今日ぶんが空になる
       console.error(`[scrape] ${site.name}: 失敗`, error);
       failed.push(site.name);
     }
   }
 
+  // 同じ日に何度も走るので、まだ対応していないサイトのぶんは消さずに残す
+  const untouched = previous.filter(
+    (work) => !sources.some((source) => source.siteUrl === work.siteUrl),
+  );
+  // 同じ作品を配信しているサイトがあるので、作品名が重なったら先に取れた方を残す
+  const merged: Work[] = [];
+  const titles = new Set<string>();
+
+  [...untouched, ...collected].forEach((work) => {
+    if (titles.has(work.title)) {
+      return;
+    }
+
+    titles.add(work.title);
+    merged.push(work);
+  });
+
+  const works = merged.toSorted((a, b) => a.title.localeCompare(b.title, "ja"));
+
   await fs.mkdir(dataDir, { recursive: true });
-  await Promise.all(
-    [...touched].map(async (date) => {
-      const works = (buckets.get(date) ?? []).toSorted((a, b) =>
-        a.title.localeCompare(b.title, "ja"),
+  await fs.writeFile(filePath, `${JSON.stringify(works, null, 2)}\n`);
+
+  const kept = new Set(
+    Array.from({ length: keepDays }, (_, back) => {
+      const date = new Date(
+        new Date(`${today}T00:00:00+09:00`).getTime() -
+          back * 24 * 60 * 60 * 1000,
       );
 
-      await fs.writeFile(
-        path.join(dataDir, `${date}.json`),
-        `${JSON.stringify(works, null, 2)}\n`,
-      );
+      return new Intl.DateTimeFormat("en-CA", {
+        day: "2-digit",
+        month: "2-digit",
+        timeZone: "Asia/Tokyo",
+        year: "numeric",
+      }).format(date);
     }),
   );
-
-  // 画面に出さなくなった日のファイルは残さない
   const stale = (await fs.readdir(dataDir)).filter(
     (name) =>
-      /^\d{4}-\d{2}-\d{2}\.json$/.test(name) &&
-      !dates.includes(name.slice(0, 10)),
+      /^\d{4}-\d{2}-\d{2}\.json$/.test(name) && !kept.has(name.slice(0, 10)),
   );
 
   await Promise.all(
     stale.map((name) => fs.rm(path.join(dataDir, name), { force: true })),
   );
-  await fs.writeFile(metaPath, `${JSON.stringify(meta, null, 2)}\n`);
 
   console.log(
-    `[scrape] 更新した日: ${[...touched].toSorted().join(", ") || "なし"} / 消した日: ${stale.length}件`,
+    `[scrape] ${works.length}件を書き出し / 消した日 ${stale.length}件`,
   );
 
   if (failed.length > 0) {
-    // 気付かないまま古いデータが残り続けないよう、失敗として終える
     console.error(`[scrape] 取得できなかったサイト: ${failed.join(", ")}`);
     process.exitCode = 1;
   }

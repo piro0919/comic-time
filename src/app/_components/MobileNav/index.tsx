@@ -2,11 +2,13 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import { dayHref, days } from "@/app/days";
+import { dayHref } from "@/app/days";
+import useDayMenu from "@/app/useDayMenu";
 import useSelectedDay from "@/app/useSelectedDay";
 import styles from "./style.module.css";
 
 export default function MobileNav(): React.JSX.Element {
+  const items = useDayMenu();
   const selectedDay = useSelectedDay();
   const currentRef = useRef<HTMLLIElement>(null);
 
@@ -21,7 +23,7 @@ export default function MobileNav(): React.JSX.Element {
   return (
     <nav className={styles.container}>
       <ul className={styles.list}>
-        {days.map((day) => (
+        {items.map((day) => (
           <li
             className={clsx(styles.item, {
               [styles.currentDay]: selectedDay === day.key,
@@ -34,11 +36,6 @@ export default function MobileNav(): React.JSX.Element {
             </Link>
           </li>
         ))}
-        <li className={clsx(styles.item, styles.searchItem)}>
-          <Link className={styles.button} href="/search">
-            作品を探す
-          </Link>
-        </li>
       </ul>
     </nav>
   );

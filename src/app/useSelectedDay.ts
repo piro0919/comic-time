@@ -2,16 +2,16 @@
 import dayjs from "dayjs";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { type DayKey } from "@/types/work";
+import { type Weekday } from "@/types/work";
 import { days } from "./days";
 
 /**
  * 表示中の曜日。/day/xxx はそのまま、トップは端末の今日を使う。
  * 端末の日付はサーバと食い違うため、描画後に確定させる。
  */
-export default function useSelectedDay(): DayKey | undefined {
+export default function useSelectedDay(): undefined | Weekday {
   const pathname = usePathname();
-  const [today, setToday] = useState<DayKey | undefined>(undefined);
+  const [today, setToday] = useState<undefined | Weekday>(undefined);
 
   useEffect(() => {
     setToday(days.at(dayjs().day())?.key);
