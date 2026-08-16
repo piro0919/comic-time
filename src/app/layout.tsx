@@ -33,6 +33,7 @@ export function generateMetadata(): Metadata {
     formatDetection: {
       telephone: false,
     },
+    metadataBase: new URL("https://comictime.kkweb.io"),
     openGraph: {
       description: APP_DESCRIPTION,
       siteName: APP_NAME,
