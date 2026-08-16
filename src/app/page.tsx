@@ -1,10 +1,9 @@
 import { type Metadata } from "next";
 import { type Weekday, weekdays } from "@/types/work";
-import App from "./_components/App";
-import { dayLabel } from "./days";
-import worksOfDay from "./worksOfDay";
+import Home from "./_components/Home";
+import { dateLabel, recentWorks } from "./worksOfDay";
 
-/** 日付が変わったら当日の曜日になるよう、1時間ごとに作り直す */
+/** 日付が変わったら中身も変わるよう、1時間ごとに作り直す */
 export const revalidate = 3600;
 
 function todayInJapan(): Weekday {
@@ -19,12 +18,15 @@ function todayInJapan(): Weekday {
 
 export function generateMetadata(): Metadata {
   return {
-    description: `${dayLabel(todayInJapan())}に更新されたWeb漫画の一覧です。`,
+    description: "登録した作品のうち、この一週間で更新されたものをまとめます。",
   };
 }
 
 export default function Page(): React.JSX.Element {
-  const day = todayInJapan();
+  const days = recentWorks().map((day) => ({
+    label: dateLabel(day.date),
+    works: day.works,
+  }));
 
-  return <App day={day} works={worksOfDay(day)} />;
+  return <Home days={days} today={todayInJapan()} />;
 }

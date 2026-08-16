@@ -7,7 +7,7 @@ import { useLocalStorage } from "usehooks-ts";
  * 作品は更新曜日が決まっているので、曜日ごとに登録させる必要はない。
  * 「このサイトは全部見る」という追い方もあるため、サイトも登録できるようにする。
  */
-const key = "favorites-v3";
+export const key = "favorites-v3";
 
 type Stored = {
   sites: string[];
@@ -27,6 +27,17 @@ function toggle(list: string[], value: string): string[] {
   return list.includes(value)
     ? list.filter((item) => item !== value)
     : [...list, value];
+}
+
+/** 描画前に登録の有無だけ知りたいときに使う */
+export function storedWorkUrls(): string[] {
+  try {
+    const raw = localStorage.getItem(key);
+
+    return raw === null ? [] : ((JSON.parse(raw) as Stored).works ?? []);
+  } catch {
+    return [];
+  }
 }
 
 export default function useFavorites(): Favorites {
