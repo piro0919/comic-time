@@ -1,31 +1,24 @@
 [
   {
     "adapter": "comicFuz",
-    "listUrl": "https://api.comic-fuz.com/v1/mangas_by_day_of_week",
-    "mode": "weekly",
+    "mode": "works",
     "name": "COMIC FUZ",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
     "url": "https://comic-fuz.com/"
   },
   {
-    "listUrl": "https://comic-ogyaaa.com/",
-    "mode": "flat",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "COMIC OGYAAA!!",
-    "parseOptions": {
-      "itemSelector": "[class*='serial-series-item']"
-    },
     "updateDay": "金",
     "updateTime": "12:00",
     "url": "https://comic-ogyaaa.com/"
   },
   {
     "listUrl": "https://kirapo.jp/meteor",
-    "mode": "flat",
+    "mode": "works",
     "name": "COMICメテオ",
-    "parseOptions": {
-      "itemSelector": "a[href*='/titles/']"
-    },
     "updateDay": "水",
     "updateTime": "12:00",
     "url": "https://kirapo.jp/meteor"
@@ -38,24 +31,24 @@
     "url": "https://shuro.world/"
   },
   {
-    "listUrl": "https://comic-action.com/series",
-    "mode": "weekly",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "webアクション",
     "updateDay": "火金",
     "updateTime": "12:00",
     "url": "https://comic-action.com/"
   },
   {
-    "listUrl": "https://kuragebunch.com/series/kuragebunch",
-    "mode": "flat",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "くらげバンチ",
     "updateDay": "火金",
     "updateTime": "12:00",
     "url": "https://kuragebunch.com/"
   },
   {
-    "listUrl": "https://tonarinoyj.jp/series",
-    "mode": "flat",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "となりのヤングジャンプ",
     "updateDay": "火水金",
     "updateTime": "12:00",
@@ -63,49 +56,54 @@
   },
   {
     "adapter": "comicWalker",
-    "listUrl": "https://comic-walker.com/api/daily/new",
-    "mode": "weekly",
+    "mode": "works",
     "name": "カドコミ",
     "updateDay": "日月火水木金土",
     "updateTime": "11:00",
     "url": "https://comic-walker.com/"
   },
   {
-    "adapter": "ganganOnline",
-    "listUrl": "https://www.ganganonline.com/rensai",
-    "mode": "weekly",
+    "daily": {
+      "headingText": "今日の更新作品",
+      "itemSelector": "[class*='TitleCard_container']"
+    },
+    "mode": "works",
     "name": "ガンガンONLINE",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
     "url": "https://www.ganganonline.com/"
   },
   {
-    "listUrl": "https://comic-days.com/series",
-    "mode": "weekly",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "コミックDAYS",
     "updateDay": "日月火水木金土",
     "updateTime": "12:00",
     "url": "https://comic-days.com/"
   },
   {
-    "listUrl": "https://viewer.heros-web.com/series",
-    "mode": "flat",
+    "adapter": "comici",
+    "daily": {
+      "itemSelector": ".series-list-item",
+      "url": "https://heros-web.com/"
+    },
+    "mode": "works",
     "name": "コミプレ",
     "updateDay": "金",
     "updateTime": "12:00",
     "url": "https://viewer.heros-web.com/"
   },
   {
-    "listUrl": "https://www.sunday-webry.com/series",
-    "mode": "weekly",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "サンデーうぇぶり",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
     "url": "https://www.sunday-webry.com/"
   },
   {
-    "listUrl": "https://comic-zenon.com/series",
-    "mode": "weekly",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "ゼノン編集部",
     "updateDay": "日月火水木金土",
     "updateTime": "12:00",
@@ -113,8 +111,7 @@
   },
   {
     "adapter": "zerosumOnline",
-    "listUrl": "https://api.zerosumonline.com/api/v1/home",
-    "mode": "weekly",
+    "mode": "works",
     "name": "ゼロサムオンライン",
     "updateDay": "金",
     "updateTime": "12:00",
@@ -122,33 +119,34 @@
   },
   {
     "adapter": "comici",
-    "listUrl": "https://championcross.jp/category/manga/day/1/1",
-    "mode": "weekly",
+    "mode": "works",
     "name": "チャンピオンクロス",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
     "url": "https://championcross.jp/"
   },
   {
-    "adapter": "twi4",
     "listUrl": "https://sai-zen-sen.jp/comics/twi4/",
-    "mode": "weekly",
+    "mode": "works",
     "name": "ツイ４",
     "updateDay": "日月火水木金土",
     "updateTime": "",
     "url": "https://sai-zen-sen.jp/comics/twi4/"
   },
   {
-    "listUrl": "https://pocket.shonenmagazine.com/series",
-    "mode": "weekly",
+    "daily": {
+      "headingText": "の更新作品",
+      "itemSelector": ".p-index-update__item"
+    },
+    "mode": "works",
     "name": "マガポケ",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
     "url": "https://pocket.shonenmagazine.com/"
   },
   {
-    "listUrl": "https://magcomi.com/series",
-    "mode": "flat",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "マグコミ",
     "updateDay": "火金",
     "updateTime": "12:00",
@@ -170,25 +168,26 @@
   },
   {
     "adapter": "comici",
-    "listUrl": "https://youngchampion.jp/category/manga/day/1/1",
-    "mode": "weekly",
+    "mode": "works",
     "name": "ヤンチャンWeb",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
     "url": "https://youngchampion.jp/"
   },
   {
-    "adapter": "yanmaga",
-    "listUrl": "https://yanmaga.jp/comics/series",
-    "mode": "weekly",
+    "daily": {
+      "itemSelector": ".mod-book-item",
+      "todaySelector": ".top-today-update"
+    },
+    "mode": "works",
     "name": "ヤンマガWeb",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
     "url": "https://yanmaga.jp/"
   },
   {
-    "listUrl": "https://shonenjumpplus.com/series",
-    "mode": "weekly",
+    "adapter": "gigaviewer",
+    "mode": "works",
     "name": "少年ジャンプ＋",
     "updateDay": "日月火水木金土",
     "updateTime": "0:00",
@@ -196,7 +195,7 @@
   },
   {
     "listUrl": "https://getsumagakichi.com/series/getsumagakichi",
-    "mode": "flat",
+    "mode": "works",
     "name": "月マガ基地",
     "updateDay": "火金",
     "updateTime": "12:00",
@@ -204,8 +203,7 @@
   },
   {
     "adapter": "comici",
-    "listUrl": "https://takecomic.jp/category/manga/day/1/1",
-    "mode": "weekly",
+    "mode": "works",
     "name": "竹コミ！",
     "updateDay": "日月火水木金土",
     "updateTime": "",

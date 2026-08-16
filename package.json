@@ -97,7 +97,6 @@
     "postbuild": "next-sitemap",
     "prettier": "prettier --write .",
     "scrape": "node scripts/scrape/index.ts",
-    "scrape:all": "node scripts/scrape/index.ts --all",
     "scrape:ogp": "node scripts/scrape/ogp.ts",
     "secretlint": "secretlint '**/*'",
     "start": "next start",

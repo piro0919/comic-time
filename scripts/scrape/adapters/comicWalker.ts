@@ -1,10 +1,7 @@
-import {
-  type ParsedWork,
-  type Weekday,
-  weekdays,
-} from "../../../src/types/work.ts";
+import { type DailyWorks } from "../../../src/types/work.ts";
+import { recentKeys } from "../dates.ts";
 
-/** 日付ごとの更新一覧。直近7日ぶんがそのまま曜日に対応する */
+/** 日付ごとの更新一覧。直近7日ぶんがそのまま返る */
 const apiUrl = "https://comic-walker.com/api/daily/new";
 
 type DailyResponse = {
@@ -18,9 +15,7 @@ type DailyResponse = {
   }[];
 };
 
-export default async function comicWalker(): Promise<
-  Record<Weekday, ParsedWork[]>
-> {
+export default async function comicWalker(): Promise<DailyWorks> {
   const res = await fetch(apiUrl, {
     headers: { Accept: "application/json" },
     signal: AbortSignal.timeout(30000),
@@ -31,18 +26,15 @@ export default async function comicWalker(): Promise<
   }
 
   const { resources } = (await res.json()) as DailyResponse;
-  const result = Object.fromEntries(
-    weekdays.map((weekday) => [weekday, []]),
-  ) as Record<Weekday, ParsedWork[]>;
+  const wanted = new Set(recentKeys());
+  const result: DailyWorks = {};
 
   resources.forEach(({ date, works }) => {
-    const weekday = weekdays[new Date(`${date}T00:00:00+09:00`).getDay()];
-
-    if (weekday === undefined) {
+    if (!wanted.has(date)) {
       return;
     }
 
-    result[weekday] = works.map((work) => ({
+    result[date] = works.map((work) => ({
       author: null,
       thumbnailUrl: work.thumbnail ?? null,
       title: work.title,

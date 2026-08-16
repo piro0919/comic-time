@@ -1,8 +1,5 @@
-import {
-  type ParsedWork,
-  type Weekday,
-  weekdays,
-} from "../../../src/types/work.ts";
+import { type DailyWorks } from "../../../src/types/work.ts";
+import { dateKeyOf, recentKeys } from "../dates.ts";
 import { readFields, stringOf } from "../protobuf.ts";
 
 /**
@@ -13,29 +10,15 @@ import { readFields, stringOf } from "../protobuf.ts";
 const apiUrl = "https://api.zerosumonline.com/api/v1/home";
 const workOrigin = "https://zerosumonline.com/detail";
 
-function weekdayOf(seconds: number): undefined | Weekday {
-  const formatted = new Intl.DateTimeFormat("en-US", {
-    timeZone: "Asia/Tokyo",
-    weekday: "short",
-  })
-    .format(new Date(seconds * 1000))
-    .toLowerCase();
-
-  return weekdays.find((weekday) => weekday === formatted);
-}
-
-export default async function zerosumOnline(): Promise<
-  Record<Weekday, ParsedWork[]>
-> {
+export default async function zerosumOnline(): Promise<DailyWorks> {
   const res = await fetch(apiUrl, { signal: AbortSignal.timeout(30000) });
 
   if (!res.ok) {
     throw new Error(`${res.status} ${res.statusText}`);
   }
 
-  const result = Object.fromEntries(
-    weekdays.map((weekday) => [weekday, []]),
-  ) as Record<Weekday, ParsedWork[]>;
+  const wanted = new Set(recentKeys());
+  const result: DailyWorks = {};
   const seen = new Set<string>();
 
   readFields(new Uint8Array(await res.arrayBuffer()))
@@ -55,10 +38,10 @@ export default async function zerosumOnline(): Promise<
         return;
       }
 
-      const weekday = weekdayOf(updatedAt);
+      const date = dateKeyOf(new Date(updatedAt * 1000));
 
       // 同じ作品が複数回更新されていても、一覧には1回だけ出す
-      if (weekday === undefined || seen.has(slug)) {
+      if (!wanted.has(date) || seen.has(slug)) {
         return;
       }
 
@@ -67,12 +50,15 @@ export default async function zerosumOnline(): Promise<
       const author = stringOf(fields, 5);
       const thumbnail = stringOf(fields, 8);
 
-      result[weekday].push({
-        author: author === "" ? null : author,
-        thumbnailUrl: thumbnail === "" ? null : thumbnail,
-        title,
-        url: `${workOrigin}/${slug}`,
-      });
+      result[date] = [
+        ...(result[date] ?? []),
+        {
+          author: author === "" ? null : author,
+          thumbnailUrl: thumbnail === "" ? null : thumbnail,
+          title,
+          url: `${workOrigin}/${slug}`,
+        },
+      ];
     });
 
   return result;

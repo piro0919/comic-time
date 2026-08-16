@@ -1,59 +1,39 @@
 import fs from "fs/promises";
 import path from "path";
 import {
-  type ParsedWork,
+  type DailyWorks,
+  type DateKey,
   type SiteEntry,
-  type Weekday,
-  weekdayJa,
-  weekdays,
   type Work,
 } from "../../src/types/work.ts";
 import comicFuz from "./adapters/comicFuz.ts";
 import comici from "./adapters/comici.ts";
 import comicWalker from "./adapters/comicWalker.ts";
-import ganganOnline from "./adapters/ganganOnline.ts";
-import twi4 from "./adapters/twi4.ts";
-import yanmaga from "./adapters/yanmaga.ts";
+import gigaviewer from "./adapters/gigaviewer.ts";
 import zerosumOnline from "./adapters/zerosumOnline.ts";
+import { recentKeys, todayKey } from "./dates.ts";
 import fetchHtml from "./fetchHtml.ts";
-import parseWeeklyList, { extractWorks } from "./parseWeeklyList.ts";
+import parseDailyList from "./parseDailyList.ts";
 
-/** ページ構造が特殊で汎用パーサに乗らないサイト */
-const adapters: Record<
-  string,
-  (site: SiteEntry) => Promise<Record<Weekday, ParsedWork[]>>
-> = {
+/** 一覧ページの HTML では取れず、専用の処理が要るサイト */
+const adapters: Record<string, (site: SiteEntry) => Promise<DailyWorks>> = {
   comicFuz,
   comici,
   comicWalker,
-  ganganOnline,
-  twi4,
-  yanmaga,
+  gigaviewer,
   zerosumOnline,
 };
 
 type MetaEntry = {
+  /** 直近 keepDays 日ぶんの合計。取得できたかの目安に使う */
   count: number;
   scrapedAt: string;
 };
 
 type Meta = Record<string, MetaEntry>;
 
-/** 前回のこの割合を下回ったら、サイト側の変更を疑って据え置く */
-const dropThreshold = 0.5;
 const dataDir = path.join(process.cwd(), "data", "works");
 const metaPath = path.join(dataDir, "meta.json");
-/** 更新曜日が変わったサイトを取りこぼさないよう、この日数を過ぎたら曜日に関係なく取り直す */
-const staleDays = 7;
-
-function todayWeekday(): Weekday {
-  const formatted = new Intl.DateTimeFormat("en-US", {
-    timeZone: "Asia/Tokyo",
-    weekday: "short",
-  }).format(new Date());
-
-  return formatted.toLowerCase() as Weekday;
-}
 
 async function readJson<T>(filePath: string, fallback: T): Promise<T> {
   try {
@@ -63,110 +43,76 @@ async function readJson<T>(filePath: string, fallback: T): Promise<T> {
   }
 }
 
-function isStale(entry: MetaEntry | undefined): boolean {
-  if (entry === undefined) {
-    return true;
+async function collect(site: SiteEntry): Promise<DailyWorks> {
+  const adapter =
+    typeof site.adapter === "string" ? adapters[site.adapter] : undefined;
+
+  if (adapter !== undefined) {
+    return adapter(site);
   }
 
-  const elapsed = Date.now() - new Date(entry.scrapedAt).getTime();
-
-  return Number.isNaN(elapsed) || elapsed > staleDays * 24 * 60 * 60 * 1000;
-}
-
-function shouldScrape(site: SiteEntry, meta: Meta, weekday: Weekday): boolean {
-  if (site.mode === "site" || typeof site.listUrl !== "string") {
-    return false;
+  if (site.daily === undefined) {
+    return {};
   }
 
-  return site.updateDay.includes(weekdayJa[weekday]) || isStale(meta[site.url]);
+  const url = site.daily.url ?? site.url;
+
+  return parseDailyList(await fetchHtml(url), url, site.daily);
 }
 
 export default async function scrape(): Promise<void> {
-  const all = process.argv.includes("--all");
-
-  /** 曜日の区別が無いサイトは、サイトの更新曜日すべてに同じ作品を並べる */
-  function spreadOverUpdateDay(
-    works: ParsedWork[],
-    site: SiteEntry,
-  ): Record<Weekday, ParsedWork[]> {
-    return Object.fromEntries(
-      weekdays.map((day) => [
-        day,
-        site.updateDay.includes(weekdayJa[day]) ? works : [],
-      ]),
-    ) as Record<Weekday, ParsedWork[]>;
-  }
-
-  const weekday = todayWeekday();
+  const today = todayKey();
+  const dates = recentKeys(today);
   const sites = await readJson<SiteEntry[]>(
     path.join(process.cwd(), "src", "data", "sites.json"),
     [],
   );
   const meta = await readJson<Meta>(metaPath, {});
-  const targets = sites.filter((site) =>
-    all
-      ? site.mode !== "site" && typeof site.listUrl === "string"
-      : shouldScrape(site, meta, weekday),
+  const targets = sites.filter(
+    (site) => site.daily !== undefined || typeof site.adapter === "string",
   );
 
-  console.log(`[scrape] ${weekday} 対象 ${targets.length} サイト`);
+  console.log(`[scrape] ${today} 対象 ${targets.length} サイト`);
 
-  const buckets = new Map<Weekday, Work[]>();
+  const buckets = new Map<DateKey, Work[]>();
 
   await Promise.all(
-    weekdays.map(async (day) => {
+    dates.map(async (date) => {
       buckets.set(
-        day,
-        await readJson<Work[]>(path.join(dataDir, `${day}.json`), []),
+        date,
+        await readJson<Work[]>(path.join(dataDir, `${date}.json`), []),
       );
     }),
   );
 
-  const updated = new Set<Weekday>();
+  const touched = new Set<DateKey>();
   const failed: string[] = [];
 
   for (const site of targets) {
-    if (typeof site.listUrl !== "string") {
-      continue;
-    }
-
     try {
-      const adapter =
-        typeof site.adapter === "string" ? adapters[site.adapter] : undefined;
-      const parsed =
-        adapter !== undefined
-          ? await adapter(site)
-          : site.mode === "flat"
-            ? spreadOverUpdateDay(
-                extractWorks(
-                  await fetchHtml(site.listUrl),
-                  site.listUrl,
-                  site.parseOptions?.itemSelector ?? "li",
-                ),
-                site,
-              )
-            : parseWeeklyList(
-                await fetchHtml(site.listUrl),
-                site.listUrl,
-                site.parseOptions,
-              );
-      const total = weekdays.reduce((sum, day) => sum + parsed[day].length, 0);
-      const previous = meta[site.url]?.count ?? 0;
+      const daily = await collect(site);
+      const total = Object.values(daily).reduce(
+        (sum, works) => sum + works.length,
+        0,
+      );
 
-      // 0件やごっそり減った場合は、サイト側の作りが変わった可能性が高い
-      if (total === 0 || total < previous * dropThreshold) {
-        console.error(
-          `[scrape] ${site.name}: ${total}件（前回${previous}件）のため据え置き`,
-        );
+      if (total === 0) {
+        // その日更新が無いことはあるが、7日ぶんまるごと空なら取得の失敗を疑う
+        console.error(`[scrape] ${site.name}: 0件のため据え置き`);
         failed.push(site.name);
         continue;
       }
 
-      weekdays.forEach((day) => {
-        const kept = (buckets.get(day) ?? []).filter(
+      // 取れた日だけを入れ替える。取れなかった日の履歴はそのまま残す
+      Object.entries(daily).forEach(([date, works]) => {
+        if (!buckets.has(date)) {
+          return;
+        }
+
+        const kept = (buckets.get(date) ?? []).filter(
           (work) => work.siteUrl !== site.url,
         );
-        const fresh = parsed[day].map<Work>((work) => ({
+        const fresh = works.map<Work>((work) => ({
           author: work.author,
           siteName: site.name,
           siteUrl: site.url,
@@ -176,13 +122,18 @@ export default async function scrape(): Promise<void> {
           url: work.url,
         }));
 
-        buckets.set(day, [...kept, ...fresh]);
-        updated.add(day);
+        buckets.set(date, [...kept, ...fresh]);
+        touched.add(date);
       });
 
       meta[site.url] = { count: total, scrapedAt: new Date().toISOString() };
 
-      console.log(`[scrape] ${site.name}: ${total}件`);
+      const summary = Object.entries(daily)
+        .filter(([date]) => dates.includes(date))
+        .map(([date, works]) => `${date.slice(5)}:${works.length}`)
+        .join(" ");
+
+      console.log(`[scrape] ${site.name}: ${summary}`);
     } catch (error) {
       console.error(`[scrape] ${site.name}: 失敗`, error);
       failed.push(site.name);
@@ -191,20 +142,33 @@ export default async function scrape(): Promise<void> {
 
   await fs.mkdir(dataDir, { recursive: true });
   await Promise.all(
-    [...updated].map(async (day) => {
-      const works = (buckets.get(day) ?? []).toSorted((a, b) =>
+    [...touched].map(async (date) => {
+      const works = (buckets.get(date) ?? []).toSorted((a, b) =>
         a.title.localeCompare(b.title, "ja"),
       );
 
       await fs.writeFile(
-        path.join(dataDir, `${day}.json`),
+        path.join(dataDir, `${date}.json`),
         `${JSON.stringify(works, null, 2)}\n`,
       );
     }),
   );
+
+  // 画面に出さなくなった日のファイルは残さない
+  const stale = (await fs.readdir(dataDir)).filter(
+    (name) =>
+      /^\d{4}-\d{2}-\d{2}\.json$/.test(name) &&
+      !dates.includes(name.slice(0, 10)),
+  );
+
+  await Promise.all(
+    stale.map((name) => fs.rm(path.join(dataDir, name), { force: true })),
+  );
   await fs.writeFile(metaPath, `${JSON.stringify(meta, null, 2)}\n`);
 
-  console.log(`[scrape] 更新した曜日: ${[...updated].join(", ") || "なし"}`);
+  console.log(
+    `[scrape] 更新した日: ${[...touched].toSorted().join(", ") || "なし"} / 消した日: ${stale.length}件`,
+  );
 
   if (failed.length > 0) {
     // 気付かないまま古いデータが残り続けないよう、失敗として終える
