@@ -8,6 +8,9 @@ import sources from "./sources/index.ts";
  * その日更新された作品を集めて data/works/<日付>.json に書く。
  * 見に行くのは当日ぶんだけで、過去の日のファイルには触らない。
  * 取れなかったサイトはその日を空にする。古いまま残すより、壊れたと分かる方を選ぶ。
+ *
+ * 1日に何度も走るので、前の回に無かった作品はそのとき初めて更新されたとみなし、
+ * 見つけた時刻を控える。画面はこれを使って新しいものから並べる。
  */
 const dataDir = path.join(process.cwd(), "data", "works");
 /** 画面に出す日数。これより古い日のファイルは消す */
@@ -29,6 +32,13 @@ export default async function scrape(): Promise<void> {
   );
   const filePath = path.join(dataDir, `${today}.json`);
   const previous = await readJson<Work[]>(filePath, []);
+  const found = new Map(previous.map((work) => [work.url, work.foundAt]));
+  const now = new Intl.DateTimeFormat("ja-JP", {
+    hour: "2-digit",
+    hour12: false,
+    minute: "2-digit",
+    timeZone: "Asia/Tokyo",
+  }).format(new Date());
   const failed: string[] = [];
 
   console.log(`[scrape] ${today} 対象 ${sources.length} サイト`);
@@ -49,11 +59,12 @@ export default async function scrape(): Promise<void> {
 
       collected.push(
         ...works.map<Work>((work) => ({
+          // 前の回に見つけていれば、そのときの時刻を引き継ぐ
+          foundAt: found.get(work.url) ?? now,
           siteName: site.name,
           siteUrl: site.url,
           thumbnailUrl: work.thumbnailUrl,
           title: work.title,
-          updateTime: site.updateTime,
           url: work.url,
         })),
       );

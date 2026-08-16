@@ -22,11 +22,12 @@ export type SiteEntry = {
 };
 
 export type Work = {
+  /** その日のうちで最初に見つけた時刻。「12:34」の形 */
+  foundAt: string;
   siteName: string;
   siteUrl: string;
   thumbnailUrl: null | string;
   title: string;
-  updateTime: string;
   url: string;
 };
 

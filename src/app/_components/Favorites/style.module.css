@@ -5,7 +5,6 @@
   min-height: 100%;
   padding: var(--space-4) clamp(var(--space-3), 2.5dvw, var(--space-5))
     var(--space-6);
-  touch-action: pan-y;
 }
 
 .section {
@@ -19,25 +18,28 @@
   grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
 }
 
-/* 今日すでに開いた作品は、目立たせない */
-
-/* 取得の回ごとの見出し。上ほど新しい更新 */
-.batchHead {
+.dayHead {
   align-items: center;
   display: flex;
   gap: var(--space-3);
   margin-bottom: var(--space-4);
 }
 
-.batchTime {
+.dayLabel {
   color: var(--muted);
   flex-shrink: 0;
   font-size: 1.3rem;
   font-variant-numeric: tabular-nums;
 }
 
-.batchLine {
+.dayLine {
   background: var(--border);
   flex-grow: 1;
   height: 1px;
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1.8;
 }

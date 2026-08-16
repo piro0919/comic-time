@@ -1,6 +1,12 @@
 import fs from "fs";
 import path from "path";
-import { type DateKey, type Weekday, weekdays, type Work } from "@/types/work";
+import {
+  type DateKey,
+  type Weekday,
+  weekdayJa,
+  weekdays,
+  type Work,
+} from "@/types/work";
 
 const dataDir = path.join(process.cwd(), "data", "works");
 const dayMs = 24 * 60 * 60 * 1000;
@@ -46,11 +52,43 @@ export function worksOfDate(date: DateKey): Work[] {
   }
 }
 
-/** その曜日に出す作品。作品名の順に並べる */
+/**
+ * その曜日に出す作品。あとで見つかったものほど上に置く。
+ * 同じ回に見つかったものは作品名の順に並べる。
+ */
 export default function worksOfDay(day: Weekday): Work[] {
-  return worksOfDate(recentDateOf(day)).toSorted((a, b) =>
-    a.title.localeCompare(b.title, "ja"),
-  );
+  return worksOfDate(recentDateOf(day)).toSorted((a, b) => {
+    const diff = b.foundAt.localeCompare(a.foundAt);
+
+    return diff === 0 ? a.title.localeCompare(b.title, "ja") : diff;
+  });
+}
+
+/** 「2026-08-17」を「8/17（月）」にする */
+export function dateLabel(date: DateKey): string {
+  const [, month, day] = date.split("-");
+  const weekday = weekdays.at(new Date(`${date}T00:00:00+09:00`).getDay());
+
+  return `${Number(month)}/${Number(day)}（${weekday === undefined ? "" : weekdayJa[weekday]}）`;
+}
+
+/** 直近7日ぶん。新しい日から並べる */
+export function recentWorks(from = new Date()): {
+  date: DateKey;
+  works: Work[];
+}[] {
+  return Array.from({ length: 7 }, (_, back) => {
+    const date = dateKeyOf(new Date(from.getTime() - back * dayMs));
+
+    return {
+      date,
+      works: worksOfDate(date).toSorted((a, b) => {
+        const diff = b.foundAt.localeCompare(a.foundAt);
+
+        return diff === 0 ? a.title.localeCompare(b.title, "ja") : diff;
+      }),
+    };
+  });
 }
 
 export const dayKeys: Weekday[] = [...weekdays];

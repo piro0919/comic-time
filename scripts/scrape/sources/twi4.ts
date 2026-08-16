@@ -49,11 +49,7 @@ function isUpdated(schedule: string): boolean {
     (matched) => Number(matched[1]) * 60 + Number(matched[2]),
   );
 
-  if (times.length === 0) {
-    return false;
-  }
-
-  return Math.min(...times) <= now.minutes;
+  return times.length > 0 && Math.min(...times) <= now.minutes;
 }
 
 export default async function twi4(): Promise<ParsedWork[]> {

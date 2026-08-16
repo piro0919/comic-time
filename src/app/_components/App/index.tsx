@@ -1,11 +1,11 @@
 "use client";
 import { config, useSpring } from "@react-spring/web";
 import { createUseGesture, dragAction } from "@use-gesture/react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
 import { dayHref, days } from "@/app/days";
 import { type Weekday, type Work } from "@/types/work";
+import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
 const _config = {
@@ -21,6 +21,12 @@ type Card = {
   url: string;
 };
 
+/** 同じ回の取得で見つかった作品のかたまり */
+type Batch = {
+  cards: Card[];
+  foundAt: string;
+};
+
 export type AppProps = {
   day: Weekday;
   works: Work[];
@@ -28,15 +34,29 @@ export type AppProps = {
 
 export default function App({ day, works }: AppProps): React.JSX.Element {
   const router = useRouter();
-  const cards = useMemo<Card[]>(
-    () =>
-      works.map<Card>((work) => ({
+  /** 見つけた回ごとに区切って並べる。上ほど新しい更新 */
+  const batches = useMemo<Batch[]>(() => {
+    const result: Batch[] = [];
+
+    works.forEach((work) => {
+      const card = {
         thumbnailUrl: work.thumbnailUrl,
         title: work.title,
         url: work.url,
-      })),
-    [works],
-  );
+      };
+      const last = result.at(-1);
+
+      if (last !== undefined && last.foundAt === work.foundAt) {
+        last.cards.push(card);
+
+        return;
+      }
+
+      result.push({ cards: [card], foundAt: work.foundAt });
+    });
+
+    return result;
+  }, [works]);
   const [props, api] = useSpring(() => ({ x: 0 }));
   const bind = useGesture(
     {
@@ -69,33 +89,24 @@ export default function App({ day, works }: AppProps): React.JSX.Element {
 
   return (
     <div {...bind()} className={styles.container}>
-      <section className={styles.section}>
-        <ul className={styles.grid}>
-          {cards.map((card) => (
-            <li className={styles.card} key={card.url}>
-              <a
-                className={styles.cardLink}
-                href={card.url}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <div className={styles.cover}>
-                  <Image
-                    alt=""
-                    fill={true}
-                    quality={100}
-                    sizes="(width < 768px) 45vw, 180px"
-                    src={card.thumbnailUrl ?? "/no-image.png"}
-                  />
-                </div>
-                <div className={styles.cardBody}>
-                  <span className={styles.cardTitle}>{card.title}</span>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {batches.map((batch) => (
+        <section className={styles.section} key={batch.foundAt}>
+          <div className={styles.batchHead}>
+            <span className={styles.batchTime}>{`${batch.foundAt} 追加`}</span>
+            <span className={styles.batchLine} />
+          </div>
+          <ul className={styles.grid}>
+            {batch.cards.map((card) => (
+              <WorkCard
+                key={card.url}
+                thumbnailUrl={card.thumbnailUrl}
+                title={card.title}
+                url={card.url}
+              />
+            ))}
+          </ul>
+        </section>
+      ))}
     </div>
   );
 }
