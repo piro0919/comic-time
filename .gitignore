@@ -50,3 +50,9 @@ public/robots.txt
 
 # other
 .playwright-mcp/
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

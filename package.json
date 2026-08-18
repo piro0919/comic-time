@@ -31,6 +31,7 @@
     "@eslint/compat": "2.0.0",
     "@eslint/eslintrc": "^3",
     "@eslint/js": "9.29.0",
+    "@playwright/test": "1.62.1",
     "@secretlint/secretlint-rule-preset-recommend": "11.0.2",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "^24.0.0",
@@ -94,6 +95,7 @@
     "scrape": "node scripts/scrape/index.ts",
     "secretlint": "secretlint '**/*'",
     "start": "next start",
+    "test:e2e": "playwright test",
     "type-check": "tsc --noemit"
   },
   "version": "0.1.0"
