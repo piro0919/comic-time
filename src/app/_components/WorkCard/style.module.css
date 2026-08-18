@@ -7,8 +7,9 @@
   gap: var(--space-2);
 }
 
+/* 元画像はほとんどが横長。正方形だと左右を切り落とす量が大きい */
 .cover {
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
   background: var(--border);
   border-radius: var(--radius-1);
   box-shadow: var(--shadow-1);
