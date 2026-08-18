@@ -1,4 +1,5 @@
 // eslint-disable-next-line filenames/match-exported
+import { Analytics } from "@vercel/analytics/next";
 import { type Metadata, type Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -81,6 +82,7 @@ export default function RootLayout({
             <Layout>{children}</Layout>
           </Suspense>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
