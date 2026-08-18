@@ -1,5 +1,5 @@
-import http from "http";
 import { type Page } from "@playwright/test";
+import http from "http";
 
 /**
  * Service Worker が制御を握り、控えの用意が終わるまで待つ。
@@ -98,7 +98,7 @@ export async function startSlowProxy({
     typeof address === "object" && address !== null ? address.port : 0;
 
   return {
-    close: () =>
+    close: async () =>
       new Promise<void>((resolve) => {
         server.close(() => resolve());
       }),

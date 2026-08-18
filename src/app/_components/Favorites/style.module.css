@@ -43,3 +43,9 @@
   font-size: 1.4rem;
   line-height: 1.8;
 }
+
+/* 別の端末へ渡す入口。登録が無いときは中身ごと消える */
+.share {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -35,8 +35,8 @@ test.describe("圏外での見え方", () => {
   });
 
   test("遅いだけの回線ではオフライン画面を出さない", async ({
-    browser,
     baseURL,
+    browser,
   }) => {
     const proxy = await startSlowProxy({
       delayMs: 9000,

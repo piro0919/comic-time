@@ -256,6 +256,14 @@ const eslintConfig = [
       "write-good-comments/write-good-comments": "error",
     },
   },
+  {
+    // 通し確認のファイルは <名前>.spec.ts で揃える。属性の値に " を含むため引用符も緩める
+    files: ["e2e/**/*.ts"],
+    rules: {
+      "filenames/match-regex": "off",
+      quotes: "off",
+    },
+  },
 ];
 
 export default eslintConfig;
