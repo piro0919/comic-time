@@ -47,6 +47,18 @@ const pageCache = {
 };
 const serwist = new Serwist({
   clientsClaim: true,
+  /**
+   * 控えも無く、通信も駄目なときに出す画面。
+   * ページの読み込みだけを差し替える。画像や JSON はそのまま失敗させる。
+   */
+  fallbacks: {
+    entries: [
+      {
+        matcher: ({ request }): boolean => request.destination === "document",
+        url: "/~offline",
+      },
+    ],
+  },
   navigationPreload: true,
   precacheEntries: self.__SW_MANIFEST,
   runtimeCaching: [pageCache, ...defaultCache],

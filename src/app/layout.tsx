@@ -1,5 +1,5 @@
 // eslint-disable-next-line filenames/match-exported
-import { type Metadata } from "next";
+import { type Metadata, type Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
@@ -13,6 +13,16 @@ import "sweetalert2/dist/sweetalert2.css";
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
 });
+
+/**
+ * ブラウザの上端に出る色。画面は常に明るい配色のため、白で固定する。
+ * 配色を切り替えられるようにしたら、ここも合わせて変える。
+ */
+export const viewport: Viewport = {
+  initialScale: 1,
+  themeColor: "#FFFFFF",
+  width: "device-width",
+};
 
 export function generateMetadata(): Metadata {
   const APP_NAME = "ComicTime";

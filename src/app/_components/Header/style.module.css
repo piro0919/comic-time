@@ -13,3 +13,8 @@
   font-size: 2.7rem;
   line-height: 1;
 }
+
+/* 題字の右端。出るものが無ければ何も見えない */
+.actions {
+  margin-inline-start: auto;
+}

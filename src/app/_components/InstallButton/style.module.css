@@ -1,0 +1,23 @@
+.button {
+  align-items: center;
+  background: var(--highlight);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 700;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  white-space: nowrap;
+}
+
+.icon {
+  font-size: 1.6rem;
+}
+
+/* 狭い画面では絵柄だけにする。題字の場所を削らないため */
+.label {
+  @media (width < 480px) {
+    display: none;
+  }
+}
