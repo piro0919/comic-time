@@ -20,8 +20,21 @@ declare global {
 declare const self: ServiceWorkerGlobalScope;
 
 /**
- * 既定のページ取得はネットワーク優先で、待ち時間の上限が無い。
- * 電波が悪く応答が返らない場所で固まるため、数秒でキャッシュに切り替える。
+ * 取得そのものの締め切り。
+ * networkTimeoutSeconds は控えがあるときにしか効かず、一度も開いていないページは
+ * 応答が返るまで待ち続けてしまう。打ち切って例外にし、オフライン画面へ落とす。
+ */
+const deadlinePlugin = {
+  requestWillFetch: async ({
+    request,
+  }: {
+    request: Request;
+  }): Promise<Request> =>
+    new Request(request, { signal: AbortSignal.timeout(8000) }),
+};
+/**
+ * ページ取得はネットワーク優先。応答が返らない場所で固まらないよう、
+ * 4秒で控えに切り替え、8秒で取得そのものを打ち切る。
  * その控えも1日で捨てる。前の日の一覧を今日のものとして見せないため。
  */
 const pageCache = {
@@ -30,6 +43,7 @@ const pageCache = {
     networkTimeoutSeconds: 4,
     plugins: [
       new ExpirationPlugin({ maxAgeSeconds: 24 * 60 * 60, maxEntries: 16 }),
+      deadlinePlugin,
     ],
   }),
   matcher: ({
@@ -59,7 +73,12 @@ const serwist = new Serwist({
       },
     ],
   },
-  navigationPreload: true,
+  /**
+   * ナビゲーションの先読みは切る。
+   * 先読みが有る間は、その応答を待つ処理が締め切りより手前に入り、
+   * 応答が返らないと待ち続けてしまう。速さより、止まらないことを取る。
+   */
+  navigationPreload: false,
   precacheEntries: self.__SW_MANIFEST,
   runtimeCaching: [pageCache, ...defaultCache],
   skipWaiting: true,
