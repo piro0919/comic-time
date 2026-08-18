@@ -1,5 +1,6 @@
 import { type ParsedWork } from "../../../src/types/work.ts";
 import todayKey from "../date.ts";
+import fetchHtml from "../fetchHtml.ts";
 import { readFields, stringOf } from "../protobuf.ts";
 
 /**
@@ -12,10 +13,25 @@ import { readFields, stringOf } from "../protobuf.ts";
  * Manga { 1: id, 2: title, 4: あらすじ, 7: サムネイル, 12: 今日更新の印 }
  *
  * 曜日の枠には更新の無い作品も並ぶので、印の付いたものだけを取る。
+ *
+ * 欄7 は順位表に載っている作品にしか入らない。無いものは作品ページの
+ * og:image から拾う。画像の URL は署名付きで、組み立て直すことはできない。
  */
 const apiUrl =
   "https://manga-one.com/api/client?rq=home&is_from_redirect=false";
 const workOrigin = "https://manga-one.com/title";
+const ogImagePattern = /property="og:image"\s+content="([^"]+)"/;
+
+/** 作品ページのサムネイル。取れなければ null にして、その作品だけ絵を諦める */
+async function thumbnailFromPage(url: string): Promise<null | string> {
+  try {
+    const matched = ogImagePattern.exec(await fetchHtml(url));
+
+    return matched?.[1]?.replaceAll("&amp;", "&") ?? null;
+  } catch {
+    return null;
+  }
+}
 
 export default async function mangaOne(): Promise<ParsedWork[]> {
   const res = await fetch(apiUrl, { signal: AbortSignal.timeout(30000) });
@@ -87,5 +103,12 @@ export default async function mangaOne(): Promise<ParsedWork[]> {
       });
     });
 
-  return works;
+  // 順位表に載っていない作品は、作品ページを1枚ずつ見に行く
+  return Promise.all(
+    works.map(async (work) =>
+      work.thumbnailUrl === null
+        ? { ...work, thumbnailUrl: await thumbnailFromPage(work.url) }
+        : work,
+    ),
+  );
 }
