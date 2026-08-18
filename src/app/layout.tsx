@@ -15,15 +15,12 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 /**
- * ブラウザの上端に出る色。まず端末の設定に合わせておき、
- * 手動で選ばれたあとは ThemeToggle が書き換える。
+ * ブラウザの上端に出る色はここで指定しない。
+ * React が描いた meta を後から差し替えると、React の管理下の要素を
+ * 横から消すことになり、描画が落ちる。ThemeToggle が自前の meta を持つ。
  */
 export const viewport: Viewport = {
   initialScale: 1,
-  themeColor: [
-    { color: "#FFFFFF", media: "(prefers-color-scheme: light)" },
-    { color: "#202124", media: "(prefers-color-scheme: dark)" },
-  ],
   width: "device-width",
 };
 

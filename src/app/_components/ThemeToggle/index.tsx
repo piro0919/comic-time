@@ -6,6 +6,8 @@ import styles from "./style.module.css";
 
 /** globals.css の --background と揃える。ブラウザの上端に出る色 */
 const themeColors = { dark: "#202124", light: "#FFFFFF" };
+/** 自分が作った meta だけを見分けるための印 */
+const ownedAttribute = "data-theme-color";
 
 /**
  * 明暗の切り替え。最初は端末の設定に従い、押した時点から手動の選択になる。
@@ -24,18 +26,20 @@ export default function ThemeToggle(): null | React.JSX.Element {
       return;
     }
 
-    // 端末の設定に反応する指定が残っていると、手動で選んだ側と食い違う
-    document
-      .querySelectorAll("meta[name='theme-color']")
-      .forEach((meta) => meta.remove());
+    // 自分で作った1つだけを使い回す。React が描いた要素には触らない
+    const existing = document.head.querySelector(`meta[${ownedAttribute}]`);
+    const meta = existing ?? document.createElement("meta");
 
-    const meta = document.createElement("meta");
+    meta.setAttribute(ownedAttribute, "");
+    meta.setAttribute("name", "theme-color");
+    meta.setAttribute(
+      "content",
+      resolvedTheme === "dark" ? themeColors.dark : themeColors.light,
+    );
 
-    meta.name = "theme-color";
-    meta.content =
-      resolvedTheme === "dark" ? themeColors.dark : themeColors.light;
-
-    document.head.append(meta);
+    if (existing === null) {
+      document.head.append(meta);
+    }
   }, [resolvedTheme]);
 
   if (!isMounted) {
