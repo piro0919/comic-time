@@ -63,6 +63,14 @@ test.describe("お気に入りの受け渡し", () => {
     await receiver.close();
   });
 
+  test("登録が無いうちは渡せない", async ({ baseURL, page }) => {
+    await page.goto(`${baseURL}/`);
+
+    const share = page.getByRole("button", { name: /別の端末へ渡す/ });
+
+    await expect(share).toBeDisabled();
+  });
+
   test("壊れたリンクは読み取れないと伝える", async ({ baseURL, page }) => {
     await page.goto(`${baseURL}/import#1こわれている`);
 

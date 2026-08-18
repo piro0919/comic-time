@@ -69,13 +69,13 @@ export default function ShareFavorites(): null | React.JSX.Element {
   }, [favorites.siteUrls, favorites.workUrls]);
 
   useEffect(() => {
-    if (!isOpen || count === 0) {
+    if (!isOpen) {
       return;
     }
 
     setLink(null);
     void build();
-  }, [isOpen, build, count]);
+  }, [isOpen, build]);
 
   const copy = async (value: string, label: string): Promise<void> => {
     await navigator.clipboard.writeText(value).catch(() => undefined);
@@ -92,12 +92,17 @@ export default function ShareFavorites(): null | React.JSX.Element {
         onClick={() => {
           setIsOpen(true);
         }}
+        title={
+          count === 0
+            ? "作品の星を押して登録すると、別の端末へ渡せます"
+            : "お気に入りを別の端末へ渡す"
+        }
         aria-label="お気に入りを別の端末へ渡す"
         className={styles.open}
+        disabled={count === 0}
         type="button"
       >
-        <MdIosShare size={17} />
-        <span className={styles.label}>渡す</span>
+        <MdIosShare size={18} />
       </button>
       {isOpen
         ? createPortal(

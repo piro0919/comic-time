@@ -4,22 +4,19 @@
   color: var(--foreground);
   cursor: pointer;
   display: flex;
-  font-size: 1.3rem;
-  gap: var(--space-1);
-  padding: var(--space-2) var(--space-3);
+  justify-content: center;
+  padding: var(--space-2);
   transition: background 0.2s ease;
-  white-space: nowrap;
 }
 
-.open:hover {
+/* 渡すものが無いときは押せない。理由は title で伝える */
+.open:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
+.open:hover:not(:disabled) {
   background: var(--surface);
-}
-
-/* 狭い画面では絵柄だけにする。題字の場所を削らないため */
-.label {
-  @media (width < 480px) {
-    display: none;
-  }
 }
 
 .overlay {
