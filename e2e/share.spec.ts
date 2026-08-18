@@ -43,10 +43,11 @@ test.describe("お気に入りの受け渡し", () => {
     const to = await receiver.newPage();
 
     await to.goto(link);
-    await expect(to.getByText(`受け取った登録は${count}件です`)).toBeVisible();
+    await expect(to.getByText("お気に入りを共有")).toBeVisible();
 
-    await to.getByRole("button", { name: "今の登録に足す" }).click();
-    await expect(to.getByText("取り込みました")).toBeVisible();
+    await to.getByRole("button", { name: `${count}件を追加` }).click();
+    await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
+    await expect(to).toHaveURL(/\/favorites/);
 
     const stored = await to.evaluate(
       () =>

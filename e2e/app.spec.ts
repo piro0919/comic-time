@@ -21,6 +21,8 @@ test.describe("画面の操作", () => {
     page.on("pageerror", (error) => errors.push(error.message));
 
     await page.goto("/");
+    // トップは今日の一覧かお気に入りへ移る。落ち着く前に押すと取りこぼす
+    await page.waitForURL(/\/(day\/|favorites)/);
 
     const link = page.locator('aside a[href^="/day/"]').nth(2);
     const href = await link.getAttribute("href");
@@ -36,6 +38,7 @@ test.describe("画面の操作", () => {
     page.on("pageerror", (error) => errors.push(error.message));
 
     await page.goto("/");
+    await page.waitForURL(/\/(day\/|favorites)/);
 
     const toggle = page.getByRole("button", { name: /配色にする/ });
 
@@ -89,25 +92,33 @@ test.describe("画面の操作", () => {
  */
 test.describe("日付の見出し", () => {
   test("曜日が日付と合っている", async ({ page }) => {
-    const weekday = new Intl.DateTimeFormat("en-US", {
-      timeZone: "Asia/Tokyo",
-      weekday: "short",
-    })
-      .format(new Date())
-      .toLowerCase();
+    // その日の更新が0件のこともあるので、作品のある日を探す
+    const weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
-    await page.goto(`/day/${weekday}`);
+    let starred = 0;
 
-    const stars = page.locator(
-      'main button[aria-label$="をお気に入りに入れる"]',
-    );
-    const count = Math.min(3, await stars.count());
+    for (const weekday of weekdays) {
+      await page.goto(`/day/${weekday}`);
 
-    test.skip(count === 0, "その日の更新が無いので見出しが出ない");
+      const stars = page.locator(
+        'main button[aria-label$="をお気に入りに入れる"]',
+      );
+      const count = Math.min(2, await stars.count());
 
-    for (let index = 0; index < count; index += 1) {
-      await stars.nth(index).click();
+      if (count === 0) {
+        continue;
+      }
+
+      for (let index = 0; index < count; index += 1) {
+        await stars.nth(index).click();
+      }
+
+      starred = count;
+
+      break;
     }
+
+    expect(starred, "7日ぶんのどこかに作品があるはず").toBeGreaterThan(0);
 
     await page.goto("/favorites");
 

@@ -148,19 +148,23 @@ export default function ShareFavorites(): null | React.JSX.Element {
                       </div>
                     )}
                     <div className={styles.links}>
-                      {link.short === null ? null : (
-                        <button
-                          onClick={() => {
-                            void copy(link.short ?? "", "short");
-                          }}
-                          className={styles.copy}
-                          type="button"
-                        >
-                          {copied === "short"
-                            ? "写しました"
-                            : "短いリンクを写す"}
-                        </button>
-                      )}
+                      <button
+                        onClick={() => {
+                          void copy(link.short ?? "", "short");
+                        }}
+                        title={
+                          link.short === null
+                            ? "登録が多いか、短縮できなかったため使えません"
+                            : "短い方のリンクをコピーする"
+                        }
+                        className={styles.copy}
+                        disabled={link.short === null}
+                        type="button"
+                      >
+                        {copied === "short"
+                          ? "コピーしました"
+                          : "短縮リンクをコピー"}
+                      </button>
                       <button
                         onClick={() => {
                           void copy(link.long, "long");

@@ -1,5 +1,3 @@
-import { key as favoritesKey } from "./useFavorites";
-
 /**
  * お気に入りを URL の断片に載せて持ち運ぶ。
  * 断片はサーバに送られないので、短縮を挟まない限り中身は端末の外に出ない。
@@ -114,14 +112,6 @@ export async function decodeFavorites(
   } catch {
     return null;
   }
-}
-
-/** 受け取ったお気に入りを端末に書き込む */
-export function saveFavorites(favorites: SharedFavorites): void {
-  localStorage.setItem(
-    favoritesKey,
-    JSON.stringify({ sites: favorites.sites, works: favorites.works }),
-  );
 }
 
 /** 重なりを除いて1つにまとめる */

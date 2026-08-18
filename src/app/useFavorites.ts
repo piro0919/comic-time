@@ -17,6 +17,8 @@ type Stored = {
 export type Favorites = {
   followsSite: (siteUrl: string) => boolean;
   hasWork: (url: string) => boolean;
+  /** 受け取った登録で丸ごと書き換える。画面の件数もここを通せば追いつく */
+  replaceAll: (next: Stored) => void;
   siteUrls: string[];
   toggleSite: (siteUrl: string) => void;
   toggleWork: (url: string) => void;
@@ -53,6 +55,12 @@ export default function useFavorites(): Favorites {
   return {
     followsSite: useCallback((siteUrl) => siteSet.has(siteUrl), [siteSet]),
     hasWork: useCallback((url) => workSet.has(url), [workSet]),
+    replaceAll: useCallback(
+      (next) => {
+        setStored(next);
+      },
+      [setStored],
+    ),
     siteUrls: stored.sites,
     toggleSite: useCallback(
       (siteUrl) => {

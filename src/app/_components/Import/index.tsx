@@ -1,17 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 import {
   decodeFavorites,
   mergeFavorites,
-  saveFavorites,
   type SharedFavorites,
 } from "@/app/shareLink";
 import useFavorites from "@/app/useFavorites";
 import styles from "./style.module.css";
 
 type State =
-  | { count: number; kind: "done" }
   | { kind: "empty" }
   | { kind: "loading" }
   | { kind: "ready"; received: SharedFavorites }
@@ -49,9 +48,14 @@ export default function Import(): React.JSX.Element {
   const apply = (received: SharedFavorites, keepExisting: boolean): void => {
     const current = { sites: favorites.siteUrls, works: favorites.workUrls };
     const next = keepExisting ? mergeFavorites(current, received) : received;
+    const count = received.works.length + received.sites.length;
 
-    saveFavorites(next);
-    setState({ count: next.works.length, kind: "done" });
+    favorites.replaceAll(next);
+    toast.success(
+      keepExisting ? `${count}件を追加しました` : `${count}件と入れ替えました`,
+    );
+    // 断片を残したまま戻ると、開き直すたびに同じ確認が出る
+    router.replace("/favorites");
   };
 
   if (state.kind === "loading") {
@@ -78,41 +82,12 @@ export default function Import(): React.JSX.Element {
     );
   }
 
-  if (state.kind === "done") {
-    return (
-      <div className={styles.container}>
-        <h2 className={styles.heading}>取り込みました</h2>
-        <p className={styles.description}>
-          この端末のお気に入りは{state.count}件になりました。
-        </p>
-        <button
-          onClick={() => {
-            // 断片を残したまま戻ると、開き直すたびに同じ確認が出る
-            history.replaceState(null, "", "/favorites");
-            router.push("/favorites");
-            router.refresh();
-          }}
-          className={styles.button}
-          type="button"
-        >
-          お気に入りを見る
-        </button>
-      </div>
-    );
-  }
-
   const current = favorites.workUrls.length + favorites.siteUrls.length;
   const received = state.received.works.length + state.received.sites.length;
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>お気に入りを取り込みますか</h2>
-      <p className={styles.description}>
-        受け取った登録は{received}件です。
-        {current === 0
-          ? "この端末にはまだ登録がありません。"
-          : `この端末には今${current}件あります。`}
-      </p>
+      <h2 className={styles.heading}>お気に入りを共有</h2>
       <div className={styles.actions}>
         <button
           onClick={() => {
@@ -121,7 +96,7 @@ export default function Import(): React.JSX.Element {
           className={styles.button}
           type="button"
         >
-          今の登録に足す
+          {received}件を追加
         </button>
         {current === 0 ? null : (
           <button
@@ -131,7 +106,7 @@ export default function Import(): React.JSX.Element {
             className={styles.secondary}
             type="button"
           >
-            今の登録と入れ替える
+            {received}件と入れ替え
           </button>
         )}
       </div>
