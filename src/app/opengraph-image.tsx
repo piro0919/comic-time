@@ -15,9 +15,9 @@ const DOMAIN = "comictime.kkweb.io";
 /** アイコンと同じ地色。globals.css ではなくアイコン側に合わせる */
 const BACKGROUND = "#87CBFC";
 const INK = "#16181D";
-/** 題字は白抜き。地色が明るいので、影で浮かせる */
+/** 題字は白抜き。右下へ、ぼかさない影を落とす。アイコンの線画に合わせる */
 const TITLE_COLOR = "#FFFFFF";
-const TITLE_SHADOW = "0 4px 14px rgba(12, 42, 70, 0.45)";
+const TITLE_SHADOW = "6px 6px 0 #16181D";
 /** 本文のラテン文字。日本語は next/og が持っている書体に任せる */
 const BODY_FONT = "NotoSansLatin";
 /**
