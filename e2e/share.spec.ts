@@ -25,8 +25,7 @@ test.describe("お気に入りの受け渡し", () => {
       await stars.nth(index).click();
     }
 
-    await from.goto(`${baseURL}/favorites`);
-    await from.getByRole("button", { name: "別の端末へ渡す" }).click();
+    await from.getByRole("button", { name: /別の端末へ渡す/ }).click();
     await expect(from.getByText(`${count}件を渡す`)).toBeVisible();
 
     await from

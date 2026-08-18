@@ -2,7 +2,6 @@
 import { useMemo } from "react";
 import useFavorites from "@/app/useFavorites";
 import { type Work } from "@/types/work";
-import ShareFavorites from "../ShareFavorites";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
@@ -34,9 +33,6 @@ export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
   if (found.length === 0) {
     return (
       <div className={styles.container}>
-        <div className={styles.share}>
-          <ShareFavorites />
-        </div>
         <p className={styles.empty}>
           {favorites.workUrls.length === 0
             ? "お気に入り登録した作品が、ここに表示されます。"
@@ -48,9 +44,6 @@ export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
 
   return (
     <div className={styles.container}>
-      <div className={styles.share}>
-        <ShareFavorites />
-      </div>
       {found.map((day) => (
         <section className={styles.section} key={day.label}>
           <div className={styles.dayHead}>

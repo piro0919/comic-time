@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { MdClose, MdIosShare } from "react-icons/md";
 import {
   encodeFavorites,
@@ -68,24 +69,19 @@ export default function ShareFavorites(): null | React.JSX.Element {
   }, [favorites.siteUrls, favorites.workUrls]);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!isOpen || count === 0) {
       return;
     }
 
     setLink(null);
     void build();
-  }, [isOpen, build]);
+  }, [isOpen, build, count]);
 
   const copy = async (value: string, label: string): Promise<void> => {
     await navigator.clipboard.writeText(value).catch(() => undefined);
     setCopied(label);
     setTimeout(() => setCopied(null), 1600);
   };
-
-  if (count === 0) {
-    return null;
-  }
-
   const qrValue =
     link?.short ??
     (link !== null && link.long.length <= maxQrLength ? link.long : null);
@@ -96,71 +92,85 @@ export default function ShareFavorites(): null | React.JSX.Element {
         onClick={() => {
           setIsOpen(true);
         }}
+        aria-label="お気に入りを別の端末へ渡す"
         className={styles.open}
         type="button"
       >
         <MdIosShare size={17} />
-        別の端末へ渡す
+        <span className={styles.label}>渡す</span>
       </button>
-      {isOpen ? (
-        <div className={styles.overlay}>
-          <div className={styles.panel}>
-            <div className={styles.head}>
-              <span className={styles.title}>{count}件を渡す</span>
-              <button
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                aria-label="閉じる"
-                className={styles.close}
-                type="button"
-              >
-                <MdClose size={20} />
-              </button>
-            </div>
-            {link === null ? (
-              <p className={styles.note}>用意しています…</p>
-            ) : (
-              <>
-                {qrValue === null ? (
-                  <p className={styles.note}>
-                    登録が多いため、QRは出せません。下のリンクを送ってください。
-                  </p>
-                ) : (
-                  <div className={styles.qr}>
-                    <QRCodeSVG size={196} value={qrValue} />
-                    <p className={styles.note}>
-                      渡したい端末のカメラで読み取ってください。
-                    </p>
-                  </div>
-                )}
-                <div className={styles.links}>
-                  {link.short === null ? null : (
-                    <button
-                      onClick={() => {
-                        void copy(link.short ?? "", "short");
-                      }}
-                      className={styles.copy}
-                      type="button"
-                    >
-                      {copied === "short" ? "写しました" : "短いリンクを写す"}
-                    </button>
-                  )}
+      {isOpen
+        ? createPortal(
+            <div className={styles.overlay}>
+              <div className={styles.panel}>
+                <div className={styles.head}>
+                  <span className={styles.title}>
+                    {count === 0
+                      ? "渡せる登録がありません"
+                      : `${count}件を渡す`}
+                  </span>
                   <button
                     onClick={() => {
-                      void copy(link.long, "long");
+                      setIsOpen(false);
                     }}
-                    className={styles.copy}
+                    aria-label="閉じる"
+                    className={styles.close}
                     type="button"
                   >
-                    {copied === "long" ? "写しました" : "リンクを写す"}
+                    <MdClose size={20} />
                   </button>
                 </div>
-              </>
-            )}
-          </div>
-        </div>
-      ) : null}
+                {count === 0 ? (
+                  <p className={styles.note}>
+                    作品の星を押して登録すると、ここから別の端末へ渡せます。
+                  </p>
+                ) : link === null ? (
+                  <p className={styles.note}>用意しています…</p>
+                ) : (
+                  <>
+                    {qrValue === null ? (
+                      <p className={styles.note}>
+                        登録が多いため、QRは出せません。下のリンクを送ってください。
+                      </p>
+                    ) : (
+                      <div className={styles.qr}>
+                        <QRCodeSVG size={196} value={qrValue} />
+                        <p className={styles.note}>
+                          渡したい端末のカメラで読み取ってください。
+                        </p>
+                      </div>
+                    )}
+                    <div className={styles.links}>
+                      {link.short === null ? null : (
+                        <button
+                          onClick={() => {
+                            void copy(link.short ?? "", "short");
+                          }}
+                          className={styles.copy}
+                          type="button"
+                        >
+                          {copied === "short"
+                            ? "写しました"
+                            : "短いリンクを写す"}
+                        </button>
+                      )}
+                      <button
+                        onClick={() => {
+                          void copy(link.long, "long");
+                        }}
+                        className={styles.copy}
+                        type="button"
+                      >
+                        {copied === "long" ? "写しました" : "リンクを写す"}
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </>
   );
 }

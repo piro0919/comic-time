@@ -1,17 +1,25 @@
 .open {
   align-items: center;
-  background: var(--surface);
-  border: 1px solid var(--border);
   border-radius: var(--radius-pill);
+  color: var(--foreground);
   cursor: pointer;
   display: flex;
   font-size: 1.3rem;
   gap: var(--space-1);
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  transition: background 0.2s ease;
+  white-space: nowrap;
 }
 
 .open:hover {
-  background: var(--highlight);
+  background: var(--surface);
+}
+
+/* 狭い画面では絵柄だけにする。題字の場所を削らないため */
+.label {
+  @media (width < 480px) {
+    display: none;
+  }
 }
 
 .overlay {
