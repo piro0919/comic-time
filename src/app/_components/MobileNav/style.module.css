@@ -1,6 +1,8 @@
+/* 曜日の帯もヘッダーと同じ透け方にする。下の一覧が薄く見える */
 .container {
   align-items: center;
-  background: var(--background);
+  backdrop-filter: blur(8px);
+  background: hsl(from var(--background) h s l / 88%);
   border-bottom: 1px solid var(--border);
   display: flex;
   height: var(--mobile-nav-height);
