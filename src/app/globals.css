@@ -124,11 +124,12 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
-.swal2-popup {
-  @media (width < 768px) {
-    font-size: 120%;
-  }
-  @media (width >= 768px) {
-    font-size: 140%;
-  }
+/* 画面には出さず、読み上げと検索エンジンにだけ渡す見出し */
+.visually-hidden {
+  block-size: 1px;
+  clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
 }

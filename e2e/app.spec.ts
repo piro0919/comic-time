@@ -11,7 +11,9 @@ test.describe("画面の操作", () => {
     page.on("pageerror", (error) => errors.push(error.message));
 
     await page.goto("/");
-    await expect(page.locator("h1")).toHaveText("ComicTime");
+    // 何も登録していないと今日の曜日へ送られる。見出しは画面ごとに1つ
+    await expect(page.getByRole("link", { name: "ComicTime" })).toBeVisible();
+    await expect(page.locator("h1")).toHaveText(/の更新$/);
     expect(errors).toEqual([]);
   });
 

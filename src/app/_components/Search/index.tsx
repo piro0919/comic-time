@@ -52,6 +52,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
 
   return (
     <div className={styles.container}>
+      <h1 className="visually-hidden">作品を探す</h1>
       <div className={styles.searchBar}>
         <input
           onChange={(e) => {

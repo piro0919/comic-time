@@ -3,7 +3,7 @@ import { config, useSpring } from "@react-spring/web";
 import { createUseGesture, dragAction } from "@use-gesture/react";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
-import { dayHref, days } from "@/app/days";
+import { dayHref, dayLabel, days } from "@/app/days";
 import { type Weekday, type Work } from "@/types/work";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
@@ -89,6 +89,7 @@ export default function App({ day, works }: AppProps): React.JSX.Element {
 
   return (
     <div {...bind()} className={styles.container}>
+      <h1 className="visually-hidden">{`${dayLabel(day)}の更新`}</h1>
       {batches.map((batch, batchIndex) => (
         <section className={styles.section} key={batch.foundAt}>
           <div className={styles.batchHead}>

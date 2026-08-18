@@ -31,7 +31,8 @@ export default function Home({ days, today }: HomeProps): React.JSX.Element {
   }, [router, today]);
 
   if (registered !== true) {
-    return <></>;
+    // 判断は描画後になる。それまでも見出しだけは置く
+    return <h1 className="visually-hidden">この一週間の更新</h1>;
   }
 
   return <Favorites days={days} />;

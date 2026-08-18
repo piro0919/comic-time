@@ -33,6 +33,7 @@ export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
   if (found.length === 0) {
     return (
       <div className={styles.container}>
+        <h1 className="visually-hidden">お気に入り</h1>
         <p className={styles.empty}>
           {favorites.workUrls.length === 0
             ? "お気に入り登録した作品が、ここに表示されます。"
@@ -44,6 +45,7 @@ export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
 
   return (
     <div className={styles.container}>
+      <h1 className="visually-hidden">お気に入り</h1>
       {found.map((day, dayIndex) => (
         <section className={styles.section} key={day.label}>
           <div className={styles.dayHead}>

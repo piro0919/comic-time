@@ -14,9 +14,10 @@ const righteous = Righteous({
 export default function Header(): React.JSX.Element {
   return (
     <header className={styles.header}>
-      <h1 className={clsx(righteous.className, styles.h1)}>
+      {/* 見出しではなく、どの画面にも出る帰り道。h1 は画面ごとに置く */}
+      <div className={clsx(righteous.className, styles.h1)}>
         <Link href="/">ComicTime</Link>
-      </h1>
+      </div>
       <div className={styles.actions}>
         <ShareFavorites />
         <InstallButton />
