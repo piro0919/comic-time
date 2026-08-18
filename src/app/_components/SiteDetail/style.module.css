@@ -1,0 +1,88 @@
+.container {
+  align-content: flex-start;
+  display: grid;
+  gap: var(--space-5);
+  min-height: 100%;
+  padding: var(--space-4) clamp(var(--space-3), 2.5dvw, var(--space-5))
+    var(--space-6);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: flex-start;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.fact {
+  display: grid;
+  gap: 2px;
+}
+
+.factKey {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.factValue {
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.official {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--accent);
+  font-size: 1.3rem;
+  padding: var(--space-2) var(--space-4);
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 1.3rem;
+}
+
+.section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.dayHead {
+  align-items: center;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.dayLabel {
+  color: var(--muted);
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dayLine {
+  background: var(--border);
+  flex-grow: 1;
+  height: 1px;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+}
+
+.back {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
