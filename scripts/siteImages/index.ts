@@ -1,16 +1,25 @@
 import fs from "fs/promises";
 import path from "path";
+import sharp from "sharp";
+import siteSlug from "../../src/app/siteSlug.ts";
 import { type SiteEntry } from "../../src/types/work.ts";
 import fetchHtml from "../scrape/fetchHtml.ts";
 
 /**
- * 各サイトの OGP 画像の場所を集めて data/siteImages.json に書く。
+ * 各サイトの OGP 画像を集めて、縮めた控えを public/site-covers に置く。
  * 看板の絵はめったに変わらないので、作品の取得とは分けて手で走らせる。
  *
- * 取れなかったサイトは前の回の値をそのまま残す。
+ * 元の絵は 1200x630 の PNG で、重いものは1枚1.4MB ある。画面では 180px
+ * ほどでしか出さないのに、25枚で 10MB を超えていた。配信元は各社の CDN で
+ * こちらから縮められないため、縮めたものを持つ。
+ *
+ * 取れなかったサイトは前の回の控えをそのまま残す。
  * 一度取れたものを、その日たまたま落ちていただけで消したくない。
  */
 const filePath = path.join(process.cwd(), "data", "siteImages.json");
+const coverDir = path.join(process.cwd(), "public", "site-covers");
+/** 画面に出す幅の2倍。細かい画面でも粗く見えない */
+const coverWidth = 360;
 
 /** そのページの og:image。相対で書かれていることがあるので絶対にして返す */
 function ogImageOf(html: string, base: string): null | string {
@@ -45,6 +54,28 @@ async function readJson<T>(fallback: T): Promise<T> {
   }
 }
 
+/** 絵を取ってきて縮め、public/site-covers に webp で置く */
+async function saveCover(imageUrl: string, slug: string): Promise<void> {
+  const res = await fetch(imageUrl, {
+    headers: {
+      "User-Agent": "ComicTimeBot/1.0 (+https://comictime.kkweb.io/)",
+    },
+    signal: AbortSignal.timeout(30000),
+  });
+
+  if (!res.ok) {
+    throw new Error(`${res.status} ${res.statusText}`);
+  }
+
+  const resized = await sharp(Buffer.from(await res.arrayBuffer()))
+    .resize({ width: coverWidth, withoutEnlargement: true })
+    .webp({ quality: 80 })
+    .toBuffer();
+
+  await fs.mkdir(coverDir, { recursive: true });
+  await fs.writeFile(path.join(coverDir, `${slug}.webp`), resized);
+}
+
 export default async function siteImages(): Promise<void> {
   const sites = JSON.parse(
     await fs.readFile(
@@ -65,6 +96,8 @@ export default async function siteImages(): Promise<void> {
       if (image === null) {
         throw new Error("og:image が無い");
       }
+
+      await saveCover(image, siteSlug(site.url));
 
       collected[site.url] = image;
       console.log(`[siteImages] ${site.name}: ${image}`);

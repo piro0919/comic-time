@@ -2,47 +2,36 @@ import fs from "fs";
 import path from "path";
 import sitesJson from "@/data/sites.json";
 import { type DateKey, type SiteEntry, type Work } from "@/types/work";
+import siteSlug from "./siteSlug";
 import { recentWorks } from "./worksOfDay";
 
 export type Site = SiteEntry & { imageUrl: null | string; slug: string };
 
-/** 看板の絵。scripts/siteImages が書き出す。無ければ画面側で代わりを出す */
-function siteImages(): Record<string, string> {
+const coverDir = path.join(process.cwd(), "public", "site-covers");
+
+/**
+ * 看板の絵。scripts/siteImages が縮めて置いたものだけを見る。
+ * 各社の CDN から原寸で読むと、25枚で 10MB を超えるため。
+ */
+function coverOf(slug: string): null | string {
   try {
-    return JSON.parse(
-      fs.readFileSync(
-        path.join(process.cwd(), "data", "siteImages.json"),
-        "utf-8",
-      ),
-    ) as Record<string, string>;
+    fs.accessSync(path.join(coverDir, `${slug}.webp`));
+
+    return `/site-covers/${slug}.webp`;
   } catch {
-    return {};
+    return null;
   }
 }
 
-/**
- * ページの住所は URL から作る。台帳には持たせない。
- * 末尾のラベル（.com や .jp）は住所として意味がないので落とす。
- * パスを持つサイトは、その最後の区切りまで入れて他と区別する。
- */
-export function siteSlug(url: string): string {
-  const { hostname, pathname } = new URL(url);
-  const labels = hostname.replace(/^www\./, "").split(".");
-  const host = labels.slice(0, -1).join("-");
-  const tail = pathname.split("/").filter(Boolean).at(-1);
-
-  return tail === undefined ? host : `${host}-${tail}`;
-}
+export { default as siteSlug } from "./siteSlug";
 
 /** 台帳の並びのまま返す */
 export function sites(): Site[] {
-  const images = siteImages();
+  return (sitesJson as SiteEntry[]).map((site) => {
+    const slug = siteSlug(site.url);
 
-  return (sitesJson as SiteEntry[]).map((site) => ({
-    ...site,
-    imageUrl: images[site.url] ?? null,
-    slug: siteSlug(site.url),
-  }));
+    return { ...site, imageUrl: coverOf(slug), slug };
+  });
 }
 
 export function siteOf(slug: string): Site | undefined {
