@@ -95,6 +95,7 @@
     "postbuild": "next-sitemap",
     "prettier": "prettier --write .",
     "scrape": "node scripts/scrape/index.ts",
+    "scrape:site-images": "node scripts/siteImages/index.ts",
     "secretlint": "secretlint '**/*'",
     "start": "next start",
     "test:e2e": "playwright test",

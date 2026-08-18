@@ -1,8 +1,24 @@
+import fs from "fs";
+import path from "path";
 import sitesJson from "@/data/sites.json";
 import { type DateKey, type SiteEntry, type Work } from "@/types/work";
 import { recentWorks } from "./worksOfDay";
 
-export type Site = SiteEntry & { slug: string };
+export type Site = SiteEntry & { imageUrl: null | string; slug: string };
+
+/** 看板の絵。scripts/siteImages が書き出す。無ければ画面側で代わりを出す */
+function siteImages(): Record<string, string> {
+  try {
+    return JSON.parse(
+      fs.readFileSync(
+        path.join(process.cwd(), "data", "siteImages.json"),
+        "utf-8",
+      ),
+    ) as Record<string, string>;
+  } catch {
+    return {};
+  }
+}
 
 /**
  * ページの住所は URL から作る。台帳には持たせない。
@@ -20,8 +36,11 @@ export function siteSlug(url: string): string {
 
 /** 台帳の並びのまま返す */
 export function sites(): Site[] {
+  const images = siteImages();
+
   return (sitesJson as SiteEntry[]).map((site) => ({
     ...site,
+    imageUrl: images[site.url] ?? null,
     slug: siteSlug(site.url),
   }));
 }

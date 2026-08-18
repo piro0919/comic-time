@@ -33,15 +33,6 @@ export default function Sidebar(): React.JSX.Element {
               )}
             </Link>
           </li>
-          <li
-            className={clsx(styles.item, {
-              [styles.currentDay]: pathname.startsWith("/sites"),
-            })}
-          >
-            <Link className={styles.button} href="/sites">
-              サイト一覧
-            </Link>
-          </li>
           {items.map((day) => (
             <li
               className={clsx(styles.item, {
@@ -54,6 +45,15 @@ export default function Sidebar(): React.JSX.Element {
               </Link>
             </li>
           ))}
+          <li
+            className={clsx(styles.item, {
+              [styles.currentDay]: pathname.startsWith("/sites"),
+            })}
+          >
+            <Link className={styles.button} href="/sites">
+              サイト一覧
+            </Link>
+          </li>
         </ul>
       </nav>
     </aside>
