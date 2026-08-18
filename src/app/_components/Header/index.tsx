@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { Righteous } from "next/font/google";
 import Link from "next/link";
 import InstallButton from "../InstallButton";
+import ThemeToggle from "../ThemeToggle";
 import styles from "./style.module.css";
 
 const righteous = Righteous({
@@ -17,6 +18,7 @@ export default function Header(): React.JSX.Element {
       </h1>
       <div className={styles.actions}>
         <InstallButton />
+        <ThemeToggle />
       </div>
     </header>
   );

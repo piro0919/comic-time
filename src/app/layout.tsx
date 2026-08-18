@@ -15,12 +15,15 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 /**
- * ブラウザの上端に出る色。画面は常に明るい配色のため、白で固定する。
- * 配色を切り替えられるようにしたら、ここも合わせて変える。
+ * ブラウザの上端に出る色。まず端末の設定に合わせておき、
+ * 手動で選ばれたあとは ThemeToggle が書き換える。
  */
 export const viewport: Viewport = {
   initialScale: 1,
-  themeColor: "#FFFFFF",
+  themeColor: [
+    { color: "#FFFFFF", media: "(prefers-color-scheme: light)" },
+    { color: "#202124", media: "(prefers-color-scheme: dark)" },
+  ],
   width: "device-width",
 };
 
@@ -76,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning={true}>
       <body className={notoSansJP.className}>
-        <ThemeProvider enableSystem={false}>
+        <ThemeProvider>
           <Suspense>
             <Layout>{children}</Layout>
           </Suspense>
