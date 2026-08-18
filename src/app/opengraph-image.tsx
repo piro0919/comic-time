@@ -15,6 +15,9 @@ const DOMAIN = "comictime.kkweb.io";
 /** アイコンと同じ地色。globals.css ではなくアイコン側に合わせる */
 const BACKGROUND = "#87CBFC";
 const INK = "#16181D";
+/** 題字は白抜き。地色が明るいので、影で浮かせる */
+const TITLE_COLOR = "#FFFFFF";
+const TITLE_SHADOW = "0 4px 14px rgba(12, 42, 70, 0.45)";
 /** 本文のラテン文字。日本語は next/og が持っている書体に任せる */
 const BODY_FONT = "NotoSansLatin";
 /**
@@ -53,11 +56,12 @@ export default function Image(): ImageResponse {
         >
           <div
             style={{
-              color: INK,
+              color: TITLE_COLOR,
               display: "flex",
               fontFamily: "Righteous",
               fontSize: 82,
               letterSpacing: -1,
+              textShadow: TITLE_SHADOW,
             }}
           >
             {TITLE}
