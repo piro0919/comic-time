@@ -20,22 +20,10 @@ declare global {
 declare const self: ServiceWorkerGlobalScope;
 
 /**
- * 取得そのものの締め切り。
- * networkTimeoutSeconds は控えがあるときにしか効かず、一度も開いていないページは
- * 応答が返るまで待ち続けてしまう。打ち切って例外にし、オフライン画面へ落とす。
- */
-const deadlinePlugin = {
-  requestWillFetch: async ({
-    request,
-  }: {
-    request: Request;
-  }): Promise<Request> =>
-    new Request(request, { signal: AbortSignal.timeout(8000) }),
-};
-/**
- * ページ取得はネットワーク優先。応答が返らない場所で固まらないよう、
- * 4秒で控えに切り替え、8秒で取得そのものを打ち切る。
- * その控えも1日で捨てる。前の日の一覧を今日のものとして見せないため。
+ * ページ取得はネットワーク優先。応答が遅いときは4秒で控えに切り替える。
+ * ただし控えが無いページは、遅くても待つ。通信できているのに
+ * オフライン画面を出す方が困るため、打ち切りは設けない。
+ * 控えは1日で捨てる。前の日の一覧を今日のものとして見せないため。
  */
 const pageCache = {
   handler: new NetworkFirst({
@@ -43,7 +31,6 @@ const pageCache = {
     networkTimeoutSeconds: 4,
     plugins: [
       new ExpirationPlugin({ maxAgeSeconds: 24 * 60 * 60, maxEntries: 16 }),
-      deadlinePlugin,
     ],
   }),
   matcher: ({
@@ -73,12 +60,7 @@ const serwist = new Serwist({
       },
     ],
   },
-  /**
-   * ナビゲーションの先読みは切る。
-   * 先読みが有る間は、その応答を待つ処理が締め切りより手前に入り、
-   * 応答が返らないと待ち続けてしまう。速さより、止まらないことを取る。
-   */
-  navigationPreload: false,
+  navigationPreload: true,
   precacheEntries: self.__SW_MANIFEST,
   runtimeCaching: [pageCache, ...defaultCache],
   skipWaiting: true,
