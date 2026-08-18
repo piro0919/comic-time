@@ -4,12 +4,8 @@ import { type Metadata, type Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
-import "@szhsin/react-menu/dist/index.css";
-import "@szhsin/react-menu/dist/transitions/zoom.css";
-import "@szhsin/react-menu/dist/theme-dark.css";
 import { Suspense } from "react";
 import Layout from "./_components/Layout";
-import "sweetalert2/dist/sweetalert2.css";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],

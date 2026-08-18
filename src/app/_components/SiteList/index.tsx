@@ -15,13 +15,14 @@ export default function SiteList({ sites }: SiteListProps): React.JSX.Element {
         <h1 className={styles.title}>サイト一覧</h1>
       </header>
       <ul className={styles.grid}>
-        {sites.map((site) => (
+        {sites.map((site, index) => (
           <li className={styles.card} key={site.slug}>
             <Link className={styles.cardLink} href={siteHref(site.slug)}>
               <div className={styles.cover}>
                 <Image
                   alt=""
                   fill={true}
+                  priority={index < 6}
                   quality={100}
                   sizes="(width < 768px) 45vw, 180px"
                   src={site.imageUrl ?? "/no-image.png"}

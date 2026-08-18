@@ -5,6 +5,8 @@ import useFavorites from "@/app/useFavorites";
 import styles from "./style.module.css";
 
 export type WorkCardProps = {
+  /** 最初の画面に映る位置なら true。読み込みを後回しにしない */
+  priority?: boolean;
   thumbnailUrl: null | string;
   title: string;
   url: string;
@@ -12,6 +14,7 @@ export type WorkCardProps = {
 
 /** 作品1枚ぶん。星を押すとお気に入りに入る */
 export default function WorkCard({
+  priority = false,
   thumbnailUrl,
   title,
   url,
@@ -30,6 +33,7 @@ export default function WorkCard({
           <Image
             alt=""
             fill={true}
+            priority={priority}
             quality={100}
             sizes="(width < 768px) 45vw, 180px"
             src={thumbnailUrl ?? "/no-image.png"}

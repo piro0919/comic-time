@@ -89,16 +89,17 @@ export default function App({ day, works }: AppProps): React.JSX.Element {
 
   return (
     <div {...bind()} className={styles.container}>
-      {batches.map((batch) => (
+      {batches.map((batch, batchIndex) => (
         <section className={styles.section} key={batch.foundAt}>
           <div className={styles.batchHead}>
             <span className={styles.batchTime}>{`${batch.foundAt} 追加`}</span>
             <span className={styles.batchLine} />
           </div>
           <ul className={styles.grid}>
-            {batch.cards.map((card) => (
+            {batch.cards.map((card, cardIndex) => (
               <WorkCard
                 key={card.url}
+                priority={batchIndex === 0 && cardIndex < 6}
                 thumbnailUrl={card.thumbnailUrl}
                 title={card.title}
                 url={card.url}

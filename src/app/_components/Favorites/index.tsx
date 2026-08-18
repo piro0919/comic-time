@@ -44,16 +44,17 @@ export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
 
   return (
     <div className={styles.container}>
-      {found.map((day) => (
+      {found.map((day, dayIndex) => (
         <section className={styles.section} key={day.label}>
           <div className={styles.dayHead}>
             <span className={styles.dayLabel}>{day.label}</span>
             <span className={styles.dayLine} />
           </div>
           <ul className={styles.grid}>
-            {day.works.map((work) => (
+            {day.works.map((work, workIndex) => (
               <WorkCard
                 key={work.url}
+                priority={dayIndex === 0 && workIndex < 6}
                 thumbnailUrl={work.thumbnailUrl}
                 title={work.title}
                 url={work.url}

@@ -22,16 +22,17 @@ export default function SiteDetail({
       {days.length === 0 ? (
         <p className={styles.empty}>この一週間の更新はまだありません。</p>
       ) : (
-        days.map((day) => (
+        days.map((day, dayIndex) => (
           <section className={styles.section} key={day.date}>
             <div className={styles.dayHead}>
               <h2 className={styles.dayLabel}>{dateLabel(day.date)}</h2>
               <span className={styles.dayLine} />
             </div>
             <ul className={styles.grid}>
-              {day.works.map((work) => (
+              {day.works.map((work, workIndex) => (
                 <WorkCard
                   key={work.url}
+                  priority={dayIndex === 0 && workIndex < 6}
                   thumbnailUrl={work.thumbnailUrl}
                   title={work.title}
                   url={work.url}
