@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
   return {
-    background_color: "#FFFFFF",
+    // 起動時の画面。アイコンの地色と合わせる
+    background_color: "#88CBFB",
     description:
       "毎日更新されるWeb漫画サイトの更新曜日・時間を一覧でチェックできるサービスです。",
     display: "standalone",
