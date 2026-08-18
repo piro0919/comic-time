@@ -79,6 +79,5 @@ All commits are automatically checked for:
 
 - `src/app/` - Next.js App Router pages and components
 - `src/app/_components/` - Reusable React components
-- `src/env.ts` - Environment variable configuration
 - Service worker configured for offline functionality
 - PWA manifest for installable web app experience
