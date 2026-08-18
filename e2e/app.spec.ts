@@ -56,12 +56,28 @@ test.describe("画面の操作", () => {
     expect(errors).toEqual([]);
   });
 
-  test("作品のカードから外部へ出る口がある", async ({ page }) => {
-    await page.goto("/");
+  test("作品のカードは別ページへ安全に開く", async ({ page }) => {
+    // その日の更新が0件のこともあるので、当日のページを直接見る
+    const weekday = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Tokyo",
+      weekday: "short",
+    })
+      .format(new Date())
+      .toLowerCase();
 
-    const card = page.locator('main a[target="_blank"]').first();
+    await page.goto(`/day/${weekday}`);
 
-    await expect(card).toHaveAttribute("href", /^https?:\/\//);
-    await expect(card).toHaveAttribute("rel", /noopener/);
+    const cards = page.locator('main a[target="_blank"]');
+    const count = await cards.count();
+
+    if (count === 0) {
+      // 取得がまだ回っていない日もある。画面が出ていることだけ確かめる
+      await expect(page.locator("h1")).toHaveText("ComicTime");
+
+      return;
+    }
+
+    await expect(cards.first()).toHaveAttribute("href", /^https?:\/\//);
+    await expect(cards.first()).toHaveAttribute("rel", /noopener/);
   });
 });

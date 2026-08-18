@@ -24,6 +24,9 @@ test.describe("圏外での見え方", () => {
   }) => {
     await page.goto("/day/tue");
     await waitForServiceWorker(page);
+    // 実際に1回ぶん処理させてから切る。制御を握った直後は取りこぼす
+    await page.goto("/day/tue");
+    await page.waitForTimeout(1000);
 
     await context.setOffline(true);
     await page.goto("/day/sat").catch(() => undefined);
