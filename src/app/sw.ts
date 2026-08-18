@@ -19,13 +19,24 @@ declare global {
 
 declare const self: ServiceWorkerGlobalScope;
 
+/** 同一サイトの、API 以外への取得か */
+function isSitePath({
+  sameOrigin,
+  url: { pathname },
+}: {
+  sameOrigin: boolean;
+  url: URL;
+}): boolean {
+  return sameOrigin && !pathname.startsWith("/api/");
+}
+
 /**
- * ページ取得はネットワーク優先。応答が遅いときは4秒で控えに切り替える。
- * ただし控えが無いページは、遅くても待つ。通信できているのに
- * オフライン画面を出す方が困るため、打ち切りは設けない。
+ * 画面そのものの控え。ネットワーク優先で、遅いときは4秒で控えに切り替える。
+ * 控えの無いページは遅くても待つ。通信できているのにオフライン画面を
+ * 出す方が困るため、打ち切りは設けない。
  * 控えは1日で捨てる。前の日の一覧を今日のものとして見せないため。
  */
-const pageCache = {
+const documentCache = {
   handler: new NetworkFirst({
     cacheName: "pages",
     networkTimeoutSeconds: 4,
@@ -36,15 +47,36 @@ const pageCache = {
   matcher: ({
     request,
     sameOrigin,
-    url: { pathname },
+    url,
+  }: {
+    request: Request;
+    sameOrigin: boolean;
+    url: URL;
+  }): boolean => isSitePath({ sameOrigin, url }) && request.mode === "navigate",
+};
+/**
+ * 画面内での移動に使う応答。枠を画面そのものと分ける。
+ * 同じ枠に入れると、1ページ開くたびに8件ほど積まれ、
+ * 画面の控えが数ページで押し出されてしまう。
+ */
+const rscCache = {
+  handler: new NetworkFirst({
+    cacheName: "rsc",
+    networkTimeoutSeconds: 4,
+    plugins: [
+      new ExpirationPlugin({ maxAgeSeconds: 24 * 60 * 60, maxEntries: 48 }),
+    ],
+  }),
+  matcher: ({
+    request,
+    sameOrigin,
+    url,
   }: {
     request: Request;
     sameOrigin: boolean;
     url: URL;
   }): boolean =>
-    sameOrigin &&
-    !pathname.startsWith("/api/") &&
-    (request.mode === "navigate" || request.headers.get("RSC") === "1"),
+    isSitePath({ sameOrigin, url }) && request.headers.get("RSC") === "1",
 };
 const serwist = new Serwist({
   clientsClaim: true,
@@ -62,7 +94,7 @@ const serwist = new Serwist({
   },
   navigationPreload: true,
   precacheEntries: self.__SW_MANIFEST,
-  runtimeCaching: [pageCache, ...defaultCache],
+  runtimeCaching: [documentCache, rscCache, ...defaultCache],
   skipWaiting: true,
 });
 
