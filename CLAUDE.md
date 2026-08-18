@@ -66,7 +66,7 @@ All commits are automatically checked for:
 - Stylelint CSS validation with auto-fix
 - TypeScript type checking
 - Secret detection
-- Conventional commit message format
+- Conventional commit message format (**written in English**, subject and body)
 
 ### サイトの追加と取得
 
