@@ -64,12 +64,21 @@ export default function worksOfDay(day: Weekday): Work[] {
   });
 }
 
-/** 「2026-08-17」を「8/17（月）」にする */
+/**
+ * 「2026-08-17」を「8/17（月）」にする。
+ * 曜日は必ず日本時間で読む。getDay は動いている環境の時間帯で答えるため、
+ * Vercel のような UTC の環境では1日ずれる。
+ */
 export function dateLabel(date: DateKey): string {
   const [, month, day] = date.split("-");
-  const weekday = weekdays.at(new Date(`${date}T00:00:00+09:00`).getDay());
+  const weekday = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo",
+    weekday: "short",
+  })
+    .format(new Date(`${date}T00:00:00+09:00`))
+    .toLowerCase() as Weekday;
 
-  return `${Number(month)}/${Number(day)}（${weekday === undefined ? "" : weekdayJa[weekday]}）`;
+  return `${Number(month)}/${Number(day)}（${weekdayJa[weekday]}）`;
 }
 
 /** 直近7日ぶん。新しい日から並べる */

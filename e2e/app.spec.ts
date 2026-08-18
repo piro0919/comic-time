@@ -81,3 +81,59 @@ test.describe("画面の操作", () => {
     await expect(cards.first()).toHaveAttribute("rel", /noopener/);
   });
 });
+
+/**
+ * 日付と曜日の対応。Vercel は UTC で動くため、日本時間で読まないと1日ずれる。
+ * サイドバーの日付は端末側で作るので当てにならない。本体の見出しを見る。
+ * 確かめる側はアプリと違う出し方（暦日から直接）で曜日を求める。
+ */
+test.describe("日付の見出し", () => {
+  test("曜日が日付と合っている", async ({ page }) => {
+    const weekday = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Tokyo",
+      weekday: "short",
+    })
+      .format(new Date())
+      .toLowerCase();
+
+    await page.goto(`/day/${weekday}`);
+
+    const stars = page.locator(
+      'main button[aria-label$="をお気に入りに入れる"]',
+    );
+    const count = Math.min(3, await stars.count());
+
+    test.skip(count === 0, "その日の更新が無いので見出しが出ない");
+
+    for (let index = 0; index < count; index += 1) {
+      await stars.nth(index).click();
+    }
+
+    await page.goto("/favorites");
+
+    const labels = await page
+      .locator("main")
+      .locator("text=/^[0-9]+\\/[0-9]+（[日月火水木金土]）$/")
+      .allInnerTexts();
+
+    expect(labels.length).toBeGreaterThan(0);
+
+    const japanese = ["日", "月", "火", "水", "木", "金", "土"];
+    const year = Number(
+      new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Tokyo",
+        year: "numeric",
+      }).format(new Date()),
+    );
+
+    labels.forEach((label) => {
+      const matched = /^(\d+)\/(\d+)（(.)）$/.exec(label);
+      const month = Number(matched?.[1]);
+      const day = Number(matched?.[2]);
+      const expected =
+        japanese[new Date(Date.UTC(year, month - 1, day)).getUTCDay()];
+
+      expect(label).toBe(`${month}/${day}（${expected}）`);
+    });
+  });
+});

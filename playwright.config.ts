@@ -22,6 +22,8 @@ export default defineConfig({
   },
   webServer: {
     command: `npm run build && npx next start -p ${port}`,
+    // Vercel は UTC で動く。時間帯の取り違えを手元でも踏めるようにする
+    env: { TZ: "UTC" },
     reuseExistingServer: !process.env.CI,
     timeout: 180000,
     url: baseURL,
