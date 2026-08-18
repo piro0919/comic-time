@@ -26,10 +26,8 @@ test.describe("お気に入りの受け渡し", () => {
     }
 
     await from.getByRole("button", { name: /別の端末へ渡す/ }).click();
-    await expect(from.getByText(`${count}件を渡す`)).toBeVisible();
-
     await from
-      .getByRole("button", { name: /リンクを写す/ })
+      .getByRole("button", { name: /リンクをコピー/ })
       .last()
       .click();
 

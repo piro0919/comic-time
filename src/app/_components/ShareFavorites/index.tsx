@@ -106,14 +106,23 @@ export default function ShareFavorites(): null | React.JSX.Element {
       </button>
       {isOpen
         ? createPortal(
-            <div className={styles.overlay}>
-              <div className={styles.panel}>
+            <div
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              className={styles.overlay}
+              role="presentation"
+            >
+              <div
+                onClick={(event) => {
+                  // 中身を押しただけで閉じない
+                  event.stopPropagation();
+                }}
+                className={styles.panel}
+                role="presentation"
+              >
                 <div className={styles.head}>
-                  <span className={styles.title}>
-                    {count === 0
-                      ? "渡せる登録がありません"
-                      : `${count}件を渡す`}
-                  </span>
+                  <span className={styles.title}>お気に入りを共有</span>
                   <button
                     onClick={() => {
                       setIsOpen(false);
@@ -125,11 +134,7 @@ export default function ShareFavorites(): null | React.JSX.Element {
                     <MdClose size={20} />
                   </button>
                 </div>
-                {count === 0 ? (
-                  <p className={styles.note}>
-                    作品の星を押して登録すると、ここから別の端末へ渡せます。
-                  </p>
-                ) : link === null ? (
+                {link === null ? (
                   <p className={styles.note}>用意しています…</p>
                 ) : (
                   <>
@@ -140,9 +145,6 @@ export default function ShareFavorites(): null | React.JSX.Element {
                     ) : (
                       <div className={styles.qr}>
                         <QRCodeSVG size={196} value={qrValue} />
-                        <p className={styles.note}>
-                          渡したい端末のカメラで読み取ってください。
-                        </p>
                       </div>
                     )}
                     <div className={styles.links}>
@@ -166,7 +168,9 @@ export default function ShareFavorites(): null | React.JSX.Element {
                         className={styles.copy}
                         type="button"
                       >
-                        {copied === "long" ? "写しました" : "リンクを写す"}
+                        {copied === "long"
+                          ? "コピーしました"
+                          : "リンクをコピー"}
                       </button>
                     </div>
                   </>
