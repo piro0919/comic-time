@@ -83,11 +83,16 @@ const serwist = new Serwist({
   /**
    * 控えも無く、通信も駄目なときに出す画面。
    * ページの読み込みだけを差し替える。画像や JSON はそのまま失敗させる。
+   *
+   * 端末が「つながっている」と言っているうちは出さない。
+   * 取得の失敗には通信以外の理由もあり、そのときに圏外だと言い切ると、
+   * ブラウザ本来のエラーより誤解を招く。
    */
   fallbacks: {
     entries: [
       {
-        matcher: ({ request }): boolean => request.destination === "document",
+        matcher: ({ request }): boolean =>
+          request.destination === "document" && !self.navigator.onLine,
         url: "/~offline",
       },
     ],
