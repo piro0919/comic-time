@@ -1,11 +1,13 @@
 import { type Metadata } from "next";
 import Favorites from "../_components/Favorites";
+import pageMetadata from "../pageMetadata";
 import { dateLabel, recentWorks } from "../worksOfDay";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   description: "登録した作品のうち、この一週間で更新されたものをまとめます。",
+  path: "/favorites",
   title: "お気に入り",
-};
+});
 
 /** 日付が変わったら並びも変わるよう、1時間ごとに作り直す */
 export const revalidate = 3600;

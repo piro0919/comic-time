@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { type Weekday } from "@/types/work";
 import App from "../../_components/App";
 import { dayLabel } from "../../days";
+import pageMetadata from "../../pageMetadata";
 import worksOfDay, { dayKeys } from "../../worksOfDay";
 
 export type PageProps = {
@@ -18,10 +19,11 @@ export async function generateMetadata({
   const { day } = await params;
   const label = dayLabel(day as Weekday);
 
-  return {
+  return pageMetadata({
     description: `${label}に更新されたWeb漫画の一覧です。`,
+    path: `/day/${day}`,
     title: `${label}の更新`,
-  };
+  });
 }
 
 export function generateStaticParams(): { day: string }[] {

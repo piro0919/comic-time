@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteDetail from "../../_components/SiteDetail";
+import pageMetadata from "../../pageMetadata";
 import { siteOf, sites, updateDayLabel, worksOfSite } from "../../siteCatalog";
 
 export type PageProps = {
@@ -24,10 +25,11 @@ export async function generateMetadata({
 
   const time = site.updateTime === "" ? "" : `${site.updateTime}に`;
 
-  return {
+  return pageMetadata({
     description: `${site.name}の更新曜日は${updateDayLabel(site.updateDay)}。${time}更新されます。この一週間に更新された作品をまとめています。`,
+    path: `/sites/${slug}`,
     title: `${site.name}の更新曜日と最新話`,
-  };
+  });
 }
 
 export function generateStaticParams(): { slug: string }[] {
