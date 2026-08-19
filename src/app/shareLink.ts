@@ -94,7 +94,9 @@ export async function decodeFavorites(
     const bytes =
       marker === GZIPPED
         ? await collect(
-            new Blob([body])
+            // TypeScript 5.7 で Uint8Array が ArrayBufferLike を型引数に取るようになり、
+            // BlobPart に直接は渡せなくなった。中身は同じなので明示して渡す。
+            new Blob([body as BlobPart])
               .stream()
               .pipeThrough(new DecompressionStream("gzip")),
           )
