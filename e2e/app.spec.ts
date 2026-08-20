@@ -124,9 +124,12 @@ test.describe("日付の見出し", () => {
 
     await page.goto("/favorites");
 
+    // 見出しは「8/21（金）01:01 更新」の形。日付の部分だけを見る
     const labels = await page
       .locator("main")
-      .locator("text=/^[0-9]+\\/[0-9]+（[日月火水木金土]）$/")
+      .locator(
+        "text=/^[0-9]+\\/[0-9]+（[日月火水木金土]）[0-9]{2}:[0-9]{2} 更新$/",
+      )
       .allInnerTexts();
 
     expect(labels.length).toBeGreaterThan(0);
@@ -140,13 +143,13 @@ test.describe("日付の見出し", () => {
     );
 
     labels.forEach((label) => {
-      const matched = /^(\d+)\/(\d+)（(.)）$/.exec(label);
+      const matched = /^(\d+)\/(\d+)（(.)）/.exec(label);
       const month = Number(matched?.[1]);
       const day = Number(matched?.[2]);
       const expected =
         japanese[new Date(Date.UTC(year, month - 1, day)).getUTCDay()];
 
-      expect(label).toBe(`${month}/${day}（${expected}）`);
+      expect(matched?.[3], label).toBe(expected);
     });
   });
 });

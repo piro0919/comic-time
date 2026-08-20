@@ -93,7 +93,7 @@ export default function App({ day, works }: AppProps): React.JSX.Element {
       {batches.map((batch, batchIndex) => (
         <section className={styles.section} key={batch.foundAt}>
           <div className={styles.batchHead}>
-            <span className={styles.batchTime}>{`${batch.foundAt} 追加`}</span>
+            <span className={styles.batchTime}>{`${batch.foundAt} 更新`}</span>
             <span className={styles.batchLine} />
           </div>
           <ul className={styles.grid}>
