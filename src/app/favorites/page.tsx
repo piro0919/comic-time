@@ -2,7 +2,6 @@ import { type Metadata } from "next";
 import Favorites from "../_components/Favorites";
 import crossSiteWorks from "../crossSiteWorks";
 import pageMetadata from "../pageMetadata";
-import { sites } from "../siteCatalog";
 import { dateLabel, recentWorks } from "../worksOfDay";
 
 export const metadata: Metadata = pageMetadata({
@@ -20,11 +19,5 @@ export default function Page(): React.JSX.Element {
     works: day.works,
   }));
 
-  return (
-    <Favorites
-      crossSites={crossSiteWorks()}
-      days={days}
-      sites={sites().map(({ name, url }) => ({ name, url }))}
-    />
-  );
+  return <Favorites crossSites={crossSiteWorks()} days={days} />;
 }

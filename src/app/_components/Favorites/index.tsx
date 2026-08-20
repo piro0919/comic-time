@@ -1,5 +1,5 @@
 "use client";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { FaStar } from "react-icons/fa";
 import { type CrossSites } from "@/app/crossSiteWorks";
 import useFavorites from "@/app/useFavorites";
@@ -15,8 +15,6 @@ export type FavoritesProps = {
     label: string;
     works: Work[];
   }[];
-  /** 台帳のサイト。題名を控えていない古い登録を、URLから見分けるのに使う */
-  sites: { name: string; url: string }[];
 };
 
 /** 同じ日の同じ回に見つかった作品のかたまり */
@@ -28,13 +26,9 @@ type Batch = {
 
 /** この一週間、一度も更新されなかった登録 */
 type Dormant = {
-  works: {
-    key: string;
-    /** 題名が分かるならそれ。分からなければサイト名 */
-    label: string;
-    /** 作品URLで登録されていた古いぶんだけ、開いて確かめられる */
-    url: null | string;
-  }[];
+  /** 題名も分からず、どのカードにも繋がらないもの。捨てる */
+  lost: string[];
+  works: { key: string; title: string }[];
 };
 
 /**
@@ -45,7 +39,6 @@ type Dormant = {
 export default function Favorites({
   crossSites,
   days,
-  sites,
 }: FavoritesProps): React.JSX.Element {
   const favorites = useFavorites();
   const batches = useMemo<Batch[]>(() => {
@@ -86,23 +79,31 @@ export default function Favorites({
 
     const rest = favorites.workUrls.filter((entry) => !seen.has(entry));
     const works = rest
-      .flatMap<Dormant["works"][number]>((key) => {
+      .flatMap((key) => {
         const title = favorites.titles[key];
 
-        if (title !== undefined) {
-          return [{ key, label: title, url: null }];
-        }
-
-        // 作品URLで登録していた頃のぶん。題名は残っていないが、出どころは分かる
-        const site = sites.find((entry) => key.startsWith(entry.url));
-
-        return site === undefined ? [] : [{ key, label: site.name, url: key }];
+        return title === undefined ? [] : [{ key, title }];
       })
-      .toSorted((a, b) => a.label.localeCompare(b.label, "ja"));
+      .toSorted((a, b) => a.title.localeCompare(b.title, "ja"));
+    const named = new Set(works.map((work) => work.key));
 
-    return { works };
-  }, [crossSites, days, favorites, sites]);
+    return { lost: rest.filter((key) => !named.has(key)), works };
+  }, [crossSites, days, favorites]);
   const hasDormant = dormant.works.length > 0;
+  const { forgetWorks } = favorites;
+  const lost = dormant.lost.join("\n");
+
+  /**
+   * 作品URLで登録していた頃のぶんのうち、この一週間どこにも出てこなかったもの。
+   * 題名も分からず、押して外すこともできないので、開いたついでに捨てる。
+   */
+  useEffect(() => {
+    if (lost === "") {
+      return;
+    }
+
+    forgetWorks(lost.split("\n"));
+  }, [forgetWorks, lost]);
 
   if (batches.length === 0 && !hasDormant) {
     return (
@@ -151,24 +152,12 @@ export default function Favorites({
           <ul className={styles.dormant}>
             {dormant.works.map((work) => (
               <li className={styles.dormantItem} key={work.key}>
-                {work.url === null ? (
-                  <span className={styles.dormantTitle}>{work.label}</span>
-                ) : (
-                  // 題名が無いぶんは、登録した回へのリンクだけが手がかり
-                  <a
-                    className={styles.dormantTitle}
-                    href={work.url}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {`${work.label}に登録した回（題名なし）`}
-                  </a>
-                )}
+                <span className={styles.dormantTitle}>{work.title}</span>
                 <button
                   onClick={() => {
                     favorites.toggleWork(work.key, []);
                   }}
-                  aria-label={`${work.label}をお気に入りから外す`}
+                  aria-label={`${work.title}をお気に入りから外す`}
                   className={styles.dormantStar}
                   type="button"
                 >

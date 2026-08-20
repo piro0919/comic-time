@@ -1,8 +1,6 @@
 "use client";
 import { useCallback, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import sitesJson from "@/data/sites.json";
-import { type SiteEntry } from "@/types/work";
 
 /**
  * 追いかける対象は作品とサイトの2種類。
@@ -30,6 +28,8 @@ export type Favorites = {
   /** 昔の形での登録を、今の見出しでの登録に置き換える */
   adoptTitle: (workKey: string, legacyKeys: string[]) => void;
   followsSite: (siteUrl: string) => boolean;
+  /** 題名も分からず、どのカードにも繋がらない登録を捨てる */
+  forgetWorks: (keys: string[]) => void;
   /** 今の見出しか、昔の形のどれかが入っていれば登録済み */
   hasWork: (workKey: string, legacyKeys: string[]) => boolean;
   /** 一覧に出てきた登録の題名を控える。すでに同じものがあれば何もしない */
@@ -43,15 +43,13 @@ export type Favorites = {
   /** 入れるときは今の見出しで。外すときは昔の形のぶんも一緒に落とす */
   toggleWork: (workKey: string, legacyKeys: string[]) => void;
   /**
-   * 画面に出せる登録の数。名前も出どころも分からないものは数えない。
+   * 画面に出せる登録の数。題名を控えていないものは数えない。
    * 数えると、件数だけが多くて中身の無い状態になる。
    * 次にその作品が更新された時点で見出しが繋がり、数に入る
    */
   visibleWorkCount: number;
   workUrls: string[];
 };
-
-const siteOrigins = (sitesJson as SiteEntry[]).map((site) => site.url);
 
 function toggle(list: string[], value: string): string[] {
   return list.includes(value)
@@ -82,11 +80,7 @@ export default function useFavorites(): Favorites {
   const visibleWorkCount = useMemo(() => {
     const known = stored.titles ?? {};
 
-    return stored.works.filter(
-      (entry) =>
-        Object.hasOwn(known, entry) ||
-        siteOrigins.some((origin) => entry.startsWith(origin)),
-    ).length;
+    return stored.works.filter((entry) => Object.hasOwn(known, entry)).length;
   }, [stored.titles, stored.works]);
   const siteSet = useMemo(() => new Set(stored.sites), [stored.sites]);
 
@@ -114,6 +108,24 @@ export default function useFavorites(): Favorites {
       [setStored],
     ),
     followsSite: useCallback((siteUrl) => siteSet.has(siteUrl), [siteSet]),
+    forgetWorks: useCallback(
+      (keys) => {
+        setStored((prev) => {
+          const works = prev.works.filter((entry) => !keys.includes(entry));
+
+          if (works.length === prev.works.length) {
+            return prev;
+          }
+
+          const titles = { ...(prev.titles ?? {}) };
+
+          keys.forEach((entry) => delete titles[entry]);
+
+          return { ...prev, titles, works };
+        });
+      },
+      [setStored],
+    ),
     hasWork: useCallback(
       (workKey, legacyKeys) =>
         workSet.has(workKey) || legacyKeys.some((entry) => workSet.has(entry)),

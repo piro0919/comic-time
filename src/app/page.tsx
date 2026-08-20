@@ -3,7 +3,6 @@ import { type Weekday, weekdays } from "@/types/work";
 import Home from "./_components/Home";
 import crossSiteWorks from "./crossSiteWorks";
 import pageMetadata from "./pageMetadata";
-import { sites } from "./siteCatalog";
 import { dateLabel, recentWorks } from "./worksOfDay";
 
 /** 日付が変わったら中身も変わるよう、1時間ごとに作り直す */
@@ -33,11 +32,6 @@ export default function Page(): React.JSX.Element {
   }));
 
   return (
-    <Home
-      crossSites={crossSiteWorks()}
-      days={days}
-      sites={sites().map(({ name, url }) => ({ name, url }))}
-      today={todayInJapan()}
-    />
+    <Home crossSites={crossSiteWorks()} days={days} today={todayInJapan()} />
   );
 }
