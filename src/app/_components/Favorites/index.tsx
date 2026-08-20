@@ -1,5 +1,6 @@
 "use client";
 import { useMemo } from "react";
+import { FaStar } from "react-icons/fa";
 import { type CrossSites } from "@/app/crossSiteWorks";
 import useFavorites from "@/app/useFavorites";
 import workCards, { type WorkCard as Card } from "@/app/workCards";
@@ -21,6 +22,13 @@ type Batch = {
   cards: Card[];
   /** 「8/17（月）01:01」の形 */
   label: string;
+};
+
+/** この一週間、一度も更新されなかった登録 */
+type Dormant = {
+  /** 題名を控えていないもの。数だけ出して、行にはしない */
+  unnamed: number;
+  works: { key: string; title: string }[];
 };
 
 /**
@@ -55,8 +63,33 @@ export default function Favorites({
 
     return result;
   }, [crossSites, days, favorites]);
+  /**
+   * 登録してあるのに、この一週間どこにも出てこなかったもの。
+   * 一覧から消えたままだと星を押せず、外す手立てが無くなるため下に並べる。
+   */
+  const dormant = useMemo<Dormant>(() => {
+    const seen = new Set<string>();
 
-  if (batches.length === 0) {
+    days.forEach((day) => {
+      workCards(day.works, crossSites).forEach((card) => {
+        seen.add(card.workKey);
+        card.urls.forEach((url) => seen.add(url));
+      });
+    });
+
+    const rest = favorites.workUrls.filter((entry) => !seen.has(entry));
+    const works = rest
+      .flatMap((key) => {
+        const title = favorites.titles[key];
+
+        return title === undefined ? [] : [{ key, title }];
+      })
+      .toSorted((a, b) => a.title.localeCompare(b.title, "ja"));
+
+    return { unnamed: rest.length - works.length, works };
+  }, [crossSites, days, favorites]);
+
+  if (batches.length === 0 && dormant.works.length === 0) {
     return (
       <div className={styles.container}>
         <h1 className="visually-hidden">お気に入り</h1>
@@ -94,6 +127,37 @@ export default function Favorites({
           </ul>
         </section>
       ))}
+      {dormant.works.length === 0 ? null : (
+        <section className={styles.section}>
+          <div className={styles.batchHead}>
+            <span className={styles.batchLabel}>この一週間、更新なし</span>
+            <span className={styles.batchLine} />
+          </div>
+          <ul className={styles.dormant}>
+            {dormant.works.map((work) => (
+              <li className={styles.dormantItem} key={work.key}>
+                <span className={styles.dormantTitle}>{work.title}</span>
+                <button
+                  onClick={() => {
+                    favorites.toggleWork(work.key, []);
+                  }}
+                  aria-label={`${work.title}をお気に入りから外す`}
+                  className={styles.dormantStar}
+                  type="button"
+                >
+                  <FaStar color="#ffcd3b" size={16} />
+                </button>
+              </li>
+            ))}
+          </ul>
+          {dormant.unnamed === 0 ? null : (
+            // 昔の登録は題名を控えていない。次に更新されたとき名前が入る
+            <p className={styles.dormantNote}>
+              {`ほかに、題名の分からない登録が${dormant.unnamed}件あります。`}
+            </p>
+          )}
+        </section>
+      )}
     </div>
   );
 }

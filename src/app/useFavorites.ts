@@ -15,6 +15,12 @@ export const key = "favorites-v3";
 
 type Stored = {
   sites: string[];
+  /**
+   * 登録した作品の題名。見出しはハッシュで題名に戻せず、
+   * 7日より外の作品はサーバ側にも名前が無いため、手元に控える。
+   * 共有リンクには載せない。短さを保つため、渡すのは見出しだけにする。
+   */
+  titles?: Record<string, string>;
   works: string[];
 };
 
@@ -24,9 +30,13 @@ export type Favorites = {
   followsSite: (siteUrl: string) => boolean;
   /** 作品の見出しか、載っているどれかのURLが入っていれば登録済み */
   hasWork: (workKey: string, urls: string[]) => boolean;
+  /** 一覧に出てきた登録の題名を控える。すでに同じものがあれば何もしない */
+  rememberTitle: (workKey: string, title: string) => void;
   /** 受け取った登録で丸ごと書き換える。画面の件数もここを通せば追いつく */
   replaceAll: (next: Stored) => void;
   siteUrls: string[];
+  /** 控えてある題名。休眠中の作品を名前で出すために使う */
+  titles: Record<string, string>;
   toggleSite: (siteUrl: string) => void;
   /** 入れるときは作品の見出しで。外すときは昔のURLぶんも一緒に落とす */
   toggleWork: (workKey: string, urls: string[]) => void;
@@ -87,6 +97,25 @@ export default function useFavorites(): Favorites {
         workSet.has(workKey) || urls.some((url) => workSet.has(url)),
       [workSet],
     ),
+    rememberTitle: useCallback(
+      (workKey, title) => {
+        setStored((prev) => {
+          // 登録していないものの題名は控えない。控えても使い道がない
+          if (!prev.works.includes(workKey)) {
+            return prev;
+          }
+
+          const titles = prev.titles ?? {};
+
+          if (titles[workKey] === title) {
+            return prev;
+          }
+
+          return { ...prev, titles: { ...titles, [workKey]: title } };
+        });
+      },
+      [setStored],
+    ),
     replaceAll: useCallback(
       (next) => {
         setStored(next);
@@ -94,6 +123,7 @@ export default function useFavorites(): Favorites {
       [setStored],
     ),
     siteUrls: stored.sites,
+    titles: stored.titles ?? {},
     toggleSite: useCallback(
       (siteUrl) => {
         setStored((prev) => ({ ...prev, sites: toggle(prev.sites, siteUrl) }));
@@ -110,7 +140,16 @@ export default function useFavorites(): Favorites {
             (entry) => entry !== workKey && !urls.includes(entry),
           );
 
-          return { ...prev, works: added ? rest : [...rest, workKey] };
+          if (!added) {
+            return { ...prev, works: [...rest, workKey] };
+          }
+
+          // 外したら題名の控えも捨てる。残しても増えるだけ
+          const titles = { ...(prev.titles ?? {}) };
+
+          delete titles[workKey];
+
+          return { ...prev, titles, works: rest };
         });
       },
       [setStored],

@@ -38,7 +38,7 @@ export default function WorkCard({
   const favorites = useFavorites();
   const opened = useOpened();
   const added = favorites.hasWork(workKey, urls);
-  const { adoptTitle } = favorites;
+  const { adoptTitle, rememberTitle } = favorites;
   /** urls は描き直すたびに別の配列になる。中身で見て、無駄に動かさない */
   const urlKey = urls.join("\n");
 
@@ -46,6 +46,16 @@ export default function WorkCard({
   useEffect(() => {
     adoptTitle(workKey, urlKey.split("\n"));
   }, [adoptTitle, urlKey, workKey]);
+
+  /**
+   * 登録済みの作品が一覧に出てきたら、題名を控える。
+   * 更新が途切れて一覧から消えたあとも、名前で並べられるようにするため。
+   */
+  useEffect(() => {
+    if (added) {
+      rememberTitle(workKey, title);
+    }
+  }, [added, rememberTitle, title, workKey]);
 
   const read = opened.isOpened(urls);
   /**

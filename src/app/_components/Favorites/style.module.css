@@ -42,6 +42,47 @@
   height: 1px;
 }
 
+/* 休眠中の登録。絵は持っていないので、名前だけの行にする */
+.dormant {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.dormantItem {
+  align-items: center;
+  border-radius: var(--radius-1);
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-2) var(--space-2) 0;
+}
+
+.dormantItem:hover {
+  background: var(--surface);
+}
+
+.dormantTitle {
+  color: var(--muted);
+  font-size: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 押せることが分かる大きさを取る。行の右端に寄せる */
+.dormantStar {
+  align-items: center;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  margin-inline-start: auto;
+  padding: var(--space-1);
+}
+
+.dormantNote {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
 .empty {
   color: var(--muted);
   font-size: 1.4rem;
