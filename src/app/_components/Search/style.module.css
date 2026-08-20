@@ -1,7 +1,7 @@
 .container {
   display: grid;
   gap: var(--space-3);
-  padding: var(--space-4) clamp(var(--space-3), 2.5dvw, var(--space-5))
+  padding: var(--space-3) clamp(var(--space-3), 2.5dvw, var(--space-5))
     var(--space-6);
 }
 
