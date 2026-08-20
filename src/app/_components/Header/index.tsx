@@ -12,6 +12,20 @@ const righteous = Righteous({
   weight: "400",
 });
 
+/** 題字のまわりに散らす星。飾りなので読み上げには出さない */
+function Star({ className }: { className: string }): React.JSX.Element {
+  return (
+    <svg
+      aria-hidden={true}
+      className={className}
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path d="M12 0c1.1 8.2 2.7 9.8 12 12-9.3 2.2-10.9 3.8-12 12-1.1-8.2-2.7-9.8-12-12C9.3 9.8 10.9 8.2 12 0Z" />
+    </svg>
+  );
+}
+
 export default function Header(): React.JSX.Element {
   return (
     <header className={styles.header}>
@@ -26,7 +40,12 @@ export default function Header(): React.JSX.Element {
             src="/header-icon.png"
             width={256}
           />
-          ComicTime
+          <span className={styles.wordmark}>
+            ComicTime
+            <Star className={clsx(styles.star, styles.starLead)} />
+            <Star className={clsx(styles.star, styles.starTrail)} />
+            <Star className={clsx(styles.star, styles.starFoot)} />
+          </span>
         </Link>
       </div>
       <div className={styles.actions}>
