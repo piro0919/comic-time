@@ -17,9 +17,9 @@ export type WorkCard = {
   thumbnailUrl: null | string;
   title: string;
   url: string;
-  /** 同じ作品が載っている全サイトぶんのURL。お気に入りはまとめて見る */
+  /** そのサイトでのその作品のURL。昔の登録を見つけ直すのに使う */
   urls: string[];
-  /** お気に入りの見出し */
+  /** お気に入りの見出し。サイトと題名の組から作る */
   workKey: string;
 };
 
@@ -37,12 +37,17 @@ export function titleKey(title: string): string {
 }
 
 /**
- * お気に入りの見出し。揃えたタイトルを32ビット2本ぶんに畳んで36進で書く。
+ * お気に入りの見出し。サイトと題名の組を32ビット2本ぶんに畳んで36進で書く。
+ *
+ * 話ごとにURLが変わるサイトがあるため、URLでは持てない。題名だけで持つと、
+ * 同じ作品を載せている別サイトの更新まで出てしまう。読むのは1つのサイトなので、
+ * サイトを混ぜずに、サイトごとの登録にする。
+ *
  * 日本語のまま持つと共有リンクが縮まらず、QRに載る件数が3分の1になる。
  * 読める必要はない見出しなので、短さを取る。
  */
-export function workKey(title: string): string {
-  const text = titleKey(title);
+export function workKey(siteName: string, title: string): string {
+  const text = `${siteName}\u0000${titleKey(title)}`;
 
   let low = 0x811c9dc5;
   let high = 0x1000193;
@@ -69,8 +74,8 @@ export function siteOf(work: Work): CardSite {
 
 /**
  * 作品をカードに移す。並びは渡された順のまま。
- * crossSites に載っている作品は、複数サイトで読めるものなので、
- * どのサイトのぶんかを印で出し、お気に入りは全サイトぶんをまとめて見る。
+ * crossSites に載っている作品は複数サイトで読めるものなので、
+ * どのサイトのぶんかを印で出す。登録はサイトごとに分けたままにする。
  */
 export default function workCards(
   works: Work[],
@@ -87,16 +92,8 @@ export default function workCards(
       thumbnailUrl: work.thumbnailUrl,
       title: work.title,
       url: work.url,
-      urls:
-        known.length > 1
-          ? [
-              work.url,
-              ...known
-                .filter((site) => site.url !== work.url)
-                .map((site) => site.url),
-            ]
-          : [work.url],
-      workKey: workKey(work.title),
+      urls: [work.url],
+      workKey: workKey(work.siteName, work.title),
     };
   });
 }

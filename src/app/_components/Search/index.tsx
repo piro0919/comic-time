@@ -36,7 +36,10 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
   const found = useMemo(() => {
     const needle = normalize(deferred);
     const filtered = works.filter(([title, url, siteIndex]) => {
-      if (onlyFavorite && !favorites.hasWork(workKey(title), [url])) {
+      if (
+        onlyFavorite &&
+        !favorites.hasWork(workKey(siteNames[siteIndex] ?? "", title), [url])
+      ) {
         return false;
       }
 
@@ -84,12 +87,17 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
           <li className={styles.item} key={url}>
             <button
               onClick={() => {
-                favorites.toggleWork(workKey(title), [url]);
+                favorites.toggleWork(
+                  workKey(siteNames[siteIndex] ?? "", title),
+                  [url],
+                );
               }}
               className={styles.favoriteButton}
               type="button"
             >
-              {favorites.hasWork(workKey(title), [url]) ? (
+              {favorites.hasWork(workKey(siteNames[siteIndex] ?? "", title), [
+                url,
+              ]) ? (
                 <FaStar color="#ffcd3b" size={21} />
               ) : (
                 <FaRegStar color="#ffcd3b" size={21} />
