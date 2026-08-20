@@ -42,6 +42,7 @@ export default function SiteDetail({
                   title={card.title}
                   url={card.url}
                   urls={card.urls}
+                  workKey={card.workKey}
                 />
               ))}
             </ul>

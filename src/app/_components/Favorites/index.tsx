@@ -38,7 +38,7 @@ export default function Favorites({
 
     days.forEach((day) => {
       workCards(day.works, crossSites)
-        .filter((card) => favorites.hasAnyWork(card.urls))
+        .filter((card) => favorites.hasWork(card.workKey, card.urls))
         .forEach((card) => {
           const label = `${day.label}${card.foundAt}`;
           const last = result.at(-1);
@@ -88,6 +88,7 @@ export default function Favorites({
                 title={card.title}
                 url={card.url}
                 urls={card.urls}
+                workKey={card.workKey}
               />
             ))}
           </ul>

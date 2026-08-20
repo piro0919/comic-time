@@ -74,6 +74,7 @@ All commits are automatically checked for:
 - 取得の仕方は `scripts/scrape/sources/` に1サイト1ファイルで書き、`sources/index.ts` に URL とともに登録する
 - 各ソースは「その日更新された作品」だけを返す。取れなければ例外を投げ、そのサイトはその日が空になる
 - `data/works/<日付>.json` に7日ぶんを保存し、古い日は消す
+- サイトを足したら `npm run scrape:site-icons` も走らせる。複数サイトに載る作品の印に使うファビコンを `public/site-icons/` に集める
 
 ### Application Structure
 

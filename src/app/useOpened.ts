@@ -3,23 +3,28 @@ import { useCallback } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 /**
- * その日に開いた作品を覚えておく。
- * 毎日確認する道具なので、「今日もう開いたか」が分かるだけで往復が減る。
+ * 開いた回を覚えておく。話数ごとにURLが違うので、一度開いた回はずっと既読のまま。
+ * 毎日確認する道具なので、「これはもう読んだ」が分かるだけで往復が減る。
  */
 const key = "opened-works";
+/** 記録を残す日数。一覧は7日ぶんしか持たないので、これだけあれば取りこぼさない */
+const keepDays = 30;
+const dayMs = 24 * 60 * 60 * 1000;
 
 export type Opened = {
-  isOpened: (url: string) => boolean;
-  markOpened: (url: string) => void;
+  /** 同じ回が複数サイトにあるとき、どれか1つ開いていれば既読とみなす */
+  isOpened: (urls: string[]) => boolean;
+  markOpened: (urls: string[]) => void;
 };
 
-function today(): string {
+function dateKey(date: Date): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(
-    new Date(),
+    date,
   );
 }
 
 export default function useOpened(): Opened {
+  // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
   const [opened, setOpened] = useLocalStorage<Record<string, string>>(
     key,
     {},
@@ -27,17 +32,25 @@ export default function useOpened(): Opened {
   );
 
   return {
-    isOpened: useCallback((url) => opened[url] === today(), [opened]),
+    isOpened: useCallback(
+      (urls) => urls.some((url) => opened[url] !== undefined),
+      [opened],
+    ),
     markOpened: useCallback(
-      (url) => {
+      (urls) => {
         setOpened((prev) => {
-          const date = today();
-          // 前日までの記録は捨てる。増え続けても使い道がない
+          const today = dateKey(new Date());
+          // 古い記録は捨てる。一覧から消えた回を抱えても使い道がない
+          const cutoff = dateKey(new Date(Date.now() - keepDays * dayMs));
           const kept = Object.entries(prev).filter(
-            ([, value]) => value === date,
+            ([, value]) => value >= cutoff,
           );
+          const marked = urls.map((url): [string, string] => [url, today]);
 
-          return { ...Object.fromEntries(kept), [url]: date };
+          return {
+            ...Object.fromEntries(kept),
+            ...Object.fromEntries(marked),
+          };
         });
       },
       [setOpened],

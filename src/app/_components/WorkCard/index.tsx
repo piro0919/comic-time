@@ -1,7 +1,7 @@
 "use client";
 import clsx from "clsx";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import useFavorites from "@/app/useFavorites";
 import useOpened from "@/app/useOpened";
@@ -18,6 +18,8 @@ export type WorkCardProps = {
   url: string;
   /** 同じ作品が載っている全サイトぶんのURL。お気に入りはまとめて入れ替える */
   urls: string[];
+  /** お気に入りの見出し */
+  workKey: string;
 };
 
 /** 弾ける粒の数。角度は CSS の nth-child で配る */
@@ -31,10 +33,20 @@ export default function WorkCard({
   title,
   url,
   urls,
+  workKey,
 }: WorkCardProps): React.JSX.Element {
   const favorites = useFavorites();
   const opened = useOpened();
-  const added = favorites.hasAnyWork(urls);
+  const added = favorites.hasWork(workKey, urls);
+  const { adoptTitle } = favorites;
+  /** urls は描き直すたびに別の配列になる。中身で見て、無駄に動かさない */
+  const urlKey = urls.join("\n");
+
+  // 昔はURLで登録していた。開いたついでに、揃えたタイトルへ移しておく
+  useEffect(() => {
+    adoptTitle(workKey, urlKey.split("\n"));
+  }, [adoptTitle, urlKey, workKey]);
+
   const read = opened.isOpened(urls);
   /**
    * 押すたびに数を進め、key を変えて描き直させる。
@@ -55,7 +67,6 @@ export default function WorkCard({
           sizes="(width < 768px) 45vw, 220px"
           src={thumbnailUrl ?? "/no-image.png"}
         />
-        {read ? <span className={styles.openedMark}>既読</span> : null}
         {badge === null ? null : (
           // 同じ作品が複数サイトにあるときだけ、どこのぶんかを出す
           <span className={styles.siteIcon} title={badge.name}>
@@ -90,7 +101,7 @@ export default function WorkCard({
             setBurst((count) => count + 1);
           }
 
-          favorites.toggleWorks(urls);
+          favorites.toggleWork(workKey, urls);
         }}
         aria-label={`${title}をお気に入りに入れる`}
         className={styles.cardStar}

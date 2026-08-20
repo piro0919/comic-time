@@ -3,6 +3,7 @@ import { useDeferredValue, useMemo, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { dayLabel, days } from "@/app/days";
 import useFavorites from "@/app/useFavorites";
+import { workKey } from "@/app/workCards";
 import { daysOf, type SearchIndex, type Weekday } from "@/types/work";
 import styles from "./style.module.css";
 
@@ -35,7 +36,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
   const found = useMemo(() => {
     const needle = normalize(deferred);
     const filtered = works.filter(([title, url, siteIndex]) => {
-      if (onlyFavorite && !favorites.hasWork(url)) {
+      if (onlyFavorite && !favorites.hasWork(workKey(title), [url])) {
         return false;
       }
 
@@ -83,12 +84,12 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
           <li className={styles.item} key={url}>
             <button
               onClick={() => {
-                favorites.toggleWork(url);
+                favorites.toggleWork(workKey(title), [url]);
               }}
               className={styles.favoriteButton}
               type="button"
             >
-              {favorites.hasWork(url) ? (
+              {favorites.hasWork(workKey(title), [url]) ? (
                 <FaStar color="#ffcd3b" size={21} />
               ) : (
                 <FaRegStar color="#ffcd3b" size={21} />

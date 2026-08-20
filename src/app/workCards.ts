@@ -19,6 +19,8 @@ export type WorkCard = {
   url: string;
   /** 同じ作品が載っている全サイトぶんのURL。お気に入りはまとめて見る */
   urls: string[];
+  /** お気に入りの見出し */
+  workKey: string;
 };
 
 /**
@@ -32,6 +34,27 @@ export function titleKey(title: string): string {
     .replace(/[〜～]/g, "~")
     .replace(/\s+/g, "")
     .toLowerCase();
+}
+
+/**
+ * お気に入りの見出し。揃えたタイトルを32ビット2本ぶんに畳んで36進で書く。
+ * 日本語のまま持つと共有リンクが縮まらず、QRに載る件数が3分の1になる。
+ * 読める必要はない見出しなので、短さを取る。
+ */
+export function workKey(title: string): string {
+  const text = titleKey(title);
+
+  let low = 0x811c9dc5;
+  let high = 0x1000193;
+
+  for (let index = 0; index < text.length; index += 1) {
+    const code = text.charCodeAt(index);
+
+    low = Math.imul(low ^ code, 0x1000193) >>> 0;
+    high = Math.imul(high ^ code, 0x85ebca6b) >>> 0;
+  }
+
+  return `${low.toString(36)}${high.toString(36)}`;
 }
 
 /** どのサイトで読めるかを1つぶん。印の絵は scripts/siteIcons が集めたもの */
@@ -73,6 +96,7 @@ export default function workCards(
                 .map((site) => site.url),
             ]
           : [work.url],
+      workKey: workKey(work.title),
     };
   });
 }

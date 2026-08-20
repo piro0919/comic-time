@@ -6,6 +6,10 @@ import { useLocalStorage } from "usehooks-ts";
  * 追いかける対象は作品とサイトの2種類。
  * 作品は更新曜日が決まっているので、曜日ごとに登録させる必要はない。
  * 「このサイトは全部見る」という追い方もあるため、サイトも登録できるようにする。
+ *
+ * 作品は題名から作った見出しで持つ。サイトによっては作品のURLが話ごとに変わり、
+ * URLで持つと登録した回が流れた時点で追えなくなるため。
+ * 以前の登録はURLのまま入っているので、どちらでも当たるようにしてある。
  */
 export const key = "favorites-v3";
 
@@ -15,20 +19,17 @@ type Stored = {
 };
 
 export type Favorites = {
+  /** 昔のURLでの登録を、作品の見出しでの登録に置き換える */
+  adoptTitle: (workKey: string, urls: string[]) => void;
   followsSite: (siteUrl: string) => boolean;
-  /** 同じ作品が複数サイトにあるとき、どれか1つ入っていれば登録済みとみなす */
-  hasAnyWork: (urls: string[]) => boolean;
-  hasWork: (url: string) => boolean;
+  /** 作品の見出しか、載っているどれかのURLが入っていれば登録済み */
+  hasWork: (workKey: string, urls: string[]) => boolean;
   /** 受け取った登録で丸ごと書き換える。画面の件数もここを通せば追いつく */
   replaceAll: (next: Stored) => void;
   siteUrls: string[];
   toggleSite: (siteUrl: string) => void;
-  toggleWork: (url: string) => void;
-  /**
-   * 入れるときは先頭の1つだけ。外すときは渡されたぶんを全部。
-   * 判定は hasAnyWork でまとめて見るので、全部持たなくても追いつく
-   */
-  toggleWorks: (urls: string[]) => void;
+  /** 入れるときは作品の見出しで。外すときは昔のURLぶんも一緒に落とす */
+  toggleWork: (workKey: string, urls: string[]) => void;
   workUrls: string[];
 };
 
@@ -60,12 +61,32 @@ export default function useFavorites(): Favorites {
   const siteSet = useMemo(() => new Set(stored.sites), [stored.sites]);
 
   return {
+    adoptTitle: useCallback(
+      (workKey, urls) => {
+        setStored((prev) => {
+          const legacy = prev.works.filter((entry) => urls.includes(entry));
+
+          if (legacy.length === 0 || prev.works.includes(workKey)) {
+            return prev;
+          }
+
+          return {
+            ...prev,
+            works: [
+              ...prev.works.filter((entry) => !urls.includes(entry)),
+              workKey,
+            ],
+          };
+        });
+      },
+      [setStored],
+    ),
     followsSite: useCallback((siteUrl) => siteSet.has(siteUrl), [siteSet]),
-    hasAnyWork: useCallback(
-      (urls) => urls.some((url) => workSet.has(url)),
+    hasWork: useCallback(
+      (workKey, urls) =>
+        workSet.has(workKey) || urls.some((url) => workSet.has(url)),
       [workSet],
     ),
-    hasWork: useCallback((url) => workSet.has(url), [workSet]),
     replaceAll: useCallback(
       (next) => {
         setStored(next);
@@ -80,18 +101,16 @@ export default function useFavorites(): Favorites {
       [setStored],
     ),
     toggleWork: useCallback(
-      (url) => {
-        setStored((prev) => ({ ...prev, works: toggle(prev.works, url) }));
-      },
-      [setStored],
-    ),
-    toggleWorks: useCallback(
-      (urls) => {
+      (workKey, urls) => {
         setStored((prev) => {
-          const added = urls.some((url) => prev.works.includes(url));
-          const rest = prev.works.filter((url) => !urls.includes(url));
+          const added =
+            prev.works.includes(workKey) ||
+            urls.some((url) => prev.works.includes(url));
+          const rest = prev.works.filter(
+            (entry) => entry !== workKey && !urls.includes(entry),
+          );
 
-          return { ...prev, works: added ? rest : [...rest, urls[0]] };
+          return { ...prev, works: added ? rest : [...rest, workKey] };
         });
       },
       [setStored],
