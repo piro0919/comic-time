@@ -8,14 +8,33 @@ import { maxShortenableLength } from "@/app/shareLink";
  * 記録に残さないよう、中身には触らずそのまま渡す。
  */
 const endpoint = "https://xgd.io/V1/shorten";
+const siteOrigin = "https://comictime.kkweb.io";
+
 /**
  * 自分のサイトへのリンクだけを短縮する。誰でも使える短縮屋にしないため。
  * 手元で試せるよう、開発の起動のときだけ localhost も通す。
+ * 起動するポートは決まっていないので、ポートは見ない。
  */
-const allowedOrigins = [
-  "https://comictime.kkweb.io",
-  ...(process.env.NODE_ENV === "production" ? [] : ["http://localhost:3210"]),
-];
+function isOwnLink(url: string): boolean {
+  if (url.startsWith(`${siteOrigin}/`)) {
+    return true;
+  }
+
+  if (process.env.NODE_ENV === "production") {
+    return false;
+  }
+
+  try {
+    const { hostname, protocol } = new URL(url);
+
+    return (
+      protocol === "http:" &&
+      (hostname === "localhost" || hostname === "127.0.0.1")
+    );
+  } catch {
+    return false;
+  }
+}
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
   const apiKey = process.env.XGD_API_KEY;
@@ -29,7 +48,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   };
   const url = typeof body?.url === "string" ? body.url : "";
 
-  if (!allowedOrigins.some((origin) => url.startsWith(`${origin}/`))) {
+  if (!isOwnLink(url)) {
     return NextResponse.json({ reason: "宛先が違います" }, { status: 400 });
   }
 
