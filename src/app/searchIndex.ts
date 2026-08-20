@@ -4,6 +4,7 @@ import { recentDateOf, worksOfDate } from "./worksOfDay";
 /** 直近7日ぶんの更新から、検索用の一覧を組み立てる */
 export default function searchIndex(): SearchIndex {
   const siteNames: string[] = [];
+  const siteUrls: string[] = [];
   const byUrl = new Map<string, IndexedWork>();
 
   weekdays.forEach((weekday, index) => {
@@ -18,6 +19,7 @@ export default function searchIndex(): SearchIndex {
 
       if (!siteNames.includes(work.siteName)) {
         siteNames.push(work.siteName);
+        siteUrls.push(work.siteUrl);
       }
 
       byUrl.set(work.url, [
@@ -31,6 +33,7 @@ export default function searchIndex(): SearchIndex {
 
   return {
     siteNames,
+    siteUrls,
     works: [...byUrl.values()].toSorted((a, b) =>
       a[0].localeCompare(b[0], "ja"),
     ),

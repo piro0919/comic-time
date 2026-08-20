@@ -25,11 +25,11 @@ type Stored = {
 };
 
 export type Favorites = {
-  /** 昔のURLでの登録を、作品の見出しでの登録に置き換える */
-  adoptTitle: (workKey: string, urls: string[]) => void;
+  /** 昔の形での登録を、今の見出しでの登録に置き換える */
+  adoptTitle: (workKey: string, legacyKeys: string[]) => void;
   followsSite: (siteUrl: string) => boolean;
-  /** 作品の見出しか、載っているどれかのURLが入っていれば登録済み */
-  hasWork: (workKey: string, urls: string[]) => boolean;
+  /** 今の見出しか、昔の形のどれかが入っていれば登録済み */
+  hasWork: (workKey: string, legacyKeys: string[]) => boolean;
   /** 一覧に出てきた登録の題名を控える。すでに同じものがあれば何もしない */
   rememberTitle: (workKey: string, title: string) => void;
   /** 受け取った登録で丸ごと書き換える。画面の件数もここを通せば追いつく */
@@ -38,8 +38,8 @@ export type Favorites = {
   /** 控えてある題名。休眠中の作品を名前で出すために使う */
   titles: Record<string, string>;
   toggleSite: (siteUrl: string) => void;
-  /** 入れるときは作品の見出しで。外すときは昔のURLぶんも一緒に落とす */
-  toggleWork: (workKey: string, urls: string[]) => void;
+  /** 入れるときは今の見出しで。外すときは昔の形のぶんも一緒に落とす */
+  toggleWork: (workKey: string, legacyKeys: string[]) => void;
   workUrls: string[];
 };
 
@@ -72,9 +72,11 @@ export default function useFavorites(): Favorites {
 
   return {
     adoptTitle: useCallback(
-      (workKey, urls) => {
+      (workKey, legacyKeys) => {
         setStored((prev) => {
-          const legacy = prev.works.filter((entry) => urls.includes(entry));
+          const legacy = prev.works.filter((entry) =>
+            legacyKeys.includes(entry),
+          );
 
           if (legacy.length === 0 || prev.works.includes(workKey)) {
             return prev;
@@ -83,7 +85,7 @@ export default function useFavorites(): Favorites {
           return {
             ...prev,
             works: [
-              ...prev.works.filter((entry) => !urls.includes(entry)),
+              ...prev.works.filter((entry) => !legacyKeys.includes(entry)),
               workKey,
             ],
           };
@@ -93,8 +95,8 @@ export default function useFavorites(): Favorites {
     ),
     followsSite: useCallback((siteUrl) => siteSet.has(siteUrl), [siteSet]),
     hasWork: useCallback(
-      (workKey, urls) =>
-        workSet.has(workKey) || urls.some((url) => workSet.has(url)),
+      (workKey, legacyKeys) =>
+        workSet.has(workKey) || legacyKeys.some((entry) => workSet.has(entry)),
       [workSet],
     ),
     rememberTitle: useCallback(
@@ -131,13 +133,13 @@ export default function useFavorites(): Favorites {
       [setStored],
     ),
     toggleWork: useCallback(
-      (workKey, urls) => {
+      (workKey, legacyKeys) => {
         setStored((prev) => {
           const added =
             prev.works.includes(workKey) ||
-            urls.some((url) => prev.works.includes(url));
+            legacyKeys.some((entry) => prev.works.includes(entry));
           const rest = prev.works.filter(
-            (entry) => entry !== workKey && !urls.includes(entry),
+            (entry) => entry !== workKey && !legacyKeys.includes(entry),
           );
 
           if (!added) {

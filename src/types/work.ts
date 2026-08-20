@@ -46,6 +46,8 @@ export type IndexedWork = [string, string, number, number];
 
 export type SearchIndex = {
   siteNames: string[];
+  /** siteNames と同じ並び。お気に入りの見出しは名前ではなくこちらから作る */
+  siteUrls: string[];
   works: IndexedWork[];
 };
 

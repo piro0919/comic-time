@@ -14,11 +14,11 @@ export type WorkCard = {
   /** 複数サイトに載っている作品だけ、どのサイトのぶんかを示す印を出す */
   badge: CardSite | null;
   foundAt: string;
+  /** 昔の形での登録。見つけたら今の見出しに移す */
+  legacyKeys: string[];
   thumbnailUrl: null | string;
   title: string;
   url: string;
-  /** そのサイトでのその作品のURL。昔の登録を見つけ直すのに使う */
-  urls: string[];
   /** お気に入りの見出し。サイトと題名の組から作る */
   workKey: string;
 };
@@ -38,6 +38,7 @@ export function titleKey(title: string): string {
 
 /**
  * お気に入りの見出し。サイトと題名の組を32ビット2本ぶんに畳んで36進で書く。
+ * サイトは入り口のURLで表す。台帳の名前を書き直しても登録が切れないため。
  *
  * 話ごとにURLが変わるサイトがあるため、URLでは持てない。題名だけで持つと、
  * 同じ作品を載せている別サイトの更新まで出てしまう。読むのは1つのサイトなので、
@@ -46,8 +47,8 @@ export function titleKey(title: string): string {
  * 日本語のまま持つと共有リンクが縮まらず、QRに載る件数が3分の1になる。
  * 読める必要はない見出しなので、短さを取る。
  */
-export function workKey(siteName: string, title: string): string {
-  const text = `${siteName}\u0000${titleKey(title)}`;
+export function workKey(siteUrl: string, title: string): string {
+  const text = `${siteUrl}\u0000${titleKey(title)}`;
 
   let low = 0x811c9dc5;
   let high = 0x1000193;
@@ -89,11 +90,12 @@ export default function workCards(
     return {
       badge: known.length > 1 ? own : null,
       foundAt: work.foundAt,
+      // 作品URLで持っていた頃と、サイト名で見出しを作っていた頃のぶん
+      legacyKeys: [work.url, workKey(work.siteName, work.title)],
       thumbnailUrl: work.thumbnailUrl,
       title: work.title,
       url: work.url,
-      urls: [work.url],
-      workKey: workKey(work.siteName, work.title),
+      workKey: workKey(work.siteUrl, work.title),
     };
   });
 }

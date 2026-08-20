@@ -11,13 +11,13 @@ import styles from "./style.module.css";
 export type WorkCardProps = {
   /** 複数サイトに載っている作品だけ、どのサイトのぶんかを印で出す */
   badge: CardSite | null;
+  /** 昔の形での登録。見つけたら今の見出しに移す */
+  legacyKeys: string[];
   /** 最初の画面に映る位置なら true。読み込みを後回しにしない */
   priority?: boolean;
   thumbnailUrl: null | string;
   title: string;
   url: string;
-  /** 同じ作品が載っている全サイトぶんのURL。お気に入りはまとめて入れ替える */
-  urls: string[];
   /** お気に入りの見出し */
   workKey: string;
 };
@@ -28,24 +28,24 @@ const sparks = [0, 1, 2, 3, 4, 5];
 /** 作品1枚ぶん。星を押すとお気に入りに入る */
 export default function WorkCard({
   badge,
+  legacyKeys,
   priority = false,
   thumbnailUrl,
   title,
   url,
-  urls,
   workKey,
 }: WorkCardProps): React.JSX.Element {
   const favorites = useFavorites();
   const opened = useOpened();
-  const added = favorites.hasWork(workKey, urls);
+  const added = favorites.hasWork(workKey, legacyKeys);
   const { adoptTitle, rememberTitle } = favorites;
-  /** urls は描き直すたびに別の配列になる。中身で見て、無駄に動かさない */
-  const urlKey = urls.join("\n");
+  /** 配列は描き直すたびに別物になる。中身で見て、無駄に動かさない */
+  const legacyKey = legacyKeys.join("\n");
 
   // 昔はURLで登録していた。開いたついでに、揃えたタイトルへ移しておく
   useEffect(() => {
-    adoptTitle(workKey, urlKey.split("\n"));
-  }, [adoptTitle, urlKey, workKey]);
+    adoptTitle(workKey, legacyKey.split("\n"));
+  }, [adoptTitle, legacyKey, workKey]);
 
   /**
    * 登録済みの作品が一覧に出てきたら、題名を控える。
@@ -57,7 +57,7 @@ export default function WorkCard({
     }
   }, [added, rememberTitle, title, workKey]);
 
-  const read = opened.isOpened(urls);
+  const read = opened.isOpened(legacyKeys);
   /**
    * 押すたびに数を進め、key を変えて描き直させる。
    * こうしないと2回目以降は同じ要素のままで、animation が始まらない。
@@ -96,7 +96,7 @@ export default function WorkCard({
       <a
         onClick={() => {
           // 同じ回が複数サイトにあるなら、まとめて既読にする
-          opened.markOpened(urls);
+          opened.markOpened(legacyKeys);
         }}
         aria-label={title}
         className={styles.cardLink}
@@ -111,7 +111,7 @@ export default function WorkCard({
             setBurst((count) => count + 1);
           }
 
-          favorites.toggleWork(workKey, urls);
+          favorites.toggleWork(workKey, legacyKeys);
         }}
         aria-label={`${title}をお気に入りに入れる`}
         className={styles.cardStar}

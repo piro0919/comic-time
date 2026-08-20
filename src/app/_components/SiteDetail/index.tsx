@@ -37,11 +37,11 @@ export default function SiteDetail({
                 <WorkCard
                   badge={card.badge}
                   key={card.url}
+                  legacyKeys={card.legacyKeys}
                   priority={dayIndex === 0 && cardIndex < 6}
                   thumbnailUrl={card.thumbnailUrl}
                   title={card.title}
                   url={card.url}
-                  urls={card.urls}
                   workKey={card.workKey}
                 />
               ))}

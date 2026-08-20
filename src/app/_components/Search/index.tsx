@@ -28,7 +28,7 @@ function normalize(text: string): string {
 }
 
 export default function Search({ index }: SearchProps): React.JSX.Element {
-  const { siteNames, works } = index;
+  const { siteNames, siteUrls, works } = index;
   const [keyword, setKeyword] = useState("");
   const deferred = useDeferredValue(keyword);
   const favorites = useFavorites();
@@ -38,7 +38,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
     const filtered = works.filter(([title, url, siteIndex]) => {
       if (
         onlyFavorite &&
-        !favorites.hasWork(workKey(siteNames[siteIndex] ?? "", title), [url])
+        !favorites.hasWork(workKey(siteUrls[siteIndex] ?? "", title), [url])
       ) {
         return false;
       }
@@ -52,7 +52,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
 
     // 未入力のまま全件並べても読めないので、絞り込むまでは件数だけ伝える
     return needle === "" && !onlyFavorite ? [] : filtered;
-  }, [deferred, favorites, onlyFavorite, siteNames, works]);
+  }, [deferred, favorites, onlyFavorite, siteNames, siteUrls, works]);
 
   return (
     <div className={styles.container}>
@@ -88,14 +88,14 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
             <button
               onClick={() => {
                 favorites.toggleWork(
-                  workKey(siteNames[siteIndex] ?? "", title),
+                  workKey(siteUrls[siteIndex] ?? "", title),
                   [url],
                 );
               }}
               className={styles.favoriteButton}
               type="button"
             >
-              {favorites.hasWork(workKey(siteNames[siteIndex] ?? "", title), [
+              {favorites.hasWork(workKey(siteUrls[siteIndex] ?? "", title), [
                 url,
               ]) ? (
                 <FaStar color="#ffcd3b" size={21} />
