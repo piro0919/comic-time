@@ -15,6 +15,8 @@ export type FavoritesProps = {
     label: string;
     works: Work[];
   }[];
+  /** 台帳のサイト。題名を控えていない古い登録を、URLから見分けるのに使う */
+  sites: { name: string; url: string }[];
 };
 
 /** 同じ日の同じ回に見つかった作品のかたまり */
@@ -26,9 +28,15 @@ type Batch = {
 
 /** この一週間、一度も更新されなかった登録 */
 type Dormant = {
-  /** 題名を控えていないもの。数だけ出して、行にはしない */
+  /** 題名も出どころも分からないもの。数だけ出して、行にはしない */
   unnamed: number;
-  works: { key: string; title: string }[];
+  works: {
+    key: string;
+    /** 題名が分かるならそれ。分からなければサイト名 */
+    label: string;
+    /** 作品URLで登録されていた古いぶんだけ、開いて確かめられる */
+    url: null | string;
+  }[];
 };
 
 /**
@@ -39,6 +47,7 @@ type Dormant = {
 export default function Favorites({
   crossSites,
   days,
+  sites,
 }: FavoritesProps): React.JSX.Element {
   const favorites = useFavorites();
   const batches = useMemo<Batch[]>(() => {
@@ -79,15 +88,22 @@ export default function Favorites({
 
     const rest = favorites.workUrls.filter((entry) => !seen.has(entry));
     const works = rest
-      .flatMap((key) => {
+      .flatMap<Dormant["works"][number]>((key) => {
         const title = favorites.titles[key];
 
-        return title === undefined ? [] : [{ key, title }];
+        if (title !== undefined) {
+          return [{ key, label: title, url: null }];
+        }
+
+        // 作品URLで登録していた頃のぶん。題名は残っていないが、出どころは分かる
+        const site = sites.find((entry) => key.startsWith(entry.url));
+
+        return site === undefined ? [] : [{ key, label: site.name, url: key }];
       })
-      .toSorted((a, b) => a.title.localeCompare(b.title, "ja"));
+      .toSorted((a, b) => a.label.localeCompare(b.label, "ja"));
 
     return { unnamed: rest.length - works.length, works };
-  }, [crossSites, days, favorites]);
+  }, [crossSites, days, favorites, sites]);
   /** 題名の分からない登録も数のうち。出さないと件数と画面が食い違う */
   const hasDormant = dormant.works.length > 0 || dormant.unnamed > 0;
 
@@ -138,12 +154,24 @@ export default function Favorites({
           <ul className={styles.dormant}>
             {dormant.works.map((work) => (
               <li className={styles.dormantItem} key={work.key}>
-                <span className={styles.dormantTitle}>{work.title}</span>
+                {work.url === null ? (
+                  <span className={styles.dormantTitle}>{work.label}</span>
+                ) : (
+                  // 題名が無いぶんは、登録した回へのリンクだけが手がかり
+                  <a
+                    className={styles.dormantTitle}
+                    href={work.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {`${work.label}に登録した回（題名なし）`}
+                  </a>
+                )}
                 <button
                   onClick={() => {
                     favorites.toggleWork(work.key, []);
                   }}
-                  aria-label={`${work.title}をお気に入りから外す`}
+                  aria-label={`${work.label}をお気に入りから外す`}
                   className={styles.dormantStar}
                   type="button"
                 >

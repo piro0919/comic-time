@@ -9,6 +9,7 @@ import Favorites, { type FavoritesProps } from "../Favorites";
 export type HomeProps = {
   crossSites: FavoritesProps["crossSites"];
   days: FavoritesProps["days"];
+  sites: FavoritesProps["sites"];
   today: Weekday;
 };
 
@@ -20,6 +21,7 @@ export type HomeProps = {
 export default function Home({
   crossSites,
   days,
+  sites,
   today,
 }: HomeProps): React.JSX.Element {
   const router = useRouter();
@@ -40,5 +42,5 @@ export default function Home({
     return <h1 className="visually-hidden">この一週間の更新</h1>;
   }
 
-  return <Favorites crossSites={crossSites} days={days} />;
+  return <Favorites crossSites={crossSites} days={days} sites={sites} />;
 }
