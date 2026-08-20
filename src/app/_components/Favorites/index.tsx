@@ -46,7 +46,7 @@ export default function Favorites({
 
     days.forEach((day) => {
       workCards(day.works, crossSites)
-        .filter((card) => favorites.hasWork(card.workKey, card.urls))
+        .filter((card) => favorites.hasWork(card.workKey, card.legacyKeys))
         .forEach((card) => {
           const label = `${day.label}${card.foundAt}`;
           const last = result.at(-1);
@@ -73,7 +73,7 @@ export default function Favorites({
     days.forEach((day) => {
       workCards(day.works, crossSites).forEach((card) => {
         seen.add(card.workKey);
-        card.urls.forEach((url) => seen.add(url));
+        card.legacyKeys.forEach((entry) => seen.add(entry));
       });
     });
 
@@ -88,8 +88,10 @@ export default function Favorites({
 
     return { unnamed: rest.length - works.length, works };
   }, [crossSites, days, favorites]);
+  /** 題名の分からない登録も数のうち。出さないと件数と画面が食い違う */
+  const hasDormant = dormant.works.length > 0 || dormant.unnamed > 0;
 
-  if (batches.length === 0 && dormant.works.length === 0) {
+  if (batches.length === 0 && !hasDormant) {
     return (
       <div className={styles.container}>
         <h1 className="visually-hidden">お気に入り</h1>
@@ -116,18 +118,18 @@ export default function Favorites({
               <WorkCard
                 badge={card.badge}
                 key={card.url}
+                legacyKeys={card.legacyKeys}
                 priority={batchIndex === 0 && cardIndex < 6}
                 thumbnailUrl={card.thumbnailUrl}
                 title={card.title}
                 url={card.url}
-                urls={card.urls}
                 workKey={card.workKey}
               />
             ))}
           </ul>
         </section>
       ))}
-      {dormant.works.length === 0 ? null : (
+      {hasDormant ? (
         <section className={styles.section}>
           <div className={styles.batchHead}>
             <span className={styles.batchLabel}>この一週間、更新なし</span>
@@ -153,11 +155,13 @@ export default function Favorites({
           {dormant.unnamed === 0 ? null : (
             // 昔の登録は題名を控えていない。次に更新されたとき名前が入る
             <p className={styles.dormantNote}>
-              {`ほかに、題名の分からない登録が${dormant.unnamed}件あります。`}
+              {dormant.works.length === 0
+                ? `題名の分からない登録が${dormant.unnamed}件あります。次に更新されたとき、ここに名前が出ます。`
+                : `ほかに、題名の分からない登録が${dormant.unnamed}件あります。`}
             </p>
           )}
         </section>
-      )}
+      ) : null}
     </div>
   );
 }
