@@ -34,8 +34,8 @@ export default function MobileNav(): React.JSX.Element {
         >
           <Link className={styles.button} href="/favorites">
             お気に入り
-            {favorites.workUrls.length === 0 ? null : (
-              <span className={styles.count}>{favorites.workUrls.length}</span>
+            {favorites.visibleWorkCount === 0 ? null : (
+              <span className={styles.count}>{favorites.visibleWorkCount}</span>
             )}
           </Link>
         </li>

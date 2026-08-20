@@ -1,6 +1,8 @@
 "use client";
 import { useCallback, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
+import sitesJson from "@/data/sites.json";
+import { type SiteEntry } from "@/types/work";
 
 /**
  * 追いかける対象は作品とサイトの2種類。
@@ -40,8 +42,16 @@ export type Favorites = {
   toggleSite: (siteUrl: string) => void;
   /** 入れるときは今の見出しで。外すときは昔の形のぶんも一緒に落とす */
   toggleWork: (workKey: string, legacyKeys: string[]) => void;
+  /**
+   * 画面に出せる登録の数。名前も出どころも分からないものは数えない。
+   * 数えると、件数だけが多くて中身の無い状態になる。
+   * 次にその作品が更新された時点で見出しが繋がり、数に入る
+   */
+  visibleWorkCount: number;
   workUrls: string[];
 };
+
+const siteOrigins = (sitesJson as SiteEntry[]).map((site) => site.url);
 
 function toggle(list: string[], value: string): string[] {
   return list.includes(value)
@@ -68,6 +78,16 @@ export default function useFavorites(): Favorites {
     { initializeWithValue: false },
   );
   const workSet = useMemo(() => new Set(stored.works), [stored.works]);
+  const titles = stored.titles ?? {};
+  const visibleWorkCount = useMemo(() => {
+    const known = stored.titles ?? {};
+
+    return stored.works.filter(
+      (entry) =>
+        Object.hasOwn(known, entry) ||
+        siteOrigins.some((origin) => entry.startsWith(origin)),
+    ).length;
+  }, [stored.titles, stored.works]);
   const siteSet = useMemo(() => new Set(stored.sites), [stored.sites]);
 
   return {
@@ -125,7 +145,7 @@ export default function useFavorites(): Favorites {
       [setStored],
     ),
     siteUrls: stored.sites,
-    titles: stored.titles ?? {},
+    titles,
     toggleSite: useCallback(
       (siteUrl) => {
         setStored((prev) => ({ ...prev, sites: toggle(prev.sites, siteUrl) }));
@@ -156,6 +176,7 @@ export default function useFavorites(): Favorites {
       },
       [setStored],
     ),
+    visibleWorkCount,
     workUrls: stored.works,
   };
 }
