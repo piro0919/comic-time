@@ -27,8 +27,9 @@ const manifestTransforms: ManifestTransform[] = [
  * ページは先に取っておかない。中身が1日に何度も入れ替わるため、
  * 古いものを抱えて出す方が困る。開いたページだけを控えとして持つ。
  */
+const isDevelopment = process.env.NODE_ENV === "development";
 const withSerwist = withSerwistInit({
-  disable: process.env.NODE_ENV === "development",
+  disable: isDevelopment,
   manifestTransforms,
   swDest: "public/sw.js",
   // eslint-disable-next-line write-good-comments/write-good-comments
@@ -36,7 +37,7 @@ const withSerwist = withSerwistInit({
   // use something else that works, such as "service-worker/index.ts".
   swSrc: "src/app/sw.ts",
 });
-const nextConfig: NextConfig = withSerwist({
+const baseConfig: NextConfig = {
   /* config options here */
   experimental: {
     typedEnv: true,
@@ -45,6 +46,13 @@ const nextConfig: NextConfig = withSerwist({
   images: {
     unoptimized: true,
   },
-});
+};
+/**
+ * 開発中は Serwist を止めている。それでも包むと webpack の設定だけが残り、
+ * Turbopack で動かしたときに設定の食い違いとして警告が出る。だから包まない。
+ */
+const nextConfig: NextConfig = isDevelopment
+  ? baseConfig
+  : withSerwist(baseConfig);
 
 export default nextConfig;
