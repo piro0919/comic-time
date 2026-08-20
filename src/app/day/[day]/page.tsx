@@ -2,6 +2,7 @@ import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import { type Weekday } from "@/types/work";
 import App from "../../_components/App";
+import crossSiteWorks from "../../crossSiteWorks";
 import { dayLabel } from "../../days";
 import pageMetadata from "../../pageMetadata";
 import worksOfDay, { dayKeys } from "../../worksOfDay";
@@ -39,5 +40,11 @@ export default async function Page({
     notFound();
   }
 
-  return <App day={day as Weekday} works={worksOfDay(day as Weekday)} />;
+  return (
+    <App
+      crossSites={crossSiteWorks()}
+      day={day as Weekday}
+      works={worksOfDay(day as Weekday)}
+    />
+  );
 }

@@ -7,6 +7,7 @@ import { type Weekday } from "@/types/work";
 import Favorites, { type FavoritesProps } from "../Favorites";
 
 export type HomeProps = {
+  crossSites: FavoritesProps["crossSites"];
   days: FavoritesProps["days"];
   today: Weekday;
 };
@@ -16,7 +17,11 @@ export type HomeProps = {
  * 何も登録していない人には今日の一覧を見せたいので、そちらへ送る。
  * 登録はブラウザにあるため、判断は描画後になる。
  */
-export default function Home({ days, today }: HomeProps): React.JSX.Element {
+export default function Home({
+  crossSites,
+  days,
+  today,
+}: HomeProps): React.JSX.Element {
   const router = useRouter();
   const [registered, setRegistered] = useState<boolean | undefined>(undefined);
 
@@ -35,5 +40,5 @@ export default function Home({ days, today }: HomeProps): React.JSX.Element {
     return <h1 className="visually-hidden">この一週間の更新</h1>;
   }
 
-  return <Favorites days={days} />;
+  return <Favorites crossSites={crossSites} days={days} />;
 }

@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteDetail from "../../_components/SiteDetail";
+import crossSiteWorks from "../../crossSiteWorks";
 import pageMetadata from "../../pageMetadata";
 import { siteOf, sites, updateDayLabel, worksOfSite } from "../../siteCatalog";
 
@@ -46,5 +47,11 @@ export default async function Page({
     notFound();
   }
 
-  return <SiteDetail days={worksOfSite(site)} site={site} />;
+  return (
+    <SiteDetail
+      crossSites={crossSiteWorks()}
+      days={worksOfSite(site)}
+      site={site}
+    />
+  );
 }

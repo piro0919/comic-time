@@ -1,10 +1,13 @@
 .card {
+  display: grid;
+  gap: var(--space-2);
   position: relative;
 }
 
+/* カード全体を覆うリンク。上に重なるものだけが押せる */
 .cardLink {
-  display: grid;
-  gap: var(--space-2);
+  inset: 0;
+  position: absolute;
 }
 
 /* 元画像はほとんどが横長。正方形だと左右を切り落とす量が大きい */
@@ -33,6 +36,41 @@
   -webkit-line-clamp: 2;
   line-height: 1.4;
   overflow: hidden;
+}
+
+.isOpened .cardTitle {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* 左下はサイトの印が使う。既読は右下に置く */
+.openedMark {
+  background: rgb(0 0 0 / 55%);
+  border-radius: var(--radius-pill);
+  color: #fff;
+  font-size: 1rem;
+  inset: auto var(--space-1) var(--space-1) auto;
+  padding: 2px var(--space-2);
+  position: absolute;
+}
+
+/* 複数サイトに載っている作品だけ、どこのぶんかをサムネの左下に出す */
+.siteIcon {
+  background: rgb(255 255 255 / 90%);
+  border-radius: var(--radius-1);
+  box-shadow: var(--shadow-1);
+  display: flex;
+  height: 22px;
+  inset: auto auto var(--space-1) var(--space-1);
+  overflow: hidden;
+  position: absolute;
+  width: 22px;
+}
+
+.siteIcon img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .cardStar {
@@ -180,4 +218,9 @@
 
 .cover img {
   object-fit: cover;
+}
+
+/* 一度開いた回は目立たせない。絵だけを薄くし、印と題は読めるまま残す */
+.isOpened .cover > img {
+  opacity: 0.35;
 }

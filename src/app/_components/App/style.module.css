@@ -17,6 +17,11 @@
   display: grid;
   gap: var(--space-3);
   grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+
+  /* 看板の絵は題字を焼き込んだものが多い。狭い画面より広めに取る */
+  @media (width >= 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
 }
 
 /* 今日すでに開いた作品は、目立たせない */

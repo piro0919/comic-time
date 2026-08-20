@@ -16,12 +16,19 @@ type Stored = {
 
 export type Favorites = {
   followsSite: (siteUrl: string) => boolean;
+  /** 同じ作品が複数サイトにあるとき、どれか1つ入っていれば登録済みとみなす */
+  hasAnyWork: (urls: string[]) => boolean;
   hasWork: (url: string) => boolean;
   /** 受け取った登録で丸ごと書き換える。画面の件数もここを通せば追いつく */
   replaceAll: (next: Stored) => void;
   siteUrls: string[];
   toggleSite: (siteUrl: string) => void;
   toggleWork: (url: string) => void;
+  /**
+   * 入れるときは先頭の1つだけ。外すときは渡されたぶんを全部。
+   * 判定は hasAnyWork でまとめて見るので、全部持たなくても追いつく
+   */
+  toggleWorks: (urls: string[]) => void;
   workUrls: string[];
 };
 
@@ -54,6 +61,10 @@ export default function useFavorites(): Favorites {
 
   return {
     followsSite: useCallback((siteUrl) => siteSet.has(siteUrl), [siteSet]),
+    hasAnyWork: useCallback(
+      (urls) => urls.some((url) => workSet.has(url)),
+      [workSet],
+    ),
     hasWork: useCallback((url) => workSet.has(url), [workSet]),
     replaceAll: useCallback(
       (next) => {
@@ -71,6 +82,17 @@ export default function useFavorites(): Favorites {
     toggleWork: useCallback(
       (url) => {
         setStored((prev) => ({ ...prev, works: toggle(prev.works, url) }));
+      },
+      [setStored],
+    ),
+    toggleWorks: useCallback(
+      (urls) => {
+        setStored((prev) => {
+          const added = urls.some((url) => prev.works.includes(url));
+          const rest = prev.works.filter((url) => !urls.includes(url));
+
+          return { ...prev, works: added ? rest : [...rest, urls[0]] };
+        });
       },
       [setStored],
     ),

@@ -1,11 +1,14 @@
 "use client";
 import { useMemo } from "react";
+import { type CrossSites } from "@/app/crossSiteWorks";
 import useFavorites from "@/app/useFavorites";
+import workCards, { type WorkCard as Card } from "@/app/workCards";
 import { type Work } from "@/types/work";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
 export type FavoritesProps = {
+  crossSites: CrossSites;
   days: {
     /** 「8/17（月）」の形 */
     label: string;
@@ -15,9 +18,9 @@ export type FavoritesProps = {
 
 /** 同じ日の同じ回に見つかった作品のかたまり */
 type Batch = {
+  cards: Card[];
   /** 「8/17（月）01:01」の形 */
   label: string;
-  works: Work[];
 };
 
 /**
@@ -25,30 +28,33 @@ type Batch = {
  * 日別の画面と同じく見つけた回で区切って並べる。
  * 登録はブラウザに持たせているため、絞り込みは描画後に効く。
  */
-export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
+export default function Favorites({
+  crossSites,
+  days,
+}: FavoritesProps): React.JSX.Element {
   const favorites = useFavorites();
   const batches = useMemo<Batch[]>(() => {
     const result: Batch[] = [];
 
     days.forEach((day) => {
-      day.works
-        .filter((work) => favorites.hasWork(work.url))
-        .forEach((work) => {
-          const label = `${day.label}${work.foundAt}`;
+      workCards(day.works, crossSites)
+        .filter((card) => favorites.hasAnyWork(card.urls))
+        .forEach((card) => {
+          const label = `${day.label}${card.foundAt}`;
           const last = result.at(-1);
 
           if (last !== undefined && last.label === label) {
-            last.works.push(work);
+            last.cards.push(card);
 
             return;
           }
 
-          result.push({ label, works: [work] });
+          result.push({ cards: [card], label });
         });
     });
 
     return result;
-  }, [days, favorites]);
+  }, [crossSites, days, favorites]);
 
   if (batches.length === 0) {
     return (
@@ -73,13 +79,15 @@ export default function Favorites({ days }: FavoritesProps): React.JSX.Element {
             <span className={styles.batchLine} />
           </div>
           <ul className={styles.grid}>
-            {batch.works.map((work, workIndex) => (
+            {batch.cards.map((card, cardIndex) => (
               <WorkCard
-                key={work.url}
-                priority={batchIndex === 0 && workIndex < 6}
-                thumbnailUrl={work.thumbnailUrl}
-                title={work.title}
-                url={work.url}
+                badge={card.badge}
+                key={card.url}
+                priority={batchIndex === 0 && cardIndex < 6}
+                thumbnailUrl={card.thumbnailUrl}
+                title={card.title}
+                url={card.url}
+                urls={card.urls}
               />
             ))}
           </ul>

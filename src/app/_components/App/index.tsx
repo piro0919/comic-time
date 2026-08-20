@@ -3,7 +3,9 @@ import { config, useSpring } from "@react-spring/web";
 import { createUseGesture, dragAction } from "@use-gesture/react";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
+import { type CrossSites } from "@/app/crossSiteWorks";
 import { dayHref, dayLabel, days } from "@/app/days";
+import workCards, { type WorkCard as Card } from "@/app/workCards";
 import { type Weekday, type Work } from "@/types/work";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
@@ -14,13 +16,6 @@ const _config = {
 };
 const useGesture = createUseGesture([dragAction]);
 
-/** カードひとつぶん。どのサイトの作品かは画面には出さない */
-type Card = {
-  thumbnailUrl: null | string;
-  title: string;
-  url: string;
-};
-
 /** 同じ回の取得で見つかった作品のかたまり */
 type Batch = {
   cards: Card[];
@@ -28,35 +23,35 @@ type Batch = {
 };
 
 export type AppProps = {
+  crossSites: CrossSites;
   day: Weekday;
   works: Work[];
 };
 
-export default function App({ day, works }: AppProps): React.JSX.Element {
+export default function App({
+  crossSites,
+  day,
+  works,
+}: AppProps): React.JSX.Element {
   const router = useRouter();
   /** 見つけた回ごとに区切って並べる。上ほど新しい更新 */
   const batches = useMemo<Batch[]>(() => {
     const result: Batch[] = [];
 
-    works.forEach((work) => {
-      const card = {
-        thumbnailUrl: work.thumbnailUrl,
-        title: work.title,
-        url: work.url,
-      };
+    workCards(works, crossSites).forEach((card) => {
       const last = result.at(-1);
 
-      if (last !== undefined && last.foundAt === work.foundAt) {
+      if (last !== undefined && last.foundAt === card.foundAt) {
         last.cards.push(card);
 
         return;
       }
 
-      result.push({ cards: [card], foundAt: work.foundAt });
+      result.push({ cards: [card], foundAt: card.foundAt });
     });
 
     return result;
-  }, [works]);
+  }, [crossSites, works]);
   const [props, api] = useSpring(() => ({ x: 0 }));
   const bind = useGesture(
     {
@@ -99,11 +94,13 @@ export default function App({ day, works }: AppProps): React.JSX.Element {
           <ul className={styles.grid}>
             {batch.cards.map((card, cardIndex) => (
               <WorkCard
+                badge={card.badge}
                 key={card.url}
                 priority={batchIndex === 0 && cardIndex < 6}
                 thumbnailUrl={card.thumbnailUrl}
                 title={card.title}
                 url={card.url}
+                urls={card.urls}
               />
             ))}
           </ul>
