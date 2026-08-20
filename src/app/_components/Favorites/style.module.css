@@ -78,11 +78,6 @@
   padding: var(--space-1);
 }
 
-.dormantNote {
-  color: var(--muted);
-  font-size: 1.2rem;
-}
-
 .empty {
   color: var(--muted);
   font-size: 1.4rem;

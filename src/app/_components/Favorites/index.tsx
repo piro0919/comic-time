@@ -28,8 +28,6 @@ type Batch = {
 
 /** この一週間、一度も更新されなかった登録 */
 type Dormant = {
-  /** 題名も出どころも分からないもの。数だけ出して、行にはしない */
-  unnamed: number;
   works: {
     key: string;
     /** 題名が分かるならそれ。分からなければサイト名 */
@@ -102,10 +100,9 @@ export default function Favorites({
       })
       .toSorted((a, b) => a.label.localeCompare(b.label, "ja"));
 
-    return { unnamed: rest.length - works.length, works };
+    return { works };
   }, [crossSites, days, favorites, sites]);
-  /** 題名の分からない登録も数のうち。出さないと件数と画面が食い違う */
-  const hasDormant = dormant.works.length > 0 || dormant.unnamed > 0;
+  const hasDormant = dormant.works.length > 0;
 
   if (batches.length === 0 && !hasDormant) {
     return (
@@ -148,7 +145,7 @@ export default function Favorites({
       {hasDormant ? (
         <section className={styles.section}>
           <div className={styles.batchHead}>
-            <span className={styles.batchLabel}>この一週間、更新なし</span>
+            <span className={styles.batchLabel}>7日以内の更新なし</span>
             <span className={styles.batchLine} />
           </div>
           <ul className={styles.dormant}>
@@ -180,14 +177,6 @@ export default function Favorites({
               </li>
             ))}
           </ul>
-          {dormant.unnamed === 0 ? null : (
-            // 昔の登録は題名を控えていない。次に更新されたとき名前が入る
-            <p className={styles.dormantNote}>
-              {dormant.works.length === 0
-                ? `題名の分からない登録が${dormant.unnamed}件あります。次に更新されたとき、ここに名前が出ます。`
-                : `ほかに、題名の分からない登録が${dormant.unnamed}件あります。`}
-            </p>
-          )}
         </section>
       ) : null}
     </div>
