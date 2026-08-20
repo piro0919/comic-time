@@ -29,9 +29,17 @@
 
 /* 星を押したときに増える。登録できたことが分かるように置く */
 .count {
-  color: var(--muted);
-  font-size: 1.2rem;
+  background: var(--accent);
+  border-radius: var(--radius-pill);
+  color: var(--background);
+  font-size: 1.1rem;
   font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  line-height: 1;
+  margin-inline-start: auto;
+  min-width: 18px;
+  padding: 3px var(--space-1);
+  text-align: center;
 }
 
 .currentDay {
