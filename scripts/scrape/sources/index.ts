@@ -2,20 +2,21 @@ import { type ParsedWork } from "../../../src/types/work.ts";
 import championCross from "./championCross.ts";
 import comicAction from "./comicAction.ts";
 import comicDays from "./comicDays.ts";
+import comicFuz from "./comicFuz.ts";
 import comicMeteor from "./comicMeteor.ts";
 import comicOgyaaa from "./comicOgyaaa.ts";
-import comicFuz from "./comicFuz.ts";
 import comicWalker from "./comicWalker.ts";
 import comicZenon from "./comicZenon.ts";
 import comiplex from "./comiplex.ts";
 import ganganOnline from "./ganganOnline.ts";
 import getsumagakichi from "./getsumagakichi.ts";
 import kurageBunch from "./kurageBunch.ts";
-import magcomi from "./magcomi.ts";
 import magazinePocket from "./magazinePocket.ts";
+import magcomi from "./magcomi.ts";
 import mangaOne from "./mangaOne.ts";
 import shonenJumpPlus from "./shonenJumpPlus.ts";
 import shuro from "./shuro.ts";
+import sundayWebry from "./sundayWebry.ts";
 import takeComic from "./takeComic.ts";
 import tonariNoYoungJump from "./tonariNoYoungJump.ts";
 import twi4 from "./twi4.ts";
@@ -23,7 +24,6 @@ import yanmaga from "./yanmaga.ts";
 import youngAceUp from "./youngAceUp.ts";
 import youngChampion from "./youngChampion.ts";
 import zerosumOnline from "./zerosumOnline.ts";
-import sundayWebry from "./sundayWebry.ts";
 
 /**
  * サイトごとの取り方。その日更新された作品だけを返す。

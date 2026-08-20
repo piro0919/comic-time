@@ -36,6 +36,7 @@ export default async function shonenJumpPlus(): Promise<ParsedWork[]> {
     }
 
     seen.add(title);
+
     const thumbnail = item
       .find(".daily-series-thumb-square")
       .first()

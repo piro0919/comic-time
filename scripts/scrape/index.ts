@@ -120,7 +120,7 @@ export default async function scrape(): Promise<void> {
   );
 
   await Promise.all(
-    stale.map((name) => fs.rm(path.join(dataDir, name), { force: true })),
+    stale.map(async (name) => fs.rm(path.join(dataDir, name), { force: true })),
   );
 
   console.log(

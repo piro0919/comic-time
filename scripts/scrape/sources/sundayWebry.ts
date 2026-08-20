@@ -22,7 +22,6 @@ export default async function sundayWebry(): Promise<ParsedWork[]> {
 
   const works: ParsedWork[] = [];
   const seen = new Set<string>();
-
   const list = section.find(".daily-series-list").first();
 
   list.find(".daily-series-item").each((_, el) => {
