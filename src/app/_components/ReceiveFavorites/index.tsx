@@ -80,7 +80,7 @@ export default function ReceiveFavorites({
       }
 
       if (result.kind === "unreadable") {
-        toast.error("読み取れませんでした");
+        toast.error("リンクを読み取れませんでした");
 
         return;
       }
@@ -97,7 +97,7 @@ export default function ReceiveFavorites({
 
     favorites.replaceAll(next);
     toast.success(
-      keepExisting ? `${count}件を追加しました` : `${count}件と入れ替えました`,
+      keepExisting ? `${count}件を追加しました` : `${count}件に置き換えました`,
     );
 
     if (onDone !== undefined) {
@@ -111,14 +111,14 @@ export default function ReceiveFavorites({
   };
 
   if (state.kind === "loading") {
-    return <p className={styles.note}>読み取っています…</p>;
+    return <p className={styles.note}>読み込んでいます…</p>;
   }
 
   if (state.kind === "unreadable") {
     return (
       <div className={styles.container}>
         <p className={styles.note}>
-          読み取れませんでした。リンクが途中で切れている可能性があります。
+          リンクを読み取れませんでした。リンクが途中で切れていないかご確認ください。
         </p>
         <button
           onClick={() => {
@@ -127,7 +127,7 @@ export default function ReceiveFavorites({
           className={styles.secondary}
           type="button"
         >
-          もう一度読み取る
+          再試行
         </button>
       </div>
     );
@@ -139,7 +139,7 @@ export default function ReceiveFavorites({
 
     return (
       <div className={styles.container}>
-        <p className={styles.note}>{received}件を受け取りました。</p>
+        <p className={styles.note}>{received}件のお気に入りを受信しました。</p>
         <div className={styles.actions}>
           <button
             onClick={() => {
@@ -148,7 +148,7 @@ export default function ReceiveFavorites({
             className={styles.primary}
             type="button"
           >
-            今の登録に追加
+            追加
           </button>
           {current === 0 ? null : (
             <button
@@ -158,7 +158,7 @@ export default function ReceiveFavorites({
               className={styles.secondary}
               type="button"
             >
-              入れ替える
+              置き換え
             </button>
           )}
         </div>
@@ -178,7 +178,7 @@ export default function ReceiveFavorites({
       ) : (
         <>
           <p className={styles.note}>
-            渡す端末で共有を開くと、QRとリンクが出ます。
+            送信するデバイスで共有を開くと、QR コードとリンクが表示されます。
           </p>
           <button
             onClick={() => {
@@ -188,7 +188,7 @@ export default function ReceiveFavorites({
             type="button"
           >
             <MdQrCodeScanner size={16} />
-            カメラで読み取る
+            QR コードをスキャン
           </button>
         </>
       )}
@@ -203,10 +203,10 @@ export default function ReceiveFavorites({
           onChange={(event) => {
             setPasted(event.target.value);
           }}
-          aria-label="渡されたリンク"
+          aria-label="受信したリンク"
           className={styles.input}
           inputMode="url"
-          placeholder="リンクを貼り付ける"
+          placeholder="リンクを貼り付け"
           type="text"
           value={pasted}
         />
@@ -215,7 +215,7 @@ export default function ReceiveFavorites({
           disabled={pasted.trim() === ""}
           type="submit"
         >
-          読み取る
+          取り込む
         </button>
       </form>
     </div>

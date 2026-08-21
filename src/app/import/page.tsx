@@ -2,9 +2,9 @@ import { type Metadata } from "next";
 import Import from "../_components/Import";
 
 export const metadata: Metadata = {
-  description: "別の端末から渡されたお気に入りを取り込みます。",
+  description: "別のデバイスから送信されたお気に入りを受信します。",
   robots: { follow: false, index: false },
-  title: "お気に入りの取り込み",
+  title: "お気に入りの受信",
 };
 
 export default function Page(): React.JSX.Element {

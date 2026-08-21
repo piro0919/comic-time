@@ -134,9 +134,9 @@ export default function ShareFavorites(): null | React.JSX.Element {
           }}
           aria-expanded={menuOpen}
           aria-haspopup="menu"
-          aria-label="お気に入りを別の端末とやり取りする"
+          aria-label="お気に入りを共有"
           className={styles.open}
-          title="お気に入りを別の端末とやり取りする"
+          title="お気に入りを共有"
           type="button"
         >
           <MdIosShare size={18} />
@@ -152,7 +152,7 @@ export default function ShareFavorites(): null | React.JSX.Element {
               role="menuitem"
               type="button"
             >
-              この端末から渡す
+              このデバイスから送信
             </button>
             <button
               onClick={() => {
@@ -163,7 +163,7 @@ export default function ShareFavorites(): null | React.JSX.Element {
               role="menuitem"
               type="button"
             >
-              別の端末から受け取る
+              別のデバイスから受信
             </button>
           </div>
         ) : null}
@@ -189,8 +189,8 @@ export default function ShareFavorites(): null | React.JSX.Element {
                 <div className={styles.head}>
                   <span className={styles.title}>
                     {mode === "receive"
-                      ? "お気に入りを受け取る"
-                      : "お気に入りを渡す"}
+                      ? "お気に入りを受信"
+                      : "お気に入りを送信"}
                   </span>
                   <button
                     onClick={() => {
@@ -211,18 +211,18 @@ export default function ShareFavorites(): null | React.JSX.Element {
                   />
                 ) : count === 0 ? (
                   <p className={styles.note}>
-                    渡せる登録がまだありません。作品の星を押すと渡せます。
+                    送信できるお気に入りがありません。作品の星を選択して追加してください。
                   </p>
                 ) : link === null ? (
-                  <p className={styles.note}>作成中です…</p>
+                  <p className={styles.note}>リンクを作成しています…</p>
                 ) : (
                   <>
                     {qrValue === null ? (
                       /* 短縮が返るまでQRの可否は決まらない。先に断らない */
                       <p className={styles.note}>
                         {link.shortening
-                          ? "作成中です…"
-                          : "登録が多いため、QRは出せません。下のリンクを送ってください。"}
+                          ? "リンクを作成しています…"
+                          : "お気に入りが多いため、QR コードを作成できません。下のリンクを送信してください。"}
                       </p>
                     ) : (
                       <div className={styles.qr}>
@@ -238,8 +238,8 @@ export default function ShareFavorites(): null | React.JSX.Element {
                           link.shortening
                             ? "短縮リンクを作成しています"
                             : link.short === null
-                              ? "登録が多いか、短縮できなかったため使えません"
-                              : "短い方のリンクをコピーする"
+                              ? "短縮リンクを作成できませんでした"
+                              : "短縮リンクをコピーします"
                         }
                         className={styles.copy}
                         disabled={link.short === null}

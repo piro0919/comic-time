@@ -25,8 +25,8 @@ test.describe("お気に入りの受け渡し", () => {
       await stars.nth(index).click();
     }
 
-    await from.getByRole("button", { name: /別の端末とやり取り/ }).click();
-    await from.getByRole("menuitem", { name: "この端末から渡す" }).click();
+    await from.getByRole("button", { name: "お気に入りを共有" }).click();
+    await from.getByRole("menuitem", { name: "このデバイスから送信" }).click();
     await from
       .getByRole("button", { name: /リンクをコピー/ })
       .last()
@@ -44,9 +44,11 @@ test.describe("お気に入りの受け渡し", () => {
     const to = await receiver.newPage();
 
     await to.goto(link);
-    await expect(to.getByText(`${count}件を受け取りました`)).toBeVisible();
+    await expect(
+      to.getByText(`${count}件のお気に入りを受信しました`),
+    ).toBeVisible();
 
-    await to.getByRole("button", { name: "今の登録に追加" }).click();
+    await to.getByRole("button", { name: "追加" }).click();
     await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
     await expect(to).toHaveURL(/\/favorites/);
 
@@ -86,8 +88,8 @@ test.describe("お気に入りの受け渡し", () => {
       await stars.nth(index).click();
     }
 
-    await from.getByRole("button", { name: /別の端末とやり取り/ }).click();
-    await from.getByRole("menuitem", { name: "この端末から渡す" }).click();
+    await from.getByRole("button", { name: "お気に入りを共有" }).click();
+    await from.getByRole("menuitem", { name: "このデバイスから送信" }).click();
     await from
       .getByRole("button", { name: /リンクをコピー/ })
       .last()
@@ -104,16 +106,18 @@ test.describe("お気に入りの受け渡し", () => {
     const to = await receiver.newPage();
 
     await to.goto(`${baseURL}/day/tue`);
-    await to.getByRole("button", { name: /別の端末とやり取り/ }).click();
-    await to.getByRole("menuitem", { name: "別の端末から受け取る" }).click();
-    await to.getByRole("textbox", { name: "渡されたリンク" }).fill(link);
-    await to.getByRole("button", { exact: true, name: "読み取る" }).click();
-    await expect(to.getByText(`${count}件を受け取りました`)).toBeVisible();
-    await to.getByRole("button", { name: "今の登録に追加" }).click();
+    await to.getByRole("button", { name: "お気に入りを共有" }).click();
+    await to.getByRole("menuitem", { name: "別のデバイスから受信" }).click();
+    await to.getByRole("textbox", { name: "受信したリンク" }).fill(link);
+    await to.getByRole("button", { name: "取り込む" }).click();
+    await expect(
+      to.getByText(`${count}件のお気に入りを受信しました`),
+    ).toBeVisible();
+    await to.getByRole("button", { name: "追加" }).click();
     await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
     // パネルは閉じ、見ていた画面はそのまま
     await expect(
-      to.getByRole("textbox", { name: "渡されたリンク" }),
+      to.getByRole("textbox", { name: "受信したリンク" }),
     ).toBeHidden();
     await expect(to).toHaveURL(/\/day\/tue/);
 
@@ -135,23 +139,25 @@ test.describe("お気に入りの受け渡し", () => {
     page,
   }) => {
     await page.goto(`${baseURL}/`);
-    await page.getByRole("button", { name: /別の端末とやり取り/ }).click();
-    await page.getByRole("menuitem", { name: "この端末から渡す" }).click();
-    await expect(page.getByText("渡せる登録がまだありません")).toBeVisible();
+    await page.getByRole("button", { name: "お気に入りを共有" }).click();
+    await page.getByRole("menuitem", { name: "このデバイスから送信" }).click();
+    await expect(
+      page.getByText("送信できるお気に入りがありません"),
+    ).toBeVisible();
   });
 
   test("受け取る側は、登録が無くても選べる", async ({ baseURL, page }) => {
     await page.goto(`${baseURL}/`);
-    await page.getByRole("button", { name: /別の端末とやり取り/ }).click();
-    await page.getByRole("menuitem", { name: "別の端末から受け取る" }).click();
+    await page.getByRole("button", { name: "お気に入りを共有" }).click();
+    await page.getByRole("menuitem", { name: "別のデバイスから受信" }).click();
     await expect(
-      page.getByRole("textbox", { name: "渡されたリンク" }),
+      page.getByRole("textbox", { name: "受信したリンク" }),
     ).toBeVisible();
   });
 
   test("壊れたリンクは読み取れないと伝える", async ({ baseURL, page }) => {
     await page.goto(`${baseURL}/import#1こわれている`);
 
-    await expect(page.getByText("読み取れませんでした")).toBeVisible();
+    await expect(page.getByText("リンクを読み取れませんでした")).toBeVisible();
   });
 });

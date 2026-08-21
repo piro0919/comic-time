@@ -44,7 +44,7 @@ export default function QrCamera({
 
       if (stream === null) {
         setError(
-          "カメラを使えませんでした。ブラウザの設定を確かめてください。",
+          "カメラを使用できません。ブラウザの設定でカメラへのアクセスを許可してください。",
         );
 
         return;
@@ -104,13 +104,15 @@ export default function QrCamera({
             playsInline={true}
             ref={videoRef}
           />
-          <p className={styles.note}>渡す端末に出ているQRを写してください。</p>
+          <p className={styles.note}>
+            送信するデバイスの QR コードをカメラに写してください。
+          </p>
         </>
       ) : (
         <p className={styles.note}>{error}</p>
       )}
       <button className={styles.close} onClick={onClose} type="button">
-        やめる
+        キャンセル
       </button>
     </div>
   );

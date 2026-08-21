@@ -16,7 +16,7 @@ export default function Import(): React.JSX.Element {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>お気に入りを受け取る</h2>
+      <h2 className={styles.heading}>お気に入りを受信</h2>
       <div className={styles.body}>
         {encoded === undefined ? null : (
           <ReceiveFavorites initialEncoded={encoded} />
