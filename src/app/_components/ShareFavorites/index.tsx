@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { MdClose, MdIosShare } from "react-icons/md";
 import {
@@ -32,8 +32,9 @@ type Link = {
  */
 export default function ShareFavorites(): null | React.JSX.Element {
   const favorites = useFavorites();
-  const [isOpen, setIsOpen] = useState(false);
-  const [mode, setMode] = useState<"receive" | "send">("send");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [mode, setMode] = useState<"receive" | "send" | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const [link, setLink] = useState<Link | null>(null);
   const [copied, setCopied] = useState<null | string>(null);
   const count = favorites.workUrls.length + favorites.siteUrls.length;
@@ -72,13 +73,43 @@ export default function ShareFavorites(): null | React.JSX.Element {
   }, [favorites.siteUrls, favorites.workUrls]);
 
   useEffect(() => {
-    if (!isOpen || mode !== "send" || count === 0) {
+    if (mode !== "send" || count === 0) {
       return;
     }
 
     setLink(null);
     void build();
-  }, [count, isOpen, mode, build]);
+  }, [count, mode, build]);
+
+  // メニューは、外を触るか Esc で閉じる
+  useEffect(() => {
+    if (!menuOpen) {
+      return undefined;
+    }
+
+    const onPointerDown = (event: MouseEvent | TouchEvent): void => {
+      if (!(event.target instanceof Node) || menuRef.current === null) {
+        return;
+      }
+
+      if (!menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+    const onKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+
+    return (): void => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [menuOpen]);
 
   const copy = async (value: string, label: string): Promise<void> => {
     await navigator.clipboard.writeText(value).catch(() => undefined);
@@ -96,24 +127,53 @@ export default function ShareFavorites(): null | React.JSX.Element {
 
   return (
     <>
-      <button
-        onClick={() => {
-          // 渡すものが無い端末は、受け取りに来ている
-          setMode(count === 0 ? "receive" : "send");
-          setIsOpen(true);
-        }}
-        aria-label="お気に入りを別の端末とやり取りする"
-        className={styles.open}
-        title="お気に入りを別の端末とやり取りする"
-        type="button"
-      >
-        <MdIosShare size={18} />
-      </button>
-      {isOpen
-        ? createPortal(
+      <div className={styles.menuAnchor} ref={menuRef}>
+        <button
+          onClick={() => {
+            setMenuOpen((open) => !open);
+          }}
+          aria-expanded={menuOpen}
+          aria-haspopup="menu"
+          aria-label="お気に入りを別の端末とやり取りする"
+          className={styles.open}
+          title="お気に入りを別の端末とやり取りする"
+          type="button"
+        >
+          <MdIosShare size={18} />
+        </button>
+        {menuOpen ? (
+          <div className={styles.menu} role="menu">
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                setMode("send");
+              }}
+              className={styles.menuItem}
+              role="menuitem"
+              type="button"
+            >
+              この端末から渡す
+            </button>
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                setMode("receive");
+              }}
+              className={styles.menuItem}
+              role="menuitem"
+              type="button"
+            >
+              別の端末から受け取る
+            </button>
+          </div>
+        ) : null}
+      </div>
+      {mode === null
+        ? null
+        : createPortal(
             <div
               onClick={() => {
-                setIsOpen(false);
+                setMode(null);
               }}
               className={styles.overlay}
               role="presentation"
@@ -127,10 +187,14 @@ export default function ShareFavorites(): null | React.JSX.Element {
                 role="presentation"
               >
                 <div className={styles.head}>
-                  <span className={styles.title}>お気に入りの受け渡し</span>
+                  <span className={styles.title}>
+                    {mode === "receive"
+                      ? "お気に入りを受け取る"
+                      : "お気に入りを渡す"}
+                  </span>
                   <button
                     onClick={() => {
-                      setIsOpen(false);
+                      setMode(null);
                     }}
                     aria-label="閉じる"
                     className={styles.close}
@@ -139,23 +203,10 @@ export default function ShareFavorites(): null | React.JSX.Element {
                     <MdClose size={20} />
                   </button>
                 </div>
-                <select
-                  onChange={(event) => {
-                    setMode(
-                      event.target.value === "receive" ? "receive" : "send",
-                    );
-                  }}
-                  aria-label="渡すか受け取るかを選ぶ"
-                  className={styles.mode}
-                  value={mode}
-                >
-                  <option value="send">この端末から渡す</option>
-                  <option value="receive">別の端末から受け取る</option>
-                </select>
                 {mode === "receive" ? (
                   <ReceiveFavorites
                     onDone={() => {
-                      setIsOpen(false);
+                      setMode(null);
                     }}
                   />
                 ) : count === 0 ? (
@@ -215,8 +266,7 @@ export default function ShareFavorites(): null | React.JSX.Element {
               </div>
             </div>,
             document.body,
-          )
-        : null}
+          )}
     </>
   );
 }

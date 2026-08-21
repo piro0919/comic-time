@@ -1,3 +1,4 @@
+/* 曜日の帯より上に置く。ここから出す小窓が帯の下に潜らないようにする */
 .header {
   align-items: center;
   backdrop-filter: blur(8px);
@@ -6,6 +7,8 @@
   gap: var(--space-3);
   height: var(--header-height);
   padding: 0 var(--space-3) 0 clamp(var(--space-3), 2.5dvw, var(--space-5));
+  position: relative;
+  z-index: 1;
 }
 
 .h1 {

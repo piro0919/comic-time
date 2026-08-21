@@ -26,6 +26,7 @@ test.describe("お気に入りの受け渡し", () => {
     }
 
     await from.getByRole("button", { name: /別の端末とやり取り/ }).click();
+    await from.getByRole("menuitem", { name: "この端末から渡す" }).click();
     await from
       .getByRole("button", { name: /リンクをコピー/ })
       .last()
@@ -86,6 +87,7 @@ test.describe("お気に入りの受け渡し", () => {
     }
 
     await from.getByRole("button", { name: /別の端末とやり取り/ }).click();
+    await from.getByRole("menuitem", { name: "この端末から渡す" }).click();
     await from
       .getByRole("button", { name: /リンクをコピー/ })
       .last()
@@ -103,9 +105,7 @@ test.describe("お気に入りの受け渡し", () => {
 
     await to.goto(`${baseURL}/day/tue`);
     await to.getByRole("button", { name: /別の端末とやり取り/ }).click();
-    await to
-      .getByRole("combobox", { name: "渡すか受け取るかを選ぶ" })
-      .selectOption("receive");
+    await to.getByRole("menuitem", { name: "別の端末から受け取る" }).click();
     await to.getByRole("textbox", { name: "渡されたリンク" }).fill(link);
     await to.getByRole("button", { exact: true, name: "読み取る" }).click();
     await expect(to.getByText(`${count}件を受け取りました`)).toBeVisible();
@@ -113,7 +113,7 @@ test.describe("お気に入りの受け渡し", () => {
     await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
     // パネルは閉じ、見ていた画面はそのまま
     await expect(
-      to.getByRole("combobox", { name: "渡すか受け取るかを選ぶ" }),
+      to.getByRole("textbox", { name: "渡されたリンク" }),
     ).toBeHidden();
     await expect(to).toHaveURL(/\/day\/tue/);
 
@@ -130,23 +130,23 @@ test.describe("お気に入りの受け渡し", () => {
     await receiver.close();
   });
 
-  test("登録が無いうちは、受け取る側を開いて出す", async ({
+  test("登録が無いうちは、渡す側を選んでも渡せないと伝える", async ({
     baseURL,
     page,
   }) => {
     await page.goto(`${baseURL}/`);
     await page.getByRole("button", { name: /別の端末とやり取り/ }).click();
+    await page.getByRole("menuitem", { name: "この端末から渡す" }).click();
+    await expect(page.getByText("渡せる登録がまだありません")).toBeVisible();
+  });
 
-    const mode = page.getByRole("combobox", { name: "渡すか受け取るかを選ぶ" });
-
-    await expect(mode).toHaveValue("receive");
+  test("受け取る側は、登録が無くても選べる", async ({ baseURL, page }) => {
+    await page.goto(`${baseURL}/`);
+    await page.getByRole("button", { name: /別の端末とやり取り/ }).click();
+    await page.getByRole("menuitem", { name: "別の端末から受け取る" }).click();
     await expect(
       page.getByRole("textbox", { name: "渡されたリンク" }),
     ).toBeVisible();
-
-    // 渡す側へ回せば、渡せない理由が出る
-    await mode.selectOption("send");
-    await expect(page.getByText("渡せる登録がまだありません")).toBeVisible();
   });
 
   test("壊れたリンクは読み取れないと伝える", async ({ baseURL, page }) => {
