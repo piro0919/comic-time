@@ -9,9 +9,9 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://shuro.world/";
 
-export default async function shuro(): Promise<ParsedWork[]> {
+export default async function shuro(date = todayKey()): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [year, month, day] = todayKey().split("-");
+  const [year, month, day] = date.split("-");
   const wanted = `${Number(year)}年${Number(month)}月${Number(day)}日`;
   const works: ParsedWork[] = [];
   const seen = new Set<string>();

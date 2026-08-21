@@ -10,9 +10,11 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://kuragebunch.com/";
 
-export default async function kurageBunch(): Promise<ParsedWork[]> {
+export default async function kurageBunch(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const wanted = `${Number(month)}月${Number(day)}日`;
   const section = $("#latest-update, #last-update")
     .filter((_, el) =>

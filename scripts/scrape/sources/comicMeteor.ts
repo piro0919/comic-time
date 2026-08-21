@@ -10,9 +10,11 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://kirapo.jp/meteor";
 
-export default async function comicMeteor(): Promise<ParsedWork[]> {
+export default async function comicMeteor(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const heading = $("#titles-container .d-flex")
     .filter((_, el) => {
       const parts = $(el)

@@ -9,9 +9,11 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://shonenjumpplus.com/";
 
-export default async function shonenJumpPlus(): Promise<ParsedWork[]> {
+export default async function shonenJumpPlus(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const wanted = `${Number(month)}月${Number(day)}日`;
   const section = $("section.daily")
     .filter((_, el) =>

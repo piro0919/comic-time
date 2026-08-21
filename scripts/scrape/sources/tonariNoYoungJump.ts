@@ -10,9 +10,11 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://tonarinoyj.jp/";
 
-export default async function tonariNoYoungJump(): Promise<ParsedWork[]> {
+export default async function tonariNoYoungJump(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const wanted = `${month}.${day}`;
   const works: ParsedWork[] = [];
   const seen = new Set<string>();

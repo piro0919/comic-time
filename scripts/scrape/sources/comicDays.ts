@@ -20,9 +20,11 @@ const weekdayIds = [
 ];
 const weekdayJa = ["日", "月", "火", "水", "木", "金", "土"];
 
-export default async function comicDays(): Promise<ParsedWork[]> {
+export default async function comicDays(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const wanted = `${Number(month)}/${Number(day)}`;
 
   let id: null | string = null;

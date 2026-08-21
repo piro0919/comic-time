@@ -13,9 +13,11 @@ const topUrl = "https://getsumagakichi.com/";
 const episodePattern = /^https:\/\/comic-days\.com\/episode\//;
 const maxClimb = 8;
 
-export default async function getsumagakichi(): Promise<ParsedWork[]> {
+export default async function getsumagakichi(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const heading = $("[class*='UpdateDate_month']")
     .filter((_, el) => {
       const node = $(el);

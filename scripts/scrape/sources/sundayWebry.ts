@@ -10,9 +10,11 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://www.sunday-webry.com/";
 
-export default async function sundayWebry(): Promise<ParsedWork[]> {
+export default async function sundayWebry(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const section = $(".top-today").first();
   const shown = section.find(".date").first().text().replace(/\s+/g, "");
 

@@ -10,9 +10,11 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://comic-zenon.com/";
 
-export default async function comicZenon(): Promise<ParsedWork[]> {
+export default async function comicZenon(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const [year, month, day] = todayKey().split("-");
+  const [year, month, day] = date.split("-");
   const wanted = `${year}年${month}月${day}日`;
   const area = $(".panel-area")
     .filter((_, el) =>
