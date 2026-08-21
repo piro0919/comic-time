@@ -36,8 +36,7 @@ function nowInTokyo(): { minutes: number; weekday: string } {
  * 「毎日17:00更新」「毎日8:00と16:00の2回更新」「毎週火曜7:30更新」から、
  * 今日この時刻までに更新されたかを見る。決まりが読み取れないものは出さない。
  */
-function isUpdated(schedule: string): boolean {
-  const now = nowInTokyo();
+export function isUpdated(schedule: string, now = nowInTokyo()): boolean {
   const daily = schedule.includes("毎日");
   const weekly = schedule.includes(`毎週${now.weekday}`);
 

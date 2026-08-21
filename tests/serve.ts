@@ -22,8 +22,9 @@ export function serve(pages: Record<string, string>): {
       return new Response("", { status: 404 });
     }
 
+    // protobuf の応答もあるので、中身は読まずにそのまま渡す
     return new Response(
-      readFileSync(new URL(`./fixtures/${file}`, import.meta.url), "utf8"),
+      readFileSync(new URL(`./fixtures/${file}`, import.meta.url)),
       { status: 200 },
     );
   }) as typeof fetch;

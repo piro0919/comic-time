@@ -33,7 +33,9 @@ async function thumbnailFromPage(url: string): Promise<null | string> {
   }
 }
 
-export default async function mangaOne(): Promise<ParsedWork[]> {
+export default async function mangaOne(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const res = await fetch(apiUrl, { signal: AbortSignal.timeout(30000) });
 
   if (!res.ok) {
@@ -48,7 +50,7 @@ export default async function mangaOne(): Promise<ParsedWork[]> {
     throw new Error("更新一覧の節が見つからない");
   }
 
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
   const group = readFields(section.value as Uint8Array)
     .filter((field) => field.number === 1 && field.value instanceof Uint8Array)
     .find((field) => {

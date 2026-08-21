@@ -257,10 +257,11 @@ const eslintConfig = [
     },
   },
   {
-    // 検査のファイルは <名前>.test.ts で揃える
+    // 検査のファイルは <名前>.test.ts で揃える。属性の値に " を含むため引用符も緩める
     files: ["tests/**/*.ts"],
     rules: {
       "filenames/match-regex": "off",
+      quotes: "off",
     },
   },
   {
