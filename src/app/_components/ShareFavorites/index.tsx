@@ -1,8 +1,9 @@
 "use client";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { MdClose, MdIosShare } from "react-icons/md";
+import { MdClose, MdIosShare, MdQrCodeScanner } from "react-icons/md";
 import {
   encodeFavorites,
   maxShortenableLength,
@@ -70,13 +71,13 @@ export default function ShareFavorites(): null | React.JSX.Element {
   }, [favorites.siteUrls, favorites.workUrls]);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!isOpen || count === 0) {
       return;
     }
 
     setLink(null);
     void build();
-  }, [isOpen, build]);
+  }, [count, isOpen, build]);
 
   const copy = async (value: string, label: string): Promise<void> => {
     await navigator.clipboard.writeText(value).catch(() => undefined);
@@ -98,14 +99,9 @@ export default function ShareFavorites(): null | React.JSX.Element {
         onClick={() => {
           setIsOpen(true);
         }}
-        title={
-          count === 0
-            ? "作品の星を押して登録すると、別の端末へ渡せます"
-            : "お気に入りを別の端末へ渡す"
-        }
-        aria-label="お気に入りを別の端末へ渡す"
+        aria-label="お気に入りを別の端末とやり取りする"
         className={styles.open}
-        disabled={count === 0}
+        title="お気に入りを別の端末とやり取りする"
         type="button"
       >
         <MdIosShare size={18} />
@@ -140,7 +136,11 @@ export default function ShareFavorites(): null | React.JSX.Element {
                     <MdClose size={20} />
                   </button>
                 </div>
-                {link === null ? (
+                {count === 0 ? (
+                  <p className={styles.note}>
+                    渡せる登録がまだありません。作品の星を押すと渡せます。
+                  </p>
+                ) : link === null ? (
                   <p className={styles.note}>作成中です…</p>
                 ) : (
                   <>
@@ -190,6 +190,17 @@ export default function ShareFavorites(): null | React.JSX.Element {
                     </div>
                   </>
                 )}
+                {/* 渡す側と受け取る側は、同じ入口の裏表として並べる */}
+                <Link
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                  className={styles.receive}
+                  href="/import"
+                >
+                  <MdQrCodeScanner size={16} />
+                  別の端末から受け取る
+                </Link>
               </div>
             </div>,
             document.body,

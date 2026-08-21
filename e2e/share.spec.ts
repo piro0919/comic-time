@@ -25,7 +25,7 @@ test.describe("お気に入りの受け渡し", () => {
       await stars.nth(index).click();
     }
 
-    await from.getByRole("button", { name: /別の端末へ渡す/ }).click();
+    await from.getByRole("button", { name: /別の端末とやり取り/ }).click();
     await from
       .getByRole("button", { name: /リンクをコピー/ })
       .last()
@@ -85,7 +85,7 @@ test.describe("お気に入りの受け渡し", () => {
       await stars.nth(index).click();
     }
 
-    await from.getByRole("button", { name: /別の端末へ渡す/ }).click();
+    await from.getByRole("button", { name: /別の端末とやり取り/ }).click();
     await from
       .getByRole("button", { name: /リンクをコピー/ })
       .last()
@@ -120,12 +120,16 @@ test.describe("お気に入りの受け渡し", () => {
     await receiver.close();
   });
 
-  test("登録が無いうちは渡せない", async ({ baseURL, page }) => {
+  test("登録が無いうちは、渡せないと伝えて受け取りだけを出す", async ({
+    baseURL,
+    page,
+  }) => {
     await page.goto(`${baseURL}/`);
-
-    const share = page.getByRole("button", { name: /別の端末へ渡す/ });
-
-    await expect(share).toBeDisabled();
+    await page.getByRole("button", { name: /別の端末とやり取り/ }).click();
+    await expect(page.getByText("渡せる登録がまだありません")).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "別の端末から受け取る" }),
+    ).toBeVisible();
   });
 
   test("壊れたリンクは読み取れないと伝える", async ({ baseURL, page }) => {
