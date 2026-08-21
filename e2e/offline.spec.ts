@@ -6,13 +6,6 @@ import { startSlowProxy, waitForServiceWorker } from "./support.ts";
  * 本番でオフライン画面を出した経緯がある。
  */
 test.describe("圏外での見え方", () => {
-  /**
-   * 圏外にした直後は、まだ通信が生きているように見えることがある。
-   * その間に開くと控えも無いまま素通りし、元のページに留まる。
-   * 開き直しても戻せないので、この束だけ流し直す。
-   */
-  test.describe.configure({ retries: 2 });
-
   test("一度開いたページは圏外でも控えから出る", async ({ context, page }) => {
     await page.goto("/day/tue");
     await waitForServiceWorker(page);
@@ -36,6 +29,16 @@ test.describe("圏外での見え方", () => {
     await page.waitForTimeout(1000);
 
     await context.setOffline(true);
+    // 切った直後はまだ通信が生きて見える。実際に失敗するようになるまで待つ
+    await page.waitForFunction(
+      async () =>
+        await fetch("/day/sat", { cache: "no-store" }).then(
+          () => false,
+          () => true,
+        ),
+      null,
+      { timeout: 15000 },
+    );
     await page.goto("/day/sat").catch(() => undefined);
 
     await expect(page).toHaveTitle(/オフライン/, { timeout: 15000 });
