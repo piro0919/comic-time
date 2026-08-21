@@ -62,6 +62,64 @@ test.describe("お気に入りの受け渡し", () => {
     await receiver.close();
   });
 
+  test("渡されたリンクを、アプリの中に貼り付けて受け取れる", async ({
+    baseURL,
+    browser,
+  }) => {
+    const sender = await browser.newContext({
+      permissions: ["clipboard-read", "clipboard-write"],
+    });
+    const from = await sender.newPage();
+
+    await from.goto(`${baseURL}/day/wed`);
+    await from.waitForTimeout(800);
+
+    const stars = from.locator(
+      'main button[aria-label$="をお気に入りに入れる"]',
+    );
+    const count = Math.min(3, await stars.count());
+
+    test.skip(count === 0, "その日の更新が無いので登録できない");
+
+    for (let index = 0; index < count; index += 1) {
+      await stars.nth(index).click();
+    }
+
+    await from.getByRole("button", { name: /別の端末へ渡す/ }).click();
+    await from
+      .getByRole("button", { name: /リンクをコピー/ })
+      .last()
+      .click();
+
+    const link = await from.evaluate(async () =>
+      navigator.clipboard.readText(),
+    );
+
+    await sender.close();
+
+    // 受け取る側。カメラアプリを通さず、取り込みの画面へ貼る
+    const receiver = await browser.newContext();
+    const to = await receiver.newPage();
+
+    await to.goto(`${baseURL}/import`);
+    await to.getByRole("textbox", { name: "渡されたリンク" }).fill(link);
+    await to.getByRole("button", { exact: true, name: "読み取る" }).click();
+    await to.getByRole("button", { name: `${count}件を追加` }).click();
+    await expect(to).toHaveURL(/\/favorites/);
+
+    const stored = await to.evaluate(
+      () =>
+        (
+          JSON.parse(localStorage.getItem("favorites-v3") ?? "{}") as {
+            works?: string[];
+          }
+        ).works?.length ?? 0,
+    );
+
+    expect(stored).toBe(count);
+    await receiver.close();
+  });
+
   test("登録が無いうちは渡せない", async ({ baseURL, page }) => {
     await page.goto(`${baseURL}/`);
 

@@ -1,13 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { MdQrCodeScanner } from "react-icons/md";
 import { toast } from "sonner";
+import readReceived from "@/app/readReceived";
 import {
   decodeFavorites,
   mergeFavorites,
   type SharedFavorites,
 } from "@/app/shareLink";
 import useFavorites from "@/app/useFavorites";
+import QrCamera from "../QrCamera";
 import styles from "./style.module.css";
 
 type State =
@@ -19,11 +22,23 @@ type State =
 /**
  * 別の端末から渡されたお気に入りを取り込む。
  * 中身は URL の断片に載っているので、読み取りは描画後になる。
+ * 断片が付いていないときは、この画面で QR か住所を受け取る。
  */
 export default function Import(): React.JSX.Element {
   const router = useRouter();
   const favorites = useFavorites();
   const [state, setState] = useState<State>({ kind: "loading" });
+  const [pasted, setPasted] = useState("");
+  const [scanning, setScanning] = useState(false);
+  const read = useCallback(async (encoded: string): Promise<void> => {
+    const received = await decodeFavorites(encoded);
+
+    setState(
+      received === null || received.works.length + received.sites.length === 0
+        ? { kind: "unreadable" }
+        : { kind: "ready", received },
+    );
+  }, []);
 
   useEffect(() => {
     const encoded = location.hash.slice(1);
@@ -34,17 +49,33 @@ export default function Import(): React.JSX.Element {
       return;
     }
 
-    void (async (): Promise<void> => {
-      const received = await decodeFavorites(encoded);
+    void read(encoded);
+  }, [read]);
 
-      setState(
-        received === null || received.works.length + received.sites.length === 0
-          ? { kind: "unreadable" }
-          : { kind: "ready", received },
-      );
-    })();
-  }, []);
+  /** 読み取った文字列を引き受ける。短縮された住所は開いて確かめる */
+  const accept = useCallback(
+    (text: string): void => {
+      const result = readReceived(text);
 
+      setScanning(false);
+
+      if (result.kind === "url") {
+        location.href = result.url;
+
+        return;
+      }
+
+      if (result.kind === "unreadable") {
+        toast.error("読み取れませんでした");
+
+        return;
+      }
+
+      setState({ kind: "loading" });
+      void read(result.encoded);
+    },
+    [read],
+  );
   const apply = (received: SharedFavorites, keepExisting: boolean): void => {
     const current = { sites: favorites.siteUrls, works: favorites.workUrls };
     const next = keepExisting ? mergeFavorites(current, received) : received;
@@ -62,7 +93,63 @@ export default function Import(): React.JSX.Element {
     return <div className={styles.container} />;
   }
 
-  if (state.kind === "empty" || state.kind === "unreadable") {
+  if (state.kind === "empty") {
+    return (
+      <div className={styles.container}>
+        <h2 className={styles.heading}>お気に入りを受け取る</h2>
+        <p className={styles.description}>
+          渡す端末で共有を押すと、QRとリンクが出ます。それをここで読み取ります。
+        </p>
+        {scanning ? (
+          <QrCamera
+            onClose={() => {
+              setScanning(false);
+            }}
+            onRead={accept}
+          />
+        ) : (
+          <button
+            onClick={() => {
+              setScanning(true);
+            }}
+            className={styles.button}
+            type="button"
+          >
+            <MdQrCodeScanner size={18} />
+            カメラで読み取る
+          </button>
+        )}
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            accept(pasted);
+          }}
+          className={styles.paste}
+        >
+          <input
+            onChange={(event) => {
+              setPasted(event.target.value);
+            }}
+            aria-label="渡されたリンク"
+            className={styles.input}
+            inputMode="url"
+            placeholder="リンクを貼り付ける"
+            type="text"
+            value={pasted}
+          />
+          <button
+            className={styles.secondary}
+            disabled={pasted.trim() === ""}
+            type="submit"
+          >
+            読み取る
+          </button>
+        </form>
+      </div>
+    );
+  }
+
+  if (state.kind === "unreadable") {
     return (
       <div className={styles.container}>
         <h2 className={styles.heading}>読み取れませんでした</h2>
@@ -71,12 +158,12 @@ export default function Import(): React.JSX.Element {
         </p>
         <button
           onClick={() => {
-            router.push("/");
+            setState({ kind: "empty" });
           }}
           className={styles.button}
           type="button"
         >
-          最初の画面へ
+          もう一度読み取る
         </button>
       </div>
     );

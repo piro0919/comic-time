@@ -3,6 +3,7 @@ import { Righteous } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import InstallButton from "../InstallButton";
+import ReceiveButton from "../ReceiveButton";
 import ShareFavorites from "../ShareFavorites";
 import ThemeToggle from "../ThemeToggle";
 import styles from "./style.module.css";
@@ -50,6 +51,7 @@ export default function Header(): React.JSX.Element {
       </div>
       <div className={styles.actions}>
         <ShareFavorites />
+        <ReceiveButton />
         <InstallButton />
         <ThemeToggle />
       </div>

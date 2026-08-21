@@ -1,0 +1,14 @@
+.link {
+  align-items: center;
+  border-radius: var(--radius-pill);
+  color: var(--foreground);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2);
+  transition: background 0.2s ease;
+}
+
+.link:hover {
+  background: var(--surface);
+}

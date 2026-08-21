@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: center;
+  width: 100%;
+}
+
+/* 縦向きの端末でも収まる大きさにする */
+.video {
+  aspect-ratio: 1;
+  background: var(--surface);
+  border-radius: var(--radius-2);
+  max-width: 320px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 1.3rem;
+}
+
+.close {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: var(--space-2) var(--space-5);
+}
