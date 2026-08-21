@@ -1,22 +1,16 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import { after, before, test } from "node:test";
 import youngAceUp from "../scripts/scrape/sources/youngAceUp.ts";
+import { serve } from "./serve.ts";
 
-/** web-ace.jp/youngaceup/ の更新枠だけを抜き出したもの */
-const html = readFileSync(
-  new URL("./fixtures/youngAceUp.html", import.meta.url),
-  "utf8",
-);
-const realFetch = globalThis.fetch;
+let served = serve({});
 
 before(() => {
-  globalThis.fetch = (async () =>
-    new Response(html, { status: 200 })) as typeof fetch;
+  served = serve({ "/youngaceup/": "youngAceUp.html" });
 });
 
 after(() => {
-  globalThis.fetch = realFetch;
+  served.restore();
 });
 
 /**

@@ -81,18 +81,17 @@ const rscCache = {
 const serwist = new Serwist({
   clientsClaim: true,
   /**
-   * 控えも無く、通信も駄目なときに出す画面。
+   * 控えも無く、取得にも失敗したときに出す画面。
    * ページの読み込みだけを差し替える。画像や JSON はそのまま失敗させる。
    *
-   * 端末が「つながっている」と言っているうちは出さない。
-   * 取得の失敗には通信以外の理由もあり、そのときに圏外だと言い切ると、
-   * ブラウザ本来のエラーより誤解を招く。
+   * 端末の navigator.onLine では判定しない。繋がっていると言いながら
+   * 実際には届かないことがあり、そのときブラウザ本来のエラー画面になる。
+   * 遅いだけの回線は上の NetworkFirst が待つので、ここまで来ない。
    */
   fallbacks: {
     entries: [
       {
-        matcher: ({ request }): boolean =>
-          request.destination === "document" && !self.navigator.onLine,
+        matcher: ({ request }): boolean => request.destination === "document",
         url: "/~offline",
       },
     ],
