@@ -1,8 +1,29 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { nextTabHref, tabHrefs } from "../src/app/tabRoutes.ts";
+import { nextTabHref, tabHrefs, weekOrder } from "../src/app/tabRoutes.ts";
 
-const hrefs = tabHrefs(["fri", "thu", "wed", "tue", "mon", "sun", "sat"]);
+const hrefs = tabHrefs(weekOrder(5));
+
+test("曜日は今日から遡って並ぶ", () => {
+  assert.deepEqual(weekOrder(5), [
+    "fri",
+    "thu",
+    "wed",
+    "tue",
+    "mon",
+    "sun",
+    "sat",
+  ]);
+  assert.deepEqual(weekOrder(0), [
+    "sun",
+    "sat",
+    "fri",
+    "thu",
+    "wed",
+    "tue",
+    "mon",
+  ]);
+});
 
 test("並びはお気に入りで始まり、サイト一覧で終わる", () => {
   assert.deepEqual(hrefs, [

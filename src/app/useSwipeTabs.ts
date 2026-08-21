@@ -1,8 +1,7 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { type TouchEvent, useRef } from "react";
-import { nextTabHref, tabHrefs } from "./tabRoutes";
-import useDayMenu from "./useDayMenu";
+import { nextTabHref, tabHrefs, weekOrder } from "./tabRoutes";
 
 /** これ以上横に動いたらスワイプと見なす */
 const distanceThreshold = 60;
@@ -43,10 +42,9 @@ function insideHorizontalScroller(target: EventTarget | null): boolean {
 /**
  * モバイルで左右にスワイプしたとき、ナビの並びの隣のページへ移る。
  * 返ってきたハンドラを、画面を覆う要素に渡して使う。
+ * 並びと現在地は指を離したときに読む。持っていると描画が1回増える。
  */
 export default function useSwipeTabs(): SwipeTabsHandlers {
-  const items = useDayMenu();
-  const pathname = usePathname();
   const router = useRouter();
   const start = useRef<null | Start>(null);
 
@@ -74,8 +72,8 @@ export default function useSwipeTabs(): SwipeTabsHandlers {
 
       // 左へ払ったら次のタブ、右へ払ったら前のタブ
       const href = nextTabHref(
-        tabHrefs(items.map(({ key }) => key)),
-        pathname,
+        tabHrefs(weekOrder(new Date().getDay())),
+        window.location.pathname,
         x < 0 ? 1 : -1,
       );
 

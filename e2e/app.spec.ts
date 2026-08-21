@@ -125,15 +125,16 @@ test.describe("日付の見出し", () => {
     await page.goto("/favorites");
 
     // 見出しは「8/21（金）01:01 更新」の形。日付の部分だけを見る
-    const labels = await page
+    const heading = page
       .locator("main")
       .locator(
         "text=/^[0-9]+\\/[0-9]+（[日月火水木金土]）[0-9]{2}:[0-9]{2} 更新$/",
-      )
-      .allInnerTexts();
+      );
 
-    expect(labels.length).toBeGreaterThan(0);
+    // 登録はブラウザに持たせてあり、見出しは描画後に出てくる。出るまで待つ
+    await expect(heading.first()).toBeVisible();
 
+    const labels = await heading.allInnerTexts();
     const japanese = ["日", "月", "火", "水", "木", "金", "土"];
     const year = Number(
       new Intl.DateTimeFormat("en-CA", {

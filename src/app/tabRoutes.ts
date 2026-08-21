@@ -1,4 +1,4 @@
-import { type Weekday } from "@/types/work";
+import { type Weekday, weekdays } from "@/types/work";
 import { dayHref } from "./days";
 
 export const favoritesHref = "/favorites";
@@ -32,4 +32,12 @@ export function nextTabHref(
   }
 
   return hrefs.at(next);
+}
+
+/** 今日を先頭に、そこから遡って一週間ぶんの曜日を並べる */
+export function weekOrder(today: number): Weekday[] {
+  return Array.from(
+    { length: 7 },
+    (_, back) => weekdays[(today - back + 7) % 7] ?? "sun",
+  );
 }
