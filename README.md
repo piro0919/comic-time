@@ -12,12 +12,11 @@
 - 🔍 Search across every title (`/search`)
 - 👁 Titles opened today are dimmed, so a second visit shows what is left
 - 👆 Touch gestures for mobile
-- 📱 PWA-ready for offline browsing
+- 📱 PWA-ready, installable to the home screen
 
 ## 🛠 Tech Stack
 
 - Next.js + React + TypeScript
-- @serwist/next (PWA)
 - @use-gesture/react
 - @react-spring/web (animations)
 

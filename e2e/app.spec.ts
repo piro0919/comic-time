@@ -27,6 +27,10 @@ test.describe("画面の操作", () => {
     await page.waitForURL(/\/(day\/|favorites)/);
 
     const link = page.locator('aside a[href^="/day/"]').nth(2);
+
+    // 曜日の並びは描画後に今日を先頭へ組み直される。落ち着く前に読むと取り違える
+    await expect(link).toHaveText(/\d+\/\d+（/);
+
     const href = await link.getAttribute("href");
 
     await link.click();

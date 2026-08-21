@@ -31,13 +31,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **Next.js 15 App Router** - Uses the modern App Router with React 19
 - **TypeScript** - Strict TypeScript configuration with explicit return types required
-- **PWA Support** - Configured with Serwist for service worker and PWA functionality
+- **PWA** - Installable via the web app manifest. No service worker: pages are not cached
 - **Theming** - next-themes for light/dark mode support
 - **Internationalization Ready** - Uses next-intl for translations (manifest.ts references)
 
 ### Key Configuration Files
 
-- `next.config.ts` - Next.js configuration with Serwist PWA setup, image optimization disabled
+- `next.config.ts` - Next.js configuration with image optimization disabled
 - `tsconfig.json` - TypeScript config with strict mode, path aliases (`@/*` → `./src/*`)
 - `eslint.config.mjs` - Comprehensive ESLint setup with multiple plugins for code quality
 - `lefthook.yml` - Git hooks for pre-commit linting, formatting, and type checking
@@ -80,5 +80,6 @@ All commits are automatically checked for:
 
 - `src/app/` - Next.js App Router pages and components
 - `src/app/_components/` - Reusable React components
-- Service worker configured for offline functionality
 - PWA manifest for installable web app experience
+- `src/app/sw.js/route.ts` serves a service worker that removes itself. It is only there
+  to clear out the caching one that used to live at the same path
