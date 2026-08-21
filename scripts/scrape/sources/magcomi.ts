@@ -1,4 +1,5 @@
 import { type ParsedWork } from "../../../src/types/work.ts";
+import todayKey from "../date.ts";
 import gigaViewerAtom from "./gigaViewerAtom.ts";
 
 /**
@@ -9,8 +10,10 @@ import gigaViewerAtom from "./gigaViewerAtom.ts";
 const origin = "https://magcomi.com/";
 const excluded = ["1ページ漫画賞「箱庭」"];
 
-export default async function magcomi(): Promise<ParsedWork[]> {
-  const works = await gigaViewerAtom(origin);
+export default async function magcomi(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
+  const works = await gigaViewerAtom(origin, date);
 
   return works.filter((work) => !excluded.includes(work.title));
 }
