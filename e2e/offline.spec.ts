@@ -7,8 +7,8 @@ import { startSlowProxy, waitForServiceWorker } from "./support.ts";
  */
 test.describe("圏外での見え方", () => {
   /**
-   * 圏外にしたことが Service Worker に伝わる間合いに左右される。
-   * 伝わる前に開くと、オフライン画面ではなく元のページに留まる。
+   * 圏外にした直後は、まだ通信が生きているように見えることがある。
+   * その間に開くと控えも無いまま素通りし、元のページに留まる。
    * 開き直しても戻せないので、この束だけ流し直す。
    */
   test.describe.configure({ retries: 2 });
@@ -66,6 +66,33 @@ test.describe("圏外での見え方", () => {
     } finally {
       await proxy.close();
     }
+  });
+
+  test("端末は繋がっていても、サイトへ届かなければオフライン画面を出す", async ({
+    baseURL,
+    browser,
+  }) => {
+    // 手前に1枚挟み、あとで落とす。端末は繋がったまま、サイトだけ届かなくなる
+    const proxy = await startSlowProxy({
+      delayMs: 0,
+      delayPaths: [],
+      target: baseURL ?? "",
+    });
+    const context = await browser.newContext();
+    const page = await context.newPage();
+
+    await page.goto(`${proxy.url}/day/tue`);
+    await waitForServiceWorker(page);
+    await page.goto(`${proxy.url}/day/tue`);
+    await page.waitForTimeout(1000);
+
+    await proxy.close();
+    await page.goto(`${proxy.url}/day/sat`).catch(() => undefined);
+
+    await expect(page).toHaveTitle(/オフライン/, { timeout: 15000 });
+    expect(await page.evaluate(() => navigator.onLine)).toBe(true);
+
+    await context.close();
   });
 
   test("画面の控えと画面内移動の控えは枠を分けてある", async ({ page }) => {
