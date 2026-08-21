@@ -5,6 +5,7 @@ import {
   type PrecacheEntry,
   Serwist,
   type SerwistGlobalConfig,
+  type StrategyHandler,
 } from "serwist";
 
 declare global {
@@ -18,6 +19,41 @@ declare global {
 }
 
 declare const self: ServiceWorkerGlobalScope;
+
+/** 何回目の再試行かに応じて、次を試すまでに待つ時間 */
+const retryDelaysMs = [400, 900];
+
+/**
+ * 一度の失敗で諦めない取得。
+ *
+ * アプリを立ち上げた直後は、まだ通信が使える状態になっていないことがある。
+ * そのとき取得は待たされるのではなく即座に失敗するため、繋がっているのに
+ * オフライン画面が出る。間を置いて試し直せば、その頃には通信が立ち上がっている。
+ *
+ * 長くは粘れない。圏外のまま2秒ほど返さずにいると、ブラウザが画面の移動
+ * そのものを取り消してしまう。最後の試みは1.3秒あたりに置く。
+ */
+class RetryingNetworkFirst extends NetworkFirst {
+  async _handle(request: Request, handler: StrategyHandler): Promise<Response> {
+    let lastError: unknown;
+
+    for (let attempt = 0; attempt <= retryDelaysMs.length; attempt += 1) {
+      if (attempt > 0) {
+        await new Promise((resolve) => {
+          setTimeout(resolve, retryDelaysMs[attempt - 1]);
+        });
+      }
+
+      try {
+        return await super._handle(request, handler);
+      } catch (error) {
+        lastError = error;
+      }
+    }
+
+    throw lastError;
+  }
+}
 
 /** 同一サイトの、API 以外への取得か */
 function isSitePath({
@@ -37,7 +73,7 @@ function isSitePath({
  * 控えは1日で捨てる。前の日の一覧を今日のものとして見せないため。
  */
 const documentCache = {
-  handler: new NetworkFirst({
+  handler: new RetryingNetworkFirst({
     cacheName: "pages",
     networkTimeoutSeconds: 4,
     plugins: [
@@ -60,7 +96,7 @@ const documentCache = {
  * 画面の控えが数ページで押し出されてしまう。
  */
 const rscCache = {
-  handler: new NetworkFirst({
+  handler: new RetryingNetworkFirst({
     cacheName: "rsc",
     networkTimeoutSeconds: 4,
     plugins: [
