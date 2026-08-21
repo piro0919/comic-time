@@ -48,9 +48,9 @@ test("入口はお気に入りと同じ場所として扱う", () => {
   assert.equal(nextTabHref(hrefs, "/", 1), "/day/fri");
 });
 
-test("両端から先へは出ない", () => {
-  assert.equal(nextTabHref(hrefs, "/favorites", -1), undefined);
-  assert.equal(nextTabHref(hrefs, "/sites", 1), undefined);
+test("両端は繋がっていて、お気に入りとサイト一覧は隣り合う", () => {
+  assert.equal(nextTabHref(hrefs, "/favorites", -1), "/sites");
+  assert.equal(nextTabHref(hrefs, "/sites", 1), "/favorites");
 });
 
 test("並びに載っていないページでは動かさない", () => {

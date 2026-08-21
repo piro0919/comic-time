@@ -12,7 +12,8 @@ export function tabHrefs(days: Weekday[]): string[] {
 
 /**
  * スワイプの向きから次に開くページを決める。
- * 並びに載っていないページと、両端から先へ出る向きでは動かさない。
+ * 両端は繋がっていて、お気に入りとサイト一覧は互いの隣になる。
+ * 並びに載っていないページでは動かさない。
  */
 export function nextTabHref(
   hrefs: string[],
@@ -25,13 +26,7 @@ export function nextTabHref(
     return undefined;
   }
 
-  const next = current + direction;
-
-  if (next < 0 || next >= hrefs.length) {
-    return undefined;
-  }
-
-  return hrefs.at(next);
+  return hrefs.at((current + direction + hrefs.length) % hrefs.length);
 }
 
 /** 今日を先頭に、そこから遡って一週間ぶんの曜日を並べる */
