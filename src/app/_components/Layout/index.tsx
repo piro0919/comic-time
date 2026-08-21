@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { type ReactNode } from "react";
 import { Toaster } from "sonner";
 import useShowWindowSize from "use-show-window-size";
+import useSwipeTabs from "@/app/useSwipeTabs";
 import Header from "../Header";
 import MobileNav from "../MobileNav";
 import Sidebar from "../Sidebar";
@@ -15,6 +16,7 @@ export type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps): React.JSX.Element {
   const { resolvedTheme } = useTheme();
+  const swipeTabs = useSwipeTabs();
 
   useShowWindowSize({
     disable: process.env.NODE_ENV === "production",
@@ -28,7 +30,7 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
       options={{ showSpinner: true }}
       shallowRouting={true}
     >
-      <div className={styles.container}>
+      <div className={styles.container} {...swipeTabs}>
         <div className={styles.header}>
           <Header />
           <div className={styles.mobileNav}>
