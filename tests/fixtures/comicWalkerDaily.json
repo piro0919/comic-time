@@ -1,0 +1,361 @@
+{
+  "resources": [
+    {
+      "date": "2026-08-21",
+      "works": [
+        {
+          "code": "KC_019660_S",
+          "id": "019f3bc5-f2a8-7db5-8b44-1f1ca6033d24",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019660/resized/d1dfb52e-602b-4474-83a7-04814fa5a637.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019660/d1dfb52e-602b-4474-83a7-04814fa5a637.jpg",
+          "bookCover": "https://cdn.comic-walker.com/integration/bibliodb/cover-image/prd/image/bw/coverImage_a5fb95a8fd7f4c4282052d127f0b6300.jpg",
+          "title": "悪役令嬢覇王伝　転生したら身長245cm体重210kgの恵体でした。だから無双します",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "comicgene",
+            "name": "コミックジーン",
+            "description": "キミのエンタメ最前線!! 時代をキャッチする高感度コミック誌!!",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018bcc60-455e-7eb5-825f-54cc6be34ccb.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934deb-3479-70c4-8be2-410cab694a7e.jpg",
+            "color": "#00b0ec"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web",
+            "app"
+          ],
+          "isNewSerialization": true,
+          "internal": {
+            "labelNames": [
+              "コミックジーン",
+              "異世界コミック",
+              "for girls",
+              "百合倶楽部"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0196600000200011_E",
+            "title": "第壱話"
+          }
+        },
+        {
+          "code": "KC_019962_S",
+          "id": "019fcc73-7e4e-7398-bf13-315ad4c54ff3",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019962/resized/43f8bf63-8ac0-4d90-824b-ba1900c9665b.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019962/43f8bf63-8ac0-4d90-824b-ba1900c9665b.jpg",
+          "title": "異世界「嘘」ガイド",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "dradrasharp",
+            "name": "ドラドラしゃーぷ#",
+            "description": "web発のカワイく鋭い話題作が見つかる、広がる♡",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018bc8e5-d2f7-7c19-b43f-6ba36242fe45.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934de3-3729-7f03-b7c9-d219a8440736.jpg",
+            "color": "#ffc300"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web",
+            "app"
+          ],
+          "isNewSerialization": true,
+          "internal": {
+            "labelNames": [
+              "ドラドラしゃーぷ#"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0199620000200011_E",
+            "title": "第1話"
+          }
+        },
+        {
+          "code": "KC_019937_S",
+          "id": "019fb1ea-2728-7204-94be-19f58371ece6",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019937/resized/e5e70b9f-5e35-4469-81ce-adc95c7bbb10.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019937/e5e70b9f-5e35-4469-81ce-adc95c7bbb10.jpg",
+          "bookCover": "https://cdn.comic-walker.com/integration/bibliodb/cover-image/prd/image/bw/coverImage_f81895bd68d14690a5c0b1fd7d4b6099.jpg",
+          "title": "さざめとりお",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "kitora",
+            "name": "キトラ",
+            "description": "大マジメに一歩ずつ　発掘系マンガ編集部",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018bc8ca-3a94-7f3d-8f13-2d1beaef7998.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934de0-3f1e-7e94-957f-76b615bc0cd5.jpg",
+            "color": "#00a0ea"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web",
+            "web_trial"
+          ],
+          "isNewSerialization": true,
+          "internal": {
+            "labelNames": [
+              "キトラ",
+              "for girls",
+              "百合倶楽部"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0199370000200011_E",
+            "title": "第1話"
+          }
+        },
+        {
+          "code": "KC_019939_S",
+          "id": "019fb1f8-0f38-708c-bc26-3afd39386bb9",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019939/resized/805fa2b8-82ee-4851-921c-f4f3a86bba98.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019939/805fa2b8-82ee-4851-921c-f4f3a86bba98.jpg",
+          "title": "強制的に転生させられたおじさんは公爵令嬢(極)として生きていく",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "comiccomp-comptiq",
+            "name": "コミックコンプ＆コンプティーク",
+            "description": "ネット世代がチェックしたいデジタルコンテンツを楽しむ人にピッタリなコミックス満載！",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018bcc1b-4c50-7eae-b0ef-e15af9ef5231.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934de6-7d70-7cf4-89e9-f076b93338ff.jpg",
+            "color": "#3c82fe"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "app",
+            "web"
+          ],
+          "isNewSerialization": true,
+          "internal": {
+            "labelNames": [
+              "コミックコンプ＆コンプティーク"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0199390000300011_E",
+            "title": "第2話　おじさん 野営訓練で大いにやらかす①"
+          }
+        },
+        {
+          "code": "KC_019795_S",
+          "id": "019f8929-ac09-7a2e-bc7a-6bf9e7207409",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019795/resized/cd227d16-0b6e-4fb8-bb85-f5d4c2e0fba7.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019795/cd227d16-0b6e-4fb8-bb85-f5d4c2e0fba7.jpg",
+          "title": "キッチン常夜灯",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "comiccomp-comptiq",
+            "name": "コミックコンプ＆コンプティーク",
+            "description": "ネット世代がチェックしたいデジタルコンテンツを楽しむ人にピッタリなコミックス満載！",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018bcc1b-4c50-7eae-b0ef-e15af9ef5231.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934de6-7d70-7cf4-89e9-f076b93338ff.jpg",
+            "color": "#3c82fe"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "app",
+            "web"
+          ],
+          "isNewSerialization": true,
+          "internal": {
+            "labelNames": [
+              "コミックコンプ＆コンプティーク"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0197950000300021_E",
+            "title": "第2話-2"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "works": [
+        {
+          "code": "KC_018417_S",
+          "id": "019edd6e-338c-743a-868c-24b79a6837ff",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/018417/resized/54c03337-962f-4f36-a7ff-d77197d23ad5.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/018417/54c03337-962f-4f36-a7ff-d77197d23ad5.jpg",
+          "title": "魔法科高校の劣等生　奪還編",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "dengekidaioh",
+            "name": "電撃大王",
+            "description": "キングオブコミックが贈る、最高峰のエンターテインメント体験!!",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/0199a3c9-6994-7e67-a281-26fb891ff886.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/019a53b6-ba14-7cc1-89c3-7c680b72e633.jpg",
+            "color": "#ea0606"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web"
+          ],
+          "isNewSerialization": true,
+          "internal": {
+            "labelNames": [
+              "電撃大王"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0184170000200021_E",
+            "title": "第1話　諦めない②"
+          }
+        },
+        {
+          "code": "KC_019473_S",
+          "id": "019f36b4-f3ac-7a5f-af69-17ce3bf0cb69",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019473/resized/c700f5aa-06ca-4166-9cc7-b91ca98a676a.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019473/c700f5aa-06ca-4166-9cc7-b91ca98a676a.jpg",
+          "bookCover": "https://cdn.comic-walker.com/integration/bibliodb/cover-image/prd/image/bw/coverImage_5c18c31cb03b41ba8e5af672bb669bbe.jpg",
+          "title": "夢幻のノエル",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "aokishi",
+            "name": "青騎士",
+            "description": "輝ける、幾つもの、青き騎士たちへ。",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018bc9e6-c202-7c95-9392-3753d65681ec.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934de1-df00-70c2-9016-7693d6fb63da.jpg",
+            "color": "#000685"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web",
+            "web_trial"
+          ],
+          "isNewSerialization": false,
+          "internal": {
+            "labelNames": [
+              "青騎士"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0194730000800011_E",
+            "title": "第6話"
+          }
+        },
+        {
+          "code": "KC_019173_S",
+          "id": "019f032d-81fb-79bd-82ff-182193b6b6de",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019173/resized/ff608118-43ff-4763-87b0-63a6f1f2fd91.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019173/ff608118-43ff-4763-87b0-63a6f1f2fd91.jpg",
+          "title": "捨てられ傭兵は自由気ままに生きたい",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "dradraflat",
+            "name": "ドラドラふらっと♭",
+            "description": "『より早く』『より好みの作品を！』あなたに！ ドラゴンエイジ発、コミカライズオンリーレーベル!!",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018bc8ea-ccce-7c19-bc2d-146467c08e7c.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934de4-374b-7e94-90bf-c7abe06a7cbd.jpg",
+            "color": "#239a3e"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web"
+          ],
+          "isNewSerialization": false,
+          "internal": {
+            "labelNames": [
+              "ドラドラふらっと♭",
+              "異世界コミック"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0191730000300011_E",
+            "title": "第2話①"
+          }
+        },
+        {
+          "code": "KC_019095_S",
+          "id": "019f017f-32d2-73eb-92ba-534c23a39ba2",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019095/resized/29521308-4315-4401-aefb-8a47d1d113c2.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/019095/29521308-4315-4401-aefb-8a47d1d113c2.jpg",
+          "title": "魔法科高校の劣等生　追跡編",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "dengekidaioh",
+            "name": "電撃大王",
+            "description": "キングオブコミックが贈る、最高峰のエンターテインメント体験!!",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/0199a3c9-6994-7e67-a281-26fb891ff886.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/019a53b6-ba14-7cc1-89c3-7c680b72e633.jpg",
+            "color": "#ea0606"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web"
+          ],
+          "isNewSerialization": false,
+          "internal": {
+            "labelNames": [
+              "電撃大王"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0190950000300011_E",
+            "title": "第2話　幽体離脱①-2"
+          }
+        },
+        {
+          "code": "KC_008657_S",
+          "id": "019d42a4-1706-7ff0-9a40-8c9f53b22426",
+          "thumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/008657/resized/d301f8b8-5742-4091-b2e3-84ca0598faef.jpg",
+          "originalThumbnail": "https://cdn.comic-walker.com/integration/cdpf/resources/008657/d301f8b8-5742-4091-b2e3-84ca0598faef.jpg",
+          "title": "地味令嬢、しごでき皇妃になる! 契約婚のはずなのに冷血皇帝に溺愛されています",
+          "isOriginal": false,
+          "labelInfo": {
+            "code": "flos",
+            "name": "FLOS COMIC",
+            "description": "まだ見ぬ世界で夢のような生活を！ファンタジックな日々を毎週お届けします。",
+            "iconImageUrl": "https://cdn.comic-walker.com/library/assets/018c4301-f65a-7c68-8f9d-6b412edf03a6.jpg",
+            "logoImageUrl": "https://cdn.comic-walker.com/library/assets/01934dd6-7dfb-7e8f-8f85-d13381f9c701.jpg",
+            "color": "#728cc7"
+          },
+          "language": "ja",
+          "serializationStatus": "ongoing",
+          "serviceIds": [
+            "web",
+            "app"
+          ],
+          "isNewSerialization": false,
+          "internal": {
+            "labelNames": [
+              "FLOS COMIC",
+              "for girls"
+            ]
+          },
+          "isNew": true,
+          "episode": {
+            "type": "latest",
+            "code": "KC_0086570000300031_E",
+            "title": "第2話③"
+          }
+        }
+      ]
+    }
+  ]
+}

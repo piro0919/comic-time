@@ -9,11 +9,13 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://pocket.shonenmagazine.com/";
 
-export default async function magazinePocket(): Promise<ParsedWork[]> {
+export default async function magazinePocket(
+  date = todayKey(),
+): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
   const section = $("#todayUpdated");
   const shown = section.find(".p-index-update__date").first().text().trim();
-  const [, month, day] = todayKey().split("-");
+  const [, month, day] = date.split("-");
 
   if (shown !== `${month}/${day}`) {
     throw new Error(`見出しの日付が今日ではない: ${shown}`);
