@@ -6,6 +6,13 @@ import { startSlowProxy, waitForServiceWorker } from "./support.ts";
  * 本番でオフライン画面を出した経緯がある。
  */
 test.describe("圏外での見え方", () => {
+  /**
+   * 圏外にしたことが Service Worker に伝わる間合いに左右される。
+   * 伝わる前に開くと、オフライン画面ではなく元のページに留まる。
+   * 開き直しても戻せないので、この束だけ流し直す。
+   */
+  test.describe.configure({ retries: 2 });
+
   test("一度開いたページは圏外でも控えから出る", async ({ context, page }) => {
     await page.goto("/day/tue");
     await waitForServiceWorker(page);
