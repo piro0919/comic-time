@@ -15,9 +15,9 @@
   display: none;
 }
 
+/* 帯に7日ぶんを収めたいので、間は詰める。押す幅は各項目の余白で保つ */
 .list {
   display: flex;
-  gap: var(--space-2);
 }
 
 .item {
