@@ -12,6 +12,9 @@ _static
 favicon.ico
 *.png
 
+# 取得したページをそのまま置いたもの。整形すると実物と変わってしまう
+tests/fixtures
+
 # Configs & deps
 node_modules
 package-lock.json

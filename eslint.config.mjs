@@ -257,6 +257,13 @@ const eslintConfig = [
     },
   },
   {
+    // 検査のファイルは <名前>.test.ts で揃える
+    files: ["tests/**/*.ts"],
+    rules: {
+      "filenames/match-regex": "off",
+    },
+  },
+  {
     // 通し確認のファイルは <名前>.spec.ts で揃える。属性の値に " を含むため引用符も緩める
     files: ["e2e/**/*.ts"],
     rules: {

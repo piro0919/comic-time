@@ -16,6 +16,8 @@ pre-commit:
       glob: "**/*.css"
       run: npx stylelint --fix {staged_files}
       stage_fixed: true
+    test:
+      run: npm test
     typescript:
       run: npx tsc --noEmit
 commit-msg:
