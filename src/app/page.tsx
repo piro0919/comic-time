@@ -20,7 +20,8 @@ function todayInJapan(): Weekday {
 
 export function generateMetadata(): Metadata {
   return pageMetadata({
-    description: "登録した作品のうち、この一週間で更新されたものをまとめます。",
+    description:
+      "お気に入りに追加した作品のうち、過去 7 日間に更新されたものを表示します。",
     path: "/",
   });
 }

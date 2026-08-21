@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./style.module.css";
 
 export const metadata: Metadata = {
-  description: "通信が切れているときに出る画面です。",
+  description: "インターネットに接続されていないときに表示されるページです。",
   robots: { follow: false, index: false },
   title: "オフライン",
 };
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 export default function Page(): React.JSX.Element {
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>つながっていません</h2>
+      <h2 className={styles.heading}>インターネットに接続されていません</h2>
       <p className={styles.description}>
-        このページはまだ端末に控えていないため、いま出せません。
-        電波の届く場所でもう一度開いてください。
+        このページは保存されていないため、オフラインでは表示できません。
+        接続を確認してから、もう一度お試しください。
       </p>
       <Link className={styles.button} href="/">
-        もう一度試す
+        再試行
       </Link>
     </div>
   );

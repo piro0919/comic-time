@@ -9,7 +9,7 @@ export const revalidate = 3600;
 export function generateMetadata(): Metadata {
   return pageMetadata({
     description:
-      "ComicTimeが更新を追いかけているWeb漫画サイトの一覧です。サイトごとの更新曜日と更新時刻をまとめています。",
+      "ComicTime が更新を追跡している Web 漫画サイトの一覧です。サイトごとの更新曜日と更新時刻を掲載しています。",
     path: "/sites",
     title: "サイト一覧",
   });

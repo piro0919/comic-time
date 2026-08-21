@@ -14,9 +14,7 @@ test.describe("お気に入りの受け渡し", () => {
     await from.goto(`${baseURL}/day/tue`);
     await from.waitForTimeout(800);
 
-    const stars = from.locator(
-      'main button[aria-label$="をお気に入りに入れる"]',
-    );
+    const stars = from.locator('main button[aria-label$="をお気に入りに追加"]');
     const count = Math.min(5, await stars.count());
 
     test.skip(count === 0, "その日の更新が無いので登録できない");
@@ -45,11 +43,11 @@ test.describe("お気に入りの受け渡し", () => {
 
     await to.goto(link);
     await expect(
-      to.getByText(`${count}件のお気に入りを受信しました`),
+      to.getByText(`${count} 件のお気に入りを受信しました`),
     ).toBeVisible();
 
-    await to.getByRole("button", { name: "追加" }).click();
-    await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
+    await to.getByRole("button", { exact: true, name: "追加" }).click();
+    await expect(to.getByText(`${count} 件を追加しました`)).toBeVisible();
     await expect(to).toHaveURL(/\/favorites/);
 
     const stored = await to.evaluate(
@@ -77,9 +75,7 @@ test.describe("お気に入りの受け渡し", () => {
     await from.goto(`${baseURL}/day/wed`);
     await from.waitForTimeout(800);
 
-    const stars = from.locator(
-      'main button[aria-label$="をお気に入りに入れる"]',
-    );
+    const stars = from.locator('main button[aria-label$="をお気に入りに追加"]');
     const count = Math.min(3, await stars.count());
 
     test.skip(count === 0, "その日の更新が無いので登録できない");
@@ -111,10 +107,10 @@ test.describe("お気に入りの受け渡し", () => {
     await to.getByRole("textbox", { name: "受信したリンク" }).fill(link);
     await to.getByRole("button", { name: "取り込む" }).click();
     await expect(
-      to.getByText(`${count}件のお気に入りを受信しました`),
+      to.getByText(`${count} 件のお気に入りを受信しました`),
     ).toBeVisible();
-    await to.getByRole("button", { name: "追加" }).click();
-    await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
+    await to.getByRole("button", { exact: true, name: "追加" }).click();
+    await expect(to.getByText(`${count} 件を追加しました`)).toBeVisible();
     // パネルは閉じ、見ていた画面はそのまま
     await expect(
       to.getByRole("textbox", { name: "受信したリンク" }),

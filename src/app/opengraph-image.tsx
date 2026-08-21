@@ -10,7 +10,7 @@ export const size = { height: 630, width: 1200 };
 export const contentType = "image/png";
 
 const TITLE = "ComicTime";
-const DESCRIPTION = "Web漫画サイトの更新曜日と時間を一覧でチェックできます。";
+const DESCRIPTION = "Web 漫画サイトの更新曜日と更新時刻を一覧で確認できます。";
 const DOMAIN = "comictime.kkweb.io";
 /** アイコンと同じ地色。globals.css ではなくアイコン側に合わせる */
 const BACKGROUND = "#87CBFC";

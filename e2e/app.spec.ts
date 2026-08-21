@@ -42,7 +42,7 @@ test.describe("画面の操作", () => {
     await page.goto("/");
     await page.waitForURL(/\/(day\/|favorites)/);
 
-    const toggle = page.getByRole("button", { name: /配色にする/ });
+    const toggle = page.getByRole("button", { name: /モードに切り替え/ });
 
     await toggle.click();
     await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
@@ -103,7 +103,7 @@ test.describe("日付の見出し", () => {
       await page.goto(`/day/${weekday}`);
 
       const stars = page.locator(
-        'main button[aria-label$="をお気に入りに入れる"]',
+        'main button[aria-label$="をお気に入りに追加"]',
       );
       const count = Math.min(2, await stars.count());
 

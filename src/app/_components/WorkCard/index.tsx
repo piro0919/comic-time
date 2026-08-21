@@ -105,6 +105,9 @@ export default function WorkCard({
         target="_blank"
       />
       <button
+        aria-label={
+          added ? `${title}をお気に入りから削除` : `${title}をお気に入りに追加`
+        }
         onClick={() => {
           // 外すときは静かに消す。祝うのは入れたときだけ
           if (!added) {
@@ -113,7 +116,6 @@ export default function WorkCard({
 
           favorites.toggleWork(workKey, legacyKeys);
         }}
-        aria-label={`${title}をお気に入りに入れる`}
         className={styles.cardStar}
         type="button"
       >

@@ -27,7 +27,7 @@ export async function generateMetadata({
   const time = site.updateTime === "" ? "" : `${site.updateTime}に`;
 
   return pageMetadata({
-    description: `${site.name}の更新曜日は${updateDayLabel(site.updateDay)}。${time}更新されます。この一週間に更新された作品をまとめています。`,
+    description: `${site.name}の更新曜日は${updateDayLabel(site.updateDay)}。${time}更新されます。過去 7 日間に更新された作品を表示します。`,
     path: `/sites/${slug}`,
     title: `${site.name}の更新曜日と最新話`,
   });

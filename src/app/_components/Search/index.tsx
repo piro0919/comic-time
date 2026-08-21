@@ -63,7 +63,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
             setKeyword(e.target.value);
           }}
           className={styles.input}
-          placeholder="作品名・作者名・サイト名で探す"
+          placeholder="作品名、作者名、サイト名で検索"
           type="search"
           value={keyword}
         />
@@ -79,8 +79,8 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
       </div>
       <p className={styles.count}>
         {found.length === 0
-          ? `${works.length}作品から探せます`
-          : `${found.length}件`}
+          ? `${works.length} 件の作品から検索できます`
+          : `${found.length} 件`}
       </p>
       <ul className={styles.list}>
         {found.slice(0, 200).map(([title, url, siteIndex, dayBits]) => (
@@ -123,13 +123,14 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
       </ul>
       {found.length > 200 ? (
         <p className={styles.count}>
-          先頭200件を表示しています。絞り込むと残りが出ます。
+          上位 200
+          件を表示しています。検索条件を絞り込むと、ほかの結果が表示されます。
         </p>
       ) : null}
       {found.length === 0 && onlyFavorite ? (
         <p className={styles.count}>
-          お気に入りはまだありません。作品名で検索して星を付けると、
-          {dayLabel("mon")}などの曜日ページに出るようになります。
+          お気に入りがまだありません。作品を検索して星を選択すると、
+          {dayLabel("mon")}などの曜日別ページに表示されます。
         </p>
       ) : null}
     </div>

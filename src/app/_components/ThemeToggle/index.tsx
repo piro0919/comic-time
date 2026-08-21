@@ -53,7 +53,7 @@ export default function ThemeToggle(): null | React.JSX.Element {
       onClick={() => {
         setTheme(isDark ? "light" : "dark");
       }}
-      aria-label={isDark ? "明るい配色にする" : "暗い配色にする"}
+      aria-label={isDark ? "ライトモードに切り替え" : "ダークモードに切り替え"}
       className={styles.button}
       type="button"
     >

@@ -26,7 +26,7 @@ export function generateMetadata(): Metadata {
   const APP_DEFAULT_TITLE = "ComicTime";
   const APP_TITLE_TEMPLATE = "%s - ComicTime";
   const APP_DESCRIPTION =
-    "毎日更新されるWeb漫画サイトの更新曜日・時間を一覧でチェックできるサービスです。";
+    "毎日更新される Web 漫画サイトの更新曜日と更新時刻を一覧で確認できます。";
 
   return {
     appleWebApp: {

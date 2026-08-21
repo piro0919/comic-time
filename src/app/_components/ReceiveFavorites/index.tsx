@@ -97,7 +97,9 @@ export default function ReceiveFavorites({
 
     favorites.replaceAll(next);
     toast.success(
-      keepExisting ? `${count}件を追加しました` : `${count}件に置き換えました`,
+      keepExisting
+        ? `${count} 件を追加しました`
+        : `${count} 件に置き換えました`,
     );
 
     if (onDone !== undefined) {
@@ -139,7 +141,7 @@ export default function ReceiveFavorites({
 
     return (
       <div className={styles.container}>
-        <p className={styles.note}>{received}件のお気に入りを受信しました。</p>
+        <p className={styles.note}>{received} 件のお気に入りを受信しました。</p>
         <div className={styles.actions}>
           <button
             onClick={() => {

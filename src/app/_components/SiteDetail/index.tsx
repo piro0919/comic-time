@@ -24,7 +24,7 @@ export default function SiteDetail({
         <h1 className={styles.title}>{site.name}</h1>
       </header>
       {days.length === 0 ? (
-        <p className={styles.empty}>この一週間の更新はまだありません。</p>
+        <p className={styles.empty}>過去 7 日間の更新はありません。</p>
       ) : (
         days.map((day, dayIndex) => (
           <section className={styles.section} key={day.date}>

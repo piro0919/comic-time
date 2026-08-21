@@ -21,7 +21,7 @@ export async function generateMetadata({
   const label = dayLabel(day as Weekday);
 
   return pageMetadata({
-    description: `${label}に更新されたWeb漫画の一覧です。`,
+    description: `${label}に更新された Web 漫画の一覧です。`,
     path: `/day/${day}`,
     title: `${label}の更新`,
   });

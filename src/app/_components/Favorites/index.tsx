@@ -111,8 +111,8 @@ export default function Favorites({
         <h1 className="visually-hidden">お気に入り</h1>
         <p className={styles.empty}>
           {favorites.workUrls.length === 0
-            ? "お気に入り登録した作品が、ここに表示されます。"
-            : "この一週間、更新はありません。"}
+            ? "お気に入りに追加した作品がここに表示されます。"
+            : "過去 7 日間に更新はありません。"}
         </p>
       </div>
     );
@@ -146,7 +146,7 @@ export default function Favorites({
       {hasDormant ? (
         <section className={styles.section}>
           <div className={styles.batchHead}>
-            <span className={styles.batchLabel}>7日以内の更新なし</span>
+            <span className={styles.batchLabel}>過去 7 日間に更新なし</span>
             <span className={styles.batchLine} />
           </div>
           <ul className={styles.dormant}>
@@ -157,7 +157,7 @@ export default function Favorites({
                   onClick={() => {
                     favorites.toggleWork(work.key, []);
                   }}
-                  aria-label={`${work.title}をお気に入りから外す`}
+                  aria-label={`${work.title}をお気に入りから削除`}
                   className={styles.dormantStar}
                   type="button"
                 >

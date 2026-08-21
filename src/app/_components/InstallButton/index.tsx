@@ -68,9 +68,9 @@ export default function InstallButton(): null | React.JSX.Element {
                 setIsGuideShown(false);
               }}
               appIconPath="/apple-icon.png"
-              copyAddToHomeScreenStep="2) 「ホーム画面に追加」をタップします。"
-              copyDescription="このウェブサイトにはアプリ機能があります。ホーム画面に追加してフルスクリーンおよびオフラインで使用できます。"
-              copyShareStep="1) （四角から矢印が飛び出したマーク）をタップします。"
+              copyAddToHomeScreenStep="2. [ホーム画面に追加] をタップします。"
+              copyDescription="このサイトはアプリとして使用できます。ホーム画面に追加すると、全画面表示やオフラインでの利用が可能になります。"
+              copyShareStep="1. 共有アイコン（四角から矢印が出たアイコン）をタップします。"
               copyTitle="ホーム画面に追加"
               delay={100}
               isShown={isGuideShown}

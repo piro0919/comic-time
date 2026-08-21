@@ -5,7 +5,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     // 起動時の画面。アイコンの地色と合わせる
     background_color: "#88CBFB",
     description:
-      "毎日更新されるWeb漫画サイトの更新曜日・時間を一覧でチェックできるサービスです。",
+      "毎日更新される Web 漫画サイトの更新曜日と更新時刻を一覧で確認できます。",
     display: "standalone",
     icons: [
       {

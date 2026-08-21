@@ -4,7 +4,7 @@ import pageMetadata from "../pageMetadata";
 import searchIndex from "../searchIndex";
 
 export const metadata: Metadata = pageMetadata({
-  description: "追いかけたい作品を探して、お気に入りに登録できます。",
+  description: "作品を検索して、お気に入りに追加できます。",
   path: "/search",
   title: "作品を探す",
 });
