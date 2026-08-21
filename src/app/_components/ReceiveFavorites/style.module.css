@@ -1,0 +1,68 @@
+.container {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: center;
+  width: 100%;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.primary {
+  align-items: center;
+  background: var(--highlight);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 700;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+}
+
+.secondary {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: var(--space-2) var(--space-4);
+}
+
+.secondary:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--surface);
+}
+
+/* 貼り付けの欄。狭いところでは縦に積む */
+.paste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  width: 100%;
+}
+
+.input {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  flex: 1 1 12em;
+  font-size: 1.3rem;
+  min-width: 0;
+  padding: var(--space-2) var(--space-4);
+}

@@ -11,61 +11,8 @@
   font-weight: 700;
 }
 
-.description {
-  color: var(--muted);
-  font-size: 1.4rem;
-  line-height: 1.7;
-  max-width: 32em;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  justify-content: center;
-}
-
-.button {
-  align-items: center;
-  background: var(--highlight);
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  display: flex;
-  font-size: 1.4rem;
-  font-weight: 700;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-5);
-}
-
-.secondary {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  font-size: 1.4rem;
-  padding: var(--space-2) var(--space-5);
-}
-
-/* 貼り付けの欄。狭い画面では縦に積む */
-.paste {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  justify-content: center;
-  max-width: 32em;
+/* 受け取りの中身。モーダルと同じ幅に収める */
+.body {
+  max-width: 340px;
   width: 100%;
-}
-
-.input {
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  flex: 1 1 16em;
-  font-size: 1.4rem;
-  min-width: 0;
-  padding: var(--space-2) var(--space-4);
-}
-
-.secondary:disabled {
-  cursor: default;
-  opacity: 0.35;
 }

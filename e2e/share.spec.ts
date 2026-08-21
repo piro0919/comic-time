@@ -43,9 +43,9 @@ test.describe("お気に入りの受け渡し", () => {
     const to = await receiver.newPage();
 
     await to.goto(link);
-    await expect(to.getByText("お気に入りを共有")).toBeVisible();
+    await expect(to.getByText(`${count}件を受け取りました`)).toBeVisible();
 
-    await to.getByRole("button", { name: `${count}件を追加` }).click();
+    await to.getByRole("button", { name: "今の登録に追加" }).click();
     await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
     await expect(to).toHaveURL(/\/favorites/);
 
@@ -62,7 +62,7 @@ test.describe("お気に入りの受け渡し", () => {
     await receiver.close();
   });
 
-  test("渡されたリンクを、アプリの中に貼り付けて受け取れる", async ({
+  test("渡されたリンクを、共有のパネルの中で受け取れる", async ({
     baseURL,
     browser,
   }) => {
@@ -97,15 +97,25 @@ test.describe("お気に入りの受け渡し", () => {
 
     await sender.close();
 
-    // 受け取る側。カメラアプリを通さず、取り込みの画面へ貼る
+    // 受け取る側。カメラアプリも画面遷移も通さず、同じパネルの中で終える
     const receiver = await browser.newContext();
     const to = await receiver.newPage();
 
-    await to.goto(`${baseURL}/import`);
+    await to.goto(`${baseURL}/day/tue`);
+    await to.getByRole("button", { name: /別の端末とやり取り/ }).click();
+    await to
+      .getByRole("combobox", { name: "渡すか受け取るかを選ぶ" })
+      .selectOption("receive");
     await to.getByRole("textbox", { name: "渡されたリンク" }).fill(link);
     await to.getByRole("button", { exact: true, name: "読み取る" }).click();
-    await to.getByRole("button", { name: `${count}件を追加` }).click();
-    await expect(to).toHaveURL(/\/favorites/);
+    await expect(to.getByText(`${count}件を受け取りました`)).toBeVisible();
+    await to.getByRole("button", { name: "今の登録に追加" }).click();
+    await expect(to.getByText(`${count}件を追加しました`)).toBeVisible();
+    // パネルは閉じ、見ていた画面はそのまま
+    await expect(
+      to.getByRole("combobox", { name: "渡すか受け取るかを選ぶ" }),
+    ).toBeHidden();
+    await expect(to).toHaveURL(/\/day\/tue/);
 
     const stored = await to.evaluate(
       () =>
@@ -120,16 +130,23 @@ test.describe("お気に入りの受け渡し", () => {
     await receiver.close();
   });
 
-  test("登録が無いうちは、渡せないと伝えて受け取りだけを出す", async ({
+  test("登録が無いうちは、受け取る側を開いて出す", async ({
     baseURL,
     page,
   }) => {
     await page.goto(`${baseURL}/`);
     await page.getByRole("button", { name: /別の端末とやり取り/ }).click();
-    await expect(page.getByText("渡せる登録がまだありません")).toBeVisible();
+
+    const mode = page.getByRole("combobox", { name: "渡すか受け取るかを選ぶ" });
+
+    await expect(mode).toHaveValue("receive");
     await expect(
-      page.getByRole("link", { name: "別の端末から受け取る" }),
+      page.getByRole("textbox", { name: "渡されたリンク" }),
     ).toBeVisible();
+
+    // 渡す側へ回せば、渡せない理由が出る
+    await mode.selectOption("send");
+    await expect(page.getByText("渡せる登録がまだありません")).toBeVisible();
   });
 
   test("壊れたリンクは読み取れないと伝える", async ({ baseURL, page }) => {

@@ -100,18 +100,13 @@
   background: var(--surface);
 }
 
-/* 受け取る側への入口。渡す中身と混ざらないよう、線で区切る */
-.receive {
-  align-items: center;
-  border-top: 1px solid var(--border);
-  color: var(--foreground);
-  display: flex;
+/* 渡す側と受け取る側の切り替え。パネルの中で完結させる */
+.mode {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
   font-size: 1.3rem;
-  gap: var(--space-2);
-  justify-content: center;
-  padding-top: var(--space-4);
-}
-
-.receive:hover {
-  text-decoration: underline;
+  padding: var(--space-2) var(--space-4);
+  width: 100%;
 }
