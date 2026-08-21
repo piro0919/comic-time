@@ -21,7 +21,8 @@ const maxQrLength = 900;
 type Link = {
   long: string;
   short: null | string;
-  tooLongToShorten: boolean;
+  /** 短縮を頼んでいる最中。返るまでQRの可否は決まらない */
+  shortening: boolean;
 };
 
 /**
@@ -42,12 +43,12 @@ export default function ShareFavorites(): null | React.JSX.Element {
     const long = `${location.origin}/import#${await encodeFavorites(shared)}`;
 
     if (long.length > maxShortenableLength) {
-      setLink({ long, short: null, tooLongToShorten: true });
+      setLink({ long, short: null, shortening: false });
 
       return;
     }
 
-    setLink({ long, short: null, tooLongToShorten: false });
+    setLink({ long, short: null, shortening: true });
 
     const response = await fetch("/api/share", {
       body: JSON.stringify({ url: long }),
@@ -64,7 +65,7 @@ export default function ShareFavorites(): null | React.JSX.Element {
     setLink({
       long,
       short: typeof result?.shortUrl === "string" ? result.shortUrl : null,
-      tooLongToShorten: false,
+      shortening: false,
     });
   }, [favorites.siteUrls, favorites.workUrls]);
 
@@ -82,9 +83,14 @@ export default function ShareFavorites(): null | React.JSX.Element {
     setCopied(label);
     setTimeout(() => setCopied(null), 1600);
   };
+  /*
+   * 短縮が返るまではQRを出さない。長い方で描いてから短い方へ描き直すと、
+   * 読み取っている最中に絵柄が変わる。
+   */
   const qrValue =
-    link?.short ??
-    (link !== null && link.long.length <= maxQrLength ? link.long : null);
+    link === null || link.shortening
+      ? null
+      : (link.short ?? (link.long.length <= maxQrLength ? link.long : null));
 
   return (
     <>
@@ -135,12 +141,15 @@ export default function ShareFavorites(): null | React.JSX.Element {
                   </button>
                 </div>
                 {link === null ? (
-                  <p className={styles.note}>用意しています…</p>
+                  <p className={styles.note}>作成中です…</p>
                 ) : (
                   <>
                     {qrValue === null ? (
+                      /* 短縮が返るまでQRの可否は決まらない。先に断らない */
                       <p className={styles.note}>
-                        登録が多いため、QRは出せません。下のリンクを送ってください。
+                        {link.shortening
+                          ? "作成中です…"
+                          : "登録が多いため、QRは出せません。下のリンクを送ってください。"}
                       </p>
                     ) : (
                       <div className={styles.qr}>
@@ -153,9 +162,11 @@ export default function ShareFavorites(): null | React.JSX.Element {
                           void copy(link.short ?? "", "short");
                         }}
                         title={
-                          link.short === null
-                            ? "登録が多いか、短縮できなかったため使えません"
-                            : "短い方のリンクをコピーする"
+                          link.shortening
+                            ? "短縮リンクを作成しています"
+                            : link.short === null
+                              ? "登録が多いか、短縮できなかったため使えません"
+                              : "短い方のリンクをコピーする"
                         }
                         className={styles.copy}
                         disabled={link.short === null}
