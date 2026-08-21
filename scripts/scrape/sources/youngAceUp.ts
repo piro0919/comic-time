@@ -24,7 +24,15 @@ export default async function youngAceUp(
 
   section.find(".label-top-update__item").each((_, el) => {
     const item = $(el);
-    const title = item.find(".item-ttl").first().text().trim();
+    const image = item.find("img").first();
+    /**
+     * 一覧の見出しは13文字で切られ、末尾に「...」が付く。切られた題名のままだと、
+     * 同じ作品がカドコミにも載っていることが分からず、どのサイトのぶんかの印が出ない。
+     * 絵の alt には省略前の題名が入っているので、そちらを先に見る。
+     */
+    const fullTitle = (image.attr("alt") ?? "").trim();
+    const shownTitle = item.find(".item-ttl").first().text().trim();
+    const title = fullTitle === "" ? shownTitle : fullTitle;
     const href = item.find("a[href]").first().attr("href");
 
     if (title === "" || href === undefined || seen.has(title)) {
@@ -33,7 +41,6 @@ export default async function youngAceUp(
 
     seen.add(title);
 
-    const image = item.find("img").first();
     const thumbnail = image.attr("data-src") ?? image.attr("src");
 
     works.push({
