@@ -41,6 +41,15 @@ test("住所は作品の符号から組み立てる", async () => {
   });
 });
 
+/** 作品ページの各話一覧は古い順で先頭の数話しか出ない。最新話は符号から作る */
+test("最新話まで開く住所を返す", async () => {
+  const works = await comicWalker("2026-08-21");
+
+  works.forEach((work) => {
+    assert.match(work.url, /\/episodes\/KC_\w+_E$/);
+  });
+});
+
 test("取れなかったときは例外にする", async () => {
   const outer = globalThis.fetch;
 

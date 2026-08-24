@@ -29,6 +29,19 @@ test("配信日が合わない日は空になる", async () => {
   assert.deepEqual(works, []);
 });
 
+/** トップに埋まっている各話の一覧から、その作品の最新話を引く */
+test("最新話まで開く住所を返す", async () => {
+  const works = await shuro("2026-08-21");
+
+  assert.deepEqual(
+    works.map((work) => work.url),
+    [
+      "https://shuro.world/episode/145607/",
+      "https://shuro.world/episode/145689/",
+    ],
+  );
+});
+
 test("住所は絶対URLで返る", async () => {
   const works = await shuro("2026-08-21");
 

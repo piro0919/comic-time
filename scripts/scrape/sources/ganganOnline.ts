@@ -4,48 +4,72 @@ import fetchHtml from "../fetchHtml.ts";
 
 /**
  * ガンガンONLINEのトップには「今日の更新作品」の節がある。
- * クラス名にビルドごとのハッシュが付くので、前方一致で拾う。
+ * 画面に出ている札には作品への道しかないが、__NEXT_DATA__ の同じ節には
+ * 話の番号まで入っているので、そちらから最新話の住所を組み立てる。
  */
 const topUrl = "https://www.ganganonline.com/";
 const heading = "今日の更新作品";
 
+type NextData = {
+  props: {
+    pageProps: {
+      data: {
+        sections: {
+          titleSection?: {
+            header?: string;
+            titles: {
+              chapterId?: null | number;
+              header: string;
+              imageUrl?: null | string;
+              titleId: number;
+            }[];
+          };
+        }[];
+      };
+    };
+  };
+};
+
 export default async function ganganOnline(): Promise<ParsedWork[]> {
   const $ = cheerio.load(await fetchHtml(topUrl));
-  const section = $("[class*='GridSectionTemplate_contents']")
-    .filter((_, el) =>
-      $(el)
-        .find("[class*='SectionHeader_container__header']")
-        .first()
-        .text()
-        .includes(heading),
-    )
-    .first();
+  const embedded = $("#__NEXT_DATA__").first().text();
 
-  if (section.length === 0) {
+  if (embedded === "") {
+    throw new Error("__NEXT_DATA__ が見つからない");
+  }
+
+  const sections = (JSON.parse(embedded) as NextData).props.pageProps.data
+    .sections;
+  const section = sections.find(
+    (entry) => entry.titleSection?.header === heading,
+  )?.titleSection;
+
+  if (section === undefined) {
     throw new Error(`「${heading}」の節が見つからない`);
   }
 
   const works: ParsedWork[] = [];
   const seen = new Set<string>();
 
-  section.find("[class*='TitleCard_container']").each((_, el) => {
-    const item = $(el);
-    const title = item.find("[class*='TitleCard_name']").first().text().trim();
-    const href = item.find("a[href]").first().attr("href");
-
-    if (title === "" || href === undefined || seen.has(title)) {
+  section.titles.forEach((title) => {
+    if (title.header === "" || seen.has(title.header)) {
       return;
     }
 
-    seen.add(title);
+    seen.add(title.header);
 
-    const thumbnail = item.find("img").first().attr("src");
+    const workUrl = `${topUrl}title/${title.titleId}`;
 
     works.push({
       thumbnailUrl:
-        thumbnail === undefined ? null : new URL(thumbnail, topUrl).toString(),
-      title,
-      url: new URL(href, topUrl).toString(),
+        title.imageUrl == null
+          ? null
+          : new URL(title.imageUrl, topUrl).toString(),
+      title: title.header,
+      url:
+        title.chapterId == null
+          ? workUrl
+          : `${workUrl}/chapter/${title.chapterId}`,
     });
   });
 
