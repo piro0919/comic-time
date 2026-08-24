@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { type SiteEntry, type Work } from "../../src/types/work.ts";
 import todayKey from "./date.ts";
+import { remember } from "./resolveEpisodes.ts";
 import sources from "./sources/index.ts";
 
 /**
@@ -33,6 +34,10 @@ export default async function scrape(): Promise<void> {
   const filePath = path.join(dataDir, `${today}.json`);
   const previous = await readJson<Work[]>(filePath, []);
   const found = new Map(previous.map((work) => [work.url, work.foundAt]));
+
+  // 同じ日に一度調べた最新話は、作品ページを見に行かずにそのまま使う
+  remember(previous);
+
   const now = new Intl.DateTimeFormat("ja-JP", {
     hour: "2-digit",
     hour12: false,
@@ -66,6 +71,7 @@ export default async function scrape(): Promise<void> {
           thumbnailUrl: work.thumbnailUrl,
           title: work.title,
           url: work.url,
+          ...(work.workUrl === undefined ? {} : { workUrl: work.workUrl }),
         })),
       );
 

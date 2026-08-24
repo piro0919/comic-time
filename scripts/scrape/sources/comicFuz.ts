@@ -1,8 +1,8 @@
 import * as cheerio from "cheerio";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import fetchHtml from "../fetchHtml.ts";
-import mapLimited from "../mapLimited.ts";
 import { readFields, stringOf } from "../protobuf.ts";
+import resolveEpisodes from "../resolveEpisodes.ts";
 
 /**
  * COMIC FUZ は protobuf でやり取りする API を使う。
@@ -102,11 +102,9 @@ export default async function comicFuz(): Promise<ParsedWork[]> {
     .filter((work) => work !== null);
 
   // 話の番号は作品ページにしか無いので、1作品につき1枚見に行く
-  return mapLimited(works, async (work) => {
-    const chapterId = await latestChapterId(work.url);
+  return resolveEpisodes(works, async (workUrl) => {
+    const chapterId = await latestChapterId(workUrl);
 
-    return chapterId === null
-      ? work
-      : { ...work, url: `${viewerOrigin}/${chapterId}` };
+    return chapterId === null ? null : `${viewerOrigin}/${chapterId}`;
   });
 }

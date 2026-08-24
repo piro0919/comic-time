@@ -2,7 +2,7 @@ import * as cheerio from "cheerio";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import todayKey from "../date.ts";
 import fetchHtml from "../fetchHtml.ts";
-import mapLimited from "../mapLimited.ts";
+import resolveEpisodes from "../resolveEpisodes.ts";
 
 /**
  * COMICメテオはきら星ポータルの中のレーベルで、
@@ -76,9 +76,5 @@ export default async function comicMeteor(
     });
 
   // 話の番号は作品ページにしか無いので、1作品につき1枚見に行く
-  return mapLimited(works, async (work) => {
-    const episode = await latestEpisode(work.url);
-
-    return episode === null ? work : { ...work, url: episode };
-  });
+  return resolveEpisodes(works, latestEpisode);
 }

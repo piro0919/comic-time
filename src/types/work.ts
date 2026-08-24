@@ -29,6 +29,8 @@ export type Work = {
   thumbnailUrl: null | string;
   title: string;
   url: string;
+  /** url が最新話を指すとき、その話が載っている作品ページ。同じ日の次の回で使い回す */
+  workUrl?: string;
 };
 
 /** 一覧ページやAPIから拾った直後の作品。サイト名などは後で足す */
@@ -36,6 +38,8 @@ export type ParsedWork = {
   thumbnailUrl: null | string;
   title: string;
   url: string;
+  /** url が最新話を指すとき、その話が載っている作品ページ */
+  workUrl?: string;
 };
 
 /**
