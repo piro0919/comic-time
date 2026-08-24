@@ -42,35 +42,51 @@
   height: 1px;
 }
 
-/* 休眠中の登録。絵は持っていないので、名前だけの行にする */
+/*
+ * 休眠中の登録。絵は持っていないので名前だけになるが、1行ずつ並べると
+ * 横に間延びする。上の一覧と同じ列で並べて、名前だけの札にする。
+ */
+
 .dormant {
   display: grid;
-  gap: var(--space-1);
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  @media (width >= 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  }
 }
 
 .dormantItem {
   align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-1);
   display: flex;
-  gap: var(--space-2);
+  gap: var(--space-1);
   min-width: 0;
-  padding: var(--space-2) var(--space-2) var(--space-2) 0;
+  padding: var(--space-2);
 }
 
 .dormantItem:hover {
-  background: var(--surface);
+  border-color: var(--muted);
 }
 
 .dormantTitle {
+  -webkit-box-orient: vertical;
   color: var(--muted);
+  display: -webkit-box;
   font-size: 1.3rem;
+  -webkit-line-clamp: 2;
+  line-height: 1.4;
+
+  /* 1行の題名でも札の高さを揃える */
+  min-height: calc(1.3rem * 1.4 * 2);
   min-width: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-/* 押せることが分かる大きさを取る。行の右端に寄せる */
+/* 押せることが分かる大きさを取る。札の右端に寄せる */
 .dormantStar {
   align-items: center;
   display: flex;
