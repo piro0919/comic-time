@@ -6,7 +6,10 @@ import { serve } from "./serve.ts";
 let served = serve({});
 
 before(() => {
-  served = serve({ "yanmaga.jp": "yanmaga.html" });
+  served = serve({
+    "yanmaga.jp": "yanmaga.html",
+    "yanmaga.jp/comics/": "yanmagaComic.html",
+  });
 });
 
 after(() => {
@@ -35,6 +38,18 @@ test("区画が見つからなければ例外にする", async () => {
   } finally {
     globalThis.fetch = outer;
   }
+});
+
+/** 一覧に話への道は無い。作品ページの「最新話を読む」を辿る */
+test("最新話まで開く住所を返す", async () => {
+  const works = await yanmaga();
+
+  works.forEach((work) => {
+    assert.equal(
+      decodeURI(work.url),
+      "https://yanmaga.jp/comics/雪と墨/0732aa91d04f0fb540f9fe7de183991c",
+    );
+  });
 });
 
 test("住所は絶対URLで返る", async () => {

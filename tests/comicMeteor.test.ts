@@ -6,7 +6,11 @@ import { serve } from "./serve.ts";
 let served = serve({});
 
 before(() => {
-  served = serve({ "kirapo.jp": "comicMeteor.html" });
+  served = serve({
+    "/titles/": "comicMeteorTitle.html",
+    "/titles/prebl": "comicMeteorOneshot.html",
+    "kirapo.jp": "comicMeteor.html",
+  });
 });
 
 after(() => {
@@ -33,6 +37,31 @@ test("月だけが合う日は取らない", async () => {
   const works = await comicMeteor("2026-08-01");
 
   assert.deepEqual(works, []);
+});
+
+/** 一覧に話への道は無い。作品ページの「最新話を読む」を辿る */
+test("最新話まで開く住所を返す", async () => {
+  const works = await comicMeteor("2026-08-19");
+  const latest = works.find(
+    (work) =>
+      work.title === "一番街でつかまえて～14歳から始めるぼったくりキャッチ～",
+  );
+
+  assert.equal(
+    latest?.url,
+    "https://kirapo.jp/pt/meteor/aroundforty/2022793/viewer",
+  );
+});
+
+/** 読み切りには「最新話を読む」が無く、読む道が1つだけ置かれる */
+test("読み切りはその1つを返す", async () => {
+  const works = await comicMeteor("2026-08-19");
+  const oneshot = works.find((work) => work.title === "魔法少女は黒に染まる");
+
+  assert.equal(
+    oneshot?.url,
+    "https://kirapo.jp/pt/meteor/prebl/2022886/viewer",
+  );
 });
 
 test("住所は絶対URLで返る", async () => {

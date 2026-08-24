@@ -9,10 +9,25 @@ import fetchHtml from "../fetchHtml.ts";
  *
  * 対象は「人気作品」より上の2区画だけにする。
  * それより下には完結作品や休載中のものが並ぶ。
+ *
+ * 一覧にも作品ページにも「最新話」の道は無い。作品ページのバックナンバーが
+ * 新しい順に並ぶので、その先頭を最新話とする。
  */
 const topUrl = "https://sai-zen-sen.jp/comics/twi4/";
 const sectionSelector =
   "#lineup_latest > .section-body > section, #lineup_recent > .section-body > section";
+
+/** 作品ページのバックナンバーの先頭。読み取れなければ null にして、その作品だけ作品ページに戻す */
+async function latestEpisode(workUrl: string): Promise<null | string> {
+  try {
+    const $ = cheerio.load(await fetchHtml(workUrl));
+    const href = $("#backnumbers a[href]").first().attr("href");
+
+    return href === undefined ? null : new URL(href, workUrl).toString();
+  } catch {
+    return null;
+  }
+}
 
 /** 日本時間の今の「時×60＋分」と曜日 */
 function nowInTokyo(): { minutes: number; weekday: string } {
@@ -83,5 +98,12 @@ export default async function twi4(): Promise<ParsedWork[]> {
     });
   });
 
-  return works;
+  // 話への道は作品ページにしか無いので、1作品につき1枚見に行く
+  return Promise.all(
+    works.map(async (work) => {
+      const episode = await latestEpisode(work.url);
+
+      return episode === null ? work : { ...work, url: episode };
+    }),
+  );
 }

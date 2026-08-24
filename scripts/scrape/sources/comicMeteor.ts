@@ -7,8 +7,27 @@ import fetchHtml from "../fetchHtml.ts";
  * COMICメテオはきら星ポータルの中のレーベルで、
  * 掲載日ごとの見出しと作品の並びが交互に置かれている。
  * 見出しは月と日が別々の要素に入る。
+ *
+ * 一覧に話への道は無いが、作品ページに「最新話を読む」の道が出ている。
+ * 読み切りにはその道が無く、代わりに「読み切りを読む」が1つだけ置かれる。
  */
 const topUrl = "https://kirapo.jp/meteor";
+
+/** 作品ページの「最新話を読む」。読み取れなければ null にして、その作品だけ作品ページに戻す */
+async function latestEpisode(workUrl: string): Promise<null | string> {
+  try {
+    const $ = cheerio.load(await fetchHtml(workUrl));
+    const links = $("a.episode-read");
+    const latest = links.filter((_, el) => $(el).text().includes("最新話"));
+    const chosen =
+      latest.length > 0 ? latest : links.length === 1 ? links : null;
+    const href = chosen?.first().attr("href");
+
+    return href === undefined ? null : new URL(href, topUrl).toString();
+  } catch {
+    return null;
+  }
+}
 
 export default async function comicMeteor(
   date = todayKey(),
@@ -55,5 +74,12 @@ export default async function comicMeteor(
       });
     });
 
-  return works;
+  // 話の番号は作品ページにしか無いので、1作品につき1枚見に行く
+  return Promise.all(
+    works.map(async (work) => {
+      const episode = await latestEpisode(work.url);
+
+      return episode === null ? work : { ...work, url: episode };
+    }),
+  );
 }

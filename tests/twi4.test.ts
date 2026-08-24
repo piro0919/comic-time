@@ -1,6 +1,20 @@
 import assert from "node:assert/strict";
-import { test } from "node:test";
-import { isUpdated } from "../scripts/scrape/sources/twi4.ts";
+import { after, before, test } from "node:test";
+import twi4, { isUpdated } from "../scripts/scrape/sources/twi4.ts";
+import { serve } from "./serve.ts";
+
+let served = serve({});
+
+before(() => {
+  served = serve({
+    "/comics/twi4/": "twi4Top.html",
+    "/comics/twi4/yojouhan/": "twi4Work.html",
+  });
+});
+
+after(() => {
+  served.restore();
+});
 
 /** ツイ４は更新日を出していないので、作品ごとの決まりと今の時刻から判じる */
 const at = (
@@ -35,4 +49,24 @@ test("決まりが読み取れないものは出さない", () => {
   assert.equal(isUpdated("不定期更新", at(23, 59, "金")), false);
   assert.equal(isUpdated("毎日更新", at(23, 59, "金")), false);
   assert.equal(isUpdated("", at(23, 59, "金")), false);
+});
+
+/** 完結した作品は一覧に残るが、更新はもう無い */
+test("完結した作品は出さない", async () => {
+  const works = await twi4();
+
+  assert.deepEqual(
+    works.map((work) => work.title),
+    ["悪役令嬢の四畳半"],
+  );
+});
+
+/** 一覧にも作品ページにも最新話の道は無い。バックナンバーの先頭が最新話 */
+test("最新話まで開く住所を返す", async () => {
+  const works = await twi4();
+
+  assert.equal(
+    works[0].url,
+    "https://sai-zen-sen.jp/comics/twi4/yojouhan/0507.html",
+  );
 });
