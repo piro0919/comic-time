@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import fetchHtml from "../fetchHtml.ts";
+import mapLimited from "../mapLimited.ts";
 import { readFields, stringOf } from "../protobuf.ts";
 
 /**
@@ -101,13 +102,11 @@ export default async function comicFuz(): Promise<ParsedWork[]> {
     .filter((work) => work !== null);
 
   // 話の番号は作品ページにしか無いので、1作品につき1枚見に行く
-  return Promise.all(
-    works.map(async (work) => {
-      const chapterId = await latestChapterId(work.url);
+  return mapLimited(works, async (work) => {
+    const chapterId = await latestChapterId(work.url);
 
-      return chapterId === null
-        ? work
-        : { ...work, url: `${viewerOrigin}/${chapterId}` };
-    }),
-  );
+    return chapterId === null
+      ? work
+      : { ...work, url: `${viewerOrigin}/${chapterId}` };
+  });
 }

@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import fetchHtml from "../fetchHtml.ts";
+import mapLimited from "../mapLimited.ts";
 
 /**
  * comici で作られたサイトは、曜日別の連載一覧を更新順に並べ、
@@ -96,11 +97,9 @@ export default async function comici(
   }
 
   // 話の番号は作品ページにしか無いので、1作品につき1枚見に行く
-  return Promise.all(
-    works.map(async (work) => {
-      const episode = await latestEpisode(work.url, origin);
+  return mapLimited(works, async (work) => {
+    const episode = await latestEpisode(work.url, origin);
 
-      return episode === null ? work : { ...work, url: episode };
-    }),
-  );
+    return episode === null ? work : { ...work, url: episode };
+  });
 }

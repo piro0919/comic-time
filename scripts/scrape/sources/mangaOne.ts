@@ -1,6 +1,7 @@
 import { type ParsedWork } from "../../../src/types/work.ts";
 import todayKey from "../date.ts";
 import fetchHtml from "../fetchHtml.ts";
+import mapLimited from "../mapLimited.ts";
 import { readFields, stringOf } from "../protobuf.ts";
 
 /**
@@ -106,11 +107,9 @@ export default async function mangaOne(
     });
 
   // 順位表に載っていない作品は、作品ページを1枚ずつ見に行く
-  return Promise.all(
-    works.map(async (work) =>
-      work.thumbnailUrl === null
-        ? { ...work, thumbnailUrl: await thumbnailFromPage(work.url) }
-        : work,
-    ),
+  return mapLimited(works, async (work) =>
+    work.thumbnailUrl === null
+      ? { ...work, thumbnailUrl: await thumbnailFromPage(work.url) }
+      : work,
   );
 }

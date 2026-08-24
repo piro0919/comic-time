@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import fetchHtml from "../fetchHtml.ts";
+import mapLimited from "../mapLimited.ts";
 
 /**
  * ヤンマガWebのトップには今日の更新が「マンガ」「記事」の区画に分かれて並ぶ。
@@ -68,11 +69,9 @@ export default async function yanmaga(): Promise<ParsedWork[]> {
   });
 
   // 話への道は作品ページにしか無いので、1作品につき1枚見に行く
-  return Promise.all(
-    works.map(async (work) => {
-      const episode = await latestEpisode(work.url);
+  return mapLimited(works, async (work) => {
+    const episode = await latestEpisode(work.url);
 
-      return episode === null ? work : { ...work, url: episode };
-    }),
-  );
+    return episode === null ? work : { ...work, url: episode };
+  });
 }

@@ -14,9 +14,14 @@ export function serve(pages: Record<string, string>): {
 
     asked.push(url);
 
-    const file = Object.entries(pages).find(([part]) =>
-      url.includes(part),
-    )?.[1];
+    /**
+     * 並びに頼らず、当てはまるうちで一番長い鍵を採る。
+     * 鍵は書いた順ではなく名前順に並べ替えられるので、
+     * 「/titles/」と「/titles/prebl」のような重なりを順番で表せない。
+     */
+    const file = Object.entries(pages)
+      .filter(([part]) => url.includes(part))
+      .sort(([left], [right]) => right.length - left.length)[0]?.[1];
 
     if (file === undefined) {
       return new Response("", { status: 404 });

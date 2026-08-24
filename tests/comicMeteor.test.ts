@@ -7,9 +7,9 @@ let served = serve({});
 
 before(() => {
   served = serve({
-    "/titles/": "comicMeteorTitle.html",
-    "/titles/prebl": "comicMeteorOneshot.html",
-    "kirapo.jp": "comicMeteor.html",
+    "kirapo.jp/meteor": "comicMeteor.html",
+    "kirapo.jp/meteor/titles/": "comicMeteorTitle.html",
+    "kirapo.jp/meteor/titles/prebl": "comicMeteorOneshot.html",
   });
 });
 
