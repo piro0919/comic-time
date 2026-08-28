@@ -6,11 +6,14 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import useFavorites from "@/app/useFavorites";
 import useOpened from "@/app/useOpened";
 import { type CardSite } from "@/app/workCards";
+import { type DateKey } from "@/types/work";
 import styles from "./style.module.css";
 
 export type WorkCardProps = {
   /** 複数サイトに載っている作品だけ、どのサイトのぶんかを印で出す */
   badge: CardSite | null;
+  /** このカードが並んでいる日。既読はこの日のぶんとして見る */
+  date: DateKey;
   /** 昔の形での登録。見つけたら今の見出しに移す */
   legacyKeys: string[];
   /** 最初の画面に映る位置なら true。読み込みを後回しにしない */
@@ -28,6 +31,7 @@ const sparks = [0, 1, 2, 3, 4, 5];
 /** 作品1枚ぶん。星を押すとお気に入りに入る */
 export default function WorkCard({
   badge,
+  date,
   legacyKeys,
   priority = false,
   thumbnailUrl,
@@ -57,7 +61,7 @@ export default function WorkCard({
     }
   }, [added, rememberTitle, title, workKey]);
 
-  const read = opened.isOpened(legacyKeys);
+  const read = opened.isOpened(url, date);
   /**
    * 押すたびに数を進め、key を変えて描き直させる。
    * こうしないと2回目以降は同じ要素のままで、animation が始まらない。
@@ -95,8 +99,7 @@ export default function WorkCard({
       {/* カード全体を覆うリンク。押す場所を絵と題の両方にする */}
       <a
         onClick={() => {
-          // 同じ回が複数サイトにあるなら、まとめて既読にする
-          opened.markOpened(legacyKeys);
+          opened.markOpened(url);
         }}
         aria-label={title}
         className={styles.cardLink}

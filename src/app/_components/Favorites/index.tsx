@@ -4,13 +4,14 @@ import { FaStar } from "react-icons/fa";
 import { type CrossSites } from "@/app/crossSiteWorks";
 import useFavorites from "@/app/useFavorites";
 import workCards, { type WorkCard as Card } from "@/app/workCards";
-import { type Work } from "@/types/work";
+import { type DateKey, type Work } from "@/types/work";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
 export type FavoritesProps = {
   crossSites: CrossSites;
   days: {
+    date: DateKey;
     /** 「8/17（月）」の形 */
     label: string;
     works: Work[];
@@ -20,6 +21,8 @@ export type FavoritesProps = {
 /** 同じ日の同じ回に見つかった作品のかたまり */
 type Batch = {
   cards: Card[];
+  /** その回が並んでいる日 */
+  date: DateKey;
   /** 「8/17（月）01:01」の形 */
   label: string;
 };
@@ -57,7 +60,7 @@ export default function Favorites({
             return;
           }
 
-          result.push({ cards: [card], label });
+          result.push({ cards: [card], date: day.date, label });
         });
     });
 
@@ -131,6 +134,7 @@ export default function Favorites({
             {batch.cards.map((card, cardIndex) => (
               <WorkCard
                 badge={card.badge}
+                date={batch.date}
                 key={card.url}
                 legacyKeys={card.legacyKeys}
                 priority={batchIndex === 0 && cardIndex < 6}

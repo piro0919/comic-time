@@ -5,7 +5,7 @@ import App from "../../_components/App";
 import crossSiteWorks from "../../crossSiteWorks";
 import { dayLabel } from "../../days";
 import pageMetadata from "../../pageMetadata";
-import worksOfDay, { dayKeys } from "../../worksOfDay";
+import worksOfDay, { dayKeys, recentDateOf } from "../../worksOfDay";
 
 export type PageProps = {
   params: Promise<{ day: string }>;
@@ -43,6 +43,7 @@ export default async function Page({
   return (
     <App
       crossSites={crossSiteWorks()}
+      date={recentDateOf(day as Weekday)}
       day={day as Weekday}
       works={worksOfDay(day as Weekday)}
     />

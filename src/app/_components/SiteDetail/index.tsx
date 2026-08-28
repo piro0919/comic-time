@@ -36,6 +36,7 @@ export default function SiteDetail({
               {workCards(day.works, crossSites).map((card, cardIndex) => (
                 <WorkCard
                   badge={card.badge}
+                  date={day.date}
                   key={card.url}
                   legacyKeys={card.legacyKeys}
                   priority={dayIndex === 0 && cardIndex < 6}

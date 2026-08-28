@@ -6,7 +6,7 @@ import { useMemo } from "react";
 import { type CrossSites } from "@/app/crossSiteWorks";
 import { dayHref, dayLabel, days } from "@/app/days";
 import workCards, { type WorkCard as Card } from "@/app/workCards";
-import { type Weekday, type Work } from "@/types/work";
+import { type DateKey, type Weekday, type Work } from "@/types/work";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
@@ -24,12 +24,15 @@ type Batch = {
 
 export type AppProps = {
   crossSites: CrossSites;
+  /** この曜日ぶんとして出している日。既読の判断に使う */
+  date: DateKey;
   day: Weekday;
   works: Work[];
 };
 
 export default function App({
   crossSites,
+  date,
   day,
   works,
 }: AppProps): React.JSX.Element {
@@ -95,6 +98,7 @@ export default function App({
             {batch.cards.map((card, cardIndex) => (
               <WorkCard
                 badge={card.badge}
+                date={date}
                 key={card.url}
                 legacyKeys={card.legacyKeys}
                 priority={batchIndex === 0 && cardIndex < 6}

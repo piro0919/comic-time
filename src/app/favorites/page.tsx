@@ -16,6 +16,7 @@ export const revalidate = 3600;
 
 export default function Page(): React.JSX.Element {
   const days = recentWorks().map((day) => ({
+    date: day.date,
     label: dateLabel(day.date),
     works: day.works,
   }));
