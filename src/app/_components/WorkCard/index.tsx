@@ -2,7 +2,7 @@
 import { track } from "@vercel/analytics";
 import clsx from "clsx";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import rankingEventName from "@/app/rankingEventName";
 import useFavorites from "@/app/useFavorites";
@@ -70,6 +70,11 @@ export default function WorkCard({
   }, [added, rememberTitle, title, workKey]);
 
   const read = opened.isOpened(url, date);
+  /*
+   * ランキングへ送ったかどうか。既読の記録は localStorage 越しで、
+   * 速く二度押すと read が古いままになる。この画面にいる間はここで止める。
+   */
+  const counted = useRef(false);
   /**
    * 押すたびに数を進め、key を変えて描き直させる。
    * こうしないと2回目以降は同じ要素のままで、animation が始まらない。
@@ -116,8 +121,17 @@ export default function WorkCard({
       {/* カード全体を覆うリンク。押す場所を絵と題の両方にする */}
       <a
         onClick={() => {
+          const first = !read && !counted.current;
+
           opened.markOpened(url);
-          // ランキングの元になる数。押した回だけ送る
+
+          if (!first) {
+            return;
+          }
+
+          counted.current = true;
+
+          // ランキングの元になる数。1人が同じ回を何度押しても1つ
           track(rankingEventName, { title });
 
           /*
