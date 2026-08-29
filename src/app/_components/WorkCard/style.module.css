@@ -239,9 +239,13 @@
   position: absolute;
 }
 
-/* 単位。数より一段小さく、少し引いた白にする */
+/*
+ * 単位。既定は数と同じ大きさで、表彰台の3つだけ置く側から一段下げる。
+ * あちらは札が大きく、単位まで大きいと数が主役に見えないため。
+ */
+
 .countUnit {
-  font-size: 0.78em;
+  font-size: var(--rank-unit, 1em);
   font-weight: 700;
   opacity: 0.85;
 }

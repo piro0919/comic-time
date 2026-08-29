@@ -42,6 +42,7 @@
 /* 表彰台の3つは、views の札も一回り大きくする */
 .seat {
   --rank-size: 1.2rem;
+  --rank-unit: 0.78em;
 
   @media (width >= 768px) {
     --rank-size: 1.4rem;
