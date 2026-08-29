@@ -18,8 +18,13 @@ const apiUrl = "https://api.vercel.com/v1/query/web-analytics/events/aggregate";
 const projectId = "prj_3MBib48G63tzuA8iguQStNi7zzhr";
 const teamId = "team_tIxzTwttTmEQTeqpsmsJgXNV";
 const dayMs = 24 * 60 * 60 * 1000;
-/** 画面に出す上限。これ以上は数が小さすぎて順位の意味が薄い */
-const limit = 20;
+/** 画面に出す上限 */
+const limit = 50;
+/**
+ * 一度に引ける題名の数。API の上限がここ。
+ * 一覧から消えた作品はこのあと落とすので、出す数より多めに取っておく。
+ */
+const fetchLimit = 100;
 
 /** 作り直す間隔。ページの revalidate と揃える */
 export const pageRevalidate = 21600;
@@ -80,7 +85,7 @@ async function openCounts(since: Date, until: Date): Promise<EventRow[]> {
   const query = new URLSearchParams({
     by: "eventData/title",
     filter: `eventName eq '${rankingEventName}'`,
-    limit: String(limit * 2),
+    limit: String(fetchLimit),
     projectId,
     since: since.toISOString(),
     teamId,
