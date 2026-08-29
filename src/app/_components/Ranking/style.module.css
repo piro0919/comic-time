@@ -48,10 +48,13 @@
   }
 }
 
-/* 1位は金。狭い画面では上に一枚で敷き、広い画面では真ん中へ回す */
+/*
+ * 1位は金。狭い画面では上に一枚で敷き、広い画面では真ん中へ回す。
+ * 地は濃いめに取る。明るい金だと白い字が乗らず、字を黒くする羽目になる。
+ */
+
 .first {
-  --rank-plate: linear-gradient(160deg, #ffd977, #e0a919);
-  --rank-color: #402d00;
+  --rank-plate: linear-gradient(160deg, #d3a01a, #9c7000);
   grid-column: 1 / -1;
 
   @media (width >= 768px) {
@@ -62,8 +65,7 @@
 }
 
 .second {
-  --rank-plate: linear-gradient(160deg, #e7e7ec, #b3b3bd);
-  --rank-color: #2b2b31;
+  --rank-plate: linear-gradient(160deg, #90909d, #666671);
 
   @media (width >= 768px) {
     order: 1;
@@ -71,8 +73,7 @@
 }
 
 .third {
-  --rank-plate: linear-gradient(160deg, #e5a877, #b8703a);
-  --rank-color: #3a1d05;
+  --rank-plate: linear-gradient(160deg, #b0703a, #85491f);
 
   @media (width >= 768px) {
     order: 3;

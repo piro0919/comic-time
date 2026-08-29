@@ -91,7 +91,11 @@ export default function WorkCard({
         />
         {count === undefined ? null : (
           <span className={styles.count}>
-            {`${count} ${count === 1 ? "view" : "views"}`}
+            {count}
+            {/* 主役は数。単位は添えるだけなので、一段小さく置く */}
+            <span className={styles.countUnit}>
+              {count === 1 ? "view" : "views"}
+            </span>
           </span>
         )}
         {badge === null ? null : (
