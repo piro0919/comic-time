@@ -165,7 +165,11 @@ export function totalsByTitle(rows: EventRow[]): Map<string, number> {
   for (const row of rows) {
     const title = row[titleColumn];
 
-    if (title === null || title === "") {
+    /*
+     * 文字列以外はすべて捨てる。鍵の名前を読み違えたとき、ここが undefined に
+     * なり、ビルドの途中で落ちた。数が減るだけで済むようにしておく。
+     */
+    if (typeof title !== "string" || title === "") {
       continue;
     }
 

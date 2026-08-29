@@ -58,6 +58,12 @@ test("題名の無いイベントは数えない", () => {
   assert.equal(totalsByTitle([row(null, 9), row("", 4)]).size, 0);
 });
 
+test("鍵が見つからない行が来ても落ちない", () => {
+  const broken = [{ count: 5, visitors: 5 }] as unknown as EventRow[];
+
+  assert.equal(totalsByTitle(broken).size, 0);
+});
+
 test("同じ回数なら同じ順位で、次はその件数ぶん飛ばす", () => {
   const rows = ranked([
     work("あ", 10),
