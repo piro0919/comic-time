@@ -85,6 +85,7 @@
   },
   "private": true,
   "scripts": {
+    "analytics": "node scripts/analytics/index.ts",
     "build": "next build",
     "dev": "next dev --turbopack",
     "lefthook": "npx lefthook run pre-commit",
