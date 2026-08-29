@@ -215,23 +215,24 @@
 }
 
 /*
- * ランキングのときだけ出る順位。星と重ならないよう左上に置く。
+ * ランキングのときだけ出る、開かれた回数。星と重ならないよう左上に置く。
  * 看板の絵は題字が焼き込まれていて明るいものが多い。薄く敷くと沈むので、
- * 地はしっかり暗くする。
+ * 地はしっかり暗くする。表彰台の3つは、置く側から色と大きさを変える。
  */
 
-.rank {
+.count {
   align-items: center;
-  background: rgb(0 0 0 / 78%);
+  background: var(--rank-plate, rgb(0 0 0 / 78%));
   border-radius: var(--radius-1);
-  color: #fff;
+  box-shadow: var(--shadow-1);
+  color: var(--rank-color, #fff);
   display: flex;
-  font-size: 1.5rem;
+  font-size: var(--rank-size, 1.2rem);
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   inset: var(--space-1) auto auto var(--space-1);
-  justify-content: center;
-  min-width: 26px;
-  padding: 2px var(--space-1);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding: var(--space-1) 6px;
   position: absolute;
 }

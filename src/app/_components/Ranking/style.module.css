@@ -23,7 +23,63 @@
   line-height: 1.6;
 }
 
-/* 曜日の一覧と同じ並び。カードの見え方を揃える */
+/*
+ * 表彰台。狭い画面では1位を全幅に敷き、2位と3位をその下へ並べる。
+ * 広い画面では横一列にして、真ん中の1位だけ枠を大きく取る。
+ */
+
+.podium {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr 1fr;
+
+  @media (width >= 768px) {
+    align-items: end;
+    grid-template-columns: 1fr 1.4fr 1fr;
+  }
+}
+
+/* 表彰台の3つは、views の札も一回り大きくする */
+.seat {
+  --rank-size: 1.2rem;
+
+  @media (width >= 768px) {
+    --rank-size: 1.4rem;
+  }
+}
+
+/* 1位は金。狭い画面では上に一枚で敷き、広い画面では真ん中へ回す */
+.first {
+  --rank-plate: linear-gradient(160deg, #ffd977, #e0a919);
+  --rank-color: #402d00;
+  grid-column: 1 / -1;
+
+  @media (width >= 768px) {
+    --rank-size: 3.2rem;
+    grid-column: auto;
+    order: 2;
+  }
+}
+
+.second {
+  --rank-plate: linear-gradient(160deg, #e7e7ec, #b3b3bd);
+  --rank-color: #2b2b31;
+
+  @media (width >= 768px) {
+    order: 1;
+  }
+}
+
+.third {
+  --rank-plate: linear-gradient(160deg, #e5a877, #b8703a);
+  --rank-color: #3a1d05;
+
+  @media (width >= 768px) {
+    order: 3;
+  }
+}
+
+/* 4位から下は曜日の一覧と同じ並び */
 .grid {
   display: grid;
   gap: var(--space-3);

@@ -14,14 +14,16 @@ import styles from "./style.module.css";
 export type WorkCardProps = {
   /** 複数サイトに載っている作品だけ、どのサイトのぶんかを印で出す */
   badge: CardSite | null;
+  /** 置く側から大きさや順位の色を変えるためのクラス */
+  className?: string;
+  /** ランキングに並べるときだけ、絵の左上に開かれた回数を出す */
+  count?: number;
   /** このカードが並んでいる日。既読はこの日のぶんとして見る */
   date: DateKey;
   /** 昔の形での登録。見つけたら今の見出しに移す */
   legacyKeys: string[];
   /** 最初の画面に映る位置なら true。読み込みを後回しにしない */
   priority?: boolean;
-  /** ランキングに並べるときだけ、絵の左上に順位を出す */
-  rank?: number;
   thumbnailUrl: null | string;
   title: string;
   url: string;
@@ -35,10 +37,11 @@ const sparks = [0, 1, 2, 3, 4, 5];
 /** 作品1枚ぶん。星を押すとお気に入りに入る */
 export default function WorkCard({
   badge,
+  className,
+  count,
   date,
   legacyKeys,
   priority = false,
-  rank,
   thumbnailUrl,
   title,
   url,
@@ -76,7 +79,7 @@ export default function WorkCard({
   const celebrating = burst > 0 && added;
 
   return (
-    <li className={clsx(styles.card, read && styles.isOpened)}>
+    <li className={clsx(styles.card, read && styles.isOpened, className)}>
       <div className={styles.cover}>
         <Image
           alt=""
@@ -86,8 +89,10 @@ export default function WorkCard({
           sizes="(width < 768px) 45vw, 220px"
           src={thumbnailUrl ?? "/no-image.png"}
         />
-        {rank === undefined ? null : (
-          <span className={styles.rank}>{rank}</span>
+        {count === undefined ? null : (
+          <span className={styles.count}>
+            {`${count} ${count === 1 ? "view" : "views"}`}
+          </span>
         )}
         {badge === null ? null : (
           // 同じ作品が複数サイトにあるときだけ、どこのぶんかを出す
