@@ -1,5 +1,4 @@
 "use client";
-import clsx from "clsx";
 import { type CrossSites } from "@/app/crossSiteWorks";
 import workCards from "@/app/workCards";
 import { type RankedWork } from "@/app/workRanking";
@@ -8,6 +7,8 @@ import styles from "./style.module.css";
 
 export type RankingProps = {
   crossSites: CrossSites;
+  /** 数えた期間。「8/23（日） 〜 8/29（土）」の形 */
+  period: string;
   works: RankedWork[];
 };
 
@@ -18,6 +19,7 @@ const podiumStyles = [styles.first, styles.second, styles.third];
 
 export default function Ranking({
   crossSites,
+  period,
   works,
 }: RankingProps): React.JSX.Element {
   const cards = works.flatMap((ranked, index) => {
@@ -32,7 +34,7 @@ export default function Ranking({
     <div className={styles.container}>
       <header className={styles.head}>
         <h1 className={styles.title}>ランキング</h1>
-        <p className={styles.note}>直近1週間で開かれた回数の多い作品です。</p>
+        <p className={styles.note}>{period}</p>
       </header>
       {cards.length === 0 ? (
         <p className={styles.note}>
@@ -44,7 +46,7 @@ export default function Ranking({
           {podium.map((card) => (
             <WorkCard
               badge={card.badge}
-              className={clsx(styles.seat, podiumStyles[card.index])}
+              className={podiumStyles[card.index]}
               count={card.ranked.count}
               date={card.ranked.date}
               key={card.url}

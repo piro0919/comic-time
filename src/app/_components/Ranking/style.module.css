@@ -7,9 +7,14 @@
     var(--space-6);
 }
 
+/* 見出しと期間を同じ行に。狭くて入らないときだけ折り返す */
 .head {
-  display: grid;
-  gap: var(--space-2);
+  align-items: baseline;
+  column-gap: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: var(--space-1);
 }
 
 .title {
@@ -39,16 +44,6 @@
   }
 }
 
-/* 表彰台の3つは、views の札も一回り大きくする */
-.seat {
-  --rank-size: 1.2rem;
-  --rank-unit: 0.78em;
-
-  @media (width >= 768px) {
-    --rank-size: 1.4rem;
-  }
-}
-
 /*
  * 1位は金。狭い画面では上に一枚で敷き、広い画面では真ん中へ回す。
  * 地は濃いめに取る。明るい金だと白い字が乗らず、字を黒くする羽目になる。
@@ -56,10 +51,10 @@
 
 .first {
   --rank-plate: linear-gradient(160deg, #d3a01a, #9c7000);
+  --rank-scale: 1.5;
   grid-column: 1 / -1;
 
   @media (width >= 768px) {
-    --rank-size: 3.2rem;
     grid-column: auto;
     order: 2;
   }
@@ -67,6 +62,7 @@
 
 .second {
   --rank-plate: linear-gradient(160deg, #90909d, #666671);
+  --rank-scale: 1.25;
 
   @media (width >= 768px) {
     order: 1;
@@ -75,6 +71,7 @@
 
 .third {
   --rank-plate: linear-gradient(160deg, #b0703a, #85491f);
+  --rank-scale: 1.1;
 
   @media (width >= 768px) {
     order: 3;

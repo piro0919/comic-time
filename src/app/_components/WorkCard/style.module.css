@@ -217,8 +217,8 @@
 /*
  * ランキングのときだけ出る、開かれた回数。星と重ならないよう左上に置く。
  * 看板の絵は題字が焼き込まれていて明るいものが多い。薄く敷くと沈むので、
- * 地はしっかり暗くする。表彰台の3つは、置く側から地の色と大きさを変える。
- * 字はどこでも白。地を濃く保つのは、そのため。
+ * 地はしっかり暗くする。表彰台の3つだけ、置く側から地の色と、
+ * 上ほど大きくなる倍率を渡してくる。字はどこでも白。
  */
 
 .count {
@@ -228,7 +228,7 @@
   box-shadow: var(--shadow-1);
   color: #fff;
   display: flex;
-  font-size: var(--rank-size, 1.2rem);
+  font-size: calc(1.2rem * var(--rank-scale, 1));
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   gap: 3px;
@@ -239,13 +239,8 @@
   position: absolute;
 }
 
-/*
- * 単位。既定は数と同じ大きさで、表彰台の3つだけ置く側から一段下げる。
- * あちらは札が大きく、単位まで大きいと数が主役に見えないため。
- */
-
+/* 単位。主役は数なので、少しだけ引いた白にする */
 .countUnit {
-  font-size: var(--rank-unit, 1em);
   font-weight: 700;
   opacity: 0.85;
 }

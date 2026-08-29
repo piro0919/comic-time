@@ -2,7 +2,7 @@ import { type DateKey, type Work } from "@/types/work";
 import { isLocal, readLocalOpens } from "./localOpens";
 import rankingEventName from "./rankingEventName";
 import { titleKey } from "./workCards";
-import { recentWorks } from "./worksOfDay";
+import { dateLabel, recentWorks } from "./worksOfDay";
 
 /**
  * 直近1週間で開かれた回数の多い作品。
@@ -22,7 +22,7 @@ const dayMs = 24 * 60 * 60 * 1000;
 const limit = 20;
 
 /** 作り直す間隔。ページの revalidate と揃える */
-export const pageRevalidate = 3600;
+export const pageRevalidate = 21600;
 
 export type RankedWork = {
   /** 開かれた回数 */
@@ -34,6 +34,23 @@ export type RankedWork = {
   /** いちばん新しく見つかった回。カードは曜日の一覧と同じものを出す */
   work: Work;
 };
+
+/**
+ * 数えている7日ぶんの、最初と最後の日。
+ * 画面に出す形まで作って渡す。日付を読むのはファイルを触れるこちら側だけで、
+ * カードを描くクライアント側には文字列だけを渡す。
+ */
+export function rankingPeriodLabel(): string {
+  const days = recentWorks().map(({ date }) => date);
+  const since = days.at(-1);
+  const until = days.at(0);
+
+  if (since === undefined || until === undefined) {
+    return "";
+  }
+
+  return `集計期間：${dateLabel(since)} 〜 ${dateLabel(until)}`;
+}
 
 export type EventRow = {
   count: number;
