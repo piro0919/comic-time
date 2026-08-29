@@ -104,6 +104,18 @@ export default function WorkCard({
           opened.markOpened(url);
           // ランキングの元になる数。押した回だけ送る
           track(rankingEventName, { title });
+
+          /*
+           * 開発中は Vercel へ届かないので、手元の控えにも同じ数を足す。
+           * ランキングが動くところを、デプロイせずに見るため。
+           */
+          if (process.env.NODE_ENV === "development") {
+            void fetch("/api/localOpen", {
+              body: JSON.stringify({ title }),
+              headers: { "Content-Type": "application/json" },
+              method: "POST",
+            });
+          }
         }}
         aria-label={title}
         className={styles.cardLink}

@@ -1,3 +1,4 @@
+import { isLocal, readLocalOpens } from "./localOpens";
 import rankingEventName from "./rankingEventName";
 import { type CardSite, siteOf, titleKey } from "./workCards";
 import { recentWorks } from "./worksOfDay";
@@ -19,6 +20,9 @@ const dayMs = 24 * 60 * 60 * 1000;
 /** 画面に出す上限。これ以上は数が小さすぎて順位の意味が薄い */
 const limit = 20;
 
+/** 作り直す間隔。ページの revalidate と揃える */
+export const pageRevalidate = 3600;
+
 export type RankedWork = {
   /** 開かれた回数 */
   count: number;
@@ -38,8 +42,19 @@ export type EventRow = {
   visitors: number;
 };
 
-/** Analytics から題名ごとの回数を取る。取れなければ空を返す */
+/**
+ * Analytics から題名ごとの回数を取る。取れなければ空を返す。
+ * 手元で動かしているときは、開発中に押したぶんの控えを代わりに読む。
+ */
 async function openCounts(since: Date, until: Date): Promise<EventRow[]> {
+  if (isLocal) {
+    return Object.entries(readLocalOpens()).map(([title, count]) => ({
+      count,
+      eventData: title,
+      visitors: count,
+    }));
+  }
+
   const token = process.env.VERCEL_ANALYTICS_TOKEN;
 
   if (token === undefined || token === "") {
@@ -56,9 +71,12 @@ async function openCounts(since: Date, until: Date): Promise<EventRow[]> {
     until: until.toISOString(),
   });
   const response = await fetch(`${apiUrl}?${query}`, {
-    // ページ側の revalidate に任せる。ここでは持ち越さない
-    cache: "no-store",
     headers: { Authorization: `Bearer ${token}` },
+    /*
+     * ページと同じ間隔で持たせる。no-store にするとページごと動的になり、
+     * 表示のたびに Analytics を叩きに行ってしまう。
+     */
+    next: { revalidate: pageRevalidate },
   });
 
   if (!response.ok) {
