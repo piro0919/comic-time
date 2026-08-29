@@ -4,12 +4,13 @@ import {
   type EventRow,
   type RankedWork,
   ranked,
+  titleColumn,
   totalsByTitle,
 } from "../src/app/workRanking.ts";
 import { titleKey } from "../src/app/workCards.ts";
 
 function row(title: null | string, count: number): EventRow {
-  return { count, eventData: title, visitors: count };
+  return { [titleColumn]: title, count, visitors: count };
 }
 
 function work(title: string, count: number): RankedWork {
@@ -43,6 +44,14 @@ test("表記が揺れていても同じ作品として数える", () => {
 
   assert.equal(totals.size, 1);
   assert.equal(totals.get(titleKey("abc〜序章〜")), 7);
+});
+
+/*
+ * 集計の鍵は by に渡した文字列がそのまま返る。素の eventData だと思って
+ * 読むと、本番だけ常に0件になる。一度それで空のまま出してしまった。
+ */
+test("題名の入る鍵は by に渡した名前と同じ", () => {
+  assert.equal(titleColumn, "eventData/title");
 });
 
 test("題名の無いイベントは数えない", () => {

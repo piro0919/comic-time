@@ -57,9 +57,16 @@ export function rankingPeriodLabel(): string {
   return `集計期間：${dateLabel(since)} 〜 ${dateLabel(until)}`;
 }
 
+/**
+ * 集計の1行。
+ * 題名の入る鍵は、by に渡した文字列がそのまま返ってくる。
+ * 素の eventData ではないので、名前を定数で持って読み違えないようにする。
+ */
+export const titleColumn = "eventData/title";
+
 export type EventRow = {
   count: number;
-  eventData: null | string;
+  [titleColumn]: null | string;
   visitors: number;
 };
 
@@ -71,7 +78,7 @@ async function openCounts(since: Date, until: Date): Promise<EventRow[]> {
   if (isLocal) {
     return Object.entries(readLocalOpens()).map(([title, count]) => ({
       count,
-      eventData: title,
+      [titleColumn]: title,
       visitors: count,
     }));
   }
@@ -83,7 +90,7 @@ async function openCounts(since: Date, until: Date): Promise<EventRow[]> {
   }
 
   const query = new URLSearchParams({
-    by: "eventData/title",
+    by: titleColumn,
     filter: `eventName eq '${rankingEventName}'`,
     limit: String(fetchLimit),
     projectId,
@@ -156,11 +163,13 @@ export function totalsByTitle(rows: EventRow[]): Map<string, number> {
   const totals = new Map<string, number>();
 
   for (const row of rows) {
-    if (row.eventData === null || row.eventData === "") {
+    const title = row[titleColumn];
+
+    if (title === null || title === "") {
       continue;
     }
 
-    const key = titleKey(row.eventData);
+    const key = titleKey(title);
 
     totals.set(key, (totals.get(key) ?? 0) + row.count);
   }
