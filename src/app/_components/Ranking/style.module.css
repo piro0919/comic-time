@@ -32,21 +32,25 @@
 
 .row {
   align-items: center;
-  background: var(--background);
+
+  /* 白地に白だと沈む。面の色と線で、1行ずつの区切りを見せる */
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-2);
-  box-shadow: var(--shadow-1);
   display: grid;
   gap: var(--space-3);
   grid-template-columns: 32px 72px 1fr;
   padding: var(--space-2) var(--space-3);
   position: relative;
   transition:
+    border-color 0.2s ease,
     box-shadow 0.2s ease,
     translate 0.2s ease;
 }
 
 .row:hover {
-  box-shadow: var(--shadow-2);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-1);
   translate: 0 -2px;
 }
 
