@@ -15,11 +15,16 @@ function row(title: null | string, count: number): EventRow {
 function work(title: string, count: number): RankedWork {
   return {
     count,
+    date: "2026-08-29",
     rank: 0,
-    sites: [],
-    thumbnailUrl: null,
-    title,
-    url: "https://example.com/",
+    work: {
+      foundAt: "12:00",
+      siteName: "サイト",
+      siteUrl: "https://example.com/",
+      thumbnailUrl: null,
+      title,
+      url: "https://example.com/works/1",
+    },
   };
 }
 

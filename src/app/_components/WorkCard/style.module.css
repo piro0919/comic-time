@@ -213,3 +213,25 @@
 .isOpened .cover > img {
   opacity: 0.35;
 }
+
+/*
+ * ランキングのときだけ出る順位。星と重ならないよう左上に置く。
+ * 看板の絵は題字が焼き込まれていて明るいものが多い。薄く敷くと沈むので、
+ * 地はしっかり暗くする。
+ */
+
+.rank {
+  align-items: center;
+  background: rgb(0 0 0 / 78%);
+  border-radius: var(--radius-1);
+  color: #fff;
+  display: flex;
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  inset: var(--space-1) auto auto var(--space-1);
+  justify-content: center;
+  min-width: 26px;
+  padding: 2px var(--space-1);
+  position: absolute;
+}

@@ -1,6 +1,7 @@
+import { type DateKey, type Work } from "@/types/work";
 import { isLocal, readLocalOpens } from "./localOpens";
 import rankingEventName from "./rankingEventName";
-import { type CardSite, siteOf, titleKey } from "./workCards";
+import { titleKey } from "./workCards";
 import { recentWorks } from "./worksOfDay";
 
 /**
@@ -26,14 +27,12 @@ export const pageRevalidate = 3600;
 export type RankedWork = {
   /** 開かれた回数 */
   count: number;
+  /** この作品を拾った日。既読の判断に使う */
+  date: DateKey;
   /** 1位から数えた順位。同数なら同じ順位になる */
   rank: number;
-  /** どのサイトで読めるか。複数サイトに載っていれば全部 */
-  sites: CardSite[];
-  thumbnailUrl: null | string;
-  title: string;
-  /** 押したときに開く先。いちばん新しく見つかったサイトのぶん */
-  url: string;
+  /** いちばん新しく見つかった回。カードは曜日の一覧と同じものを出す */
+  work: Work;
 };
 
 export type EventRow = {
@@ -95,30 +94,14 @@ async function openCounts(since: Date, until: Date): Promise<EventRow[]> {
 function worksByTitle(): Map<string, RankedWork> {
   const found = new Map<string, RankedWork>();
 
-  for (const { works } of recentWorks()) {
+  for (const { date, works } of recentWorks()) {
     for (const work of works) {
       const key = titleKey(work.title);
-      const known = found.get(key);
 
-      if (known === undefined) {
-        found.set(key, {
-          count: 0,
-          rank: 0,
-          sites: [siteOf(work)],
-          thumbnailUrl: work.thumbnailUrl,
-          title: work.title,
-          url: work.url,
-        });
-
-        continue;
+      // 新しい日から見ている。最初に当たったものが最新の回になる
+      if (!found.has(key)) {
+        found.set(key, { count: 0, date, rank: 0, work });
       }
-
-      // 同じサイトの別の回は数えない。載っているサイトの数を出したいだけ
-      if (!known.sites.some((site) => site.siteUrl === work.siteUrl)) {
-        known.sites.push(siteOf(work));
-      }
-
-      known.thumbnailUrl ??= work.thumbnailUrl;
     }
   }
 
@@ -184,7 +167,9 @@ export default async function workRanking(from = new Date()): Promise<
     found.toSorted((a, b) => {
       const diff = b.count - a.count;
 
-      return diff === 0 ? a.title.localeCompare(b.title, "ja") : diff;
+      return diff === 0
+        ? a.work.title.localeCompare(b.work.title, "ja")
+        : diff;
     }),
   ).slice(0, limit);
 }

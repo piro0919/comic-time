@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 import Ranking from "../_components/Ranking";
+import crossSiteWorks from "../crossSiteWorks";
 import pageMetadata from "../pageMetadata";
 import workRanking from "../workRanking";
 
@@ -20,5 +21,5 @@ export function generateMetadata(): Metadata {
 }
 
 export default async function Page(): Promise<React.JSX.Element> {
-  return <Ranking works={await workRanking()} />;
+  return <Ranking crossSites={crossSiteWorks()} works={await workRanking()} />;
 }

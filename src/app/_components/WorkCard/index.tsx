@@ -20,6 +20,8 @@ export type WorkCardProps = {
   legacyKeys: string[];
   /** 最初の画面に映る位置なら true。読み込みを後回しにしない */
   priority?: boolean;
+  /** ランキングに並べるときだけ、絵の左上に順位を出す */
+  rank?: number;
   thumbnailUrl: null | string;
   title: string;
   url: string;
@@ -36,6 +38,7 @@ export default function WorkCard({
   date,
   legacyKeys,
   priority = false,
+  rank,
   thumbnailUrl,
   title,
   url,
@@ -83,6 +86,9 @@ export default function WorkCard({
           sizes="(width < 768px) 45vw, 220px"
           src={thumbnailUrl ?? "/no-image.png"}
         />
+        {rank === undefined ? null : (
+          <span className={styles.rank}>{rank}</span>
+        )}
         {badge === null ? null : (
           // 同じ作品が複数サイトにあるときだけ、どこのぶんかを出す
           <span className={styles.siteIcon} title={badge.name}>
