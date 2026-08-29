@@ -76,6 +76,14 @@ All commits are automatically checked for:
 - `data/works/<日付>.json` に7日ぶんを保存し、古い日は消す
 - サイトを足したら `npm run scrape:site-icons` も走らせる。複数サイトに載る作品の印に使うファビコンを `public/site-icons/` に集める
 
+### ランキング
+
+- 作品カードを押すと Vercel Web Analytics へ `work-open` を1件送る。載せているのは題名だけ
+- `/ranking` は1時間ごとに作り直し、そのたびに Analytics の API で直近7日を集計する。
+  JSON への書き出しも cron も持たない
+- 集計には `VERCEL_ANALYTICS_TOKEN` が要る。無ければページは空で出る（落ちはしない）
+- 数字を端末で見るときは `npm run analytics [日数]`。こちらは Vercel CLI のトークンを借りる
+
 ### Application Structure
 
 - `src/app/` - Next.js App Router pages and components
