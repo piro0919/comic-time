@@ -36,11 +36,6 @@ export default function Ranking({
         <h1 className={styles.title}>ランキング</h1>
         <p className={styles.note}>{period}</p>
       </header>
-      {cards.length === 0 ? (
-        <p className={styles.note}>
-          まだ集計できる数がありません。しばらく経ってから見に来てください。
-        </p>
-      ) : null}
       {podium.length === 0 ? null : (
         <ul className={styles.podium}>
           {podium.map((card) => (
