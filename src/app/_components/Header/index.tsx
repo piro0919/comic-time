@@ -3,6 +3,7 @@ import { Righteous } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import InstallButton from "../InstallButton";
+import RankingLink from "../RankingLink";
 import ShareFavorites from "../ShareFavorites";
 import ThemeToggle from "../ThemeToggle";
 import styles from "./style.module.css";
@@ -49,6 +50,7 @@ export default function Header(): React.JSX.Element {
         </Link>
       </div>
       <div className={styles.actions}>
+        <RankingLink />
         <ShareFavorites />
         <InstallButton />
         <ThemeToggle />

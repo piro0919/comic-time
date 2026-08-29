@@ -1,0 +1,118 @@
+.container {
+  align-content: flex-start;
+  display: grid;
+  gap: var(--space-5);
+  min-height: 100%;
+  padding: var(--space-3) clamp(var(--space-3), 2.5dvw, var(--space-5))
+    var(--space-6);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.note,
+.empty {
+  color: var(--muted);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.list {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 720px;
+}
+
+.row {
+  align-items: center;
+  background: var(--background);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 32px 72px 1fr;
+  padding: var(--space-2) var(--space-3);
+  position: relative;
+  transition:
+    box-shadow 0.2s ease,
+    translate 0.2s ease;
+}
+
+.row:hover {
+  box-shadow: var(--shadow-2);
+  translate: 0 -2px;
+}
+
+/* 順位。上位ほど大きくはせず、桁が増えても揃うようにだけしておく */
+.rank {
+  color: var(--muted);
+  font-size: 1.6rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cover {
+  aspect-ratio: 16 / 9;
+  background: var(--border);
+  border-radius: var(--radius-1);
+  overflow: hidden;
+  position: relative;
+}
+
+.cover img {
+  object-fit: cover;
+}
+
+.body {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.name {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: 1.3rem;
+  font-weight: 700;
+  -webkit-line-clamp: 2;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+.meta {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 1.1rem;
+  gap: var(--space-2);
+}
+
+.siteName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icons {
+  align-items: center;
+  display: flex;
+  gap: var(--space-1);
+}
+
+.count {
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+}
+
+.link {
+  inset: 0;
+  position: absolute;
+}

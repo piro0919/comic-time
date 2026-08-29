@@ -1,0 +1,19 @@
+.button {
+  align-items: center;
+  border-radius: var(--radius-pill);
+  color: var(--foreground);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2);
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--surface);
+}
+
+/* いま開いているときだけ色を変える。位置は動かさない */
+.isCurrent {
+  color: var(--accent);
+}

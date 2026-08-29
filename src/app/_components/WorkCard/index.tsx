@@ -1,8 +1,10 @@
 "use client";
+import { track } from "@vercel/analytics";
 import clsx from "clsx";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
+import rankingEventName from "@/app/rankingEventName";
 import useFavorites from "@/app/useFavorites";
 import useOpened from "@/app/useOpened";
 import { type CardSite } from "@/app/workCards";
@@ -100,6 +102,8 @@ export default function WorkCard({
       <a
         onClick={() => {
           opened.markOpened(url);
+          // ランキングの元になる数。押した回だけ送る
+          track(rankingEventName, { title });
         }}
         aria-label={title}
         className={styles.cardLink}

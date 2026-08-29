@@ -31,6 +31,7 @@
     --header-height: 48px;
     --mobile-nav-height: 44px;
   }
+
   @media (width >= 768px) {
     --header-height: 56px;
     --mobile-nav-height: 0px;
@@ -53,6 +54,7 @@ html {
   @media (width < 768px) {
     font-size: 56.25%;
   }
+
   @media (width >= 768px) {
     font-size: 62.5%;
   }
