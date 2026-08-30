@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24.19.0
+          node-version: 24.20.0
           cache: npm
       - run: npm ci
       # 取れなかったサイトはその日を空にしたうえで、異常終了する
