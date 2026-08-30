@@ -1,0 +1,116 @@
+.container {
+  align-content: flex-start;
+  display: grid;
+  gap: var(--space-5);
+  min-height: 100%;
+  padding: var(--space-3) clamp(var(--space-3), 2.5dvw, var(--space-5))
+    var(--space-6);
+}
+
+.head {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.cover {
+
+  /* 元画像はほとんどが横長。カードと同じ比率で切る */
+  aspect-ratio: 16 / 9;
+  background: var(--border);
+  border-radius: var(--radius-2);
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  width: 160px;
+
+  @media (width >= 768px) {
+    width: 260px;
+  }
+}
+
+.summary {
+  align-content: flex-start;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.fact {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.factLabel {
+  color: var(--muted);
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.factValue {
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  color: var(--muted);
+  font-size: 1.3rem;
+}
+
+.sites {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.site {
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: space-between;
+  padding: var(--space-3);
+}
+
+.siteLink {
+  align-items: center;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 700;
+  gap: var(--space-2);
+}
+
+.siteIcon {
+  border-radius: var(--radius-1);
+}
+
+.siteName {
+  overflow-wrap: anywhere;
+}
+
+.siteMore {
+  color: var(--muted);
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}

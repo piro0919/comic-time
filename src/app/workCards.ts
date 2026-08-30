@@ -1,5 +1,9 @@
 import { type Work } from "@/types/work";
 import siteSlug from "./siteSlug";
+import { titleKey } from "./workSlug";
+
+// 住所と同じ揃え方を使う。読む側の import はここのままにしておく
+export { titleKey };
 
 export type CardSite = {
   iconUrl: string;
@@ -22,19 +26,6 @@ export type WorkCard = {
   /** お気に入りの見出し。サイトと題名の組から作る */
   workKey: string;
 };
-
-/**
- * 突き合わせのためにタイトルを揃える。
- * 全角半角（NFKC）と、波ダッシュ・全角チルダの違い、空白だけを吸収する。
- * 括弧の中身は落とさない。落とすと別作品を同じものとして扱ってしまう。
- */
-export function titleKey(title: string): string {
-  return title
-    .normalize("NFKC")
-    .replace(/[〜～]/g, "~")
-    .replace(/\s+/g, "")
-    .toLowerCase();
-}
 
 /**
  * お気に入りの見出し。サイトと題名の組を32ビット2本ぶんに畳んで36進で書く。

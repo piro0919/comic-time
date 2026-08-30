@@ -42,6 +42,33 @@ export type ParsedWork = {
   workUrl?: string;
 };
 
+/** 作品がどこで読めるか。台帳に貯めるぶん */
+export type CatalogSite = {
+  name: string;
+  /** サイトの入り口 */
+  siteUrl: string;
+  /** 作品ページ。無いサイトは最後に見た話の住所 */
+  url: string;
+};
+
+/**
+ * 作品の台帳。data/works は7日で消えるので、消える前にここへ畳んで貯める。
+ * 作品ページはこれを見る。更新が月1の作品でも住所が消えないようにするため。
+ */
+export type CatalogEntry = {
+  /** 更新を見た曜日。1ビットずつ、日曜が最下位 */
+  dayBits: number;
+  /** 初めて見た日 */
+  firstSeen: DateKey;
+  /** 最後に更新を見た日 */
+  lastSeen: DateKey;
+  sites: CatalogSite[];
+  /** 作品ページの住所。一度配ったら変えない */
+  slug: string;
+  thumbnailUrl: null | string;
+  title: string;
+};
+
 /**
  * 検索用の作品一覧。4000件近くあるので、項目名の繰り返しを避けて配列で持つ。
  * [タイトル, URL, サイト番号, 曜日ビット]

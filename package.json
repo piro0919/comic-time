@@ -87,6 +87,7 @@
   "scripts": {
     "analytics": "node scripts/analytics/index.ts",
     "build": "next build",
+    "catalog": "node scripts/catalog/index.ts",
     "dev": "next dev --turbopack",
     "lefthook": "npx lefthook run pre-commit",
     "lighthouse": "rm -rf .lighthouseci && npm run build && lhci autorun",

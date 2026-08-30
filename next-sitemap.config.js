@@ -143,7 +143,8 @@ const config = {
     "/opengraph-image",
   ],
   transform: async (conf, loc) => ({
-    loc,
+    // 作品の住所は日本語のまま。サイトマップには符号化した形で載せる
+    loc: encodeURI(loc),
     changefreq: conf.changefreq,
     priority: conf.priority,
     lastmod: lastmodOf(loc),

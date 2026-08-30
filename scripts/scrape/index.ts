@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { type SiteEntry, type Work } from "../../src/types/work.ts";
+import buildCatalog from "../catalog/index.ts";
 import todayKey from "./date.ts";
 import { remember } from "./resolveEpisodes.ts";
 import sources from "./sources/index.ts";
@@ -104,6 +105,9 @@ export default async function scrape(): Promise<void> {
 
   await fs.mkdir(dataDir, { recursive: true });
   await fs.writeFile(filePath, `${JSON.stringify(works, null, 2)}\n`);
+
+  // 消す前に畳む。取りこぼした日があっても、ここで台帳へ拾える
+  await buildCatalog();
 
   const kept = new Set(
     Array.from({ length: keepDays }, (_, back) => {
