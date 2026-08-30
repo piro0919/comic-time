@@ -17,3 +17,10 @@ test("表記が揺れても同じ住所になる", () => {
 test("落とすものしか無い題名でも空にはしない", () => {
   assert.equal(workSlug("///"), "work");
 });
+
+test("書き出したファイル名が溢れないよう、住所の長さは切る", () => {
+  const slug = workSlug("あ".repeat(200));
+
+  assert.equal([...slug].length, 50);
+  assert.ok(Buffer.byteLength(slug, "utf8") + ".prefetch.rsc".length < 255);
+});
