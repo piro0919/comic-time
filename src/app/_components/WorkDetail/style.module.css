@@ -13,7 +13,6 @@
 }
 
 .cover {
-
   /* 元画像はほとんどが横長。カードと同じ比率で切る */
   aspect-ratio: 16 / 9;
   background: var(--border);
@@ -101,6 +100,10 @@
 
 .siteName {
   overflow-wrap: anywhere;
+}
+
+.dayLink {
+  text-decoration: underline;
 }
 
 .siteMore {
