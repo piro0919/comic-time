@@ -15,7 +15,13 @@ export default function MobileNav(): React.JSX.Element {
   const favorites = useFavorites();
   const pathname = usePathname();
   const currentRef = useRef<HTMLLIElement>(null);
-  const onFavorites = pathname === "/favorites" || pathname === "/";
+  /*
+   * トップに出るのは、登録があればお気に入り、無ければ今日の一覧。
+   * 後者はどの項目のページでもないので、どこも選ばない
+   */
+  const onFavorites =
+    pathname === "/favorites" ||
+    (pathname === "/" && favorites.workUrls.length > 0);
   const onSites = pathname.startsWith("/sites");
 
   /*

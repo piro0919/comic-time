@@ -13,6 +13,13 @@ export default function Sidebar(): React.JSX.Element {
   const selectedDay = useSelectedDay();
   const favorites = useFavorites();
   const pathname = usePathname();
+  /*
+   * トップに出るのは、登録があればお気に入り、無ければ今日の一覧。
+   * 後者はどの項目のページでもないので、どこも選ばない
+   */
+  const showsFavorites =
+    pathname === "/favorites" ||
+    (pathname === "/" && favorites.workUrls.length > 0);
 
   return (
     <aside className={styles.container}>
@@ -20,8 +27,7 @@ export default function Sidebar(): React.JSX.Element {
         <ul className={styles.list}>
           <li
             className={clsx(styles.item, {
-              [styles.currentDay]:
-                pathname === "/favorites" || pathname === "/",
+              [styles.currentDay]: showsFavorites,
             })}
           >
             <Link className={styles.button} href="/favorites">
