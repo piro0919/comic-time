@@ -36,15 +36,6 @@
   },
   {
     "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/202412051438111274F508A442C458A3B1A964BF11D746E88-sm.webp",
-    "title": "1LDKスリーマンセル～花屋敷さんは片付けられないうさぎである～",
-    "url": "https://championcross.jp/episodes/08e22c374a204",
-    "workUrl": "https://championcross.jp/series/ba842db4036ff"
-  },
-  {
-    "foundAt": "00:05",
     "siteName": "ヤンチャンWeb",
     "siteUrl": "https://youngchampion.jp/",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/202506131730358127AEFD1EBA01C07266ABAF0B39B256DEC-sm.webp",
@@ -84,6 +75,15 @@
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ea883ead4f23491cd5218e3c49e102765c36c15e/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F4856001361513705960-2d6c4cb80764215789c092d39b23cdd8",
     "title": "BEYBLADE X",
     "url": "https://www.sunday-webry.com/episode/12207421984173601255"
+  },
+  {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/202403251148560231919E97DD4728F8C8368511FF2E0CDCC-sm.webp",
+    "title": "BREAK BACK",
+    "url": "https://championcross.jp/episodes/64995af18b697",
+    "workUrl": "https://championcross.jp/series/113178d170944"
   },
   {
     "foundAt": "00:05",
@@ -172,6 +172,15 @@
     "url": "https://www.sunday-webry.com/episode/12207421984174872467"
   },
   {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/602094/20250401100340734D171CA8B12077ABCD4EF897E58C514FB-sm.webp",
+    "title": "アフレコブースの君たちへ",
+    "url": "https://championcross.jp/episodes/2d34f586bd396",
+    "workUrl": "https://championcross.jp/series/fe344d2acd278"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ヤンマガWeb",
     "siteUrl": "https://yanmaga.jp/",
@@ -231,24 +240,6 @@
   },
   {
     "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240604111757057227F944CDD7CB029A3742BF676F46CD7-sm.webp",
-    "title": "おだんごめがね",
-    "url": "https://championcross.jp/episodes/bdf60ce2a4e3a",
-    "workUrl": "https://championcross.jp/series/466d1ba10ba08"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/473271/20251204172024241D5828AB62E472EAEBCE2ACAF0F3B0773-sm.webp",
-    "title": "おとぎの国のデスマシーン",
-    "url": "https://championcross.jp/episodes/51469fdbdffd6",
-    "workUrl": "https://championcross.jp/series/44ad31dae69c2"
-  },
-  {
-    "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2085/title_grid_wide_202301191129407c16213da1c168ed9de7bcfede95cfc1.png",
@@ -263,24 +254,6 @@
     "title": "カンテラ〜訪問精神科医 由留木照のカルテ〜",
     "url": "https://youngchampion.jp/episodes/b65b33ce13178",
     "workUrl": "https://youngchampion.jp/series/411f6d857dbad"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240514160819073AA702AEB08C1166887BB0AB9EF7FE1F7-sm.webp",
-    "title": "キミに恋する三姉妹",
-    "url": "https://championcross.jp/episodes/6e41d65763691",
-    "workUrl": "https://championcross.jp/series/7e267b346bd02"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/602094/20250417164416627366BE0B87EA68995B6D3CD0966A25FD0-sm.webp",
-    "title": "キャシャーンR",
-    "url": "https://championcross.jp/episodes/ccbd2531e1287",
-    "workUrl": "https://championcross.jp/series/6fc063b7f261d"
   },
   {
     "foundAt": "00:05",
@@ -342,6 +315,15 @@
     "workUrl": "https://yanmaga.jp/comics/%E3%82%B6_%E3%83%95%E3%82%A1%E3%83%96%E3%83%AB_The_third_secret"
   },
   {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/202405141609428967B297A2FE16BBC198328274F0B24DDFE-sm.webp",
+    "title": "サエイズム",
+    "url": "https://championcross.jp/episodes/3718ed4257ed9",
+    "workUrl": "https://championcross.jp/series/e30fb09d1ab98"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
@@ -400,15 +382,6 @@
   },
   {
     "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/2024051617173112020B529343425C75C842C998FCB55DB34-sm.webp",
-    "title": "ゼロ戦エース、異世界で最強の竜騎士になる！",
-    "url": "https://championcross.jp/episodes/78d86ca213f54",
-    "workUrl": "https://championcross.jp/series/50ae645b67e94"
-  },
-  {
-    "foundAt": "00:05",
     "siteName": "COMIC FUZ",
     "siteUrl": "https://comic-fuz.com/",
     "thumbnailUrl": "https://img.comic-fuz.com/c/1zqvJG/i9.webp?h=Ix0_HiKxLPGmHllieRmj9Q&e=5000000000",
@@ -440,15 +413,6 @@
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3315/title_grid_wide_20260713122841e25b817bf3df362b26e7ed0af3512ac9.png",
     "title": "ダイバーズ",
     "url": "https://pocket.shonenmagazine.com/title/03315/episode/441264"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260106103409921F550E74066A259711F691D91A36A7FB5-sm.webp",
-    "title": "ダストランド",
-    "url": "https://championcross.jp/episodes/05131400af7ae",
-    "workUrl": "https://championcross.jp/series/be9e11b46afa8"
   },
   {
     "foundAt": "00:05",
@@ -511,15 +475,6 @@
   },
   {
     "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/3055124/2026042318470772860B0DA951D0644EA4CC695FE9C0CCDF8-sm.webp",
-    "title": "なんぼの食卓",
-    "url": "https://championcross.jp/episodes/07747264e9903",
-    "workUrl": "https://championcross.jp/series/04f7f548b1c4f"
-  },
-  {
-    "foundAt": "00:05",
     "siteName": "コミプレ",
     "siteUrl": "https://viewer.heros-web.com/",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/2026050816032754633BBE0D378E3AB8FD59AA8BBFB7E5927-sm.webp",
@@ -561,6 +516,15 @@
     "url": "https://pocket.shonenmagazine.com/title/00617/episode/442206"
   },
   {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1721939/2025120516590231624416EE110B05DC4FC70ED14F07F6BD6-sm.webp",
+    "title": "ぷんぷん -レッサー任侠伝-",
+    "url": "https://championcross.jp/episodes/75aaed86b8b2b",
+    "workUrl": "https://championcross.jp/series/c4b8b7c9dac64"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -572,9 +536,18 @@
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1671619617/webp/chapter/201232.webp?hash=gH0BJ3_IYXuDT04f8sxLnQ&expires=1874620800",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1722017027/webp/ranking_thumbnail/2176.webp?hash=5B3xMM3Vaq4dFnyR-5qarg&expires=1874620800",
     "title": "ほどなく、お別れです",
     "url": "https://manga-one.com/title/2176"
+  },
+  {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240412114646550AD7A15404C0AFDC2BD52B963F3987D0C-sm.webp",
+    "title": "ぼんくら陰陽師の鬼嫁",
+    "url": "https://championcross.jp/episodes/3418f2e0a2103",
+    "workUrl": "https://championcross.jp/series/1b5a308a46824"
   },
   {
     "foundAt": "00:05",
@@ -610,30 +583,21 @@
     "url": "https://pocket.shonenmagazine.com/title/02951/episode/421939"
   },
   {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/202404121051561750E301A9C143A98EC4194CD47135E9598-sm.webp",
+    "title": "ルパン三世　異世界の姫君",
+    "url": "https://championcross.jp/episodes/aedb180a54918",
+    "workUrl": "https://championcross.jp/series/d91dd718771db"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2552/title_grid_wide_202406181712183a5ad90833f625487f3622878bf87f42.png",
     "title": "愛妻の裏アカ",
     "url": "https://pocket.shonenmagazine.com/title/02552/episode/442201"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240325121925917E380BA64E2565EACDA4269C5219918F1-sm.webp",
-    "title": "絢爛たるグランドセーヌ",
-    "url": "https://championcross.jp/episodes/c6f6dd74c834f",
-    "workUrl": "https://championcross.jp/series/6decc17b2ac80"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/1574918/202510301722213993F12BE2DC12DC03CB8194F80E542D208-sm.webp",
-    "title": "異世界でも女王様",
-    "url": "https://championcross.jp/episodes/75a4325e7d16e",
-    "workUrl": "https://championcross.jp/series/1b730b22a426f"
   },
   {
     "foundAt": "00:05",
@@ -747,15 +711,6 @@
   },
   {
     "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/202603031431341523A3E6F5A0C8F0A3741F8DC5015598795-sm.webp",
-    "title": "君たち愛が重すぎる。",
-    "url": "https://championcross.jp/episodes/9d31ae00288d8",
-    "workUrl": "https://championcross.jp/series/d0f574669281f"
-  },
-  {
-    "foundAt": "00:05",
     "siteName": "ヤンチャンWeb",
     "siteUrl": "https://youngchampion.jp/",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2/2024051415241769425FDA149230EF50DA01089CE4C17EF7A-sm.webp",
@@ -795,15 +750,6 @@
     "title": "好きこそ暮らしの上手なれ",
     "url": "https://youngchampion.jp/episodes/c9eef2f97197e",
     "workUrl": "https://youngchampion.jp/series/ef3c2b2217ab4"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/602094/20250311142051586EAF7FF97E5C4002C2CE0C06EEDDFFFC6-sm.webp",
-    "title": "轟大丸の奇怪体験談",
-    "url": "https://championcross.jp/episodes/3c815a9321f84",
-    "workUrl": "https://championcross.jp/series/de62f594cc442"
   },
   {
     "foundAt": "00:05",
@@ -905,30 +851,12 @@
   },
   {
     "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240514164958059570086B0DCFB6AE468E450629274D9C9-sm.webp",
-    "title": "上伊那ぼたん、酔へる姿は百合の花",
-    "url": "https://championcross.jp/episodes/5084ee4f17aed",
-    "workUrl": "https://championcross.jp/series/ae4257e66bab5"
-  },
-  {
-    "foundAt": "00:05",
     "siteName": "コミプレ",
     "siteUrl": "https://viewer.heros-web.com/",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/202605081551065426D2380750A3BF38C974B105F5BE2BC60-sm.webp",
     "title": "上位存在ちゃんは店長を母星につれて帰りたい",
     "url": "https://heros-web.com/episodes/fa1c66412968b",
     "workUrl": "https://heros-web.com/series/d231ed2ee14e2"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/202405141650031551BE8DDCA0F36123616113ED2D01F19D0-sm.webp",
-    "title": "織津江大志の異世界クリ娘サバイバル日誌",
-    "url": "https://championcross.jp/episodes/fdbdaf4ec2550",
-    "workUrl": "https://championcross.jp/series/4756324e1c1b1"
   },
   {
     "foundAt": "00:05",
@@ -964,15 +892,6 @@
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/503/title_grid_wide_20221011143906dcf40207a15b29706cf7e859876b7f15.png",
     "title": "神の雫",
     "url": "https://pocket.shonenmagazine.com/title/00503/episode/358215"
-  },
-  {
-    "foundAt": "00:05",
-    "siteName": "チャンピオンクロス",
-    "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20250203115645248769B1AF397B220F52F4003F8D631FA4B-sm.webp",
-    "title": "聖闘士真理矢",
-    "url": "https://championcross.jp/episodes/5c7dac4c493d5",
-    "workUrl": "https://championcross.jp/series/072e9756539ea"
   },
   {
     "foundAt": "00:05",
@@ -1099,6 +1018,15 @@
     "workUrl": "https://takecomic.jp/series/02b1bb355bf29/new"
   },
   {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260706113830437D22376E6B304E7E66739A62F1C9E4248-sm.webp",
+    "title": "拝田さんはヘタレ顔が見たい",
+    "url": "https://championcross.jp/episodes/d288bc5bfb329",
+    "workUrl": "https://championcross.jp/series/5b4fce231ce07"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -1148,6 +1076,15 @@
     "url": "https://www.ganganonline.com/title/2432/chapter/128601"
   },
   {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260609103236921C3D6B356FFE438BC259FBFFA442D186C-sm.webp",
+    "title": "片山くん、召し上がれ！",
+    "url": "https://championcross.jp/episodes/46f5896b33ed7",
+    "workUrl": "https://championcross.jp/series/af4e8eb4295ef"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ヤンチャンWeb",
     "siteUrl": "https://youngchampion.jp/",
@@ -1174,13 +1111,13 @@
     "workUrl": "https://youngchampion.jp/series/ec20eadd6d253"
   },
   {
-    "foundAt": "00:05",
+    "foundAt": "02:11",
     "siteName": "チャンピオンクロス",
     "siteUrl": "https://championcross.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240514165021070B30C229768694CD00C630E96C85168D4-sm.webp",
-    "title": "僕の生徒はオトナギャル",
-    "url": "https://championcross.jp/episodes/56606dac85b35",
-    "workUrl": "https://championcross.jp/series/85dad9c9d9e0f"
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20250714151839257B90901309B7CE993C0574C142224CB0D-sm.webp",
+    "title": "僕の心のヤバイやつ ラブコメディが始まらない",
+    "url": "https://championcross.jp/episodes/8fc18b76cad62",
+    "workUrl": "https://championcross.jp/series/452b0e17e1bf3"
   },
   {
     "foundAt": "00:05",
@@ -1267,5 +1204,23 @@
     "title": "路地裏のアイリス",
     "url": "https://youngchampion.jp/episodes/cbce590c39e7e",
     "workUrl": "https://youngchampion.jp/series/277b36c9b96c8"
+  },
+  {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/2024051416465877620A4369EE091676ED17FE0A68196D16E-sm.webp",
+    "title": "鬱ごはん",
+    "url": "https://championcross.jp/episodes/0de41a1573d3a",
+    "workUrl": "https://championcross.jp/series/5b85354af2acc"
+  },
+  {
+    "foundAt": "02:11",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/602094/20250418160240233C69BC9F08337E9BDD37BD6A855771720-sm.webp",
+    "title": "閻魔の教室",
+    "url": "https://championcross.jp/episodes/4ebbf94eef8eb",
+    "workUrl": "https://championcross.jp/series/847327d397e44"
   }
 ]
