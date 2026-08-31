@@ -11,7 +11,7 @@ test.describe("画面の操作", () => {
     page.on("pageerror", (error) => errors.push(error.message));
 
     await page.goto("/");
-    // 何も登録していないと今日の曜日へ送られる。見出しは画面ごとに1つ
+    // トップは今日の更新を出す。見出しは画面ごとに1つ
     await expect(page.getByRole("link", { name: "ComicTime" })).toBeVisible();
     await expect(page.locator("h1")).toHaveText(/の更新$/);
     expect(errors).toEqual([]);
@@ -23,8 +23,6 @@ test.describe("画面の操作", () => {
     page.on("pageerror", (error) => errors.push(error.message));
 
     await page.goto("/");
-    // トップは今日の一覧かお気に入りへ移る。落ち着く前に押すと取りこぼす
-    await page.waitForURL(/\/(day\/|favorites)/);
 
     const link = page.locator('aside a[href^="/day/"]').nth(2);
 
@@ -44,7 +42,6 @@ test.describe("画面の操作", () => {
     page.on("pageerror", (error) => errors.push(error.message));
 
     await page.goto("/");
-    await page.waitForURL(/\/(day\/|favorites)/);
 
     const toggle = page.getByRole("button", { name: /モードに切り替え/ });
 
@@ -58,6 +55,10 @@ test.describe("画面の操作", () => {
     );
 
     const link = page.locator('aside a[href^="/day/"]').nth(4);
+
+    // ここも同じ。組み直しが済むまで住所を読まない
+    await expect(link).toHaveText(/\d+\/\d+（/);
+
     const href = await link.getAttribute("href");
 
     await link.click();
