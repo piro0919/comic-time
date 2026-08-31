@@ -80,3 +80,15 @@ export function worksOfWeekday(day: Weekday): CatalogEntry[] {
     .filter((entry) => (entry.dayBits & bit) !== 0)
     .toSorted((a, b) => a.title.localeCompare(b.title, "ja"));
 }
+
+/**
+ * そのサイトで読める作品。題名の順で返す。
+ *
+ * 突き合わせはサイトの入り口の URL で行う。台帳のサイト名は表記が変わることがあり、
+ * 名前で持つと過去に貯めたぶんが外れるため。
+ */
+export function worksOfSiteUrl(siteUrl: string): CatalogEntry[] {
+  return catalog()
+    .filter((entry) => entry.sites.some((site) => site.siteUrl === siteUrl))
+    .toSorted((a, b) => a.title.localeCompare(b.title, "ja"));
+}

@@ -50,7 +50,10 @@ export default async function Page({
         day={day as Weekday}
         works={worksOfDay(day as Weekday)}
       />
-      <WorkIndex day={day as Weekday} works={worksOfWeekday(day as Weekday)} />
+      <WorkIndex
+        heading={`${dayLabel(day as Weekday)}に更新される作品`}
+        works={worksOfWeekday(day as Weekday)}
+      />
     </>
   );
 }

@@ -1,16 +1,15 @@
 import Link from "next/link";
-import { dayLabel } from "@/app/days";
 import { workHref } from "@/app/workCatalog";
-import { type CatalogEntry, type Weekday } from "@/types/work";
+import { type CatalogEntry } from "@/types/work";
 import styles from "./style.module.css";
 
 export type WorkIndexProps = {
-  day: Weekday;
+  heading: string;
   works: CatalogEntry[];
 };
 
 /**
- * その曜日に更新される作品への道。
+ * 作品ページへの道。曜日ページとサイトページの末尾に置く。
  *
  * カードを押した先は掲載サイトなので、作品ページへ入る口がどこにも無かった。
  * サイトマップにしか載っていない住所はクローラが後回しにするため、
@@ -18,7 +17,7 @@ export type WorkIndexProps = {
  * 題名だけを並べた素のリンクを置いて、そこを通す。
  */
 export default function WorkIndex({
-  day,
+  heading,
   works,
 }: WorkIndexProps): null | React.JSX.Element {
   if (works.length === 0) {
@@ -27,7 +26,7 @@ export default function WorkIndex({
 
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>{`${dayLabel(day)}に更新される作品`}</h2>
+      <h2 className={styles.title}>{heading}</h2>
       <ul className={styles.list}>
         {works.map((work) => (
           <li key={work.slug}>

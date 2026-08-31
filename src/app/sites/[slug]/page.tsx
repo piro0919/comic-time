@@ -1,9 +1,11 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteDetail from "../../_components/SiteDetail";
+import WorkIndex from "../../_components/WorkIndex";
 import crossSiteWorks from "../../crossSiteWorks";
 import pageMetadata from "../../pageMetadata";
 import { siteOf, sites, updateDayLabel, worksOfSite } from "../../siteCatalog";
+import { worksOfSiteUrl } from "../../workCatalog";
 
 export type PageProps = {
   params: Promise<{ slug: string }>;
@@ -48,10 +50,16 @@ export default async function Page({
   }
 
   return (
-    <SiteDetail
-      crossSites={crossSiteWorks()}
-      days={worksOfSite(site)}
-      site={site}
-    />
+    <>
+      <SiteDetail
+        crossSites={crossSiteWorks()}
+        days={worksOfSite(site)}
+        site={site}
+      />
+      <WorkIndex
+        heading={`${site.name}で読める作品`}
+        works={worksOfSiteUrl(site.url)}
+      />
+    </>
   );
 }
