@@ -1425,6 +1425,21 @@
     "title": "RAVE"
   },
   {
+    "dayBits": 2,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-08-31",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005375_S/episodes/KC_0053750002200011_E"
+      }
+    ],
+    "slug": "re:ゼロから始める異世界生活第五章水の都と英雄の詩",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005375/resized/7a5fe665-3066-4ddf-b4dd-9fd73125b918.jpg",
+    "title": "Ｒｅ：ゼロから始める異世界生活　第五章　水の都と英雄の詩"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -11242,7 +11257,7 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-08-31",
     "sites": [
       {
         "name": "ツイ４",
@@ -20392,7 +20407,7 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-08-31",
     "sites": [
       {
         "name": "ツイ４",
