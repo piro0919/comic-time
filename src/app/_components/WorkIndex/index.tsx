@@ -15,6 +15,9 @@ export type WorkIndexProps = {
  * サイトマップにしか載っていない住所はクローラが後回しにするため、
  * 1700枚ある作品ページが「見つけたが読んでいない」まま寝ていた。
  * 題名だけを並べた素のリンクを置いて、そこを通す。
+ *
+ * 数百件並ぶので閉じておくが、畳むのは details に任せる。
+ * 開いてから中身を作る作りにすると初期の HTML からリンクが消え、道が無くなる。
  */
 export default function WorkIndex({
   heading,
@@ -25,8 +28,11 @@ export default function WorkIndex({
   }
 
   return (
-    <section className={styles.container}>
-      <h2 className={styles.title}>{heading}</h2>
+    <details className={styles.container}>
+      <summary className={styles.summary}>
+        <h2 className={styles.title}>{heading}</h2>
+        <span className={styles.count}>{works.length}作品</span>
+      </summary>
       <ul className={styles.list}>
         {works.map((work) => (
           <li key={work.slug}>
@@ -36,6 +42,6 @@ export default function WorkIndex({
           </li>
         ))}
       </ul>
-    </section>
+    </details>
   );
 }

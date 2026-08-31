@@ -5,9 +5,38 @@
   padding: 0 clamp(var(--space-3), 2.5dvw, var(--space-5)) var(--space-6);
 }
 
+/* 既定の三角は行の頭に付いて見出しと揃わないので、自前で置く */
+.summary {
+  align-items: baseline;
+  cursor: pointer;
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    color: var(--muted);
+    content: "▼";
+    font-size: 0.9rem;
+    transition: transform 0.15s;
+  }
+}
+
+.container[open] .summary::after {
+  transform: rotate(180deg);
+}
+
 .title {
   color: var(--muted);
   font-size: 1.3rem;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 1.1rem;
 }
 
 /* 数百件並ぶので、縦に積まず流し込む */
@@ -15,6 +44,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-3);
+  padding-top: var(--space-3);
 }
 
 .link {
