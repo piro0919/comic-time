@@ -1,6 +1,12 @@
 import fs from "fs";
 import path from "path";
-import { type CatalogEntry, daysOf, weekdayJa } from "@/types/work";
+import {
+  type CatalogEntry,
+  daysOf,
+  type Weekday,
+  weekdayJa,
+  weekdays,
+} from "@/types/work";
 
 /**
  * 作品の台帳を読む。書き出しているのは scripts/catalog。
@@ -59,4 +65,18 @@ export function seenDaysLabel(dayBits: number): string {
   return days.length === 0
     ? ""
     : days.map((day) => `${weekdayJa[day]}曜`).join("・");
+}
+
+/**
+ * その曜日に更新を見た作品。題名の順で返す。
+ *
+ * data/works は7日で消えるので、そちらから引くと隔週や月1の作品が落ちる。
+ * 曜日ページから作品ページへ入る道として使うぶんなので、台帳から引く。
+ */
+export function worksOfWeekday(day: Weekday): CatalogEntry[] {
+  const bit = 1 << weekdays.indexOf(day);
+
+  return catalog()
+    .filter((entry) => (entry.dayBits & bit) !== 0)
+    .toSorted((a, b) => a.title.localeCompare(b.title, "ja"));
 }

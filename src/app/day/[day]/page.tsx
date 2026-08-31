@@ -2,9 +2,11 @@ import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import { type Weekday } from "@/types/work";
 import App from "../../_components/App";
+import WorkIndex from "../../_components/WorkIndex";
 import crossSiteWorks from "../../crossSiteWorks";
 import { dayLabel } from "../../days";
 import pageMetadata from "../../pageMetadata";
+import { worksOfWeekday } from "../../workCatalog";
 import worksOfDay, { dayKeys, recentDateOf } from "../../worksOfDay";
 
 export type PageProps = {
@@ -41,11 +43,14 @@ export default async function Page({
   }
 
   return (
-    <App
-      crossSites={crossSiteWorks()}
-      date={recentDateOf(day as Weekday)}
-      day={day as Weekday}
-      works={worksOfDay(day as Weekday)}
-    />
+    <>
+      <App
+        crossSites={crossSiteWorks()}
+        date={recentDateOf(day as Weekday)}
+        day={day as Weekday}
+        works={worksOfDay(day as Weekday)}
+      />
+      <WorkIndex day={day as Weekday} works={worksOfWeekday(day as Weekday)} />
+    </>
   );
 }

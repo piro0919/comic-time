@@ -2,7 +2,6 @@
   align-content: flex-start;
   display: grid;
   gap: var(--space-5);
-  min-height: 100%;
   padding: var(--space-3) clamp(var(--space-3), 2.5dvw, var(--space-5))
     var(--space-6);
   touch-action: pan-y;
