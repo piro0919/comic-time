@@ -77,6 +77,24 @@ function siteUrlBySlug() {
   );
 }
 
+/** 作品の住所から、最後に更新を見た日を引くための対応表 */
+let lastSeenBySlug;
+
+function lastSeenOf(slug) {
+  if (lastSeenBySlug === undefined) {
+    const catalog = readJson(
+      path.join(process.cwd(), "data", "catalog.json"),
+      [],
+    );
+
+    lastSeenBySlug = new Map(
+      catalog.map((entry) => [entry.slug, entry.lastSeen]),
+    );
+  }
+
+  return lastSeenBySlug.get(slug);
+}
+
 function lastmodOf(loc) {
   const dates = dateKeys();
 
@@ -124,6 +142,17 @@ function lastmodOf(loc) {
       .filter((stamp) => stamp !== undefined);
 
     return stamps.sort().at(-1);
+  }
+
+  const workSlug = /^\/works\/(.+)$/.exec(loc)?.[1];
+
+  if (workSlug !== undefined) {
+    const lastSeen = lastSeenOf(workSlug);
+
+    // 何時に見つけたかは台帳に残らない。日付の頭で入れる
+    return lastSeen === undefined
+      ? undefined
+      : new Date(`${lastSeen}T00:00:00+09:00`).toISOString();
   }
 
   // 中身が日々変わらない画面。日時は入れない
