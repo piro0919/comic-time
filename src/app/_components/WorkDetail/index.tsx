@@ -92,10 +92,13 @@ export default function WorkDetail({
           ))}
         </ul>
       </section>
-      <p className={styles.note}>
-        更新の曜日は、ComicTime が実際に更新を見つけた日から作っています。
-        隔週・月1の作品は曜日が1つだけ出ます。
-      </p>
+      {/* 曜日を出していない作品に、曜日の断り書きだけ残っても読み手には意味がない */}
+      {days.length === 0 ? null : (
+        <p className={styles.note}>
+          更新の曜日は、ComicTime が実際に更新を見つけた日から作っています。
+          隔週・月1の作品は曜日が1つだけ出ます。
+        </p>
+      )}
     </div>
   );
 }
