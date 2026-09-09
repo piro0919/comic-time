@@ -30,7 +30,8 @@ export async function readOpens(): Promise<Record<string, string>> {
     return {};
   }
 
-  const rows = await sql`select url, to_char(opened_on, 'YYYY-MM-DD') as opened_on
+  const rows =
+    await sql`select url, to_char(opened_on, 'YYYY-MM-DD') as opened_on
                          from opened_work where user_id = ${userId}`;
 
   return Object.fromEntries(
@@ -71,7 +72,11 @@ export async function mergeOpens(
     return {};
   }
 
-  const entries = Object.entries(local);
+  // 8月末まで使っていた古い形の記録を弾く。あの頃は作品の見出しで持っていて、
+  // いまは回のURLで引くので、混ぜても二度と照合されない行になるだけ
+  const entries = Object.entries(local).filter(([url]) =>
+    url.startsWith("http"),
+  );
 
   if (entries.length > 0) {
     await sql`insert into opened_work (user_id, url, opened_on)
