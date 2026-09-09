@@ -84,6 +84,22 @@ All commits are automatically checked for:
 - 集計には `VERCEL_ANALYTICS_TOKEN` が要る。無ければページは空で出る（落ちはしない）
 - 数字を端末で見るときは `npm run analytics [日数]`。こちらは Vercel CLI のトークンを借りる
 
+### ログインとフォロー
+
+- ログインは任意。ログインしなくても今までどおり動き、お気に入りは端末の localStorage だけで完結する
+- 認証は Neon Auth（中身は Better Auth）。手段は Google のみ。利用者とセッションは
+  同じ Postgres の `neon_auth` スキーマに入る。受け口は `src/app/api/auth/[...path]/route.ts`
+- ログインすると、その端末の登録が初回だけサーバーへ合流し（`_components/FollowSync`）、
+  以降は押すたびにサーバーへ書く。手元はその写しになる。削除の記録は持たない
+- 表は `db/migrations/` の SQL。`follow_work (user_id, slug, site_url)` と
+  `follow_site (user_id, site_url)`。どちらも `neon_auth."user"` へ CASCADE で繋がる
+- **フォローはサイトごと。** 題名だけで持つと、同じ作品を載せている別サイトの更新まで一覧に出る。
+  読むのは1つのサイトなので、作品の鍵は台帳の slug とサイトの url の組にする
+- 画面と `useFavorites` は短いハッシュの見出しのままで、slug への変換は `src/app/followKeys.ts` に閉じる
+- セッションは署名付きクッキーに5分キャッシュされる。DB 側で利用者を変えても画面に届くまで間がある
+- 端末をまたぐ受け渡しは、以前は共有リンクとQRで行っていた。ログインの同期に置き換えて削除した。
+  ログインしない人は端末を移せない
+
 ### Application Structure
 
 - `src/app/` - Next.js App Router pages and components
