@@ -5,11 +5,11 @@
 -- 一度配ったら変えない住所なので、題名の表記が直っても行は生き残る。
 -- サイトは src/data/sites.json の url。こちらも入り口の住所で、名前ではない。
 --
--- user_id は Neon Auth（Better Auth）が neon_auth スキーマに作る利用者の id。
--- 外部キーはまだ張らない。管理側の表の名前と id の型を実際に繋いで確かめてから決める。
+-- user_id は Neon Auth（Better Auth）が neon_auth に作る利用者の id。uuid で、
+-- neon_auth 側の表も同じように CASCADE で繋がっている。退会したらフォローも一緒に消える。
 
 create table if not exists follow_work (
-  user_id text not null,
+  user_id uuid not null references neon_auth."user"(id) on delete cascade,
   -- data/catalog.json の slug
   slug text not null,
   followed_at timestamptz not null default now(),
@@ -17,7 +17,7 @@ create table if not exists follow_work (
 );
 
 create table if not exists follow_site (
-  user_id text not null,
+  user_id uuid not null references neon_auth."user"(id) on delete cascade,
   -- src/data/sites.json の url
   site_url text not null,
   followed_at timestamptz not null default now(),

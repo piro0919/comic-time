@@ -62,3 +62,4 @@ public/robots.txt
 
 # 手元で押したぶんの控え。確認用で、共有しない
 data/localOpens.json
+.env*.local
