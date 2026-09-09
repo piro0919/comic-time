@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { MdInstallMobile } from "react-icons/md";
 import usePwa from "use-pwa";
@@ -32,8 +32,10 @@ function isAppleDevice(): boolean {
 export default function InstallButton(): null | React.JSX.Element {
   const { canInstallprompt, enabledPwa, isPwa, showInstallPrompt } = usePwa();
   const [isGuideShown, setIsGuideShown] = useState(false);
-  // 組み上がるまでは window を見られない。サーバー側では Apple 端末と決められない
-  const isApple = useIsHydrated() && isAppleDevice();
+  // 組み上がるまでは window を見られない。サーバー側では Apple 端末と決められない。
+  // 端末の種類は変わらないので、組み上がった時点で一度だけ調べる
+  const isHydrated = useIsHydrated();
+  const isApple = useMemo(() => isHydrated && isAppleDevice(), [isHydrated]);
   const canPrompt = enabledPwa && canInstallprompt;
 
   if (isPwa || (!canPrompt && !isApple)) {
