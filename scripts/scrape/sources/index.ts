@@ -3,6 +3,7 @@ import championCross from "./championCross.ts";
 import comicAction from "./comicAction.ts";
 import comicDays from "./comicDays.ts";
 import comicFuz from "./comicFuz.ts";
+import comicGardo from "./comicGardo.ts";
 import comicMeteor from "./comicMeteor.ts";
 import comicOgyaaa from "./comicOgyaaa.ts";
 import comicWalker from "./comicWalker.ts";
@@ -65,6 +66,7 @@ const sources: Source[] = [
   { fetchToday: mangaOne, siteUrl: "https://manga-one.com/" },
   { fetchToday: shuro, siteUrl: "https://shuro.world/" },
   { fetchToday: youngAceUp, siteUrl: "https://web-ace.jp/youngaceup/" },
+  { fetchToday: comicGardo, siteUrl: "https://comic-gardo.com/" },
 ];
 
 export default sources;
