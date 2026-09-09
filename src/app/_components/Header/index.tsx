@@ -32,7 +32,8 @@ export default function Header(): React.JSX.Element {
     <header className={styles.header}>
       {/* 見出しではなく、どの画面にも出る帰り道。h1 は画面ごとに置く */}
       <div className={clsx(righteous.className, styles.h1)}>
-        <Link className={styles.home} href="/">
+        {/* 題字は帰り道であって主要な導線ではない。トップは一番重いので先読みしない */}
+        <Link className={styles.home} href="/" prefetch={false}>
           <Image
             alt=""
             className={styles.icon}

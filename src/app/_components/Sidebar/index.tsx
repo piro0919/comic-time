@@ -30,7 +30,7 @@ export default function Sidebar(): React.JSX.Element {
               [styles.currentDay]: showsFavorites,
             })}
           >
-            <Link className={styles.button} href="/favorites">
+            <Link className={styles.button} href="/favorites" prefetch={false}>
               お気に入り
               {favorites.visibleWorkCount === 0 ? null : (
                 <span className={styles.count}>
@@ -46,7 +46,11 @@ export default function Sidebar(): React.JSX.Element {
               })}
               key={day.key}
             >
-              <Link className={styles.button} href={dayHref(day.key)}>
+              <Link
+                className={styles.button}
+                href={dayHref(day.key)}
+                prefetch={false}
+              >
                 {day.label}
               </Link>
             </li>
@@ -56,7 +60,7 @@ export default function Sidebar(): React.JSX.Element {
               [styles.currentDay]: pathname.startsWith("/sites"),
             })}
           >
-            <Link className={styles.button} href="/sites">
+            <Link className={styles.button} href="/sites" prefetch={false}>
               サイト一覧
             </Link>
           </li>
