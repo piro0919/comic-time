@@ -68,17 +68,6 @@ function toggle(list: string[], value: string): string[] {
     : [...list, value];
 }
 
-/** 描画前に登録の有無だけ知りたいときに使う */
-export function storedWorkUrls(): string[] {
-  try {
-    const raw = localStorage.getItem(key);
-
-    return raw === null ? [] : ((JSON.parse(raw) as Stored).works ?? []);
-  } catch {
-    return [];
-  }
-}
-
 export default function useFavorites(): Favorites {
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
   const { data: session } = authClient.useSession();
