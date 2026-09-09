@@ -1,15 +1,18 @@
 import { type ParsedWork } from "../../../src/types/work.ts";
 import championCross from "./championCross.ts";
 import comicAction from "./comicAction.ts";
+import comicBoost from "./comicBoost.ts";
 import comicDays from "./comicDays.ts";
 import comicFuz from "./comicFuz.ts";
 import comicGardo from "./comicGardo.ts";
 import comicMeteor from "./comicMeteor.ts";
 import comicOgyaaa from "./comicOgyaaa.ts";
+import comicRide from "./comicRide.ts";
 import comicWalker from "./comicWalker.ts";
 import comicZenon from "./comicZenon.ts";
 import comiplex from "./comiplex.ts";
 import ganganOnline from "./ganganOnline.ts";
+import gaugauMonster from "./gaugauMonster.ts";
 import getsumagakichi from "./getsumagakichi.ts";
 import kurageBunch from "./kurageBunch.ts";
 import magazinePocket from "./magazinePocket.ts";
@@ -69,6 +72,9 @@ const sources: Source[] = [
   { fetchToday: youngAceUp, siteUrl: "https://web-ace.jp/youngaceup/" },
   { fetchToday: comicGardo, siteUrl: "https://comic-gardo.com/" },
   { fetchToday: mangaUp, siteUrl: "https://www.manga-up.com/" },
+  { fetchToday: comicBoost, siteUrl: "https://comic-boost.com/" },
+  { fetchToday: comicRide, siteUrl: "https://comicride.jp/" },
+  { fetchToday: gaugauMonster, siteUrl: "https://gaugau.futabanet.jp/" },
 ];
 
 export default sources;

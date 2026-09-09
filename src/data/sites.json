@@ -30,6 +30,12 @@
     "url": "https://comic-action.com/"
   },
   {
+    "name": "がうがうモンスター",
+    "updateDay": "日月火水木金土",
+    "updateTime": "",
+    "url": "https://gaugau.futabanet.jp/"
+  },
+  {
     "name": "くらげバンチ",
     "updateDay": "火金",
     "updateTime": "12:00",
@@ -64,6 +70,18 @@
     "updateDay": "日月火水木金土",
     "updateTime": "12:00",
     "url": "https://comic-gardo.com/"
+  },
+  {
+    "name": "コミックブースト",
+    "updateDay": "火金",
+    "updateTime": "",
+    "url": "https://comic-boost.com/"
+  },
+  {
+    "name": "コミックライド",
+    "updateDay": "日月火水木金土",
+    "updateTime": "",
+    "url": "https://comicride.jp/"
   },
   {
     "name": "コミプレ",
