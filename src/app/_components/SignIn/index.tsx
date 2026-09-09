@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MdLogin } from "react-icons/md";
 import authClient from "@/app/authClient";
+import useIsHydrated from "@/app/useIsHydrated";
 import styles from "./style.module.css";
 
 /**
@@ -16,13 +17,9 @@ import styles from "./style.module.css";
 export default function SignIn(): React.JSX.Element {
   const { data: session, isPending } = authClient.useSession();
   // サーバー側では誰が見ているか分からない。組み上がるまでは同じものを描く
-  const [isMounted, setIsMounted] = useState(false);
+  const isMounted = useIsHydrated();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   useEffect(() => {
     if (!menuOpen) {

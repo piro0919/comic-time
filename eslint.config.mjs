@@ -60,7 +60,6 @@ const eslintConfig = [
     rules: {
       // Next 16 が既定で入れる React Compiler の規則。組み上がるまで待つための
       // isMounted の型を軒並み叩くので、いまは警告にとどめる。直すなら別の作業として。
-      "react-hooks/set-state-in-effect": "warn",
       "@next/next/no-html-link-for-pages": "error",
       "@next/next/no-img-element": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],

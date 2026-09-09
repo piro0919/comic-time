@@ -1,9 +1,10 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createPortal } from "react-dom";
 import { MdInstallMobile } from "react-icons/md";
 import usePwa from "use-pwa";
+import useIsHydrated from "@/app/useIsHydrated";
 import styles from "./style.module.css";
 
 const PWAPrompt = dynamic(async () => import("react-ios-pwa-prompt"), {
@@ -30,13 +31,9 @@ function isAppleDevice(): boolean {
  */
 export default function InstallButton(): null | React.JSX.Element {
   const { canInstallprompt, enabledPwa, isPwa, showInstallPrompt } = usePwa();
-  const [isApple, setIsApple] = useState(false);
   const [isGuideShown, setIsGuideShown] = useState(false);
-
-  useEffect(() => {
-    setIsApple(isAppleDevice());
-  }, []);
-
+  // 組み上がるまでは window を見られない。サーバー側では Apple 端末と決められない
+  const isApple = useIsHydrated() && isAppleDevice();
   const canPrompt = enabledPwa && canInstallprompt;
 
   if (isPwa || (!canPrompt && !isApple)) {

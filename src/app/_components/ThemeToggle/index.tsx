@@ -1,7 +1,8 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import useIsHydrated from "@/app/useIsHydrated";
 import styles from "./style.module.css";
 
 /** globals.css の --background と揃える。ブラウザの上端に出る色 */
@@ -15,11 +16,7 @@ const ownedAttribute = "data-theme-color";
  */
 export default function ThemeToggle(): null | React.JSX.Element {
   const { resolvedTheme, setTheme } = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useIsHydrated();
 
   useEffect(() => {
     if (resolvedTheme === undefined) {

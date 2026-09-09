@@ -1,8 +1,9 @@
 "use client";
 import dayjs from "dayjs";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { type Weekday, weekdayJa, weekdays } from "@/types/work";
 import { days } from "./days";
+import useIsHydrated from "./useIsHydrated";
 
 export type DayMenuItem = {
   key: Weekday;
@@ -14,13 +15,16 @@ export type DayMenuItem = {
  * 端末の日付はサーバと食い違うため、描画後に日付つきへ差し替える。
  */
 export default function useDayMenu(): DayMenuItem[] {
-  const [items, setItems] = useState<DayMenuItem[]>(() =>
-    days.map(({ key, label }) => ({ key, label })),
-  );
+  const isHydrated = useIsHydrated();
 
-  useEffect(() => {
+  return useMemo(() => {
+    if (!isHydrated) {
+      return days.map(({ key, label }) => ({ key, label }));
+    }
+
     const today = dayjs();
-    const week = Array.from({ length: 7 }, (_, back): DayMenuItem => {
+
+    return Array.from({ length: 7 }, (_, back): DayMenuItem => {
       const date = today.subtract(back, "day");
       const key = weekdays.at(date.day());
 
@@ -29,9 +33,5 @@ export default function useDayMenu(): DayMenuItem[] {
         label: `${date.month() + 1}/${date.date()}（${key === undefined ? "" : weekdayJa[key]}）`,
       };
     });
-
-    setItems(week);
-  }, []);
-
-  return items;
+  }, [isHydrated]);
 }
