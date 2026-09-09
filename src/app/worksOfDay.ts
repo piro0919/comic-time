@@ -41,6 +41,21 @@ export function recentDateOf(day: Weekday, from = new Date()): DateKey {
   return dateKeyOf(from);
 }
 
+/**
+ * 画面へ渡すぶんだけに絞る。workUrl は取得が最新話を割り出すために持っている項目で、
+ * 画面は読まない。カードはクライアント側の部品なので、渡した値はそのまま HTML に載る。
+ */
+function forScreen(work: Work): Work {
+  return {
+    foundAt: work.foundAt,
+    siteName: work.siteName,
+    siteUrl: work.siteUrl,
+    thumbnailUrl: work.thumbnailUrl,
+    title: work.title,
+    url: work.url,
+  };
+}
+
 /** その日に更新された作品。ファイルが無ければ空 */
 export function worksOfDate(date: DateKey): Work[] {
   try {
@@ -55,13 +70,18 @@ export function worksOfDate(date: DateKey): Work[] {
 /**
  * その曜日に出す作品。あとで見つかったものほど上に置く。
  * 同じ回に見つかったものは作品名の順に並べる。
+ *
+ * workUrl は落とす。取得が最新話を割り出すために持っている項目で、画面は読まない。
+ * カードはクライアント側の部品なので、渡した値はそのまま HTML に載って送られる。
  */
 export default function worksOfDay(day: Weekday): Work[] {
-  return worksOfDate(recentDateOf(day)).toSorted((a, b) => {
-    const diff = b.foundAt.localeCompare(a.foundAt);
+  return worksOfDate(recentDateOf(day))
+    .map(forScreen)
+    .toSorted((a, b) => {
+      const diff = b.foundAt.localeCompare(a.foundAt);
 
-    return diff === 0 ? a.title.localeCompare(b.title, "ja") : diff;
-  });
+      return diff === 0 ? a.title.localeCompare(b.title, "ja") : diff;
+    });
 }
 
 /**
@@ -91,11 +111,13 @@ export function recentWorks(from = new Date()): {
 
     return {
       date,
-      works: worksOfDate(date).toSorted((a, b) => {
-        const diff = b.foundAt.localeCompare(a.foundAt);
+      works: worksOfDate(date)
+        .map(forScreen)
+        .toSorted((a, b) => {
+          const diff = b.foundAt.localeCompare(a.foundAt);
 
-        return diff === 0 ? a.title.localeCompare(b.title, "ja") : diff;
-      }),
+          return diff === 0 ? a.title.localeCompare(b.title, "ja") : diff;
+        }),
     };
   });
 }

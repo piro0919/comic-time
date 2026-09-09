@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { dayHref } from "@/app/days";
+import { dayHref, days } from "@/app/days";
 import useDayMenu from "@/app/useDayMenu";
 import useFavorites from "@/app/useFavorites";
 import useSelectedDay from "@/app/useSelectedDay";
@@ -23,6 +23,24 @@ export default function MobileNav(): React.JSX.Element {
     pathname === "/favorites" ||
     (pathname === "/" && favorites.workUrls.length > 0);
   const onSites = pathname.startsWith("/sites");
+  /*
+   * 先読みするのは、いま見ている日の隣だけにする。7日ぶん全部だと、
+   * 開くたびに見てもいないページのぶんまで回線を使う。振って移るのは隣で、
+   * 離れた日は押されたときに取りに行けば足りる。
+   */
+  const neighbours = new Set<string>();
+
+  if (selectedDay !== undefined) {
+    const index = days.findIndex(({ key }) => key === selectedDay);
+
+    [index - 1, index + 1].forEach((next) => {
+      const day = days.at(next < 0 ? days.length - 1 : next % days.length);
+
+      if (day !== undefined) {
+        neighbours.add(day.key);
+      }
+    });
+  }
 
   /*
    * 横スクロールするナビなので、選ばれているタブが画外だと分からない。
@@ -42,7 +60,8 @@ export default function MobileNav(): React.JSX.Element {
           className={clsx(styles.item, { [styles.currentDay]: onFavorites })}
           ref={onFavorites ? currentRef : null}
         >
-          <Link className={styles.button} href="/favorites">
+          {/* 7日ぶんの作品を丸ごと積んでいて重い。押されてから取りに行く */}
+          <Link className={styles.button} href="/favorites" prefetch={false}>
             お気に入り
             {favorites.visibleWorkCount === 0 ? null : (
               <span className={styles.count}>{favorites.visibleWorkCount}</span>
@@ -57,7 +76,11 @@ export default function MobileNav(): React.JSX.Element {
             key={day.key}
             ref={selectedDay === day.key ? currentRef : null}
           >
-            <Link className={styles.button} href={dayHref(day.key)}>
+            <Link
+              className={styles.button}
+              href={dayHref(day.key)}
+              prefetch={neighbours.has(day.key)}
+            >
               {day.label}
             </Link>
           </li>
