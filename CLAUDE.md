@@ -87,8 +87,10 @@ All commits are automatically checked for:
 ### ログインとフォロー
 
 - ログインは任意。ログインしなくても今までどおり動き、お気に入りは端末の localStorage だけで完結する
-- 認証は Neon Auth（中身は Better Auth）。手段は Google のみ。利用者とセッションは
-  同じ Postgres の `neon_auth` スキーマに入る。受け口は `src/app/api/auth/[...path]/route.ts`
+- 認証は Better Auth を自前で持つ。手段は Google のみ。利用者・セッション・Google との紐付けは
+  フォローと同じ Postgres の `public` に入る。受け口は `src/app/api/auth/[...path]/route.ts`
+- **受け口をこのサイトに置いているのは、Google の同意画面の表示のため。** Neon Auth に預けると
+  リダイレクト先が Neon の接続先になり、同意画面に `neon.tech` と出る
 - ログインすると、その端末の登録が初回だけサーバーへ合流し（`_components/FollowSync`）、
   以降は押すたびにサーバーへ書く。手元はその写しになる。削除の記録は持たない
 - 表は `db/migrations/` の SQL。`follow_work (user_id, slug, site_url)` と

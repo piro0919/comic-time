@@ -1,5 +1,5 @@
 "use client";
-import { createAuthClient } from "@neondatabase/auth/next";
+import { createAuthClient } from "better-auth/react";
 
 /**
  * ログインの窓口。ログインは任意なので、ここを一度も呼ばなくてもサイトは動く。

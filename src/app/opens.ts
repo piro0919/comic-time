@@ -1,5 +1,6 @@
 "use server";
 import { neon } from "@neondatabase/serverless";
+import { headers } from "next/headers";
 import auth from "@/app/auth";
 
 /**
@@ -17,9 +18,9 @@ const keepDays = 30;
 
 /** 今ログインしている人の id。していなければ null */
 async function currentUserId(): Promise<null | string> {
-  const { data } = await auth.getSession();
+  const session = await auth.api.getSession({ headers: await headers() });
 
-  return data?.user.id ?? null;
+  return session?.user.id ?? null;
 }
 
 /** その人の既読全部。URLから開いた日への対応で返す */

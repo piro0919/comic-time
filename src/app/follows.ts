@@ -1,5 +1,6 @@
 "use server";
 import { neon } from "@neondatabase/serverless";
+import { headers } from "next/headers";
 import auth from "@/app/auth";
 import { named, refOf } from "@/app/followKeys";
 
@@ -26,9 +27,9 @@ const sql = neon(process.env.DATABASE_URL ?? "");
 
 /** 今ログインしている人の id。していなければ null */
 async function currentUserId(): Promise<null | string> {
-  const { data } = await auth.getSession();
+  const session = await auth.api.getSession({ headers: await headers() });
 
-  return data?.user.id ?? null;
+  return session?.user.id ?? null;
 }
 
 /** その人のフォロー全部。ログインしていなければ空 */
@@ -45,7 +46,9 @@ export async function readFollows(): Promise<Follows> {
   ]);
   // 台帳から消えた作品は見出しに戻せない。出しても押せないので落とす
   const found = works
-    .map((row) => named({ siteUrl: String(row.site_url), slug: String(row.slug) }))
+    .map((row) =>
+      named({ siteUrl: String(row.site_url), slug: String(row.slug) }),
+    )
     .filter((entry) => entry !== undefined);
 
   return {
