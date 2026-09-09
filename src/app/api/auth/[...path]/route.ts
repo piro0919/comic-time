@@ -1,4 +1,4 @@
-/* eslint-disable filenames/match-exported */
+ 
 import auth from "@/app/auth";
 
 /**
