@@ -52,8 +52,8 @@ export default function Header(): React.JSX.Element {
       <div className={styles.actions}>
         <RankingLink />
         <InstallButton />
-        <SignIn />
         <ThemeToggle />
+        <SignIn />
       </div>
     </header>
   );

@@ -19,3 +19,81 @@
   height: calc(24px + var(--space-2) * 2);
   width: calc(24px + var(--space-2) * 2);
 }
+
+.menuAnchor {
+  display: flex;
+  position: relative;
+}
+
+.avatarButton {
+  align-items: center;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-1);
+  transition: background 0.2s ease;
+}
+
+.avatarButton:hover {
+  background: var(--surface);
+}
+
+.avatar {
+  border-radius: var(--radius-pill);
+}
+
+/* 写真が無い人のぶん。丸の大きさは写真と揃える */
+.initial {
+  align-items: center;
+  background: var(--surface);
+  border-radius: var(--radius-pill);
+  color: var(--foreground);
+  display: flex;
+  font-size: 1.4rem;
+  height: 28px;
+  justify-content: center;
+  width: 28px;
+}
+
+.menu {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-1);
+  box-shadow: var(--shadow-2);
+  display: grid;
+  inset: calc(100% + var(--space-1)) 0 auto auto;
+  min-width: 15em;
+  padding: var(--space-1);
+  position: absolute;
+  z-index: 3;
+}
+
+.account {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+}
+
+.name {
+  font-size: 1.3rem;
+}
+
+.email {
+  color: var(--muted);
+  font-size: 1.2rem;
+  overflow-wrap: anywhere;
+}
+
+.menuItem {
+  border-radius: var(--radius-1);
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: var(--space-2) var(--space-3);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.menuItem:hover {
+  background: var(--surface);
+}
