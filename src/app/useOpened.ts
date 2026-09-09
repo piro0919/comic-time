@@ -1,11 +1,16 @@
 "use client";
 import { useCallback } from "react";
 import { useLocalStorage } from "usehooks-ts";
+import authClient from "@/app/authClient";
+import { markOpen } from "@/app/opens";
 import { type DateKey } from "@/types/work";
 
 /**
  * 開いた回を覚えておく。目印は回のURLで、開いた日を値に持つ。
  * 毎日確認する道具なので、「これはもう読んだ」が分かるだけで往復が減る。
+ *
+ * ログインしているあいだは、開くたびにサーバーへも書く。手元はその写しになる。
+ * 読み出しは手元から行うので、書き込みが遅れても画面は待たない。
  */
 const key = "opened-works";
 /** 記録を残す日数。一覧は7日ぶんしか持たないので、これだけあれば取りこぼさない */
@@ -13,6 +18,8 @@ const keepDays = 30;
 const dayMs = 24 * 60 * 60 * 1000;
 
 export type Opened = {
+  /** 控えてある記録の全部。URLから開いた日へ。合流のときに丸ごと渡す */
+  all: Record<string, string>;
   /**
    * その日のぶんとして既読か。
    * ツイ４のように話が変わってもURLが変わらないサイトがあるため、
@@ -20,6 +27,8 @@ export type Opened = {
    */
   isOpened: (url: string, date: DateKey) => boolean;
   markOpened: (url: string) => void;
+  /** 受け取った記録で丸ごと書き換える。ログインしたときの合流で使う */
+  replaceAll: (next: Record<string, string>) => void;
 };
 
 function dateKey(date: Date): string {
@@ -29,6 +38,8 @@ function dateKey(date: Date): string {
 }
 
 export default function useOpened(): Opened {
+  const { data: session } = authClient.useSession();
+  const signedIn = session !== null;
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
   const [opened, setOpened] = useLocalStorage<Record<string, string>>(
     key,
@@ -37,6 +48,7 @@ export default function useOpened(): Opened {
   );
 
   return {
+    all: opened,
     isOpened: useCallback(
       (url, date) => {
         const at = opened[url];
@@ -47,8 +59,14 @@ export default function useOpened(): Opened {
     ),
     markOpened: useCallback(
       (url) => {
+        const now = dateKey(new Date());
+
+        if (signedIn) {
+          void markOpen(url, now);
+        }
+
         setOpened((prev) => {
-          const today = dateKey(new Date());
+          const today = now;
           // 古い記録は捨てる。一覧から消えた回を抱えても使い道がない
           const cutoff = dateKey(new Date(Date.now() - keepDays * dayMs));
           const kept = Object.entries(prev).filter(
@@ -57,6 +75,12 @@ export default function useOpened(): Opened {
 
           return { ...Object.fromEntries(kept), [url]: today };
         });
+      },
+      [setOpened, signedIn],
+    ),
+    replaceAll: useCallback(
+      (next) => {
+        setOpened(next);
       },
       [setOpened],
     ),
