@@ -3,6 +3,7 @@ import path from "path";
 import { type SiteEntry, type Work } from "../../src/types/work.ts";
 import buildCatalog from "../catalog/index.ts";
 import todayKey from "./date.ts";
+import dropRepeats from "./dropRepeats.ts";
 import { remember } from "./resolveEpisodes.ts";
 import sources from "./sources/index.ts";
 
@@ -84,6 +85,30 @@ export default async function scrape(): Promise<void> {
     }
   }
 
+  // 話数が前の日から動いていないものは、今日の更新ではない
+  const seenBefore = new Set<string>();
+
+  await Promise.all(
+    (await fs.readdir(dataDir).catch(() => []))
+      .filter(
+        (name) =>
+          /^\d{4}-\d{2}-\d{2}\.json$/.test(name) && name !== `${today}.json`,
+      )
+      .map(async (name) => {
+        const works = await readJson<Work[]>(path.join(dataDir, name), []);
+
+        works.forEach((work) => seenBefore.add(work.url));
+      }),
+  );
+
+  const fresh = dropRepeats(collected, seenBefore);
+
+  if (fresh.length < collected.length) {
+    console.log(
+      `[scrape] 話数が動いていない ${collected.length - fresh.length}件を外した`,
+    );
+  }
+
   // 同じ日に何度も走るので、まだ対応していないサイトのぶんは消さずに残す
   const untouched = previous.filter(
     (work) => !sources.some((source) => source.siteUrl === work.siteUrl),
@@ -92,7 +117,7 @@ export default async function scrape(): Promise<void> {
   const merged: Work[] = [];
   const titles = new Set<string>();
 
-  [...untouched, ...collected].forEach((work) => {
+  [...untouched, ...fresh].forEach((work) => {
     if (titles.has(work.title)) {
       return;
     }
