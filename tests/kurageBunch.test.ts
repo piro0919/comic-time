@@ -44,3 +44,11 @@ test("外のサイトへのリンクは出さない", async () => {
     assert.match(work.url, /^https:\/\/kuragebunch\.com\//);
   });
 });
+
+/** 区画の先頭に漫画賞やキャンペーンの知らせが混じる */
+test("お知らせは作品として出さない", async () => {
+  const works = await kurageBunch("2026-08-18");
+  const titles = works.map((work) => work.title);
+
+  assert.ok(!titles.includes("漫画賞結果発表"));
+});

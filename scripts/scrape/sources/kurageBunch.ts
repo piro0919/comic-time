@@ -6,7 +6,7 @@ import fetchHtml from "../fetchHtml.ts";
 /**
  * くらげバンチは火曜と金曜の更新で、トップに直近2回ぶんの区画が並ぶ。
  * 見出しが「8月14日金曜日の更新作品」なので、今日の日付のものだけを取る。
- * 区画の末尾に姉妹サイトへの誘導が混じるので、外のリンクは外す。
+ * 区画には姉妹サイトへの誘導と、漫画賞などの知らせが混じるので、どちらも外す。
  */
 const topUrl = "https://kuragebunch.com/";
 
@@ -47,6 +47,11 @@ export default async function kurageBunch(
 
     // 「コミックバンチKaiはこちら」のような他サイトへの誘導は作品ではない
     if (url.host !== new URL(topUrl).host) {
+      return;
+    }
+
+    // 更新の区画の先頭に漫画賞やキャンペーンの知らせが混じる。作品は /episode/ にある
+    if (url.pathname.startsWith("/info/")) {
       return;
     }
 
