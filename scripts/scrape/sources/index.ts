@@ -15,6 +15,7 @@ import kurageBunch from "./kurageBunch.ts";
 import magazinePocket from "./magazinePocket.ts";
 import magcomi from "./magcomi.ts";
 import mangaOne from "./mangaOne.ts";
+import mangaUp from "./mangaUp.ts";
 import shonenJumpPlus from "./shonenJumpPlus.ts";
 import shuro from "./shuro.ts";
 import sundayWebry from "./sundayWebry.ts";
@@ -67,6 +68,7 @@ const sources: Source[] = [
   { fetchToday: shuro, siteUrl: "https://shuro.world/" },
   { fetchToday: youngAceUp, siteUrl: "https://web-ace.jp/youngaceup/" },
   { fetchToday: comicGardo, siteUrl: "https://comic-gardo.com/" },
+  { fetchToday: mangaUp, siteUrl: "https://www.manga-up.com/" },
 ];
 
 export default sources;
