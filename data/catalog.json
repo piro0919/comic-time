@@ -915,18 +915,23 @@
     "title": "6年生としたいこと"
   },
   {
-    "dayBits": 64,
+    "dayBits": 80,
     "firstSeen": "2026-09-05",
-    "lastSeen": "2026-09-05",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2604/chapter/131804"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1737"
       }
     ],
     "slug": "6年生なのに!",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2604/title_thumbnail_list_single/415164.webp?hash=92xSP4DIae3eIAfPSw9_4g&expires=1789171200",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1782897348/title_small/1737.webp?hash=hGjbrhtv8XQTpL4B4N5NKA&expires=2145884400",
     "title": "6年生なのに！"
   },
   {
@@ -2178,6 +2183,21 @@
     "slug": "overmate",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007087/resized/50b25b9c-b4d1-440c-af7e-4761ba8aa585.jpg",
     "title": "OVER MATE"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1535"
+      }
+    ],
+    "slug": "papuwa",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1746152917/title_small/1535.webp?hash=3M0G9_sDNKkzTWBamffdkg&expires=2145884400",
+    "title": "PAPUWA"
   },
   {
     "dayBits": 32,
@@ -4110,18 +4130,23 @@
     "title": "イジメとカエルとママと復讐"
   },
   {
-    "dayBits": 8,
+    "dayBits": 24,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2088/chapter/126027"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1576"
       }
     ],
     "slug": "いじめの仕返しは先生にお任せ",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2088/title_thumbnail_list_single/431297.webp?hash=DlWqILgwsCw-250B5Kp0hw&expires=1789516800",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1751425186/title_small/1576.webp?hash=SIlPhIi5ur8YL8PDq101JA&expires=2145884400",
     "title": "いじめの仕返しは先生にお任せ"
   },
   {
@@ -24445,18 +24470,18 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2391/chapter/126816"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1631"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2391/chapter/126816"
       }
     ],
     "slug": "結婚初夜のデスループ~脳筋令嬢は何度死んでもめげません~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1762494710/title_small/1631.webp?hash=L8JKmoYpG4Cr4Tsww0FSeg&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2391/title_thumbnail_list_single/407547.webp?hash=txpukzZVQPxi2Xx5DHk7Tg&expires=1789344000",
     "title": "結婚初夜のデスループ～脳筋令嬢は何度死んでもめげません～"
   },
   {
@@ -26265,6 +26290,21 @@
     "title": "婚約破棄をした令嬢は我慢を止めました"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/951"
+      }
+    ],
+    "slug": "婚約破棄を狙って記憶喪失のフリをしたら、素っ気ない態度だった婚約者が「記憶を失う前の君は、俺にベタ惚",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1649137142/title_small/951.webp?hash=hDw8166lMpkvsDuMoNOIEw&expires=2145884400",
+    "title": "婚約破棄を狙って記憶喪失のフリをしたら、素っ気ない態度だった婚約者が「記憶を失う前の君は、俺にベタ惚れだった」という、とんでもない嘘をつき始めた"
+  },
+  {
     "dayBits": 20,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-10",
@@ -26513,6 +26553,21 @@
     "slug": "最強の女傭兵近未来でスポーツ美少女となる",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/2025091113342214049748CF8AF43218B0C1908741D4CA0C1-sm.webp",
     "title": "最強の女傭兵　近未来でスポーツ美少女となる"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/429"
+      }
+    ],
+    "slug": "最強の魔導士。ひざに矢をうけてしまったので田舎の衛兵になる",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1550056443/title_small/429.webp?hash=pp3D1GlL--kn6rdkwCG7Dg&expires=2145884400",
+    "title": "最強の魔導士。ひざに矢をうけてしまったので田舎の衛兵になる"
   },
   {
     "dayBits": 4,
@@ -37925,18 +37980,18 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1736"
-      },
-      {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2304/chapter/131786"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1736"
       }
     ],
     "slug": "氷皇子は砂漠の姫に狙われる",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2304/title_thumbnail_list_single/426878.webp?hash=16rimDXaJYMq679CIyhcAg&expires=1789430400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1782786297/title_small/1736.webp?hash=oW1XAHwKkVZenWYL28OoTg&expires=2145884400",
     "title": "氷皇子は砂漠の姫に狙われる"
   },
   {
