@@ -5,6 +5,7 @@ import Link from "next/link";
 import InstallButton from "../InstallButton";
 import RankingLink from "../RankingLink";
 import ShareFavorites from "../ShareFavorites";
+import SignIn from "../SignIn";
 import ThemeToggle from "../ThemeToggle";
 import styles from "./style.module.css";
 
@@ -53,6 +54,7 @@ export default function Header(): React.JSX.Element {
         <RankingLink />
         <ShareFavorites />
         <InstallButton />
+        <SignIn />
         <ThemeToggle />
       </div>
     </header>

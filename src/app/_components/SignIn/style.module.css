@@ -1,0 +1,21 @@
+.button {
+  align-items: center;
+  border-radius: var(--radius-pill);
+  color: var(--foreground);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2);
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--surface);
+}
+
+/* 入り口の幅だけ先に取っておく。決まった後に横並びがずれないようにする */
+.placeholder {
+  display: block;
+  height: calc(24px + var(--space-2) * 2);
+  width: calc(24px + var(--space-2) * 2);
+}

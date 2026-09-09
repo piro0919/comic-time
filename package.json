@@ -2,6 +2,8 @@
   "dependencies": {
     "@bprogress/next": "3.2.12",
     "@mpth/react-no-ssr": "1.0.1",
+    "@neondatabase/auth": "0.5.0-beta",
+    "@neondatabase/serverless": "1.1.0",
     "@react-spring/web": "10.1.2",
     "@use-gesture/react": "10.3.1",
     "@vercel/analytics": "2.0.1",
