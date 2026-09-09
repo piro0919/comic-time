@@ -1,7 +1,7 @@
 "use server";
 import { neon } from "@neondatabase/serverless";
 import auth from "@/app/auth";
-import { keyOf, refOf } from "@/app/followKeys";
+import { named, refOf } from "@/app/followKeys";
 
 /**
  * ログインした人のフォローを Neon に読み書きする。
@@ -11,7 +11,17 @@ import { keyOf, refOf } from "@/app/followKeys";
  *
  * やり取りは画面が使う見出しのままにして、台帳の slug への変換は followKeys に閉じる。
  * 画面と共有リンクの形を変えずに、長く残す側だけ変わらない住所で持つため。
+ *
+ * 題名も一緒に返す。手元の控えしか名前の出どころが無いと、初めて開いた端末では
+ * 名前の付かない登録になり、画面がそれを「捨ててよいもの」として扱ってしまう。
  */
+type Follows = {
+  sites: string[];
+  /** 見出しから題名へ。台帳から引いたもの */
+  titles: Record<string, string>;
+  works: string[];
+};
+
 const sql = neon(process.env.DATABASE_URL ?? "");
 
 /** 今ログインしている人の id。していなければ null */
@@ -22,29 +32,28 @@ async function currentUserId(): Promise<null | string> {
 }
 
 /** その人のフォロー全部。ログインしていなければ空 */
-export async function readFollows(): Promise<{
-  sites: string[];
-  works: string[];
-}> {
+export async function readFollows(): Promise<Follows> {
   const userId = await currentUserId();
 
   if (userId === null) {
-    return { sites: [], works: [] };
+    return { sites: [], titles: {}, works: [] };
   }
 
   const [works, sites] = await Promise.all([
     sql`select slug, site_url from follow_work where user_id = ${userId} order by followed_at`,
     sql`select site_url from follow_site where user_id = ${userId} order by followed_at`,
   ]);
+  // 台帳から消えた作品は見出しに戻せない。出しても押せないので落とす
+  const found = works
+    .map((row) => named({ siteUrl: String(row.site_url), slug: String(row.slug) }))
+    .filter((entry) => entry !== undefined);
 
   return {
     sites: sites.map((row) => String(row.site_url)),
-    // 台帳から消えた作品は見出しに戻せない。出しても押せないので落とす
-    works: works
-      .map((row) =>
-        keyOf({ siteUrl: String(row.site_url), slug: String(row.slug) }),
-      )
-      .filter((key) => key !== undefined),
+    titles: Object.fromEntries(
+      found.map((entry) => [entry.key, entry.title] as const),
+    ),
+    works: found.map((entry) => entry.key),
   };
 }
 
@@ -105,11 +114,11 @@ export async function unfollowSite(siteUrl: string): Promise<void> {
 export async function mergeFollows(local: {
   sites: string[];
   works: string[];
-}): Promise<{ sites: string[]; works: string[] }> {
+}): Promise<Follows> {
   const userId = await currentUserId();
 
   if (userId === null) {
-    return { sites: [], works: [] };
+    return { sites: [], titles: {}, works: [] };
   }
 
   const refs = local.works

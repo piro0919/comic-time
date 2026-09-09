@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
+import FollowSync from "./_components/FollowSync";
 import Layout from "./_components/Layout";
 
 const notoSansJP = Noto_Sans_JP({
@@ -77,6 +78,7 @@ export default function RootLayout({
           <Suspense>
             <Layout>{children}</Layout>
           </Suspense>
+          <FollowSync />
         </ThemeProvider>
         <Analytics />
       </body>

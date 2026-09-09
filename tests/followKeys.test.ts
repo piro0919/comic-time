@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { keyOf, refOf } from "../src/app/followKeys.ts";
+import { named, refOf } from "../src/app/followKeys.ts";
 import { workKey } from "../src/app/workCards.ts";
 
 /** 複数サイトに載っている作品。サイトごとに別の見出しになる */
@@ -15,10 +15,12 @@ test("見出しから、台帳の slug とサイトの組に移せる", () => {
   assert.equal(ref?.slug, "1日外出録ハンチョウ");
 });
 
-test("組から見出しに戻せる", () => {
+test("組から見出しと題名に戻せる", () => {
   const key = workKey(yanmaga, title);
+  const back = named(refOf(key) ?? { siteUrl: "", slug: "" });
 
-  assert.equal(keyOf(refOf(key) ?? { siteUrl: "", slug: "" }), key);
+  assert.equal(back?.key, key);
+  assert.equal(back?.title, title);
 });
 
 /** 同じ作品でも、読むサイトが違えば別の登録 */

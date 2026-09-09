@@ -1,5 +1,5 @@
 "use client";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { MdLogin, MdLogout } from "react-icons/md";
 import authClient from "@/app/authClient";
 import styles from "./style.module.css";
@@ -10,6 +10,13 @@ import styles from "./style.module.css";
  */
 export default function SignIn(): React.JSX.Element {
   const { data: session, isPending } = authClient.useSession();
+  // サーバー側では誰が見ているか分からない。組み上がるまでは同じものを描く
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const signIn = useCallback(() => {
     void authClient.signIn.social({ provider: "google" });
   }, []);
@@ -18,7 +25,7 @@ export default function SignIn(): React.JSX.Element {
   }, []);
 
   // 読み込み中に入り口を出すと、すでに入っている人の画面で一瞬ちらつく
-  if (isPending) {
+  if (!isMounted || isPending) {
     return <span className={styles.placeholder} />;
   }
 

@@ -1,6 +1,13 @@
 "use client";
 import { useCallback, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
+import authClient from "@/app/authClient";
+import {
+  followSite,
+  followWork,
+  unfollowSite,
+  unfollowWork,
+} from "@/app/follows";
 
 /**
  * 追いかける対象は作品とサイトの2種類。
@@ -10,6 +17,10 @@ import { useLocalStorage } from "usehooks-ts";
  * 作品は題名から作った見出しで持つ。サイトによっては作品のURLが話ごとに変わり、
  * URLで持つと登録した回が流れた時点で追えなくなるため。
  * 以前の登録はURLのまま入っているので、どちらでも当たるようにしてある。
+ *
+ * ログインしているあいだは、押すたびにサーバーへも書く。手元はその写しになる。
+ * ログインしていなければ手元だけで完結する。読み出しは今までどおり手元から行うので、
+ * サーバーへの書き込みが遅れても画面は待たない。
  */
 export const key = "favorites-v3";
 
@@ -70,6 +81,8 @@ export function storedWorkUrls(): string[] {
 
 export default function useFavorites(): Favorites {
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
+  const { data: session } = authClient.useSession();
+  const signedIn = session !== null;
   const [stored, setStored] = useLocalStorage<Stored>(
     key,
     { sites: [], works: [] },
@@ -108,6 +121,7 @@ export default function useFavorites(): Favorites {
       [setStored],
     ),
     followsSite: useCallback((siteUrl) => siteSet.has(siteUrl), [siteSet]),
+    // 手元で描けないことと、登録をやめたことは別。ここはサーバーへ触らない
     forgetWorks: useCallback(
       (keys) => {
         setStored((prev) => {
@@ -160,12 +174,26 @@ export default function useFavorites(): Favorites {
     titles,
     toggleSite: useCallback(
       (siteUrl) => {
+        if (signedIn) {
+          void (siteSet.has(siteUrl)
+            ? unfollowSite(siteUrl)
+            : followSite(siteUrl));
+        }
+
         setStored((prev) => ({ ...prev, sites: toggle(prev.sites, siteUrl) }));
       },
-      [setStored],
+      [setStored, signedIn, siteSet],
     ),
     toggleWork: useCallback(
       (workKey, legacyKeys) => {
+        // どちらへ倒れるかは押す前の状態で決まる。サーバーにも同じ向きを伝える
+        const wasAdded =
+          workSet.has(workKey) || legacyKeys.some((key) => workSet.has(key));
+
+        if (signedIn) {
+          void (wasAdded ? unfollowWork(workKey) : followWork(workKey));
+        }
+
         setStored((prev) => {
           const added =
             prev.works.includes(workKey) ||
@@ -186,7 +214,7 @@ export default function useFavorites(): Favorites {
           return { ...prev, titles, works: rest };
         });
       },
-      [setStored],
+      [setStored, signedIn, workSet],
     ),
     visibleWorkCount,
     workUrls: stored.works,
