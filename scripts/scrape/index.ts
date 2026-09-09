@@ -1,6 +1,10 @@
 import fs from "fs/promises";
 import path from "path";
-import { type SiteEntry, type Work } from "../../src/types/work.ts";
+import {
+  type DateKey,
+  type SiteEntry,
+  type Work,
+} from "../../src/types/work.ts";
 import buildCatalog from "../catalog/index.ts";
 import todayKey from "./date.ts";
 import dropRepeats from "./dropRepeats.ts";
@@ -16,6 +20,22 @@ import sources from "./sources/index.ts";
  * 見つけた時刻を控える。画面はこれを使って新しいものから並べる。
  */
 const dataDir = path.join(process.cwd(), "data", "works");
+/**
+ * 話数が動かないまま出続けていた作品の控え。data/works は7日で消えるので、
+ * ここに残しておかないと窓から出た日に同じ話がまた「今日の更新」として戻ってくる。
+ * git の差分に出るので、連載が終わった作品が増えていくのもここで分かる。
+ */
+const droppedPath = path.join(process.cwd(), "data", "dropped.json");
+
+/** 話数が動かないので出すのをやめた話 */
+type DroppedWork = {
+  /** 外した日 */
+  droppedOn: DateKey;
+  siteName: string;
+  title: string;
+  /** 話の住所。これと同じ住所は二度と今日の更新にしない */
+  url: string;
+};
 /** 画面に出す日数。これより古い日のファイルは消す */
 const keepDays = 7;
 
@@ -101,11 +121,32 @@ export default async function scrape(): Promise<void> {
       }),
   );
 
-  const fresh = dropRepeats(collected, seenBefore);
+  const dropped = await readJson<DroppedWork[]>(droppedPath, []);
 
-  if (fresh.length < collected.length) {
-    console.log(
-      `[scrape] 話数が動いていない ${collected.length - fresh.length}件を外した`,
+  dropped.forEach((work) => seenBefore.add(work.url));
+
+  const fresh = dropRepeats(collected, seenBefore);
+  const keptUrls = new Set(fresh.map((work) => work.url));
+  const added = collected
+    .filter((work) => !keptUrls.has(work.url))
+    .filter((work) => !dropped.some((entry) => entry.url === work.url))
+    .map<DroppedWork>((work) => ({
+      droppedOn: today,
+      siteName: work.siteName,
+      title: work.title,
+      url: work.url,
+    }));
+
+  if (added.length > 0) {
+    added.forEach((work) => {
+      console.log(
+        `[scrape] ${work.siteName}「${work.title}」は話数が動いていない`,
+      );
+    });
+
+    await fs.writeFile(
+      droppedPath,
+      `${JSON.stringify([...dropped, ...added], null, 2)}\n`,
     );
   }
 
