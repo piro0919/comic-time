@@ -1,4 +1,4 @@
-/* eslint-disable filenames/match-exported, filenames/match-regex */
+/* eslint-disable filenames/match-regex */
 import { defineConfig, devices } from "@playwright/test";
 
 /**

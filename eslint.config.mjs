@@ -1,4 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 import js from "@eslint/js";
 import tsParser from "@typescript-eslint/parser";
 import css from "eslint-plugin-css";
@@ -26,15 +28,15 @@ const eslintConfig = [
   },
   ...compat.extends(
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:css/recommended",
     "plugin:no-unsanitized/recommended-legacy",
     "plugin:promise/recommended",
     "plugin:security/recommended-legacy",
-    "next/core-web-vitals",
-    "next/typescript",
-    "prettier",
   ),
+  // eslint-config-next 16 は flat config を配るので、FlatCompat を通さず直に読む
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  ...compat.extends("prettier"),
   {
     languageOptions: {
       ecmaVersion: 2024,
@@ -56,6 +58,9 @@ const eslintConfig = [
       "write-good-comments": writeGoodComments,
     },
     rules: {
+      // Next 16 が既定で入れる React Compiler の規則。組み上がるまで待つための
+      // isMounted の型を軒並み叩くので、いまは警告にとどめる。直すなら別の作業として。
+      "react-hooks/set-state-in-effect": "warn",
       "@next/next/no-html-link-for-pages": "error",
       "@next/next/no-img-element": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],

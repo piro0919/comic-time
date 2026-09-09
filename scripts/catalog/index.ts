@@ -4,8 +4,8 @@ import workSlug, { titleKey } from "../../src/app/workSlug.ts";
 import {
   type CatalogEntry,
   type DateKey,
-  type Work,
   weekdays,
+  type Work,
 } from "../../src/types/work.ts";
 
 /**

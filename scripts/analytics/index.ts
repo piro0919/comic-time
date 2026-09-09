@@ -76,9 +76,9 @@ function createClient(
   }
 
   return {
-    aggregate: (by, limit = 10) =>
+    aggregate: async (by, limit = 10) =>
       get<Row[]>("aggregate", { by, limit: String(limit), since, until }),
-    count: (from, to) => get<Totals>("count", { since: from, until: to }),
+    count: async (from, to) => get<Totals>("count", { since: from, until: to }),
   };
 }
 

@@ -36,6 +36,7 @@ type DroppedWork = {
   /** 話の住所。これと同じ住所は二度と今日の更新にしない */
   url: string;
 };
+
 /** 画面に出す日数。これより古い日のファイルは消す */
 const keepDays = 7;
 
