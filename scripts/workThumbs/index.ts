@@ -99,6 +99,7 @@ export default async function workThumbs(): Promise<void> {
   );
 
   const failed: string[] = [];
+
   let done = 0;
 
   async function worker(): Promise<void> {
