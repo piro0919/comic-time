@@ -112,12 +112,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/2550689798764416932"
+        "url": "https://comic-days.com/episode/2550689798764416938"
       }
     ],
     "slug": "「ククク...。奴は四天王の中でも最弱」と解雇された俺、なぜか勇者と聖女の師匠になる",
@@ -127,12 +127,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_019823_S/episodes/KC_0198230000300031_E"
+        "url": "https://comic-walker.com/detail/KC_019823_S/episodes/KC_0198230000300041_E"
       }
     ],
     "slug": "「ねぇ、俺だけにして」",
@@ -457,12 +457,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/2551460909817447260"
+        "url": "https://comic-days.com/episode/2551460909817447267"
       }
     ],
     "slug": "【悲報】清楚系で売っていた底辺配信者、うっかり配信を切り忘れたままss級モンスターを拳で殴り飛ばして",
@@ -841,6 +841,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_001622_S/episodes/KC_0016220004500011_E"
+      }
+    ],
+    "slug": "31番目のお妃様",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001622/resized/7f875a85-1d17-432a-8de9-eac17074cdab.jpg",
+    "title": "31番目のお妃様"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-08-27",
     "sites": [
@@ -952,21 +967,21 @@
   {
     "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-10",
     "sites": [
-      {
-        "name": "コミックDAYS",
-        "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421984142937184"
-      },
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/02651/episode/428817"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/12207421984173600145"
       }
     ],
     "slug": "8月31日のロングサマー",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2651/title_grid_wide_2024091017064744395651b9e5425e79c62072fece9175.png",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/04627da939ed51badb177dc7a0d710acc0527ecc/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F4856001361074204539-1a3cd3ef2029ac2ef5004b9106b0f54b%3F1722417430",
     "title": "8月31日のロングサマー"
   },
   {
@@ -1148,6 +1163,21 @@
     "slug": "blacksheep─超常機密分析部─",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/820c159cbd57f73b1a220fd006fe59262a5691ec/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965114098122-59abc6f5a0195b97925e9c3fd7536806%3F1772684985",
     "title": "BlackSheep ─超常機密分析部─"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_012211_S/episodes/KC_0122110000300021_E"
+      }
+    ],
+    "slug": "bl漫画の転生モブですが、悪役王子に執着されていたようです",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012211/resized/5b8d82fa-a7de-4b23-8b9e-f247713e5ec9.jpg",
+    "title": "BL漫画の転生モブですが、悪役王子に執着されていたようです"
   },
   {
     "dayBits": 32,
@@ -1502,12 +1532,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_000842_S/episodes/KC_0008420004600021_E"
+        "url": "https://comic-walker.com/detail/KC_000842_S/episodes/KC_0008420004600031_E"
       }
     ],
     "slug": "fatestaynightunlimitedbladeworks",
@@ -1562,21 +1592,21 @@
   {
     "dayBits": 48,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-04",
+    "lastSeen": "2026-09-10",
     "sites": [
-      {
-        "name": "コミックDAYS",
-        "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/13932016480030057164"
-      },
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/00715/episode/249022"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/13932016480030057213"
       }
     ],
     "slug": "giantkilling",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/715/title_grid_wide_o_20190129102605eff6095e96cd07765ba2fa63eba418f6.png",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/dafe0632f9e34d74e3234338e216ed125a539241/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F13932016480029848996-21391b9e319ccf26b7ab54da11ee3226%3F1722417120",
     "title": "GIANT KILLING"
   },
   {
@@ -1608,6 +1638,21 @@
     "slug": "greenboy",
     "thumbnailUrl": "https://app.manga-one.com/secure/1775097663/webp/chapter/353362.webp?hash=gL4vquQYUgB6VkY_8nG71g&expires=1874966400",
     "title": "GREEN BOY"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "となりのヤングジャンプ",
+        "siteUrl": "https://tonarinoyj.jp/",
+        "url": "https://tonarinoyj.jp/episode/12207421984209114149"
+      }
+    ],
+    "slug": "grenade",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/277905bf40622186fdf7d1ec0fcedad398d1dd8d/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F12207421984209113482-ca90a995a523e9f5dc1d9db0ef74671f%3F1788843740",
+    "title": "GreNADE"
   },
   {
     "dayBits": 2,
@@ -2511,6 +2556,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912965546862165"
+      }
+    ],
+    "slug": "sunnyシックスティーン",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/8637dcc7d60c8eb4052713bc7a95184389403f5d/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965546759864-d77cd03479b9c40068ecad5d68f1f758%3F1745281879",
+    "title": "SUNNYシックスティーン"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-09-03",
     "lastSeen": "2026-09-03",
     "sites": [
@@ -2657,12 +2717,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_019457_S/episodes/KC_0194570000400021_E"
+        "url": "https://comic-walker.com/detail/KC_019457_S/episodes/KC_0194570000500011_E"
       }
     ],
     "slug": "unansweredbutterfly-swordartonline-",
@@ -3240,29 +3300,34 @@
     "title": "あくまでクジャクの話です。"
   },
   {
-    "dayBits": 2,
+    "dayBits": 18,
     "firstSeen": "2026-09-07",
-    "lastSeen": "2026-09-07",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1507/chapter/130467"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1045"
       }
     ],
     "slug": "アサシンシンデレラ",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1507/title_thumbnail_list_single/430340.webp?hash=sTq94E2nqhWAfa5ITD4Y9Q&expires=1789344000",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1678261305/title_small/1045.webp?hash=TGsh1EXh5k2bAOQ5we7oDA&expires=2145884400",
     "title": "アサシン＆シンデレラ"
   },
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006073_S/episodes/KC_0060730003500021_E"
+        "url": "https://comic-walker.com/detail/KC_006073_S/episodes/KC_0060730003600011_E"
       }
     ],
     "slug": "アザミヤコを好きになる",
@@ -3525,6 +3590,21 @@
     "title": "アフターゴッド"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007220_S/episodes/KC_0072200001100011_E"
+      }
+    ],
+    "slug": "アフタヌーンティーはいかがですか私と先輩の、不純で一途なふたり暮らし",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007220/resized/f79dc72e-44c3-472b-89fb-677e7b487dbf.jpg",
+    "title": "アフタヌーンティーはいかがですか？ 私と先輩の、不純で一途なふたり暮らし"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
     "lastSeen": "2026-09-09",
@@ -3772,12 +3852,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008753_S/episodes/KC_0087530000400011_E"
+        "url": "https://comic-walker.com/detail/KC_008753_S/episodes/KC_0087530000400021_E"
       }
     ],
     "slug": "アラサー聖女、異世界で引退王と保育園を開きまして",
@@ -3858,6 +3938,21 @@
     "slug": "アルテ",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/60e239e038b80d06aa2418e5353842a9784ee676/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F10834108156692660000-c66afd16d404fc24f9466df04267748f%3F1782192422",
     "title": "アルテ"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_001530_S/episodes/KC_0015300004500011_E"
+      }
+    ],
+    "slug": "アルバート家の令嬢は没落をご所望です",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001530/resized/5a43381e-2a38-44bc-8428-b87b96f8fb18.jpg",
+    "title": "アルバート家の令嬢は没落をご所望です"
   },
   {
     "dayBits": 16,
@@ -3950,6 +4045,21 @@
     "title": "あわいの焔刃"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006202_S/episodes/KC_0062020001900011_E"
+      }
+    ],
+    "slug": "アン・シャーリー",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006202/resized/3cbe50fa-17f9-41b5-ae01-aac1bf9ed0b6.jpg",
+    "title": "アン・シャーリー"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
     "lastSeen": "2026-09-09",
@@ -4037,21 +4147,21 @@
   {
     "dayBits": 80,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-05",
+    "lastSeen": "2026-09-10",
     "sites": [
-      {
-        "name": "コミックDAYS",
-        "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/2551460909968440820"
-      },
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/03030/episode/426530"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2551460909968440829"
       }
     ],
     "slug": "イクサガミ",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3030/title_grid_wide_20251010122809fe501e72559dda75cf87fc54af4437ef.png",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d8f6f4d1e90eace9fb192d7f7eff5ae8c600ab4e/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F316190247013180370-28194fff8bd5433225d18185c977ce4d%3F1756706549",
     "title": "イクサガミ"
   },
   {
@@ -4083,6 +4193,36 @@
     "slug": "イケメンお姉さんはそーゆー目で見られたい",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/009360/resized/91950e13-49c5-4627-be77-ac36c3c7d9ab.jpg",
     "title": "イケメンお姉さんはそーゆー目で見られたい"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1754"
+      }
+    ],
+    "slug": "イケメンすぎます棗さん",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1787189384/title_small/1754.webp?hash=Xh1wAHmO76CmgX1INA6ipg&expires=2145884400",
+    "title": "イケメンすぎます棗さん"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008326_S/episodes/KC_0083260001100011_E"
+      }
+    ],
+    "slug": "イケメン最強冒険者を従えて",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008326/resized/0c85c8c6-3bd9-4b67-8fed-2aa451252895.jpg",
+    "title": "イケメン最強冒険者を従えて"
   },
   {
     "dayBits": 8,
@@ -4148,6 +4288,21 @@
     "slug": "いじめの仕返しは先生にお任せ",
     "thumbnailUrl": "https://www.ganganonline.com/secure/title/2088/title_thumbnail_list_single/431297.webp?hash=DlWqILgwsCw-250B5Kp0hw&expires=1789516800",
     "title": "いじめの仕返しは先生にお任せ"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008404_S/episodes/KC_0084040000800011_E"
+      }
+    ],
+    "slug": "いずれ傾国悪女と呼ばれる宮女は、冷帝の愛し妃",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008404/resized/1a4f697e-882e-49e0-bb57-c41f825adbe2.jpg",
+    "title": "いずれ傾国悪女と呼ばれる宮女は、冷帝の愛し妃"
   },
   {
     "dayBits": 32,
@@ -4365,6 +4520,21 @@
     "title": "ウィキッドスポット"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_019827_S/episodes/KC_0198270000400011_E"
+      }
+    ],
+    "slug": "ウィッチクラフト0ゼロの魔女の魔法開発",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019827/resized/445f0bc7-3532-4f83-a975-1727ebca0d9f.jpg",
+    "title": "ウィッチクラフト0 ゼロの魔女の魔法開発"
+  },
+  {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
     "lastSeen": "2026-09-06",
@@ -4580,6 +4750,21 @@
     "title": "うちこもり妻はコスプレ配信者"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_012727_S/episodes/KC_0127270000700011_E"
+      }
+    ],
+    "slug": "うちのメイドがクラスの好きな子に似ている",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012727/resized/39336a57-8df6-4ba1-a19c-8748e36fefff.jpg",
+    "title": "うちのメイドがクラスの好きな子に似ている"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
     "lastSeen": "2026-09-07",
@@ -4625,6 +4810,21 @@
     "title": "うちの犬はもっと可愛かった　愛犬閣下は甘やかされたい"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912965858307208"
+      }
+    ],
+    "slug": "うちの清楚系委員長がかつて中二病アイドルだったことを俺だけが知っている。",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ed152c560bfafbcb57abe9ee3f76c6b911482f7d/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965822549406-a57e6e50dddb64767043af802301b963%3F1782891061",
+    "title": "うちの清楚系委員長がかつて中二病アイドルだったことを俺だけが知っている。"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
     "lastSeen": "2026-09-08",
@@ -4638,6 +4838,21 @@
     "slug": "うちの弟子がいつのまにか人類最強になっていて、なんの才能もない師匠の俺が、それを超える宇宙最強に誤認",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240514160434393E7E5678CD22970BA80301F4F91425908-sm.webp",
     "title": "うちの弟子がいつのまにか人類最強になっていて、なんの才能もない師匠の俺が、それを超える宇宙最強に誤認定されている件について"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "竹コミ！",
+        "siteUrl": "https://takecomic.jp/",
+        "url": "https://takecomic.jp/series/135220287d820/new"
+      }
+    ],
+    "slug": "ウは宇宙ヤバイのウ!",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/20251010132403107487FCE8E1549D9D7FF35F9180DCE506B-sm.webp",
+    "title": "ウは宇宙ヤバイのウ！"
   },
   {
     "dayBits": 32,
@@ -4997,12 +5212,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_014275_S/episodes/KC_0142750001000021_E"
+        "url": "https://comic-walker.com/detail/KC_014275_S/episodes/KC_0142750001100011_E"
       }
     ],
     "slug": "おうち彼氏~職場よりも可愛いあなた~",
@@ -5383,6 +5598,21 @@
     "slug": "おっさん、転生して天才役者になる",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003737/resized/312c61cf-0a68-40c8-9433-868f59cc1701.jpg",
     "title": "おっさん、転生して天才役者になる"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006380_S/episodes/KC_0063800001200011_E"
+      }
+    ],
+    "slug": "オッサンの異世界は、何故かハードモード。",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006380/resized/985b5c54-ea92-449a-9b79-f001fe8dc53c.jpg",
+    "title": "オッサンの異世界は、何故かハードモード。"
   },
   {
     "dayBits": 64,
@@ -5825,6 +6055,21 @@
     "title": "お人好し冒険者、転生少女を拾いました"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006334_S/episodes/KC_0063340001400021_E"
+      }
+    ],
+    "slug": "お疲れアラサーは異世界でもふもふドラゴンと騎士の世話をしています",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006334/resized/5493d518-f815-43ee-ab16-46254ac5f968.jpg",
+    "title": "お疲れアラサーは異世界でもふもふドラゴンと騎士の世話をしています"
+  },
+  {
     "dayBits": 64,
     "firstSeen": "2026-08-29",
     "lastSeen": "2026-09-05",
@@ -6057,12 +6302,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_007026_S/episodes/KC_0070260000900011_E"
+        "url": "https://comic-walker.com/detail/KC_007026_S/episodes/KC_0070260000900021_E"
       }
     ],
     "slug": "かくして魔法使いノイ・ガレネーは100年後、花嫁となった",
@@ -6115,18 +6360,23 @@
     "title": "カクリキ"
   },
   {
-    "dayBits": 4,
+    "dayBits": 20,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-01",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/02085/episode/430009"
+      },
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_002858_S/episodes/KC_0028580008400011_E"
       }
     ],
     "slug": "かくりよの宿飯あやかしお宿に嫁入りします。",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2085/title_grid_wide_202301191129407c16213da1c168ed9de7bcfede95cfc1.png",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/002858/resized/42afcf8a-7371-453c-8050-8e680ecec01c.jpg",
     "title": "かくりよの宿飯 あやかしお宿に嫁入りします。"
   },
   {
@@ -6233,6 +6483,21 @@
     "slug": "カッパのカーティと祟りどもの愛",
     "thumbnailUrl": "https://img.shuro.world/wp-content/uploads/2026/08/24150315/kati2_obi.jpg",
     "title": "カッパのカーティと祟りどもの愛"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "となりのヤングジャンプ",
+        "siteUrl": "https://tonarinoyj.jp/",
+        "url": "https://tonarinoyj.jp/episode/316112896951794426"
+      }
+    ],
+    "slug": "カテナチオ",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/b7e439b4a813959d8e05c203d7af4c5b8b1f5ba9/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F12207421984214730321-026e9b954aca7c9748279faeca133ee7%3F1788953433",
+    "title": "カテナチオ"
   },
   {
     "dayBits": 64,
@@ -6972,12 +7237,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_014261_S/episodes/KC_0142610000500011_E"
+        "url": "https://comic-walker.com/detail/KC_014261_S/episodes/KC_0142610000500021_E"
       }
     ],
     "slug": "クソカス男と激メロ男",
@@ -7122,12 +7387,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_001363_S/episodes/KC_0013630004900021_E"
+        "url": "https://comic-walker.com/detail/KC_001363_S/episodes/KC_0013630004900031_E"
       }
     ],
     "slug": "クラス最安値で売られた俺は、実は最強パラメーター",
@@ -7410,14 +7675,14 @@
     "title": "ゲーム開始前に死ぬモブ悪役皇子に転生した俺　～推しヒロインの妹と幸せになるために最弱魔法【闇刃】を過剰な努力で極め抜いたら、最強のぶっ壊れ性能と化していた件～"
   },
   {
-    "dayBits": 4,
+    "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-08-25",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_007003_S/episodes/KC_0070030001500011_E"
+        "url": "https://comic-walker.com/detail/KC_007003_S/episodes/KC_0070030001600011_E"
       }
     ],
     "slug": "ゲーム世界で魔物に転生してしまった俺、前世で推しだったヒロインを拾ってしまう",
@@ -7481,7 +7746,7 @@
       }
     ],
     "slug": "ケンガンオメガ",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1722018248/webp/ranking_thumbnail/659.webp?hash=eR7LqQgqUpIWLxajr5-gkA&expires=1875398400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1722018248/webp/ranking_thumbnail/659.webp?hash=OziOPcFeDeJR7-WSs6deYg&expires=1875484800",
     "title": "ケンガンオメガ"
   },
   {
@@ -7558,6 +7823,21 @@
     "slug": "コウノドリ",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/897/title_grid_wide_2020111818572479edebdafb1f374b4a812bd99a040b22.png",
     "title": "コウノドリ"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006212_S/episodes/KC_0062120001800011_E"
+      }
+    ],
+    "slug": "ゴエティア・ショック",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006212/resized/2e59b081-255e-4eda-a3b1-9b933b44ccb7.jpg",
+    "title": "ゴエティア・ショック"
   },
   {
     "dayBits": 32,
@@ -7857,7 +8137,7 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミプレ",
@@ -7868,6 +8148,21 @@
     "slug": "ゴトウ先生と古の角",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/202605081607457205A2B2962AC4D55B33A0CF53D2EABB765-sm.webp",
     "title": "ゴトウ先生と古の角"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008724_S/episodes/KC_0087240000600011_E"
+      }
+    ],
+    "slug": "このキスを止めるな",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008724/resized/f12f492e-fc6f-4b10-865f-445943f8759d.jpg",
+    "title": "このキスを止めるな"
   },
   {
     "dayBits": 32,
@@ -8035,6 +8330,21 @@
     "title": "この恋、実験中につき！"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008323_S/episodes/KC_0083230000700011_E"
+      }
+    ],
+    "slug": "この恋は神様だって知らない",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008323/resized/a98bbdf0-7ca9-4d6e-9fd3-8f8b370689e2.jpg",
+    "title": "この恋は神様だって知らない"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -8181,7 +8491,7 @@
       }
     ],
     "slug": "こんなはずじゃなかった~無理やり後宮に嫁がされた私が、後宮改革を成し遂げる~",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2622/title_thumbnail_list_single/434492.webp?hash=h2dJAQgPmCtCt75lTq3RcA&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2622/title_thumbnail_list_single/434492.webp?hash=seWelxXi9DmyR5sZYaBmlQ&expires=1789603200",
     "title": "こんなはずじゃなかった～無理やり後宮に嫁がされた私が、後宮改革を成し遂げる～"
   },
   {
@@ -8487,12 +8797,12 @@
   {
     "dayBits": 20,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_005565_S/episodes/KC_0055650001900011_E"
+        "url": "https://comic-walker.com/detail/KC_005565_S/episodes/KC_0055650002000011_E"
       }
     ],
     "slug": "サキュバスの別れさせ屋さん",
@@ -8712,7 +9022,7 @@
   {
     "dayBits": 20,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "マガポケ",
@@ -8722,12 +9032,27 @@
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421983529135589"
+        "url": "https://comic-days.com/episode/12207421983529135594"
       }
     ],
     "slug": "さよなら、英雄になった旦那様~ただ祈るだけの役立たずな妻のはずでしたが......~",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/8d4591615710f990b42f0794722add7e91d33b6e/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F12207421983529018056-4b775d7b66b36a448558181e75dc16f2%3F1774839234",
     "title": "さよなら、英雄になった旦那様　～ただ祈るだけの役立たずな妻のはずでしたが……～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "となりのヤングジャンプ",
+        "siteUrl": "https://tonarinoyj.jp/",
+        "url": "https://tonarinoyj.jp/episode/12207421984191831309"
+      }
+    ],
+    "slug": "サラマンダ",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/93cd0d872b712e98a7723f312140fcf5d5498e2c/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F12207421984191825063-99789fdaaaf7ac9f0290a86f5f5c1d6e%3F1788930664",
+    "title": "サラマンダ"
   },
   {
     "dayBits": 8,
@@ -9425,6 +9750,21 @@
     "title": "スキルツリーの解錠者〜A級パーティーを追放されたので【解錠&施錠】を活かして、S級冒険者を目指す〜"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020123_S/episodes/KC_0201230000200011_E"
+      }
+    ],
+    "slug": "スキンシップ・アート・レッスン",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020123/resized/46cdc915-06ce-4c3e-9aa5-d858a146765e.jpg",
+    "title": "スキンシップ・アート・レッスン"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -9438,6 +9778,21 @@
     "slug": "ススムとニコ",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019788/resized/b5e5ad28-6ea9-4f2a-ae8a-df1b6f8427bd.jpg",
     "title": "ススムとニコ"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007404_S/episodes/KC_0074040001100011_E"
+      }
+    ],
+    "slug": "スター☆トレイン~アイドル育成ゲームの世界で「推し」と青春をやり直します~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007404/resized/b42e6899-ad4e-4ab8-95ad-de4060ea62d4.jpg",
+    "title": "スター☆トレイン　～アイドル育成ゲームの世界で「推し」と青春をやり直します～"
   },
   {
     "dayBits": 32,
@@ -9470,14 +9825,29 @@
     "title": "ずたぼろ令嬢は姉の元婚約者に溺愛される"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/12207421983796398092"
+      }
+    ],
+    "slug": "ずっと青春ぽいですよ",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/7259bb901dd5df17d0acddbf38bd7223b6e9ba03/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F4856001361262750886-a234006f3d454f3d3bd581f158f8dc43%3F1699507263",
+    "title": "ずっと青春ぽいですよ"
+  },
+  {
     "dayBits": 52,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-04",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_011068_S/episodes/KC_0110680000900011_E"
+        "url": "https://comic-walker.com/detail/KC_011068_S/episodes/KC_0110680000900021_E"
       }
     ],
     "slug": "ステルス令嬢の恋愛事情ご主人様の秘密を知ってしまったら溺愛されまして!",
@@ -9586,7 +9956,7 @@
       }
     ],
     "slug": "スライム倒して300年、知らないうちにレベルmaxになってました",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/11/title_thumbnail_list_single/430592.webp?hash=PF45f_7RGStu5DYKYfc1XA&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/11/title_thumbnail_list_single/430592.webp?hash=9RF12VFJcQRXuv3cetD2Rg&expires=1789603200",
     "title": "スライム倒して300年、知らないうちにレベルMAXになってました"
   },
   {
@@ -9963,6 +10333,21 @@
     "slug": "その伯爵令嬢、“替え玉”につき替え玉のわたし(妹)が侯爵に溺愛されるなんてあり得ません",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/816768/20260331182203599220F7E5307CD68FFA853D0418AD7BBFA-sm.webp",
     "title": "その伯爵令嬢、“替え玉”につき 替え玉のわたし（妹）が侯爵に溺愛されるなんてあり得ません"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_019401_S/episodes/KC_0194010000300011_E"
+      }
+    ],
+    "slug": "その恋、白紙により。",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019401/resized/08f8b52f-88c5-4780-b231-28a48cef54e0.jpg",
+    "title": "その恋、白紙により。"
   },
   {
     "dayBits": 32,
@@ -10807,17 +11192,32 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "となりのヤングジャンプ",
         "siteUrl": "https://tonarinoyj.jp/",
-        "url": "https://tonarinoyj.jp/episode/12207421984182502160"
+        "url": "https://tonarinoyj.jp/episode/12207421984213501183"
       }
     ],
     "slug": "チクビ×バディ",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5a2c42919ce58d9c8001fd5ea91ecd6e40bd8e11/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F12207421984144111027-bd1b242b422ea709bd281095a470a1b0%3F1787558750",
     "title": "チクビ×バディ"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020117_S/episodes/KC_0201170000200011_E"
+      }
+    ],
+    "slug": "ちっちゃくてデカくて可愛い七瀬さんを勘違い元カレから奪って幸せにする",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020117/resized/dd521612-1c11-4d27-9d8a-635bf769ba1d.jpg",
+    "title": "ちっちゃくてデカくて可愛い七瀬さんを勘違い元カレから奪って幸せにする"
   },
   {
     "dayBits": 4,
@@ -11000,6 +11400,21 @@
     "title": "ちょっと聞いてよ！宮澤さん"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008647_S/episodes/KC_0086470000600011_E"
+      }
+    ],
+    "slug": "ちょろかわωはシたくない",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008647/resized/37b5acba-caf1-44cd-a8e9-4b77c9552115.jpg",
+    "title": "ちょろかわΩはシたくない"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
     "lastSeen": "2026-09-02",
@@ -11045,18 +11460,23 @@
     "title": "つくもの万処"
   },
   {
-    "dayBits": 4,
+    "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-08-25",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "webアクション",
         "siteUrl": "https://comic-action.com/",
         "url": "https://comic-action.com/episode/12207421983997521624"
+      },
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/4Tqko37VZT8jb1pajDfytYlLn/episodes/73"
       }
     ],
     "slug": "つぐもも",
-    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421983997521624-e7053cb3e0bf2a4ee63dac7d190473c6?1787118305",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/afbb65e6-5b2d-4458-b601-b2c40b33af7d.jpg",
     "title": "つぐもも"
   },
   {
@@ -11185,6 +11605,21 @@
     "title": "であいもん"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_004522_S/episodes/KC_0045220020400011_E"
+      }
+    ],
+    "slug": "ディーふらぐ!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004522/resized/17a1c63a-aacd-4493-91db-4d3e394bed14.jpg",
+    "title": "ディーふらぐ！"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-31",
     "lastSeen": "2026-09-07",
@@ -11232,12 +11667,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006847_S/episodes/KC_0068470003100011_E"
+        "url": "https://comic-walker.com/detail/KC_006847_S/episodes/KC_0068470003200011_E"
       }
     ],
     "slug": "デカパイ騎士まかり通る!",
@@ -11530,6 +11965,21 @@
     "title": "ドアマットヒロインは速攻終了いたします！"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_000597_S/episodes/KC_0005970001800011_E"
+      }
+    ],
+    "slug": "とある暗部の少女共棲",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000597/resized/7269a619-0f71-4a31-8eb8-b6db3911c905.jpg",
+    "title": "とある暗部の少女共棲"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-09-04",
     "lastSeen": "2026-09-04",
@@ -11620,6 +12070,36 @@
     "title": "どうせ死ぬならキスしたい！"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_004973_S/episodes/KC_0049730008700011_E"
+      }
+    ],
+    "slug": "どうやら私の身体は完全無敵のようですね",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004973/resized/c13b76e7-3f21-4c85-8b97-b46d62265988.jpg",
+    "title": "どうやら私の身体は完全無敵のようですね"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006797_S/episodes/KC_0067970001000011_E"
+      }
+    ],
+    "slug": "ドーナツ屋の夜のつれづれ",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006797/resized/b5f538a3-3415-4316-9371-5b1e01375061.jpg",
+    "title": "ドーナツ屋の夜のつれづれ"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -11633,6 +12113,21 @@
     "slug": "ドーロ☆スター",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/6ef10a1bac8ff652342e079cac6cd93c456c5f1a/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107094914615374316-d1b15db045c3b56a122b527c71412940%3F1785756608",
     "title": "ドーロ☆スター"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007121_S/episodes/KC_0071210001500011_E"
+      }
+    ],
+    "slug": "ときときチャンネル",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007121/resized/e97b37ea-a432-4913-bab6-1b3ba9e81a77.jpg",
+    "title": "ときときチャンネル"
   },
   {
     "dayBits": 16,
@@ -11652,7 +12147,7 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミプレ",
@@ -12033,6 +12528,21 @@
     "slug": "どろん",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5c72f0e889fcb40317d1c95927654fde38d657f7/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F9253189534697842022-417a7ff0970a385e967c6203daab742f%3F1782718763",
     "title": "どろん"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008540_S/episodes/KC_0085400000500011_E"
+      }
+    ],
+    "slug": "どろんぱ",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008540/resized/a0c57468-8247-496e-9ff3-65283a65f9a0.jpg",
+    "title": "どろんぱ"
   },
   {
     "dayBits": 16,
@@ -12570,6 +13080,21 @@
     "title": "ネットアイドルの配信を手伝っていたマネージャーの俺、なぜかバズってしまう"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックガルド",
+        "siteUrl": "https://comic-gardo.com/",
+        "url": "https://comic-gardo.com/episode/12207421984188204502"
+      }
+    ],
+    "slug": "ネットの『推し』とリアルの『推し』が隣に引っ越してきた",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984188204502-4dbc06e512e207fb4855914001bcc007?1788442053",
+    "title": "ネットの『推し』とリアルの『推し』が隣に引っ越してきた"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-08",
     "lastSeen": "2026-09-08",
@@ -12976,6 +13501,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008445_S/episodes/KC_0084450001000011_E"
+      }
+    ],
+    "slug": "バクガタリzzz",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008445/resized/f260476b-1d78-403e-be33-cc711b801996.jpg",
+    "title": "バクガタリzzZ"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-08-27",
     "sites": [
@@ -13018,6 +13558,21 @@
     "slug": "はじめてのギャル",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000621/resized/8c767728-fb27-44db-b4c5-513f64b84f4d.jpg",
     "title": "はじめてのギャル"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912965708438481"
+      }
+    ],
+    "slug": "はじめの友人",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/377a6f17c179075dceb0402c1668ee61e36ea2f1/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965642777578-372abd21504fcf452447ed1b69823af6%3F1749084207",
+    "title": "はじめの友人"
   },
   {
     "dayBits": 16,
@@ -13672,12 +14227,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008500_S/episodes/KC_0085000000700021_E"
+        "url": "https://comic-walker.com/detail/KC_008500_S/episodes/KC_0085000000700031_E"
       }
     ],
     "slug": "ひきこもり令嬢なのに、氷の辺境伯の花嫁(※期間限定)に選ばれてしまった",
@@ -13963,6 +14518,21 @@
     "slug": "ビリオネア・プログラム汝、解と黄金を求めよ",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/016979/resized/be8b09ea-de84-44ed-86e8-3cce597f5576.jpg",
     "title": "ビリオネア・プログラム　汝、解と黄金を求めよ"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "竹コミ！",
+        "siteUrl": "https://takecomic.jp/",
+        "url": "https://takecomic.jp/series/f866913ed1872/new"
+      }
+    ],
+    "slug": "ピンキースマイリーはバズりたい!",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1068554/20260609190208881943F197A0734CDF00C756E6D24CB56FE-sm.webp",
+    "title": "ピンキースマイリーはバズりたい！"
   },
   {
     "dayBits": 4,
@@ -14442,12 +15012,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006226_S/episodes/KC_0062260001700021_E"
+        "url": "https://comic-walker.com/detail/KC_006226_S/episodes/KC_0062260001800011_E"
       }
     ],
     "slug": "フルメタル・パニック!family",
@@ -14757,36 +15327,36 @@
   {
     "dayBits": 48,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-04",
+    "lastSeen": "2026-09-10",
     "sites": [
-      {
-        "name": "コミックDAYS",
-        "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421984142937149"
-      },
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/01415/episode/432665"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/12207421984173600138"
       }
     ],
     "slug": "ボールパークでつかまえて!",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1415/title_grid_wide_2021052510181419a873d7add0fabc2f9477cecdd23e35.png",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/247c0942288852c9720708836a7419c0fdf6dc4f/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F13933686331699120477-c9b351f004e989d13d341987b8974958%3F1722417272",
     "title": "ボールパークでつかまえて！"
   },
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ゼノンプラス",
         "siteUrl": "https://comic-zenon.com/",
-        "url": "https://comic-zenon.com/episode/12207421984126492415"
+        "url": "https://comic-zenon.com/episode/12207421984126492427"
       }
     ],
     "slug": "ぼくと5人の不倫相手",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/06b1333f87e6120060d2e45e159fe9f185c871c1/enlarge=0;height=580;no_unsharpmask=1;quality=90;version=1;width=1056/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fuploaded-content%2Fslideshow%2F6ba5a18782712fac04c6a1be6d770bc5",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e799a79cc2ea0f0ab717e9c1fbb9a01337bdf517/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F12207421984126427839-af43545980f047d875c72d66e9dae5fa%3F1787208639",
     "title": "ぼくと5人の不倫相手"
   },
   {
@@ -15058,6 +15628,21 @@
     "slug": "ポン太がヒトになりまして。",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/38b93aa289fd6c00dbfd431047aeca305f37aef0/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F10044607041212201037-2bbe201f59044c925327d8cd7fdb52e3%3F1770116381",
     "title": "ポン太がヒトになりまして。"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_012212_S/episodes/KC_0122120000500011_E"
+      }
+    ],
+    "slug": "マーブルにとろけるふたり",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012212/resized/7929c50d-29e8-4f94-8f7e-10753caaa47a.jpg",
+    "title": "マーブルにとろけるふたり"
   },
   {
     "dayBits": 32,
@@ -15825,6 +16410,21 @@
     "title": "メイド＆ロイドはお嬢様のお役に立ちたい！"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "竹コミ！",
+        "siteUrl": "https://takecomic.jp/",
+        "url": "https://takecomic.jp/series/3f846451aff2d/new"
+      }
+    ],
+    "slug": "メイドインアビス",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2188854/20250813144042253661A3C12D9B076961839F2B0E2D301E6-sm.webp",
+    "title": "メイドインアビス"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
     "lastSeen": "2026-08-26",
@@ -16046,7 +16646,7 @@
       }
     ],
     "slug": "もいもん",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2061/title_thumbnail_list_single/403401.webp?hash=qxJMcMf3JP397uHwEFAlaw&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2061/title_thumbnail_list_single/403401.webp?hash=1HxS6LYGk3CthpskPpJERQ&expires=1789603200",
     "title": "もいもん"
   },
   {
@@ -16217,12 +16817,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008365_S/episodes/KC_0083650000500011_E"
+        "url": "https://comic-walker.com/detail/KC_008365_S/episodes/KC_0083650000500021_E"
       }
     ],
     "slug": "モブなのに推しから愛されルートに入りました",
@@ -16260,6 +16860,21 @@
     "title": "モブヘブン"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/r3w8QmIUsB4DQhemlSs5BR6kS/episodes/27"
+      }
+    ],
+    "slug": "モブ家庭教師のわたくし、推しの第三王子に溺愛されました",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/109cd335-3a34-4bd3-b71e-ea9efb783fc9.jpg",
+    "title": "モブ家庭教師のわたくし、推しの第三王子に溺愛されました"
+  },
+  {
     "dayBits": 64,
     "firstSeen": "2026-09-05",
     "lastSeen": "2026-09-05",
@@ -16290,6 +16905,21 @@
     "title": "モブ子の恋"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミプレ",
+        "siteUrl": "https://viewer.heros-web.com/",
+        "url": "https://heros-web.com/series/6ee53f2f329fb"
+      }
+    ],
+    "slug": "モモとツノ",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/20260508155219183D9E25327C47FC07AB00D190AAA674273-sm.webp",
+    "title": "モモとツノ"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -16307,12 +16937,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "となりのヤングジャンプ",
         "siteUrl": "https://tonarinoyj.jp/",
-        "url": "https://tonarinoyj.jp/episode/12207421984182502165"
+        "url": "https://tonarinoyj.jp/episode/12207421984213501179"
       }
     ],
     "slug": "モンキーハンティング",
@@ -16430,14 +17060,14 @@
     "title": "やちるさんはほめるとのびる"
   },
   {
-    "dayBits": 2,
+    "dayBits": 18,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-08-24",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_000486_S"
+        "url": "https://comic-walker.com/detail/KC_000486_S/episodes/KC_0004860003600011_E"
       }
     ],
     "slug": "やっぱりチンチランド",
@@ -16641,7 +17271,7 @@
       }
     ],
     "slug": "ヤンデレ化を回避したはずの天使な義弟は期待を裏切らない",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2580/title_thumbnail_list_single/418515.webp?hash=tpOMb8pfX7F6R2Lo8k-I-A&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2580/title_thumbnail_list_single/418515.webp?hash=dWXs9sw8JAJXJi6tJ-gPzQ&expires=1789603200",
     "title": "ヤンデレ化を回避したはずの天使な義弟は期待を裏切らない"
   },
   {
@@ -16827,12 +17457,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006907_S/episodes/KC_0069070001000021_E"
+        "url": "https://comic-walker.com/detail/KC_006907_S/episodes/KC_0069070001000031_E"
       }
     ],
     "slug": "よし、黒騎士な婚約者とは婚約解消して薬師になろう!",
@@ -16977,12 +17607,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_012731_S/episodes/KC_0127310000300011_E"
+        "url": "https://comic-walker.com/detail/KC_012731_S/episodes/KC_0127310000300021_E"
       }
     ],
     "slug": "ラスボス系悪役令息が望むのは、原作通りの没落ルート",
@@ -17312,17 +17942,32 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_007265_S/episodes/KC_0072650000900021_E"
+        "url": "https://comic-walker.com/detail/KC_007265_S/episodes/KC_0072650000900031_E"
       }
     ],
     "slug": "ルージュ・シークレットサービス",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007265/resized/a7f48886-a514-4ab2-ab30-5294a12deddb.jpg",
     "title": "ルージュ・シークレットサービス"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005752_S/episodes/KC_0057520001400011_E"
+      }
+    ],
+    "slug": "ルール・ブルー異形の祓い屋と魔を喰う殺し屋",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005752/resized/b381845e-4d22-46f4-90fc-572f2f9aa5ee.jpg",
+    "title": "ルール・ブルー　異形の祓い屋と魔を喰う殺し屋"
   },
   {
     "dayBits": 16,
@@ -17477,12 +18122,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ゼノンプラス",
         "siteUrl": "https://comic-zenon.com/",
-        "url": "https://comic-zenon.com/episode/12207421984064600942"
+        "url": "https://comic-zenon.com/episode/12207421984064600950"
       }
     ],
     "slug": "レプリカ元妻の復讐",
@@ -17730,6 +18375,21 @@
     "title": "わたくしのことが大嫌いな義弟が護衛騎士になりました"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/5fd31710776561337e040000/episodes/138"
+      }
+    ],
+    "slug": "わたし、聖女じゃありませんから",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/c6d45c72-27b7-425d-901a-a56b4703412d.jpg",
+    "title": "わたし、聖女じゃありませんから"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -17837,12 +18497,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "となりのヤングジャンプ",
         "siteUrl": "https://tonarinoyj.jp/",
-        "url": "https://tonarinoyj.jp/episode/12207421984148777688"
+        "url": "https://tonarinoyj.jp/episode/12207421984214112687"
       }
     ],
     "slug": "ワンパンマン",
@@ -17992,12 +18652,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_007129_S/episodes/KC_0071290000600011_E"
+        "url": "https://comic-walker.com/detail/KC_007129_S/episodes/KC_0071290000600031_E"
       }
     ],
     "slug": "愛人を囲う冷徹な伯爵との典型的な政略結婚、そして嫌われからの溺愛、その結末。",
@@ -18033,6 +18693,21 @@
     "slug": "逢魔暮らしの奴さん",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000097/resized/5ea204c9-2bd4-4395-b1d3-12603464323e.jpg",
     "title": "逢魔暮らしの奴さん"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミプレ",
+        "siteUrl": "https://viewer.heros-web.com/",
+        "url": "https://heros-web.com/series/630645079d9fe"
+      }
+    ],
+    "slug": "悪い魔女の拾い子",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/3251835/20260520180416863A83F0209D43569CD2A4D8BBA339FCB3E-sm.webp",
+    "title": "悪い魔女の拾い子"
   },
   {
     "dayBits": 32,
@@ -18140,6 +18815,21 @@
     "title": "悪人面したＢ級冒険者 主人公とその幼馴染たちのパパになる"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008720_S/episodes/KC_0087200000700011_E"
+      }
+    ],
+    "slug": "悪魔さんの8畳ワンルーム甘やかしごはん",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008720/resized/5a6c2e84-3fb7-4259-8fe0-7ffa63dfbe65.jpg",
+    "title": "悪魔さんの8畳ワンルーム甘やかしごはん"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -18183,6 +18873,21 @@
     "slug": "悪役のご令息のどうにかしたい日常",
     "thumbnailUrl": "https://contents.zerosumonline.com/title_thumbnail/74.webp",
     "title": "悪役のご令息のどうにかしたい日常"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006570_S/episodes/KC_0065700001300011_E"
+      }
+    ],
+    "slug": "悪役へび男は英雄狼に食べられる",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006570/resized/502b3907-701e-4ffa-8a2e-4101c1bee860.jpg",
+    "title": "悪役へび男は英雄狼に食べられる"
   },
   {
     "dayBits": 4,
@@ -18250,6 +18955,21 @@
     "title": "悪役令嬢ですが、元下僕の獣人にフラグ回収されてます!?"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006062_S/episodes/KC_0060620001900011_E"
+      }
+    ],
+    "slug": "悪役令嬢になんかなりません。私は『普通』の公爵令嬢です!~newroute!~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006062/resized/fdbc005a-6f52-452e-9b6e-48d5f449fe96.jpg",
+    "title": "悪役令嬢になんかなりません。私は『普通』の公爵令嬢です！～New Route！～"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
     "lastSeen": "2026-09-09",
@@ -18263,6 +18983,21 @@
     "slug": "悪役令嬢に転生した私が、なぜか暴君侯爵に溺愛されてるんですけど",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019425/resized/78ec3817-5949-4b60-8a11-c294e9c58dfd.jpg",
     "title": "悪役令嬢に転生した私が、なぜか暴君侯爵に溺愛されてるんですけど"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912964995298844"
+      }
+    ],
+    "slug": "悪役令嬢に転生した母は子育て改革をいたします~結婚はうんざりなので王太子殿下は聖女様に差し上げますね",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/be343ac2bf4836d166cb12650715c777ed7d33d6/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912964975540946-05f0a7f9a32838058bb8d132d97613d8%3F1741567080",
+    "title": "悪役令嬢に転生した母は子育て改革をいたします　～結婚はうんざりなので王太子殿下は聖女様に差し上げますね～"
   },
   {
     "dayBits": 36,
@@ -18327,12 +19062,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_002965_S/episodes/KC_0029650000600021_E"
+        "url": "https://comic-walker.com/detail/KC_002965_S/episodes/KC_0029650000600031_E"
       }
     ],
     "slug": "悪役令嬢の躾け方",
@@ -18567,12 +19302,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008385_S/episodes/KC_0083850000600031_E"
+        "url": "https://comic-walker.com/detail/KC_008385_S/episodes/KC_0083850000600041_E"
       }
     ],
     "slug": "異世界アジト辺境に秘密基地つくってみた",
@@ -18777,12 +19512,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008746_S/episodes/KC_0087460000500011_E"
+        "url": "https://comic-walker.com/detail/KC_008746_S/episodes/KC_0087460000500021_E"
       }
     ],
     "slug": "異世界では最推しになりたい",
@@ -18878,6 +19613,21 @@
     "slug": "異世界で配信活動をしたら大量のヤンデレ信者を生み出してしまった件",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000610/resized/51aff1c3-74b8-4f61-b835-ab32c74c9e3d.jpg",
     "title": "異世界で配信活動をしたら大量のヤンデレ信者を生み出してしまった件"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006098_S/episodes/KC_0060980001500011_E"
+      }
+    ],
+    "slug": "異世界で半魔の子供を育てたらヤンデレに育った",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006098/resized/11660cc0-8be7-4b36-9b98-811f19d42a2f.jpg",
+    "title": "異世界で半魔の子供を育てたらヤンデレに育った"
   },
   {
     "dayBits": 16,
@@ -19275,14 +20025,14 @@
     "title": "異世界最強の出前バイト"
   },
   {
-    "dayBits": 32,
+    "dayBits": 48,
     "firstSeen": "2026-09-04",
-    "lastSeen": "2026-09-04",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_000654_S/episodes/KC_0006540004700021_E"
+        "url": "https://comic-walker.com/detail/KC_000654_S/episodes/KC_0006540004800011_E"
       }
     ],
     "slug": "異世界最高峰のギルドリーダー~ギルド最弱の僕だけど、ギルメン全員の愛が重くてギルドをやめられません~",
@@ -19348,6 +20098,21 @@
     "slug": "異世界召喚おじさんの銃無双ライフ~サバゲー好きサラリーマンは会社終わりに異世界へ直帰する~",
     "thumbnailUrl": "https://img.comic-fuz.com/c/1DHNic/qy.webp?h=puKQ5-eEk8O-Ji31X9p2QQ&e=5000000000",
     "title": "異世界召喚おじさんの銃無双ライフ ～サバゲー好きサラリーマンは会社終わりに異世界へ直帰する～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2551460909870493744"
+      }
+    ],
+    "slug": "異世界将棋無双~将棋で戦争する世界で王子に転生した僕が弱小人類を救います~",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/c54f13af1d8ac84ce3ce1f6c49e00e65f3518bda/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2551460909870489219-257c0cd9be54a3fce03eb90fc65d5a5d%3F1764325873",
+    "title": "異世界将棋無双～将棋で戦争する世界で王子に転生した僕が弱小人類を救います～"
   },
   {
     "dayBits": 2,
@@ -20365,6 +21130,21 @@
     "title": "英雄教室"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005953_S/episodes/KC_0059530002500011_E"
+      }
+    ],
+    "slug": "英雄女騎士に有能とバレた俺の美人ハーレム騎士団ガイカク・ヒクメの奇術騎士団",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005953/resized/4d9bc8e1-19be-4256-90cd-c7b7fc2d63ec.jpg",
+    "title": "英雄女騎士に有能とバレた俺の美人ハーレム騎士団 ガイカク・ヒクメの奇術騎士団"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
     "lastSeen": "2026-09-01",
@@ -20427,12 +21207,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_019804_S/episodes/KC_0198040000500021_E"
+        "url": "https://comic-walker.com/detail/KC_019804_S/episodes/KC_0198040000500031_E"
       }
     ],
     "slug": "演目、呪いの悪役令嬢オモチャとして買われた私が完璧王子の唯一の依存先!",
@@ -20453,6 +21233,21 @@
     "slug": "猿ロック",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1606/title_grid_wide_202201241443554a61f81cac5b5779988c58455c3af84b.png",
     "title": "猿ロック"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912965182929625"
+      }
+    ],
+    "slug": "奥田ライチに触れるな",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/383be2e7a5014304365ea0c3e43041ae3b0a0079/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965182924710-e11e794f34575b05c46e4a8f6c9d9048%3F1738561738",
+    "title": "奥田ライチに触れるな"
   },
   {
     "dayBits": 32,
@@ -20562,12 +21357,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006979_S/episodes/KC_0069790001300021_E"
+        "url": "https://comic-walker.com/detail/KC_006979_S/episodes/KC_0069790001400011_E"
       }
     ],
     "slug": "王女でしたがこっそり竜騎士団の専属薬師になりました!",
@@ -20710,6 +21505,21 @@
     "title": "屋根の下のアルテミス"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_001848_S/episodes/KC_0018480004900011_E"
+      }
+    ],
+    "slug": "屋根裏部屋の公爵夫人",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001848/resized/fded7b5a-7d4b-47f4-9890-ff285d4f16b7.jpg",
+    "title": "屋根裏部屋の公爵夫人"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
     "lastSeen": "2026-08-31",
@@ -20772,12 +21582,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006074_S/episodes/KC_0060740004000011_E"
+        "url": "https://comic-walker.com/detail/KC_006074_S/episodes/KC_0060740004100011_E"
       }
     ],
     "slug": "俺、悪役騎士団長に転生する。",
@@ -20907,12 +21717,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/10834108156686985025"
+        "url": "https://comic-days.com/episode/10834108156686985078"
       }
     ],
     "slug": "俺たちの日常は始まったばかりだ",
@@ -21201,7 +22011,7 @@
       }
     ],
     "slug": "俺は冒険者ギルドの悪徳ギルドマスター~人材を適材適所に追放したら、なぜかめちゃくちゃ感謝されました~",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2187/title_thumbnail_list_single/394875.webp?hash=O8BvNCFFUrweFUxN30Krjg&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2187/title_thumbnail_list_single/394875.webp?hash=Gwc8nCMVEbQKc_4Gw_vEDw&expires=1789603200",
     "title": "俺は冒険者ギルドの悪徳ギルドマスター ～人材を適材適所に追放したら、なぜかめちゃくちゃ感謝されました～"
   },
   {
@@ -21293,6 +22103,21 @@
     "slug": "加賀谷次長、狙われてます!",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240419122554333A92D854D44560F0BF93646C3286B12EB-sm.webp",
     "title": "加賀谷次長、狙われてます！"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_003847_S/episodes/KC_0038470005700011_E"
+      }
+    ],
+    "slug": "加護なし令嬢の小さな村~さあ、領地運営を始めましょう!~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003847/resized/49c584b7-f2e1-4b5f-8082-ed30ed140663.jpg",
+    "title": "加護なし令嬢の小さな村 ～さあ、領地運営を始めましょう！～"
   },
   {
     "dayBits": 64,
@@ -21430,6 +22255,21 @@
     "title": "家で無能と言われ続けた俺ですが、世界的には超有能だったようです"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005397_S/episodes/KC_0053970002400011_E"
+      }
+    ],
+    "slug": "家を追い出されましたが、元気に暮らしています~チートな魔法と前世知識で快適便利なセカンドライフ!~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005397/resized/5fd48ee3-b5df-4a2e-82e3-2226e4813c1a.jpg",
+    "title": "家を追い出されましたが、元気に暮らしています ~チートな魔法と前世知識で快適便利なセカンドライフ！~"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
     "lastSeen": "2026-09-09",
@@ -21443,6 +22283,21 @@
     "slug": "家を追われた令嬢は黒猫王子のお気に入り~呪われた黒猫は姿を消した王子様でした~",
     "thumbnailUrl": "https://ja-img.manga-up.com/secure/1765931928/title_small/1650.webp?hash=aJrNIwNZGAIGNojZJq_I-w&expires=2145884400",
     "title": "家を追われた令嬢は黒猫王子のお気に入り～呪われた黒猫は姿を消した王子様でした～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006821_S/episodes/KC_0068210001500011_E"
+      }
+    ],
+    "slug": "家を追放された魔法薬師は、薬獣や妖精に囲まれて秘密の薬草園で第二の人生を謳歌する",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006821/resized/9cac3d1f-ab2a-42ce-a8bb-732ddba7e9fc.jpg",
+    "title": "家を追放された魔法薬師は、薬獣や妖精に囲まれて秘密の薬草園で第二の人生を謳歌する"
   },
   {
     "dayBits": 8,
@@ -22170,6 +23025,21 @@
     "title": "階層都市断片集"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008744_S/episodes/KC_0087440000500011_E"
+      }
+    ],
+    "slug": "外れスキル《毒消し》で世界一の料理を作ります!~追放令嬢の辺境カフェは今日も大人気~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008744/resized/8046f082-e1ec-4aa3-a697-c24d39c2385d.jpg",
+    "title": "外れスキル《毒消し》で世界一の料理を作ります！～追放令嬢の辺境カフェは今日も大人気～"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -22228,6 +23098,36 @@
     "slug": "崖っぷち令嬢は冷血皇帝のお世話係~侍女のはずが皇帝妃になるみたいです~",
     "thumbnailUrl": "https://contents.zerosumonline.com/title_thumbnail/207.webp",
     "title": "崖っぷち令嬢は冷血皇帝のお世話係〜侍女のはずが皇帝妃になるみたいです〜"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006987_S/episodes/KC_0069870001300011_E"
+      }
+    ],
+    "slug": "確かに私は、お嫁さんが欲しいと言いました。~女装の王子様はお断り!~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006987/resized/8d7c402c-99e5-4ad1-8a4c-c9a24203bda4.jpg",
+    "title": "確かに私は、お嫁さんが欲しいと言いました。　～女装の王子様はお断り！～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_019838_S/episodes/KC_0198380000300011_E"
+      }
+    ],
+    "slug": "覚悟してよね、虎哲くん!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019838/resized/2d3ce1a6-c691-44bf-80eb-01861f766580.jpg",
+    "title": "覚悟してよね、虎哲くん！"
   },
   {
     "dayBits": 16,
@@ -22318,6 +23218,36 @@
     "slug": "鎌倉ものがたり",
     "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984031277552-67388fb2835f0d6cadb73ed1419b5415?1787804160",
     "title": "鎌倉ものがたり"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020098_S/episodes/KC_0200980000200011_E"
+      }
+    ],
+    "slug": "噛むよりキスして",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020098/resized/e10cc77a-a4a2-407d-9ae9-afdbe3d21806.jpg",
+    "title": "噛むよりキスして"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックガルド",
+        "siteUrl": "https://comic-gardo.com/",
+        "url": "https://comic-gardo.com/episode/12207421984143985182"
+      }
+    ],
+    "slug": "勘違い結婚偽りの花嫁のはずが、なぜか竜王陛下に溺愛されてます!",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984143985182-c65dfd44f71b13b99c16c1d684af9aa6?1788442126",
+    "title": "勘違い結婚　偽りの花嫁のはずが、なぜか竜王陛下に溺愛されてます!?"
   },
   {
     "dayBits": 4,
@@ -22588,6 +23518,21 @@
     "slug": "機械仕掛けの殲滅少女",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/22d020f356fc6144212cbcedede9c9c6efd124a0/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F2551460909785756167-e33b02595626e3aff2ec99f879694558%3F1782192422",
     "title": "機械仕掛けの殲滅少女"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミプレ",
+        "siteUrl": "https://viewer.heros-web.com/",
+        "url": "https://heros-web.com/series/fc1ff97e50dd7"
+      }
+    ],
+    "slug": "機動絶記ガンダムsequel",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/2026050815475995315634B7564ABB9985441962899217786-sm.webp",
+    "title": "機動絶記ガンダムSEQUEL"
   },
   {
     "dayBits": 4,
@@ -22985,6 +23930,21 @@
     "title": "偽葬家の一族"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006698_S/episodes/KC_0066980001100011_E"
+      }
+    ],
+    "slug": "偽令嬢の訳ありオークションカタログエメラルドは出会いを導く",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006698/resized/b01d1b1e-6bef-40e7-8b1f-5bc2732c0160.jpg",
+    "title": "偽令嬢の訳ありオークションカタログ　エメラルドは出会いを導く"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-04",
@@ -23200,14 +24160,14 @@
     "title": "逆行した悪役令嬢は、なぜか魔力を失ったので深窓の令嬢になります　～聖女アンナの物語～"
   },
   {
-    "dayBits": 4,
+    "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-08-25",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006740_S/episodes/KC_0067400001900011_E"
+        "url": "https://comic-walker.com/detail/KC_006740_S/episodes/KC_0067400001900021_E"
       }
     ],
     "slug": "久々に健康診断を受けたら最強ステータスになっていた~追放されたオッサン冒険者、今更英雄を目指す~",
@@ -23308,6 +24268,21 @@
     "slug": "宮倉ぼたんのスキャンダル",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/b2f1cc232bb9f8548c8c8680bdd5ddfad24dacf5/enlarge=0;height=654;no_unsharpmask=1;quality=90;version=1;width=1125/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-thumbnail%2F12207421984005272112-258f404ef90bc9e0171bf7cbed2008a3%3F1785131163",
     "title": "宮倉ぼたんのスキャンダル"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006335_S/episodes/KC_0063350001400011_E"
+      }
+    ],
+    "slug": "宮中は噂のたえない職場にて",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006335/resized/f75fc892-2f65-4a17-87e0-d6f90e1c5b04.jpg",
+    "title": "宮中は噂のたえない職場にて"
   },
   {
     "dayBits": 64,
@@ -23595,6 +24570,21 @@
     "title": "共飯グルメ！"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1069"
+      }
+    ],
+    "slug": "凶乱令嬢ニア・リストン病弱令嬢に転生した神殺しの武人の華麗なる無双録",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1668475264/title_small/1069.webp?hash=gq-E4sHozcz3K-FJBx557Q&expires=2145884400",
+    "title": "凶乱令嬢ニア・リストン 病弱令嬢に転生した神殺しの武人の華麗なる無双録"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-09-04",
     "lastSeen": "2026-09-04",
@@ -23700,6 +24690,21 @@
     "title": "極悪令嬢は仁義を貫く"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006204_S/episodes/KC_0062040001400011_E"
+      }
+    ],
+    "slug": "極楽に至る忌門",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006204/resized/024ed722-fff5-4239-8810-c69e8d5449d7.jpg",
+    "title": "極楽に至る忌門"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -23715,18 +24720,23 @@
     "title": "極剣のスラッシュ　～初級スキル極めたら、いつの間にか迷宮都市最強になってたんだが～"
   },
   {
-    "dayBits": 4,
+    "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-08-25",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "webアクション",
         "siteUrl": "https://comic-action.com/",
         "url": "https://comic-action.com/episode/12207421984056083667"
+      },
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/iz73SqvDiVaqviKX6EX2XVrIy/episodes/74"
       }
     ],
     "slug": "極限夫婦",
-    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984056083667-c2c8162380c49e4f9bac364d05fdc645?1787113920",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/9a6105a4-4a67-430e-a0c6-e8441a687d3a.jpg",
     "title": "極限夫婦"
   },
   {
@@ -24195,6 +25205,21 @@
     "title": "君の心が灰になっても/2026年7月期ブロンズルーキー賞"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_012214_S/episodes/KC_0122140000500011_E"
+      }
+    ],
+    "slug": "君の声が降る夜に",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012214/resized/c58072d9-8cf9-4fa0-8048-27248b5a8894.jpg",
+    "title": "君の声が降る夜に"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-31",
     "lastSeen": "2026-09-07",
@@ -24362,7 +25387,7 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "竹コミ！",
@@ -24500,18 +25525,18 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1631"
-      },
-      {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2391/chapter/126816"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1631"
       }
     ],
     "slug": "結婚初夜のデスループ~脳筋令嬢は何度死んでもめげません~",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2391/title_thumbnail_list_single/407547.webp?hash=txpukzZVQPxi2Xx5DHk7Tg&expires=1789344000",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1762494710/title_small/1631.webp?hash=L8JKmoYpG4Cr4Tsww0FSeg&expires=2145884400",
     "title": "結婚初夜のデスループ～脳筋令嬢は何度死んでもめげません～"
   },
   {
@@ -24526,7 +25551,7 @@
       }
     ],
     "slug": "血を這う亡国の王女",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1638/title_thumbnail_list_single/397698.webp?hash=6n1Y9F6RsWvEHd6At5OaSA&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1638/title_thumbnail_list_single/397698.webp?hash=605Pi3i1MQpVAchSgnPRkA&expires=1789603200",
     "title": "血を這う亡国の王女"
   },
   {
@@ -24683,6 +25708,21 @@
     "slug": "嫌われ皇子のやりなおし~辺境で【闇魔法】を極めて、最強の眷属と理想の王国を作ります~",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001661/resized/a3e847f6-c108-4dcd-b775-cba4379561be.jpg",
     "title": "嫌われ皇子のやりなおし　～辺境で【闇魔法】を極めて、最強の眷属と理想の王国を作ります～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020099_S/episodes/KC_0200990000200011_E"
+      }
+    ],
+    "slug": "嫌われ神子の8年間",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020099/resized/2f8e6402-0b41-4d12-adc5-888ad06dd480.jpg",
+    "title": "嫌われ神子の8年間"
   },
   {
     "dayBits": 12,
@@ -25182,12 +26222,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_002634_S/episodes/KC_0026340007300011_E"
+        "url": "https://comic-walker.com/detail/KC_002634_S/episodes/KC_0026340007300021_E"
       }
     ],
     "slug": "後宮妃の管理人",
@@ -25307,12 +26347,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008257_S/episodes/KC_0082570001200041_E"
+        "url": "https://comic-walker.com/detail/KC_008257_S/episodes/KC_0082570001300011_E"
       }
     ],
     "slug": "公爵夫人に相応しくないと離縁された私の話。",
@@ -25395,6 +26435,21 @@
     "title": "好きこそ暮らしの上手なれ"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008725_S/episodes/KC_0087250000600011_E"
+      }
+    ],
+    "slug": "好きだけちょうだい",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008725/resized/b8d1c694-6a23-45a5-8341-c61e5e57728a.jpg",
+    "title": "好きだけちょうだい"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
     "lastSeen": "2026-09-09",
@@ -25423,6 +26478,21 @@
     "slug": "幸せカナコの殺し屋生活",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2780/title_grid_wide_20250203115833f7dccd5b979634c44e2fee61acd3c36e.png",
     "title": "幸せカナコの殺し屋生活"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006103_S/episodes/KC_0061030000600011_E"
+      }
+    ],
+    "slug": "幸せになりたいオメガ、騎士に嫁ぐ",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006103/resized/368fb013-e253-4be9-9a8d-5a5c58a8ea14.jpg",
+    "title": "幸せになりたいオメガ、騎士に嫁ぐ"
   },
   {
     "dayBits": 32,
@@ -25558,6 +26628,21 @@
     "slug": "航宙軍士官、冒険者になる",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001405/resized/e3a3c83c-3d69-473e-a20d-d2553363fcca.jpg",
     "title": "航宙軍士官、冒険者になる"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006432_S/episodes/KC_0064320000800021_E"
+      }
+    ],
+    "slug": "貢がれ姫と冷厳の白狼王獣人の万能薬になるのは嫌なので全力で逃亡します",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006432/resized/deab2a1c-9805-411b-9188-d64c400cbf69.jpg",
+    "title": "貢がれ姫と冷厳の白狼王　獣人の万能薬になるのは嫌なので全力で逃亡します"
   },
   {
     "dayBits": 64,
@@ -25697,22 +26782,22 @@
   {
     "dayBits": 20,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-10",
     "sites": [
-      {
-        "name": "コミックDAYS",
-        "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421983379583834"
-      },
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/02582/episode/435058"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/12207421983379583844"
       }
     ],
     "slug": "国を追われた竜師さん、拾われた隣国でうっかり無双してしまう。~弱小国家が大陸最強の竜の楽園になるまで",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2582/title_grid_wide_20240829162231f2b3a7f69441f7e4e8b68407f2895973.png",
-    "title": "国を追われた竜師さん、拾われた隣国でうっかり無双してしまう。～弱小国家が大陸最強の竜の楽園になるまで～"
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d4062d008f42bad6254cf5f70f48ffb82d79174c/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550689798419715375-b401a472c52590608ac92f9087543f6c%3F1715043269",
+    "title": "国を追われた竜師さん、拾われた隣国でうっかり無双してしまう。〜弱小国家が大陸最強の竜の楽園になるまで〜"
   },
   {
     "dayBits": 16,
@@ -26165,6 +27250,21 @@
     "title": "婚約者に「あなたは将来浮気をしてわたしを捨てるから別れてください」と言ってみた"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_003915_S/episodes/KC_0039150005400021_E"
+      }
+    ],
+    "slug": "婚約者は、私の妹に恋をする",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003915/resized/49c76af3-70b7-41c0-bb9a-4ff265bc30e6.jpg",
+    "title": "婚約者は、私の妹に恋をする"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -26331,7 +27431,7 @@
       }
     ],
     "slug": "婚約破棄を狙って記憶喪失のフリをしたら、素っ気ない態度だった婚約者が「記憶を失う前の君は、俺にベタ惚",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1649137142/title_small/951.webp?hash=hDw8166lMpkvsDuMoNOIEw&expires=2145884400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1789002194/title_small/951.webp?hash=_MqBMRT7-lkMzm_U-S5SbQ&expires=2145884400",
     "title": "婚約破棄を狙って記憶喪失のフリをしたら、素っ気ない態度だった婚約者が「記憶を失う前の君は、俺にベタ惚れだった」という、とんでもない嘘をつき始めた"
   },
   {
@@ -26340,18 +27440,18 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2544/chapter/130515"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1712"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2544/chapter/130515"
       }
     ],
     "slug": "昏き宮殿の死者の王~始祖の吸血鬼と闇を狩る女騎士~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1777617367/title_small/1712.webp?hash=IVephoanJpI0UmCHLXFaPw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2544/title_thumbnail_list_single/411036.webp?hash=1hIl-piERmKsdkGUNn5JpA&expires=1789430400",
     "title": "昏き宮殿の死者の王　～始祖の吸血鬼と闇を狩る女騎士～"
   },
   {
@@ -26555,6 +27655,21 @@
     "title": "最強なのにかわいすぎて異世界を追放された姫魔王は学園ラブコメのメインヒロイン～冷酷無比だけど実は純情乙女で俺のことを好きすぎる件～"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_003269_S/episodes/KC_0032690009100011_E"
+      }
+    ],
+    "slug": "最強の鑑定士って誰のこと~満腹ごはんで異世界生活~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003269/resized/207f95a4-3efc-4483-8a9d-ad53d399c96f.jpg",
+    "title": "最強の鑑定士って誰のこと？～満腹ごはんで異世界生活～"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-08",
     "lastSeen": "2026-09-08",
@@ -26722,12 +27837,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006988_S/episodes/KC_0069880001200021_E"
+        "url": "https://comic-walker.com/detail/KC_006988_S/episodes/KC_0069880001300011_E"
       }
     ],
     "slug": "最後の陰陽師とその妻",
@@ -26797,12 +27912,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421983938363802"
+        "url": "https://comic-days.com/episode/12207421983938363806"
       }
     ],
     "slug": "最弱貴族に転生したので悪役たちを集めてみた",
@@ -27095,6 +28210,36 @@
     "title": "殺し屋の営業術"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020042_S/episodes/KC_0200420000200011_E"
+      }
+    ],
+    "slug": "雑用係として宿で働きはじめた錬金術師、看板娘たちと一緒に暮らすことになった",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020042/resized/2298f058-8214-45cb-ad77-735d7613a4f6.jpg",
+    "title": "雑用係として宿で働きはじめた錬金術師、看板娘たちと一緒に暮らすことになった"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/605051da776561856c030000/episodes/174"
+      }
+    ],
+    "slug": "雑用付与術師が自分の最強に気付くまで",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/a4c2b17a-411e-4449-b806-2597aaf2d83f.jpg",
+    "title": "雑用付与術師が自分の最強に気付くまで"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -27232,12 +28377,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_005158_S/episodes/KC_0051580004200011_E"
+        "url": "https://comic-walker.com/detail/KC_005158_S/episodes/KC_0051580004200021_E"
       }
     ],
     "slug": "仕事帰り、独身の美人上司に頼まれて",
@@ -27561,6 +28706,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008324_S/episodes/KC_0083240000600011_E"
+      }
+    ],
+    "slug": "死に戻ったモブはラスボスの最愛でした",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008324/resized/daaf2193-188d-47ad-88bc-c4a5bd490bdc.jpg",
+    "title": "死に戻ったモブはラスボスの最愛でした"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-10",
     "sites": [
@@ -27577,12 +28737,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_005339_S/episodes/KC_0053390003500021_E"
+        "url": "https://comic-walker.com/detail/KC_005339_S/episodes/KC_0053390003500031_E"
       }
     ],
     "slug": "死に戻りの魔法学校生活を、元恋人とプロローグから(※ただし好感度はゼロ)",
@@ -27648,6 +28808,21 @@
     "slug": "死に戻り聖女は毒家族と決別する~未来を変えたら、狂暴王子様の溺愛が待ってました!~",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3321/title_grid_wide_20260724122319947194cf7b2c12f702cf399b80c3d409.png",
     "title": "死に戻り聖女は毒家族と決別する〜未来を変えたら、狂暴王子様の溺愛が待ってました!?〜"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックガルド",
+        "siteUrl": "https://comic-gardo.com/",
+        "url": "https://comic-gardo.com/episode/12207421984188204535"
+      }
+    ],
+    "slug": "死ぬ運命にある悪役令嬢の兄に転生したので、妹を育てて未来を変えたいと思います~世界最強はオレだけど、",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984188204535-67522435923fd49a3d93d63840d6fa47?1788442145",
+    "title": "死ぬ運命にある悪役令嬢の兄に転生したので、妹を育てて未来を変えたいと思います　～世界最強はオレだけど、世界最カワは妹に違いない～"
   },
   {
     "dayBits": 16,
@@ -27807,12 +28982,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006318_S/episodes/KC_0063180001700021_E"
+        "url": "https://comic-walker.com/detail/KC_006318_S/episodes/KC_0063180001700031_E"
       }
     ],
     "slug": "死体役令嬢に転生したら黒幕王子に執着されちゃいました",
@@ -27911,7 +29086,7 @@
       }
     ],
     "slug": "私がモテないのはどう考えてもお前らが悪い!",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/29/title_thumbnail_list_single/409701.webp?hash=Gnqvyq0kWpkbzfNVWZCCtg&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/29/title_thumbnail_list_single/409701.webp?hash=HfEXxq8Y6Jr84YXngzHP9A&expires=1789603200",
     "title": "私がモテないのはどう考えてもお前らが悪い!"
   },
   {
@@ -28083,6 +29258,21 @@
     "slug": "私の魔法は絶対に当たるんです~スローライフを守るために魔法を撃ち続けていたら、いつの間にか森の聖女に",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/2d7fb1426ce91ebdae6954a5ee611af1ff53981d/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2551460909905968376-9e48cf520add295c761fbb6575466181%3F1782891061",
     "title": "私の魔法は絶対に当たるんです　～スローライフを守るために魔法を撃ち続けていたら、いつの間にか森の聖女になっていました～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008702_S/episodes/KC_0087020000600011_E"
+      }
+    ],
+    "slug": "私の魔法使い虐げられた少女は美しき王弟殿下に見初められる",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008702/resized/0971a9ac-f8de-44e2-a4c3-91544e889d7f.jpg",
+    "title": "私の魔法使い 虐げられた少女は美しき王弟殿下に見初められる"
   },
   {
     "dayBits": 16,
@@ -28293,6 +29483,21 @@
     "slug": "自称・お母さんが1体あらわれた!",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012729/resized/da7bf267-3246-4982-ae8f-b879fccbde1b.jpg",
     "title": "自称・お母さんが１体あらわれた！"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックガルド",
+        "siteUrl": "https://comic-gardo.com/",
+        "url": "https://comic-gardo.com/episode/12207421984188204567"
+      }
+    ],
+    "slug": "自分をsss級だと思い込んでいるc級魔術学生",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984188204567-5afe92276cafb4e5c4dbbf0b7a1e86b2?1788920507",
+    "title": "自分をSSS級だと思い込んでいるC級魔術学生"
   },
   {
     "dayBits": 32,
@@ -28531,6 +29736,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_004131_S/episodes/KC_0041310002600031_E"
+      }
+    ],
+    "slug": "捨てられ聖女の異世界ごはん旅隠れスキルでキャンピングカーを召喚しました",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004131/resized/210a5c2f-c02c-48cd-8945-c1242c2e1090.jpg",
+    "title": "捨てられ聖女の異世界ごはん旅　隠れスキルでキャンピングカーを召喚しました"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-03",
     "sites": [
@@ -28722,12 +29942,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_005406_S/episodes/KC_0054060001600011_E"
+        "url": "https://comic-walker.com/detail/KC_005406_S/episodes/KC_0054060001600021_E"
       }
     ],
     "slug": "借金令嬢とひきこもり竜王子専属お世話係は危険がいっぱい!",
@@ -28780,6 +30000,21 @@
     "title": "弱虫ペダル【TVアニメ配信中】"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_019468_S/episodes/KC_0194680000300011_E"
+      }
+    ],
+    "slug": "主人公に断罪される悪役に転生したけど、関わらずにのんびりと過ごしたい",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019468/resized/f69587be-c5de-4de3-b8e4-0a3e2f5f5185.jpg",
+    "title": "主人公に断罪される悪役に転生したけど、関わらずにのんびりと過ごしたい"
+  },
+  {
     "dayBits": 36,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-08",
@@ -28810,6 +30045,21 @@
     "title": "主人公様の妹に愛されているけど、しっかりヤンデレ。"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006118_S/episodes/KC_0061180003100011_E"
+      }
+    ],
+    "slug": "手に入れた催眠アプリで夢のハーレム生活を送りたい",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006118/resized/d27d38cd-c5a1-4a3e-b27e-ba7cc4e244dd.jpg",
+    "title": "手に入れた催眠アプリで夢のハーレム生活を送りたい"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -28838,6 +30088,21 @@
     "slug": "手紙の魔女のおくり旅",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2335374/20260819133839623CCDC26A7C9B44368324299F95C737D03-sm.webp",
     "title": "手紙の魔女のおくり旅"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008433_S/episodes/KC_0084330001100011_E"
+      }
+    ],
+    "slug": "手切れ金をもらったので旅に出ることにした",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008433/resized/8ef9b895-9999-4271-a809-d92e3bde63e1.jpg",
+    "title": "手切れ金をもらったので旅に出ることにした"
   },
   {
     "dayBits": 32,
@@ -28913,6 +30178,36 @@
     "slug": "呪イアツメ",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/2b4d12bd7fb79979ae895dff76d3bba1a360523c/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F12207421984001199961-cf840bcb0ae238650bf4cafd771a90bc%3F1784856312",
     "title": "呪イアツメ"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008517_S/episodes/KC_0085170000600011_E"
+      }
+    ],
+    "slug": "呪い子と銀狼の円舞曲",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008517/resized/1bdc48dd-d39a-41ba-a138-06c7a696f543.jpg",
+    "title": "呪い子と銀狼の円舞曲"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006133_S/episodes/KC_0061330001800011_E"
+      }
+    ],
+    "slug": "呪われた仮面公爵に嫁いだ薄幸令嬢の掴んだ幸せ",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006133/resized/347f2f72-7b29-4fff-aad9-6b0c83566877.jpg",
+    "title": "呪われた仮面公爵に嫁いだ薄幸令嬢の掴んだ幸せ"
   },
   {
     "dayBits": 16,
@@ -29157,12 +30452,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ゼノンプラス",
         "siteUrl": "https://comic-zenon.com/",
-        "url": "https://comic-zenon.com/episode/12207421984022965925"
+        "url": "https://comic-zenon.com/episode/12207421984022965933"
       }
     ],
     "slug": "終末のワルキューレ禁伝神々の黙示録",
@@ -29233,6 +30528,21 @@
     "slug": "十年目、帰還を諦めた転移者はいまさら主人公になる",
     "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984064909035-508ec4876b07f492043f101ba681d9e8?1788460769",
     "title": "十年目、帰還を諦めた転移者はいまさら主人公になる"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006699_S/episodes/KC_0066990001400011_E"
+      }
+    ],
+    "slug": "十番目のユナス",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006699/resized/55f3e6d8-0764-43bf-8e66-c4c65cb5cb2d.jpg",
+    "title": "十番目のユナス"
   },
   {
     "dayBits": 1,
@@ -29342,21 +30652,21 @@
   {
     "dayBits": 18,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-07",
+    "lastSeen": "2026-09-10",
     "sites": [
-      {
-        "name": "コミックDAYS",
-        "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421984051340411"
-      },
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/02890/episode/419497"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/12207421984142937139"
       }
     ],
     "slug": "出禁のモグラ",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2890/title_grid_wide_20250602183021c3382f379ebfde10079743612c76b208.png",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/26070adf10fcd2ab0022b34d100802dff54960d7/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F3269632237305129778-35f7546edc7f0b5e3428a73391bc7381%3F1722417643",
     "title": "出禁のモグラ"
   },
   {
@@ -29373,6 +30683,21 @@
     "slug": "出遅れテイマーのその日暮らし",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003997/resized/c183fbe9-e5d9-4847-9056-99eda8d20cc2.jpg",
     "title": "出遅れテイマーのその日暮らし"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006102_S/episodes/KC_0061020001200011_E"
+      }
+    ],
+    "slug": "春のデジャヴに踊れ",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006102/resized/9cda3a52-f678-41ba-84f5-05ece87f15f6.jpg",
+    "title": "春のデジャヴに踊れ"
   },
   {
     "dayBits": 32,
@@ -29787,17 +31112,32 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_007109_S/episodes/KC_0071090001000031_E"
+        "url": "https://comic-walker.com/detail/KC_007109_S/episodes/KC_0071090001000041_E"
       }
     ],
     "slug": "商い人魚と蒼空の初恋",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007109/resized/402aae84-8b0f-4ebd-a86f-0f9b04b59369.jpg",
     "title": "商い人魚と蒼空の初恋"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007161_S/episodes/KC_0071610001200011_E"
+      }
+    ],
+    "slug": "宵を待つ月の物語",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007161/resized/04976d19-1912-4a0d-b46f-a0fa2de04c62.jpg",
+    "title": "宵を待つ月の物語"
   },
   {
     "dayBits": 1,
@@ -29892,12 +31232,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_009365_S/episodes/KC_0093650000500011_E"
+        "url": "https://comic-walker.com/detail/KC_009365_S/episodes/KC_0093650000500021_E"
       }
     ],
     "slug": "小物貴族が性に合うようです",
@@ -29995,18 +31335,23 @@
     "title": "少女に転生したシリアルキラーは、無慈悲にNarrを追い詰める。"
   },
   {
-    "dayBits": 4,
+    "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/02066/episode/376901"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/4856001361239390176"
       }
     ],
     "slug": "少女ファイト",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2066/title_grid_wide_202302031133350a0a25330f91e5d63dd915119526124c.png",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f8bda39cd1317ab130d1e20af529215c05356720/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F13932016480029452684-b75add937aada2dab5e0a1e12ed32ba0%3F1699347359",
     "title": "少女ファイト"
   },
   {
@@ -30360,6 +31705,36 @@
     "title": "織田家の長男に生まれました ～戦国時代に転生したけど、死にたくないので改革を起こします～"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007403_S/episodes/KC_0074030000900021_E"
+      }
+    ],
+    "slug": "職業王妃ですので王の溺愛はご遠慮願います",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007403/resized/0117c590-7c8c-4c87-9dee-be17d62cdc83.jpg",
+    "title": "職業王妃ですので王の溺愛はご遠慮願います"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020100_S/episodes/KC_0201000000200011_E"
+      }
+    ],
+    "slug": "色情霊専門、白夜さんのひみつ",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020100/resized/17bdde10-69cd-4783-abc5-850c897ca133.jpg",
+    "title": "色情霊専門、白夜さんのひみつ"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
     "lastSeen": "2026-09-02",
@@ -30647,12 +32022,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "となりのヤングジャンプ",
         "siteUrl": "https://tonarinoyj.jp/",
-        "url": "https://tonarinoyj.jp/episode/12207421984182502154"
+        "url": "https://tonarinoyj.jp/episode/12207421984213501175"
       }
     ],
     "slug": "森野さんだるがらむ",
@@ -30688,6 +32063,21 @@
     "slug": "深夜0時のご褒美ごはん",
     "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421983997521585-8721156ffdee3a97cda97a1305c9a17e?1787113682",
     "title": "深夜０時のご褒美ごはん"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006132_S/episodes/KC_0061320001400021_E"
+      }
+    ],
+    "slug": "深夜0時の司書見習い",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006132/resized/82d7aa81-b2f2-42d3-b6b4-f12e87453b60.jpg",
+    "title": "深夜０時の司書見習い"
   },
   {
     "dayBits": 32,
@@ -30918,6 +32308,51 @@
     "slug": "神作家・紫式部のありえない日々",
     "thumbnailUrl": "https://contents.zerosumonline.com/title_thumbnail/61.webp",
     "title": "神作家・紫式部のありえない日々"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008747_S/episodes/KC_0087470000400011_E"
+      }
+    ],
+    "slug": "神子で召喚されたけど、隣の人がハイスペックすぎてお呼びでなかった",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008747/resized/e1a9bc4d-1d2c-4f8c-90af-9b4b8002c255.jpg",
+    "title": "神子で召喚されたけど、隣の人がハイスペックすぎてお呼びでなかった"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_019470_S/episodes/KC_0194700000400011_E"
+      }
+    ],
+    "slug": "神子と夜叉嫁",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019470/resized/3f9e25da-9f0b-460a-b921-6869415e7c4b.jpg",
+    "title": "神子と夜叉嫁"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020041_S/episodes/KC_0200410000200011_E"
+      }
+    ],
+    "slug": "神獣連れの契約妃加護を疑われ婚約破棄されたので、帝国皇子の右腕に再就職しました",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020041/resized/6f71afbe-82b8-4a05-9414-a334ca6700a3.jpg",
+    "title": "神獣連れの契約妃 加護を疑われ婚約破棄されたので、帝国皇子の右腕に再就職しました"
   },
   {
     "dayBits": 1,
@@ -31381,6 +32816,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005840_S/episodes/KC_0058400001200021_E"
+      }
+    ],
+    "slug": "図書館の天才少女~本好きの新人官吏は膨大な知識で国を救います!~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005840/resized/e2702ae7-72a0-45f6-8e6b-8b9b3547e9bd.jpg",
+    "title": "図書館の天才少女 ～本好きの新人官吏は膨大な知識で国を救います！～"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-09-03",
     "lastSeen": "2026-09-03",
     "sites": [
@@ -31800,6 +33250,21 @@
     "title": "政略結婚の夫に「愛さなくて結構です」と宣言したら溺愛が始まりました"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912965344562233"
+      }
+    ],
+    "slug": "星なき世界の案内人",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/fd8716cbf8fe971c6f853ceee5636cd8a5cc16af/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965344545738-42a7ff3ebb8a2cc9f79bbc5bcb95a9dd%3F1745212685",
+    "title": "星なき世界の案内人"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
     "lastSeen": "2026-09-07",
@@ -31835,6 +33300,21 @@
     "title": "星降る王国のニナ"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006400_S/episodes/KC_0064000001200011_E"
+      }
+    ],
+    "slug": "星狩る獣の後宮",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006400/resized/31d03c80-523f-4b6b-94eb-819e140c3f41.jpg",
+    "title": "星狩る獣の後宮"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-04",
@@ -31863,6 +33343,36 @@
     "slug": "棲ミタイ街",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3327/title_grid_wide_2026080612233938571b3aa771af1e69b1ae7fc1f6c94a.png",
     "title": "棲ミタイ街"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008478_S/episodes/KC_0084780000800011_E"
+      }
+    ],
+    "slug": "正ヒロインに転生しましたが、運命の歯車は物理でぶち壊します",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008478/resized/7723b839-eca3-4426-8275-ae02103d5ef7.jpg",
+    "title": "正ヒロインに転生しましたが、運命の歯車は物理でぶち壊します"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_000975_S/episodes/KC_0009750003400011_E"
+      }
+    ],
+    "slug": "生き残り錬金術師は街で静かに暮らしたい~輪環の魔法薬~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000975/resized/5203896c-2f7a-492e-a4c4-d97fe7d92f37.jpg",
+    "title": "生き残り錬金術師は街で静かに暮らしたい ～輪環の魔法薬～"
   },
   {
     "dayBits": 32,
@@ -32157,12 +33667,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006552_S/episodes/KC_0065520001300021_E"
+        "url": "https://comic-walker.com/detail/KC_006552_S/episodes/KC_0065520001300031_E"
       }
     ],
     "slug": "聖女の力で婚約者を奪われたけど、やり直すからには好きにはさせない",
@@ -32665,6 +34175,21 @@
     "title": "雪娘は授かりたい"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_012714_S/episodes/KC_0127140000500011_E"
+      }
+    ],
+    "slug": "絶華の契り仮初め呪術師夫婦は後宮を駆ける",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012714/resized/28eaec25-d3d8-4058-a142-e0315ce8ab6f.jpg",
+    "title": "絶華の契り 仮初め呪術師夫婦は後宮を駆ける"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -32860,6 +34385,21 @@
     "title": "川柳少女"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006867_S/episodes/KC_0068670001600011_E"
+      }
+    ],
+    "slug": "戦乙女たちと築く元・底辺村人の最強ハーレム~数万人の女に対し、男は俺一人~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006867/resized/de8c28c7-38fc-45c0-b3d6-496705e83ba7.jpg",
+    "title": "戦乙女たちと築く元・底辺村人の最強ハーレム 　～数万人の女に対し、男は俺一人～"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-04",
@@ -32927,12 +34467,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006067_S/episodes/KC_0060670004600011_E"
+        "url": "https://comic-walker.com/detail/KC_006067_S/episodes/KC_0060670004700011_E"
       }
     ],
     "slug": "戦姫サバイバルサガ-異世界の運命をかけた無人島フジュン異性交遊-",
@@ -32942,12 +34482,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008497_S/episodes/KC_0084970001000011_E"
+        "url": "https://comic-walker.com/detail/KC_008497_S/episodes/KC_0084970001000021_E"
       }
     ],
     "slug": "戦利品令嬢シェリルは自分を殺す夫を籠絡したい",
@@ -33028,6 +34568,21 @@
     "slug": "前世が伝説の大魔女だった不遇聖女は皇帝陛下に溺愛されています",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006071/resized/5c255fe5-4b6a-4d13-b515-49cf90183406.jpg",
     "title": "前世が伝説の大魔女だった不遇聖女は皇帝陛下に溺愛されています"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008635_S/episodes/KC_0086350000400011_E"
+      }
+    ],
+    "slug": "前世の記憶が役立つとは思えません!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008635/resized/f9a1fccc-ec97-46b3-81cf-58322a15d596.jpg",
+    "title": "前世の記憶が役立つとは思えません！"
   },
   {
     "dayBits": 4,
@@ -33120,6 +34675,21 @@
     "title": "全滅エンドを死に物狂いで回避した。パーティが病んだ。"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912965979478199"
+      }
+    ],
+    "slug": "全力めしアリサはよく読みよく食べる",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/fd839a9575cfcce68572bc97c6be07d1914e9c1b/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965979473654-26e8c501d23b249698544c7bd3a51558%3F1754381115",
+    "title": "全力めし　アリサはよく読みよく食べる"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-09-04",
     "lastSeen": "2026-09-04",
@@ -33210,6 +34780,21 @@
     "title": "創造錬金術師は自由を謳歌する 故郷を追放されたら、魔王のお膝元で超絶効果のマジックアイテム作り放題になりました"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005433_S/episodes/KC_0054330004200011_E"
+      }
+    ],
+    "slug": "双子まとめて『カノジョ』にしない",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005433/resized/11695797-431a-4e8b-8a21-cfb603193e7b.jpg",
+    "title": "双子まとめて『カノジョ』にしない？"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
     "lastSeen": "2026-09-01",
@@ -33283,6 +34868,36 @@
     "slug": "窓際編集とバカにされた俺が、双子jkと同居することになった",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006388/resized/d8f6e0dc-008f-41c4-a76c-03c6e0aa5559.jpg",
     "title": "窓際編集とバカにされた俺が、双子ＪＫと同居することになった"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008425_S/episodes/KC_0084250000700011_E"
+      }
+    ],
+    "slug": "総務課の播上君のお弁当ひとくちもらえますか",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008425/resized/419eb20e-2621-478c-9637-a30e438344c7.jpg",
+    "title": "総務課の播上君のお弁当　ひとくちもらえますか？"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_004863_S/episodes/KC_0048630004700011_E"
+      }
+    ],
+    "slug": "草魔法師クロエの二度目の人生自由になって子ドラゴンとレベルmax薬師ライフ",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004863/resized/b9d9eefd-562a-449d-99b4-df1b522542b2.jpg",
+    "title": "草魔法師クロエの二度目の人生 自由になって子ドラゴンとレベルMAX薬師ライフ"
   },
   {
     "dayBits": 8,
@@ -33532,12 +35147,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ゼノンプラス",
         "siteUrl": "https://comic-zenon.com/",
-        "url": "https://comic-zenon.com/episode/12207421983918558642"
+        "url": "https://comic-zenon.com/episode/12207421984187046578"
       }
     ],
     "slug": "堕天使のカルテ",
@@ -33633,6 +35248,21 @@
     "slug": "貸した魔力は【リボ払い】で強制徴収~用済みとパーティー追放された俺は、可愛いサポート妖精と一緒に取り",
     "thumbnailUrl": "https://kirapo.jp/storage/images/title/1000162/thumbnail_c3f62a4039cc1c98.avif",
     "title": "貸した魔力は【リボ払い】で強制徴収～用済みとパーティー追放された俺は、可愛いサポート妖精と一緒に取り立てた魔力を運用して最強を目指す。～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008405_S/episodes/KC_0084050000700011_E"
+      }
+    ],
+    "slug": "退役魔法騎士は辺境で宿屋を営業中",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008405/resized/0b240628-0150-490c-9b01-05a4b1f8fc37.jpg",
+    "title": "退役魔法騎士は辺境で宿屋を営業中"
   },
   {
     "dayBits": 32,
@@ -33775,6 +35405,21 @@
     "title": "大商家の愛娘（幼女）ですが、毎日元気いっぱいに暮らしていたら攻略対象の過去トラウマを一掃しちゃってたみたいです THE COMIC"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミプレ",
+        "siteUrl": "https://viewer.heros-web.com/",
+        "url": "https://heros-web.com/series/b46316f6b82e4"
+      }
+    ],
+    "slug": "大昭和ロボット捜査線",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/20260508153154550979F5D06A9860CFB4A293E989AB8F26E-sm.webp",
+    "title": "大昭和ロボット捜査線"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
     "lastSeen": "2026-09-02",
@@ -33803,6 +35448,21 @@
     "slug": "大人大戦",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e08e8279207402f9daad928e7bdb8f35f9411fc3/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17106567264648152072-92ef44ba351388e3b198eb919436e07c%3F1788435005",
     "title": "大人大戦"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2551460909859039659"
+      }
+    ],
+    "slug": "大正學生愛妻家",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a8bd75d96c51971654097fcf0b6617b204c61456/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550689798348589283-860ca03dc12bab6080f4a10f303d8328%3F1718175320",
+    "title": "大正學生愛妻家"
   },
   {
     "dayBits": 2,
@@ -33865,6 +35525,21 @@
     "title": "宅飲み残念乙女ズ（電子再編集版）"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/2550912965127118977"
+      }
+    ],
+    "slug": "奪ったのではありません、お姉様が捨てたのです",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5b635e5094a466d8a197951af48e9369270ea511/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965123847936-db82a29406d376906576bec92f058f57%3F1759373592",
+    "title": "奪ったのではありません、お姉様が捨てたのです"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-04",
@@ -33882,12 +35557,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_005747_S/episodes/KC_0057470001400021_E"
+        "url": "https://comic-walker.com/detail/KC_005747_S/episodes/KC_0057470001400031_E"
       }
     ],
     "slug": "誰が勇者を殺したか",
@@ -33912,12 +35587,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008772_S/episodes/KC_0087720000400041_E"
+        "url": "https://comic-walker.com/detail/KC_008772_S/episodes/KC_0087720000500011_E"
       }
     ],
     "slug": "誰のことも好きじゃないはずが自由すぎる王弟殿下に振り回されています",
@@ -34043,6 +35718,21 @@
     "slug": "団長改め狂犬騎士のしつけ役",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008398/resized/8448f2a9-e446-4c35-8210-303c126f2bb7.jpg",
     "title": "団長改め狂犬騎士のしつけ役"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005325_S/episodes/KC_0053250002400021_E"
+      }
+    ],
+    "slug": "断罪された悪役令嬢ですが、パンを焼いたら聖女にジョブチェンジしました!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005325/resized/773ec215-466f-4041-acc9-7d6263f8904e.jpg",
+    "title": "断罪された悪役令嬢ですが、パンを焼いたら聖女にジョブチェンジしました!?"
   },
   {
     "dayBits": 32,
@@ -34202,12 +35892,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008657_S/episodes/KC_0086570000300041_E"
+        "url": "https://comic-walker.com/detail/KC_008657_S/episodes/KC_0086570000400011_E"
       }
     ],
     "slug": "地味令嬢、しごでき皇妃になる!契約婚のはずなのに冷血皇帝に溺愛されています",
@@ -34381,6 +36071,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006201_S/episodes/KC_0062010001000011_E"
+      }
+    ],
+    "slug": "鳥籠のかぐや姫",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006201/resized/80752b38-78a4-4215-b182-d6de054b792f.jpg",
+    "title": "鳥籠のかぐや姫"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-10",
     "sites": [
@@ -34393,6 +36098,21 @@
     "slug": "沈黙の艦隊",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/502/title_grid_wide_202206171047025e2e9e74e07b251ab4bbe6c79fcbf81c.png",
     "title": "沈黙の艦隊"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックガルド",
+        "siteUrl": "https://comic-gardo.com/",
+        "url": "https://comic-gardo.com/episode/12207421984188204492"
+      }
+    ],
+    "slug": "追放されたs級鑑定士は最強のギルドを創る",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984188204492-062fcafd218d9d47a9c1faac6b6f28f6?1788442024",
+    "title": "追放されたS級鑑定士は最強のギルドを創る"
   },
   {
     "dayBits": 33,
@@ -34415,6 +36135,21 @@
     "title": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。 ～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008305_S/episodes/KC_0083050001000011_E"
+      }
+    ],
+    "slug": "追放されたドラゴン好き令嬢は、北方辺境伯の愛に気づかない",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008305/resized/12718ea7-1ea6-4a34-904c-ef318523b565.jpg",
+    "title": "追放されたドラゴン好き令嬢は、北方辺境伯の愛に気づかない"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
     "lastSeen": "2026-09-09",
@@ -34428,6 +36163,21 @@
     "slug": "追放された回復師は【キャリアアップ】で無双します!~美少女3人だけで、最強パーティーを結成します~",
     "thumbnailUrl": "https://kirapo.jp/storage/images/title/2000510/thumbnail_34639728edad017c.avif",
     "title": "追放された回復師は【キャリアアップ】で無双します！～美少女3人だけで、最強パーティーを結成します～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007164_S/episodes/KC_0071640000600011_E"
+      }
+    ],
+    "slug": "追放された元王子様を拾ったら懐かれて結婚して家族になりました",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007164/resized/7de6f923-213d-4fae-bcba-a7bf14a7221d.jpg",
+    "title": "追放された元王子様を拾ったら懐かれて結婚して家族になりました"
   },
   {
     "dayBits": 16,
@@ -34500,14 +36250,14 @@
     "title": "追放された錬金術師、アダルトグッズで世界を救う ～どんなモンスターも絶対にイカせる男～"
   },
   {
-    "dayBits": 4,
+    "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-08-25",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_008650_S/episodes/KC_0086500000600011_E"
+        "url": "https://comic-walker.com/detail/KC_008650_S/episodes/KC_0086500000600021_E"
       }
     ],
     "slug": "追放系の悪役パーティのリーダーに転生したので、ざまぁされる前に自分を追放しました。~スキルを奪う『ス",
@@ -34571,7 +36321,7 @@
       }
     ],
     "slug": "追放勇者の優雅な生活~自由になったら俺だけの最愛天使も手に入った!~",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2196/title_thumbnail_list_single/416430.webp?hash=EN87wBi-wcMIYwBleOGWJQ&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2196/title_thumbnail_list_single/416430.webp?hash=YxsQx92J-bwrY8AX-crv-Q&expires=1789603200",
     "title": "追放勇者の優雅な生活  ～自由になったら俺だけの最愛天使も手に入った！～"
   },
   {
@@ -34678,6 +36428,21 @@
     "slug": "定額制夫の「こづかい万歳」~月額2万千円の金欠ライフ~",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2546/title_grid_wide_202503281152577d4d863fbf818fb63d95d2e27aa3d33c.png",
     "title": "定額制夫の「こづかい万歳」〜月額2万千円の金欠ライフ〜"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006462_S/episodes/KC_0064620001200011_E"
+      }
+    ],
+    "slug": "帝都の鬼は桜を恋う",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006462/resized/374edbfe-98b0-4e47-b1a9-7a1eda25cebe.jpg",
+    "title": "帝都の鬼は桜を恋う"
   },
   {
     "dayBits": 64,
@@ -34917,12 +36682,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "ゼノンプラス",
         "siteUrl": "https://comic-zenon.com/",
-        "url": "https://comic-zenon.com/episode/3269754496831132229"
+        "url": "https://comic-zenon.com/episode/3269754496831132237"
       }
     ],
     "slug": "天狗祓の三兄弟",
@@ -35142,12 +36907,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006551_S/episodes/KC_0065510001400021_E"
+        "url": "https://comic-walker.com/detail/KC_006551_S/episodes/KC_0065510001400031_E"
       }
     ],
     "slug": "転生したらポンコツメイドと呼ばれていました前世のあれこれを持ち込みお屋敷改革します",
@@ -35243,6 +37008,21 @@
     "slug": "転生したら第七王子だったので、気ままに魔術を極めます",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1153/title_grid_wide_20260508111840736c9309755d8892a424ebe5e3134266.png",
     "title": "転生したら第七王子だったので、気ままに魔術を極めます"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/61b9b813776561728b040000/episodes/114"
+      }
+    ],
+    "slug": "転生したら平民でした。~生活水準に耐えられないので貴族を目指します~",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/4ddd3661-0b45-4684-b4ef-1cfe032dae23.jpg",
+    "title": "転生したら平民でした。～生活水準に耐えられないので貴族を目指します～"
   },
   {
     "dayBits": 4,
@@ -35490,6 +37270,21 @@
     "title": "転生少女は救世を望まれる 平穏を目指した私は世界の重要人物だったようです"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006408_S/episodes/KC_0064080001500011_E"
+      }
+    ],
+    "slug": "転生厨師の彩食記異世界おそうざい食堂へようこそ!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006408/resized/bda10b4a-ac03-4212-bf8f-468828fcc28f.jpg",
+    "title": "転生厨師の彩食記  異世界おそうざい食堂へようこそ！"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
     "lastSeen": "2026-08-24",
@@ -35623,6 +37418,21 @@
     "slug": "転生幼女は愛猫とのんびり旅をする",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2369565/20260116190807746DCAC5EA4B1036B16E4B7EB16167BB931-sm.webp",
     "title": "転生幼女は愛猫とのんびり旅をする"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006020_S/episodes/KC_0060200001800011_E"
+      }
+    ],
+    "slug": "転生令嬢は悪名高い子爵家当主~領地運営のための契約結婚、承りました~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006020/resized/f9368705-ffef-4151-a274-008abcdc37c6.jpg",
+    "title": "転生令嬢は悪名高い子爵家当主 ～領地運営のための契約結婚、承りました～"
   },
   {
     "dayBits": 8,
@@ -36105,9 +37915,39 @@
     "title": "逃亡賢者(候補)のぶらり旅 ～召喚されましたが、逃げ出して安寧の地探しを楽しみます～"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/3dh5rSqtzUyTrXLnzJI6xg7Aa/episodes/60"
+      }
+    ],
+    "slug": "透明男と人間女~そのうち夫婦になるふたり~",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/3c114bda-4075-4d95-b808-a391171dc216.jpg",
+    "title": "透明男と人間女～そのうち夫婦になるふたり～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックガルド",
+        "siteUrl": "https://comic-gardo.com/",
+        "url": "https://comic-gardo.com/episode/12207421984188204578"
+      }
+    ],
+    "slug": "頭脳と異能に筋肉で勝利するデスゲーム~頭脳戦に舞い降りた最強のバカ~",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984188204578-6b9ce8210c0954a63b164d05a8eaf016?1788849427",
+    "title": "頭脳と異能に筋肉で勝利するデスゲーム　～頭脳戦に舞い降りた最強のバカ～"
+  },
+  {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "マガポケ",
@@ -36117,7 +37957,7 @@
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/13932016480030678657"
+        "url": "https://comic-days.com/episode/13932016480030679183"
       }
     ],
     "slug": "頭文字d",
@@ -36537,12 +38377,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_019478_S/episodes/KC_0194780000300021_E"
+        "url": "https://comic-walker.com/detail/KC_019478_S/episodes/KC_0194780000400011_E"
       }
     ],
     "slug": "肉食う家族",
@@ -36821,6 +38661,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_004376_S/episodes/KC_0043760004100011_E"
+      }
+    ],
+    "slug": "農学博士の異世界無双~禁忌の知識で築くモンスター娘ハーレム~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004376/resized/6578a39a-271a-4d21-92f7-18a7f3bd343d.jpg",
+    "title": "農学博士の異世界無双～禁忌の知識で築くモンスター娘ハーレム～"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-03",
     "sites": [
@@ -36962,12 +38817,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_019998_S/episodes/KC_0199980000200021_E"
+        "url": "https://comic-walker.com/detail/KC_019998_S/episodes/KC_0199980000200031_E"
       }
     ],
     "slug": "廃ゲーマーの農夫転生~俺だけが知っている最弱職能の進化先で成り上がる!~",
@@ -37022,12 +38877,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006092_S/episodes/KC_0060920003000021_E"
+        "url": "https://comic-walker.com/detail/KC_006092_S/episodes/KC_0060920003100011_E"
       }
     ],
     "slug": "拝啓、在りし日に咲く花たちへ",
@@ -37275,6 +39130,21 @@
     "title": "爆弾"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005324_S/episodes/KC_0053240000900021_E"
+      }
+    ],
+    "slug": "箱入り皇女は至高の恋をお望みです!~理想の殿方を探す旅に出ます。ただし、美しい者以外認めません!~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005324/resized/af57e282-cefc-4f8e-90c0-0cf14387301b.jpg",
+    "title": "箱入り皇女は至高の恋をお望みです！ ～理想の殿方を探す旅に出ます。ただし、美しい者以外認めません!?～"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -37288,6 +39158,21 @@
     "slug": "八つ裂きループ令嬢は累計人生百年目に、初めての恋をした。",
     "thumbnailUrl": "https://contents.zerosumonline.com/title_thumbnail/147.webp",
     "title": "八つ裂きループ令嬢は累計人生百年目に、初めての恋をした。"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_019837_S/episodes/KC_0198370000300011_E"
+      }
+    ],
+    "slug": "八月の体温",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019837/resized/57db43b7-e5f8-45d5-b566-b23e94643a8e.jpg",
+    "title": "八月の体温"
   },
   {
     "dayBits": 32,
@@ -37582,12 +39467,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_000849_S/episodes/KC_0008490002300011_E"
+        "url": "https://comic-walker.com/detail/KC_000849_S/episodes/KC_0008490002300021_E"
       }
     ],
     "slug": "彼女と彼の関係~平凡な早川さんと平凡な三浦くんの非凡な関係~",
@@ -37780,6 +39665,21 @@
     "title": "美麗転生 〜冴えないおじさん、美男子に転生す〜"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_008462_S/episodes/KC_0084620000500011_E"
+      }
+    ],
+    "slug": "必中のダンジョン探索~必中なので安全圏からペチペチ矢を射ってレベルアップ~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008462/resized/c2de1399-e04b-4435-a9bb-24d3f8ea1cf6.jpg",
+    "title": "必中のダンジョン探索 ～必中なので安全圏からペチペチ矢を射ってレベルアップ～"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
     "lastSeen": "2026-08-24",
@@ -37857,12 +39757,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_019399_S/episodes/KC_0193990000400021_E"
+        "url": "https://comic-walker.com/detail/KC_019399_S/episodes/KC_0193990000500011_E"
       }
     ],
     "slug": "百英雄伝",
@@ -38248,6 +40148,21 @@
     "slug": "夫婦と16歳",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f9ad0cc75410b9bb2cdebd99c8d9e45452f87c93/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107419589536330341-f6d31462c6751c55365dbc583b1f164d%3F1782718763",
     "title": "夫婦と16歳"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005935_S/episodes/KC_0059350001300021_E"
+      }
+    ],
+    "slug": "富嶽百景グラフィアトル",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005935/resized/90ca79d9-7623-4cf1-9058-90c8c8206227.jpg",
+    "title": "富嶽百景グラフィアトル"
   },
   {
     "dayBits": 3,
@@ -38665,11 +40580,6 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "コミックDAYS",
-        "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421984111123219"
-      },
-      {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/02277/episode/434065"
@@ -38678,10 +40588,15 @@
         "name": "ヤンマガWeb",
         "siteUrl": "https://yanmaga.jp/",
         "url": "https://yanmaga.jp/comics/%E5%B9%B3%E5%92%8C%E3%81%AE%E5%9B%BD%E3%81%AE%E5%B3%B6%E5%B4%8E%E3%81%B8"
+      },
+      {
+        "name": "コミックDAYS",
+        "siteUrl": "https://comic-days.com/",
+        "url": "https://comic-days.com/episode/12207421984142937117"
       }
     ],
     "slug": "平和の国の島崎へ",
-    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/1813.jpg?auto=webp&width=400",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/986825877f1699cc238b58647b32753327174e38/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F3270375685371337702-7cf746515f971f1ca3ab1ea967fc44c3%3F1722417407",
     "title": "平和の国の島崎へ"
   },
   {
@@ -38805,14 +40720,14 @@
     "title": "辺境の薬師、都でSランク冒険者となる～英雄村の少年がチート薬で無自覚無双〜"
   },
   {
-    "dayBits": 2,
+    "dayBits": 18,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-08-24",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_002511_S"
+        "url": "https://comic-walker.com/detail/KC_002511_S/episodes/KC_0025110005000011_E"
       }
     ],
     "slug": "辺境の錬金術師~今更予算ゼロの職場に戻るとかもう無理~",
@@ -38833,6 +40748,21 @@
     "slug": "辺境の老騎士バルド・ローエン",
     "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/1299.jpg?auto=webp&width=400",
     "title": "辺境の老騎士　バルド・ローエン"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005954_S/episodes/KC_0059540002600011_E"
+      }
+    ],
+    "slug": "辺境モブ貴族のウチに嫁いできた悪役令嬢が、めちゃくちゃできる良い嫁なんだが",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005954/resized/9c8b66d8-65f7-47e2-a92c-dc2bf9a8ae19.jpg",
+    "title": "辺境モブ貴族のウチに嫁いできた悪役令嬢が、めちゃくちゃできる良い嫁なんだが？"
   },
   {
     "dayBits": 8,
@@ -38908,6 +40838,21 @@
     "slug": "捕食者系魔法少女",
     "thumbnailUrl": "https://www.ganganonline.com/secure/title/2076/title_thumbnail_list_single/406512.webp?hash=Gm4hqv401PnKNHNCh7j9sw&expires=1789257600",
     "title": "捕食者系魔法少女"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020111_S/episodes/KC_0201110000200011_E"
+      }
+    ],
+    "slug": "母国を捨てた冷遇お飾り王子妃は、隣国の外交官となり本領発揮します",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020111/resized/2555899a-e316-44f7-a8e3-a1d04855d2f6.jpg",
+    "title": "母国を捨てた冷遇お飾り王子妃は、隣国の外交官となり本領発揮します"
   },
   {
     "dayBits": 1,
@@ -39030,18 +40975,23 @@
     "title": "放課後異世界ふたり旅 ～いらない勇者ひきとります～"
   },
   {
-    "dayBits": 32,
+    "dayBits": 48,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-08-28",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "webアクション",
         "siteUrl": "https://comic-action.com/",
         "url": "https://comic-action.com/episode/12207421984090057829"
+      },
+      {
+        "name": "がうがうモンスター",
+        "siteUrl": "https://gaugau.futabanet.jp/",
+        "url": "https://gaugau.futabanet.jp/list/work/2KJ90a5E7naifalH77l5ZbekG/episodes/71"
       }
     ],
     "slug": "放課後帰宅びより",
-    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984090057829-e8dea2813afd1fe43a2e10ee231c226f?1787758145",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/829eae34-79bc-44f1-95e0-558e706681e4.jpg",
     "title": "放課後帰宅びより"
   },
   {
@@ -39412,12 +41362,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/2551460909501894673"
+        "url": "https://comic-days.com/episode/2551460909501894680"
       }
     ],
     "slug": "僕の奥さんはちょっと怖い",
@@ -39451,7 +41401,7 @@
       }
     ],
     "slug": "僕の呪いの吸血姫",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1255/title_thumbnail_list_single/404799.webp?hash=uqB063ulfVv6B5BE069Dcg&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1255/title_thumbnail_list_single/404799.webp?hash=fGzhm3mN2sJrikEC9T5VGQ&expires=1789603200",
     "title": "僕の呪いの吸血姫"
   },
   {
@@ -39607,12 +41557,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006793_S/episodes/KC_0067930001200021_E"
+        "url": "https://comic-walker.com/detail/KC_006793_S/episodes/KC_0067930001200031_E"
       }
     ],
     "slug": "僕らの恋は夢うつつ",
@@ -39787,12 +41737,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_007199_S/episodes/KC_0071990001200011_E"
+        "url": "https://comic-walker.com/detail/KC_007199_S/episodes/KC_0071990001200021_E"
       }
     ],
     "slug": "魔王のアトリエ奇跡のアクセサリの作り方",
@@ -40081,7 +42031,7 @@
       }
     ],
     "slug": "魔女の終活帳",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2178/title_thumbnail_list_single/415926.webp?hash=Mnttb2O7tdt4miNLgf1NnQ&expires=1789516800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2178/title_thumbnail_list_single/415926.webp?hash=nUflcjCOQB9ZN_3ZRITNaQ&expires=1789603200",
     "title": "魔女の終活帳"
   },
   {
@@ -40325,6 +42275,81 @@
     "title": "魔法科高校の優等生 2nd Season"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_002003_S/episodes/KC_0020030002700011_E"
+      }
+    ],
+    "slug": "魔法科高校の劣等生エスケープ編",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/002003/resized/468ed36e-e874-4213-8fb7-31f9bddee2b4.jpg",
+    "title": "魔法科高校の劣等生 エスケープ編"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_018417_S/episodes/KC_0184170000300011_E"
+      }
+    ],
+    "slug": "魔法科高校の劣等生奪還編",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/018417/resized/54c03337-962f-4f36-a7ff-d77197d23ad5.jpg",
+    "title": "魔法科高校の劣等生　奪還編"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_019095_S/episodes/KC_0190950000400011_E"
+      }
+    ],
+    "slug": "魔法科高校の劣等生追跡編",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019095/resized/29521308-4315-4401-aefb-8a47d1d113c2.jpg",
+    "title": "魔法科高校の劣等生　追跡編"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_002137_S/episodes/KC_0021370001700021_E"
+      }
+    ],
+    "slug": "魔法科高校の劣等生動乱の序章編",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/002137/resized/6cbcc12e-0209-4358-8113-70e46f8eeee0.jpg",
+    "title": "魔法科高校の劣等生 動乱の序章編"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_005627_S/episodes/KC_0056270002600011_E"
+      }
+    ],
+    "slug": "魔法科高校の劣等生夜の帳に闇は閃く",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005627/resized/2374cef8-4cee-494f-b846-edeb54254b62.jpg",
+    "title": "魔法科高校の劣等生　夜の帳に闇は閃く"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
     "lastSeen": "2026-09-07",
@@ -40416,6 +42441,21 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_001991_S/episodes/KC_0019910005100011_E"
+      }
+    ],
+    "slug": "魔法世界の受付嬢になりたいです",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001991/resized/63afcd49-340f-4367-8d32-96de0dba7d7a.jpg",
+    "title": "魔法世界の受付嬢になりたいです"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-10",
     "sites": [
@@ -40502,12 +42542,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_019967_S/episodes/KC_0199670000200011_E"
+        "url": "https://comic-walker.com/detail/KC_019967_S/episodes/KC_0199670000300011_E"
       }
     ],
     "slug": "毎日「帰れ」と言われてたのに、急に溺愛されてます!",
@@ -40863,6 +42903,21 @@
     "slug": "無敵商人の異世界成り上がり物語~現代の製品を自在に取り寄せるスキルがあるので異世界では楽勝です~",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003512/resized/e94e85d9-5306-4ff9-b32c-b0bea34ab13d.jpg",
     "title": "無敵商人の異世界成り上がり物語 ～現代の製品を自在に取り寄せるスキルがあるので異世界では楽勝です～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007911_S/episodes/KC_0079110000400011_E"
+      }
+    ],
+    "slug": "無能だと捨てられた錬金術師は敏腕商人の溺愛で開花する~もう戻りませんので後悔してください~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007911/resized/838230a7-276a-4ca9-97c1-a70607fd4681.jpg",
+    "title": "無能だと捨てられた錬金術師は敏腕商人の溺愛で開花する～ もう戻りませんので後悔してください～"
   },
   {
     "dayBits": 32,
@@ -41291,13 +43346,43 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006406_S/episodes/KC_0064060001200011_E"
+      }
+    ],
+    "slug": "夜叉王の最愛~虐げられた治癒の乙女は溺愛される~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006406/resized/9e489ff6-37ab-46b6-9d9f-994c7ee4fd6b.jpg",
+    "title": "夜叉王の最愛 ～虐げられた治癒の乙女は溺愛される～"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006206_S/episodes/KC_0062060000600011_E"
+      }
+    ],
+    "slug": "夜鷹と蠍は夢を見る",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006206/resized/54650269-e90f-4af1-bf89-e289f4bf7caf.jpg",
+    "title": "夜鷹と蠍は夢を見る"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/2551460909807465338"
+        "url": "https://comic-days.com/episode/2551460909807465341"
       }
     ],
     "slug": "夜逃げ聖女の二度目の結婚",
@@ -41386,13 +43471,28 @@
   },
   {
     "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_004403_S/episodes/KC_0044030005800011_E"
+      }
+    ],
+    "slug": "役立たずと言われたので、わたしの家は独立します!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004403/resized/e4053f31-fdcb-46cc-9445-2f8dfb9e8722.jpg",
+    "title": "役立たずと言われたので、わたしの家は独立します！"
+  },
+  {
+    "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421983943198950"
+        "url": "https://comic-days.com/episode/12207421983943198956"
       }
     ],
     "slug": "約10年彼氏いなかったが結婚できるか本気だしてみた32歳からのマチアプ冒険記",
@@ -42005,6 +44105,36 @@
     "title": "幼馴染たちに虐げられた俺、「聖女任命」スキルに目覚めて手のひら返し！"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_004081_S/episodes/KC_0040810006500011_E"
+      }
+    ],
+    "slug": "幼馴染のs級パーティーから追放された聖獣使い。万能支援魔法と仲間を増やして最強へ!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004081/resized/96bc4104-a8f4-4a3d-a3eb-c98e1f99cd47.jpg",
+    "title": "幼馴染のS級パーティーから追放された聖獣使い。万能支援魔法と仲間を増やして最強へ！"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_007415_S/episodes/KC_0074150001000011_E"
+      }
+    ],
+    "slug": "幼馴染みで悪魔な騎士は、私のことが大嫌い~newround~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007415/resized/2c0f7843-c41d-488e-a0bd-337607a32433.jpg",
+    "title": "幼馴染みで悪魔な騎士は、私のことが大嫌い～New Round～"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-09-04",
     "lastSeen": "2026-09-04",
@@ -42121,7 +44251,7 @@
       }
     ],
     "slug": "遥かなるマナーバトル",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1722022603/webp/ranking_thumbnail/2084.webp?hash=t8qUyBHEZYuV7TlOiPhziA&expires=1875398400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1722022603/webp/ranking_thumbnail/2084.webp?hash=IULu2POmsWqlQs65Y8mcBA&expires=1875484800",
     "title": "遥かなるマナーバトル"
   },
   {
@@ -42202,12 +44332,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
-        "url": "https://comic-days.com/episode/12207421983593304586"
+        "url": "https://comic-days.com/episode/12207421983593304590"
       }
     ],
     "slug": "落ちこぼれだった兄が実は最強~史上最強の勇者は転生し、学園で無自覚に無双する~",
@@ -42277,12 +44407,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006832_S/episodes/KC_0068320001900011_E"
+        "url": "https://comic-walker.com/detail/KC_006832_S/episodes/KC_0068320001900021_E"
       }
     ],
     "slug": "嵐に舞うプシュケ",
@@ -42393,6 +44523,21 @@
     "slug": "璃寛皇国ひきこもり瑞兆妃伝日々後宮を抜け出し、有能官吏やってます。",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240514165030031456C91AE22CF59B4EEBBEC883B7C5D51-sm.webp",
     "title": "璃寛皇国ひきこもり瑞兆妃伝 日々後宮を抜け出し、有能官吏やってます。"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_012210_S/episodes/KC_0122100000400011_E"
+      }
+    ],
+    "slug": "裏アカくんのえっちな夢配信",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012210/resized/a97722b5-706f-4214-a587-6c48c27a832d.jpg",
+    "title": "裏アカくんのえっちな夢配信"
   },
   {
     "dayBits": 4,
@@ -43012,12 +45157,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_001420_S/episodes/KC_0014200008100011_E"
+        "url": "https://comic-walker.com/detail/KC_001420_S/episodes/KC_0014200008300011_E"
       }
     ],
     "slug": "令和のダラさん",
@@ -43113,6 +45258,21 @@
     "slug": "麗しババアは孫が欲しい!",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3152/title_grid_wide_20260319132022593277e980ace68af0ded788bc380ff6.png",
     "title": "麗しババアは孫が欲しい！"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_003957_S/episodes/KC_0039570004400011_E"
+      }
+    ],
+    "slug": "歴史に残る悪女になるぞ悪役令嬢になるほど王子の溺愛は加速するようです!",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003957/resized/3b8a8076-58e5-41df-9b48-fc7b5eacb1e2.jpg",
+    "title": "歴史に残る悪女になるぞ　悪役令嬢になるほど王子の溺愛は加速するようです！"
   },
   {
     "dayBits": 8,
@@ -43265,6 +45425,21 @@
     "title": "恋のメビウス～彼との主従は幻影の彼方から～"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "コミックガルド",
+        "siteUrl": "https://comic-gardo.com/",
+        "url": "https://comic-gardo.com/episode/12207421984188204551"
+      }
+    ],
+    "slug": "恋の果てまで、夜闇の王に攫われて",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984188204551-138d0a8306e272d8a89259d1705a0974?1788442184",
+    "title": "恋の果てまで、夜闇の王に攫われて"
+  },
+  {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
     "lastSeen": "2026-09-06",
@@ -43293,6 +45468,21 @@
     "slug": "恋はネイルじゃ隠せない",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020005/resized/5d67f893-eac9-4ad1-be49-3b4d29cdfceb.jpg",
     "title": "恋はネイルじゃ隠せない"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006510_S/episodes/KC_0065100001800011_E"
+      }
+    ],
+    "slug": "恋をした優等生の悪魔的な変貌について",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006510/resized/05ca6569-5453-46e6-9bf4-c4a154681760.jpg",
+    "title": "恋をした優等生の悪魔的な変貌について"
   },
   {
     "dayBits": 2,
@@ -43417,12 +45607,12 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-08-27",
+    "lastSeen": "2026-09-10",
     "sites": [
       {
         "name": "カドコミ",
         "siteUrl": "https://comic-walker.com/",
-        "url": "https://comic-walker.com/detail/KC_006842_S/episodes/KC_0068420001300011_E"
+        "url": "https://comic-walker.com/detail/KC_006842_S/episodes/KC_0068420001300021_E"
       }
     ],
     "slug": "路地裏で拾った女の子がバッドエンド後の乙女ゲームのヒロインだった件",
@@ -43503,6 +45693,21 @@
     "slug": "老女的少女ひなたちゃん",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/00c1f87b68f801199c791b7b45af0dac9f68a18b/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F10834108156688944881-4dce54dcfb7edff4c3d5416eb217d2c2%3F1783581173",
     "title": "老女的少女ひなたちゃん"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_006983_S/episodes/KC_0069830000900011_E"
+      }
+    ],
+    "slug": "六法推理",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006983/resized/3ad2455b-3940-4cfc-ac49-abcf6b98add9.jpg",
+    "title": "六法推理"
   },
   {
     "dayBits": 8,
@@ -43713,6 +45918,21 @@
     "slug": "彗星、ロック・ユー",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/009491/resized/52347c7a-b39f-441a-a17c-a9925120611d.jpg",
     "title": "彗星、ロック・ユー"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_012200_S/episodes/KC_0122000000400021_E"
+      }
+    ],
+    "slug": "懺悔室バイトをしていたら、皇帝陛下に求婚されました",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/012200/resized/b762547d-5515-47e4-93d1-e78de4e1ff9a.jpg",
+    "title": "懺悔室バイトをしていたら、皇帝陛下に求婚されました"
   },
   {
     "dayBits": 36,
