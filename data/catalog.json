@@ -3320,18 +3320,18 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1045"
-      },
-      {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1507/chapter/130467"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1045"
       }
     ],
     "slug": "アサシンシンデレラ",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1507/title_thumbnail_list_single/430340.webp?hash=sTq94E2nqhWAfa5ITD4Y9Q&expires=1789344000",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1678261305/title_small/1045.webp?hash=TGsh1EXh5k2bAOQ5we7oDA&expires=2145884400",
     "title": "アサシン＆シンデレラ"
   },
   {
@@ -27470,18 +27470,18 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2544/chapter/130515"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1712"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2544/chapter/130515"
       }
     ],
     "slug": "昏き宮殿の死者の王~始祖の吸血鬼と闇を狩る女騎士~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1777617367/title_small/1712.webp?hash=IVephoanJpI0UmCHLXFaPw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2544/title_thumbnail_list_single/411036.webp?hash=1hIl-piERmKsdkGUNn5JpA&expires=1789430400",
     "title": "昏き宮殿の死者の王　～始祖の吸血鬼と闇を狩る女騎士～"
   },
   {
@@ -32963,6 +32963,21 @@
     "slug": "推しの死を覆す。",
     "thumbnailUrl": "https://www.ganganonline.com/secure/title/2190/title_thumbnail_list_single/407007.webp?hash=JtcnZbQAzQ47optk_-qskA&expires=1788566400",
     "title": "推しの死を覆す。"
+  },
+  {
+    "dayBits": 16,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-10",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1599"
+      }
+    ],
+    "slug": "推しの声帯拾いました",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1756373212/title_small/1599.webp?hash=wViQTt0aQvbtTwq_dIN4hg&expires=2145884400",
+    "title": "推しの声帯拾いました"
   },
   {
     "dayBits": 8,
@@ -39940,18 +39955,18 @@
     "lastSeen": "2026-09-10",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2304/chapter/131786"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1736"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2304/chapter/131786"
       }
     ],
     "slug": "氷皇子は砂漠の姫に狙われる",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1782786297/title_small/1736.webp?hash=oW1XAHwKkVZenWYL28OoTg&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2304/title_thumbnail_list_single/426878.webp?hash=16rimDXaJYMq679CIyhcAg&expires=1789430400",
     "title": "氷皇子は砂漠の姫に狙われる"
   },
   {
