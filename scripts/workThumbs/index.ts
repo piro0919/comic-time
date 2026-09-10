@@ -24,8 +24,12 @@ import { type Work } from "../../src/types/work.ts";
 const worksDir = path.join(process.cwd(), "data", "works");
 const thumbDir = path.join(process.cwd(), "public", "work-thumbs");
 const listPath = path.join(process.cwd(), "data", "workThumbs.json");
-/** 画面に出す幅の1.5倍。3倍の端末では甘いが、枠が小さいので粗さは出ない */
-const width = 256;
+/**
+ * 画面に出す幅の1.8倍。ここは見た目の好みではなく、iOS のホーム画面アプリが
+ * 持てるメモリで決まる。展開後のビットマップは幅の2乗で効く。
+ * 一番重い日（368件）で 256px なら42MB、320px なら65MB前後。原寸だと314MBで落ちる。
+ */
+const width = 320;
 /** 輪郭を立てたぶん、圧縮を緩めないと粗が出る。ここはファイルの大きさだけの話 */
 const quality = 78;
 /** 一度に走らせる取得の数。相手の負荷を上げすぎない */
