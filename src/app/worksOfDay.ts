@@ -7,6 +7,7 @@ import {
   weekdays,
   type Work,
 } from "@/types/work";
+import localThumb from "./localThumb";
 
 const dataDir = path.join(process.cwd(), "data", "works");
 const dayMs = 24 * 60 * 60 * 1000;
@@ -50,7 +51,7 @@ function forScreen(work: Work): Work {
     foundAt: work.foundAt,
     siteName: work.siteName,
     siteUrl: work.siteUrl,
-    thumbnailUrl: work.thumbnailUrl,
+    thumbnailUrl: localThumb(work.thumbnailUrl),
     title: work.title,
     url: work.url,
   };

@@ -75,6 +75,12 @@ All commits are automatically checked for:
 - 各ソースは「その日更新された作品」だけを返す。取れなければ例外を投げ、そのサイトはその日が空になる
 - `data/works/<日付>.json` に7日ぶんを保存し、古い日は消す
 - サイトを足したら `npm run scrape:site-icons` も走らせる。複数サイトに載る作品の印に使うファビコンを `public/site-icons/` に集める
+- サムネイルは取得のあと `npm run scrape:work-thumbs` が 256px の webp に縮めて
+  `public/work-thumbs/` に置く。取得の workflow に入っているので手で走らせるのは試すときだけ。
+  **原寸のまま並べてはいけない。** 多い日は368件で、展開後のビットマップが300MBを超え、
+  iOS のホーム画面アプリがメモリ切れで落ちて読み直し、また落ちる。各社の CDN は寸法の
+  指定を受け付けず、wsrv.nl は取得先の1つ（comic-walker）を拒み、そこが一番重い。
+  Vercel の画像最適化は画像のバイトをこちらの請求に乗せる。だから自分で縮めて持つ
 
 ### ランキング
 

@@ -7,6 +7,7 @@ import {
   weekdayJa,
   weekdays,
 } from "@/types/work";
+import localThumb from "./localThumb";
 
 /**
  * 作品の台帳を読む。書き出しているのは scripts/catalog。
@@ -46,8 +47,11 @@ function decodeSlug(slug: string): string {
 
 export function workOf(slug: string): CatalogEntry | undefined {
   const decoded = decodeSlug(slug);
+  const found = catalog().find((entry) => entry.slug === decoded);
 
-  return catalog().find((entry) => entry.slug === decoded);
+  return found === undefined
+    ? undefined
+    : { ...found, thumbnailUrl: localThumb(found.thumbnailUrl) };
 }
 
 export function workHref(slug: string): string {

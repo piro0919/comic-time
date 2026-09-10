@@ -102,6 +102,7 @@
     "scrape": "node scripts/scrape/index.ts",
     "scrape:site-icons": "node scripts/siteIcons/index.ts",
     "scrape:site-images": "node scripts/siteImages/index.ts",
+    "scrape:work-thumbs": "node scripts/workThumbs/index.ts",
     "secretlint": "secretlint '**/*'",
     "start": "next start",
     "test": "node --import ./tests/register.ts --test 'tests/**/*.test.ts'",
