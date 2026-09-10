@@ -75,8 +75,6 @@ All commits are automatically checked for:
 - 各ソースは「その日更新された作品」だけを返す。取れなければ例外を投げ、そのサイトはその日が空になる
 - `data/works/<日付>.json` に7日ぶんを保存し、古い日は消す
 - サイトを足したら `npm run scrape:site-icons` も走らせる。複数サイトに載る作品の印に使うファビコンを `public/site-icons/` に集める
-- サムネイルの取得先が新しいホストなら `src/app/imageHosts.ts` にも足す。載っていないホストは
-  縮めずに原寸で出る。原寸のまま並べると iOS のホーム画面アプリがメモリ切れで落ちて開かなくなる
 
 ### ランキング
 

@@ -4,7 +4,6 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import { isOptimizable } from "@/app/imageHosts";
 import rankingEventName from "@/app/rankingEventName";
 import useFavorites from "@/app/useFavorites";
 import useOpened from "@/app/useOpened";
@@ -83,7 +82,6 @@ export default function WorkCard({
   const [burst, setBurst] = useState(0);
   /** 読み込んだ時点で入っているものは祝わない。押した回だけ動かす */
   const celebrating = burst > 0 && added;
-  const cover = thumbnailUrl ?? "/no-image.png";
 
   return (
     <li className={clsx(styles.card, read && styles.isOpened, className)}>
@@ -92,10 +90,9 @@ export default function WorkCard({
           alt=""
           fill={true}
           priority={priority}
-          quality={60}
+          quality={100}
           sizes="(width < 768px) 45vw, 220px"
-          src={cover}
-          unoptimized={!isOptimizable(cover)}
+          src={thumbnailUrl ?? "/no-image.png"}
         />
         {count === undefined ? null : (
           <span className={styles.count}>

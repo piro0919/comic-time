@@ -23,9 +23,9 @@ export default function SiteList({ sites }: SiteListProps): React.JSX.Element {
                   alt=""
                   fill={true}
                   priority={index < 6}
+                  quality={100}
                   sizes="(width < 768px) 45vw, 180px"
                   src={site.imageUrl ?? "/no-image.png"}
-                  unoptimized={true}
                 />
               </div>
               <div className={styles.cardBody}>
