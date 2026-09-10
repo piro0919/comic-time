@@ -1,4 +1,5 @@
 // eslint-disable-next-line filenames/match-regex, filenames/match-exported
+import imageHosts from "./src/app/imageHosts";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -9,8 +10,16 @@ const nextConfig: NextConfig = {
     typedEnv: true,
     // typedRoutes: true,
   },
+  /**
+   * 一覧に並ぶサムネイルは、各社の CDN が持っている原寸そのまま。
+   * 1080x675 の絵を 177px の枠に出していて、1枚で 3MB 近くメモリを取る。
+   * 枠に合う大きさへ縮めて渡す。sizes は各所ですでに書いてある。
+   */
   images: {
-    unoptimized: true,
+    remotePatterns: imageHosts.map((hostname) => ({
+      hostname,
+      protocol: "https" as const,
+    })),
   },
 };
 

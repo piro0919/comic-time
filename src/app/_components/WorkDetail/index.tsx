@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { dayHref } from "@/app/days";
+import { isOptimizable } from "@/app/imageHosts";
 import { siteHref } from "@/app/siteCatalog";
 import siteSlug from "@/app/siteSlug";
 import { dateLabel } from "@/app/worksOfDay";
@@ -22,6 +23,7 @@ export default function WorkDetail({
   work,
 }: WorkDetailProps): React.JSX.Element {
   const days = daysOf(work.dayBits);
+  const cover = work.thumbnailUrl ?? "/no-image.png";
 
   return (
     <div className={styles.container}>
@@ -31,9 +33,9 @@ export default function WorkDetail({
             alt=""
             fill={true}
             priority={true}
-            quality={100}
             sizes="(width < 768px) 45vw, 260px"
-            src={work.thumbnailUrl ?? "/no-image.png"}
+            src={cover}
+            unoptimized={!isOptimizable(cover)}
           />
         </div>
         <div className={styles.summary}>
