@@ -33,6 +33,7 @@ export default function WorkDetail({
             alt=""
             fill={true}
             priority={true}
+            quality={60}
             sizes="(width < 768px) 45vw, 260px"
             src={cover}
             unoptimized={!isOptimizable(cover)}

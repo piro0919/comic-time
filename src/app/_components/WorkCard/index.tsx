@@ -92,6 +92,7 @@ export default function WorkCard({
           alt=""
           fill={true}
           priority={priority}
+          quality={60}
           sizes="(width < 768px) 45vw, 220px"
           src={cover}
           unoptimized={!isOptimizable(cover)}
