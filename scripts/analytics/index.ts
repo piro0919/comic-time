@@ -1,3 +1,4 @@
+import { execFileSync } from "child_process";
 import fs from "fs/promises";
 import os from "os";
 import path from "path";
@@ -6,7 +7,7 @@ import path from "path";
  * Vercel Web Analytics の数字を端末に出す。
  *
  * ダッシュボードを開かずに済ませるためのもの。認証は Vercel CLI が
- * 置いているトークンをそのまま借りる（`vercel login` 済みが前提）。
+ * 置いているトークンを借りる（`vercel login` 済みが前提）。
  * MCP のコネクタ経由だと Web Analytics だけ 404 で弾かれるので、
  * REST API を直接叩いている。
  *
@@ -31,6 +32,38 @@ function authPath(): string {
 
 async function readJson<T>(file: string): Promise<T> {
   return JSON.parse(await fs.readFile(file, "utf8")) as T;
+}
+
+type Auth = {
+  /** 秒。ミリ秒ではない */
+  expiresAt: number;
+  token: string;
+};
+
+/**
+ * 使えるトークンを返す。
+ *
+ * CLI が置いているのは8時間で切れる鍵で、切れたまま使うと 403 invalidToken になる。
+ * CLI 自身は何か実行されたときに refreshToken で取り直すので、切れていたら
+ * 一番軽い whoami を踏ませて、置き直されたものを読む。
+ */
+async function freshToken(): Promise<string> {
+  const file = authPath();
+  const auth = await readJson<Auth>(file);
+
+  if (auth.expiresAt * 1000 > Date.now() + 60_000) {
+    return auth.token;
+  }
+
+  console.log("[analytics] トークンが切れているので取り直します");
+
+  try {
+    execFileSync("npx", ["vercel", "whoami"], { stdio: "ignore" });
+  } catch {
+    throw new Error("`vercel login` からやり直してください");
+  }
+
+  return (await readJson<Auth>(file)).token;
 }
 
 type Totals = {
@@ -108,7 +141,7 @@ async function main(): Promise<void> {
   const days = Number(process.argv[2] ?? 30);
   const since = day(days);
   const until = day(0);
-  const { token } = await readJson<{ token: string }>(authPath());
+  const token = await freshToken();
   const { orgId, projectId } = await readJson<{
     orgId: string;
     projectId: string;
