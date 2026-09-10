@@ -26,6 +26,8 @@ const thumbDir = path.join(process.cwd(), "public", "work-thumbs");
 const listPath = path.join(process.cwd(), "data", "workThumbs.json");
 /** 画面に出す幅の1.5倍。3倍の端末では甘いが、枠が小さいので粗さは出ない */
 const width = 256;
+/** 輪郭を立てたぶん、圧縮を緩めないと粗が出る。ここはファイルの大きさだけの話 */
+const quality = 78;
 /** 一度に走らせる取得の数。相手の負荷を上げすぎない */
 const concurrency = 8;
 
@@ -68,7 +70,9 @@ async function save(url: string, key: string): Promise<void> {
 
   const resized = await sharp(Buffer.from(await res.arrayBuffer()))
     .resize({ width, withoutEnlargement: true })
-    .webp({ quality: 70 })
+    // 縮めると輪郭が鈍る。立て直すぶんには画素が増えないので、メモリは変わらない
+    .sharpen({ m1: 0, m2: 3, sigma: 0.8 })
+    .webp({ quality })
     .toBuffer();
 
   await fs.writeFile(path.join(thumbDir, `${key}.webp`), resized);
