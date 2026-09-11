@@ -1,15 +1,14 @@
 import { type Metadata } from "next";
+import { cookies } from "next/headers";
 import { type Weekday, weekdays } from "@/types/work";
 import Home from "./_components/Home";
 import WorkIndex from "./_components/WorkIndex";
 import crossSiteWorks from "./crossSiteWorks";
 import { dayLabel } from "./days";
+import { favoritesCookie } from "./favoritesCookie";
 import pageMetadata from "./pageMetadata";
 import { worksOfWeekday } from "./workCatalog";
 import worksOfDay, { dateLabel, recentDateOf, recentWorks } from "./worksOfDay";
-
-/** 日付が変わったら中身も変わるよう、1時間ごとに作り直す */
-export const revalidate = 3600;
 
 function todayInJapan(): Weekday {
   const formatted = new Intl.DateTimeFormat("en-US", {
@@ -29,8 +28,15 @@ export function generateMetadata(): Metadata {
   });
 }
 
-export default function Page(): React.JSX.Element {
+/**
+ * クッキーを読むので、この画面だけは毎回サーバーで描く。静的な作り置きはできない。
+ * 描くのに60msほどかかるが、そのぶん開いた瞬間から正しい方が出る。
+ * 登録がある人に今日の一覧を1.2秒見せていたのを、ここで畳んでいる。
+ */
+export default async function Page(): Promise<React.JSX.Element> {
   const today = todayInJapan();
+  // 中身は "1" だけ。何を登録しているかは載っていない
+  const hasFavorites = (await cookies()).get(favoritesCookie)?.value === "1";
   const days = recentWorks().map((day) => ({
     date: day.date,
     label: dateLabel(day.date),
@@ -43,6 +49,7 @@ export default function Page(): React.JSX.Element {
         crossSites={crossSiteWorks()}
         date={recentDateOf(today)}
         days={days}
+        hasFavorites={hasFavorites}
         today={today}
         todayWorks={worksOfDay(today)}
       />

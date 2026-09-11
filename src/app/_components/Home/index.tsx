@@ -1,5 +1,5 @@
 "use client";
-import useFavorites from "@/app/useFavorites";
+import useHasFavorites from "@/app/useHasFavorites";
 import { type DateKey, type Weekday, type Work } from "@/types/work";
 import App from "../App";
 import Favorites, { type FavoritesProps } from "../Favorites";
@@ -9,6 +9,8 @@ export type HomeProps = {
   /** 今日ぶんとして出している日。既読の判断に使う */
   date: DateKey;
   days: FavoritesProps["days"];
+  /** クッキーに付いていた印。組み上がるまでの間、どちらを描くかの当て */
+  hasFavorites: boolean;
   today: Weekday;
   todayWorks: Work[];
 };
@@ -17,9 +19,11 @@ export type HomeProps = {
  * 追いかける作品を登録している人には、その更新をまとめて見せる。
  * 何も登録していない人には今日の一覧を見せる。
  *
- * サーバーが描くのは今日の一覧のほう。登録はブラウザにあるので差し替えは描画後になる。
- * 判断は Sidebar と同じ useFavorites を通す。物差しが二つあると、
- * 出ている画面と選択中の項目が食い違う。
+ * 登録はブラウザにあるので、サーバーは何を登録しているか知らない。ただ「あるかどうか」は
+ * クッキーで受け取れるので、それを当てにして最初から正しい方を描く。
+ * 組み上がったら localStorage が正本になり、食い違っていればそこで直る。
+ * 読むのは Sidebar と同じ鍵の同じ形。useHasFavorites が答えるのは有無だけで、
+ * 登録の中身を扱うのは今までどおり useFavorites に任せる。
  * 以前はここから曜日ページへ送っていたが、それだとトップの中身が空になり、
  * このサイトで唯一クロールされている画面に読むものが無くなっていた。
  */
@@ -27,12 +31,13 @@ export default function Home({
   crossSites,
   date,
   days,
+  hasFavorites,
   today,
   todayWorks,
 }: HomeProps): React.JSX.Element {
-  const favorites = useFavorites();
+  const showFavorites = useHasFavorites(hasFavorites);
 
-  return favorites.workUrls.length > 0 ? (
+  return showFavorites ? (
     <Favorites crossSites={crossSites} days={days} />
   ) : (
     <App crossSites={crossSites} date={date} day={today} works={todayWorks} />

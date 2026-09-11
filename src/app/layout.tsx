@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
 import AccountSync from "./_components/AccountSync";
+import FavoriteFlag from "./_components/FavoriteFlag";
 import Layout from "./_components/Layout";
 
 const notoSansJP = Noto_Sans_JP({
@@ -79,6 +80,7 @@ export default function RootLayout({
             <Layout>{children}</Layout>
           </Suspense>
           <AccountSync />
+          <FavoriteFlag />
         </ThemeProvider>
         <Analytics />
       </body>
