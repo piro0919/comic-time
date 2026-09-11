@@ -25,11 +25,14 @@ const worksDir = path.join(process.cwd(), "data", "works");
 const thumbDir = path.join(process.cwd(), "public", "work-thumbs");
 const listPath = path.join(process.cwd(), "data", "workThumbs.json");
 /**
- * 画面に出す幅の1.8倍。ここは見た目の好みではなく、iOS のホーム画面アプリが
+ * 画面に出す幅の1.5倍。ここは見た目の好みではなく、iOS のホーム画面アプリが
  * 持てるメモリで決まる。展開後のビットマップは幅の2乗で効く。
- * 一番重い日（368件）で 256px なら42MB、320px なら65MB前後。原寸だと314MBで落ちる。
+ * 一番重い日（368件）で 256px なら42MB、320px なら65MB、原寸だと314MB。
+ *
+ * 320px は一度出して戻している。実機で落ちないと分かっているのは 256px だけ。
+ * 上げたくなったら、重い日を実機で下まで送って確かめてから。
  */
-const width = 320;
+const width = 256;
 /** 輪郭を立てたぶん、圧縮を緩めないと粗が出る。ここはファイルの大きさだけの話 */
 const quality = 78;
 /** 一度に走らせる取得の数。相手の負荷を上げすぎない */
