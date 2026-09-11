@@ -79,134 +79,165 @@ export default function useFavorites(): Favorites {
     { initializeWithValue: false },
   );
   const workSet = useMemo(() => new Set(stored.works), [stored.works]);
-  const titles = stored.titles ?? {};
+  // ?? {} を毎回作ると、これを依存に置いた下の useMemo が効かなくなる
+  const titles = useMemo(() => stored.titles ?? {}, [stored.titles]);
   const visibleWorkCount = useMemo(() => {
     const known = stored.titles ?? {};
 
     return stored.works.filter((entry) => Object.hasOwn(known, entry)).length;
   }, [stored.titles, stored.works]);
   const siteSet = useMemo(() => new Set(stored.sites), [stored.sites]);
+  const adoptTitle: Favorites["adoptTitle"] = useCallback(
+    (workKey, legacyKeys) => {
+      setStored((prev) => {
+        const legacy = prev.works.filter((entry) => legacyKeys.includes(entry));
 
-  return {
-    adoptTitle: useCallback(
-      (workKey, legacyKeys) => {
-        setStored((prev) => {
-          const legacy = prev.works.filter((entry) =>
-            legacyKeys.includes(entry),
-          );
-
-          if (legacy.length === 0 || prev.works.includes(workKey)) {
-            return prev;
-          }
-
-          return {
-            ...prev,
-            works: [
-              ...prev.works.filter((entry) => !legacyKeys.includes(entry)),
-              workKey,
-            ],
-          };
-        });
-      },
-      [setStored],
-    ),
-    followsSite: useCallback((siteUrl) => siteSet.has(siteUrl), [siteSet]),
-    // 手元で描けないことと、登録をやめたことは別。ここはサーバーへ触らない
-    forgetWorks: useCallback(
-      (keys) => {
-        setStored((prev) => {
-          const works = prev.works.filter((entry) => !keys.includes(entry));
-
-          if (works.length === prev.works.length) {
-            return prev;
-          }
-
-          const titles = { ...(prev.titles ?? {}) };
-
-          keys.forEach((entry) => delete titles[entry]);
-
-          return { ...prev, titles, works };
-        });
-      },
-      [setStored],
-    ),
-    hasWork: useCallback(
-      (workKey, legacyKeys) =>
-        workSet.has(workKey) || legacyKeys.some((entry) => workSet.has(entry)),
-      [workSet],
-    ),
-    rememberTitle: useCallback(
-      (workKey, title) => {
-        setStored((prev) => {
-          // 登録していないものの題名は控えない。控えても使い道がない
-          if (!prev.works.includes(workKey)) {
-            return prev;
-          }
-
-          const titles = prev.titles ?? {};
-
-          if (titles[workKey] === title) {
-            return prev;
-          }
-
-          return { ...prev, titles: { ...titles, [workKey]: title } };
-        });
-      },
-      [setStored],
-    ),
-    replaceAll: useCallback(
-      (next) => {
-        setStored(next);
-      },
-      [setStored],
-    ),
-    siteUrls: stored.sites,
-    titles,
-    toggleSite: useCallback(
-      (siteUrl) => {
-        if (signedIn) {
-          void (siteSet.has(siteUrl)
-            ? unfollowSite(siteUrl)
-            : followSite(siteUrl));
+        if (legacy.length === 0 || prev.works.includes(workKey)) {
+          return prev;
         }
 
-        setStored((prev) => ({ ...prev, sites: toggle(prev.sites, siteUrl) }));
-      },
-      [setStored, signedIn, siteSet],
-    ),
-    toggleWork: useCallback(
-      (workKey, legacyKeys) => {
-        // どちらへ倒れるかは押す前の状態で決まる。サーバーにも同じ向きを伝える
-        const wasAdded =
-          workSet.has(workKey) || legacyKeys.some((key) => workSet.has(key));
+        return {
+          ...prev,
+          works: [
+            ...prev.works.filter((entry) => !legacyKeys.includes(entry)),
+            workKey,
+          ],
+        };
+      });
+    },
+    [setStored],
+  );
+  const followsSite: Favorites["followsSite"] = useCallback(
+    (siteUrl) => siteSet.has(siteUrl),
+    [siteSet],
+  );
+  // 手元で描けないことと、登録をやめたことは別。ここはサーバーへ触らない
+  const forgetWorks: Favorites["forgetWorks"] = useCallback(
+    (keys) => {
+      setStored((prev) => {
+        const works = prev.works.filter((entry) => !keys.includes(entry));
 
-        if (signedIn) {
-          void (wasAdded ? unfollowWork(workKey) : followWork(workKey));
+        if (works.length === prev.works.length) {
+          return prev;
         }
 
-        setStored((prev) => {
-          const added =
-            prev.works.includes(workKey) ||
-            legacyKeys.some((entry) => prev.works.includes(entry));
-          const rest = prev.works.filter(
-            (entry) => entry !== workKey && !legacyKeys.includes(entry),
-          );
+        const titles = { ...(prev.titles ?? {}) };
 
-          if (!added) {
-            return { ...prev, works: [...rest, workKey] };
-          }
+        keys.forEach((entry) => delete titles[entry]);
 
-          // 外したら題名の控えも捨てる。残しても増えるだけ
-          const titles = { ...(prev.titles ?? {}) };
+        return { ...prev, titles, works };
+      });
+    },
+    [setStored],
+  );
+  const hasWork: Favorites["hasWork"] = useCallback(
+    (workKey, legacyKeys) =>
+      workSet.has(workKey) || legacyKeys.some((entry) => workSet.has(entry)),
+    [workSet],
+  );
+  const rememberTitle: Favorites["rememberTitle"] = useCallback(
+    (workKey, title) => {
+      setStored((prev) => {
+        // 登録していないものの題名は控えない。控えても使い道がない
+        if (!prev.works.includes(workKey)) {
+          return prev;
+        }
 
-          delete titles[workKey];
+        const titles = prev.titles ?? {};
 
-          return { ...prev, titles, works: rest };
-        });
-      },
-      [setStored, signedIn, workSet],
-    ),
-    visibleWorkCount,
-    workUrls: stored.works,
-  };
+        if (titles[workKey] === title) {
+          return prev;
+        }
+
+        return { ...prev, titles: { ...titles, [workKey]: title } };
+      });
+    },
+    [setStored],
+  );
+  const replaceAll: Favorites["replaceAll"] = useCallback(
+    (next) => {
+      setStored(next);
+    },
+    [setStored],
+  );
+  const toggleSite: Favorites["toggleSite"] = useCallback(
+    (siteUrl) => {
+      if (signedIn) {
+        void (siteSet.has(siteUrl)
+          ? unfollowSite(siteUrl)
+          : followSite(siteUrl));
+      }
+
+      setStored((prev) => ({ ...prev, sites: toggle(prev.sites, siteUrl) }));
+    },
+    [setStored, signedIn, siteSet],
+  );
+  const toggleWork: Favorites["toggleWork"] = useCallback(
+    (workKey, legacyKeys) => {
+      // どちらへ倒れるかは押す前の状態で決まる。サーバーにも同じ向きを伝える
+      const wasAdded =
+        workSet.has(workKey) || legacyKeys.some((key) => workSet.has(key));
+
+      if (signedIn) {
+        void (wasAdded ? unfollowWork(workKey) : followWork(workKey));
+      }
+
+      setStored((prev) => {
+        const added =
+          prev.works.includes(workKey) ||
+          legacyKeys.some((entry) => prev.works.includes(entry));
+        const rest = prev.works.filter(
+          (entry) => entry !== workKey && !legacyKeys.includes(entry),
+        );
+
+        if (!added) {
+          return { ...prev, works: [...rest, workKey] };
+        }
+
+        // 外したら題名の控えも捨てる。残しても増えるだけ
+        const titles = { ...(prev.titles ?? {}) };
+
+        delete titles[workKey];
+
+        return { ...prev, titles, works: rest };
+      });
+    },
+    [setStored, signedIn, workSet],
+  );
+
+  /**
+   * 返すものを固定する。包まないと呼ばれるたびに別のオブジェクトになり、
+   * これを依存に置いた useMemo が一度も効かない。お気に入りの画面は
+   * それで7日ぶん1,900作品の組み立てを描き直しのたびに繰り返していた。
+   */
+  return useMemo(
+    () => ({
+      adoptTitle,
+      followsSite,
+      forgetWorks,
+      hasWork,
+      rememberTitle,
+      replaceAll,
+      siteUrls: stored.sites,
+      titles,
+      toggleSite,
+      toggleWork,
+      visibleWorkCount,
+      workUrls: stored.works,
+    }),
+    [
+      adoptTitle,
+      followsSite,
+      forgetWorks,
+      hasWork,
+      rememberTitle,
+      replaceAll,
+      stored.sites,
+      stored.works,
+      titles,
+      toggleSite,
+      toggleWork,
+      visibleWorkCount,
+    ],
+  );
 }
