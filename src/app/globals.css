@@ -135,3 +135,26 @@ textarea:focus-visible,
   position: absolute;
   white-space: nowrap;
 }
+
+/*
+ * トップの出し分け。登録がある人にはお気に入り、無い人には今日の一覧。
+ *
+ * 両方を描いて返し、ここで片方を消す。判断の材料は localStorage にしかなく、
+ * サーバーは読めない。React に任せると組み上がるまで違う方が出たままになる。
+ * 印は layout が最初の描画より前に付ける。
+ *
+ * 既定は今日の一覧。印が付かない相手——スクリプトを切っている人とクローラー——には
+ * 読むものが出る。
+ */
+
+[data-home-view="favorites"] {
+  display: none;
+}
+
+[data-fav="1"] [data-home-view="favorites"] {
+  display: block;
+}
+
+[data-fav="1"] [data-home-view="today"] {
+  display: none;
+}

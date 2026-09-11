@@ -8,6 +8,7 @@ import {
   unfollowSite,
   unfollowWork,
 } from "@/app/follows";
+import favoritesKey from "./favoritesKey";
 
 /**
  * 追いかける対象は作品とサイトの2種類。
@@ -22,7 +23,7 @@ import {
  * ログインしていなければ手元だけで完結する。読み出しは今までどおり手元から行うので、
  * サーバーへの書き込みが遅れても画面は待たない。
  */
-export const key = "favorites-v3";
+export { default as key } from "./favoritesKey";
 
 type Stored = {
   sites: string[];
@@ -73,7 +74,7 @@ export default function useFavorites(): Favorites {
   const { data: session } = authClient.useSession();
   const signedIn = session !== null;
   const [stored, setStored] = useLocalStorage<Stored>(
-    key,
+    favoritesKey,
     { sites: [], works: [] },
     { initializeWithValue: false },
   );

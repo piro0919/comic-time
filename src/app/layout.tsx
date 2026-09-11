@@ -6,9 +6,20 @@ import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
 import AccountSync from "./_components/AccountSync";
-import FavoriteFlag from "./_components/FavoriteFlag";
 import Layout from "./_components/Layout";
+import favoritesKey from "./favoritesKey";
 
+/**
+ * トップでどちらを出すかの印を、最初の描画より前に付ける。
+ *
+ * 登録は localStorage にしかなく、サーバーは読めない。React で描き分けると
+ * 組み上がるまで判断が付かず、その間ずっと違う方が出る。実測で1.2秒あった。
+ * ここで印だけ先に付けておけば、出し分けは CSS が済ませる。
+ *
+ * 落ちても構わない作りにしてある。印が付かなければ今日の一覧が出るだけで、
+ * そのあと React が正しい方へ直す。
+ */
+const markFavorites = `try{var w=JSON.parse(localStorage.getItem(${JSON.stringify(favoritesKey)})||"{}").works;document.documentElement.dataset.fav=w&&w.length?"1":"0"}catch(e){}`;
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
 });
@@ -75,12 +86,15 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning={true}>
       <body className={notoSansJP.className}>
+        <script
+          dangerouslySetInnerHTML={{ __html: markFavorites }}
+          // eslint-disable-next-line react/no-danger
+        />
         <ThemeProvider>
           <Suspense>
             <Layout>{children}</Layout>
           </Suspense>
           <AccountSync />
-          <FavoriteFlag />
         </ThemeProvider>
         <Analytics />
       </body>
