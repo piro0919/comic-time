@@ -181,9 +181,9 @@ export function totalsByTitle(rows: EventRow[]): Map<string, number> {
   return totals;
 }
 
-export default async function workRanking(from = new Date()): Promise<
-  RankedWork[]
-> {
+export default async function workRanking(
+  from = new Date(),
+): Promise<RankedWork[]> {
   const rows = await openCounts(new Date(from.getTime() - 7 * dayMs), from);
   const works = worksByTitle();
   const totals = totalsByTitle(rows);
@@ -202,9 +202,7 @@ export default async function workRanking(from = new Date()): Promise<
     found.toSorted((a, b) => {
       const diff = b.count - a.count;
 
-      return diff === 0
-        ? a.work.title.localeCompare(b.work.title, "ja")
-        : diff;
+      return diff === 0 ? a.work.title.localeCompare(b.work.title, "ja") : diff;
     }),
   ).slice(0, limit);
 }

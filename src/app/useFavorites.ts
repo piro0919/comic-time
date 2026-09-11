@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useMemo } from "react";
+import { createContext, useCallback, useContext, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import authClient from "@/app/authClient";
 import {
@@ -69,7 +69,15 @@ function toggle(list: string[], value: string): string[] {
     : [...list, value];
 }
 
-export default function useFavorites(): Favorites {
+/**
+ * 手元の登録を読み書きする本体。呼ぶのは FavoritesProvider だけ。
+ *
+ * localStorage の購読はこの中に1つある。カードごとに呼ぶと購読も1枚ごとに増え、
+ * 書き込みのたびに全員が読み直す。実測で、登録100件を開いただけで
+ * localStorage を19万回読み、385MBぶんの文字列を解析していた。
+ * 登録が300件あると数GBまで膨らみ、iOS のホーム画面アプリはそこで落ちる。
+ */
+export function useFavoritesState(): Favorites {
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
   const { data: session } = authClient.useSession();
   const signedIn = session !== null;
@@ -240,4 +248,20 @@ export default function useFavorites(): Favorites {
       visibleWorkCount,
     ],
   );
+}
+
+/**
+ * 画面に配る側。Provider を置き忘れた場所で呼ぶと気付けるよう、既定は入れない。
+ */
+export const FavoritesContext = createContext<Favorites | null>(null);
+
+/** 登録の読み書き。値は Provider が持っている1つを共有する */
+export default function useFavorites(): Favorites {
+  const value = useContext(FavoritesContext);
+
+  if (value === null) {
+    throw new Error("FavoritesProvider の中で使ってください");
+  }
+
+  return value;
 }

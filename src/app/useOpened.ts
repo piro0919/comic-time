@@ -1,5 +1,5 @@
 "use client";
-import { useCallback } from "react";
+import { createContext, useCallback, useContext, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import authClient from "@/app/authClient";
 import { markOpen } from "@/app/opens";
@@ -37,7 +37,11 @@ function dateKey(date: Date): string {
   );
 }
 
-export default function useOpened(): Opened {
+/**
+ * 既読を読み書きする本体。呼ぶのは OpenedProvider だけ。
+ * 理由は useFavorites と同じで、カードごとに購読を持たせない。
+ */
+export function useOpenedState(): Opened {
   const { data: session } = authClient.useSession();
   const signedIn = session !== null;
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
@@ -46,43 +50,58 @@ export default function useOpened(): Opened {
     {},
     { initializeWithValue: false },
   );
+  const isOpened: Opened["isOpened"] = useCallback(
+    (url, date) => {
+      const at = opened[url];
 
-  return {
-    all: opened,
-    isOpened: useCallback(
-      (url, date) => {
-        const at = opened[url];
+      return at !== undefined && at >= date;
+    },
+    [opened],
+  );
+  const markOpened: Opened["markOpened"] = useCallback(
+    (url) => {
+      const now = dateKey(new Date());
 
-        return at !== undefined && at >= date;
-      },
-      [opened],
-    ),
-    markOpened: useCallback(
-      (url) => {
-        const now = dateKey(new Date());
+      if (signedIn) {
+        void markOpen(url, now);
+      }
 
-        if (signedIn) {
-          void markOpen(url, now);
-        }
+      setOpened((prev) => {
+        const today = now;
+        // 古い記録は捨てる。一覧から消えた回を抱えても使い道がない
+        const cutoff = dateKey(new Date(Date.now() - keepDays * dayMs));
+        const kept = Object.entries(prev).filter(
+          ([, value]) => value >= cutoff,
+        );
 
-        setOpened((prev) => {
-          const today = now;
-          // 古い記録は捨てる。一覧から消えた回を抱えても使い道がない
-          const cutoff = dateKey(new Date(Date.now() - keepDays * dayMs));
-          const kept = Object.entries(prev).filter(
-            ([, value]) => value >= cutoff,
-          );
+        return { ...Object.fromEntries(kept), [url]: today };
+      });
+    },
+    [setOpened, signedIn],
+  );
+  const replaceAll: Opened["replaceAll"] = useCallback(
+    (next) => {
+      setOpened(next);
+    },
+    [setOpened],
+  );
 
-          return { ...Object.fromEntries(kept), [url]: today };
-        });
-      },
-      [setOpened, signedIn],
-    ),
-    replaceAll: useCallback(
-      (next) => {
-        setOpened(next);
-      },
-      [setOpened],
-    ),
-  };
+  // 包まないと、配る値が描き直しのたびに別物になり、受け取る側が全員描き直す
+  return useMemo(
+    () => ({ all: opened, isOpened, markOpened, replaceAll }),
+    [isOpened, markOpened, opened, replaceAll],
+  );
+}
+
+export const OpenedContext = createContext<null | Opened>(null);
+
+/** 既読の読み書き。値は Provider が持っている1つを共有する */
+export default function useOpened(): Opened {
+  const value = useContext(OpenedContext);
+
+  if (value === null) {
+    throw new Error("OpenedProvider の中で使ってください");
+  }
+
+  return value;
 }

@@ -48,7 +48,7 @@ export default function Home({
         />
       </div>
       <div data-home-view="favorites">
-        <Favorites crossSites={crossSites} days={days} />
+        <Favorites crossSites={crossSites} days={days} heading={false} />
       </div>
     </>
   );

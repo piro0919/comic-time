@@ -7,6 +7,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
 import AccountSync from "./_components/AccountSync";
 import Layout from "./_components/Layout";
+import LocalState from "./_components/LocalState";
 import favoritesKey from "./favoritesKey";
 
 /**
@@ -91,10 +92,12 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
         />
         <ThemeProvider>
-          <Suspense>
-            <Layout>{children}</Layout>
-          </Suspense>
-          <AccountSync />
+          <LocalState>
+            <Suspense>
+              <Layout>{children}</Layout>
+            </Suspense>
+            <AccountSync />
+          </LocalState>
         </ThemeProvider>
         <Analytics />
       </body>

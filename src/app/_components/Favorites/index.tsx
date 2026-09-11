@@ -16,6 +16,12 @@ export type FavoritesProps = {
     label: string;
     works: Work[];
   }[];
+  /**
+   * 見出しを出すか。トップに置くときは出さない。
+   * あちらは今日の一覧と同時に描いていて、h1 が2つある画面にはできない。
+   * クローラーが読むのは今日の一覧の方なので、h1 はそちらに譲る。
+   */
+  heading?: boolean;
 };
 
 /** 同じ日の同じ回に見つかった作品のかたまり */
@@ -42,6 +48,7 @@ type Dormant = {
 export default function Favorites({
   crossSites,
   days,
+  heading = true,
 }: FavoritesProps): React.JSX.Element {
   const favorites = useFavorites();
   const batches = useMemo<Batch[]>(() => {
@@ -111,7 +118,7 @@ export default function Favorites({
   if (batches.length === 0 && !hasDormant) {
     return (
       <div className={styles.container}>
-        <h1 className="visually-hidden">お気に入り</h1>
+        {heading ? <h1 className="visually-hidden">お気に入り</h1> : null}
         <p className={styles.empty}>
           {favorites.workUrls.length === 0
             ? "お気に入りに追加した作品がここに表示されます。"
@@ -123,7 +130,7 @@ export default function Favorites({
 
   return (
     <div className={styles.container}>
-      <h1 className="visually-hidden">お気に入り</h1>
+      {heading ? <h1 className="visually-hidden">お気に入り</h1> : null}
       {batches.map((batch, batchIndex) => (
         <section className={styles.section} key={batch.label}>
           <div className={styles.batchHead}>

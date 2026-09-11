@@ -36,70 +36,68 @@ const notoSansLatin = fs.readFileSync(
 
 export default function Image(): ImageResponse {
   return new ImageResponse(
-    (
+    <div
+      style={{
+        background: BACKGROUND,
+        display: "flex",
+        height: "100%",
+        width: "100%",
+      }}
+    >
       <div
         style={{
-          background: BACKGROUND,
           display: "flex",
-          height: "100%",
-          width: "100%",
+          flexDirection: "column",
+          justifyContent: "center",
+          padding: "0 56px",
+          width: 570,
         }}
       >
         <div
           style={{
+            color: TITLE_COLOR,
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            padding: "0 56px",
-            width: 570,
+            fontFamily: "Righteous",
+            fontSize: 82,
+            letterSpacing: -1,
+            textShadow: TITLE_SHADOW,
           }}
         >
-          <div
-            style={{
-              color: TITLE_COLOR,
-              display: "flex",
-              fontFamily: "Righteous",
-              fontSize: 82,
-              letterSpacing: -1,
-              textShadow: TITLE_SHADOW,
-            }}
-          >
-            {TITLE}
-          </div>
-          <div
-            style={{
-              color: INK,
-              display: "flex",
-              fontFamily: BODY_FONT,
-              fontSize: 27,
-              lineHeight: 1.5,
-              marginTop: 24,
-              opacity: 0.78,
-            }}
-          >
-            {DESCRIPTION}
-          </div>
-          <div
-            style={{
-              color: INK,
-              display: "flex",
-              fontFamily: BODY_FONT,
-              fontSize: 23,
-              marginTop: 40,
-              opacity: 0.55,
-            }}
-          >
-            {DOMAIN}
-          </div>
+          {TITLE}
         </div>
-        <img
-          alt=""
-          height={630}
-          src={`data:image/png;base64,${character}`}
-          width={630}
-        />
+        <div
+          style={{
+            color: INK,
+            display: "flex",
+            fontFamily: BODY_FONT,
+            fontSize: 27,
+            lineHeight: 1.5,
+            marginTop: 24,
+            opacity: 0.78,
+          }}
+        >
+          {DESCRIPTION}
+        </div>
+        <div
+          style={{
+            color: INK,
+            display: "flex",
+            fontFamily: BODY_FONT,
+            fontSize: 23,
+            marginTop: 40,
+            opacity: 0.55,
+          }}
+        >
+          {DOMAIN}
+        </div>
       </div>
-    ),
+      <img
+        alt=""
+        height={630}
+        src={`data:image/png;base64,${character}`}
+        width={630}
+      />
+    </div>,
     {
       ...size,
       fonts: [
