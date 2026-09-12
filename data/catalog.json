@@ -2930,6 +2930,21 @@
     "title": "U.M.A～未確認総合格闘技～"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1341"
+      }
+    ],
+    "slug": "übelblatt~ユーベルブラット~ii死せる王の騎士団",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1731563926/title_small/1341.webp?hash=MaJCOU3_ccIZMDzPdz92lQ&expires=2145884400",
+    "title": "Übel Blatt～ユーベルブラット～Ⅱ 死せる王の騎士団"
+  },
+  {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-03",
@@ -6990,18 +7005,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1552/chapter/117456"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/970"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1552/chapter/117456"
       }
     ],
     "slug": "カノジョの妹とキスをした。",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1653611103/title_small/970.webp?hash=9qiTMwPJAngudW-HsMkZxA&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1552/title_thumbnail_list_single/381809.webp?hash=TRSFSLWiPuwlkQZquBzeQQ&expires=1789776000",
     "title": "カノジョの妹とキスをした。"
   },
   {
@@ -9005,18 +9020,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/47/chapter/131010"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/292"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/47/chapter/131010"
       }
     ],
     "slug": "ゴブリンスレイヤー",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1518055503/title_small/292.webp?hash=FbhUM324xEkHu9BgP-ARBQ&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/47/title_thumbnail_list_single/409686.webp?hash=aIi3stKj6P5kZxcsO8yFWg&expires=1789430400",
     "title": "ゴブリンスレイヤー"
   },
   {
@@ -15675,18 +15690,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1878/chapter/128889"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1244"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1878/chapter/128889"
       }
     ],
     "slug": "ひねくれ騎士とふわふわ姫様古城暮らしと小さなおうち",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1708410226/title_small/1244.webp?hash=RgYIrrHjQCi8Pq3cm2hYMw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1878/title_thumbnail_list_single/428051.webp?hash=CvY3k6iURJ4n9XqyseDDfg&expires=1789689600",
     "title": "ひねくれ騎士とふわふわ姫様 古城暮らしと小さなおうち"
   },
   {
@@ -21805,19 +21820,24 @@
     "title": "異世界居酒屋「のぶ」"
   },
   {
-    "dayBits": 64,
+    "dayBits": 65,
     "firstSeen": "2026-08-29",
-    "lastSeen": "2026-08-29",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/733/chapter/130404"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/522"
       }
     ],
     "slug": "異世界賢者の転生無双~ゲームの知識で異世界最強~",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/733/title_thumbnail_list_single/399504.webp?hash=KRbkhn0mY8tGhWMd0Pw1ng&expires=1788566400",
-    "title": "異世界賢者の転生無双 ～ゲームの知識で異世界最強～"
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1572229322/title_small/522.webp?hash=37Yh86H27oV7eWETvlrotA&expires=2145884400",
+    "title": "異世界賢者の転生無双　～ゲームの知識で異世界最強～"
   },
   {
     "dayBits": 4,
@@ -41307,7 +41327,7 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ツイ４",
@@ -46205,18 +46225,23 @@
     "title": "魔女の終活帳"
   },
   {
-    "dayBits": 64,
+    "dayBits": 65,
     "firstSeen": "2026-09-05",
-    "lastSeen": "2026-09-05",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2610/chapter/128580"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1751"
       }
     ],
     "slug": "魔女の旦那のつくり方",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2610/title_thumbnail_list_single/417288.webp?hash=hXRU9N56atDgVAQyZbVsTg&expires=1789171200",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1785899878/title_small/1751.webp?hash=9i6sjOtnPR6FoegcV-0Nsg&expires=2145884400",
     "title": "魔女の旦那のつくり方"
   },
   {
