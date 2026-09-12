@@ -3640,6 +3640,21 @@
     "title": "あそんじゃいけないトイボックス"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1559"
+      }
+    ],
+    "slug": "あだしの奇象官",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1748398964/title_small/1559.webp?hash=qo_SJdt-_HStAMbVUQpRaA&expires=2145884400",
+    "title": "あだしの奇象官"
+  },
+  {
     "dayBits": 16,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-08-27",
@@ -15650,18 +15665,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1878/chapter/128889"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1244"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1878/chapter/128889"
       }
     ],
     "slug": "ひねくれ騎士とふわふわ姫様古城暮らしと小さなおうち",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1708410226/title_small/1244.webp?hash=RgYIrrHjQCi8Pq3cm2hYMw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1878/title_thumbnail_list_single/428051.webp?hash=CvY3k6iURJ4n9XqyseDDfg&expires=1789689600",
     "title": "ひねくれ騎士とふわふわ姫様 古城暮らしと小さなおうち"
   },
   {
@@ -31176,7 +31191,7 @@
       }
     ],
     "slug": "史上最強オークさんの楽しい異世界ハーレムづくり",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1722010550/webp/ranking_thumbnail/939.webp?hash=r5aBBgsJZ1yg1w5CeHpEjw&expires=1875657600",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1565002279/webp/chapter/93060.webp?hash=lhzZbRUF1E4PvXu12ifCag&expires=1875657600",
     "title": "史上最強オークさんの楽しい異世界ハーレムづくり"
   },
   {
@@ -33890,18 +33905,23 @@
     "title": "女騎士塾に入学したら、弟スキルで無限甘やかされ!?"
   },
   {
-    "dayBits": 64,
+    "dayBits": 65,
     "firstSeen": "2026-09-05",
-    "lastSeen": "2026-09-05",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2394/chapter/126309"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1633"
       }
     ],
     "slug": "女子高校生の日常",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2394/title_thumbnail_list_single/408711.webp?hash=olPPpsKqXiImlSy7Ifk2Kg&expires=1789171200",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1762494878/title_small/1633.webp?hash=8Uvsy9iuHoiMz6dUyMFQHA&expires=2145884400",
     "title": "女子高校生の日常"
   },
   {
@@ -34133,6 +34153,21 @@
     "slug": "宵を待つ月の物語",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007161/resized/04976d19-1912-4a0d-b46f-a0fa2de04c62.jpg",
     "title": "宵を待つ月の物語"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1703"
+      }
+    ],
+    "slug": "宵明けの魔女",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1777338176/title_small/1703.webp?hash=3e7kgcNhQFjiNssY3BXqUQ&expires=2145884400",
+    "title": "宵明けの魔女"
   },
   {
     "dayBits": 1,
@@ -36105,18 +36140,23 @@
     "title": "推しにささげるダンジョングルメ ～最強探索者VTuberになる～"
   },
   {
-    "dayBits": 64,
+    "dayBits": 65,
     "firstSeen": "2026-08-29",
-    "lastSeen": "2026-08-29",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2190/chapter/131121"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1686"
       }
     ],
     "slug": "推しの死を覆す。",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2190/title_thumbnail_list_single/407007.webp?hash=JtcnZbQAzQ47optk_-qskA&expires=1788566400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1773721974/title_small/1686.webp?hash=JpWlWbJZ9jiLI5gm3Zi99w&expires=2145884400",
     "title": "推しの死を覆す。"
   },
   {
@@ -41600,6 +41640,21 @@
     "title": "逃がさないよ？ 袋路くん"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/961"
+      }
+    ],
+    "slug": "逃がした魚は大きかったが釣りあげた魚が大きすぎた件",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1650504962/title_small/961.webp?hash=rQlIQuSpwtlVcC0LWZmKPw&expires=2145884400",
+    "title": "逃がした魚は大きかったが釣りあげた魚が大きすぎた件"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-08-28",
@@ -41840,18 +41895,23 @@
     "title": "独身貴族は異世界を謳歌する ～結婚しない男の優雅なおひとりさまライフ～"
   },
   {
-    "dayBits": 64,
+    "dayBits": 65,
     "firstSeen": "2026-08-29",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2361/chapter/131130"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1632"
       }
     ],
     "slug": "読むたびに幸せを!",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2361/title_thumbnail_list_single/406455.webp?hash=CkBfdmfWgAXvShAbOg3JqQ&expires=1789776000",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1762494596/title_small/1632.webp?hash=BpLk7eVQZwJd2fDLV5Hz-w&expires=2145884400",
     "title": "読むたびに幸せを！"
   },
   {
@@ -42775,18 +42835,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2151/chapter/127713"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1300"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2151/chapter/127713"
       }
     ],
     "slug": "配達先のお姉さんが怖すぎる",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1720602096/title_small/1300.webp?hash=EhC3QmexdEFusP6LsgqhSA&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2151/title_thumbnail_list_single/403329.webp?hash=6DkUbF1BQ8FUa02160hdGg&expires=1789430400",
     "title": "配達先のお姉さんが怖すぎる"
   },
   {
@@ -47910,18 +47970,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1252/chapter/129186"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/966"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1252/chapter/129186"
       }
     ],
     "slug": "勇者パーティーを追放された俺だが、俺から巣立ってくれたようで嬉しい。......なので大聖女、お前に",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1654144803/title_small/966.webp?hash=SF8mwZ4vQ_xTexVHRfgTXw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1252/title_thumbnail_list_single/401466.webp?hash=EBexZphZoG0NX2DDGiC-vA&expires=1789430400",
     "title": "勇者パーティーを追放された俺だが、俺から巣立ってくれたようで嬉しい。……なので大聖女、お前に追って来られては困るのだが?"
   },
   {
@@ -48505,18 +48565,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2331/chapter/129003"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1743"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2331/chapter/129003"
       }
     ],
     "slug": "陽キャが陰キャに恋をした話",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1784270981/title_small/1743.webp?hash=66r1HJHJeHmdx_xH8FH1pw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2331/title_thumbnail_list_single/426884.webp?hash=u4qLd_E4cWOxZeE6hNjD1g&expires=1789689600",
     "title": "陽キャが陰キャに恋をした話"
   },
   {
