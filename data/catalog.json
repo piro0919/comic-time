@@ -352,12 +352,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02701/episode/409502"
+        "url": "https://pocket.shonenmagazine.com/title/02701/episode/409503"
       }
     ],
     "slug": "【ノベル】追放された転生重騎士はゲーム知識で無双する",
@@ -397,12 +397,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02636/episode/431192"
+        "url": "https://pocket.shonenmagazine.com/title/02636/episode/431566"
       }
     ],
     "slug": "【パクパクですわ】追放されたお嬢様の『モンスターを食べるほど強くなる』スキルは、1食で1レベルアップ",
@@ -498,6 +498,21 @@
     "slug": "ギャルとギャルの百合",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/4bc9a26cffc27c408ff69d6b543a8c220284d4ed/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2550912965813599150-3e30c0b676f49c03591f6226837f4683%3F1772605148",
     "title": "#ギャルとギャルの百合"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "コミックライド",
+        "siteUrl": "https://comicride.jp/",
+        "url": "https://comicride.jp/series/3a8a4022c1093"
+      }
+    ],
+    "slug": "神奈川に住んでるエルフ",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20231024173101337610D10202033AC2CA70563B8EBB370B3-sm.webp",
+    "title": "#神奈川に住んでるエルフ"
   },
   {
     "dayBits": 2,
@@ -837,22 +852,22 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/00777/episode/257266"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/13932016480030919114"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/00777/episode/257267"
       }
     ],
     "slug": "3×3eyes",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/7a833dd9fabe5c90a71077ffbd6dcb2a4972f696/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F13932016480030190645-493ba0482f6b8bdde3adb2890b58d1b8%3F1549273836",
-    "title": "3×3EYES"
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/777/title_grid_wide_o_2019032015074772794f11172a557cb5bdd139c4d1facc.png",
+    "title": "３×３ＥＹＥＳ"
   },
   {
     "dayBits": 32,
@@ -977,7 +992,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -1210,18 +1225,23 @@
     "title": "beautiful place"
   },
   {
-    "dayBits": 4,
+    "dayBits": 5,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-01",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "サンデーうぇぶり",
         "siteUrl": "https://www.sunday-webry.com/",
         "url": "https://www.sunday-webry.com/episode/12207421984173601255"
+      },
+      {
+        "name": "マンガワン",
+        "siteUrl": "https://manga-one.com/",
+        "url": "https://manga-one.com/title/2433"
       }
     ],
     "slug": "beybladex",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ea883ead4f23491cd5218e3c49e102765c36c15e/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F4856001361513705960-2d6c4cb80764215789c092d39b23cdd8",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1689147289/webp/chapter/217662.webp?hash=MZB8-ru9dxyaMVjvycIykA&expires=1875657600",
     "title": "BEYBLADE X"
   },
   {
@@ -1562,12 +1582,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/00916/episode/387163"
+        "url": "https://pocket.shonenmagazine.com/title/00916/episode/387164"
       }
     ],
     "slug": "eden",
@@ -2036,6 +2056,21 @@
   },
   {
     "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "コミックライド",
+        "siteUrl": "https://comicride.jp/",
+        "url": "https://comicride.jp/series/960985b1259fd"
+      }
+    ],
+    "slug": "killersholiday",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/202310241733361970AA4C369FF137E3FD35A564312675E46-sm.webp",
+    "title": "KILLER'S HOLIDAY"
+  },
+  {
+    "dayBits": 1,
     "firstSeen": "2026-09-06",
     "lastSeen": "2026-09-06",
     "sites": [
@@ -2465,6 +2500,21 @@
     "title": "Q.E.D. UNIV. ―証明終了―"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/4958b272a5085"
+      }
+    ],
+    "slug": "q血白書",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/20251201130759651CDEE39DD380F5EAD98EAAFF1EF4E665D-sm.webp",
+    "title": "Q血白書"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-11",
@@ -2705,6 +2755,21 @@
     "title": "Still You"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03330/episode/443252"
+      }
+    ],
+    "slug": "strayboyoverkill",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3330/title_grid_wide_20260730132625225a87887761705540cec3aa59d3f899.png",
+    "title": "STRAYBOY OVERKILL"
+  },
+  {
     "dayBits": 16,
     "firstSeen": "2026-09-10",
     "lastSeen": "2026-09-10",
@@ -2910,6 +2975,21 @@
     "title": "Unnamed Memory"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/eb7499dff8099"
+      }
+    ],
+    "slug": "villainな奥さま",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/2024120410192849793D0E068D6ADCD1134169939D2203277-sm.webp",
+    "title": "Villainな奥さま"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-11",
@@ -3077,12 +3157,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02831/episode/416850"
+        "url": "https://pocket.shonenmagazine.com/title/02831/episode/416851"
       }
     ],
     "slug": "xxxholic",
@@ -3867,7 +3947,7 @@
   {
     "dayBits": 35,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
@@ -4340,6 +4420,21 @@
     "title": "アンデッドさんの不器用な青春"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/fb68fe760aa10"
+      }
+    ],
+    "slug": "アンブレイカブル~敗れざる者たち~",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/602094/20250822183732483B96D336AC702B119DFC1BCFA9C3B6404-sm.webp",
+    "title": "アンブレイカブル〜敗れざる者たち〜"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-09-07",
     "lastSeen": "2026-09-07",
@@ -4575,6 +4670,21 @@
     "title": "いつか宇宙から"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "少年ジャンプ＋",
+        "siteUrl": "https://shonenjumpplus.com/",
+        "url": "https://shonenjumpplus.com/episode/9253191256479734438"
+      }
+    ],
+    "slug": "イッピツアヤル",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/322f90fccc265bd0f84d7cac9cd12fb2e0ef9d82/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F9253191256690933159-7a5da938f16c084d30adf26f5d289a4e%3F1789100113",
+    "title": "イッピツアヤル"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-09-07",
     "lastSeen": "2026-09-07",
@@ -4592,12 +4702,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02683/episode/406214"
+        "url": "https://pocket.shonenmagazine.com/title/02683/episode/406215"
       }
     ],
     "slug": "いとしのムーコ",
@@ -5315,18 +5425,23 @@
     "title": "エリートヤンキー三郎"
   },
   {
-    "dayBits": 16,
+    "dayBits": 17,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-03",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/673/chapter/130305"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/525"
       }
     ],
     "slug": "エリスの聖杯",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/673/title_thumbnail_list_single/389241.webp?hash=miwVYuxuK0xwpnC6FL-9vw&expires=1788998400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1577256483/title_small/525.webp?hash=RfnB0kd9iimN3iu2WfhRyA&expires=2145884400",
     "title": "エリスの聖杯"
   },
   {
@@ -5607,12 +5722,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "少年ジャンプ＋",
         "siteUrl": "https://shonenjumpplus.com/",
-        "url": "https://shonenjumpplus.com/episode/9253191256195090262"
+        "url": "https://shonenjumpplus.com/episode/9253191256479734515"
       }
     ],
     "slug": "おかえり水平線",
@@ -5922,7 +6037,7 @@
   {
     "dayBits": 33,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガUP!",
@@ -5932,11 +6047,11 @@
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2460/chapter/127941"
+        "url": "https://www.ganganonline.com/title/2460/chapter/127938"
       }
     ],
     "slug": "おっさん冒険者の遅れた英雄譚感謝の素振りを1日1万回していたら、剣聖が弟子入り志願にやってきた",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2460/title_thumbnail_list_single/407826.webp?hash=O8Y7nJI0CWF-0Lbu7Vb1Rg&expires=1789257600",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2460/title_thumbnail_list_single/407826.webp?hash=Dv1fj8IE23aQlCFQi-1c0w&expires=1789776000",
     "title": "おっさん冒険者の遅れた英雄譚　感謝の素振りを１日１万回していたら､剣聖が弟子入り志願にやってきた"
   },
   {
@@ -6150,6 +6265,21 @@
     "title": "およそ100年幽閉されていた魔術師夫婦は世界を巡る"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1331"
+      }
+    ],
+    "slug": "オリヴィア嬢は愛されると死ぬ~旦那様、ちょっとこっち見すぎですわ~",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1727243619/title_small/1331.webp?hash=jdkATQu95kbR7vWHR8eRlA&expires=2145884400",
+    "title": "オリヴィア嬢は愛されると死ぬ ～旦那様、ちょっとこっち見すぎですわ～"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-09-04",
     "lastSeen": "2026-09-04",
@@ -6182,12 +6312,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03150/episode/442191"
+        "url": "https://pocket.shonenmagazine.com/title/03150/episode/442829"
       }
     ],
     "slug": "おれは美少女vtuber",
@@ -6672,7 +6802,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ヤンマガWeb",
@@ -6998,6 +7128,21 @@
     "slug": "カラオケで歌うおねえさんといっしょ",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006413/resized/5f266305-05ab-4b3c-b0aa-aef331a0cecf.jpg",
     "title": "カラオケで歌うおねえさんといっしょ"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/75d685af3e4f0"
+      }
+    ],
+    "slug": "ガラガラポン",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240412103209738E1A4A31BC825D4C089760C7D27E764A2-sm.webp",
+    "title": "ガラガラポン"
   },
   {
     "dayBits": 32,
@@ -7667,12 +7812,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "少年ジャンプ＋",
         "siteUrl": "https://shonenjumpplus.com/",
-        "url": "https://shonenjumpplus.com/episode/9253191256340472844"
+        "url": "https://shonenjumpplus.com/episode/9253191256479734472"
       }
     ],
     "slug": "クソ女に幸あれ",
@@ -8387,12 +8532,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02465/episode/435059"
+        "url": "https://pocket.shonenmagazine.com/title/02465/episode/435732"
       }
     ],
     "slug": "ゴールデンマン",
@@ -8563,6 +8708,21 @@
     "slug": "こじらせ幼馴染みは気付いて欲しい",
     "thumbnailUrl": "https://www.ganganonline.com/secure/title/2583/title_thumbnail_list_single/421086.webp?hash=q42Ree1tZS_yZD5ENr4kYg&expires=1789171200",
     "title": "こじらせ幼馴染みは気付いて欲しい"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/6901f4aeaff80"
+      }
+    ],
+    "slug": "コスは淫らな仮面~オートクチュール~",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240514152202152BA0DFC4668C07C4030DF151D1C8FCB58-sm.webp",
+    "title": "コスは淫らな仮面 ～オートクチュール～"
   },
   {
     "dayBits": 96,
@@ -9595,6 +9755,21 @@
     "title": "さよなら、英雄になった旦那様　～ただ祈るだけの役立たずな妻のはずでしたが……～"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/e1952d04194ad"
+      }
+    ],
+    "slug": "さよならプロローグ",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/202507311314553545CA581A3AF732C3340F7C4C92799D5B8-sm.webp",
+    "title": "さよならプロローグ"
+  },
+  {
     "dayBits": 16,
     "firstSeen": "2026-09-10",
     "lastSeen": "2026-09-10",
@@ -9638,6 +9813,21 @@
     "slug": "さるまね",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a0af026eb2a2e43d5f6a6472a875fd3594303243/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F3270296674372973770-533cdbd1f9771a5cb67d0383c7f39988%3F1782878457",
     "title": "さるまね"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/c71adc0447760"
+      }
+    ],
+    "slug": "サレとシタの恋愛終了工程",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/3104955/2026062417480151561C7634A4FB3E6D46D90601B41B68B7B-sm.webp",
+    "title": "サレとシタの恋愛終了工程"
   },
   {
     "dayBits": 32,
@@ -9983,6 +10173,21 @@
     "slug": "ジャンクシュート",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3203/title_grid_wide_202603121649488a4e77f534c653d895a7c85d805391d9.png",
     "title": "ジャンクシュート"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/01191/episode/442842"
+      }
+    ],
+    "slug": "シャングリラ・フロンティア~クソゲーハンター、神ゲーに挑まんとす~",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1191/title_grid_wide_202608271109074fae7fcccdddea6fdc023e446043d95d.png",
+    "title": "シャングリラ・フロンティア～クソゲーハンター、神ゲーに挑まんとす～"
   },
   {
     "dayBits": 8,
@@ -10992,12 +11197,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03022/episode/442491"
+        "url": "https://pocket.shonenmagazine.com/title/03022/episode/443103"
       }
     ],
     "slug": "その青春",
@@ -11187,21 +11392,21 @@
   {
     "dayBits": 5,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03047/episode/428640"
-      },
       {
         "name": "ヤンマガWeb",
         "siteUrl": "https://yanmaga.jp/",
         "url": "https://yanmaga.jp/comics/%E3%82%BE%E3%83%B3%E3%83%93%E4%B8%96%E7%95%8C%E3%81%A7%E3%83%8F%E3%83%BC%E3%83%AC%E3%83%A0%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86%EF%BC%81"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03047/episode/429411"
       }
     ],
     "slug": "ゾンビ世界でハーレムをつくろう!",
-    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/2029.jpg?auto=webp&width=400",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3047/title_grid_wide_202510291131308a14fe899b9d28f3923febcde9a0b382.png",
     "title": "ゾンビ世界でハーレムをつくろう！"
   },
   {
@@ -11557,7 +11762,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "竹コミ！",
@@ -11592,7 +11797,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ヤンマガWeb",
@@ -12430,6 +12635,21 @@
     "title": "ディーふらぐ！"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/02884/episode/434297"
+      }
+    ],
+    "slug": "ディグイット",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2884/title_grid_wide_202507011149233e4dad4feadc4dc922c676dfe6118e7d.png",
+    "title": "ディグイット"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-31",
     "lastSeen": "2026-09-07",
@@ -13232,21 +13452,21 @@
   {
     "dayBits": 33,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03087/episode/435568"
-      },
       {
         "name": "ヤンマガWeb",
         "siteUrl": "https://yanmaga.jp/",
         "url": "https://yanmaga.jp/comics/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%81%AE%E8%83%83%E3%81%A7%E3%81%8A%E3%82%84%E3%81%99%E3%81%BF"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03087/episode/436324"
       }
     ],
     "slug": "ドラゴンの胃でおやすみ",
-    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/2344.jpg?auto=webp&width=400",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3087/title_grid_wide_202602041623102e8dc3356c63dfeb04feee63329906ba.png",
     "title": "ドラゴンの胃でおやすみ"
   },
   {
@@ -14102,12 +14322,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "サンデーうぇぶり",
         "siteUrl": "https://www.sunday-webry.com/",
-        "url": "https://www.sunday-webry.com/episode/12207421984187803577"
+        "url": "https://www.sunday-webry.com/episode/12207421984218757638"
       }
     ],
     "slug": "のざらしちゃん",
@@ -14222,12 +14442,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02790/episode/442490"
+        "url": "https://pocket.shonenmagazine.com/title/02790/episode/443102"
       }
     ],
     "slug": "ハードワーカー中田",
@@ -14567,12 +14787,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03217/episode/435644"
+        "url": "https://pocket.shonenmagazine.com/title/03217/episode/435645"
       }
     ],
     "slug": "バジリスク~桜花忍法帖~",
@@ -14927,7 +15147,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -15282,12 +15502,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03272/episode/439780"
+        "url": "https://pocket.shonenmagazine.com/title/03272/episode/439781"
       }
     ],
     "slug": "ぴちぴちピッチaqua",
@@ -15425,18 +15645,23 @@
     "title": "ひなたとひかり"
   },
   {
-    "dayBits": 32,
+    "dayBits": 33,
     "firstSeen": "2026-09-11",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1878/chapter/128889"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1244"
       }
     ],
     "slug": "ひねくれ騎士とふわふわ姫様古城暮らしと小さなおうち",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1878/title_thumbnail_list_single/428051.webp?hash=CvY3k6iURJ4n9XqyseDDfg&expires=1789689600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1708410226/title_small/1244.webp?hash=RgYIrrHjQCi8Pq3cm2hYMw&expires=2145884400",
     "title": "ひねくれ騎士とふわふわ姫様 古城暮らしと小さなおうち"
   },
   {
@@ -15605,6 +15830,21 @@
     "title": "ファーストペンギン・レクイエム"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03056/episode/441581"
+      }
+    ],
+    "slug": "ファタールゲーム",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3056/title_grid_wide_2025111812031740f13ab30bd619849e77ae0bda6d4288.png",
+    "title": "ファタールゲーム"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
     "lastSeen": "2026-09-02",
@@ -15737,16 +15977,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "少年ジャンプ＋",
         "siteUrl": "https://shonenjumpplus.com/",
-        "url": "https://shonenjumpplus.com/episode/9253191256195090213"
+        "url": "https://shonenjumpplus.com/episode/9253191256479734451"
       }
     ],
     "slug": "ふつうの軽音部",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/77b880d42d83ed2b7641db9550f71241ecb54c21/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F14079602755590623793-6b0e956490656134a8991faaeb37c198%3F1785756608",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d4e31f0bcab05d40e39e565c3ad215f0d7c5d358/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F14079602755590623793-6b0e956490656134a8991faaeb37c198%3F1788435005",
     "title": "ふつうの軽音部"
   },
   {
@@ -15838,6 +16078,21 @@
     "slug": "プライベート・ドクター",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240410105029796B8F4750B092379E0A677324AAF0AA68C-sm.webp",
     "title": "プライベート・ドクター"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/00123/episode/441102"
+      }
+    ],
+    "slug": "ふらいんぐうぃっち",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/123/title_grid_wide_o_20181211134301d7399da639bb5104030389d760961b6e.png",
+    "title": "ふらいんぐうぃっち"
   },
   {
     "dayBits": 32,
@@ -16022,7 +16277,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガワン",
@@ -16031,8 +16286,23 @@
       }
     ],
     "slug": "ブルーウルスス",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1743388797/webp/chapter/286378.webp?hash=DzcDBl4kct48SAIhWJaCkA&expires=1874534400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1743388797/webp/chapter/286378.webp?hash=CvGOGntxxhqVrYcrx23qHQ&expires=1875657600",
     "title": "ブルーウルスス"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/01466/episode/432532"
+      }
+    ],
+    "slug": "ブルーピリオド",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1466/title_grid_wide_202107141744434659235ff8c049a1eec058f2f33791f1.png",
+    "title": "ブルーピリオド"
   },
   {
     "dayBits": 32,
@@ -16657,16 +16927,21 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983858385561"
+      },
+      {
+        "name": "ヤンマガWeb",
+        "siteUrl": "https://yanmaga.jp/",
+        "url": "https://yanmaga.jp/comics/%E3%83%9D%E3%83%83%E3%83%94%E3%83%B3_%E3%83%9D%E3%83%83%E3%83%94%E3%83%B3_%E3%83%9A%E3%83%8A%E3%83%AB%E3%83%86%E3%82%A3"
       }
     ],
     "slug": "ポッピン・ポッピン・ペナルティ",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5a01dd3c2c76c64065ddcf68e365aebb8f1074b1/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F12207421983829522259-7a68808fec1d508f8b4cf4d69a68828c%3F1781679426",
+    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/2438.jpg?auto=webp&width=400",
     "title": "ポッピン・ポッピン・ペナルティ"
   },
   {
@@ -16947,7 +17222,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガワン",
@@ -16956,7 +17231,7 @@
       }
     ],
     "slug": "まじめふまじめマジ恋路",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1774850841/webp/chapter/353272.webp?hash=wbvQ5oRNKQ9rut4F8Sc1NA&expires=1874534400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1774850841/webp/chapter/353272.webp?hash=6ozz00bcjPHwE9Qe_4nqXA&expires=1875657600",
     "title": "まじめふまじめマジ恋路"
   },
   {
@@ -17487,21 +17762,21 @@
   {
     "dayBits": 3,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-31",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "ヤンマガWeb",
-        "siteUrl": "https://yanmaga.jp/",
-        "url": "https://yanmaga.jp/comics/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%AD%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%96"
-      },
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
         "url": "https://pocket.shonenmagazine.com/title/02983/episode/434791"
+      },
+      {
+        "name": "ヤンマガWeb",
+        "siteUrl": "https://yanmaga.jp/",
+        "url": "https://yanmaga.jp/comics/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%AD%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%96"
       }
     ],
     "slug": "みんなのキスクラブ",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2983/title_grid_wide_20250815142522f537008bb7fac1fe91d739b8367d2a61.png",
+    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/2161.jpg?auto=webp&width=400",
     "title": "みんなのキスクラブ"
   },
   {
@@ -18443,6 +18718,21 @@
     "slug": "やめろ好きになってしまう",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/17cafb6221e09b413dd9c1f7dc00df44fb1ee3e7/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F12207421984210771967-692f574370ce42536a003c4bcd69f28f%3F1788874447",
     "title": "やめろ好きになってしまう"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/fc9a494d455d5"
+      }
+    ],
+    "slug": "やり直した彼らだけが後悔します。私は幸せになりますが。",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/20250829181731022360C54C9570FB7E5249AE03A705877EC-sm.webp",
+    "title": "やり直した彼らだけが後悔します。私は幸せになりますが。"
   },
   {
     "dayBits": 2,
@@ -19500,6 +19790,21 @@
     "title": "レベル0の無能探索者と蔑まれても実は世界最強です ～探索ランキング1位は謎の人～"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/00890/episode/391769"
+      }
+    ],
+    "slug": "レベル1だけどユニークスキルで最強です",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/890/title_grid_wide_o_2019062012274050bf7780c16889ee76561232f655fb0a.png",
+    "title": "レベル１だけどユニークスキルで最強です"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-08-25",
@@ -19528,6 +19833,21 @@
     "slug": "レンジャー・ガール!女性自衛官・小牧陽は地獄を這い進む",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006055/resized/02f72f1f-30f1-4e9c-930c-912160ffce66.jpg",
     "title": "レンジャー・ガール! 女性自衛官・小牧陽は地獄を這い進む"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "サンデーうぇぶり",
+        "siteUrl": "https://www.sunday-webry.com/",
+        "url": "https://www.sunday-webry.com/episode/12207421984218754548"
+      }
+    ],
+    "slug": "レンチとくだもの",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f7ebab138f43889fe812c301d4c4404409a17cf3/enlarge=0;height=654;no_unsharpmask=1;quality=90;version=1;width=1125/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-thumbnail%2F12207421983745466410-8ba10b94271cbc221be409044cc09c52%3F1779354342",
+    "title": "レンチとくだもの"
   },
   {
     "dayBits": 8,
@@ -19607,12 +19927,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03222/episode/437169"
+        "url": "https://pocket.shonenmagazine.com/title/03222/episode/437170"
       }
     ],
     "slug": "ワールドイズダンシング",
@@ -20310,6 +20630,21 @@
     "title": "悪役一家の奥方、死に戻りして心を入れ替える。"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1647"
+      }
+    ],
+    "slug": "悪役貴族が開き直って破滅フラグを“実力”で叩き折っていたら、いつの間にかヒロイン達から英雄視されるよ",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1764817082/title_small/1647.webp?hash=x2NIMDpRFLUwjyCANgkQfA&expires=2145884400",
+    "title": "悪役貴族が開き直って破滅フラグを“実力”で叩き折っていたら、いつの間にかヒロイン達から英雄視されるようになった件"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-09-04",
     "lastSeen": "2026-09-11",
@@ -20463,6 +20798,21 @@
     "slug": "悪役令嬢の父親に転生したので、妻と娘を溺愛します",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/816768/20241129122256505618FE39B1652B4CEDACC1ADBAF69A9D8-sm.webp",
     "title": "悪役令嬢の父親に転生したので、妻と娘を溺愛します"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1197"
+      }
+    ],
+    "slug": "悪役令嬢の矜持~婚約者を奪い取って義姉を追い出した私は、どうやら今から破滅するようです。~",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1774227585/title_small/1197.webp?hash=f3a4HIvPWvGtCy1Lnpc9Eg&expires=2145884400",
+    "title": "悪役令嬢の矜持〜婚約者を奪い取って義姉を追い出した私は、どうやら今から破滅するようです。〜"
   },
   {
     "dayBits": 16,
@@ -22315,6 +22665,21 @@
     "title": "右向け左！"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03120/episode/441094"
+      }
+    ],
+    "slug": "宇曽田みのりの代用料理",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3120/title_grid_wide_202512231253011a78a3b0fd6de463c7b3e3202ad7e002.png",
+    "title": "宇曽田みのりの代用料理"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
     "lastSeen": "2026-09-09",
@@ -22422,12 +22787,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "サンデーうぇぶり",
         "siteUrl": "https://www.sunday-webry.com/",
-        "url": "https://www.sunday-webry.com/episode/12207421984156049334"
+        "url": "https://www.sunday-webry.com/episode/12207421984218750849"
       }
     ],
     "slug": "雨宮さん",
@@ -22590,6 +22955,21 @@
     "title": "運命など存在しないので"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガワン",
+        "siteUrl": "https://manga-one.com/",
+        "url": "https://manga-one.com/title/2451"
+      }
+    ],
+    "slug": "運命の巻戻士",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1690291396/webp/chapter/219084.webp?hash=F5Qie6GDyvhkvBpqoSQ0RA&expires=1875657600",
+    "title": "運命の巻戻士"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-08",
     "lastSeen": "2026-09-08",
@@ -22702,16 +23082,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "少年ジャンプ＋",
         "siteUrl": "https://shonenjumpplus.com/",
-        "url": "https://shonenjumpplus.com/episode/9253191256195090248"
+        "url": "https://shonenjumpplus.com/episode/9253191256479734499"
       }
     ],
     "slug": "英雄機関",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/67dff4faf3981c58e985622d368bbe423db5f59f/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17106567254826529090-977ee0cea9b68ad6501f8439b97c696f%3F1785756608",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/915e6d8e6a55e046ed10685ecc7dd314eb513776/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17106567254826529090-977ee0cea9b68ad6501f8439b97c696f%3F1788435005",
     "title": "英雄機関"
   },
   {
@@ -22822,12 +23202,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/01606/episode/336456"
+        "url": "https://pocket.shonenmagazine.com/title/01606/episode/336457"
       }
     ],
     "slug": "猿ロック",
@@ -23058,6 +23438,21 @@
     "slug": "王太子様、私今度こそあなたに殺されたくないんです!~聖女に嵌められた貧乏令嬢、2度目は串刺し回避しま",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2518/title_grid_wide_20240408105559f3ecad2d4fa596e0c677f4e9fa48fd79.png",
     "title": "王太子様、私今度こそあなたに殺されたくないんです！〜聖女に嵌められた貧乏令嬢、2度目は串刺し回避します！〜"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03130/episode/435560"
+      }
+    ],
+    "slug": "王朝無双~現代知識で唐の王子に転生したら、国がリッチになりました~",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3130/title_grid_wide_20251224131554a3e092422eb6d3c659eb1b15ce46aff2.png",
+    "title": "王朝無双～現代知識で唐の王子に転生したら、国がリッチになりました～"
   },
   {
     "dayBits": 64,
@@ -24097,16 +24492,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2469/chapter/129222"
+        "url": "https://www.ganganonline.com/title/2469/chapter/130386"
       }
     ],
     "slug": "寡黙だけどめちゃくちゃノリの良い黒猫ちゃん",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2469/title_thumbnail_list_single/418026.webp?hash=doa3zk0faUPt39wW-nFAEA&expires=1788652800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2469/title_thumbnail_list_single/418026.webp?hash=UX9keNCIZ_gv-p2Aesd1_A&expires=1789776000",
     "title": "寡黙だけどめちゃくちゃノリの良い黒猫ちゃん"
   },
   {
@@ -24317,12 +24712,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03287/episode/441495"
+        "url": "https://pocket.shonenmagazine.com/title/03287/episode/441496"
       }
     ],
     "slug": "花田少年史",
@@ -25716,6 +26111,21 @@
   },
   {
     "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/dba3c31430cc1"
+      }
+    ],
+    "slug": "鬼に拾われた花嫁",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1562798/2026090210543463041227140568227537BA7A173C2B9404E-sm.webp",
+    "title": "鬼に拾われた花嫁"
+  },
+  {
+    "dayBits": 1,
     "firstSeen": "2026-09-06",
     "lastSeen": "2026-09-06",
     "sites": [
@@ -26272,7 +26682,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -29002,12 +29412,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02992/episode/424114"
+        "url": "https://pocket.shonenmagazine.com/title/02992/episode/424115"
       }
     ],
     "slug": "黒博物館シリーズ",
@@ -29557,7 +29967,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -30262,21 +30672,21 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "ヤンマガWeb",
-        "siteUrl": "https://yanmaga.jp/",
-        "url": "https://yanmaga.jp/comics/%E5%A6%BB%E3%81%A8%E5%83%95%E3%81%AE%E5%B0%8F%E8%A6%8F%E6%A8%A1%E3%81%AA%E8%82%B2%E5%85%90"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983796398644"
+      },
+      {
+        "name": "ヤンマガWeb",
+        "siteUrl": "https://yanmaga.jp/",
+        "url": "https://yanmaga.jp/comics/%E5%A6%BB%E3%81%A8%E5%83%95%E3%81%AE%E5%B0%8F%E8%A6%8F%E6%A8%A1%E3%81%AA%E8%82%B2%E5%85%90"
       }
     ],
     "slug": "妻と僕の小規模な育児",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ec9130642ca42debbb8d7e8adeb11c7d88e925c5/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F10834108156644382755-5e0c1d6c392ea09e7ff11dc2a4dde9a5%3F1699239281",
+    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/1139.jpg?auto=webp&width=400",
     "title": "妻と僕の小規模な育児"
   },
   {
@@ -30757,7 +31167,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガワン",
@@ -30766,7 +31176,7 @@
       }
     ],
     "slug": "史上最強オークさんの楽しい異世界ハーレムづくり",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1722010550/webp/ranking_thumbnail/939.webp?hash=DQh_3YSWWacOGqSbxXt0Nw&expires=1875139200",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1722010550/webp/ranking_thumbnail/939.webp?hash=r5aBBgsJZ1yg1w5CeHpEjw&expires=1875657600",
     "title": "史上最強オークさんの楽しい異世界ハーレムづくり"
   },
   {
@@ -31895,6 +32305,21 @@
     "title": "時間停止勇者―余命３日の設定じゃ世界を救うには短すぎる―"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/02765/episode/430493"
+      }
+    ],
+    "slug": "次期公爵夫人の役割だけを求めてきた、氷の薔薇と謳われる旦那様が家庭内ストーカーと化した件",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2765/title_grid_wide_20250108140646353de040ddaeaa232ae923ddf8837773.png",
+    "title": "次期公爵夫人の役割だけを求めてきた、氷の薔薇と謳われる旦那様が家庭内ストーカーと化した件"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-11",
@@ -31957,12 +32382,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02941/episode/421554"
+        "url": "https://pocket.shonenmagazine.com/title/02941/episode/421556"
       }
     ],
     "slug": "自由気ままな精霊姫",
@@ -32427,7 +32852,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -33080,6 +33505,21 @@
     "title": "獣王と薬草"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/de5826b4c631e"
+      }
+    ],
+    "slug": "獣王子の偽恋花嫁",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20250708113540873E1886D35F9338699F0DDD73458D96C50-sm.webp",
+    "title": "獣王子の偽恋花嫁"
+  },
+  {
     "dayBits": 96,
     "firstSeen": "2026-08-29",
     "lastSeen": "2026-09-12",
@@ -33697,12 +34137,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02215/episode/380743"
+        "url": "https://pocket.shonenmagazine.com/title/02215/episode/380744"
       }
     ],
     "slug": "将太の寿司",
@@ -33905,6 +34345,21 @@
     "title": "少女に転生したシリアルキラーは、無慈悲にNarrを追い詰める。"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/ff893ea281500"
+      }
+    ],
+    "slug": "少女は異世界で『殺戮の才能』に目覚める",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/2025041814014563501309AF138787ECAF6A8F9B80B70F9E2-sm.webp",
+    "title": "少女は異世界で『殺戮の才能』に目覚める"
+  },
+  {
     "dayBits": 20,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-10",
@@ -33987,12 +34442,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03336/episode/442565"
+        "url": "https://pocket.shonenmagazine.com/title/03336/episode/442566"
       }
     ],
     "slug": "昭和のグラゼニ",
@@ -34062,12 +34517,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/01999/episode/420948"
+        "url": "https://pocket.shonenmagazine.com/title/01999/episode/421717"
       }
     ],
     "slug": "焼いてるふたり",
@@ -34537,12 +34992,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03237/episode/437884"
+        "url": "https://pocket.shonenmagazine.com/title/03237/episode/437885"
       }
     ],
     "slug": "新月の盤に",
@@ -34567,16 +35022,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03268/episode/442830"
+        "url": "https://pocket.shonenmagazine.com/title/03268/episode/443105"
       }
     ],
     "slug": "新宿解消録テンチョウみいちゃんと山田さん外伝",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3268/title_grid_wide_2026090111563791525b822fc3587ca751e1479174c546.png",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3268/title_grid_wide_20260514162557424cec93429e8b1973dc740ee2f761c8.png",
     "title": "新宿解消録テンチョウ　みいちゃんと山田さん外伝"
   },
   {
@@ -35727,22 +36182,22 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "少年ジャンプ＋",
         "siteUrl": "https://shonenjumpplus.com/",
-        "url": "https://shonenjumpplus.com/episode/9253191256195090328"
+        "url": "https://shonenjumpplus.com/episode/9253191256479734549"
       }
     ],
     "slug": "水ノ怪-水域怪異奇譚今様-",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/43d7d353ffcb8aff3e6e10a107d0b39daa1c7a1c/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107094914778574908-9d2d445cefe4bb7bfb3cbff194c6c5b6%3F1785756608",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/25fdd734d090541015ca02061ec92a07b3a583d9/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107094914778574908-9d2d445cefe4bb7bfb3cbff194c6c5b6%3F1788435005",
     "title": "水ノ怪-水域怪異奇譚今様-"
   },
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガワン",
@@ -35751,7 +36206,7 @@
       }
     ],
     "slug": "水月の恋人",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1787031873/webp/chapter/358336.webp?hash=zCMo0kH7kn2nAAXiLNzimA&expires=1874534400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1787031873/webp/chapter/358336.webp?hash=L_czXmJkBza5rlPq8eC5iA&expires=1875657600",
     "title": "水月の恋人"
   },
   {
@@ -35847,12 +36302,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03269/episode/438878"
+        "url": "https://pocket.shonenmagazine.com/title/03269/episode/438879"
       }
     ],
     "slug": "世界でいちばん兄してる",
@@ -36810,6 +37265,21 @@
     "title": "税金で買った本"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/3c72807e16322"
+      }
+    ],
+    "slug": "隻眼参謀の淫靡な溺愛",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260408133705132CD731E0BA1B38389ABE5CC724C776F6E-sm.webp",
+    "title": "隻眼参謀の淫靡な溺愛"
+  },
+  {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
     "lastSeen": "2026-08-26",
@@ -37590,6 +38060,21 @@
     "title": "祖母ドル ～余命わずかのおばあちゃん、若返って孫とアイドルになる～"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "コミックライド",
+        "siteUrl": "https://comicride.jp/",
+        "url": "https://comicride.jp/series/473397a7d442d"
+      }
+    ],
+    "slug": "組長娘と世話係",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/202310241734385092E1B2E41538FF6B7FF8A09658E8D7190-sm.webp",
+    "title": "組長娘と世話係"
+  },
+  {
     "dayBits": 16,
     "firstSeen": "2026-09-03",
     "lastSeen": "2026-09-10",
@@ -37787,12 +38272,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02792/episode/413040"
+        "url": "https://pocket.shonenmagazine.com/title/02792/episode/413041"
       }
     ],
     "slug": "蒼き神話マルス",
@@ -37832,12 +38317,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/01843/episode/351995"
+        "url": "https://pocket.shonenmagazine.com/title/01843/episode/351996"
       }
     ],
     "slug": "蒼天航路",
@@ -37907,21 +38392,21 @@
   {
     "dayBits": 5,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-01",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02776/episode/439934"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/2551460910070517651"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/02776/episode/440535"
       }
     ],
     "slug": "卒業アルバムの彼女たち",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/405c2b9c50ecfeb385e1b8153828e7c22e661523/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965511801467-d23a365d9db4a6e8c73b5c94aa900a83%3F1769387323",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2776/title_grid_wide_20250122122106494bd300d61aa0eadd3595a0725ff8f4.png",
     "title": "卒業アルバムの彼女たち"
   },
   {
@@ -38163,6 +38648,21 @@
     "slug": "大きい女の子は好きですか",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2388944/20251219120829197B3E704DECFBE3677CA1061E4ADCFEC2E-sm.webp",
     "title": "大きい女の子は好きですか？"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "COMIC FUZ",
+        "siteUrl": "https://comic-fuz.com/",
+        "url": "https://comic-fuz.com/manga/789"
+      }
+    ],
+    "slug": "大家さんは思春期!",
+    "thumbnailUrl": "https://img.comic-fuz.com/c/1FmTX7/ts.webp?h=oR7M96qWDGTDXX1uxGza5A&e=5000000000",
+    "title": "大家さんは思春期！"
   },
   {
     "dayBits": 34,
@@ -38742,21 +39242,21 @@
   {
     "dayBits": 5,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02510/episode/432095"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983825783081"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/02510/episode/432455"
       }
     ],
     "slug": "地元のいじめっ子達に仕返ししようとしたら、別の戦いが始まった。",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ebdfd96c45b715f1618d21185eebf0f14dc3a5b7/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F4856001361557456806-428e6b14789d60be8d6ca39505dccac5%3F1782891061",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2510/title_grid_wide_20240326102435ca101ab6b445bf5a05d7552d594022f1.png",
     "title": "地元のいじめっ子達に仕返ししようとしたら、別の戦いが始まった。"
   },
   {
@@ -38942,12 +39442,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03154/episode/432774"
+        "url": "https://pocket.shonenmagazine.com/title/03154/episode/432775"
       }
     ],
     "slug": "超・学校法人スタア學園",
@@ -39092,22 +39592,22 @@
   {
     "dayBits": 33,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-04",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/01665/episode/405857"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/2551460909859039902"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/01665/episode/407238"
       }
     ],
     "slug": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。~俺は武器だけじゃなく、あらゆるものに",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/8dfc6a7e9e4e593b65418fee2019babd295e0a87/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F3269754496723134437-6bfac4fd50e87b54bd76e028fd6ec1eb%3F1770614045",
-    "title": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。 ～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～"
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1665/title_grid_wide_20220304151905f9c198049489cc8212bc6fd886ff6d07.png",
+    "title": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。　～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～"
   },
   {
     "dayBits": 16,
@@ -39187,12 +39687,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02611/episode/442489"
+        "url": "https://pocket.shonenmagazine.com/title/02611/episode/443100"
       }
     ],
     "slug": "追放された転生王子、『自動製作《オートクラフト》』スキルで領地を爆速で開拓し最強の村を作ってしまう~",
@@ -39217,21 +39717,21 @@
   {
     "dayBits": 33,
     "firstSeen": "2026-09-04",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/01773/episode/440934"
-      },
       {
         "name": "ヤンマガWeb",
         "siteUrl": "https://yanmaga.jp/",
         "url": "https://yanmaga.jp/comics/%E5%A4%A7%E3%83%8F%E3%82%BA%E3%83%AC%E3%81%A0%E3%81%A8%E8%BF%BD%E6%94%BE%E3%81%95%E3%82%8C%E3%81%9F%E8%BB%A2%E7%94%9F%E9%87%8D%E9%A8%8E%E5%A3%AB%E3%81%AF%E3%82%B2%E3%83%BC%E3%83%A0%E7%9F%A5%E8%AD%98%E3%81%A7%E7%84%A1%E5%8F%8C%E3%81%99%E3%82%8B"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/01773/episode/441432"
       }
     ],
     "slug": "追放された転生重騎士はゲーム知識で無双する",
-    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/1414.jpg?auto=webp&width=400",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1773/title_grid_wide_202606251227133a098b8ec1a7950d87ea17a5d44ec6f1.png",
     "title": "追放された転生重騎士はゲーム知識で無双する"
   },
   {
@@ -39752,16 +40252,21 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421984125525144"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/01857/episode/437065"
       }
     ],
     "slug": "天国大魔境",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/9391ba477fec8a6b381389f13164aa48222380b5/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F10834108156629618480-c0078c7359b0302ee1bd7b6c248cab16%3F1722836600",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1857/title_grid_wide_2022072213452528e8f946a9fb16eecbeeee3626487b45.png",
     "title": "天国大魔境"
   },
   {
@@ -40095,6 +40600,21 @@
     "title": "転生した空間魔法使いは正体隠して目立ちたい！"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/12bdd2489b58c"
+      }
+    ],
+    "slug": "転生した三毛猫は王子と玉座の夢を見る",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20250828134005045FD752031D2B91CC30891CD82768B49F4-sm.webp",
+    "title": "転生した三毛猫は王子と玉座の夢を見る"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -40315,18 +40835,23 @@
     "title": "転生社畜のチート菜園　～万能スキルと便利な使い魔妖精を駆使してたら、気づけば大陸一の生産拠点ができていた～"
   },
   {
-    "dayBits": 64,
+    "dayBits": 65,
     "firstSeen": "2026-09-12",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1644"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2423/chapter/131438"
       }
     ],
     "slug": "転生者の私は〝推し活〟するため聖女になりました!",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1764817428/title_small/1644.webp?hash=c3y8tzrqlnk9LSUrl5w3zw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2423/title_thumbnail_list_single/422859.webp?hash=RezcZhqiu-sxnMEjc4jHqw&expires=1789776000",
     "title": "転生者の私は〝推し活〟するため聖女になりました！"
   },
   {
@@ -40437,21 +40962,21 @@
   {
     "dayBits": 33,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2663/chapter/131885"
-      },
       {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1752"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2663/chapter/131882"
       }
     ],
     "slug": "転生伯爵リリーナの結婚~イケメン公爵様の虫除け係!~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1787189626/title_small/1752.webp?hash=Wz-e-XTnyj5JqYkwsycnbw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2663/title_thumbnail_list_single/435557.webp?hash=4iaAcdbaKWwJPcQjNiV74A&expires=1789776000",
     "title": "転生伯爵リリーナの結婚～イケメン公爵様の虫除け係!?～"
   },
   {
@@ -40708,6 +41233,21 @@
     "slug": "徒然チルドレン",
     "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/tsuredure/res/images/cover.png",
     "title": "徒然チルドレン"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "コミックライド",
+        "siteUrl": "https://comicride.jp/",
+        "url": "https://comicride.jp/series/cf365d4cd3368"
+      }
+    ],
+    "slug": "賭けからはじまる最後の初恋",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604035/20250416113850618D62CA8CB6C24069D42223402A6999C02-sm.webp",
+    "title": "賭けからはじまる最後の初恋"
   },
   {
     "dayBits": 32,
@@ -41027,21 +41567,21 @@
   {
     "dayBits": 65,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2526/chapter/129216"
-      },
       {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1702"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2526/chapter/129213"
       }
     ],
     "slug": "藤堂さんと仁愛ちゃん",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1776150453/title_small/1702.webp?hash=1Ei1nXQIq28XZtBrzImj9g&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2526/title_thumbnail_list_single/430097.webp?hash=2zAj8WKtKGkwW3V3orz2EA&expires=1789776000",
     "title": "藤堂さんと仁愛ちゃん"
   },
   {
@@ -41192,16 +41732,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2346/chapter/130155"
+        "url": "https://www.ganganonline.com/title/2346/chapter/130152"
       }
     ],
     "slug": "童貞勇者は仲良くシたい",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2346/title_thumbnail_list_single/414915.webp?hash=-O1FX0mIiu6YIwxv0Tr8Wg&expires=1789257600",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2346/title_thumbnail_list_single/414915.webp?hash=nkgRGAivqrQYGixc9wE3qA&expires=1789776000",
     "title": "童貞勇者は仲良くシたい"
   },
   {
@@ -41407,7 +41947,7 @@
   {
     "dayBits": 65,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガUP!",
@@ -41417,11 +41957,11 @@
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1659/chapter/130428"
+        "url": "https://www.ganganonline.com/title/1659/chapter/130425"
       }
     ],
     "slug": "南條さんは僕に抱かれたい",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1659/title_thumbnail_list_single/408774.webp?hash=RAWAxd0fT5o1Z5yEKT3Grg&expires=1789257600",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1659/title_thumbnail_list_single/408774.webp?hash=P0PEeARpq6FutLYnxRJ-qw&expires=1789776000",
     "title": "南條さんは僕に抱かれたい"
   },
   {
@@ -41807,12 +42347,12 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "少年ジャンプ＋",
         "siteUrl": "https://shonenjumpplus.com/",
-        "url": "https://shonenjumpplus.com/episode/9253191256479734414"
+        "url": "https://shonenjumpplus.com/episode/9253191256479734540"
       }
     ],
     "slug": "猫田びより",
@@ -41992,12 +42532,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03212/episode/435175"
+        "url": "https://pocket.shonenmagazine.com/title/03212/episode/435176"
       }
     ],
     "slug": "波打際のむろみさん",
@@ -42037,7 +42577,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガワン",
@@ -42046,7 +42586,7 @@
       }
     ],
     "slug": "破滅を控えた悪役令嬢が無理してヒロインを演じた結果~怠惰な余生が憧れなのに、第二王子の溺愛ルートに困",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1760411570/webp/chapter/316765.webp?hash=MIsXWFeit-wPiYZDiBFmNA&expires=1875139200",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1760411570/webp/chapter/316765.webp?hash=XM2oKz6YPNpXaX6Sc6EYTg&expires=1875657600",
     "title": "破滅を控えた悪役令嬢が無理してヒロインを演じた結果～怠惰な余生が憧れなのに、第二王子の溺愛ルートに困惑中～"
   },
   {
@@ -42230,18 +42770,23 @@
     "title": "配信に致命的に向いていない女の子が迷宮で黙々と人助けする配信"
   },
   {
-    "dayBits": 4,
+    "dayBits": 5,
     "firstSeen": "2026-09-08",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2151/chapter/127713"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1300"
       }
     ],
     "slug": "配達先のお姉さんが怖すぎる",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2151/title_thumbnail_list_single/403329.webp?hash=6DkUbF1BQ8FUa02160hdGg&expires=1789430400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1720602096/title_small/1300.webp?hash=EhC3QmexdEFusP6LsgqhSA&expires=2145884400",
     "title": "配達先のお姉さんが怖すぎる"
   },
   {
@@ -42747,12 +43292,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/00289/episode/442209"
+        "url": "https://pocket.shonenmagazine.com/title/00289/episode/442857"
       }
     ],
     "slug": "彼女、お借りします",
@@ -43157,7 +43702,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -43187,12 +43732,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "サンデーうぇぶり",
         "siteUrl": "https://www.sunday-webry.com/",
-        "url": "https://www.sunday-webry.com/episode/12207421984190635167"
+        "url": "https://www.sunday-webry.com/episode/12207421984222775255"
       }
     ],
     "slug": "百瀬アキラの初恋破綻中。",
@@ -43597,7 +44142,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ヤンマガWeb",
@@ -44107,12 +44652,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02174/episode/442487"
+        "url": "https://pocket.shonenmagazine.com/title/02174/episode/443099"
       }
     ],
     "slug": "辺境の薬師、都でsランク冒険者となる~英雄村の少年がチート薬で無自覚無双~",
@@ -44242,16 +44787,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2076/chapter/128817"
+        "url": "https://www.ganganonline.com/title/2076/chapter/128814"
       }
     ],
     "slug": "捕食者系魔法少女",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2076/title_thumbnail_list_single/406512.webp?hash=Gm4hqv401PnKNHNCh7j9sw&expires=1789257600",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2076/title_thumbnail_list_single/406512.webp?hash=IrYQ-thLjVWTS31IOWD7CA&expires=1789776000",
     "title": "捕食者系魔法少女"
   },
   {
@@ -45345,6 +45890,21 @@
     "title": "魔王都市@comic"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/d6d6de85af0a6"
+      }
+    ],
+    "slug": "魔王陛下のお掃除係",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20230808105647650D87C4FE8D6253BB7AB3B67AC7422B784-sm.webp",
+    "title": "魔王陛下のお掃除係"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -45482,12 +46042,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02368/episode/442488"
+        "url": "https://pocket.shonenmagazine.com/title/02368/episode/442828"
       }
     ],
     "slug": "魔女と傭兵",
@@ -46432,16 +46992,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "少年ジャンプ＋",
         "siteUrl": "https://shonenjumpplus.com/",
-        "url": "https://shonenjumpplus.com/episode/9253191256340472858"
+        "url": "https://shonenjumpplus.com/episode/9253191256479734530"
       }
     ],
     "slug": "無敵のスバル",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/6fa77b7822b49b317f3fc7f23d488ebc9a0b39ac/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107419589191699611-1466a3a53b79bfca52c622a6257adc98%3F1788435005",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5a22ff6aa125c39ea83b4ca236e504c1c7f850e8/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107419589191699611-1466a3a53b79bfca52c622a6257adc98%3F1789225213",
     "title": "無敵のスバル"
   },
   {
@@ -46647,12 +47207,12 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02643/episode/404765"
+        "url": "https://pocket.shonenmagazine.com/title/02643/episode/404766"
       }
     ],
     "slug": "名門!第三野球部",
@@ -47345,18 +47905,23 @@
     "title": "勇者パーティーをクビになったので故郷に帰ったら、メンバー全員がついてきたんだが"
   },
   {
-    "dayBits": 4,
+    "dayBits": 5,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1252/chapter/129186"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/966"
       }
     ],
     "slug": "勇者パーティーを追放された俺だが、俺から巣立ってくれたようで嬉しい。......なので大聖女、お前に",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1252/title_thumbnail_list_single/401466.webp?hash=EBexZphZoG0NX2DDGiC-vA&expires=1789430400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1654144803/title_small/966.webp?hash=SF8mwZ4vQ_xTexVHRfgTXw&expires=2145884400",
     "title": "勇者パーティーを追放された俺だが、俺から巣立ってくれたようで嬉しい。……なので大聖女、お前に追って来られては困るのだが?"
   },
   {
@@ -47457,7 +48022,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガワン",
@@ -47466,7 +48031,7 @@
       }
     ],
     "slug": "勇魔の王国",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1734419255/webp/chapter/277526.webp?hash=V5Ca_AparObdZVbenqH4SA&expires=1874534400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1734498259/webp/ranking_thumbnail/26478.webp?hash=wcuRZq9wiWQ2gPbUL3Oelw&expires=1875657600",
     "title": "勇魔の王国\t"
   },
   {
@@ -47592,7 +48157,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -47607,7 +48172,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-08-30",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "マンガワン",
@@ -47616,7 +48181,7 @@
       }
     ],
     "slug": "柚木さんちの四兄弟。",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1684499439/webp/chapter/209173.webp?hash=vp-KERpNE5NxJhjwCYwJXA&expires=1874534400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1684499439/webp/chapter/209173.webp?hash=Dt_ckJWAWVUfT3fusiQuhA&expires=1875657600",
     "title": "柚木さんちの四兄弟。"
   },
   {
@@ -47935,18 +48500,23 @@
     "title": "遥かなるマナーバトル"
   },
   {
-    "dayBits": 32,
+    "dayBits": 33,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2331/chapter/129003"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1743"
       }
     ],
     "slug": "陽キャが陰キャに恋をした話",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2331/title_thumbnail_list_single/426884.webp?hash=u4qLd_E4cWOxZeE6hNjD1g&expires=1789689600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1784270981/title_small/1743.webp?hash=66r1HJHJeHmdx_xH8FH1pw&expires=2145884400",
     "title": "陽キャが陰キャに恋をした話"
   },
   {
@@ -48025,18 +48595,23 @@
     "title": "雷雷雷"
   },
   {
-    "dayBits": 16,
+    "dayBits": 17,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-10",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983593304590"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/01783/episode/433034"
       }
     ],
     "slug": "落ちこぼれだった兄が実は最強~史上最強の勇者は転生し、学園で無自覚に無双する~",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f0b8cb15e84969a211216a845f3b676c91065d9f/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F3269754496832460603-b34fbecf6e1bbbc8e1615d00eadd257b%3F1782891061",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1783/title_grid_wide_202205131301580559aca400263f687977817eeec76230.png",
     "title": "落ちこぼれだった兄が実は最強 ～史上最強の勇者は転生し、学園で無自覚に無双する～"
   },
   {
@@ -48297,21 +48872,21 @@
   {
     "dayBits": 9,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/38/chapter/131160"
-      },
       {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/489"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/38/chapter/131157"
       }
     ],
     "slug": "裏世界ピクニック",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1567651082/title_small/489.webp?hash=DJGrv_CxiELdbGBcEEADtg&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/38/title_thumbnail_list_single/414312.webp?hash=Im6oTA3hpUTham_DNqFqfA&expires=1789776000",
     "title": "裏世界ピクニック"
   },
   {
@@ -48390,24 +48965,24 @@
     "title": "離婚前提で結婚しました"
   },
   {
-    "dayBits": 66,
+    "dayBits": 67,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-07",
+    "lastSeen": "2026-09-13",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/02269/episode/439944"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983645809910"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/02269/episode/379651"
       }
     ],
     "slug": "陸上自衛隊特務諜報機関別班の犬",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/f77a2ca657894fbbdfce0368953ef3fe6ffb0dc8/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F3269754496736294233-4a4a5d4ce141107db1e502929f17afdd%3F1699258917",
-    "title": "陸上自衛隊特務諜報機関 別班の犬"
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2269/title_grid_wide_202609091316189bbdfc9c4f59175e895e165f9fffdd3c.png",
+    "title": "陸上自衛隊特務諜報機関　別班の犬"
   },
   {
     "dayBits": 16,
@@ -48597,16 +49172,16 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "サンデーうぇぶり",
         "siteUrl": "https://www.sunday-webry.com/",
-        "url": "https://www.sunday-webry.com/episode/12207421984187795953"
+        "url": "https://www.sunday-webry.com/episode/12207421984218749144"
       }
     ],
     "slug": "竜送りのイサギ",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/478934acaf008818993c195b1840b73c5dd6f95a/enlarge=0;height=654;no_unsharpmask=1;quality=90;version=1;width=1125/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-thumbnail%2F14079602755157332465-fb4831da3d72dd4554e9db07cc45163d%3F1733968770",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/dc90db06605f939cfb8dd373853eba4d16b205ca/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F14079602755157332465-fb2a6824d8d91e5b8323c224e3fedff5%3F1758244133",
     "title": "竜送りのイサギ"
   },
   {
@@ -49852,7 +50427,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ヤンマガWeb",
