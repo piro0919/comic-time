@@ -5735,18 +5735,23 @@
     "title": "おうち彼氏　～職場よりも可愛いあなた～"
   },
   {
-    "dayBits": 8,
+    "dayBits": 10,
     "firstSeen": "2026-09-09",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-14",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1351/chapter/131384"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/931"
       }
     ],
     "slug": "オウルナイト",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1351/title_thumbnail_list_single/417564.webp?hash=VCgYtgKNl7RVy6qFa7V_Fg&expires=1789516800",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1646273462/title_small/931.webp?hash=BN7LH6BQrYDG8yrZIsCJmA&expires=2145884400",
     "title": "オウルナイト"
   },
   {
@@ -6312,7 +6317,7 @@
   {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-07",
+    "lastSeen": "2026-09-14",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -11025,18 +11030,23 @@
     "title": "スモークブルーの雨のち晴れ"
   },
   {
-    "dayBits": 16,
+    "dayBits": 18,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-09-10",
+    "lastSeen": "2026-09-14",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/11/chapter/132728"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/285"
       }
     ],
     "slug": "スライム倒して300年、知らないうちにレベルmaxになってました",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/11/title_thumbnail_list_single/430592.webp?hash=9RF12VFJcQRXuv3cetD2Rg&expires=1789603200",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1518072783/title_small/285.webp?hash=U5v9pTPoSYGZaAREbvJh0A&expires=2145884400",
     "title": "スライム倒して300年、知らないうちにレベルMAXになってました"
   },
   {
@@ -19611,6 +19621,21 @@
   },
   {
     "dayBits": 2,
+    "firstSeen": "2026-09-14",
+    "lastSeen": "2026-09-14",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/226"
+      }
+    ],
+    "slug": "ラグナクリムゾン",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1510572662/title_small/226.webp?hash=wgDwLIdrRs__KRunUrjKqQ&expires=2145884400",
+    "title": "ラグナクリムゾン"
+  },
+  {
+    "dayBits": 2,
     "firstSeen": "2026-08-31",
     "lastSeen": "2026-08-31",
     "sites": [
@@ -19732,7 +19757,7 @@
   {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-07",
+    "lastSeen": "2026-09-14",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -20513,6 +20538,21 @@
     "slug": "わたしが罪を犯す理由~闇バイトにハマる女たち~",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/2025062610190623317E610F2D6A2EC3D4CD1DFF02FA08A56-sm.webp",
     "title": "わたしが罪を犯す理由～闇バイトにハマる女たち～"
+  },
+  {
+    "dayBits": 2,
+    "firstSeen": "2026-09-14",
+    "lastSeen": "2026-09-14",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1745"
+      }
+    ],
+    "slug": "わたしたちのことはなんと呼べば",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1785130805/title_small/1745.webp?hash=0GWozFSYLRbPvVm4xZZo-Q&expires=2145884400",
+    "title": "わたしたちのことはなんと呼べば"
   },
   {
     "dayBits": 16,
@@ -22610,18 +22650,18 @@
     "lastSeen": "2026-09-14",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1863/chapter/129033"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1299"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1863/chapter/129033"
       }
     ],
     "slug": "異世界刀匠の魔剣製作ぐらし",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1719559384/title_small/1299.webp?hash=d2YHeVCHiyrC6JDgpszRNg&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1863/title_thumbnail_list_single/428066.webp?hash=7bMnuf_0fwZ45kTGk81SvQ&expires=1789689600",
     "title": "異世界刀匠の魔剣製作ぐらし"
   },
   {
@@ -29795,18 +29835,23 @@
     "title": "降り積もれ孤独な死よ"
   },
   {
-    "dayBits": 32,
+    "dayBits": 34,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-14",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2286/chapter/131708"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1753"
       }
     ],
     "slug": "香り屋さんの纏さん",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2286/title_thumbnail_list_single/427085.webp?hash=a3IGjvbRxPKs9_9ozA0f5A&expires=1789689600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1787190822/title_small/1753.webp?hash=agWmgwJIfFDaFGjnShWy6A&expires=2145884400",
     "title": "香り屋さんの纏さん"
   },
   {
@@ -46817,7 +46862,7 @@
   {
     "dayBits": 2,
     "firstSeen": "2026-09-07",
-    "lastSeen": "2026-09-07",
+    "lastSeen": "2026-09-14",
     "sites": [
       {
         "name": "ヤンチャンWeb",
