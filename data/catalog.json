@@ -4455,6 +4455,21 @@
     "title": "アンゴルモア 元寇合戦記　【博多編】"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1700"
+      }
+    ],
+    "slug": "アンダーアイドル",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1775790156/title_small/1700.webp?hash=D080iKigMjRZaqMV-zYzrw&expires=2145884400",
+    "title": "アンダーアイドル"
+  },
+  {
     "dayBits": 38,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-11",
@@ -21067,7 +21082,7 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-13",
     "sites": [
       {
         "name": "ツイ４",
@@ -27493,6 +27508,21 @@
     "slug": "極熱進化emotionsevolution",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007060/resized/72b20442-752b-459d-90fc-93e97a56cfdb.jpg",
     "title": "極熱進化 Emotions Evolution"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-13",
+    "lastSeen": "2026-09-13",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1566"
+      }
+    ],
+    "slug": "玉川さん出てました",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1749186585/title_small/1566.webp?hash=WmgDlohpRQrgUe6Ae5TA9A&expires=2145884400",
+    "title": "玉川さん 出てました？"
   },
   {
     "dayBits": 64,
@@ -44570,18 +44600,18 @@
     "lastSeen": "2026-09-13",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/481/chapter/108366"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/480"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/481/chapter/108366"
       }
     ],
     "slug": "不徳のギルド",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1565942044/title_small/480.webp?hash=oKK3YxdKsBCtl6iJJVC6JA&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/481/title_thumbnail_list_single/401739.webp?hash=29r1cdHagxaPHIEF37pzQA&expires=1789776000",
     "title": "不徳のギルド"
   },
   {
@@ -48811,7 +48841,7 @@
       }
     ],
     "slug": "柚木さんちの四兄弟。",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1684499439/webp/chapter/209173.webp?hash=Dt_ckJWAWVUfT3fusiQuhA&expires=1875657600",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1684499439/webp/chapter/209173.webp?hash=aLy_rMQmfRF4e8qWdjqOVw&expires=1875744000",
     "title": "柚木さんちの四兄弟。"
   },
   {
