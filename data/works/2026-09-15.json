@@ -42,6 +42,14 @@
     "url": "https://www.sunday-webry.com/episode/12207421984237600521"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020060/resized/8a68c0e6-b141-4ad8-8086-015f1e82c6bb.jpg",
+    "title": "Bloody Nadia",
+    "url": "https://comic-walker.com/detail/KC_020060_S/episodes/KC_0200600000200011_E"
+  },
+  {
     "foundAt": "00:58",
     "siteName": "チャンピオンクロス",
     "siteUrl": "https://championcross.jp/",
@@ -51,12 +59,92 @@
     "workUrl": "https://championcross.jp/series/113178d170944"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d7c04f7b3427b9e4dcba9dc789530750d26dd40b/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F13933686331610218027-6854047db6c52eaebcf2e85bbb32ad19%3F1709251387",
+    "title": "DEAR BOYS ACT4",
+    "url": "https://comic-days.com/episode/12207421983666974125"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1705919975/title_small/1178.webp?hash=NDQiDws1inPApxLgkLexJQ&expires=2145884400",
+    "title": "Disney Twisted-Wonderland The Comic Episode of Savanaclaw",
+    "url": "https://www.manga-up.com/titles/1178"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/291/title_grid_wide_o_201812111357034ca3b364742001859c0e804b900ffdcb.png",
     "title": "Fate/Grand Order -turas realta-",
     "url": "https://pocket.shonenmagazine.com/title/00291/episode/441111"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003160/resized/dcfe5c95-8b91-4b18-ab69-6e716f9226be.jpg",
+    "title": "FX戦士くるみちゃん",
+    "url": "https://comic-walker.com/detail/KC_003160_S/episodes/KC_0031600005400011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/4f04ab80140ff68092345443463f0116ad5de258/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965157895726-b11a239015c6d1e35d665c9feb8dd7dd%3F1739875778",
+    "title": "Q.E.D. UNIV. ―証明終了―",
+    "url": "https://comic-days.com/episode/12207421983379583532"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003956/resized/b128e787-cd68-4c94-9c59-556768eeb4a8.jpg",
+    "title": "RTA走者はゲーム世界から帰れない",
+    "url": "https://comic-walker.com/detail/KC_003956_S/episodes/KC_0039560003800021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1522320003/title_small/323.webp?hash=YlNUm0FUxWZehkFD76wY0Q&expires=2145884400",
+    "title": "SHIORI EXPERIENCE ジミなわたしとヘンなおじさん",
+    "url": "https://www.manga-up.com/titles/323"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/bd8ac200813eb1f9209da2d154d472b11ac4bd32/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F4856001361588182431-6d3922e5de5920a03f3a6a5e90fd1d88%3F1751276720",
+    "title": "SIX-推しと私のディスタンス-",
+    "url": "https://tonarinoyj.jp/episode/12207421984236965099"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001795/resized/6587fa6e-11c5-4ba3-9f69-0357436eacef.jpg",
+    "title": "SSSランクダンジョンでナイフ一本手渡され追放された白魔導師 ユグドラシルの呪いにより弱点である魔力不足を克服し世界最強へと至る",
+    "url": "https://comic-walker.com/detail/KC_001795_S/episodes/KC_0017950003500021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008482/resized/433c06e4-7191-44ca-8596-32826955894a.jpg",
+    "title": "Tier1姉妹 有名四姉妹は僕なしでは生きられない",
+    "url": "https://comic-walker.com/detail/KC_008482_S/episodes/KC_0084820000600011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007142/resized/234f9ee4-1da6-4961-9760-9430fd79c63e.jpg",
+    "title": "Toxic-a-Holic トキシカホリック Alternate Episode",
+    "url": "https://comic-walker.com/detail/KC_007142_S/episodes/KC_0071420001100011_E"
   },
   {
     "foundAt": "00:05",
@@ -93,6 +181,14 @@
     "workUrl": "https://championcross.jp/series/fe344d2acd278"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "コミックガルド",
+    "siteUrl": "https://comic-gardo.com/",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984217047825-aea2aecee6ff5e3b9f58a2c90f66983e?1788999767",
+    "title": "アルドの異世界転生",
+    "url": "https://comic-gardo.com/episode/12207421984217047825"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ヤンマガWeb",
     "siteUrl": "https://yanmaga.jp/",
@@ -102,12 +198,28 @@
     "workUrl": "https://yanmaga.jp/comics/%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B8%E3%83%A3"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020135/resized/af221b4e-b4fb-4bc7-b281-b65cb7301d4b.jpg",
+    "title": "あんなに好きって言ったのに！",
+    "url": "https://comic-walker.com/detail/KC_020135_S/episodes/KC_0201350000200011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3204/title_grid_wide_20260409132000f8edc276608c36c4bdb9761a333a1f39.png",
     "title": "イケオジモンスターと絶対零度男子",
     "url": "https://pocket.shonenmagazine.com/title/03204/episode/435711"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001766/resized/91101bda-02ac-4840-bcba-816bebbd663a.jpg",
+    "title": "いのちの食べ方",
+    "url": "https://comic-walker.com/detail/KC_001766_S/episodes/KC_0017660002300011_E"
   },
   {
     "foundAt": "00:05",
@@ -142,6 +254,22 @@
     "url": "https://pocket.shonenmagazine.com/title/02925/episode/432691"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020088/resized/4d03715f-3c8b-4a7a-8ee4-4cced1862c2e.jpg",
+    "title": "うちのケモノメイドがデカすぎる",
+    "url": "https://comic-walker.com/detail/KC_020088_S/episodes/KC_0200880000200011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984152696725-bcab69f3359f12841b5c5ac48a732834?1788925225",
+    "title": "エイジング-80歳以上の若者が暮らす島-",
+    "url": "https://comic-action.com/episode/12207421984152696725"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -150,12 +278,12 @@
     "url": "https://pocket.shonenmagazine.com/title/02856/episode/417503"
   },
   {
-    "foundAt": "00:05",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1771488354/title_small/1678.webp?hash=eua8Md9FHYvTkyhrWyXVSw&expires=2145884400",
-    "title": "エルフに育てられて人類唯一の精霊術師になりました～世間知らずの最強冒険者、無自覚なまま人間社会で無双する～",
-    "url": "https://www.manga-up.com/titles/1678"
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008684/resized/d403a05b-5dba-441c-94d8-738e33ea673a.jpg",
+    "title": "エルフっぽい花さんのてきと～なアパートぐらし",
+    "url": "https://comic-walker.com/detail/KC_008684_S/episodes/KC_0086840000800011_E"
   },
   {
     "foundAt": "00:05",
@@ -164,6 +292,47 @@
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1845/title_grid_wide_2022071518213558fd119f0cf30a204056f752dd8369f2.png",
     "title": "おおきく振りかぶって",
     "url": "https://pocket.shonenmagazine.com/title/01845/episode/352543"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019938/resized/41d7f42e-84e8-4019-ac48-5d3331a0583c.jpg",
+    "title": "オタくんにだけ優しすぎるアヤメさん",
+    "url": "https://comic-walker.com/detail/KC_019938_S/episodes/KC_0199380000300021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984090057886-658a904f91cb0d7b840c9c6ad3d7cba9?1788924926",
+    "title": "おばけ猫とぼく",
+    "url": "https://comic-action.com/episode/12207421984090057886"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミプレ",
+    "siteUrl": "https://viewer.heros-web.com/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/202605081607192395EF1DC4C2EF59A7DA64FC16A2C746EF8-sm.webp",
+    "title": "おまつり！ピース電器店",
+    "url": "https://heros-web.com/episodes/2285d01fd01b2",
+    "workUrl": "https://heros-web.com/series/bd6e5ee65fbc8"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984112354664-a1dad726c1363b4966c2bffde0544aff?1789380685",
+    "title": "お飾り聖女のはずが、真の力に目覚めたようです THE COMIC",
+    "url": "https://magcomi.com/episode/12207421984112354664"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/18c5e2b2-bc2c-4d3b-b721-b357bfb4da1d.jpg",
+    "title": "カワセミさんの釣りごはん",
+    "url": "https://gaugau.futabanet.jp/list/work/gnemilhJnQVb4hjcCPoFi4XSC/episodes/72"
   },
   {
     "foundAt": "00:05",
@@ -180,6 +349,14 @@
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1367/title_grid_wide_2021040712072532bac3c02e3333ad8b7b48fadb0c8596.png",
     "title": "ギルティサークル",
     "url": "https://pocket.shonenmagazine.com/title/01367/episode/443117"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019797/resized/6960301b-f2f3-4b2f-904f-5768633f46cb.jpg",
+    "title": "クラスの天使に告った結果",
+    "url": "https://comic-walker.com/detail/KC_019797_S/episodes/KC_0197970000400011_E"
   },
   {
     "foundAt": "00:05",
@@ -216,6 +393,14 @@
     "workUrl": "https://youngchampion.jp/series/20a59d2babf28"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006615/resized/84a7b3e1-257f-4020-a950-dd12a56e963b.jpg",
+    "title": "こちら、終末停滞委員会。",
+    "url": "https://comic-walker.com/detail/KC_006615_S/episodes/KC_0066150001500011_E"
+  },
+  {
     "foundAt": "00:58",
     "siteName": "COMIC FUZ",
     "siteUrl": "https://comic-fuz.com/",
@@ -241,6 +426,14 @@
     "url": "https://www.sunday-webry.com/episode/12207421984235232854"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984213076836-e222d086b687148b356ef8e89b484eb2?1788925281",
+    "title": "サイクル",
+    "url": "https://comic-action.com/episode/12207421984213076836"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -255,6 +448,14 @@
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3281/title_grid_wide_20260528134211ffbf658ea1bb3638f82997e8446ba1c5.png",
     "title": "さよなら、英雄になった旦那様　～ただ祈るだけの役立たずな妻のはずでしたが……～",
     "url": "https://pocket.shonenmagazine.com/title/03281/episode/440293"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "ゼノンプラス",
+    "siteUrl": "https://comic-zenon.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a0af026eb2a2e43d5f6a6472a875fd3594303243/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F3270296674372973770-533cdbd1f9771a5cb67d0383c7f39988%3F1782878457",
+    "title": "さるまね",
+    "url": "https://comic-zenon.com/episode/12207421984064600740"
   },
   {
     "foundAt": "00:05",
@@ -273,6 +474,14 @@
     "url": "https://pocket.shonenmagazine.com/title/02376/episode/387613"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421983850995897-76e49894abdd2eb21a4ecba87aaf4c8c?1789428809",
+    "title": "しゃこうっち。",
+    "url": "https://magcomi.com/episode/12207421983850995897"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -281,12 +490,60 @@
     "url": "https://pocket.shonenmagazine.com/title/03112/episode/434912"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005945/resized/5f5f8c49-2361-4b3f-ab2e-b5a82f601dca.jpg",
+    "title": "シンカリオン チェンジ ザ ワールド",
+    "url": "https://comic-walker.com/detail/KC_005945_S/episodes/KC_0059450000900021_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3048/title_grid_wide_202511041446292d7f83fe99f79444b20c15d1728230ad.png",
     "title": "スーパートリアージ",
     "url": "https://pocket.shonenmagazine.com/title/03048/episode/435982"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019045/resized/0530ac44-88c7-4787-8931-23192ad3c9ab.jpg",
+    "title": "スミハルハンマー",
+    "url": "https://comic-walker.com/detail/KC_019045_S/episodes/KC_0190450000600011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/098eac12c51e17d2a64fdd50dfc9d35cc4cfab5f/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F14079602755518368515-796defbeafdf5bce19324b9c8bc07df3%3F1772687178",
+    "title": "スライム聖女",
+    "url": "https://tonarinoyj.jp/episode/12207421984208929879"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007947/resized/3504eca5-3971-41b1-b8ab-f9ac1f4c1543.jpg",
+    "title": "せっかく農家に転生したので勇者は目指しません",
+    "url": "https://comic-walker.com/detail/KC_007947_S/episodes/KC_0079470000800021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005568/resized/5aa2217f-1ead-4a77-80a3-00ce834f4827.jpg",
+    "title": "セブンス",
+    "url": "https://comic-walker.com/detail/KC_005568_S/episodes/KC_0055680003000011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/e1a4d329-7662-4439-bc02-9101c6839215.jpg",
+    "title": "その門番、最強につき～追放された防御力9999の戦士、王都の門番として無双する～",
+    "url": "https://gaugau.futabanet.jp/list/work/5f500f6777656135ee080000/episodes/140"
   },
   {
     "foundAt": "00:05",
@@ -301,7 +558,7 @@
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1749198109/webp/chapter/285371.webp?hash=WH8eeNZ0a1cLfxIGQ1eCnA&expires=1875830400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1749198109/webp/chapter/285371.webp?hash=GjdtfBe46EUaZbJo4170eg&expires=1875916800",
     "title": "ダーウィンの大罪",
     "url": "https://manga-one.com/title/26798"
   },
@@ -313,6 +570,14 @@
     "title": "ダイダラ",
     "url": "https://heros-web.com/episodes/c0c1c498bca5c",
     "workUrl": "https://heros-web.com/series/6b53586b4046f"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/c09d4a166ef922570954f6157169d9d0a74876a0/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F12207421983555296753-6a6260b0467466a139211b56ed52ee53%3F1785749769",
+    "title": "ただのおっさん×魔王の娘の辺境ワンダフルライフ",
+    "url": "https://tonarinoyj.jp/episode/12207421984212870802"
   },
   {
     "foundAt": "00:05",
@@ -339,6 +604,22 @@
     "url": "https://pocket.shonenmagazine.com/title/02422/episode/407081"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020008/resized/40fa0819-be64-4bb8-9171-c6a34687dfd2.jpg",
+    "title": "ツンな彼女の太もも事情",
+    "url": "https://comic-walker.com/detail/KC_020008_S/episodes/KC_0200080000500011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008543/resized/a05596e2-62e9-47ee-9834-45e1ec329d45.jpg",
+    "title": "デッッッカリアン",
+    "url": "https://comic-walker.com/detail/KC_008543_S/episodes/KC_0085430000500011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ヤンマガWeb",
     "siteUrl": "https://yanmaga.jp/",
@@ -346,6 +627,15 @@
     "title": "テンカイチ　日本最強武芸者決定戦",
     "url": "https://yanmaga.jp/comics/%E3%83%86%E3%83%B3%E3%82%AB%E3%82%A4%E3%83%81_%E6%97%A5%E6%9C%AC%E6%9C%80%E5%BC%B7%E6%AD%A6%E8%8A%B8%E8%80%85%E6%B1%BA%E5%AE%9A%E6%88%A6/771e1f342978b780528afd32d248fb67",
     "workUrl": "https://yanmaga.jp/comics/%E3%83%86%E3%83%B3%E3%82%AB%E3%82%A4%E3%83%81_%E6%97%A5%E6%9C%AC%E6%9C%80%E5%BC%B7%E6%AD%A6%E8%8A%B8%E8%80%85%E6%B1%BA%E5%AE%9A%E6%88%A6"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミプレ",
+    "siteUrl": "https://viewer.heros-web.com/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/202605081537148817A22E36831AB19FDFFD49509A9435804-sm.webp",
+    "title": "ときわの森とツギノヒト",
+    "url": "https://heros-web.com/episodes/7c280fa80ee17",
+    "workUrl": "https://heros-web.com/series/0078abc64cc1d"
   },
   {
     "foundAt": "00:05",
@@ -364,6 +654,22 @@
     "url": "https://www.sunday-webry.com/episode/12207421984235263191"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008728/resized/02983c7c-e995-41b5-a035-b1499d802787.jpg",
+    "title": "ネオアンダーザへヴン",
+    "url": "https://comic-walker.com/detail/KC_008728_S/episodes/KC_0087280000700011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000231/resized/d65dcb1e-15e7-4ad6-9023-9f9aff8082c8.jpg",
+    "title": "ねこに転生したおじさん",
+    "url": "https://comic-walker.com/detail/KC_000231_S/episodes/KC_0002310026800011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
@@ -372,12 +678,36 @@
     "url": "https://shonenjumpplus.com/episode/9253191256637716010"
   },
   {
-    "foundAt": "06:05",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1785900005/title_small/1748.webp?hash=UJ663-a91P35vccZZ2B6Pg&expires=2145884400",
-    "title": "ばっこ",
-    "url": "https://www.manga-up.com/titles/1748"
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020021/resized/32f0fa11-f8de-49ee-906a-d818adb12694.jpg",
+    "title": "ノブレスギャンビット ～復讐令嬢は踊る、犯罪卿との断罪遊戯～",
+    "url": "https://comic-walker.com/detail/KC_020021_S/episodes/KC_0200210000300011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックガルド",
+    "siteUrl": "https://comic-gardo.com/",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984217047518-e6813e8302976d866d0e229b27f086ab?1789005342",
+    "title": "ハズレ枠の【状態異常スキル】で最強になった俺がすべてを蹂躙するまで",
+    "url": "https://comic-gardo.com/episode/12207421984217047518"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001385/resized/f1096e10-9db3-4ed3-a70a-a966f6f48c5b.jpg",
+    "title": "ハニートラップ・シェアハウス",
+    "url": "https://comic-walker.com/detail/KC_001385_S/episodes/KC_0013850006100021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003317/resized/8d686171-2d58-4011-bf1c-754dda3efe90.jpg",
+    "title": "パパ×パパ～αとΩで夫夫やってます～",
+    "url": "https://comic-walker.com/detail/KC_003317_S/episodes/KC_0033170003200021_E"
   },
   {
     "foundAt": "00:05",
@@ -388,6 +718,14 @@
     "url": "https://pocket.shonenmagazine.com/title/03294/episode/443121"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001942/resized/9fcf05a3-5228-4c07-909c-56f301835ee1.jpg",
+    "title": "ぷちます！",
+    "url": "https://comic-walker.com/detail/KC_001942_S/episodes/KC_0019420014300011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -396,12 +734,36 @@
     "url": "https://pocket.shonenmagazine.com/title/01467/episode/424885"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008463/resized/354a023e-5e87-4530-968a-059214ab3b1c.jpg",
+    "title": "プラス的 異世界の過ごし方",
+    "url": "https://comic-walker.com/detail/KC_008463_S/episodes/KC_0084630001000021_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/617/title_grid_wide_20260907114233e5eba875fad161f88496ede2726de9bf.png",
     "title": "ブルーロック",
     "url": "https://pocket.shonenmagazine.com/title/00617/episode/442852"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006707/resized/c8618628-bf2a-4cc2-a974-6f75410b1842.jpg",
+    "title": "フルメタル・パニック！Σ",
+    "url": "https://comic-walker.com/detail/KC_006707_S/episodes/KC_0067070007000011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008524/resized/688c8759-ede0-4fde-bd97-006a69eebcf1.jpg",
+    "title": "プロの身代わり",
+    "url": "https://comic-walker.com/detail/KC_008524_S/episodes/KC_0085240000500011_E"
   },
   {
     "foundAt": "00:58",
@@ -421,12 +783,36 @@
     "url": "https://pocket.shonenmagazine.com/title/00014/episode/201485"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008768/resized/fec8832d-cf15-4119-924a-7e92c9bfd153.jpg",
+    "title": "ぼくは今日も猫のふり",
+    "url": "https://comic-walker.com/detail/KC_008768_S/episodes/KC_0087680002200011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984213076728-5475c28ee48568b088dc2c3ad236bd74?1788942553",
+    "title": "ホストと社畜",
+    "url": "https://comic-action.com/episode/12207421984213076728"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1671619617/webp/chapter/201232.webp?hash=J7RJ_hpzO_LGYukenF15TA&expires=1875830400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1671619617/webp/chapter/201232.webp?hash=iO8t4_KHLxdftvL3XrReJA&expires=1875916800",
     "title": "ほどなく、お別れです",
     "url": "https://manga-one.com/title/2176"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/002559/resized/a38b1b24-29b9-4eeb-a798-b45352bcf77c.jpg",
+    "title": "みーくんと５回のおねがい",
+    "url": "https://comic-walker.com/detail/KC_002559_S/episodes/KC_0025590000800011_E"
   },
   {
     "foundAt": "00:05",
@@ -448,9 +834,25 @@
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/73/title_thumbnail_list_single/433277.webp?hash=t3GQWgP_Eugesy5sGVm1BA&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/73/title_thumbnail_list_single/433277.webp?hash=40p0APawfBhltQx4Fqp4Qg&expires=1790035200",
     "title": "モンスターがあふれる世界になったので、好きに生きたいと思います",
     "url": "https://www.ganganonline.com/title/73/chapter/130233"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000486/resized/b04949ef-c8a6-4032-b191-a142cbf81591.jpg",
+    "title": "やっぱりチンチランド",
+    "url": "https://comic-walker.com/detail/KC_000486_S/episodes/KC_0004860003600061_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984238340275-6352f3b02b72e76748f34fa0b2d0c3da?1789380670",
+    "title": "やり直し辺境伯夫人の幸福な誤算 THE COMIC",
+    "url": "https://magcomi.com/episode/12207421984238340275"
   },
   {
     "foundAt": "00:58",
@@ -479,12 +881,44 @@
     "workUrl": "https://championcross.jp/series/d91dd718771db"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005593/resized/a3df1637-99e5-4ee0-81b6-b7cbfa7020e5.jpg",
+    "title": "レベル0の無能探索者と蔑まれても実は世界最強です ～探索ランキング1位は謎の人～",
+    "url": "https://comic-walker.com/detail/KC_005593_S/episodes/KC_0055930001900011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019956/resized/893205f7-1618-400e-afa6-dc3dc0dba8cf.jpg",
+    "title": "ロストサマー・ジャーニー",
+    "url": "https://comic-walker.com/detail/KC_019956_S/episodes/KC_0199560000400011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000944/resized/230da6f3-d4f2-4ec6-9fb4-e57b9847d045.jpg",
+    "title": "わたくしのことが大嫌いな義弟が護衛騎士になりました",
+    "url": "https://comic-walker.com/detail/KC_000944_S/episodes/KC_0009440003300021_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2552/title_grid_wide_202406181712183a5ad90833f625487f3622878bf87f42.png",
     "title": "愛妻の裏アカ",
     "url": "https://pocket.shonenmagazine.com/title/02552/episode/443120"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006766/resized/e6056cef-bb2e-4272-9dd9-ef4c342fafb8.jpg",
+    "title": "悪役令嬢のショコラティエは推しの攻略に有効でした",
+    "url": "https://comic-walker.com/detail/KC_006766_S/episodes/KC_0067660002300021_E"
   },
   {
     "foundAt": "00:05",
@@ -496,10 +930,18 @@
     "workUrl": "https://youngchampion.jp/series/f8d08c177afc3"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "コミックブースト",
+    "siteUrl": "https://comic-boost.com/",
+    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0098_kv_sp.jpg",
+    "title": "悪役令嬢はオジサマに夢中です",
+    "url": "https://comic-boost.com/content/00980001"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1722325356/webp/chapter/265046.webp?hash=tZ7M6eERE962RP8mSi2c0w&expires=1875830400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1722325356/webp/chapter/265046.webp?hash=03IaOZlpT270tzS4b6oemA&expires=1875916800",
     "title": "闇堕ち勇者の背信配信~追放され、隠しボス部屋に放り込まれた結果、ボスと探索者狩り配信を始める~@comic",
     "url": "https://manga-one.com/title/3020"
   },
@@ -522,13 +964,12 @@
     "workUrl": "https://championcross.jp/series/1b730b22a426f"
   },
   {
-    "foundAt": "00:05",
-    "siteName": "ヤンマガWeb",
-    "siteUrl": "https://yanmaga.jp/",
-    "thumbnailUrl": "https://eh96lnrmau.user-space.cdn.idcfcloud.net/thumbnail/book/1542.jpg?auto=webp&width=400",
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/b2b7c9e6c50f4cdbca2577a4ac13a7435b6d6123/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F10834108156681562534-00917501d0d17f76453138c5cbde64ff%3F1782891061",
     "title": "異世界マンチキン",
-    "url": "https://yanmaga.jp/comics/%E7%95%B0%E4%B8%96%E7%95%8C%E3%83%9E%E3%83%B3%E3%83%81%E3%82%AD%E3%83%B3/47272231c5940ff9b2f363e31ae2a700",
-    "workUrl": "https://yanmaga.jp/comics/%E7%95%B0%E4%B8%96%E7%95%8C%E3%83%9E%E3%83%B3%E3%83%81%E3%82%AD%E3%83%B3"
+    "url": "https://comic-days.com/episode/12207421983593272322"
   },
   {
     "foundAt": "00:05",
@@ -538,6 +979,14 @@
     "title": "異世界好色無双録〜異世界転生の知恵と力を、ただひたすら✕✕✕✕するために使う〜",
     "url": "https://yanmaga.jp/comics/%E7%95%B0%E4%B8%96%E7%95%8C%E5%A5%BD%E8%89%B2%E7%84%A1%E5%8F%8C%E9%8C%B2%E7%95%B0%E4%B8%96%E7%95%8C%E8%BB%A2%E7%94%9F%E3%81%AE%E7%9F%A5%E6%81%B5%E3%81%A8%E5%8A%9B%E3%82%92%E3%80%81%E3%81%9F%E3%81%A0%E3%81%B2%E3%81%9F%E3%81%99%E3%82%89%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E4%BD%BF%E3%81%86/7de9118999eee9de597d0387b90bbe99",
     "workUrl": "https://yanmaga.jp/comics/%E7%95%B0%E4%B8%96%E7%95%8C%E5%A5%BD%E8%89%B2%E7%84%A1%E5%8F%8C%E9%8C%B2%E7%95%B0%E4%B8%96%E7%95%8C%E8%BB%A2%E7%94%9F%E3%81%AE%E7%9F%A5%E6%81%B5%E3%81%A8%E5%8A%9B%E3%82%92%E3%80%81%E3%81%9F%E3%81%A0%E3%81%B2%E3%81%9F%E3%81%99%E3%82%89%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E4%BD%BF%E3%81%86"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/bcde07ba-8cb5-446e-86af-7e23e2368f9f.jpg",
+    "title": "異世界最強の嫁ですが、夜の戦いは俺の方が強いようです～知略を活かして成り上がるハーレム戦記～",
+    "url": "https://gaugau.futabanet.jp/list/work/62c795387765610f03010000/episodes/104"
   },
   {
     "foundAt": "00:05",
@@ -581,6 +1030,22 @@
     "url": "https://www.manga-up.com/titles/507"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/0f2dccbdaf939a62887d0f738fc3d6b42eaec350/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F2551460910044574466-c96a26c2aa8ac699a0f8a1c8e9f6cf3a%3F1779092791",
+    "title": "英雄少女と呪われの銀姫",
+    "url": "https://tonarinoyj.jp/episode/12207421984173978509"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006081/resized/a826248e-0b10-413d-b651-cd3087137a09.jpg",
+    "title": "王都の行き止まりカフェ『隠れ家』 ～うっかり魔法使いになった私の店に筆頭文官様がくつろぎに来ます～",
+    "url": "https://comic-walker.com/detail/KC_006081_S/episodes/KC_0060810002000011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -597,6 +1062,14 @@
     "url": "https://www.manga-up.com/titles/606"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019326/resized/89a7d24e-7095-4e32-8520-2d9ac86cda8d.jpg",
+    "title": "乙女ゲームの悪役貴族に転生したので、金の力でメインヒロインを買ってみた。",
+    "url": "https://comic-walker.com/detail/KC_019326_S/episodes/KC_0193260000400011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ヤンマガWeb",
     "siteUrl": "https://yanmaga.jp/",
@@ -606,12 +1079,20 @@
     "workUrl": "https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A"
   },
   {
-    "foundAt": "08:57",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1522804741/title_small/209.webp?hash=b-BRqK7AqIfY0LnlBa4K-w&expires=2145884400",
-    "title": "俺の現実は恋愛ゲーム？？ 〜かと思ったら命がけのゲームだった〜",
-    "url": "https://www.manga-up.com/titles/209"
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/3e4e603264ec8a088773084f6c935323f9f54b20/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F12207421984174687742-fd4dca5630b30d6feafce473a840976c%3F1788163413",
+    "title": "俺だけ不遇スキルの異世界召喚叛逆記～最弱スキル【吸収】が全てを飲み込むまで～",
+    "url": "https://tonarinoyj.jp/episode/12207421984208929869"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008274/resized/76ae361b-02ce-4b93-84fe-db198f5976d6.jpg",
+    "title": "解剖探偵",
+    "url": "https://comic-walker.com/detail/KC_008274_S/episodes/KC_0082740001100011_E"
   },
   {
     "foundAt": "00:05",
@@ -631,15 +1112,6 @@
     "workUrl": "https://championcross.jp/series/4916b1ed6b418"
   },
   {
-    "foundAt": "00:05",
-    "siteName": "竹コミ！",
-    "siteUrl": "https://takecomic.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/202509111325048084EC0CDB5B0ABAB084F74D53D0B79E7C5-sm.webp",
-    "title": "勘当されたので探偵屋はじめます! 実は亡国の女王だなんて内緒です",
-    "url": "https://takecomic.jp/episodes/6db01f8ee9468",
-    "workUrl": "https://takecomic.jp/series/887cfd308ca32/new"
-  },
-  {
     "foundAt": "08:57",
     "siteName": "マンガUP!",
     "siteUrl": "https://www.manga-up.com/",
@@ -648,12 +1120,44 @@
     "url": "https://www.manga-up.com/titles/1472"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/65219b6bb06977183b5d1e08955b7e40aa6c2646/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F12207421983738444361-ded24425ffdf7a3bf6d3e15a4f486968%3F1779782820",
+    "title": "記憶を失ったらあなたへの恋心も消えました。",
+    "url": "https://comic-days.com/episode/12207421983770052392"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984214570038-1a4006f103e6a739089aeb14f24c01f7?1788959134",
+    "title": "騎士団長！ 私は不審者ではありません！ まして、婚約者になんてなれません！ THE COMIC",
+    "url": "https://magcomi.com/episode/12207421984214570038"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3075/title_grid_wide_20251127133935ebdf1fc9b09889ef677ce5a9be0be816.png",
     "title": "偽りの悪女ですが末永く幸せになりましょう～お望みの\"恋多き女\"を演じているのに夫の様子がおかしい～",
     "url": "https://pocket.shonenmagazine.com/title/03075/episode/429528"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/009511/resized/f9fa2e3b-af28-4678-a6d3-70a81524834b.jpg",
+    "title": "偽葬家の一族",
+    "url": "https://comic-walker.com/detail/KC_009511_S/episodes/KC_0095110000500011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックブースト",
+    "siteUrl": "https://comic-boost.com/",
+    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0072_kv_sp_3.jpg",
+    "title": "詰んでる元悪役令嬢はドＳ王子様から逃げ出したい",
+    "url": "https://comic-boost.com/content/00720001"
   },
   {
     "foundAt": "00:05",
@@ -681,6 +1185,30 @@
     "workUrl": "https://championcross.jp/series/daefc4900f207"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "コミックガルド",
+    "siteUrl": "https://comic-gardo.com/",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984217047814-f8cc11e3e4b0227ae5f42d703979e032?1788999739",
+    "title": "宮廷魔導師、追放される　～無能だと追い出された最巧の魔導師は、部下を引き連れて冒険者クランを始めるようです～",
+    "url": "https://comic-gardo.com/episode/12207421984217047814"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "くらげバンチ",
+    "siteUrl": "https://kuragebunch.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/768288e2ec6dc0b498b0c9e721654359474841ba/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F14079602755156416710-c4b64e9b752362955b503b0c41ee5988%3F1789105463",
+    "title": "宮廷魔導師見習いを辞めて、魔法アイテム職人になります",
+    "url": "https://kuragebunch.com/episode/12207421983938082596"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/26507c719634cade2f9511426412b727d971f82f/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F12207421984174644052-b50ab769f4cf6d756e6b3718e12a2db1%3F1788162651",
+    "title": "救世主《メシア》～異世界を救った元勇者が魔物のあふれる現実世界を無双する～",
+    "url": "https://tonarinoyj.jp/episode/12207421984217413458"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ヤンマガWeb",
     "siteUrl": "https://yanmaga.jp/",
@@ -690,12 +1218,44 @@
     "workUrl": "https://yanmaga.jp/comics/%E7%89%9B%E5%B1%B1%E3%81%95%E3%82%93"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007060/resized/72b20442-752b-459d-90fc-93e97a56cfdb.jpg",
+    "title": "極熱進化 Emotions Evolution",
+    "url": "https://comic-walker.com/detail/KC_007060_S/episodes/KC_0070600003100021_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "サンデーうぇぶり",
     "siteUrl": "https://www.sunday-webry.com/",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/744ecb011203af253f9b44c7170eb64dc1ad259b/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2550912966093570274-84fccd6cbc71694dc3c1d82a3535879b%3F1754976872",
     "title": "極北のゲロイ　―8月17日の開戦―",
     "url": "https://www.sunday-webry.com/episode/12207421984235229631"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984090057928-c74023ad1813ac11883e5bc01f45a1c8?1788925300",
+    "title": "桐谷さん ちょっそれ食うんすか!?",
+    "url": "https://comic-action.com/episode/12207421984090057928"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001391/resized/c42a8c3e-7a75-490e-80bd-cb0feb5cd08d.jpg",
+    "title": "空っぽ聖女として捨てられたはずが、嫁ぎ先の皇帝陛下に溺愛されています",
+    "url": "https://comic-walker.com/detail/KC_001391_S/episodes/KC_0013910004800011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006918/resized/862128dc-7ee3-4f9e-bd6d-bc41a3db3267.jpg",
+    "title": "君との恋はガード不能",
+    "url": "https://comic-walker.com/detail/KC_006918_S/episodes/KC_0069180002500011_E"
   },
   {
     "foundAt": "00:05",
@@ -707,12 +1267,52 @@
     "workUrl": "https://youngchampion.jp/series/4e76cc129339f"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "くらげバンチ",
+    "siteUrl": "https://kuragebunch.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/c2a8256d28480c4ffb6c8972e9d923479fb76174/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2551460909791127231-102e417bf4e9de4d52ad964931057982%3F1787792136",
+    "title": "景虎君はもどれない",
+    "url": "https://kuragebunch.com/episode/12207421984098010440"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/002609/resized/2f765e23-a638-4bfb-9a1f-8c499dfb9a22.jpg",
+    "title": "継母の連れ子が元カノだった",
+    "url": "https://comic-walker.com/detail/KC_002609_S/episodes/KC_0026090007300021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/d32b18d3-bc31-47bb-a496-4dfb94f2bb34.jpg",
+    "title": "剣聖の幼馴染がパワハラで俺につらく当たるので、絶縁して辺境で魔剣士として出直すことにした。",
+    "url": "https://gaugau.futabanet.jp/list/work/5ed490b477656143b6030000/episodes/126"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2256/title_thumbnail_list_single/418002.webp?hash=f7wZ9SLCoGdsIvP5uFomQQ&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2256/title_thumbnail_list_single/418002.webp?hash=YxV1K2oFJuLTf4BVEf3Fyg&expires=1790035200",
     "title": "犬田さん",
     "url": "https://www.ganganonline.com/title/2256/chapter/132680"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックブースト",
+    "siteUrl": "https://comic-boost.com/",
+    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0090_kv_sp.jpg",
+    "title": "元奴隷ですが、鬼の奴隷を買ってみたら精力が強すぎるので捨てたい……",
+    "url": "https://comic-boost.com/content/00900001"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックガルド",
+    "siteUrl": "https://comic-gardo.com/",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984217047530-270662fd07643164bd9f91e0690e3f05?1789005765",
+    "title": "現代ダンジョンライフの続きは異世界オープンワールドで！",
+    "url": "https://comic-gardo.com/episode/12207421984217047530"
   },
   {
     "foundAt": "00:05",
@@ -721,6 +1321,14 @@
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/78be07e9ea127485c1fc0ffd327bc2fb93007632/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107094914454229573-68b14ea8013106092f9e92a3cc8e357c%3F1788435005",
     "title": "限界OL霧切ギリ子",
     "url": "https://shonenjumpplus.com/episode/9253191256637716035"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/002558/resized/530edeab-b713-49e1-bf44-03cba29855e1.jpg",
+    "title": "後宮の検屍女官",
+    "url": "https://comic-walker.com/detail/KC_002558_S/episodes/KC_0025580002600021_E"
   },
   {
     "foundAt": "00:05",
@@ -741,6 +1349,38 @@
     "workUrl": "https://youngchampion.jp/series/b9eb1d802fda6"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/7bb97afa18f1172fb25613d8ff5a6e8db82db2c5/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F14079602755284860316-15eb8fb547fcd012406c62ad9194ef96%3F1775019292",
+    "title": "皇帝の孫に転生する皇帝",
+    "url": "https://tonarinoyj.jp/episode/12207421984212870798"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/009489/resized/c4c07a15-6846-4ca6-8f93-0bd3a2a4bab3.jpg",
+    "title": "高貴な方々は平凡令息をお求めのようです みんなが僕にだけ厄介な秘密を打ち明けてくるのですが",
+    "url": "https://comic-walker.com/detail/KC_009489_S/episodes/KC_0094890000400011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックガルド",
+    "siteUrl": "https://comic-gardo.com/",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984217047803-e66ea7d05ba259d992498113d801a335?1788999721",
+    "title": "黒の召喚士",
+    "url": "https://comic-gardo.com/episode/12207421984217047803"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "くらげバンチ",
+    "siteUrl": "https://kuragebunch.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e21dbee3d04da4a27042f614cfbe81479e25e379/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F3269632237304153586-1617952ebd4fea2b5dc6eba558f8338c%3F1782977809",
+    "title": "今日から始める幼なじみ",
+    "url": "https://kuragebunch.com/episode/12207421984056494647"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -749,20 +1389,60 @@
     "url": "https://pocket.shonenmagazine.com/title/03078/episode/433466"
   },
   {
-    "foundAt": "00:05",
-    "siteName": "ガンガンONLINE",
-    "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2544/title_thumbnail_list_single/411036.webp?hash=k41C2S66qEBhHvyr3nEUUQ&expires=1789948800",
-    "title": "昏き宮殿の死者の王　～始祖の吸血鬼と闇を狩る女騎士～",
-    "url": "https://www.ganganonline.com/title/2544/chapter/130512"
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020109/resized/72847ecc-e126-4f39-bbbc-748929abe48b.jpg",
+    "title": "婚約者とは相性最悪",
+    "url": "https://comic-walker.com/detail/KC_020109_S/episodes/KC_0201090000300011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984112354646-e3151d3be1e1ff7d36dff4c3ccd76b2f?1789380541",
+    "title": "婚約者の浮気現場を見ちゃったので始まりの鐘が鳴りました THE COMIC",
+    "url": "https://magcomi.com/episode/12207421984112354646"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984112354655-dc7136c58911950ad6fd61b1d7552395?1789380558",
+    "title": "婚約破棄された『空気』な私、成り上がりの旦那様に嫁ぎました。 THE COMIC",
+    "url": "https://magcomi.com/episode/12207421984112354655"
   },
   {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2016/web_list_asset_image/433604.webp?hash=nLBBHB15GIlwc5NAYKLl4w&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2544/title_thumbnail_list_single/411036.webp?hash=7Umy9RDwgDM1sl7HfMVqlQ&expires=1790035200",
+    "title": "昏き宮殿の死者の王　～始祖の吸血鬼と闇を狩る女騎士～",
+    "url": "https://www.ganganonline.com/title/2544/chapter/130512"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックブースト",
+    "siteUrl": "https://comic-boost.com/",
+    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0036_kv_sp.jpg",
+    "title": "最強の黒騎士、戦闘メイドに転職しました",
+    "url": "https://comic-boost.com/content/00360001"
+  },
+  {
+    "foundAt": "00:05",
+    "siteName": "ガンガンONLINE",
+    "siteUrl": "https://www.ganganonline.com/",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2016/web_list_asset_image/433604.webp?hash=KKIUhmckPDHv6A1X4fZZuw&expires=1790035200",
     "title": "最強は田舎農家のおっさんでした～最高ランクのドラゴンを駆除した結果、実力が世界にバレました～",
     "url": "https://www.ganganonline.com/title/2016/chapter/127707"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/ae08bb3b-cae0-455b-aede-831a56ccd5b3.jpg",
+    "title": "最底辺のおっさん冒険者。ギルドを追放されるところで今までの努力が報われ、急に最強スキル《無条件勝利》を得る",
+    "url": "https://gaugau.futabanet.jp/list/work/65264828905bd437f1000000/episodes/66"
   },
   {
     "foundAt": "00:05",
@@ -799,10 +1479,18 @@
     "workUrl": "https://championcross.jp/series/a748da0092a54"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "くらげバンチ",
+    "siteUrl": "https://kuragebunch.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e5d5945db7ffca7f63f837b71f64104e1850ff48/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F12207421983382736476-81c9c847f178ffe24317ff3924954348%3F1782379690",
+    "title": "事故物件で猫を飼う",
+    "url": "https://kuragebunch.com/episode/12207421984089467158"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/52/title_thumbnail_list_single/432353.webp?hash=ZAtzvjpTezRUBFu2Y6MisA&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/52/title_thumbnail_list_single/432353.webp?hash=5DkQ-p95SKxgqh463gSTnA&expires=1790035200",
     "title": "失格紋の最強賢者 ～世界最強の賢者が更に強くなるために転生しました～",
     "url": "https://www.ganganonline.com/title/52/chapter/128037"
   },
@@ -813,6 +1501,23 @@
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/02a3c19334d04c9008d7bede9ed64725e67571b9/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2550689798346064311-766bf569796fcd26fb1d89fed1ee5353%3F1772605111",
     "title": "写らナイんです",
     "url": "https://www.sunday-webry.com/episode/12207421984235234525"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "竹コミ！",
+    "siteUrl": "https://takecomic.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/3055124/202604301542132658BB19BA7CA18BD13795551EA0D889A22-sm.webp",
+    "title": "捨てられた第四王女は母国には戻らない",
+    "url": "https://takecomic.jp/episodes/224f53b00c48d",
+    "workUrl": "https://takecomic.jp/series/b7de4f163c37c/new"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006767/resized/7bc27545-b828-434d-80d8-2e476b78be5c.jpg",
+    "title": "捨てられ転生皇女ですが敵国で聖女のフリをしています",
+    "url": "https://comic-walker.com/detail/KC_006767_S/episodes/KC_0067670002200031_E"
   },
   {
     "foundAt": "00:05",
@@ -833,6 +1538,14 @@
     "workUrl": "https://championcross.jp/series/9752bc480539b"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019659/resized/214eb24a-4b9d-4a70-9c1c-aa80756fe8f2.jpg",
+    "title": "首鬼(くびき)のニコ　NICO the Collared Demon",
+    "url": "https://comic-walker.com/detail/KC_019659_S/episodes/KC_0196590000400021_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -841,12 +1554,68 @@
     "url": "https://pocket.shonenmagazine.com/title/02773/episode/412604"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "ゼノンプラス",
+    "siteUrl": "https://comic-zenon.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a871680a6da84ee6fb318bb240b64c45ca27fbf5/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F12207421983885290263-6bcb761c1a780c74c1e755f5bb528b8f%3F1784279039",
+    "title": "出会って3分で耳かき",
+    "url": "https://comic-zenon.com/episode/12207421984174775831"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "くらげバンチ",
+    "siteUrl": "https://kuragebunch.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/634b7d177628f47ce61ab64bf1a3bf5acc2be750/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F3270296674385848751-9d8f3c6584d0fd006ed224e8be4e8bb7%3F1778134168",
+    "title": "女騎士とケモミミの子",
+    "url": "https://kuragebunch.com/episode/12207421983894493812"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020136/resized/f9bb1115-a6fc-4468-9e38-eb20b634f2fd.jpg",
+    "title": "女教官はスライムに甘い",
+    "url": "https://comic-walker.com/detail/KC_020136_S/episodes/KC_0201360000200011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000696/resized/601ef3b6-fc81-4ae2-b2ee-7a4ea7c9f94e.jpg",
+    "title": "女子高生の無駄づかい",
+    "url": "https://comic-walker.com/detail/KC_000696_S/episodes/KC_0006960032800011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1789089376/webp/chapter/359137.webp?hash=fn5QJXFKbNS5b-rbYkYHjA&expires=1875830400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1789089376/webp/chapter/359137.webp?hash=y_kFyBwGgjR43_dy9HOOQw&expires=1875916800",
     "title": "宵宮凪がマネに夜食を作る理由",
     "url": "https://manga-one.com/title/28498"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/688d1df8-d0f6-4787-b233-d6bf110a8b0d.jpg",
+    "title": "小3アシベ QQゴマちゃん",
+    "url": "https://gaugau.futabanet.jp/list/work/WMm0JCp2pysJc68hfJxQr9gyr/episodes/67"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984152696708-190df42545ff344e28b241c0f5ab729d?1788925187",
+    "title": "小林さんちのメイドラゴン",
+    "url": "https://comic-action.com/episode/12207421984152696708"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984213076670-62d664d3802624362998de5cce7c3021?1788924854",
+    "title": "小林さんちのメイドラゴン カンナの日常",
+    "url": "https://comic-action.com/episode/12207421984213076670"
   },
   {
     "foundAt": "00:05",
@@ -865,12 +1634,36 @@
     "url": "https://pocket.shonenmagazine.com/title/03270/episode/439163"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "ゼノンプラス",
+    "siteUrl": "https://comic-zenon.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5888f66e7cf57a6583042f9bb3392c77621941cb/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F10834108156688944890-26652f52549042de5b2eeee2ab9a5f96%3F1784880809",
+    "title": "織田シナモン信長",
+    "url": "https://comic-zenon.com/episode/10834108156688952010"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1379/title_grid_wide_20260508113042878122963f12296e075218babe4628ff.png",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/1379/title_grid_wide_202609111155282c2d62ccbf05f035edc1cc726a5a8775.png",
     "title": "信じていた仲間達にダンジョン奥地で殺されかけたがギフト『無限ガチャ』でレベル9999の仲間達を手に入れて元パーティーメンバーと世界に復讐＆『ざまぁ！』します！",
     "url": "https://pocket.shonenmagazine.com/title/01379/episode/443118"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003255/resized/61040a68-3c5c-416d-bda0-816008bb16e2.jpg",
+    "title": "新・魔法科高校の劣等生 キグナスの乙女たち",
+    "url": "https://comic-walker.com/detail/KC_003255_S/episodes/KC_0032550005400021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984090057941-ddbb4409f7bc53e524f1934c14e3b22e?1788925337",
+    "title": "真逆な2人はどうにもデキない。",
+    "url": "https://comic-action.com/episode/12207421984090057941"
   },
   {
     "foundAt": "00:05",
@@ -881,13 +1674,28 @@
     "url": "https://pocket.shonenmagazine.com/title/00503/episode/358217"
   },
   {
-    "foundAt": "00:05",
-    "siteName": "竹コミ！",
-    "siteUrl": "https://takecomic.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2369565/2026050109263676138AC9265A3D7742EEDF2486FF724299E-sm.webp",
-    "title": "人質生活から始めるスローライフ おかわり！",
-    "url": "https://takecomic.jp/episodes/439d6e9d76d02",
-    "workUrl": "https://takecomic.jp/series/599aa77c1762e/new"
+    "foundAt": "12:05",
+    "siteName": "月マガ基地",
+    "siteUrl": "https://getsumagakichi.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/fa2b1e7c8b2ee6d400e916faa9cb58b71257f2cc/enlarge=0;height=337;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=600/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2551460909913773964-90dd7d573f20b67f3d700fd11044df80%3F1766019131",
+    "title": "神眼のメルラ",
+    "url": "https://comic-days.com/episode/2551460909970940726"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003241/resized/0bb46921-4de3-451c-bf91-38b595ef982c.jpg",
+    "title": "世界最強の後衛 ～迷宮国の新人探索者～",
+    "url": "https://comic-walker.com/detail/KC_003241_S/episodes/KC_0032410005500011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "ヤングエースUP公式サイト",
+    "siteUrl": "https://web-ace.jp/youngaceup/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005405/resized/ba2e4dec-6eb7-453e-af56-f9d80c5ad29d.jpg",
+    "title": "性悪天才幼馴染との勝負に負けて初体験を全部奪われる話",
+    "url": "https://comic-walker.com/detail/KC_005405_S/episodes/KC_0054050000400011_E"
   },
   {
     "foundAt": "00:05",
@@ -898,10 +1706,27 @@
     "url": "https://pocket.shonenmagazine.com/title/02273/episode/424489"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "竹コミ！",
+    "siteUrl": "https://takecomic.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2369565/202604082221219237800EC69414341965294A22BA8B20E0C-sm.webp",
+    "title": "生き餌によるモフモフ猛禽飼育記 異世界トリップしたら、姫巫女召喚のおまけでした",
+    "url": "https://takecomic.jp/episodes/4b19be4d51268",
+    "workUrl": "https://takecomic.jp/series/165d8fa4cdca2/new"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006772/resized/52e70d60-10b0-49ea-8ae9-b6a18af4411c.jpg",
+    "title": "精霊に「お前は主人にふさわしくない、契約破棄してくれ！」と言われたので、欲しがっている妹に譲ります",
+    "url": "https://comic-walker.com/detail/KC_006772_S/episodes/KC_0067720001700021_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1722018175/webp/ranking_thumbnail/288.webp?hash=HTQw_u7F6JwiCrL5-VvjFg&expires=1875830400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1722018175/webp/ranking_thumbnail/288.webp?hash=WBWEFsD2v2cx4bdsB7TTvQ&expires=1875916800",
     "title": "青のオーケストラ",
     "url": "https://manga-one.com/title/288"
   },
@@ -914,6 +1739,54 @@
     "url": "https://pocket.shonenmagazine.com/title/03247/episode/437767"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001519/resized/e5dfb048-abf8-4317-8dfd-cba8b9e45b5d.jpg",
+    "title": "青春鉄道（株）",
+    "url": "https://comic-walker.com/detail/KC_001519_S/episodes/KC_0015190043100011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984152696717-2dee0c53e44c42ec048cfc2a745743ac?1788925206",
+    "title": "青春爆走！",
+    "url": "https://comic-action.com/episode/12207421984152696717"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005147/resized/093ac91f-d819-4167-825a-bfea1763a2b7.jpg",
+    "title": "青薔薇アンティークの小公女",
+    "url": "https://comic-walker.com/detail/KC_005147_S/episodes/KC_0051470004500021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5549e8c9b2dacfb37da85bfe8972116bd18c1e6e/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2551460910059017367-593d9778aa4cb305f3e2babb158b88c5%3F1771300488",
+    "title": "昔取ったきねづかで…と言いながら無双する定食屋のおっさん、実は伝説のダンジョン攻略者",
+    "url": "https://comic-days.com/episode/2551460910059019098"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984090057869-4fd2929f7c4d7771435081235e183778?1788924891",
+    "title": "赤髪エルフのお惣菜屋さん",
+    "url": "https://comic-action.com/episode/12207421984090057869"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984152696749-83781f991a7cfce710fde4fbcd8f398a?1788925264",
+    "title": "接客修行!! 菩薩ちゃん",
+    "url": "https://comic-action.com/episode/12207421984152696749"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ヤンチャンWeb",
     "siteUrl": "https://youngchampion.jp/",
@@ -921,6 +1794,14 @@
     "title": "絶深海のソラリス",
     "url": "https://youngchampion.jp/episodes/ff1dbb07fe68c",
     "workUrl": "https://youngchampion.jp/series/72102ddfaee6b"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/002364/resized/7f66e538-396f-49af-8868-53821bebf061.jpg",
+    "title": "千年狐 ～干宝「捜神記」より～",
+    "url": "https://comic-walker.com/detail/KC_002364_S/episodes/KC_0023640010600011_E"
   },
   {
     "foundAt": "00:05",
@@ -931,6 +1812,70 @@
     "url": "https://pocket.shonenmagazine.com/title/02684/episode/434546"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "コミックガルド",
+    "siteUrl": "https://comic-gardo.com/",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984217047831-5c0749f74874659491ff2f3c73a466fd?1789112891",
+    "title": "洗脳スキルで異世界無双！？　～スキルがバレたら処刑されるので健全誠実に生きようとしたら、なぜか美少女たちに愛されている件について～",
+    "url": "https://comic-gardo.com/episode/12207421984217047831"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019979/resized/9d880607-b3ed-430e-96c8-3ce1bf823e63.jpg",
+    "title": "前世従者だった公爵さまに溺愛されています",
+    "url": "https://comic-walker.com/detail/KC_019979_S/episodes/KC_0199790000200041_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "ゼノンプラス",
+    "siteUrl": "https://comic-zenon.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/687e51ee0354eed6739d14ada5614f809191a129/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F10834108156692660025-af1205e190a8ce29c3d49daaed20dc7d%3F1782192422",
+    "title": "前田慶次 かぶき旅",
+    "url": "https://comic-zenon.com/episode/12207421984022966089"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "となりのヤングジャンプ",
+    "siteUrl": "https://tonarinoyj.jp/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ea6a996b6374b6315d0d813b80f84257366be144/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Fseries-thumbnail%2F12207421984217379800-f00ce9b275ac1234f4d74fddb40bca9d%3F1789017613",
+    "title": "双子の兄",
+    "url": "https://tonarinoyj.jp/episode/12207421984217413448"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008359/resized/f2427f8f-a9c9-43ca-b6a6-bfca469e0ee4.jpg",
+    "title": "葬送師と貴族探偵",
+    "url": "https://comic-walker.com/detail/KC_008359_S/episodes/KC_0083590001000011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/405c2b9c50ecfeb385e1b8153828e7c22e661523/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2550912965511801467-d23a365d9db4a6e8c73b5c94aa900a83%3F1769387323",
+    "title": "卒業アルバムの彼女たち",
+    "url": "https://comic-days.com/episode/2551460910070517659"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984090057882-6b282cb6f6d9c02e5ad4f8b8a8260da0?1788924912",
+    "title": "替霊～カエ・ダマ～",
+    "url": "https://comic-action.com/episode/12207421984090057882"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019053/resized/f967ed90-c437-4394-9bd9-8856d74337ff.jpg",
+    "title": "誰もが羨む隣のクール美少女、実は脳内ピンクすぎる",
+    "url": "https://comic-walker.com/detail/KC_019053_S/episodes/KC_0190530000400011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
@@ -939,29 +1884,76 @@
     "url": "https://pocket.shonenmagazine.com/title/03260/episode/438559"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ebdfd96c45b715f1618d21185eebf0f14dc3a5b7/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F4856001361557456806-428e6b14789d60be8d6ca39505dccac5%3F1782891061",
+    "title": "地元のいじめっ子達に仕返ししようとしたら、別の戦いが始まった。",
+    "url": "https://comic-days.com/episode/12207421983825783084"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/bace67d05fc36f161b1c9801ae718dac5da448cf/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F12207421983726646473-425d7f0b5c93cc953b32a38bb134c96a%3F1779783818",
+    "title": "超穴理論",
+    "url": "https://comic-days.com/episode/12207421983769977439"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421983850995804-c7fe292ff2a34d00c262b1ac6bd59c01?1789428882",
+    "title": "鳥ジャンキーズ",
+    "url": "https://magcomi.com/episode/12207421983850995804"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008650/resized/3267c7a4-8daf-4a10-9109-5a1c9374dfed.jpg",
+    "title": "追放系の悪役パーティのリーダーに転生したので、ざまぁされる前に自分を追放しました。 ～スキルを奪う『スティール』って悪役過ぎるけど強すぎる～",
+    "url": "https://comic-walker.com/detail/KC_008650_S/episodes/KC_0086500000700011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/679/title_thumbnail_list_single/399498.webp?hash=msabT7izapAr5bROf4QScw&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/679/title_thumbnail_list_single/399498.webp?hash=-QFrLqnkwyzf8y9KVuB1FA&expires=1790035200",
     "title": "底辺戦士、チート魔導師に転職する!",
     "url": "https://www.ganganonline.com/title/679/chapter/131774"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984090057851-164bbdbf8d5ebc9574907d98d9a35fdd?1788924874",
+    "title": "溺愛じゃなくて保護でした！？",
+    "url": "https://comic-action.com/episode/12207421984090057851"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/c8fecf5dcb60cc95dd2a523be3434c290a9b7fc7/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F10834108156633069799-28ec4c46aa15277c7b70af29191bbbc7%3F1778227473",
+    "title": "鉄拳チンミＬｅｇｅｎｄｓ",
+    "url": "https://comic-days.com/episode/10834108156633156483"
   },
   {
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1753250411/webp/chapter/300271.webp?hash=tNR_vq2rNqxdZcV1p4dWDQ&expires=1875830400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1753250411/webp/chapter/300271.webp?hash=BJn3dbtE6Lk8_87ZQYPXag&expires=1875916800",
     "title": "天国2.0",
     "url": "https://manga-one.com/title/27124"
   },
   {
-    "foundAt": "00:05",
-    "siteName": "竹コミ！",
-    "siteUrl": "https://takecomic.jp/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/20250917123237165E52FC7AC1E3710522661DC9D1BC17B2B-sm.webp",
-    "title": "転生少女は救世を望まれる 平穏を目指した私は世界の重要人物だったようです",
-    "url": "https://takecomic.jp/episodes/9f5c6a831a719",
-    "workUrl": "https://takecomic.jp/series/babb5ed0396c7/new"
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/001913/resized/4ef9b1e9-3c7b-4715-85fb-b3bca358e04c.jpg",
+    "title": "転生令嬢は冒険者を志す",
+    "url": "https://comic-walker.com/detail/KC_001913_S/episodes/KC_0019130004800021_E"
   },
   {
     "foundAt": "08:57",
@@ -981,12 +1973,44 @@
     "url": "https://shonenjumpplus.com/episode/9253191256637716022"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006161/resized/cc6a864a-4d35-4f21-85df-f21142db0a64.jpg",
+    "title": "桃草さんがものぐさすぎる!!",
+    "url": "https://comic-walker.com/detail/KC_006161_S/episodes/KC_0061610004400011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックDAYS",
+    "siteUrl": "https://comic-days.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a0eb3d4ce826d8178c00fea4d10bc70db1abb41f/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F13932016480030190792-10adf539cf4610f0256d7ffd6b2d69a2%3F1737611780",
+    "title": "頭文字Ｄ",
+    "url": "https://comic-days.com/episode/13932016480030682016"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2638/title_grid_wide_20240902164300058bde1df99d526a8e3e5c991afad3bf.png",
     "title": "独身貴族は異世界を謳歌する ～結婚しない男の優雅なおひとりさまライフ～",
     "url": "https://pocket.shonenmagazine.com/title/02638/episode/415711"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "ゼノンプラス",
+    "siteUrl": "https://comic-zenon.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/09ec3bec02f9be5d2da4ff03d737ae447b176bfb/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F3269754496478243951-27d9219a03cb8957389930222fe40030%3F1782878471",
+    "title": "豚の復讐",
+    "url": "https://comic-zenon.com/episode/12207421984022966060"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1744979982/title_small/1528.webp?hash=ks5DJpsPEthVg2rz9z4_zg&expires=2145884400",
+    "title": "南国少年パプワくん PERFECT",
+    "url": "https://www.manga-up.com/titles/1528"
   },
   {
     "foundAt": "00:05",
@@ -1013,6 +2037,47 @@
     "url": "https://shonenjumpplus.com/episode/9253191256637716049"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019817/resized/c847d8de-c209-4d22-9b13-3766609f3069.jpg",
+    "title": "年下の女性教官に今日も叱っていただけた",
+    "url": "https://comic-walker.com/detail/KC_019817_S/episodes/KC_0198170000500021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1774409113/title_small/1694.webp?hash=wLUqLHbpVRgsoPk88wRwNg&expires=2145884400",
+    "title": "燃費が悪い聖女ですが、公爵様に拾われて幸せです！（ごはん的に♪）",
+    "url": "https://www.manga-up.com/titles/1694"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984238340294-7753a2c214bc5e7f7d49c6cb52441d28?1789406951",
+    "title": "能ある地味姫は正体を隠す。",
+    "url": "https://magcomi.com/episode/12207421984238340294"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "竹コミ！",
+    "siteUrl": "https://takecomic.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/20251010131944787712B27E8BFE32F6E47A507723F4F065D-sm.webp",
+    "title": "破滅ルートを目指し、完璧な悪役令嬢になってみせますっ！～推しのため当て馬をやり遂げたいのに、無愛想な護衛騎士様がやたらと絡んできます～",
+    "url": "https://takecomic.jp/episodes/8cf74ac266346",
+    "workUrl": "https://takecomic.jp/series/c1b3c770cb5b5/new"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/009512/resized/dfd384ef-1298-40e0-bfe3-d69220588dde.jpg",
+    "title": "廃墟めぐり ここから先は自己責任です！",
+    "url": "https://comic-walker.com/detail/KC_009512_S/episodes/KC_0095120000400041_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "チャンピオンクロス",
     "siteUrl": "https://championcross.jp/",
@@ -1028,6 +2093,30 @@
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3322/title_grid_wide_20260713123035477b24ebd2537abedb02571a5cce2369.png",
     "title": "排水溝につまったスライムを日々かたづけるだけの底辺職、なぜか実力者たちの熱い視線を集めてしまう",
     "url": "https://pocket.shonenmagazine.com/title/03322/episode/443122"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックブースト",
+    "siteUrl": "https://comic-boost.com/",
+    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0169_kv_sp.jpg",
+    "title": "伯爵令嬢は、契約結婚した俺にいつ恋をする？",
+    "url": "https://comic-boost.com/content/01690001"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008396/resized/79c54c0e-6e62-4037-a514-9395c2c9d63e.jpg",
+    "title": "白瑞宮のお料理番　〜異世界の神様と飯テロスローライフを満喫する〜",
+    "url": "https://comic-walker.com/detail/KC_008396_S/episodes/KC_0083960000700021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "月マガ基地",
+    "siteUrl": "https://getsumagakichi.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ac35221f47d58b08d9af265effb85e216b37b760/enlarge=0;height=337;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=600/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F12207421983529845452-e7d81f4d5e4d82925844d5346f98be92%3F1774592783",
+    "title": "白線に展転",
+    "url": "https://comic-days.com/episode/12207421983562205448"
   },
   {
     "foundAt": "00:05",
@@ -1050,17 +2139,41 @@
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2304/title_thumbnail_list_single/426878.webp?hash=cp1p95e8kpA0gY9XqkttPw&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2304/title_thumbnail_list_single/426878.webp?hash=3SfdlmL67BNvY1R9NqUKKw&expires=1790035200",
     "title": "氷皇子は砂漠の姫に狙われる",
     "url": "https://www.ganganonline.com/title/2304/chapter/131783"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019792/resized/a7da0ef6-febd-474d-b71a-3dec095fc8a8.jpg",
+    "title": "貧乏家族の長男はやがて『魔王』に成り上がる",
+    "url": "https://comic-walker.com/detail/KC_019792_S/episodes/KC_0197920000400021_E"
   },
   {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2432/title_thumbnail_list_single/428450.webp?hash=MyBVU22Mv1wA5WEH_C1v4w&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2432/title_thumbnail_list_single/428450.webp?hash=Y1lb0iVP-e11xFIkVOLNNA&expires=1790035200",
     "title": "貧乏令嬢は呪いの伯爵と結婚したい",
     "url": "https://www.ganganonline.com/title/2432/chapter/128595"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004960/resized/4353e0b5-533f-4741-ae7a-bd812cb2bec2.jpg",
+    "title": "腐男子クンシリーズ",
+    "url": "https://comic-walker.com/detail/KC_004960_S/episodes/KC_0049600000600011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984152696744-8c41bef18df8f7d7632524fbef25d27d?1788925324",
+    "title": "変な絵",
+    "url": "https://comic-action.com/episode/12207421984152696744"
   },
   {
     "foundAt": "00:58",
@@ -1080,12 +2193,44 @@
     "url": "https://www.sunday-webry.com/episode/12207421984235255877"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421983951228156-821efbac548bedbcc3788fc66c7a5e89?1789440029",
+    "title": "忘却のクレイドル",
+    "url": "https://magcomi.com/episode/12207421983951228156"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000716/resized/51e9cb73-fa15-4d8a-aad2-069d1822c33e.jpg",
+    "title": "冒険者になれなかった俺、スキル「おっぱい矯正」で悩めるあの子を人助け!?",
+    "url": "https://comic-walker.com/detail/KC_000716_S/episodes/KC_0007160003100021_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マガポケ",
     "siteUrl": "https://pocket.shonenmagazine.com/",
     "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/2334/title_grid_wide_20230901142648af13d84afa70d02253d43c0889e42558.png",
     "title": "冒険者パーティーを追放された回復士の少女を拾って育成したら、まさかの最強職業に転職!? おまけに彼女の様子が何やらおかしくて…",
     "url": "https://pocket.shonenmagazine.com/title/02334/episode/421174"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984001427988-f75f05ca46e87cf26677d12d086a8163?1788925844",
+    "title": "北くんがかわいすぎて手に余るので、３人でシェアすることにしました。",
+    "url": "https://comic-action.com/episode/12207421984001427988"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/74fca9d3-fda0-4170-9f99-057d67379117.jpg",
+    "title": "北の砦にて",
+    "url": "https://gaugau.futabanet.jp/list/work/5eccd7207765616a48030000/episodes/150"
   },
   {
     "foundAt": "00:05",
@@ -1106,21 +2251,77 @@
     "workUrl": "https://championcross.jp/series/452b0e17e1bf3"
   },
   {
-    "foundAt": "00:05",
-    "siteName": "コミプレ",
-    "siteUrl": "https://viewer.heros-web.com/",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/20260508161428454688C50D141E75AC6492FF7B26239304E-sm.webp",
-    "title": "魔王様、世界が美味しすぎて滅ぼすのをやめる。",
-    "url": "https://heros-web.com/episodes/7ff52102cbf87",
-    "workUrl": "https://heros-web.com/series/e3cde48b38359"
+    "foundAt": "12:05",
+    "siteName": "チャンピオンクロス",
+    "siteUrl": "https://championcross.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240514165016604FC0B8E1EB60C6CC81C01AEC9EDC89401-sm.webp",
+    "title": "僕の心のヤバイやつ【最新話無料】",
+    "url": "https://championcross.jp/episodes/7cc588c336ca6",
+    "workUrl": "https://championcross.jp/series/899dda204c3f2"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007939/resized/6352820d-267e-4244-8c3e-6e176717001b.jpg",
+    "title": "凡人転生の努力無双 ～赤ちゃんの頃から努力してたらいつのまにか日本の未来を背負ってました～",
+    "url": "https://comic-walker.com/detail/KC_007939_S/episodes/KC_0079390000600011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "くらげバンチ",
+    "siteUrl": "https://kuragebunch.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5b43a7acdc3330a1d5ddd955a754b7149418ff2b/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F4855956445099172934-d43f3f9660685abbd692fa94a4da2c0c%3F1784247619",
+    "title": "魔王城の料理番 〜コワモテ魔族ばかりだけど、ホワイトな職場です〜",
+    "url": "https://kuragebunch.com/episode/12207421983829727509"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006929/resized/faf3eb8d-ca74-424a-95ad-9a8171c4dc00.jpg",
+    "title": "魔王城ホテルの悪役令嬢 ～お客様のお悩みは、悪の知識で解決いたします～",
+    "url": "https://comic-walker.com/detail/KC_006929_S/episodes/KC_0069290001700011_E"
   },
   {
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1780562082/webp/chapter/355597.webp?hash=UrqzLiuNZjEK-qUMSUbrGw&expires=1875830400",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1780562082/webp/chapter/355597.webp?hash=IoH-HDfaqiN4bmrwLanaiw&expires=1875916800",
     "title": "魔女の媚薬はいかがでしょう？",
     "url": "https://manga-one.com/title/28015"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008611/resized/ef315c13-a9db-4e43-9426-2179802392da.jpg",
+    "title": "無花果と落とし噺",
+    "url": "https://comic-walker.com/detail/KC_008611_S/episodes/KC_0086110001000011_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007894/resized/63d059f8-079a-4326-a1d6-e7846440e1ba.jpg",
+    "title": "無限の魔術師　魔力無しで平民の子と迫害された俺。実は無限の魔力持ち。",
+    "url": "https://comic-walker.com/detail/KC_007894_S/episodes/KC_0078940001000021_E"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "がうがうモンスター",
+    "siteUrl": "https://gaugau.futabanet.jp/",
+    "thumbnailUrl": "https://gaugau.futabanet.jp/images/books/adjusted/1d147e02-ba9a-4740-9e94-e1250804cb48.jpg",
+    "title": "無自覚な天才魔導具師はのんびり暮らしたい",
+    "url": "https://gaugau.futabanet.jp/list/work/6433c52d905bd432e6000003/episodes/110"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "コミックブースト",
+    "siteUrl": "https://comic-boost.com/",
+    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0145_kv_sp.jpg",
+    "title": "無双の解体師",
+    "url": "https://comic-boost.com/content/01450001"
   },
   {
     "foundAt": "00:05",
@@ -1132,12 +2333,36 @@
     "workUrl": "https://comic-fuz.com/manga/4015"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984214570034-28af6262fc50df735c18ff76ea0a01c4?1788958550",
+    "title": "夜明けの貴公子は行き遅れの太陽に恋焦がれる THE COMIC",
+    "url": "https://magcomi.com/episode/12207421984214570034"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/007184/resized/ef0ab53e-dc0d-4982-852c-792f3c0b2a99.jpg",
+    "title": "友達んちの姉ちゃんが怖くていい人",
+    "url": "https://comic-walker.com/detail/KC_007184_S/episodes/KC_0071840002500011_E"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2669/title_thumbnail_list_single/425921.webp?hash=k70B0xKzOA2jK8CxRvdiqg&expires=1789948800",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2669/title_thumbnail_list_single/425921.webp?hash=Ba7Lz1rcvTM-toNkEr8C4A&expires=1790035200",
     "title": "幼なじみの王子様がかまってくる",
     "url": "https://www.ganganonline.com/title/2669/chapter/131537"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000676/resized/2ed28c99-d03a-4544-859b-0fa878aaa604.jpg",
+    "title": "幼なじみの高校生のあいだに肉体関係は成立するか。",
+    "url": "https://comic-walker.com/detail/KC_000676_S/episodes/KC_0006760003700021_E"
   },
   {
     "foundAt": "00:05",
@@ -1148,12 +2373,28 @@
     "url": "https://pocket.shonenmagazine.com/title/01646/episode/417091"
   },
   {
+    "foundAt": "12:05",
+    "siteName": "ゼノンプラス",
+    "siteUrl": "https://comic-zenon.com/",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d071d1696b64b1e768a4c5a40585db97e6a9ef1f/enlarge=0;height=580;no_unsharpmask=1;quality=90;version=1;width=1056/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fuploaded-content%2Fslideshow%2F045a901bfce929664301f5505c35c2e0",
+    "title": "落ちこぼれ転移者、全てを奪うハッキングスキルで最強に成り上がる　～最強ステータスも最強スキルも、触れただけで俺のものです～",
+    "url": "https://comic-zenon.com/episode/12207421984064600649"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "サンデーうぇぶり",
     "siteUrl": "https://www.sunday-webry.com/",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e57cbbe4581f28a64537841ee8f2487a815ec36d/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2550912965598310074-93a2ab71122b950b5fc7b4a63ab4d7f8%3F1745307803",
     "title": "裏ダンジョンおくさん",
     "url": "https://www.sunday-webry.com/episode/12207421984235237230"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006721/resized/1c735b5a-c1b4-4b71-bab6-112b2ff675c5.jpg",
+    "title": "離婚前提で結婚しました",
+    "url": "https://comic-walker.com/detail/KC_006721_S/episodes/KC_0067210001500021_E"
   },
   {
     "foundAt": "00:05",
@@ -1165,12 +2406,20 @@
     "workUrl": "https://comicride.jp/series/c182106e13efe"
   },
   {
-    "foundAt": "08:57",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1759744499/title_small/1622.webp?hash=8b1sovZ_p4FBUnVUK_XXlg&expires=2145884400",
-    "title": "劣等職の回復術師、回復アイテムのほうが役に立つと笑われるが、実は無限の魔力を誇る最強冒険者なので全てを治癒し無双します",
-    "url": "https://www.manga-up.com/titles/1622"
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984112354680-67b858fcdaf6f6286830051fccee5a37?1789380651",
+    "title": "竜神様に見初められまして～虐げられ令嬢の三食もふもふ溺愛付き生活～",
+    "url": "https://magcomi.com/episode/12207421984112354680"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "マグコミ",
+    "siteUrl": "https://magcomi.com/",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421983727314994-39d2a3ef32e3e058fd43814c852c10d5?1789428938",
+    "title": "陵の王",
+    "url": "https://magcomi.com/episode/12207421983727314994"
   },
   {
     "foundAt": "00:05",
@@ -1189,6 +2438,14 @@
     "title": "鬱ごはん",
     "url": "https://championcross.jp/episodes/1c16f7c7d9605",
     "workUrl": "https://championcross.jp/series/5b85354af2acc"
+  },
+  {
+    "foundAt": "12:05",
+    "siteName": "webアクション",
+    "siteUrl": "https://comic-action.com/",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984152696736-87a3513c44b946ec50912755ad26c7a1?1788925244",
+    "title": "贄屍忌鯉 ニシキゴイ",
+    "url": "https://comic-action.com/episode/12207421984152696736"
   },
   {
     "foundAt": "00:58",
