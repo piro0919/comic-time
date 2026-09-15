@@ -32,7 +32,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -6340,18 +6340,23 @@
     "title": "オタクに優しいギャルはいない!?"
   },
   {
-    "dayBits": 64,
+    "dayBits": 72,
     "firstSeen": "2026-08-29",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1650/chapter/130107"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1144"
       }
     ],
     "slug": "オタクも恋も連鎖する",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1650/web_list_asset_image/426758.webp?hash=chrZ9z5UUPWKN3Wd9RQMGw&expires=1789776000",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1685067356/title_small/1144.webp?hash=cDz4JATFL-DhoaDasWnwog&expires=2145884400",
     "title": "オタクも恋も連鎖する"
   },
   {
@@ -7217,7 +7222,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -13010,6 +13015,21 @@
     "title": "だんドーン"
   },
   {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/157"
+      }
+    ],
+    "slug": "ダンまち外伝ソード・オラトリア",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1517212562/title_small/157.webp?hash=hDdpzTuT0ydNLQqfYE200w&expires=2145884400",
+    "title": "ダンまち 外伝　ソード・オラトリア"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-09-07",
     "lastSeen": "2026-09-07",
@@ -13102,7 +13122,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -14712,7 +14732,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -17945,6 +17965,21 @@
     "title": "ぼくは今日も猫のふり"
   },
   {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/b37118c44518e"
+      }
+    ],
+    "slug": "ぼくモン!~僕の相棒モンスターの進化だけ、なんかおかしいんですけど!~",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260708165506255CF045F3BE0E58EE70B7EBF006908910A-sm.webp",
+    "title": "ぼくモン！～僕の相棒モンスターの進化だけ、なんかおかしいんですけど！？～"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-24",
     "lastSeen": "2026-09-14",
@@ -18162,7 +18197,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -22650,6 +22685,21 @@
     "title": "異世界サイハテ温泉紀行"
   },
   {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/cf98d0f563d79"
+      }
+    ],
+    "slug": "異世界すしざんまいマグロ大王木村社長、食を通じて異世界改革!",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/202503311420153250E777F9E525B77807F1B9F09DA865855-sm.webp",
+    "title": "異世界すしざんまい　マグロ大王木村社長、食を通じて異世界改革！"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-09-11",
     "lastSeen": "2026-09-11",
@@ -24662,7 +24712,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "コミックライド",
@@ -25910,18 +25960,18 @@
     "lastSeen": "2026-09-16",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1321/chapter/132857"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/980"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1321/chapter/132857"
       }
     ],
     "slug": "家から逃げ出したい私が、うっかり憧れの大魔法使い様を買ってしまったら",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1657588682/title_small/980.webp?hash=QIohGN6ye7FnUjlES3ClTw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1321/title_thumbnail_list_single/400014.webp?hash=_Z6DRcyOlhsJTvz51vwReA&expires=1789689600",
     "title": "家から逃げ出したい私が、うっかり憧れの大魔法使い様を買ってしまったら"
   },
   {
@@ -25987,7 +26037,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-08-26",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -28035,6 +28085,21 @@
     "title": "蟻と蜂"
   },
   {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/bff319300ae08"
+      }
+    ],
+    "slug": "蟻の王",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1077668/20250716105136804859CF0B67500EF8FDDC60082EB4F691B-sm.webp",
+    "title": "蟻の王"
+  },
+  {
     "dayBits": 64,
     "firstSeen": "2026-08-29",
     "lastSeen": "2026-09-05",
@@ -28153,6 +28218,21 @@
     "slug": "久々に健康診断を受けたら最強ステータスになっていた~追放されたオッサン冒険者、今更英雄を目指す~",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006740/resized/84a55ea1-9e37-4267-be18-936089f46f02.jpg",
     "title": "久々に健康診断を受けたら最強ステータスになっていた　～追放されたオッサン冒険者、今更英雄を目指す～"
+  },
+  {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/1584e8f81fec9"
+      }
+    ],
+    "slug": "休憩入ります",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1721939/20251208110231998578F8FFF890FF58AE6A485FAAE7DC7B3-sm.webp",
+    "title": "休憩入ります"
   },
   {
     "dayBits": 2,
@@ -34407,7 +34487,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "マンガUP!",
@@ -35421,7 +35501,7 @@
       }
     ],
     "slug": "寿エンパイア",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1722020308/webp/ranking_thumbnail/1020.webp?hash=YIdkhKIjVrQbtDzWrRyPcg&expires=1875916800",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1568389863/webp/chapter/98523.webp?hash=03CteQEic6vNTTkotI2JHA&expires=1875916800",
     "title": "寿エンパイア"
   },
   {
@@ -35468,6 +35548,21 @@
     "slug": "囚人転生",
     "thumbnailUrl": "https://img.comic-fuz.com/c/1C9AwB/n0.webp?h=G2n0VO_phUw6yv2R1LPV6A&e=5000000000",
     "title": "囚人転生"
+  },
+  {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/14042b60b48c0"
+      }
+    ],
+    "slug": "修学旅行~京都・奈良4泊4日~",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260812115119998336B7F0678FDF0CE19389A52FF345C2B-sm.webp",
+    "title": "修学旅行〜京都・奈良4泊4日～"
   },
   {
     "dayBits": 2,
@@ -37937,7 +38032,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "ガンガンONLINE",
@@ -39342,7 +39437,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "マンガUP!",
@@ -42552,7 +42647,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -45212,7 +45307,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-02",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -47838,6 +47933,21 @@
     "slug": "辺境モブ貴族のウチに嫁いできた悪役令嬢が、めちゃくちゃできる良い嫁なんだが",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/005954/resized/9c8b66d8-65f7-47e2-a92c-dc2bf9a8ae19.jpg",
     "title": "辺境モブ貴族のウチに嫁いできた悪役令嬢が、めちゃくちゃできる良い嫁なんだが？"
+  },
+  {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/105450d5e3ad9"
+      }
+    ],
+    "slug": "辺境警備前史~銀のイリュージオ~",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/602094/20250530175007277E79F01060D3FB20EE3CE1CCA88D2B643-sm.webp",
+    "title": "辺境警備 前史～銀のイリュージオ～"
   },
   {
     "dayBits": 8,
@@ -51908,6 +52018,21 @@
     "slug": "妖怪アパートの幽雅な日常",
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/0798377de8467941a3ba810e2b33cf1679594066/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F10834108156644567017-015fed5d7d79f179b5456f08333ccceb%3F1742956662",
     "title": "妖怪アパートの幽雅な日常"
+  },
+  {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/26"
+      }
+    ],
+    "slug": "妖怪学校の先生はじめました!",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1539677943/title_small/26.webp?hash=raVFUYRLR5soOL9fEae58A&expires=2145884400",
+    "title": "妖怪学校の先生はじめました！"
   },
   {
     "dayBits": 16,
