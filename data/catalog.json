@@ -6345,18 +6345,18 @@
     "lastSeen": "2026-09-16",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1650/chapter/130107"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1144"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1650/chapter/130107"
       }
     ],
     "slug": "オタクも恋も連鎖する",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1685067356/title_small/1144.webp?hash=cDz4JATFL-DhoaDasWnwog&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1650/web_list_asset_image/426758.webp?hash=chrZ9z5UUPWKN3Wd9RQMGw&expires=1789776000",
     "title": "オタクも恋も連鎖する"
   },
   {
@@ -25940,6 +25940,21 @@
     "title": "夏子の酒"
   },
   {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1763"
+      }
+    ],
+    "slug": "夏目漱石ファンタジア",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1788838547/title_small/1763.webp?hash=RbuZ25_9oxEazKC6ccAiqg&expires=2145884400",
+    "title": "夏目漱石ファンタジア"
+  },
+  {
     "dayBits": 32,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-11",
@@ -26380,18 +26395,23 @@
     "title": "華麗なるエロ漫画部"
   },
   {
-    "dayBits": 32,
+    "dayBits": 40,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2205/chapter/128868"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1523"
       }
     ],
     "slug": "華麗なる悪女になりたいわ!~愛され転生少女は、楽しい二度目の人生を送ります~",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2205/title_thumbnail_list_single/400812.webp?hash=NH8DfGmHrMuljquP71LBLw&expires=1789689600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1744680607/title_small/1523.webp?hash=Yu1vm-OBLVtZwdu8ygtC7w&expires=2145884400",
     "title": "華麗なる悪女になりたいわ！～愛され転生少女は、楽しい二度目の人生を送ります～"
   },
   {
@@ -53238,6 +53258,21 @@
     "slug": "冷遇されたワンコ系地味令嬢は魔術学園でワケあり女装王子に溺愛される",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2335374/2026051114493184272D96192F633AAEDA738FEA43081FDC8-sm.webp",
     "title": "冷遇されたワンコ系地味令嬢は魔術学園でワケあり女装王子に溺愛される"
+  },
+  {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1731"
+      }
+    ],
+    "slug": "冷血貴族の婚約拒絶録~オレは絶対に、結婚などしない~",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1781159707/title_small/1731.webp?hash=OW8ojK1EN5I0rVkIiS_F0A&expires=2145884400",
+    "title": "冷血貴族の婚約拒絶録～オレは絶対に、結婚などしない～"
   },
   {
     "dayBits": 2,
