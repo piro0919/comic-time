@@ -155,18 +155,23 @@
     "title": "「ねぇ、俺だけにして？」"
   },
   {
-    "dayBits": 1,
+    "dayBits": 9,
     "firstSeen": "2026-09-06",
-    "lastSeen": "2026-09-06",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1971/chapter/131432"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1379"
       }
     ],
     "slug": "「君を愛することはない」と言った氷の魔術師様の片思い相手が、変装した私だった",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1971/title_thumbnail_list_single/412800.webp?hash=Rjs3O-Xw3UB2_ORrDbNPkA&expires=1789257600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1734579475/title_small/1379.webp?hash=cjoHtQV_TpNwi1Fk3I7isw&expires=2145884400",
     "title": "「君を愛することはない」と言った氷の魔術師様の片思い相手が、変装した私だった"
   },
   {
@@ -6360,18 +6365,18 @@
     "lastSeen": "2026-09-16",
     "sites": [
       {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1144"
-      },
-      {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1650/chapter/130107"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1144"
       }
     ],
     "slug": "オタクも恋も連鎖する",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1650/web_list_asset_image/426758.webp?hash=chrZ9z5UUPWKN3Wd9RQMGw&expires=1789776000",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1685067356/title_small/1144.webp?hash=cDz4JATFL-DhoaDasWnwog&expires=2145884400",
     "title": "オタクも恋も連鎖する"
   },
   {
@@ -9840,6 +9845,21 @@
     "title": "これ描いて死ね"
   },
   {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "となりのヤングジャンプ",
+        "siteUrl": "https://tonarinoyj.jp/",
+        "url": "https://tonarinoyj.jp/episode/2550912965703477919"
+      }
+    ],
+    "slug": "こんづくし",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/845322b42e13f153b81dc1253974aeb031107710/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F12207421984247843176-7316df26bd3e40bbcde2050e4cc28290%3F1789556072",
+    "title": "こんづくし"
+  },
+  {
     "dayBits": 20,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-15",
@@ -11186,7 +11206,7 @@
       }
     ],
     "slug": "シルバーマウンテン",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/592ef72ce64b4803853b7460d8e568360e439559/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2550912965611563373-577014799b5fe443dece363ca55aae45%3F1765336559",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/c263a6a4553781e049af9cbdcd11bd218fe39a1d/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2550912965611563373-577014799b5fe443dece363ca55aae45%3F1789561569",
     "title": "シルバーマウンテン"
   },
   {
@@ -17130,18 +17150,18 @@
     "title": "ふたりのまいにち"
   },
   {
-    "dayBits": 2,
+    "dayBits": 10,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-14",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "サンデーうぇぶり",
         "siteUrl": "https://www.sunday-webry.com/",
-        "url": "https://www.sunday-webry.com/episode/12207421984222837236"
+        "url": "https://www.sunday-webry.com/episode/12207421984247637501"
       }
     ],
     "slug": "ふたりバス",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/def7735fd5d59c5a71f9da49e79f5e80f2e16de8/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2551460909779923229-c7f302ac57e0215519710a467878e057%3F1762226032",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/2b54ea3130cf5f516f4f02307972b3ae6fa1ce45/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F2551460909779923229-c7f302ac57e0215519710a467878e057%3F1789561243",
     "title": "ふたりバス"
   },
   {
@@ -20107,16 +20127,16 @@
   {
     "dayBits": 40,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-09-11",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "となりのヤングジャンプ",
         "siteUrl": "https://tonarinoyj.jp/",
-        "url": "https://tonarinoyj.jp/episode/12207421984174363297"
+        "url": "https://tonarinoyj.jp/episode/2550912965288156006"
       }
     ],
     "slug": "やめろ好きになってしまう",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/17cafb6221e09b413dd9c1f7dc00df44fb1ee3e7/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F12207421984210771967-692f574370ce42536a003c4bcd69f28f%3F1788874447",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ba2ff1514adb3d36cf0dedbc0342552c36a7ea4f/enlarge=0;height=600;no_unsharpmask=1;quality=90;version=1;width=600/https%3A%2F%2Fcdn-img.tonarinoyj.jp%2Fpublic%2Freplaced-thumbnail-series-thumbnail-all%2F12207421984247848619-cbb444ef226e18094671ee96cf2557fb%3F1789556160",
     "title": "やめろ好きになってしまう"
   },
   {
@@ -21617,7 +21637,7 @@
   {
     "dayBits": 8,
     "firstSeen": "2026-09-09",
-    "lastSeen": "2026-09-09",
+    "lastSeen": "2026-09-16",
     "sites": [
       {
         "name": "マンガUP!",
@@ -22998,6 +23018,21 @@
     "slug": "異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/202510091724297744140E012DBA655C89A3FA8EF8399CD3B-sm.webp",
     "title": "異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件"
+  },
+  {
+    "dayBits": 8,
+    "firstSeen": "2026-09-16",
+    "lastSeen": "2026-09-16",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1615"
+      }
+    ],
+    "slug": "異世界で鍛冶神の力を得た俺、女神とスローライフはじめました。",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1762416469/title_small/1615.webp?hash=xB0vth6VHVM5n7wUVUdB9Q&expires=2145884400",
+    "title": "異世界で鍛冶神の力を得た俺、女神とスローライフはじめました。"
   },
   {
     "dayBits": 32,
@@ -38940,18 +38975,18 @@
     "lastSeen": "2026-09-16",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2085/chapter/125817"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1543"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2085/chapter/125817"
       }
     ],
     "slug": "推しセフ推し声優のセフレ沼",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1746152790/title_small/1543.webp?hash=DHaI-YlicCklNg87RP93_A&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2085/title_thumbnail_list_single/399882.webp?hash=1BfwIZGh9CeNLtIQ4R-65A&expires=1789948800",
     "title": "推しセフ 推し声優のセフレ沼"
   },
   {
