@@ -146,6 +146,14 @@
     "url": "https://comic-walker.com/detail/KC_005609_S/episodes/KC_0056090006400011_E"
   },
   {
+    "foundAt": "18:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1785401792/title_small/1747.webp?hash=6QASGMjj1utK9jo_s90tPw&expires=2145884400",
+    "title": "アラサー教師、生徒の転移に巻き込まれ二度目の異世界へ",
+    "url": "https://www.manga-up.com/titles/1747"
+  },
+  {
     "foundAt": "12:05",
     "siteName": "COMICメテオ",
     "siteUrl": "https://kirapo.jp/meteor",
@@ -235,12 +243,12 @@
     "url": "https://comic-gardo.com/episode/12207421984217047551"
   },
   {
-    "foundAt": "17:44",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1685067356/title_small/1144.webp?hash=cDz4JATFL-DhoaDasWnwog&expires=2145884400",
-    "title": "オタクも恋も連鎖する",
-    "url": "https://www.manga-up.com/titles/1144"
+    "foundAt": "18:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006868/resized/67568ccc-57ce-4d60-ae30-0f5de3bb7984.jpg",
+    "title": "おっさん異世界で最強になる　～物理特化の覚醒者～",
+    "url": "https://comic-walker.com/detail/KC_006868_S/episodes/KC_0068680001800011_E"
   },
   {
     "foundAt": "00:05",
@@ -521,14 +529,6 @@
     "thumbnailUrl": "https://www.ganganonline.com/secure/title/61/title_thumbnail_list_single/427115.webp?hash=3gLCcvD-TImLFvEK-cJOEw&expires=1790121600",
     "title": "ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア",
     "url": "https://www.ganganonline.com/title/61/chapter/132674"
-  },
-  {
-    "foundAt": "12:05",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1517212562/title_small/157.webp?hash=hDdpzTuT0ydNLQqfYE200w&expires=2145884400",
-    "title": "ダンまち 外伝　ソード・オラトリア",
-    "url": "https://www.manga-up.com/titles/157"
   },
   {
     "foundAt": "00:05",
@@ -1000,22 +1000,6 @@
     "url": "https://comic-gardo.com/episode/12207421984217047563"
   },
   {
-    "foundAt": "12:05",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1788838547/title_small/1763.webp?hash=RbuZ25_9oxEazKC6ccAiqg&expires=2145884400",
-    "title": "夏目漱石ファンタジア",
-    "url": "https://www.manga-up.com/titles/1763"
-  },
-  {
-    "foundAt": "17:44",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1657588682/title_small/980.webp?hash=QIohGN6ye7FnUjlES3ClTw&expires=2145884400",
-    "title": "家から逃げ出したい私が、うっかり憧れの大魔法使い様を買ってしまったら",
-    "url": "https://www.manga-up.com/titles/980"
-  },
-  {
     "foundAt": "04:09",
     "siteName": "チャンピオンクロス",
     "siteUrl": "https://championcross.jp/",
@@ -1239,14 +1223,6 @@
     "url": "https://gaugau.futabanet.jp/list/work/64fad985905bd46a9c000000/episodes/83"
   },
   {
-    "foundAt": "17:44",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1677550683/title_small/1106.webp?hash=fUidabvdlWEtCBZDBUMmjw&expires=2145884400",
-    "title": "最弱冒険者が【完全ドロップ】で現代最強 自分だけのレアスキルとカスタムアビリティを駆使して他の誰より強くなる!",
-    "url": "https://www.manga-up.com/titles/1106"
-  },
-  {
     "foundAt": "00:05",
     "siteName": "ガンガンONLINE",
     "siteUrl": "https://www.ganganonline.com/",
@@ -1309,6 +1285,14 @@
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/2d7fb1426ce91ebdae6954a5ee611af1ff53981d/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2551460909905968376-9e48cf520add295c761fbb6575466181%3F1782891061",
     "title": "私の魔法は絶対に当たるんです　～スローライフを守るために魔法を撃ち続けていたら、いつの間にか森の聖女になっていました～",
     "url": "https://comic-days.com/episode/2551460909909544477"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1562847782/title_small/474.webp?hash=2VpLnos1W-GL64b12yfoRA&expires=2145884400",
+    "title": "事情を知らない転校生がグイグイくる。",
+    "url": "https://www.manga-up.com/titles/474"
   },
   {
     "foundAt": "12:05",
@@ -1440,6 +1424,14 @@
     "url": "https://comic-walker.com/detail/KC_008565_S/episodes/KC_0085650000900011_E"
   },
   {
+    "foundAt": "18:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1511233323/title_small/237.webp?hash=jYGr1A34yFE7vNi3VAb_Sg&expires=2145884400",
+    "title": "神達に拾われた男",
+    "url": "https://www.manga-up.com/titles/237"
+  },
+  {
     "foundAt": "12:05",
     "siteName": "カドコミ",
     "siteUrl": "https://comic-walker.com/",
@@ -1455,6 +1447,22 @@
     "title": "人妻の唇は缶チューハイの味がして",
     "url": "https://yanmaga.jp/comics/%E4%BA%BA%E5%A6%BB%E3%81%AE%E5%94%87%E3%81%AF%E7%BC%B6%E3%83%81%E3%83%A5%E3%83%BC%E3%83%8F%E3%82%A4%E3%81%AE%E5%91%B3%E3%81%8C%E3%81%97%E3%81%A6/38984ce97eadf8cfc2c8b6f210995e7c",
     "workUrl": "https://yanmaga.jp/comics/%E4%BA%BA%E5%A6%BB%E3%81%AE%E5%94%87%E3%81%AF%E7%BC%B6%E3%83%81%E3%83%A5%E3%83%BC%E3%83%8F%E3%82%A4%E3%81%AE%E5%91%B3%E3%81%8C%E3%81%97%E3%81%A6"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1772074343/title_small/1684.webp?hash=-roAXyaENK2o9EzZgo37nA&expires=2145884400",
+    "title": "推しから溺愛される義妹に転生しました",
+    "url": "https://www.manga-up.com/titles/1684"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1746152790/title_small/1543.webp?hash=DHaI-YlicCklNg87RP93_A&expires=2145884400",
+    "title": "推しセフ 推し声優のセフレ沼",
+    "url": "https://www.manga-up.com/titles/1543"
   },
   {
     "foundAt": "12:05",
@@ -1497,14 +1505,6 @@
     "title": "聖者無双",
     "url": "https://yanmaga.jp/comics/%E8%81%96%E8%80%85%E7%84%A1%E5%8F%8C/b9f17fab807a9b5130665b599c5c76a9",
     "workUrl": "https://yanmaga.jp/comics/%E8%81%96%E8%80%85%E7%84%A1%E5%8F%8C"
-  },
-  {
-    "foundAt": "17:44",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1785899461/title_small/249.webp?hash=9XHL4BHdlSGjbq_GL8juPQ&expires=2145884400",
-    "title": "聖樹のパン",
-    "url": "https://www.manga-up.com/titles/249"
   },
   {
     "foundAt": "00:05",
@@ -1632,14 +1632,6 @@
     "workUrl": "https://championcross.jp/series/e46f1ae2e956e"
   },
   {
-    "foundAt": "17:44",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1682299970/title_small/1132.webp?hash=uYatAV6Ci5XzOuR5x7NXdA&expires=2145884400",
-    "title": "転生したら序盤で死ぬ中ボスだった－ヒロイン眷属化で生き残る－",
-    "url": "https://www.manga-up.com/titles/1132"
-  },
-  {
     "foundAt": "12:05",
     "siteName": "COMICメテオ",
     "siteUrl": "https://kirapo.jp/meteor",
@@ -1765,14 +1757,6 @@
     "workUrl": "https://comic-fuz.com/manga/4066"
   },
   {
-    "foundAt": "17:44",
-    "siteName": "マンガUP!",
-    "siteUrl": "https://www.manga-up.com/",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1787189181/title_small/1759.webp?hash=dTAO9fEn78ZevDZCLxqZsQ&expires=2145884400",
-    "title": "夫に愛されなかった公爵夫人の離婚調停",
-    "url": "https://www.manga-up.com/titles/1759"
-  },
-  {
     "foundAt": "04:09",
     "siteName": "チャンピオンクロス",
     "siteUrl": "https://championcross.jp/",
@@ -1822,6 +1806,14 @@
     "title": "魔女とくゅらす",
     "url": "https://heros-web.com/episodes/e17aaaa093709",
     "workUrl": "https://heros-web.com/series/2b64bc0622a2a"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1723780133/title_small/1312.webp?hash=Tna1Pe-z_NuJzO3kNwUdaA&expires=2145884400",
+    "title": "魔物喰らいの冒険者",
+    "url": "https://www.manga-up.com/titles/1312"
   },
   {
     "foundAt": "00:05",
@@ -1897,6 +1889,14 @@
     "thumbnailUrl": "https://www.ganganonline.com/secure/title/1614/web_list_asset_image/200796.webp?hash=qhDeSJHAUPoajFB8O6KRaQ&expires=1790121600",
     "title": "勇者パーティーの荷物持ち",
     "url": "https://www.ganganonline.com/title/1614/chapter/133334"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "マンガUP!",
+    "siteUrl": "https://www.manga-up.com/",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1787705837/title_small/1032.webp?hash=N7RVXOH81y9uzCAX4XBihQ&expires=2145884400",
+    "title": "勇者パーティーを追放されたビーストテイマー、最強種の猫耳少女と出会う",
+    "url": "https://www.manga-up.com/titles/1032"
   },
   {
     "foundAt": "12:05",
