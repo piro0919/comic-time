@@ -570,6 +570,21 @@
     "title": "#神奈川に住んでるエルフ"
   },
   {
+    "dayBits": 16,
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1137"
+      }
+    ],
+    "slug": "チック姉さん",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1684456300/title_small/1137.webp?hash=Y5pPa1sHX3yuJ2gPZ5FNLw&expires=2145884400",
+    "title": "＋チック姉さん"
+  },
+  {
     "dayBits": 2,
     "firstSeen": "2026-08-31",
     "lastSeen": "2026-09-14",
@@ -48530,18 +48545,18 @@
     "lastSeen": "2026-09-17",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2304/chapter/131783"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1736"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2304/chapter/131783"
       }
     ],
     "slug": "氷皇子は砂漠の姫に狙われる",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1782786297/title_small/1736.webp?hash=oW1XAHwKkVZenWYL28OoTg&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2304/title_thumbnail_list_single/426878.webp?hash=3SfdlmL67BNvY1R9NqUKKw&expires=1790035200",
     "title": "氷皇子は砂漠の姫に狙われる"
   },
   {
