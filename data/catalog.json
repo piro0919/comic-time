@@ -18945,6 +18945,21 @@
     "title": "ボーイミーツ異形さま"
   },
   {
+    "dayBits": 32,
+    "firstSeen": "2026-09-18",
+    "lastSeen": "2026-09-18",
+    "sites": [
+      {
+        "name": "SHURO",
+        "siteUrl": "https://shuro.world/",
+        "url": "https://shuro.world/episode/149839/"
+      }
+    ],
+    "slug": "ボールアンドチェイン",
+    "thumbnailUrl": "https://img.shuro.world/wp-content/uploads/2023/05/08113720/867fff791e4822992561b5bc3f2eddd8.jpg",
+    "title": "ボールアンドチェイン"
+  },
+  {
     "dayBits": 48,
     "firstSeen": "2026-08-27",
     "lastSeen": "2026-09-11",
@@ -21411,7 +21426,7 @@
       }
     ],
     "slug": "ゆりゾン",
-    "thumbnailUrl": "https://cdn-img.comic-ogyaaa.com/public/episode-thumbnail/12207421984242426061-7c3c69fad43a8d674cdc4dd8ec1f1c82?1789455902",
+    "thumbnailUrl": "https://cdn-img.comic-ogyaaa.com/public/episode-thumbnail/12207421984242426061-7c3c69fad43a8d674cdc4dd8ec1f1c82?1789725627",
     "title": "ゆりゾン"
   },
   {
@@ -46795,18 +46810,18 @@
     "lastSeen": "2026-09-18",
     "sites": [
       {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1752"
-      },
-      {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2663/chapter/131882"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1752"
       }
     ],
     "slug": "転生伯爵リリーナの結婚~イケメン公爵様の虫除け係!~",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2663/title_thumbnail_list_single/435557.webp?hash=jQ7YmfwoAAotcSjrP_D0hw&expires=1789862400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1787189626/title_small/1752.webp?hash=Wz-e-XTnyj5JqYkwsycnbw&expires=2145884400",
     "title": "転生伯爵リリーナの結婚～イケメン公爵様の虫除け係!?～"
   },
   {
