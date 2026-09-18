@@ -27,8 +27,11 @@ export type Opened = {
    */
   isOpened: (url: string, date: DateKey) => boolean;
   markOpened: (url: string) => void;
-  /** 受け取った記録で丸ごと書き換える。ログインしたときの合流で使う */
-  replaceAll: (next: Record<string, string>) => void;
+  /**
+   * 受け取った記録を足し合わせる。同じURLは新しい日付を採る。ログインしたときの合流で使う。
+   * 置き換えにしないのは、合流の往復中に開いた回が、往復前の一覧で消されるため
+   */
+  mergeAll: (next: Record<string, string>) => void;
 };
 
 function dateKey(date: Date): string {
@@ -79,17 +82,29 @@ export function useOpenedState(): Opened {
     },
     [setOpened, signedIn],
   );
-  const replaceAll: Opened["replaceAll"] = useCallback(
+  const mergeAll: Opened["mergeAll"] = useCallback(
     (next) => {
-      setOpened(next);
+      setOpened((prev) => {
+        const merged = { ...prev };
+
+        Object.entries(next).forEach(([url, at]) => {
+          const current = merged[url];
+
+          if (current === undefined || at > current) {
+            merged[url] = at;
+          }
+        });
+
+        return merged;
+      });
     },
     [setOpened],
   );
 
   // 包まないと、配る値が描き直しのたびに別物になり、受け取る側が全員描き直す
   return useMemo(
-    () => ({ all: opened, isOpened, markOpened, replaceAll }),
-    [isOpened, markOpened, opened, replaceAll],
+    () => ({ all: opened, isOpened, markOpened, mergeAll }),
+    [isOpened, markOpened, mergeAll, opened],
   );
 }
 

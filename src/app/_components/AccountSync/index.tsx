@@ -19,7 +19,7 @@ import useOpened from "@/app/useOpened";
 const syncedKey = "favorites-synced-v1";
 
 export default function AccountSync(): null {
-  const { data: session } = authClient.useSession();
+  const { data: session, isPending } = authClient.useSession();
   const favorites = useFavorites();
   const opened = useOpened();
   // 合流は往復するあいだに何度も描き直される。走らせるのは一度だけにする
@@ -27,6 +27,11 @@ export default function AccountSync(): null {
   const userId = session?.user.id ?? null;
 
   useEffect(() => {
+    // 取りに行っている間はログイン中でも null になる。そこで控えを消すと、開くたびに合流が走る
+    if (isPending) {
+      return;
+    }
+
     if (userId === null) {
       try {
         localStorage.removeItem(syncedKey);
@@ -57,7 +62,7 @@ export default function AccountSync(): null {
           ...merged,
           titles: { ...Object.fromEntries(local), ...merged.titles },
         });
-        opened.replaceAll(opens);
+        opened.mergeAll(opens);
         localStorage.setItem(syncedKey, userId);
 
         return merged;
@@ -65,7 +70,7 @@ export default function AccountSync(): null {
       .finally(() => {
         running.current = false;
       });
-  }, [favorites, opened, userId]);
+  }, [favorites, isPending, opened, userId]);
 
   return null;
 }
