@@ -118,8 +118,13 @@ All commits are automatically checked for:
   フォローと同じ Postgres の `public` に入る。受け口は `src/app/api/auth/[...path]/route.ts`
 - **受け口をこのサイトに置いているのは、Google の同意画面の表示のため。** Neon Auth に預けると
   リダイレクト先が Neon の接続先になり、同意画面に `neon.tech` と出る
-- ログインすると、その端末の登録が初回だけサーバーへ合流し（`_components/FollowSync`）、
+- ログインすると、その端末の登録と既読が初回だけサーバーへ合流し（`_components/AccountSync`）、
   以降は押すたびにサーバーへ書く。手元はその写しになる。削除の記録は持たない
+- 別の端末で押したぶんは、開くたびに `AccountSync` がサーバーから読んで取り込む。
+  登録は丸ごと置き換え、既読は日付の新しい方を採って足す。既読を置き換えにすると、
+  読み出しの往復中に開いた回が消える
+- **セッションを取りに行っている間、`useSession` はログイン中でも `null` を返す。**
+  そこで「ログインしていない」と判断すると、合流の控えを消したり、押したぶんをサーバーへ送り損ねたりする
 - 表は `db/migrations/` の SQL。`follow_work (user_id, slug, site_url)` と
   `follow_site (user_id, site_url)`。どちらも `neon_auth."user"` へ CASCADE で繋がる
 - **フォローはサイトごと。** 題名だけで持つと、同じ作品を載せている別サイトの更新まで一覧に出る。

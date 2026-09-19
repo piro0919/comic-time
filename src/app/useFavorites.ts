@@ -79,8 +79,9 @@ function toggle(list: string[], value: string): string[] {
  */
 export function useFavoritesState(): Favorites {
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
-  const { data: session } = authClient.useSession();
-  const signedIn = session !== null;
+  const { data: session, isPending } = authClient.useSession();
+  // 確かめている間に押したぶんも送る。ログインしていなければサーバーが何もせず返す
+  const signedIn = session !== null || isPending;
   const [stored, setStored] = useLocalStorage<Stored>(
     favoritesKey,
     { sites: [], works: [] },
