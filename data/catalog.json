@@ -5017,7 +5017,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-13",
-    "lastSeen": "2026-09-13",
+    "lastSeen": "2026-09-20",
     "sites": [
       {
         "name": "マンガUP!",
@@ -28680,6 +28680,21 @@
     "title": "画媚"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-20",
+    "lastSeen": "2026-09-20",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1029"
+      }
+    ],
+    "slug": "雅血の陰陽師",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1661498162/title_small/1029.webp?hash=AOI1S2irNqAjgAG7q-0hbg&expires=2145884400",
+    "title": "雅血の陰陽師"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-09-08",
@@ -48065,6 +48080,21 @@
     "title": "転生薬師は迷宮都市育ち"
   },
   {
+    "dayBits": 1,
+    "firstSeen": "2026-09-20",
+    "lastSeen": "2026-09-20",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1061"
+      }
+    ],
+    "slug": "転生勇者の気まま旅",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1666169222/title_small/1061.webp?hash=EvTx8hnKFdu0HTnG90F8Ew&expires=2145884400",
+    "title": "転生勇者の気まま旅"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
     "lastSeen": "2026-09-01",
@@ -56935,18 +56965,18 @@
     "lastSeen": "2026-09-20",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2331/chapter/129000"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1743"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2331/chapter/129000"
       }
     ],
     "slug": "陽キャが陰キャに恋をした話",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1784270981/title_small/1743.webp?hash=66r1HJHJeHmdx_xH8FH1pw&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2331/title_thumbnail_list_single/426884.webp?hash=AXh1ZQGjpFf4EQVw-Gi3FQ&expires=1790294400",
     "title": "陽キャが陰キャに恋をした話"
   },
   {
@@ -59143,6 +59173,21 @@
     "slug": "穢れた聖地巡礼について",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006565/resized/545e2d5e-8cd0-4aa0-87f3-89560cea0de3.jpg",
     "title": "穢れた聖地巡礼について"
+  },
+  {
+    "dayBits": 1,
+    "firstSeen": "2026-09-20",
+    "lastSeen": "2026-09-20",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1040"
+      }
+    ],
+    "slug": "綺麗にしてもらえますか。",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1554479282/title_small/1040.webp?hash=mNaqY3kBC2Ph0OaNWNG6IA&expires=2145884400",
+    "title": "綺麗にしてもらえますか。"
   },
   {
     "dayBits": 32,
