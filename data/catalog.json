@@ -14965,18 +14965,23 @@
     "title": "と〜ふのあわこ"
   },
   {
-    "dayBits": 8,
+    "dayBits": 72,
     "firstSeen": "2026-09-02",
-    "lastSeen": "2026-09-16",
+    "lastSeen": "2026-09-19",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2445/chapter/128655"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1663"
       }
     ],
     "slug": "ドアマットヒロインは速攻終了いたします!",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2445/title_thumbnail_list_single/404976.webp?hash=cKMvXHkQq3q_3AkCLC3ryg&expires=1790121600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1769046716/title_small/1663.webp?hash=gUBO-wtO5G0Kq7nlBHRDfw&expires=2145884400",
     "title": "ドアマットヒロインは速攻終了いたします！"
   },
   {
@@ -23752,7 +23757,7 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-18",
+    "lastSeen": "2026-09-19",
     "sites": [
       {
         "name": "ツイ４",
