@@ -24,11 +24,9 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
 
   return (
     <ProgressProvider
-      color="#c2e7ff"
-      disableSameURL={false}
+      color="var(--accent)"
       height="3px"
-      options={{ showSpinner: true }}
-      shallowRouting={true}
+      options={{ showSpinner: false }}
     >
       <div className={styles.container} {...swipeTabs}>
         <div className={styles.header}>
