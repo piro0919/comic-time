@@ -2355,18 +2355,23 @@
     "title": "KAMUDO 風の神門"
   },
   {
-    "dayBits": 32,
+    "dayBits": 36,
     "firstSeen": "2026-08-28",
-    "lastSeen": "2026-09-18",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2367/chapter/131924"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1627"
       }
     ],
     "slug": "killersfamilia",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2367/title_thumbnail_list_single/416382.webp?hash=NHBUJ2mMvZ1y3E7lZ7EnRQ&expires=1790294400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1761297887/title_small/1627.webp?hash=eG-QRqq7MOKoc803dW_W3Q&expires=2145884400",
     "title": "KILLER'S FAMILIA"
   },
   {
@@ -6702,7 +6707,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -7655,18 +7660,23 @@
     "title": "お嬢様探偵ありすと少年執事ゆきとの事件簿"
   },
   {
-    "dayBits": 2,
+    "dayBits": 6,
     "firstSeen": "2026-09-14",
-    "lastSeen": "2026-09-21",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2148/chapter/126015"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1411"
       }
     ],
     "slug": "お飾りの皇妃なにそれ天職です!",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2148/title_thumbnail_list_single/375624.webp?hash=mR3wKtwAfI9yiCwVSbOPHA&expires=1790553600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1737338871/title_small/1411.webp?hash=DtAS_yXp7-TX3X8GROZOZQ&expires=2145884400",
     "title": "お飾りの皇妃？なにそれ天職です！"
   },
   {
@@ -9515,18 +9525,18 @@
     "lastSeen": "2026-09-22",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2376/chapter/132884"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1608"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2376/chapter/132884"
       }
     ],
     "slug": "クマとウサギは友達ではいられない",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1759374461/title_small/1608.webp?hash=XQB_CIJcfF00_GTfnVLLzg&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2376/title_thumbnail_list_single/431777.webp?hash=SpDvJ7Q2Z2PMxEzYCwbSzQ&expires=1790380800",
     "title": "クマとウサギは友達ではいられない"
   },
   {
@@ -9892,7 +9902,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-08-25",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -10612,7 +10622,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-15",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -16100,6 +16110,21 @@
     "title": "ドラゴンクエスト ダイの大冒険 勇者アバンと獄炎の魔王"
   },
   {
+    "dayBits": 4,
+    "firstSeen": "2026-09-22",
+    "lastSeen": "2026-09-22",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1607"
+      }
+    ],
+    "slug": "ドラゴンと山暮らし休日は異世界でキャンプライフ",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1757394383/title_small/1607.webp?hash=_bXtbTYu4DgDTgBLXoW3wA&expires=2145884400",
+    "title": "ドラゴンと山暮らし 休日は異世界でキャンプライフ"
+  },
+  {
     "dayBits": 33,
     "firstSeen": "2026-08-28",
     "lastSeen": "2026-09-13",
@@ -21557,7 +21582,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-08-25",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -23312,7 +23337,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-15",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -23323,6 +23348,21 @@
     "slug": "ルパン三世異世界の姫君",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/2/202404121051561750E301A9C143A98EC4194CD47135E9598-sm.webp",
     "title": "ルパン三世　異世界の姫君"
+  },
+  {
+    "dayBits": 4,
+    "firstSeen": "2026-09-22",
+    "lastSeen": "2026-09-22",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1317"
+      }
+    ],
+    "slug": "ルビー・オンザ・ケーキ―人喰い魔女の晩餐会―",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1724398013/title_small/1317.webp?hash=L_8CQOq8ef6eGkJbvu10Tw&expires=2145884400",
+    "title": "ルビー・オンザ・ケーキ ―人喰い魔女の晩餐会―"
   },
   {
     "dayBits": 2,
@@ -28215,18 +28255,23 @@
     "title": "俺が好きって言ったらどうする？"
   },
   {
-    "dayBits": 2,
+    "dayBits": 6,
     "firstSeen": "2026-08-31",
-    "lastSeen": "2026-09-14",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2058/chapter/131375"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1477"
       }
     ],
     "slug": "俺が告白されてから、お嬢の様子がおかしい。",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2058/title_thumbnail_list_single/395379.webp?hash=zROtPqclelLqULzISXjsPw&expires=1789948800",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1741563347/title_small/1477.webp?hash=EVKovMnyE78EtoH6EQPEAw&expires=2145884400",
     "title": "俺が告白されてから、お嬢の様子がおかしい。"
   },
   {
@@ -31050,18 +31095,18 @@
     "lastSeen": "2026-09-22",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/979/chapter/125274"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/550"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/979/chapter/125274"
       }
     ],
     "slug": "貴族転生~恵まれた生まれから最強の力を得る~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1575538083/title_small/550.webp?hash=MT4EAJQ2de0_8_yozpXQ8Q&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/979/title_thumbnail_list_single/407298.webp?hash=_2LWLsjKH3_6QBcO0ikc8Q&expires=1790294400",
     "title": "貴族転生　～恵まれた生まれから最強の力を得る～"
   },
   {
@@ -42372,7 +42417,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -53807,7 +53852,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -56298,6 +56343,21 @@
     "slug": "万年fランク【通訳】スキル持ち底辺冒険者、異種族の最強美少女たちとパーティーを組んで才能に開花し無双",
     "thumbnailUrl": "https://ja-img.manga-up.com/secure/1755048301/title_small/1595.webp?hash=iHXvSaVrf3JKl3wgB-hVFA&expires=2145884400",
     "title": "万年Fランク【通訳】スキル持ち底辺冒険者、異種族の最強美少女たちとパーティーを組んで才能に開花し無双する"
+  },
+  {
+    "dayBits": 4,
+    "firstSeen": "2026-09-22",
+    "lastSeen": "2026-09-22",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/822"
+      }
+    ],
+    "slug": "万能「村づくり」チートでお手軽スローライフ~村ですが何か~",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1624255623/title_small/822.webp?hash=Ud4Ekh-o2HUZW-itkO2sbA&expires=2145884400",
+    "title": "万能「村づくり」チートでお手軽スローライフ　～村ですが何か？～"
   },
   {
     "dayBits": 2,
