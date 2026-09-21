@@ -2365,18 +2365,18 @@
     "lastSeen": "2026-09-22",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2367/chapter/131924"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1627"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2367/chapter/131924"
       }
     ],
     "slug": "killersfamilia",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1761297887/title_small/1627.webp?hash=eG-QRqq7MOKoc803dW_W3Q&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2367/title_thumbnail_list_single/416382.webp?hash=NHBUJ2mMvZ1y3E7lZ7EnRQ&expires=1790294400",
     "title": "KILLER'S FAMILIA"
   },
   {
@@ -3438,6 +3438,21 @@
     "slug": "unnamedmemory",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/000239/resized/4d41ff59-b74c-4964-8783-74243a41d24d.jpg",
     "title": "Unnamed Memory"
+  },
+  {
+    "dayBits": 4,
+    "firstSeen": "2026-09-22",
+    "lastSeen": "2026-09-22",
+    "sites": [
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1624"
+      }
+    ],
+    "slug": "vampxia",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1762331090/title_small/1624.webp?hash=7NHaUoaHF-I6L7DLRQh46g&expires=2145884400",
+    "title": "VAMPXIA"
   },
   {
     "dayBits": 1,
@@ -7670,18 +7685,18 @@
     "lastSeen": "2026-09-22",
     "sites": [
       {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1411"
-      },
-      {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2148/chapter/126015"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1411"
       }
     ],
     "slug": "お飾りの皇妃なにそれ天職です!",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2148/title_thumbnail_list_single/375624.webp?hash=mR3wKtwAfI9yiCwVSbOPHA&expires=1790553600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1737338871/title_small/1411.webp?hash=DtAS_yXp7-TX3X8GROZOZQ&expires=2145884400",
     "title": "お飾りの皇妃？なにそれ天職です！"
   },
   {
@@ -9530,18 +9545,18 @@
     "lastSeen": "2026-09-22",
     "sites": [
       {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1608"
-      },
-      {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2376/chapter/132884"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1608"
       }
     ],
     "slug": "クマとウサギは友達ではいられない",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2376/title_thumbnail_list_single/431777.webp?hash=SpDvJ7Q2Z2PMxEzYCwbSzQ&expires=1790380800",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1759374461/title_small/1608.webp?hash=XQB_CIJcfF00_GTfnVLLzg&expires=2145884400",
     "title": "クマとウサギは友達ではいられない"
   },
   {
@@ -15210,18 +15225,18 @@
     "lastSeen": "2026-09-22",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/1890/chapter/129195"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1525"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/1890/chapter/129195"
       }
     ],
     "slug": "デート・オア・キル~秘密のマッチング~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1743477033/title_small/1525.webp?hash=3v55YIo30lgJXmm8DVbN9Q&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1890/title_thumbnail_list_single/412536.webp?hash=2y9qauESk9KYxyH8Xa4BSQ&expires=1790553600",
     "title": "デート・オア・キル～秘密のマッチング～"
   },
   {
@@ -28527,7 +28542,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-15",
-    "lastSeen": "2026-09-15",
+    "lastSeen": "2026-09-22",
     "sites": [
       {
         "name": "マンガUP!",
@@ -47995,19 +48010,19 @@
     "lastSeen": "2026-09-22",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2196/chapter/126078"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1394"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2196/chapter/126078"
       }
     ],
     "slug": "追放勇者の優雅な生活~自由になったら俺だけの最愛天使も手に入った!~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1736500313/title_small/1394.webp?hash=lbBWVQ-Vjx2pqni_2iKbcg&expires=2145884400",
-    "title": "追放勇者の優雅な生活～自由になったら俺だけの最愛天使も手に入った！～"
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2196/title_thumbnail_list_single/416430.webp?hash=znq5ykMpm6jJ2qoeTYaX7A&expires=1790208000",
+    "title": "追放勇者の優雅な生活  ～自由になったら俺だけの最愛天使も手に入った！～"
   },
   {
     "dayBits": 2,
