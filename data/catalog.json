@@ -2817,7 +2817,7 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-10",
-    "lastSeen": "2026-09-17",
+    "lastSeen": "2026-09-24",
     "sites": [
       {
         "name": "マンガUP!",
@@ -11907,7 +11907,7 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-10",
-    "lastSeen": "2026-09-10",
+    "lastSeen": "2026-09-24",
     "sites": [
       {
         "name": "マンガUP!",
@@ -27097,7 +27097,7 @@
   {
     "dayBits": 16,
     "firstSeen": "2026-09-10",
-    "lastSeen": "2026-09-17",
+    "lastSeen": "2026-09-24",
     "sites": [
       {
         "name": "マンガUP!",
@@ -41265,18 +41265,23 @@
     "title": "終末ツーリング"
   },
   {
-    "dayBits": 8,
+    "dayBits": 24,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-09-23",
+    "lastSeen": "2026-09-24",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2681/chapter/131936"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1770"
       }
     ],
     "slug": "終末ねこ商人",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2681/title_thumbnail_list_single/428108.webp?hash=LonTpJ7s4nBffjcTcnlacg&expires=1790726400",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1789352955/title_small/1770.webp?hash=7NcN1vkx3AnXuGH24eQ9rQ&expires=2145884400",
     "title": "終末ねこ商人"
   },
   {
@@ -51132,7 +51137,7 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-09-23",
+    "lastSeen": "2026-09-24",
     "sites": [
       {
         "name": "ツイ４",
@@ -51870,18 +51875,18 @@
     "lastSeen": "2026-09-24",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2346/chapter/130149"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1225"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2346/chapter/130149"
       }
     ],
     "slug": "童貞勇者は仲良くシたい",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1703467366/title_small/1225.webp?hash=t6QqCC93bj7vNyBJIjsmWA&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2346/title_thumbnail_list_single/414915.webp?hash=TBkn0-fpFCad6bd-y-eRTQ&expires=1790467200",
     "title": "童貞勇者は仲良くシたい"
   },
   {
