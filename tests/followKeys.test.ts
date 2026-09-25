@@ -2,9 +2,15 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { named, refOf } from "../src/app/followKeys.ts";
 import { workKey } from "../src/app/workCards.ts";
+import { catalog } from "../src/app/workCatalog.ts";
 
-/** 複数サイトに載っている作品。サイトごとに別の見出しになる */
-const title = "1日外出録ハンチョウ";
+/**
+ * 複数サイトに載っている作品。サイトごとに別の見出しになる。
+ * 題名は台帳から読む。サイトごとに「1日」「１日」と表記が違い、台帳は最後に見た方を採るので、
+ * 取得のたびに入れ替わる。決め打ちすると、データの更新だけでテストが落ちる
+ */
+const title =
+  catalog().find((entry) => entry.slug === "1日外出録ハンチョウ")?.title ?? "";
 const yanmaga = "https://yanmaga.jp/";
 const pocket = "https://pocket.shonenmagazine.com/";
 
