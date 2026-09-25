@@ -84,8 +84,16 @@ export default async function scrape(): Promise<void> {
 
     try {
       const works = await source.fetchToday();
+      const urls = new Set(works.map((work) => work.url));
+      const earlier =
+        source.draws === true
+          ? previous.filter(
+              (work) => work.siteUrl === site.url && !urls.has(work.url),
+            )
+          : [];
 
       collected.push(
+        ...earlier,
         ...works.map<Work>((work) => ({
           // 前の回に見つけていれば、そのときの時刻を引き継ぐ
           foundAt: found.get(work.url) ?? now,
@@ -98,7 +106,10 @@ export default async function scrape(): Promise<void> {
         })),
       );
 
-      console.log(`[scrape] ${site.name}: ${works.length}件`);
+      console.log(
+        `[scrape] ${site.name}: ${works.length}件` +
+          (earlier.length > 0 ? `（前の回から ${earlier.length}件）` : ""),
+      );
     } catch (error) {
       // このサイトは今日ぶんが空になる
       console.error(`[scrape] ${site.name}: 失敗`, error);

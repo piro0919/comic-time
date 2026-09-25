@@ -31,7 +31,7 @@ function serve(html: string): void {
 test("今日の更新の区画にある作品だけを返す", async () => {
   serve(page);
 
-  const works = await mangaUp();
+  const works = await mangaUp({ pause: 0 });
 
   assert.deepEqual(
     works.map((work) => work.title),
@@ -42,7 +42,7 @@ test("今日の更新の区画にある作品だけを返す", async () => {
 test("作品ページの住所を返す。話への道は無い", async () => {
   serve(page);
 
-  const works = await mangaUp();
+  const works = await mangaUp({ pause: 0 });
 
   assert.equal(works[0]?.url, "https://www.manga-up.com/titles/1637");
   assert.equal(works[1]?.thumbnailUrl, "https://www.manga-up.com/1153.webp");
@@ -52,5 +52,55 @@ test("作品ページの住所を返す。話への道は無い", async () => {
 test("区画が見つからなければ例外にする", async () => {
   serve("<html><body><h2>おしらせ</h2></body></html>");
 
-  await assert.rejects(async () => mangaUp());
+  await assert.rejects(async () => mangaUp({ pause: 0 }));
+});
+
+function section(titles: string[]): string {
+  const links = titles
+    .map(
+      (title) =>
+        `<a href="https://www.manga-up.com/titles/${title}"><img alt="${title}" src="/${title}.webp"></a>`,
+    )
+    .join("");
+
+  return `<html><body><section><h2>今日の更新（土曜日）</h2><div>${links}</div></section></body></html>`;
+}
+
+/** 開くたびに違う作品を抽選で出すので、読み直して束ねる */
+test("読み直して、抽選で出た作品を束ねる", async () => {
+  const draws = [
+    ["a", "b"],
+    ["b", "c"],
+    ["a", "d"],
+  ];
+
+  let read = 0;
+
+  globalThis.fetch = (async () =>
+    new Response(section(draws[read++ % draws.length] ?? []), {
+      status: 200,
+    })) as typeof fetch;
+
+  const works = await mangaUp({ pause: 0 });
+
+  assert.deepEqual(works.map((work) => work.title).toSorted(), [
+    "a",
+    "b",
+    "c",
+    "d",
+  ]);
+});
+
+test("新しい作品が出なくなったら読むのをやめる", async () => {
+  let read = 0;
+
+  globalThis.fetch = (async () => {
+    read += 1;
+
+    return new Response(section(["a"]), { status: 200 });
+  }) as typeof fetch;
+
+  await mangaUp({ pause: 0 });
+
+  assert.equal(read, 7);
 });

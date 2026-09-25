@@ -35,6 +35,11 @@ import zerosumOnline from "./zerosumOnline.ts";
  * 取れなかったときは例外を投げる。空配列は「今日は更新が無かった」を意味する。
  */
 export type Source = {
+  /**
+   * 今日の更新から抽選して一部だけを出すサイト。1回では全部そろわないので、
+   * 同じ日の前の回に見つけた作品を、今回出てこなくても残す
+   */
+  draws?: true;
   /** その日更新された作品 */
   fetchToday: () => Promise<ParsedWork[]>;
   /** src/data/sites.json の url と揃える */
@@ -71,7 +76,7 @@ const sources: Source[] = [
   { fetchToday: shuro, siteUrl: "https://shuro.world/" },
   { fetchToday: youngAceUp, siteUrl: "https://web-ace.jp/youngaceup/" },
   { fetchToday: comicGardo, siteUrl: "https://comic-gardo.com/" },
-  { fetchToday: mangaUp, siteUrl: "https://www.manga-up.com/" },
+  { draws: true, fetchToday: mangaUp, siteUrl: "https://www.manga-up.com/" },
   { fetchToday: comicBoost, siteUrl: "https://comic-boost.com/" },
   { fetchToday: comicRide, siteUrl: "https://comicride.jp/" },
   { fetchToday: gaugauMonster, siteUrl: "https://gaugau.futabanet.jp/" },
