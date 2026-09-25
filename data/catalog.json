@@ -11932,7 +11932,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-09-12",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -13028,6 +13028,21 @@
     "slug": "じょりく!",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/202510091717509557D404A420E6FC3B47EC51376C91BF495-sm.webp",
     "title": "じょりく！"
+  },
+  {
+    "dayBits": 64,
+    "firstSeen": "2026-09-26",
+    "lastSeen": "2026-09-26",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/9616803f8e5e7"
+      }
+    ],
+    "slug": "しらない世界でりっぱな♀ドラゴンとして生きます!",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260813150624631EE6BF312B0CFBCB4228A5408441816D2-sm.webp",
+    "title": "しらない世界でりっぱな♀ドラゴンとして生きます！"
   },
   {
     "dayBits": 34,
@@ -15057,7 +15072,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-09-12",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "マンガUP!",
@@ -17907,7 +17922,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-08-29",
-    "lastSeen": "2026-09-05",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -21847,7 +21862,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-09-05",
-    "lastSeen": "2026-09-19",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -23137,21 +23152,21 @@
   {
     "dayBits": 68,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-09-26",
     "sites": [
-      {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/380"
-      },
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/73/chapter/131498"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/380"
       }
     ],
     "slug": "モンスターがあふれる世界になったので、好きに生きたいと思います",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/73/title_thumbnail_list_single/433277.webp?hash=ARA8vmU0yuZcZQOZSwwDig&expires=1790640000",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1539182944/title_small/380.webp?hash=rCUf1pGMZ-9KVdfDGeGh2Q&expires=2145884400",
     "title": "モンスターがあふれる世界になったので、好きに生きたいと思います"
   },
   {
@@ -28257,7 +28272,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-09-12",
-    "lastSeen": "2026-09-19",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "マンガUP!",
@@ -36910,6 +36925,21 @@
     "title": "高みの鷹見さん"
   },
   {
+    "dayBits": 64,
+    "firstSeen": "2026-09-26",
+    "lastSeen": "2026-09-26",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/a065c00763690"
+      }
+    ],
+    "slug": "高学歴難民",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20250724113805296B0C18CD8AB6E314A5C5A06C6517113DB-sm.webp",
+    "title": "高学歴難民"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-15",
     "lastSeen": "2026-09-22",
@@ -38105,18 +38135,23 @@
     "title": "左遷された無能王子は実力を隠したい ～二度転生した最強賢者、今世では楽したいので手を抜いてたら、王家を追放された。今更帰ってこいと言われても遅い、領民に実力がバレて、実家に帰してくれないから……～"
   },
   {
-    "dayBits": 2,
+    "dayBits": 66,
     "firstSeen": "2026-08-31",
-    "lastSeen": "2026-09-21",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2322/chapter/127818"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1604"
       }
     ],
     "slug": "左遷錬金術師の辺境暮らし元エリートは二度目の人生も失敗したので辺境でのんびりとやり直すことにしました",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2322/title_thumbnail_list_single/412335.webp?hash=x5L0sALVARAPU8oXhJcugA&expires=1790553600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1756970872/title_small/1604.webp?hash=3nhzeocBLPIc13bIXs72kw&expires=2145884400",
     "title": "左遷錬金術師の辺境暮らし 元エリートは二度目の人生も失敗したので辺境でのんびりとやり直すことにしました"
   },
   {
@@ -44865,6 +44900,21 @@
     "title": "神子と夜叉嫁"
   },
   {
+    "dayBits": 64,
+    "firstSeen": "2026-09-26",
+    "lastSeen": "2026-09-26",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/d3db600cf19b7"
+      }
+    ],
+    "slug": "神呪のネクタール",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2/20240419003047257B366B132558450755E6E9275FCF9A788-sm.webp",
+    "title": "神呪のネクタール"
+  },
+  {
     "dayBits": 16,
     "firstSeen": "2026-09-10",
     "lastSeen": "2026-09-10",
@@ -45142,7 +45192,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-09-12",
-    "lastSeen": "2026-09-19",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "コミックライド",
@@ -48560,18 +48610,18 @@
     "lastSeen": "2026-09-26",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/2358/chapter/130332"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/1620"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/2358/chapter/130332"
       }
     ],
     "slug": "尊い5歳児たちが私に結婚相手を斡旋してきます~捨てられ令嬢の私に紹介されたのはなんと宰相補佐~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1759828186/title_small/1620.webp?hash=F7sLKBLHkJ2vyjxtxzdyFQ&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2358/title_thumbnail_list_single/434486.webp?hash=uAHzHbkgQWOh4_s3t5z0aw&expires=1790899200",
     "title": "尊い5歳児たちが私に結婚相手を斡旋してきます～捨てられ令嬢の私に紹介されたのはなんと宰相補佐～"
   },
   {
@@ -51655,18 +51705,18 @@
     "lastSeen": "2026-09-26",
     "sites": [
       {
-        "name": "ガンガンONLINE",
-        "siteUrl": "https://www.ganganonline.com/",
-        "url": "https://www.ganganonline.com/title/65/chapter/128298"
-      },
-      {
         "name": "マンガUP!",
         "siteUrl": "https://www.manga-up.com/",
         "url": "https://www.manga-up.com/titles/350"
+      },
+      {
+        "name": "ガンガンONLINE",
+        "siteUrl": "https://www.ganganonline.com/",
+        "url": "https://www.ganganonline.com/title/65/chapter/128298"
       }
     ],
     "slug": "転生賢者の異世界ライフ~第二の職業を得て、世界最強になりました~",
-    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1532397063/title_small/350.webp?hash=uiRmwN0uIzcw4GFMSr4mPg&expires=2145884400",
+    "thumbnailUrl": "https://www.ganganonline.com/secure/title/65/title_thumbnail_list_single/429788.webp?hash=W7UymWxSuzNY8TiT9qvj6Q&expires=1790726400",
     "title": "転生賢者の異世界ライフ～第二の職業を得て、世界最強になりました～"
   },
   {
@@ -53332,21 +53382,21 @@
   {
     "dayBits": 65,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-09-20",
+    "lastSeen": "2026-09-26",
     "sites": [
-      {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1159"
-      },
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/1659/chapter/130422"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1159"
       }
     ],
     "slug": "南條さんは僕に抱かれたい",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/1659/title_thumbnail_list_single/408774.webp?hash=yYTMAu_tq_MjfLxJUiOqtQ&expires=1790467200",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1688375987/title_small/1159.webp?hash=WNdq9GYa1Se1ETgnYZWMYw&expires=2145884400",
     "title": "南條さんは僕に抱かれたい"
   },
   {
@@ -54315,6 +54365,21 @@
     "title": "売国機関"
   },
   {
+    "dayBits": 64,
+    "firstSeen": "2026-09-26",
+    "lastSeen": "2026-09-26",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/5e00e6779178d"
+      }
+    ],
+    "slug": "伯爵令嬢の婚約破棄は二度目です~魔力0だからと捨てられた聖女は、呪いで醜くなった公爵に嫁いで溺愛され",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/202609091342594466238689346F3852F87F06CCE71B9D10E-sm.webp",
+    "title": "伯爵令嬢の婚約破棄は二度目です ～魔力０だからと捨てられた聖女は、呪いで醜くなった公爵に嫁いで溺愛されました～"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-15",
     "lastSeen": "2026-09-15",
@@ -55157,7 +55222,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-09-12",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -60522,7 +60587,7 @@
   {
     "dayBits": 64,
     "firstSeen": "2026-09-12",
-    "lastSeen": "2026-09-12",
+    "lastSeen": "2026-09-26",
     "sites": [
       {
         "name": "マンガUP!",
