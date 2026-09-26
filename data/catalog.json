@@ -2992,7 +2992,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-13",
-    "lastSeen": "2026-09-13",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -3622,7 +3622,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-13",
-    "lastSeen": "2026-09-13",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -12482,7 +12482,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-13",
-    "lastSeen": "2026-09-13",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -23742,7 +23742,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-13",
-    "lastSeen": "2026-09-13",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -25017,7 +25017,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-20",
-    "lastSeen": "2026-09-20",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "マンガUP!",
@@ -25602,7 +25602,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-20",
-    "lastSeen": "2026-09-20",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -47647,7 +47647,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-13",
-    "lastSeen": "2026-09-20",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -51962,7 +51962,7 @@
   {
     "dayBits": 1,
     "firstSeen": "2026-09-13",
-    "lastSeen": "2026-09-13",
+    "lastSeen": "2026-09-27",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -58850,14 +58850,14 @@
     "lastSeen": "2026-09-27",
     "sites": [
       {
-        "name": "チャンピオンクロス",
-        "siteUrl": "https://championcross.jp/",
-        "url": "https://championcross.jp/series/d6d6de85af0a6"
-      },
-      {
         "name": "ヤンチャンWeb",
         "siteUrl": "https://youngchampion.jp/",
         "url": "https://youngchampion.jp/series/68e506bb8bc3b"
+      },
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/d6d6de85af0a6"
       }
     ],
     "slug": "魔王陛下のお掃除係",
