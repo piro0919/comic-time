@@ -1,5 +1,6 @@
 // eslint-disable-next-line filenames/match-exported
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { type Metadata, type Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -89,7 +90,7 @@ export default function RootLayout({
       <body className={notoSansJP.className}>
         <script
           dangerouslySetInnerHTML={{ __html: markFavorites }}
-          // eslint-disable-next-line react/no-danger
+           
         />
         <ThemeProvider>
           <LocalState>
@@ -100,6 +101,7 @@ export default function RootLayout({
           </LocalState>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
