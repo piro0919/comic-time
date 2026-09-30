@@ -43,7 +43,7 @@
   font-weight: 400;
 }
 
-/* 複数サイトに載っている作品だけ、どこのぶんかをサムネの左下に出す */
+/* どのサイトのぶんかをサムネの左下に出す */
 .siteIcon {
   background: rgb(255 255 255 / 90%);
   border-radius: var(--radius-1);

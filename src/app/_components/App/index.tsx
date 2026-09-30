@@ -3,7 +3,6 @@ import { config, useSpring } from "@react-spring/web";
 import { createUseGesture, dragAction } from "@use-gesture/react";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
-import { type CrossSites } from "@/app/crossSiteWorks";
 import { dayHref, dayLabel, days } from "@/app/days";
 import workCards, { type WorkCard as Card } from "@/app/workCards";
 import { type DateKey, type Weekday, type Work } from "@/types/work";
@@ -23,25 +22,19 @@ type Batch = {
 };
 
 export type AppProps = {
-  crossSites: CrossSites;
   /** この曜日ぶんとして出している日。既読の判断に使う */
   date: DateKey;
   day: Weekday;
   works: Work[];
 };
 
-export default function App({
-  crossSites,
-  date,
-  day,
-  works,
-}: AppProps): React.JSX.Element {
+export default function App({ date, day, works }: AppProps): React.JSX.Element {
   const router = useRouter();
   /** 見つけた回ごとに区切って並べる。上ほど新しい更新 */
   const batches = useMemo<Batch[]>(() => {
     const result: Batch[] = [];
 
-    workCards(works, crossSites).forEach((card) => {
+    workCards(works).forEach((card) => {
       const last = result.at(-1);
 
       if (last !== undefined && last.foundAt === card.foundAt) {
@@ -54,7 +47,7 @@ export default function App({
     });
 
     return result;
-  }, [crossSites, works]);
+  }, [works]);
   const [props, api] = useSpring(() => ({ x: 0 }));
   const bind = useGesture(
     {

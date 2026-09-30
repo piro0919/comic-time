@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import workCards, { siteOf, titleKey, workKey } from "../src/app/workCards.ts";
+import workCards, { titleKey, workKey } from "../src/app/workCards.ts";
 import { type Work } from "../src/types/work.ts";
 
 function work(siteName: string, siteUrl: string, title: string): Work {
@@ -38,30 +38,14 @@ test("サイト名を書き直しても見出しは変わらない", () => {
   assert.equal(workKey(kadokomi, "作品"), before);
 });
 
-test("複数サイトに載る作品には、どのサイトのぶんかの印が付く", () => {
-  const title = "あきらめ令嬢は恋心なんていらない。";
-  const both = [
-    siteOf(work("カドコミ", kadokomi, title)),
-    siteOf(work("ヤングエースUP公式サイト", youngAceUp, title)),
-  ];
-  const cards = workCards([work("カドコミ", kadokomi, title)], {
-    [titleKey(title)]: both,
-  });
+test("どの作品にも、どのサイトのぶんかの印が付く", () => {
+  const cards = workCards([work("カドコミ", kadokomi, "1サイトだけの作品")]);
 
-  assert.equal(cards[0].badge?.siteUrl, kadokomi);
-  assert.equal(cards[0].badge?.iconUrl, "/site-icons/comic-walker.png");
+  assert.equal(cards[0].badge.siteUrl, kadokomi);
+  assert.equal(cards[0].badge.iconUrl, "/site-icons/comic-walker.png");
 });
 
-test("1つのサイトにしか載らない作品には印を付けない", () => {
-  const title = "1サイトだけの作品";
-  const cards = workCards([work("カドコミ", kadokomi, title)], {
-    [titleKey(title)]: [siteOf(work("カドコミ", kadokomi, title))],
-  });
-
-  assert.equal(cards[0].badge, null);
-});
-
-/** 取得側が題名を切ってしまうと、同じ作品だと分からず印が消える */
+/** 取得側が題名を切ってしまうと、同じ作品だと分からなくなる */
 test("題名が切られていると、複数サイトの作品として揃わない", () => {
   const full = "あきらめ令嬢は恋心なんていらない。～裏切られたはずなのに～";
 

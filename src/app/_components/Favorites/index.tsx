@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useMemo } from "react";
 import { FaStar } from "react-icons/fa";
-import { type CrossSites } from "@/app/crossSiteWorks";
 import useFavorites from "@/app/useFavorites";
 import workCards, { type WorkCard as Card } from "@/app/workCards";
 import { type DateKey, type Work } from "@/types/work";
@@ -9,7 +8,6 @@ import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
 export type FavoritesProps = {
-  crossSites: CrossSites;
   days: {
     date: DateKey;
     /** 「8/17（月）」の形 */
@@ -46,7 +44,6 @@ type Dormant = {
  * 登録はブラウザに持たせているため、絞り込みは描画後に効く。
  */
 export default function Favorites({
-  crossSites,
   days,
   heading = true,
 }: FavoritesProps): React.JSX.Element {
@@ -55,7 +52,7 @@ export default function Favorites({
     const result: Batch[] = [];
 
     days.forEach((day) => {
-      workCards(day.works, crossSites)
+      workCards(day.works)
         .filter((card) => favorites.hasWork(card.workKey, card.legacyKeys))
         .forEach((card) => {
           const label = `${day.label}${card.foundAt}`;
@@ -72,7 +69,7 @@ export default function Favorites({
     });
 
     return result;
-  }, [crossSites, days, favorites]);
+  }, [days, favorites]);
   /**
    * 登録してあるのに、この一週間どこにも出てこなかったもの。
    * 一覧から消えたままだと星を押せず、外す手立てが無くなるため下に並べる。
@@ -81,7 +78,7 @@ export default function Favorites({
     const seen = new Set<string>();
 
     days.forEach((day) => {
-      workCards(day.works, crossSites).forEach((card) => {
+      workCards(day.works).forEach((card) => {
         seen.add(card.workKey);
         card.legacyKeys.forEach((entry) => seen.add(entry));
       });
@@ -98,7 +95,7 @@ export default function Favorites({
     const named = new Set(works.map((work) => work.key));
 
     return { lost: rest.filter((key) => !named.has(key)), works };
-  }, [crossSites, days, favorites]);
+  }, [days, favorites]);
   const hasDormant = dormant.works.length > 0;
   const { forgetWorks } = favorites;
   const lost = dormant.lost.join("\n");

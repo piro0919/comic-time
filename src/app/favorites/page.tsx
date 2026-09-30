@@ -1,6 +1,5 @@
 import { type Metadata } from "next";
 import Favorites from "../_components/Favorites";
-import crossSiteWorks from "../crossSiteWorks";
 import pageMetadata from "../pageMetadata";
 import { dateLabel, recentWorks } from "../worksOfDay";
 
@@ -21,5 +20,5 @@ export default function Page(): React.JSX.Element {
     works: day.works,
   }));
 
-  return <Favorites crossSites={crossSiteWorks()} days={days} />;
+  return <Favorites days={days} />;
 }

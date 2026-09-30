@@ -12,8 +12,8 @@ import { type DateKey } from "@/types/work";
 import styles from "./style.module.css";
 
 export type WorkCardProps = {
-  /** 複数サイトに載っている作品だけ、どのサイトのぶんかを印で出す */
-  badge: CardSite | null;
+  /** どのサイトのぶんかを示す印 */
+  badge: CardSite;
   /** 置く側から大きさや順位の色を変えるためのクラス */
   className?: string;
   /** ランキングに並べるときだけ、絵の左上に開かれた回数を出す */
@@ -103,17 +103,9 @@ export default function WorkCard({
             </span>
           </span>
         )}
-        {badge === null ? null : (
-          // 同じ作品が複数サイトにあるときだけ、どこのぶんかを出す
-          <span className={styles.siteIcon} title={badge.name}>
-            <Image
-              alt={badge.name}
-              height={40}
-              src={badge.iconUrl}
-              width={40}
-            />
-          </span>
-        )}
+        <span className={styles.siteIcon} title={badge.name}>
+          <Image alt={badge.name} height={40} src={badge.iconUrl} width={40} />
+        </span>
       </div>
       <div className={styles.cardBody}>
         <span className={styles.cardTitle}>{title}</span>

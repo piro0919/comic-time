@@ -4,7 +4,6 @@ import App from "../App";
 import Favorites, { type FavoritesProps } from "../Favorites";
 
 export type HomeProps = {
-  crossSites: FavoritesProps["crossSites"];
   /** 今日ぶんとして出している日。既読の判断に使う */
   date: DateKey;
   days: FavoritesProps["days"];
@@ -31,7 +30,6 @@ export type HomeProps = {
  * このサイトで唯一クロールされている画面に読むものが無くなっていた。
  */
 export default function Home({
-  crossSites,
   date,
   days,
   today,
@@ -40,15 +38,10 @@ export default function Home({
   return (
     <>
       <div data-home-view="today">
-        <App
-          crossSites={crossSites}
-          date={date}
-          day={today}
-          works={todayWorks}
-        />
+        <App date={date} day={today} works={todayWorks} />
       </div>
       <div data-home-view="favorites">
-        <Favorites crossSites={crossSites} days={days} heading={false} />
+        <Favorites days={days} heading={false} />
       </div>
     </>
   );

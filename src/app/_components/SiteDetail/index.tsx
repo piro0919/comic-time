@@ -1,4 +1,3 @@
-import { type CrossSites } from "@/app/crossSiteWorks";
 import { type Site } from "@/app/siteCatalog";
 import workCards from "@/app/workCards";
 import { dateLabel } from "@/app/worksOfDay";
@@ -7,14 +6,12 @@ import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
 export type SiteDetailProps = {
-  crossSites: CrossSites;
   days: { date: DateKey; works: Work[] }[];
   site: Site;
 };
 
 /** サイト1つぶん。この一週間に出た作品を並べる */
 export default function SiteDetail({
-  crossSites,
   days,
   site,
 }: SiteDetailProps): React.JSX.Element {
@@ -33,7 +30,7 @@ export default function SiteDetail({
               <span className={styles.dayLine} />
             </div>
             <ul className={styles.grid}>
-              {workCards(day.works, crossSites).map((card, cardIndex) => (
+              {workCards(day.works).map((card, cardIndex) => (
                 <WorkCard
                   badge={card.badge}
                   date={day.date}

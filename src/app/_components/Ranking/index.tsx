@@ -1,12 +1,10 @@
 "use client";
-import { type CrossSites } from "@/app/crossSiteWorks";
 import workCards from "@/app/workCards";
 import { type RankedWork } from "@/app/workRanking";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
 export type RankingProps = {
-  crossSites: CrossSites;
   /** 数えた期間。「8/23（日） 〜 8/29（土）」の形 */
   period: string;
   works: RankedWork[];
@@ -18,12 +16,11 @@ const podiumSize = 3;
 const podiumStyles = [styles.first, styles.second, styles.third];
 
 export default function Ranking({
-  crossSites,
   period,
   works,
 }: RankingProps): React.JSX.Element {
   const cards = works.flatMap((ranked, index) => {
-    const [card] = workCards([ranked.work], crossSites);
+    const [card] = workCards([ranked.work]);
 
     return card === undefined ? [] : [{ ...card, index, ranked }];
   });

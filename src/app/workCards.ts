@@ -15,8 +15,8 @@ export type CardSite = {
 
 /** 画面に出すカード1枚ぶん。サイトごとに1枚で、まとめない */
 export type WorkCard = {
-  /** 複数サイトに載っている作品だけ、どのサイトのぶんかを示す印を出す */
-  badge: CardSite | null;
+  /** どのサイトのぶんかを示す印 */
+  badge: CardSite;
   foundAt: string;
   /** 昔の形での登録。見つけたら今の見出しに移す */
   legacyKeys: string[];
@@ -66,20 +66,12 @@ export function siteOf(work: Work): CardSite {
 
 /**
  * 作品をカードに移す。並びは渡された順のまま。
- * crossSites に載っている作品は複数サイトで読めるものなので、
  * どのサイトのぶんかを印で出す。登録はサイトごとに分けたままにする。
  */
-export default function workCards(
-  works: Work[],
-  crossSites: Record<string, CardSite[]> = {},
-): WorkCard[] {
+export default function workCards(works: Work[]): WorkCard[] {
   return works.map((work) => {
-    const key = titleKey(work.title);
-    const known = Object.hasOwn(crossSites, key) ? crossSites[key] : [];
-    const own = siteOf(work);
-
     return {
-      badge: known.length > 1 ? own : null,
+      badge: siteOf(work),
       foundAt: work.foundAt,
       // 作品URLで持っていた頃と、サイト名で見出しを作っていた頃のぶん
       legacyKeys: [work.url, workKey(work.siteName, work.title)],

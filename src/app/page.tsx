@@ -2,7 +2,6 @@ import { type Metadata } from "next";
 import { type Weekday, weekdays } from "@/types/work";
 import Home from "./_components/Home";
 import WorkIndex from "./_components/WorkIndex";
-import crossSiteWorks from "./crossSiteWorks";
 import { dayLabel } from "./days";
 import pageMetadata from "./pageMetadata";
 import { worksOfWeekday } from "./workCatalog";
@@ -40,7 +39,6 @@ export default function Page(): React.JSX.Element {
   return (
     <>
       <Home
-        crossSites={crossSiteWorks()}
         date={recentDateOf(today)}
         days={days}
         today={today}
