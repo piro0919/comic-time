@@ -87,7 +87,11 @@ test.describe("画面の操作", () => {
       return;
     }
 
-    await expect(cards.first()).toHaveAttribute("href", /^https?:\/\//);
+    // 無料で読める最新の回へ送るため、カードは /go を通る
+    await expect(cards.first()).toHaveAttribute(
+      "href",
+      /^\/go\?.*url=https?%3A%2F%2F/,
+    );
     await expect(cards.first()).toHaveAttribute("rel", /noopener/);
   });
 });
