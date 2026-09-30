@@ -1,7 +1,7 @@
 "use client";
 import clsx from "clsx";
 import Image from "next/image";
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { MdInfoOutline } from "react-icons/md";
 import useEarlySites from "@/app/useEarlySites";
 import useIsHydrated from "@/app/useIsHydrated";
@@ -28,6 +28,32 @@ export default function Settings({ sites }: SettingsProps): React.JSX.Element {
   // 説明は知りたい人だけが開く。常に出しておくと、札より先に文章を読まされる
   const [explained, setExplained] = useState(false);
   const noteId = useId();
+  const infoRef = useRef<HTMLDivElement>(null);
+
+  // 吹き出しは、外を押すか Esc で閉じる
+  useEffect(() => {
+    if (!explained) {
+      return undefined;
+    }
+
+    const close = (event: KeyboardEvent | PointerEvent): void => {
+      if (
+        event instanceof KeyboardEvent
+          ? event.key === "Escape"
+          : !infoRef.current?.contains(event.target as Node)
+      ) {
+        setExplained(false);
+      }
+    };
+
+    document.addEventListener("keydown", close);
+    document.addEventListener("pointerdown", close);
+
+    return (): void => {
+      document.removeEventListener("keydown", close);
+      document.removeEventListener("pointerdown", close);
+    };
+  }, [explained]);
 
   return (
     <div className={styles.container}>
@@ -35,24 +61,26 @@ export default function Settings({ sites }: SettingsProps): React.JSX.Element {
       <section className={styles.section}>
         <div className={styles.sectionHead}>
           <h2 className={styles.sectionTitle}>先読みで読むサイト</h2>
-          <button
-            onClick={() => {
-              setExplained((prev) => !prev);
-            }}
-            aria-controls={noteId}
-            aria-expanded={explained}
-            aria-label="説明"
-            className={styles.info}
-            type="button"
-          >
-            <MdInfoOutline size={18} />
-          </button>
+          <div className={styles.infoWrap} ref={infoRef}>
+            <button
+              onClick={() => {
+                setExplained((prev) => !prev);
+              }}
+              aria-controls={noteId}
+              aria-expanded={explained}
+              aria-label="説明"
+              className={styles.info}
+              type="button"
+            >
+              <MdInfoOutline size={18} />
+            </button>
+            {explained ? (
+              <p className={styles.tooltip} id={noteId} role="tooltip">
+                選んだサイトは先読みの回を、それ以外は無料の最新話を開きます。
+              </p>
+            ) : null}
+          </div>
         </div>
-        {explained ? (
-          <p className={styles.note} id={noteId}>
-            選んだサイトは先読みの回を、それ以外は無料の最新話を開きます。
-          </p>
-        ) : null}
         <ul className={styles.grid}>
           {sites.map((site) => {
             const early = hydrated && earlySites.isEarly(site.url);

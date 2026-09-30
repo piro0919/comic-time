@@ -40,10 +40,25 @@
   font-weight: 700;
 }
 
-.note {
-  color: var(--muted);
+.infoWrap {
+  position: relative;
+}
+
+/* ⓘの下に出す吹き出し。札の並びは押し下げない */
+.tooltip {
+  background: var(--foreground);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+  color: var(--background);
   font-size: 1.2rem;
-  line-height: 1.7;
+  inset: calc(100% + var(--space-1)) auto auto 50%;
+  line-height: 1.6;
+  max-width: min(260px, 80vw);
+  padding: var(--space-2) var(--space-3);
+  position: absolute;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 10;
 }
 
 .grid {
