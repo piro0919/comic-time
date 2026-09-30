@@ -66,7 +66,12 @@
   }
 }
 
-/* 動く向きを示す矢じるし。線2本の角で描き、文字の色に合わせる */
+/*
+ * 動く向きを示す矢じるし。線2本の角で描き、文字の色に合わせる。
+ * 数字は字の箱の下寄りに収まるので、箱の中心で揃えると矢じるしが浮いて見える。
+ * 実測で1.5px上にずれていたぶん下げる
+ */
+
 .swipeHint::before,
 .swipeHint::after {
   border: solid currentcolor;
@@ -85,7 +90,7 @@
 
 .swipeHint[data-side="right"]::before {
   display: block;
-  transform: rotate(45deg);
+  transform: translateY(1.5px) rotate(45deg);
 }
 
 .swipeHint[data-side="left"] {
@@ -96,7 +101,7 @@
 
 .swipeHint[data-side="left"]::after {
   display: block;
-  transform: rotate(-135deg);
+  transform: translateY(1.5px) rotate(-135deg);
 }
 
 .swipeHint[data-armed="true"] {
