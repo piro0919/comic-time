@@ -1,0 +1,44 @@
+.list {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2);
+  display: grid;
+  overflow: hidden;
+}
+
+.list > li + li {
+  border-top: 1px solid var(--border);
+}
+
+.item {
+  align-items: center;
+  display: flex;
+  gap: var(--space-3);
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+}
+
+.title {
+  font-size: 1.3rem;
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+  gap: var(--space-2);
+}
+
+.lock {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0 var(--space-2);
+}
+
+.note {
+  color: var(--muted);
+  font-size: 1.2rem;
+}

@@ -1,8 +1,8 @@
+import { readFields, stringOf } from "../../../src/app/protobuf.ts";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import todayKey from "../date.ts";
 import fetchHtml from "../fetchHtml.ts";
 import mapLimited from "../mapLimited.ts";
-import { readFields, stringOf } from "../protobuf.ts";
 import resolveEpisodes from "../resolveEpisodes.ts";
 
 /**

@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { dayHref } from "@/app/days";
+import episodeSourceOf from "@/app/episodes/episodeSourceOf";
 import { siteHref } from "@/app/siteCatalog";
 import siteSlug from "@/app/siteSlug";
 import { dateLabel } from "@/app/worksOfDay";
 import { type CatalogEntry, daysOf, weekdayJa } from "@/types/work";
+import EpisodeList from "../EpisodeList";
 import styles from "./style.module.css";
 
 export type WorkDetailProps = {
@@ -22,6 +24,9 @@ export default function WorkDetail({
   work,
 }: WorkDetailProps): React.JSX.Element {
   const days = daysOf(work.dayBits);
+  const episodeSites = work.sites.filter(
+    (site) => episodeSourceOf(site.siteUrl) !== undefined,
+  );
 
   return (
     <div className={styles.container}>
@@ -92,6 +97,14 @@ export default function WorkDetail({
           ))}
         </ul>
       </section>
+      {episodeSites.map((site) => (
+        <section className={styles.section} key={site.siteUrl}>
+          <h2 className={styles.sectionTitle}>
+            {episodeSites.length === 1 ? "話の一覧" : `${site.name}の話の一覧`}
+          </h2>
+          <EpisodeList siteUrl={site.siteUrl} slug={work.slug} />
+        </section>
+      ))}
       {/* 曜日を出していない作品に、曜日の断り書きだけ残っても読み手には意味がない */}
       {days.length === 0 ? null : (
         <p className={styles.note}>

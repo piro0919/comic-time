@@ -1,6 +1,6 @@
+import { readFields, stringOf } from "../../../src/app/protobuf.ts";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import todayKey from "../date.ts";
-import { readFields, stringOf } from "../protobuf.ts";
 
 /**
  * ゼロサムオンラインは protobuf を返す API を持つ。

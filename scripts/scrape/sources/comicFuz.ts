@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
+import { readFields, stringOf } from "../../../src/app/protobuf.ts";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import fetchHtml from "../fetchHtml.ts";
-import { readFields, stringOf } from "../protobuf.ts";
 import resolveEpisodes from "../resolveEpisodes.ts";
 
 /**

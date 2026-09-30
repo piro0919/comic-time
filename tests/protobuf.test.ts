@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { readFields, stringOf } from "../scripts/scrape/protobuf.ts";
+import { readFields, stringOf } from "../src/app/protobuf.ts";
 
 /** 欄番号と種別を1バイトにまとめたもの。種別0は数、種別2は長さ付きのバイト列 */
 const tag = (number: number, wireType: number): number => number * 8 + wireType;
