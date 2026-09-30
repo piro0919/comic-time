@@ -27,38 +27,52 @@
   line-height: 1.7;
 }
 
-.list {
+.grid {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.chip {
+  align-items: center;
+  background: var(--background);
   border: 1px solid var(--border);
   border-radius: var(--radius-2);
-  display: grid;
-  overflow: hidden;
-}
-
-.list > li + li {
-  border-top: 1px solid var(--border);
-}
-
-.item {
-  align-items: center;
+  color: var(--foreground);
   cursor: pointer;
   display: flex;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
+  height: 100%;
+  padding: var(--space-2);
+  text-align: left;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+  width: 100%;
+}
+
+.chip:hover {
+  background: var(--surface);
+}
+
+/* 選んだ札は塗りつぶす。どれを選んだかを一目で拾えるようにする */
+.isEarly,
+.isEarly:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  /* 暗い画面ではアクセントが明るい色になる。文字は地の色にして読めるようにする */
+  color: var(--background);
+  font-weight: 700;
 }
 
 .icon {
+  background: #fff;
   border-radius: var(--radius-1);
   flex-shrink: 0;
 }
 
 .name {
-  flex: 1;
-  font-size: 1.3rem;
-}
-
-.input {
-  flex-shrink: 0;
-  height: 18px;
-  margin: 0;
-  width: 18px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }

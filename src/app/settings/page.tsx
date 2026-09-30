@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import Settings from "../_components/Settings";
-import episodeSourceOf from "../episodes/episodeSourceOf";
+import { offersEarly } from "../episodes/episodeSourceOf";
 import pageMetadata from "../pageMetadata";
 import { sites } from "../siteCatalog";
 
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 export default function Page(): React.JSX.Element {
   return (
     <Settings
-      // 話の一覧を取れないサイトでは、どちらを選んでも送り先が変わらない
+      // 先読みの回が出てこないサイトでは、どちらを選んでも送り先が変わらない
       sites={sites()
-        .filter((site) => episodeSourceOf(site.url) !== undefined)
+        .filter((site) => offersEarly(site.url))
         .map((site) => ({ name: site.name, slug: site.slug, url: site.url }))}
     />
   );

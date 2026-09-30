@@ -46,6 +46,25 @@ const sources: Record<string, EpisodeSource> = {
   "https://yanmaga.jp/": yanmaga,
   "https://youngchampion.jp/": comici,
 };
+/**
+ * 先読みの回が一覧に出てこない取り方。先読みがサイトに無いか、
+ * あっても Web で開ける住所が無くて外している。設定に並べても何も変わらない
+ */
+const withoutEarly = new Set<EpisodeSource>([
+  comicMeteor,
+  comicWalker,
+  ganganOnline,
+  gaugauMonster,
+  shuro,
+  twi4,
+]);
+
+/** 先読みの回を開くかどうかを選べるサイトか */
+export function offersEarly(siteUrl: string): boolean {
+  const source = episodeSourceOf(siteUrl);
+
+  return source !== undefined && !withoutEarly.has(source);
+}
 
 /** そのサイトの話の一覧の取り方。取れないサイトは undefined */
 export default function episodeSourceOf(
