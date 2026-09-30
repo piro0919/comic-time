@@ -1,5 +1,6 @@
 import { type Episode } from "./episode";
 import fetchText from "./fetchText";
+import japanDate from "./japanDate";
 
 /**
  * GigaViewer（少年ジャンプ＋、コミックDAYS、となりのヤングジャンプなど10サイト）の話の一覧。
@@ -21,19 +22,6 @@ type Product = {
 };
 
 const aggregatePattern = /data-aggregate-id="(\d+)"/;
-
-/** 「2026-09-13T03:00:00Z」を日本の日付にする */
-function japanDate(iso: null | string): null | string {
-  if (iso === null) {
-    return null;
-  }
-
-  const time = Date.parse(iso);
-
-  return Number.isNaN(time)
-    ? null
-    : new Date(time + 9 * 3600 * 1000).toISOString().slice(0, 10);
-}
 
 function toEpisode(product: Product): Episode {
   return {

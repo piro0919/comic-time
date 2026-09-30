@@ -12,7 +12,7 @@ afterEach(() => {
 });
 
 /** 住所の一部と返す中身の組で fetch を差し替える。頼まれた住所は asked に残す */
-function serve(pages: [string, BodyInit | ((url: string) => BodyInit)][]): {
+function serve(pages: [string, ((url: string) => BodyInit) | BodyInit][]): {
   asked: string[];
 } {
   const asked: string[] = [];
@@ -61,7 +61,7 @@ test("GigaViewer: 50件ずつ送り、空になったら止める", async () => 
     ["/episode/1", '<div data-aggregate-id="777"></div>'],
     [
       "pagination_readable_products",
-      (url) =>
+      (url): string =>
         JSON.stringify(
           url.includes("offset=0")
             ? first
@@ -71,7 +71,6 @@ test("GigaViewer: 50件ずつ送り、空になったら止める", async () => 
         ),
     ],
   ]);
-
   const episodes = await gigaViewer("https://comic-gardo.com/episode/1");
 
   assert.equal(episodes.length, 51);
@@ -209,7 +208,6 @@ test("マンガワン: 作品の番号で話の一覧を引き、先読みの回
       readFileSync(new URL("./fixtures/mangaOneViewer.bin", import.meta.url)),
     ],
   ]);
-
   const [episode] = await mangaOne("https://manga-one.com/title/2166");
 
   assert.ok(asked[0]?.includes("title_id=2166"));

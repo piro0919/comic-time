@@ -1,5 +1,7 @@
 import { type Episode } from "./episode";
 import fetchText from "./fetchText";
+import { flightOf, sliceJson } from "./flight";
+import japanDate from "./japanDate";
 
 /**
  * comici（コミックライド、コミプレ、チャンピオンクロス、ヤンチャンWeb、竹コミ！）の話の一覧。
@@ -34,43 +36,8 @@ function canonicalUrl(url: string): URL {
   return parsed;
 }
 
-/** React の受け渡しを1本の文字列につなぐ */
-function flightOf(html: string): string {
-  return [
-    ...html.matchAll(/self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)/g),
-  ]
-    .map((matched) => JSON.parse(`"${matched[1] ?? ""}"`) as string)
-    .join("");
-}
-
-/** start から始まる JSON の配列か塊を、閉じ括弧まで切り出す。文字列の中の括弧は数えない */
-function sliceJson(text: string, start: number): string {
-  let depth = 0;
-  let inString = false;
-  let escaped = false;
-
-  for (let index = start; index < text.length; index += 1) {
-    const char = text[index];
-
-    if (escaped) {
-      escaped = false;
-    } else if (inString) {
-      escaped = char === "\\";
-      inString = char !== '"';
-    } else if (char === '"') {
-      inString = true;
-    } else if (char === "[" || char === "{") {
-      depth += 1;
-    } else if ((char === "]" || char === "}") && --depth === 0) {
-      return text.slice(start, index + 1);
-    }
-  }
-
-  throw new Error("comici: 話の一覧が途中で切れている");
-}
-
 function episodesOf(flight: string): ComiciEpisode[] {
-  const key = '"episodes":';
+  const key = "\"episodes\":";
   const start = flight.indexOf(`${key}[`);
 
   return start === -1
@@ -93,10 +60,6 @@ function accessOf(flight: string): Map<string, string> {
   }
 
   return access;
-}
-
-function japanDate(seconds: number): string {
-  return new Date((seconds + 9 * 3600) * 1000).toISOString().slice(0, 10);
 }
 
 export default async function comici(url: string): Promise<Episode[]> {
@@ -138,7 +101,7 @@ export default async function comici(url: string): Promise<Episode[]> {
             : index < latestFree
               ? "early"
               : "paid",
-      date: japanDate(episode.datePublished),
+      date: japanDate(episode.datePublished * 1000),
       title: episode.title,
       url: `${episodeUrl.origin}/episodes/${episode.id}`,
     };
