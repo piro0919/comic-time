@@ -1,12 +1,13 @@
 import * as cheerio from "cheerio";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import fetchHtml from "../fetchHtml.ts";
+import resolveEpisodes from "../resolveEpisodes.ts";
 
 /**
  * マンガUP!のトップには「今日の更新（水曜日）」の区画がある。
  * サイトが今日と言っているものをそのまま採る。こちらで日付を判断しない。
  *
- * 区画に並ぶのは作品への道だけで、話への道は無い。作品ページ止まりにする。
+ * 区画に並ぶのは作品への道だけで、話への道は無い。作品ページの話の一覧を辿る。
  * 見出しの並びの隣に「もっと見る」があるので、作品の住所の形で選り分ける。
  *
  * **区画は開くたびに違う8作品を出す。** 今日の更新（2026-09-26 の土曜で31作品）から
@@ -19,6 +20,24 @@ import fetchHtml from "../fetchHtml.ts";
  */
 const topUrl = "https://www.manga-up.com/";
 const headingText = "今日の更新";
+
+/**
+ * 作品ページの話の一覧の末尾。一覧は古い順で、末尾が最新話になる。
+ * Web で読めるのは冒頭だけで続きはアプリへ送られるが、それでも話のページを指す。
+ * 読み取れなければ null にして、その作品だけ作品ページに戻す。
+ */
+async function latestEpisode(workUrl: string): Promise<null | string> {
+  try {
+    const $ = cheerio.load(await fetchHtml(workUrl));
+    const path = new URL(workUrl).pathname;
+    const href = $(`a[href*="${path}/chapters/"]`).last().attr("href");
+
+    return href === undefined ? null : new URL(href, topUrl).toString();
+  } catch {
+    return null;
+  }
+}
+
 /** 読み直す上限 */
 const maxReads = 20;
 /** 新しい作品が続けてこの回数出なければ、出揃ったとみなす */
@@ -92,5 +111,6 @@ export default async function mangaUp({
     quiet = byTitle.size === before ? quiet + 1 : 0;
   }
 
-  return [...byTitle.values()];
+  // 話への道は作品ページにしか無いので、1作品につき1枚見に行く
+  return resolveEpisodes([...byTitle.values()], latestEpisode);
 }

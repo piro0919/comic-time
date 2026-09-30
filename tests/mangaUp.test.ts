@@ -22,10 +22,23 @@ const page = `<html><body>
   </div>
 </section>
 </body></html>`;
+/**
+ * 作品ページの話の一覧。古い順に並び、上に「次の話を読む」がある。
+ * 「もっと見る」で畳まれるので、先頭と末尾の数話だけが載る。
+ */
+const titlePage = `<html><body>
+<a href="https://www.manga-up.com/titles/1637/chapters/12"><button>次の話を読む</button></a>
+<a class="w-full" href="https://www.manga-up.com/titles/1637/chapters/11">第1話</a>
+<a class="w-full" href="https://www.manga-up.com/titles/1637/chapters/12">第2話</a>
+<a class="w-full" href="https://www.manga-up.com/titles/1637/chapters/30">第20話</a>
+<a href="https://www.manga-up.com/titles/2000/chapters/99">おすすめの別作品</a>
+</body></html>`;
 
-function serve(html: string): void {
-  globalThis.fetch = (async () =>
-    new Response(html, { status: 200 })) as typeof fetch;
+function serve(html: string, work = ""): void {
+  globalThis.fetch = (async (input: RequestInfo | URL) =>
+    new Response(String(input).includes("/titles/1637") ? work : html, {
+      status: 200,
+    })) as typeof fetch;
 }
 
 test("今日の更新の区画にある作品だけを返す", async () => {
@@ -39,13 +52,25 @@ test("今日の更新の区画にある作品だけを返す", async () => {
   );
 });
 
-test("作品ページの住所を返す。話への道は無い", async () => {
+test("作品ページの話の一覧の末尾を最新話として返す", async () => {
+  serve(page, titlePage);
+
+  const works = await mangaUp({ pause: 0 });
+
+  assert.equal(
+    works[0]?.url,
+    "https://www.manga-up.com/titles/1637/chapters/30",
+  );
+  assert.equal(works[0]?.workUrl, "https://www.manga-up.com/titles/1637");
+  assert.equal(works[1]?.thumbnailUrl, "https://www.manga-up.com/1153.webp");
+});
+
+test("話の一覧が読めなければ、その作品だけ作品ページに戻す", async () => {
   serve(page);
 
   const works = await mangaUp({ pause: 0 });
 
   assert.equal(works[0]?.url, "https://www.manga-up.com/titles/1637");
-  assert.equal(works[1]?.thumbnailUrl, "https://www.manga-up.com/1153.webp");
 });
 
 /** 区画ごと消えたら、その日を空にするのではなく壊れたと分かるようにする */
@@ -94,8 +119,11 @@ test("読み直して、抽選で出た作品を束ねる", async () => {
 test("新しい作品が出なくなったら読むのをやめる", async () => {
   let read = 0;
 
-  globalThis.fetch = (async () => {
-    read += 1;
+  globalThis.fetch = (async (input: RequestInfo | URL) => {
+    // 最後に作品ページも1枚見に行くので、トップを読んだ回数だけを数える
+    if (!String(input).includes("/titles/")) {
+      read += 1;
+    }
 
     return new Response(section(["a"]), { status: 200 });
   }) as typeof fetch;

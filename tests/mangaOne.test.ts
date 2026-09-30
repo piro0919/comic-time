@@ -6,11 +6,19 @@ import mangaOne from "../scripts/scrape/sources/mangaOne.ts";
 const home = readFileSync(
   new URL("./fixtures/mangaOneHome.bin", import.meta.url),
 );
+/** 題名 2166 の話の一覧。先頭は id 359722 の回 */
+const viewer = readFileSync(
+  new URL("./fixtures/mangaOneViewer.bin", import.meta.url),
+);
 const realFetch = globalThis.fetch;
 
-/** 更新一覧は protobuf、作品ページは HTML と、2種類を返し分ける */
-function serveWith(page: string): void {
+/** 更新一覧と話の一覧は protobuf、作品ページは HTML と、3種類を返し分ける */
+function serveWith(page: string, chapters: typeof viewer = viewer): void {
   globalThis.fetch = (async (input: RequestInfo | URL) => {
+    if (String(input).includes("rq=viewer_v2")) {
+      return new Response(chapters, { status: 200 });
+    }
+
     if (String(input).includes("/api/client")) {
       return new Response(home, { status: 200 });
     }
@@ -38,6 +46,28 @@ test("今日の枠のうち、更新の印が付いた作品だけを返す", as
       "負けヒロインが多すぎる！@comic",
     ],
   );
+});
+
+/** 作品ページはアプリへの案内なので、Web 版の読む画面の最新話を指す */
+test("話の一覧の先頭の回を返す", async () => {
+  serveWith("");
+
+  const works = await mangaOne("2026-08-21");
+
+  works.forEach((work) => {
+    assert.match(
+      work.url,
+      /^https:\/\/manga-one\.com\/manga\/\d+\/chapter\/359722$/,
+    );
+    assert.match(work.workUrl ?? "", /^https:\/\/manga-one\.com\/title\/\d+$/);
+  });
+});
+
+test("話の一覧が読めなければ、その作品だけ作品ページに戻す", async () => {
+  serveWith("", Buffer.alloc(0));
+
+  const works = await mangaOne("2026-08-21");
+
   works.forEach((work) => {
     assert.match(work.url, /^https:\/\/manga-one\.com\/title\/\d+$/);
   });

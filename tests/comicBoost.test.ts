@@ -24,10 +24,17 @@ const page = `<html><body>
   <p class="title-name">札の無い作品</p>
 </a>
 </body></html>`;
+/** 作品ページ。「最新話を読む」と「最初から読む」が並ぶ */
+const workPage = `<html><body>
+<a class="primary btn-read" href="/product/01730005"><span>最新話を読む</span></a>
+<a class="btn-read" href="/product/01730001"><span>最初から読む</span></a>
+</body></html>`;
 
-function serve(html: string): void {
-  globalThis.fetch = (async () =>
-    new Response(html, { status: 200 })) as typeof fetch;
+function serve(html: string, work = ""): void {
+  globalThis.fetch = (async (input: RequestInfo | URL) =>
+    new Response(String(input).includes("/content/") ? work : html, {
+      status: 200,
+    })) as typeof fetch;
 }
 
 test("その日の札が付いた作品だけを返す", async () => {
@@ -48,11 +55,20 @@ test("更新の無い日は空になる", async () => {
   assert.deepEqual(await comicBoost("2026-09-09"), []);
 });
 
-test("作品ページの住所と絵を返す", async () => {
+test("作品ページの「最新話を読む」の住所と絵を返す", async () => {
+  serve(page, workPage);
+
+  const [work] = await comicBoost("2026-09-08");
+
+  assert.equal(work?.url, "https://comic-boost.com/product/01730005");
+  assert.equal(work?.workUrl, "https://comic-boost.com/content/01730001");
+  assert.equal(work?.thumbnailUrl, "https://cdn.comic-boost.com/a.jpg");
+});
+
+test("最新話の道が無ければ、その作品だけ作品ページに戻す", async () => {
   serve(page);
 
   const [work] = await comicBoost("2026-09-08");
 
   assert.equal(work?.url, "https://comic-boost.com/content/01730001");
-  assert.equal(work?.thumbnailUrl, "https://cdn.comic-boost.com/a.jpg");
 });

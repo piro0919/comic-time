@@ -3,6 +3,7 @@ import todayKey from "../date.ts";
 import fetchHtml from "../fetchHtml.ts";
 import mapLimited from "../mapLimited.ts";
 import { readFields, stringOf } from "../protobuf.ts";
+import resolveEpisodes from "../resolveEpisodes.ts";
 
 /**
  * マンガワンは protobuf を返す API を持ち、日付ごとの更新一覧が7日ぶん入る。
@@ -17,10 +18,18 @@ import { readFields, stringOf } from "../protobuf.ts";
  *
  * 欄7 は順位表に載っている作品にしか入らない。無いものは作品ページの
  * og:image から拾う。画像の URL は署名付きで、組み立て直すことはできない。
+ *
+ * 作品ページはアプリへの案内で、話への道は無い。話の一覧は Web 版の読む画面が
+ * 別の API（rq=viewer_v2）から取っているので、そちらで最新話を引く。
+ *
+ * Viewer { 11: ChapterList }
+ * ChapterList { 1: repeated Chapter }  新しい順
+ * Chapter { 1: id, 2: 話数, 3: 副題, 5: 公開日 }
  */
 const apiUrl =
   "https://manga-one.com/api/client?rq=home&is_from_redirect=false";
 const workOrigin = "https://manga-one.com/title";
+const viewerOrigin = "https://manga-one.com/manga";
 const ogImagePattern = /property="og:image"\s+content="([^"]+)"/;
 
 /** 作品ページのサムネイル。取れなければ null にして、その作品だけ絵を諦める */
@@ -29,6 +38,61 @@ async function thumbnailFromPage(url: string): Promise<null | string> {
     const matched = ogImagePattern.exec(await fetchHtml(url));
 
     return matched?.[1]?.replaceAll("&amp;", "&") ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** 話の一覧を新しい順に1件だけ頼む。POST でないと 405 が返る */
+function chapterListUrl(titleId: string): string {
+  const params = new URLSearchParams({
+    event_point: "0",
+    free_point: "0",
+    limit: "1",
+    list_type: "chapter",
+    page: "1",
+    paid_point: "0",
+    rq: "viewer_v2",
+    sort_type: "desc",
+    title_id: titleId,
+  });
+
+  return `https://manga-one.com/api/client?${params.toString()}`;
+}
+
+/** 話の一覧の先頭。読み取れなければ null にして、その作品だけ作品ページに戻す */
+async function latestEpisode(workUrl: string): Promise<null | string> {
+  const titleId = workUrl.split("/").at(-1) ?? "";
+
+  try {
+    const res = await fetch(chapterListUrl(titleId), {
+      method: "POST",
+      signal: AbortSignal.timeout(30000),
+    });
+
+    if (!res.ok) {
+      return null;
+    }
+
+    const list = readFields(new Uint8Array(await res.arrayBuffer())).find(
+      (field) => field.number === 11 && field.value instanceof Uint8Array,
+    );
+    const chapter =
+      list === undefined
+        ? undefined
+        : readFields(list.value as Uint8Array).find(
+            (field) => field.number === 1 && field.value instanceof Uint8Array,
+          );
+    const id =
+      chapter === undefined
+        ? undefined
+        : readFields(chapter.value as Uint8Array).find(
+            (field) => field.number === 1,
+          )?.value;
+
+    return typeof id === "number"
+      ? `${viewerOrigin}/${titleId}/chapter/${id}`
+      : null;
   } catch {
     return null;
   }
@@ -107,9 +171,11 @@ export default async function mangaOne(
     });
 
   // 順位表に載っていない作品は、作品ページを1枚ずつ見に行く
-  return mapLimited(works, async (work) =>
+  const withThumbnails = await mapLimited(works, async (work) =>
     work.thumbnailUrl === null
       ? { ...work, thumbnailUrl: await thumbnailFromPage(work.url) }
       : work,
   );
+
+  return resolveEpisodes(withThumbnails, latestEpisode);
 }
