@@ -1,13 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
 import authClient from "@/app/authClient";
+import { mergeEarlySites, readEarlySites } from "@/app/earlySites";
 import { mergeFollows, readFollows } from "@/app/follows";
 import { mergeOpens, readOpens } from "@/app/opens";
+import useEarlySites from "@/app/useEarlySites";
 import useFavorites from "@/app/useFavorites";
 import useOpened from "@/app/useOpened";
 
 /**
- * ログインしているあいだ、開くたびにサーバーの登録と既読を手元へ取り込む。
+ * ログインしているあいだ、開くたびにサーバーの登録と既読と先読みの設定を手元へ取り込む。
  * 別の端末で押したぶんは、ここを通らないと届かない。
  *
  * ログインした最初の一度だけは、取り込む前に端末に溜まっていたぶんをサーバーへ足す。
@@ -39,6 +41,7 @@ export default function AccountSync(): null {
   const { data: session, isPending } = authClient.useSession();
   const favorites = useFavorites();
   const opened = useOpened();
+  const earlySites = useEarlySites();
   // 往復のあいだに押された登録を見分けるため、最新の値をいつでも覗けるようにする
   const latest = useRef(favorites);
   // 取り込みは往復するあいだに何度も描き直される。1回の表示で1人につき一度だけ走らせる
@@ -81,9 +84,12 @@ export default function AccountSync(): null {
         ? mergeFollows({ sites: before.siteUrls, works: before.workUrls })
         : readFollows(),
       first ? mergeOpens(opened.all) : readOpens(),
-    ]).then(async ([firstFollows, opens]) => {
+      first ? mergeEarlySites(earlySites.siteUrls) : readEarlySites(),
+    ]).then(async ([firstFollows, opens, early]) => {
       // 既読は日付の新しい方を採って足すので、往復中に開いた回も消えない
       opened.mergeAll(opens);
+      // 先読みの設定は押す機会が少ない。往復中に押された場合の読み直しまではしない
+      earlySites.replaceAll(early);
 
       /*
        * 登録は外したことも写すので、丸ごと置き換える。
@@ -115,7 +121,7 @@ export default function AccountSync(): null {
 
       return follows;
     });
-  }, [isPending, opened, userId]);
+  }, [earlySites, isPending, opened, userId]);
 
   return null;
 }

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import rankingEventName from "@/app/rankingEventName";
+import useEarlySites from "@/app/useEarlySites";
 import useFavorites from "@/app/useFavorites";
 import useOpened from "@/app/useOpened";
 import { type CardSite } from "@/app/workCards";
@@ -49,6 +50,13 @@ export default function WorkCard({
 }: WorkCardProps): React.JSX.Element {
   const favorites = useFavorites();
   const opened = useOpened();
+  /**
+   * 先読みを開くと決めたサイトは、取得した回へそのまま送る。
+   * それ以外は中継を通して、無料で読める最新の回へ送る
+   */
+  const href = useEarlySites().isEarly(badge.siteUrl)
+    ? url
+    : `/go?${new URLSearchParams({ site: badge.siteUrl, url }).toString()}`;
   const added = favorites.hasWork(workKey, legacyKeys);
   const { adoptTitle, rememberTitle } = favorites;
   /** 配列は描き直すたびに別物になる。中身で見て、無駄に動かさない */
@@ -140,7 +148,7 @@ export default function WorkCard({
         }}
         aria-label={title}
         className={styles.cardLink}
-        href={url}
+        href={href}
         rel="noopener noreferrer"
         target="_blank"
       />

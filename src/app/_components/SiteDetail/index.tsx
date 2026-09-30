@@ -1,7 +1,9 @@
+import episodeSourceOf from "@/app/episodes/episodeSourceOf";
 import { type Site } from "@/app/siteCatalog";
 import workCards from "@/app/workCards";
 import { dateLabel } from "@/app/worksOfDay";
 import { type DateKey, type Work } from "@/types/work";
+import EarlyToggle from "../EarlyToggle";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 
@@ -19,6 +21,10 @@ export default function SiteDetail({
     <div className={styles.container}>
       <header className={styles.head}>
         <h1 className={styles.title}>{site.name}</h1>
+        {/* 話の一覧を取れないサイトでは、どちらを選んでも送り先が変わらない */}
+        {episodeSourceOf(site.url) === undefined ? null : (
+          <EarlyToggle siteUrl={site.url} />
+        )}
       </header>
       {days.length === 0 ? (
         <p className={styles.empty}>過去 7 日間の更新はありません。</p>

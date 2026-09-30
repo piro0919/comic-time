@@ -12,6 +12,7 @@ const sources: Record<string, EpisodeSource> = {
   "https://comic-ogyaaa.com/": gigaViewer,
   "https://comic-zenon.com/": gigaViewer,
   "https://comicride.jp/": comici,
+  "https://getsumagakichi.com/": gigaViewer,
   "https://kuragebunch.com/": gigaViewer,
   "https://magcomi.com/": gigaViewer,
   "https://manga-one.com/": mangaOne,

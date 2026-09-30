@@ -1,4 +1,5 @@
 "use client";
+import { EarlySitesContext, useEarlySitesState } from "@/app/useEarlySites";
 import { FavoritesContext, useFavoritesState } from "@/app/useFavorites";
 import { OpenedContext, useOpenedState } from "@/app/useOpened";
 
@@ -7,7 +8,7 @@ export type LocalStateProps = {
 };
 
 /**
- * 手元に持っている登録と既読を、画面ぜんぶで1つずつにする。
+ * 手元に持っている登録と既読と先読みの設定を、画面ぜんぶで1つずつにする。
  *
  * 以前はカードが自分で useFavorites と useOpened を呼んでいた。あれは1枚ごとに
  * localStorage の購読を作るので、一覧に400枚並ぶと購読が千を超える。
@@ -22,10 +23,15 @@ export default function LocalState({
 }: LocalStateProps): React.JSX.Element {
   const favorites = useFavoritesState();
   const opened = useOpenedState();
+  const earlySites = useEarlySitesState();
 
   return (
     <FavoritesContext.Provider value={favorites}>
-      <OpenedContext.Provider value={opened}>{children}</OpenedContext.Provider>
+      <OpenedContext.Provider value={opened}>
+        <EarlySitesContext.Provider value={earlySites}>
+          {children}
+        </EarlySitesContext.Provider>
+      </OpenedContext.Provider>
     </FavoritesContext.Provider>
   );
 }
