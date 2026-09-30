@@ -163,13 +163,14 @@ function lastmodOf(loc) {
 const config = {
   siteUrl: "https://comictime.kkweb.io/",
   generateRobotsTxt: true,
-  // 圏外のときだけ出る画面と、ページではないもの。検索結果に載せない
+  // 圏外のときだけ出る画面、読み手ごとの設定の画面、ページではないもの。検索結果に載せない
   exclude: [
     "/~offline",
     "/import",
     "/apple-icon.png",
     "/manifest.webmanifest",
     "/opengraph-image",
+    "/settings",
   ],
   transform: async (conf, loc) => ({
     // 作品の住所は日本語のまま。サイトマップには符号化した形で載せる
