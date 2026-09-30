@@ -1,4 +1,4 @@
-import { type Weekday, weekdays } from "@/types/work";
+import { type Weekday, weekdayJa, weekdays } from "@/types/work";
 import { dayHref } from "./days";
 
 export const favoritesHref = "/favorites";
@@ -35,4 +35,33 @@ export function weekOrder(today: number): Weekday[] {
     { length: 7 },
     (_, back) => weekdays[(today - back + 7) % 7] ?? "sun",
   );
+}
+
+/**
+ * タブに出している名前。スワイプの途中で行き先として見せる。
+ * 曜日は、今日から遡ってその曜日に当たる日付を付ける。タブと同じ書き方にする
+ */
+export function tabLabel(href: string, today: Date): string | undefined {
+  if (href === favoritesHref) {
+    return "お気に入り";
+  }
+
+  if (href === sitesHref) {
+    return "サイト一覧";
+  }
+
+  const day = weekdays.find((key) => dayHref(key) === href);
+
+  if (day === undefined) {
+    return undefined;
+  }
+
+  const back = (today.getDay() - weekdays.indexOf(day) + 7) % 7;
+  const date = new Date(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate() - back,
+  );
+
+  return `${date.getMonth() + 1}/${date.getDate()}（${weekdayJa[day]}）`;
 }

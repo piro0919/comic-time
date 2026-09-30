@@ -16,7 +16,7 @@ export type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps): React.JSX.Element {
   const { resolvedTheme } = useTheme();
-  const swipeTabs = useSwipeTabs();
+  const { handlers: swipeHandlers, hintRef } = useSwipeTabs();
 
   useShowWindowSize({
     disable: process.env.NODE_ENV === "production",
@@ -28,7 +28,7 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
       height="3px"
       options={{ showSpinner: false }}
     >
-      <div className={styles.container} {...swipeTabs}>
+      <div className={styles.container} {...swipeHandlers}>
         <div className={styles.header}>
           <Header />
           <div className={styles.mobileNav}>
@@ -40,6 +40,13 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
         </div>
         <main className={styles.main}>{children}</main>
       </div>
+      {/* スワイプの行き先。中身と位置は useSwipeTabs が指の動きに合わせて書き換える */}
+      <div
+        aria-hidden={true}
+        className={styles.swipeHint}
+        data-side=""
+        ref={hintRef}
+      />
       <Toaster
         mobileOffset="calc(var(--header-height) + var(--mobile-nav-height) + var(--space-2))"
         offset="calc(var(--header-height) + var(--mobile-nav-height) + var(--space-2))"
