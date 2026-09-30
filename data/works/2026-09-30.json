@@ -309,12 +309,13 @@
     "url": "https://comic-walker.com/detail/KC_020412_S/episodes/KC_0204120000300021_E"
   },
   {
-    "foundAt": "00:05",
+    "foundAt": "18:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
     "thumbnailUrl": "https://app.manga-one.com/secure/1784618345/webp/chapter/357205.webp?hash=5Jpaivk54RKrB62GSOtwtQ&expires=1877212800",
     "title": "かくして季節はアオを知る",
-    "url": "https://manga-one.com/title/28345"
+    "url": "https://manga-one.com/manga/28345/chapter/359818",
+    "workUrl": "https://manga-one.com/title/28345"
   },
   {
     "foundAt": "00:05",
@@ -469,7 +470,7 @@
     "foundAt": "00:05",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ae398ebbd6a23da7eac2ba5f442edf6a071869ac/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F3269754496840031505-418ba64947120e8719c390c4d58aad4c%3F1785461393",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/564f6638bdb45557610a9131959eff6f52f81ec1/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F3269754496840031505-d05019e49c6b0995fe644d623ac296d1%3F1790739367",
     "title": "ジャンケットバンク",
     "url": "https://shonenjumpplus.com/episode/9253191256784141836"
   },
@@ -532,12 +533,13 @@
     "url": "https://comic-walker.com/detail/KC_006213_S/episodes/KC_0062130006100011_E"
   },
   {
-    "foundAt": "00:05",
+    "foundAt": "18:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
     "thumbnailUrl": "https://app.manga-one.com/secure/1763713956/webp/chapter/328129.webp?hash=YwFGtbZOkUsNBpFpqLb0sQ&expires=1877212800",
     "title": "ただいま待機中につき",
-    "url": "https://manga-one.com/title/27457"
+    "url": "https://manga-one.com/manga/27457/chapter/358684",
+    "workUrl": "https://manga-one.com/title/27457"
   },
   {
     "foundAt": "00:05",
@@ -748,7 +750,7 @@
     "foundAt": "00:05",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/9807bc70c9876df679c8542ae6799eaf47298af6/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F3269754496881854342-a882590e1d0e2ba751324393654f8074%3F1788879606",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d122909843708b4e2d9dc470cac6c90c9a0aa568/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-sub-thumbnail-square-with-logo%2F3269754496881854342-0866ec15c7a72105dd0340222c8fdf86%3F1790739661",
     "title": "マリッジトキシン",
     "url": "https://shonenjumpplus.com/episode/9253191256784141773"
   },
@@ -761,12 +763,13 @@
     "url": "https://comic-walker.com/detail/KC_008547_S/episodes/KC_0085470000800011_E"
   },
   {
-    "foundAt": "00:05",
+    "foundAt": "18:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
     "thumbnailUrl": "https://app.manga-one.com/secure/1722017303/webp/ranking_thumbnail/2245.webp?hash=ECUB53dlVJq2_9NqY17X4g&expires=1877212800",
     "title": "もう興味がないと離婚された令嬢の意外と楽しい新生活",
-    "url": "https://manga-one.com/title/2245"
+    "url": "https://manga-one.com/manga/2245/chapter/359884",
+    "workUrl": "https://manga-one.com/title/2245"
   },
   {
     "foundAt": "12:05",
@@ -874,6 +877,15 @@
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019425/resized/78ec3817-5949-4b60-8a11-c294e9c58dfd.jpg",
     "title": "悪役令嬢に転生した私が、なぜか暴君侯爵に溺愛されてるんですけど",
     "url": "https://comic-walker.com/detail/KC_019425_S/episodes/KC_0194250000400041_E"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "ツイ４",
+    "siteUrl": "https://sai-zen-sen.jp/comics/twi4/",
+    "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/res/images/cover.png",
+    "title": "悪役令嬢の四畳半",
+    "url": "https://sai-zen-sen.jp/comics/twi4/yojouhan/0544.html",
+    "workUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/"
   },
   {
     "foundAt": "12:05",
@@ -1103,12 +1115,13 @@
     "url": "https://www.manga-up.com/titles/1523"
   },
   {
-    "foundAt": "00:05",
+    "foundAt": "18:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
     "thumbnailUrl": "https://app.manga-one.com/secure/1782209495/webp/chapter/356233.webp?hash=GpK0SSQ18Y0kvsNjOoIMgg&expires=1877212800",
     "title": "怪物王子の愛しい魔女",
-    "url": "https://manga-one.com/title/27967"
+    "url": "https://manga-one.com/manga/27967/chapter/358297",
+    "workUrl": "https://manga-one.com/title/27967"
   },
   {
     "foundAt": "12:05",
@@ -1459,12 +1472,13 @@
     "url": "https://comic-zenon.com/episode/12207421984174775605"
   },
   {
-    "foundAt": "00:05",
+    "foundAt": "18:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
     "thumbnailUrl": "https://app.manga-one.com/secure/1722018395/webp/ranking_thumbnail/2379.webp?hash=ZYA1xfSDmcx9VdOsqXFCNA&expires=1877212800",
     "title": "獣王と薬草",
-    "url": "https://manga-one.com/title/2379"
+    "url": "https://manga-one.com/manga/2379/chapter/359500",
+    "workUrl": "https://manga-one.com/title/2379"
   },
   {
     "foundAt": "00:05",
