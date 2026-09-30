@@ -7,6 +7,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import rankingEventName from "@/app/rankingEventName";
 import useEarlySites from "@/app/useEarlySites";
 import useFavorites from "@/app/useFavorites";
+import useIsHydrated from "@/app/useIsHydrated";
 import useOpened from "@/app/useOpened";
 import { type CardSite } from "@/app/workCards";
 import { type DateKey } from "@/types/work";
@@ -50,13 +51,18 @@ export default function WorkCard({
 }: WorkCardProps): React.JSX.Element {
   const favorites = useFavorites();
   const opened = useOpened();
+  const earlySites = useEarlySites();
+  const hydrated = useIsHydrated();
   /**
    * 先読みを開くと決めたサイトは、取得した回へそのまま送る。
-   * それ以外は中継を通して、無料で読める最新の回へ送る
+   * それ以外は中継を通して、無料で読める最新の回へ送る。
+   * 設定は localStorage にあり、組み上がる前に読むとサーバーの描画と食い違う。
+   * React は食い違った属性を直さないので、中継の住所のまま残ってしまう
    */
-  const href = useEarlySites().isEarly(badge.siteUrl)
-    ? url
-    : `/go?${new URLSearchParams({ site: badge.siteUrl, url }).toString()}`;
+  const href =
+    hydrated && earlySites.isEarly(badge.siteUrl)
+      ? url
+      : `/go?${new URLSearchParams({ site: badge.siteUrl, url }).toString()}`;
   const added = favorites.hasWork(workKey, legacyKeys);
   const { adoptTitle, rememberTitle } = favorites;
   /** 配列は描き直すたびに別物になる。中身で見て、無駄に動かさない */

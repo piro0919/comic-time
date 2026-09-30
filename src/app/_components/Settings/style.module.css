@@ -16,6 +16,25 @@
   gap: var(--space-3);
 }
 
+.sectionHead {
+  align-items: center;
+  display: flex;
+  gap: var(--space-1);
+}
+
+.info {
+  align-items: center;
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  padding: var(--space-1);
+}
+
+.info[aria-expanded="true"] {
+  color: var(--accent);
+}
+
 .sectionTitle {
   font-size: 1.4rem;
   font-weight: 700;
