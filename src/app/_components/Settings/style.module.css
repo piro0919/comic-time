@@ -64,7 +64,18 @@
 .grid {
   display: grid;
   gap: var(--space-2);
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* スマホでは2列に決め打つ。幅で割ると 360px の端末で1列に落ちる */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (width >= 768px) {
+  .grid {
+    /*
+     * 一番長い「となりのヤングジャンプ」が1行に収まる幅を最小にする。
+     * 文字は rem で大きさが変わり、絵と余白は変わらないので、2つを足して決める
+     */
+    grid-template-columns: repeat(auto-fill, minmax(calc(13.5rem + 48px), 1fr));
+  }
 }
 
 .chip {
@@ -108,5 +119,7 @@
 .name {
   font-size: 1.2rem;
   line-height: 1.4;
-  overflow-wrap: anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
