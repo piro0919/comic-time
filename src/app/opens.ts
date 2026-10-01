@@ -1,6 +1,7 @@
 "use server";
 import { neon } from "@neondatabase/serverless";
 import { headers } from "next/headers";
+import { dateOf, httpUrlOf, opensOf } from "@/app/actionInput";
 import auth from "@/app/auth";
 
 /**
@@ -44,7 +45,12 @@ export async function readOpens(): Promise<Record<string, string>> {
  * 1回ぶん記録する。同じURLを開き直したら日付を進める。
  * ついでに古い行を捨てる。溜め続けても使い道がない。
  */
-export async function markOpen(url: string, date: string): Promise<void> {
+export async function markOpen(
+  urlInput: string,
+  dateInput: string,
+): Promise<void> {
+  const url = httpUrlOf(urlInput);
+  const date = dateOf(dateInput);
   const userId = await currentUserId();
 
   if (userId === null) {
@@ -67,17 +73,14 @@ export async function markOpen(url: string, date: string): Promise<void> {
 export async function mergeOpens(
   local: Record<string, string>,
 ): Promise<Record<string, string>> {
+  // 8月末まで使っていた古い形の記録を弾く。あの頃は作品の見出しで持っていて、
+  // いまは回のURLで引くので、混ぜても二度と照合されない行になるだけ
+  const entries = opensOf(local);
   const userId = await currentUserId();
 
   if (userId === null) {
     return {};
   }
-
-  // 8月末まで使っていた古い形の記録を弾く。あの頃は作品の見出しで持っていて、
-  // いまは回のURLで引くので、混ぜても二度と照合されない行になるだけ
-  const entries = Object.entries(local).filter(([url]) =>
-    url.startsWith("http"),
-  );
 
   if (entries.length > 0) {
     await sql`insert into opened_work (user_id, url, opened_on)

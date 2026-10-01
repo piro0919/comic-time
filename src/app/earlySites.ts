@@ -1,7 +1,15 @@
 "use server";
 import { neon } from "@neondatabase/serverless";
 import { headers } from "next/headers";
+import {
+  booleanOf,
+  maxSites,
+  maxUrlLength,
+  stringOf,
+  stringsOf,
+} from "@/app/actionInput";
 import auth from "@/app/auth";
+import isKnownSite from "@/app/isKnownSite";
 
 /**
  * ログインした人の「先読みの回を開くサイト」を Neon に読み書きする。
@@ -28,14 +36,16 @@ export async function readEarlySites(): Promise<string[]> {
   return rows.map((row) => String(row.site_url));
 }
 
-/** 1サイトぶんを入れるか外す */
+/** 1サイトぶんを入れるか外す。台帳に無いサイトは入れない。外すのは台帳と突き合わせない */
 export async function setEarlySite(
-  siteUrl: string,
-  early: boolean,
+  siteInput: string,
+  earlyInput: boolean,
 ): Promise<void> {
+  const siteUrl = stringOf(siteInput, maxUrlLength);
+  const early = booleanOf(earlyInput);
   const userId = await currentUserId();
 
-  if (userId === null) {
+  if (userId === null || (early && !isKnownSite(siteUrl))) {
     return;
   }
 
@@ -45,7 +55,11 @@ export async function setEarlySite(
 }
 
 /** 初回のログインで、端末に溜まっていたぶんをサーバーへ足す。足すだけで消さない */
-export async function mergeEarlySites(local: string[]): Promise<string[]> {
+export async function mergeEarlySites(input: string[]): Promise<string[]> {
+  // 台帳に無いものは古い控え。投げずに落とす
+  const local = stringsOf(input, maxSites, maxUrlLength).filter((siteUrl) =>
+    isKnownSite(siteUrl),
+  );
   const userId = await currentUserId();
 
   if (userId === null) {

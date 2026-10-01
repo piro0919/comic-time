@@ -1,8 +1,15 @@
 "use server";
 import { neon } from "@neondatabase/serverless";
 import { headers } from "next/headers";
+import {
+  followsOf,
+  maxKeyLength,
+  maxUrlLength,
+  stringOf,
+} from "@/app/actionInput";
 import auth from "@/app/auth";
 import { named, refOf } from "@/app/followKeys";
+import isKnownSite from "@/app/isKnownSite";
 
 /**
  * ログインした人のフォローを Neon に読み書きする。
@@ -62,8 +69,8 @@ export async function readFollows(): Promise<Follows> {
 
 /** 作品を1つ足す。すでに入っていれば何もしない */
 export async function followWork(key: string): Promise<void> {
+  const ref = refOf(stringOf(key, maxKeyLength));
   const userId = await currentUserId();
-  const ref = refOf(key);
 
   if (userId === null || ref === undefined) {
     return;
@@ -76,8 +83,8 @@ export async function followWork(key: string): Promise<void> {
 
 /** 作品を1つ外す */
 export async function unfollowWork(key: string): Promise<void> {
+  const ref = refOf(stringOf(key, maxKeyLength));
   const userId = await currentUserId();
-  const ref = refOf(key);
 
   if (userId === null || ref === undefined) {
     return;
@@ -87,19 +94,23 @@ export async function unfollowWork(key: string): Promise<void> {
             where user_id = ${userId} and slug = ${ref.slug} and site_url = ${ref.siteUrl}`;
 }
 
-/** サイトを1つ足す。すでに入っていれば何もしない */
-export async function followSite(siteUrl: string): Promise<void> {
+/** サイトを1つ足す。すでに入っていれば何もしない。台帳に無いサイトは足さない */
+export async function followSite(input: string): Promise<void> {
+  const siteUrl = stringOf(input, maxUrlLength);
   const userId = await currentUserId();
 
-  if (userId === null) {
+  if (userId === null || !isKnownSite(siteUrl)) {
     return;
   }
 
   await sql`insert into follow_site (user_id, site_url) values (${userId}, ${siteUrl}) on conflict do nothing`;
 }
 
-/** サイトを1つ外す */
-export async function unfollowSite(siteUrl: string): Promise<void> {
+/**
+ * サイトを1つ外す。台帳から消えたサイトの行も外せるよう、台帳とは突き合わせない
+ */
+export async function unfollowSite(input: string): Promise<void> {
+  const siteUrl = stringOf(input, maxUrlLength);
   const userId = await currentUserId();
 
   if (userId === null) {
@@ -114,19 +125,22 @@ export async function unfollowSite(siteUrl: string): Promise<void> {
  * 足すだけで消さない。ここで消すと「登録したのに」が起きる。
  * 以降はサーバーが正本になるので、この合流は一度きりでよい。
  */
-export async function mergeFollows(local: {
+export async function mergeFollows(input: {
   sites: string[];
   works: string[];
 }): Promise<Follows> {
+  const local = followsOf(input);
   const userId = await currentUserId();
 
   if (userId === null) {
     return { sites: [], titles: {}, works: [] };
   }
 
+  // 台帳に無いものは古い控え。投げずに落とし、残りだけ合流させる
   const refs = local.works
     .map((key) => refOf(key))
     .filter((ref) => ref !== undefined);
+  const sites = local.sites.filter((siteUrl) => isKnownSite(siteUrl));
 
   await Promise.all([
     refs.length === 0
@@ -137,10 +151,10 @@ export async function mergeFollows(local: {
                         ${refs.map((ref) => ref.siteUrl)}::text[])
                  as pair(slug, site_url)
             on conflict do nothing`,
-    local.sites.length === 0
+    sites.length === 0
       ? Promise.resolve()
       : sql`insert into follow_site (user_id, site_url)
-            select ${userId}, unnest(${local.sites}::text[])
+            select ${userId}, unnest(${sites}::text[])
             on conflict do nothing`,
   ]);
 
