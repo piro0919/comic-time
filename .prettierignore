@@ -15,6 +15,9 @@ favicon.ico
 # 取得したページをそのまま置いたもの。整形すると実物と変わってしまう
 tests/fixtures
 
+# Prettier に SQL の整形は無い。渡すと pre-commit が落ちる
+*.sql
+
 # Configs & deps
 node_modules
 package-lock.json

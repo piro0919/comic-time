@@ -143,6 +143,11 @@ All commits are automatically checked for:
   そこで「ログインしていない」と判断すると、合流の控えを消したり、押したぶんをサーバーへ送り損ねたりする
 - 表は `db/migrations/` の SQL。`follow_work (user_id, slug, site_url)` と
   `follow_site (user_id, site_url)`。どちらも `neon_auth."user"` へ CASCADE で繋がる
+- マイグレーションは `npm run migrate` で当てる。確かめるだけなら `npm run migrate:check`。
+  どれを当てたかは `schema_migrations` に残る。デプロイでは当たらないので、使うコードより先に当てる
+- **0001〜0006 は記録より前に本番へ手で当てたもの。** 表の無い DB では、ランナーは何も当てずに止まる。
+  0002 は follow_work を作り直すので、当て直すとフォローが消える。`npm run migrate -- --baseline` が
+  0006 までの表を確かめてから 0007 を当て、0001〜0006 を当たったものとして記す
 - **フォローはサイトごと。** 題名だけで持つと、同じ作品を載せている別サイトの更新まで一覧に出る。
   読むのは1つのサイトなので、作品の鍵は台帳の slug とサイトの url の組にする
 - 画面と `useFavorites` は短いハッシュの見出しのままで、slug への変換は `src/app/followKeys.ts` に閉じる

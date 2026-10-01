@@ -57,6 +57,36 @@ npm run scrape:ogp   # card images for sites without a title list
 Sites whose page structure needs custom handling declare an `adapter`; the
 implementations live in `scripts/scrape/adapters/`.
 
+## 🗄 Database
+
+Login, follows, opened episodes and early-access sites live in Postgres (Neon).
+Schema changes are the SQL files in `db/migrations/`, applied in number order by
+`scripts/migrate`, which records each one in the `schema_migrations` table and
+holds an advisory lock so two runs never apply the same file twice. Each file
+runs in its own transaction.
+
+```bash
+npm run migrate:check   # list migrations the database does not have yet
+npm run migrate         # apply them, one transaction per file
+```
+
+Both read `DATABASE_URL` from `.env.local`, which points at production. To try a
+migration first, point `DATABASE_URL` at a Neon branch. Nothing runs migrations
+automatically; deploying does not apply them.
+
+**Baseline.** `0001`–`0006` were applied to production by hand before
+`schema_migrations` existed. On a database without that table the runner stops
+instead of applying them, because `0002` recreates `follow_work` and would wipe
+every follow. Run `npm run migrate -- --baseline` once: it checks that the
+tables from `0001`–`0006` exist, then applies `0007_schema_migrations`, which
+records `0001`–`0006` as applied without running them. Building a database from
+empty is not supported — `0001` expects Neon Auth's `neon_auth."user"`.
+
+Never edit a migration once it has been applied; it is recorded by file name
+and will not run again. Add a new file instead.
+
+The variables the server needs are listed in `.env.example`.
+
 ## 📄 License
 
 MIT

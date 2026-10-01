@@ -98,6 +98,8 @@
     "lint:fix": "eslint src --fix",
     "lint:secret": "npx secretlint --maskSecrets '**/*'",
     "lint:style": "stylelint --fix '**/*.css'",
+    "migrate": "node --env-file-if-exists=.env.local scripts/migrate/index.ts",
+    "migrate:check": "node --env-file-if-exists=.env.local scripts/migrate/index.ts --check",
     "postbuild": "next-sitemap",
     "prettier": "prettier --write .",
     "scrape": "node scripts/scrape/index.ts",
