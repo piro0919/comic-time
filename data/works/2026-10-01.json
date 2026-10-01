@@ -886,6 +886,15 @@
     "workUrl": "https://sai-zen-sen.jp/comics/twi4/re-re-reincarnation/"
   },
   {
+    "foundAt": "18:05",
+    "siteName": "竹コミ！",
+    "siteUrl": "https://takecomic.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/202509111318144311370403DE7899EA544F081CD4DE9A551-sm.webp",
+    "title": "リオンクール戦記",
+    "url": "https://takecomic.jp/episodes/eb181f4f45af3",
+    "workUrl": "https://takecomic.jp/series/5f24e7c5dbf8e/new"
+  },
+  {
     "foundAt": "00:05",
     "siteName": "マンガUP!",
     "siteUrl": "https://www.manga-up.com/",
@@ -934,6 +943,15 @@
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003669/resized/c3fac1c8-539e-44d6-8032-27fe00d107d1.jpg",
     "title": "ロネと青い駒鳥",
     "url": "https://comic-walker.com/detail/KC_003669_S/episodes/KC_0036690002400011_E"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "ツイ４",
+    "siteUrl": "https://sai-zen-sen.jp/comics/twi4/",
+    "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/res/images/cover.png",
+    "title": "悪役令嬢の四畳半",
+    "url": "https://sai-zen-sen.jp/comics/twi4/yojouhan/0545.html",
+    "workUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/"
   },
   {
     "foundAt": "12:05",
@@ -1137,7 +1155,7 @@
     "foundAt": "12:05",
     "siteName": "コミックガルド",
     "siteUrl": "https://comic-gardo.com/",
-    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984284338023-4a0609680e5e769a56ad5eabbad2b6d3?1790217581",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984284338023-4a0609680e5e769a56ad5eabbad2b6d3?1790830516",
     "title": "暁の魔女レイシーは自由に生きたい　～魔王討伐を終えたので、のんびりお店を開きます～",
     "url": "https://comic-gardo.com/episode/12207421984284338023"
   },
@@ -1326,7 +1344,7 @@
     "foundAt": "12:05",
     "siteName": "コミックガルド",
     "siteUrl": "https://comic-gardo.com/",
-    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984284337709-e9d7c311b09047b853f02dac6336f58f?1790588334",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984284337709-e9d7c311b09047b853f02dac6336f58f?1790830516",
     "title": "最後のエルフ",
     "url": "https://comic-gardo.com/episode/12207421984284337709"
   },
@@ -1366,7 +1384,7 @@
     "foundAt": "12:05",
     "siteName": "コミックガルド",
     "siteUrl": "https://comic-gardo.com/",
-    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984304794561-3740a0e336b9465c3c1001845d79e8e9?1790587860",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984304794561-3740a0e336b9465c3c1001845d79e8e9?1790830524",
     "title": "死ぬ運命にある悪役令嬢の兄に転生したので、妹を育てて未来を変えたいと思います　～世界最強はオレだけど、世界最カワは妹に違いない～",
     "url": "https://comic-gardo.com/episode/12207421984304794561"
   },
@@ -1407,7 +1425,7 @@
     "foundAt": "12:05",
     "siteName": "コミックガルド",
     "siteUrl": "https://comic-gardo.com/",
-    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984284337715-5a81837d2683d3a5d09355500b7d2d77?1790301803",
+    "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984284337715-5a81837d2683d3a5d09355500b7d2d77?1790834112",
     "title": "自分をSSS級だと思い込んでいるC級魔術学生",
     "url": "https://comic-gardo.com/episode/12207421984284337715"
   },
@@ -1482,7 +1500,7 @@
     "foundAt": "12:05",
     "siteName": "ゼノンプラス",
     "siteUrl": "https://comic-zenon.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/b0d563a16cfe244c0f2ad2976459f0a9e690da64/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F2550912964673814596-b145236aa302e248417f031e2c4b26e8%3F1782192422",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/348d14373f63e918c22bed7d429acf0a257304b1/enlarge=0;height=580;no_unsharpmask=1;quality=90;version=1;width=1056/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fuploaded-content%2Fslideshow%2F73d4fb471b72669bbb004d4ee4ef1dc5",
     "title": "終末のワルキューレ禁伝 神々の黙示録",
     "url": "https://comic-zenon.com/episode/12207421984174775626"
   },
@@ -2080,7 +2098,7 @@
     "foundAt": "12:05",
     "siteName": "ゼノンプラス",
     "siteUrl": "https://comic-zenon.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/eda759ae047ee76330ca22e2ff3460caf8c32bf9/enlarge=0;height=580;no_unsharpmask=1;quality=90;version=1;width=1056/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fuploaded-content%2Fslideshow%2F9f7411baa3230008ccd8accc982d47f4",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a495ceb29ac560c041c95a47c412d02d424912c2/enlarge=0;height=504;no_unsharpmask=1;quality=90;version=1;width=504/https%3A%2F%2Fcdn-img.comic-zenon.com%2Fpublic%2Fseries-thumbnail%2F12207421983459818214-195fd351497e9428c53b8ef0186f36e8%3F1782192422",
     "title": "僕だけ詠める禁書魔術",
     "url": "https://comic-zenon.com/episode/12207421984064600783"
   },
