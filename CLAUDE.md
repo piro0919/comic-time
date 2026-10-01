@@ -52,7 +52,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Environment and Dependencies
 
-- **Environment Variables**: Configured with T3 env for type-safe environment handling
+- **Environment Variables**: Server secrets are read through `src/app/serverEnv.ts`, which names any missing variable when login or follows are first used (not at import, so `next build` runs without secrets). The names are listed in `.env.example`
 - **Fonts**: Noto Sans JP for Japanese text support
 - **Canvas Fallback**: Webpack configured to handle canvas imports
 - **Development Tools**: Window size display utility in development mode

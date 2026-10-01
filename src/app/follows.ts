@@ -1,5 +1,4 @@
 "use server";
-import { neon } from "@neondatabase/serverless";
 import { headers } from "next/headers";
 import {
   followsOf,
@@ -7,8 +6,9 @@ import {
   maxUrlLength,
   stringOf,
 } from "@/app/actionInput";
-import auth from "@/app/auth";
+import db from "@/app/db";
 import { named, refOf } from "@/app/followKeys";
+import getAuth from "@/app/getAuth";
 import isKnownSite from "@/app/isKnownSite";
 
 /**
@@ -30,11 +30,9 @@ type Follows = {
   works: string[];
 };
 
-const sql = neon(process.env.DATABASE_URL ?? "");
-
 /** 今ログインしている人の id。していなければ null */
 async function currentUserId(): Promise<null | string> {
-  const session = await auth.api.getSession({ headers: await headers() });
+  const session = await getAuth().api.getSession({ headers: await headers() });
 
   return session?.user.id ?? null;
 }
@@ -48,8 +46,8 @@ export async function readFollows(): Promise<Follows> {
   }
 
   const [works, sites] = await Promise.all([
-    sql`select slug, site_url from follow_work where user_id = ${userId} order by followed_at`,
-    sql`select site_url from follow_site where user_id = ${userId} order by followed_at`,
+    db()`select slug, site_url from follow_work where user_id = ${userId} order by followed_at`,
+    db()`select site_url from follow_site where user_id = ${userId} order by followed_at`,
   ]);
   // 台帳から消えた作品は見出しに戻せない。出しても押せないので落とす
   const found = works
@@ -76,7 +74,7 @@ export async function followWork(key: string): Promise<void> {
     return;
   }
 
-  await sql`insert into follow_work (user_id, slug, site_url)
+  await db()`insert into follow_work (user_id, slug, site_url)
             values (${userId}, ${ref.slug}, ${ref.siteUrl})
             on conflict do nothing`;
 }
@@ -90,7 +88,7 @@ export async function unfollowWork(key: string): Promise<void> {
     return;
   }
 
-  await sql`delete from follow_work
+  await db()`delete from follow_work
             where user_id = ${userId} and slug = ${ref.slug} and site_url = ${ref.siteUrl}`;
 }
 
@@ -103,7 +101,7 @@ export async function followSite(input: string): Promise<void> {
     return;
   }
 
-  await sql`insert into follow_site (user_id, site_url) values (${userId}, ${siteUrl}) on conflict do nothing`;
+  await db()`insert into follow_site (user_id, site_url) values (${userId}, ${siteUrl}) on conflict do nothing`;
 }
 
 /**
@@ -117,7 +115,7 @@ export async function unfollowSite(input: string): Promise<void> {
     return;
   }
 
-  await sql`delete from follow_site where user_id = ${userId} and site_url = ${siteUrl}`;
+  await db()`delete from follow_site where user_id = ${userId} and site_url = ${siteUrl}`;
 }
 
 /**
@@ -145,7 +143,7 @@ export async function mergeFollows(input: {
   await Promise.all([
     refs.length === 0
       ? Promise.resolve()
-      : sql`insert into follow_work (user_id, slug, site_url)
+      : db()`insert into follow_work (user_id, slug, site_url)
             select ${userId}, slug, site_url
             from unnest(${refs.map((ref) => ref.slug)}::text[],
                         ${refs.map((ref) => ref.siteUrl)}::text[])
@@ -153,7 +151,7 @@ export async function mergeFollows(input: {
             on conflict do nothing`,
     sites.length === 0
       ? Promise.resolve()
-      : sql`insert into follow_site (user_id, site_url)
+      : db()`insert into follow_site (user_id, site_url)
             select ${userId}, unnest(${sites}::text[])
             on conflict do nothing`,
   ]);

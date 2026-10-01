@@ -1,8 +1,8 @@
 "use server";
-import { neon } from "@neondatabase/serverless";
 import { headers } from "next/headers";
 import { dateOf, httpUrlOf, opensOf } from "@/app/actionInput";
-import auth from "@/app/auth";
+import db from "@/app/db";
+import getAuth from "@/app/getAuth";
 
 /**
  * ログインした人の既読を Neon に読み書きする。
@@ -13,13 +13,12 @@ import auth from "@/app/auth";
  * 鍵は回のURL。話が変わればURLも変わり、それがそのまま「まだ読んでいない」になる。
  * 開いた日も持つのは、話が変わってもURLが変わらないサイトがあるため。
  */
-const sql = neon(process.env.DATABASE_URL ?? "");
 /** 記録を残す日数。一覧は7日ぶんしか持たないので、これだけあれば取りこぼさない */
 const keepDays = 30;
 
 /** 今ログインしている人の id。していなければ null */
 async function currentUserId(): Promise<null | string> {
-  const session = await auth.api.getSession({ headers: await headers() });
+  const session = await getAuth().api.getSession({ headers: await headers() });
 
   return session?.user.id ?? null;
 }
@@ -33,7 +32,7 @@ export async function readOpens(): Promise<Record<string, string>> {
   }
 
   const rows =
-    await sql`select url, to_char(opened_on, 'YYYY-MM-DD') as opened_on
+    await db()`select url, to_char(opened_on, 'YYYY-MM-DD') as opened_on
                          from opened_work where user_id = ${userId}`;
 
   return Object.fromEntries(
@@ -57,11 +56,11 @@ export async function markOpen(
     return;
   }
 
-  await sql`insert into opened_work (user_id, url, opened_on)
+  await db()`insert into opened_work (user_id, url, opened_on)
             values (${userId}, ${url}, ${date}::date)
             on conflict (user_id, url)
             do update set opened_on = greatest(opened_work.opened_on, excluded.opened_on)`;
-  await sql`delete from opened_work
+  await db()`delete from opened_work
             where user_id = ${userId}
               and opened_on < ${date}::date - ${keepDays}::integer`;
 }
@@ -83,7 +82,7 @@ export async function mergeOpens(
   }
 
   if (entries.length > 0) {
-    await sql`insert into opened_work (user_id, url, opened_on)
+    await db()`insert into opened_work (user_id, url, opened_on)
               select ${userId}, url, opened_on::date
               from unnest(${entries.map(([url]) => url)}::text[],
                           ${entries.map(([, date]) => date)}::text[])
