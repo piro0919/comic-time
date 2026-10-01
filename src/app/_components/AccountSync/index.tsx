@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import authClient from "@/app/authClient";
 import { mergeEarlySites, readEarlySites } from "@/app/earlySites";
 import { mergeFollows, readFollows } from "@/app/follows";
@@ -19,6 +19,9 @@ import useOpened from "@/app/useOpened";
  * その人のぶんとしてもう一度足す。
  *
  * 画面には何も出さない。
+ *
+ * 往復が失敗したら、控えは何も書き換えずに諦め、画面が手前に戻ったときか
+ * 回線が戻ったときにやり直す。合流の控えも成功してから付けるので、初回の合流も取りこぼさない。
  */
 const syncedKey = "favorites-synced-v1";
 /** 往復中に登録が押されたとき、読み直す回数の上限 */
@@ -44,13 +47,39 @@ export default function AccountSync(): null {
   const earlySites = useEarlySites();
   // 往復のあいだに押された登録を見分けるため、最新の値をいつでも覗けるようにする
   const latest = useRef(favorites);
-  // 取り込みは往復するあいだに何度も描き直される。1回の表示で1人につき一度だけ走らせる
+  /*
+   * 取り込みは往復するあいだに何度も描き直される。1回の表示で1人につき一度だけ走らせる。
+   * 往復を始めた時点で付け、失敗したら外す。付けたままにすると、失敗した表示ではもう同期しない
+   */
   const pulledFor = useRef<null | string>(null);
+  // 前の往復が失敗したか。やり直すきっかけを待っている間だけ true
+  const failed = useRef(false);
+  // 増やすと取り込みをやり直す
+  const [attempt, setAttempt] = useState(0);
   const userId = session?.user.id ?? null;
 
   useEffect(() => {
     latest.current = favorites;
   }, [favorites]);
+
+  useEffect(() => {
+    function retry(): void {
+      if (!failed.current || document.visibilityState !== "visible") {
+        return;
+      }
+
+      failed.current = false;
+      setAttempt((count) => count + 1);
+    }
+
+    window.addEventListener("online", retry);
+    document.addEventListener("visibilitychange", retry);
+
+    return (): void => {
+      window.removeEventListener("online", retry);
+      document.removeEventListener("visibilitychange", retry);
+    };
+  }, []);
 
   useEffect(() => {
     // 取りに行っている間はログイン中でも null になる。そこで控えを消すと、合流をやり直してしまう
@@ -75,53 +104,65 @@ export default function AccountSync(): null {
     }
 
     pulledFor.current = userId;
+    failed.current = false;
 
     const first = localStorage.getItem(syncedKey) !== userId;
     const before = latest.current;
 
-    void Promise.all([
+    Promise.all([
       first
         ? mergeFollows({ sites: before.siteUrls, works: before.workUrls })
         : readFollows(),
       first ? mergeOpens(opened.all) : readOpens(),
       first ? mergeEarlySites(earlySites.siteUrls) : readEarlySites(),
-    ]).then(async ([firstFollows, opens, early]) => {
-      // 既読は日付の新しい方を採って足すので、往復中に開いた回も消えない
-      opened.mergeAll(opens);
-      // 先読みの設定は押す機会が少ない。往復中に押された場合の読み直しまではしない
-      earlySites.replaceAll(early);
+    ])
+      .then(async ([firstFollows, opens, early]) => {
+        // 既読は日付の新しい方を採って足すので、往復中に開いた回も消えない
+        opened.mergeAll(opens);
+        // 先読みの設定は押す機会が少ない。往復中に押された場合の読み直しまではしない
+        earlySites.replaceAll(early);
 
-      /*
-       * 登録は外したことも写すので、丸ごと置き換える。
-       * 往復中に押されていたら、その書き込みはこの読み出しの後ろに並んでいる。
-       * 読み直せば入っている
-       */
-      let follows = firstFollows;
-      let seen = before;
+        /*
+         * 登録は外したことも写すので、丸ごと置き換える。
+         * 往復中に押されていたら、その書き込みはこの読み出しの後ろに並んでいる。
+         * 読み直せば入っている
+         */
+        let follows = firstFollows;
+        let seen = before;
 
-      for (let count = 1; count < maxReads; count += 1) {
-        if (sameFollows(latest.current, seen)) {
-          break;
+        for (let count = 1; count < maxReads; count += 1) {
+          if (sameFollows(latest.current, seen)) {
+            break;
+          }
+
+          seen = latest.current;
+          follows = await readFollows();
         }
 
-        seen = latest.current;
-        follows = await readFollows();
-      }
+        // 題名はサーバーが台帳から引いて返す。手元の控えは埋まらないぶんだけ使う
+        const local = Object.entries(latest.current.titles).filter(([entry]) =>
+          follows.works.includes(entry),
+        );
 
-      // 題名はサーバーが台帳から引いて返す。手元の控えは埋まらないぶんだけ使う
-      const local = Object.entries(latest.current.titles).filter(([entry]) =>
-        follows.works.includes(entry),
-      );
+        latest.current.replaceAll({
+          ...follows,
+          titles: { ...Object.fromEntries(local), ...follows.titles },
+        });
+        localStorage.setItem(syncedKey, userId);
 
-      latest.current.replaceAll({
-        ...follows,
-        titles: { ...Object.fromEntries(local), ...follows.titles },
+        return follows;
+      })
+      .catch((error: unknown) => {
+        // 監視の仕組みは持っていないので、手元のコンソールに残す
+        console.error("AccountSync: sync failed", error);
+
+        if (pulledFor.current === userId) {
+          pulledFor.current = null;
+        }
+
+        failed.current = true;
       });
-      localStorage.setItem(syncedKey, userId);
-
-      return follows;
-    });
-  }, [earlySites, isPending, opened, userId]);
+  }, [attempt, earlySites, isPending, opened, userId]);
 
   return null;
 }
