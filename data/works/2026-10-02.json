@@ -517,7 +517,7 @@
     "foundAt": "00:05",
     "siteName": "マンガワン",
     "siteUrl": "https://manga-one.com/",
-    "thumbnailUrl": "https://app.manga-one.com/secure/1758178951/webp/chapter/310087.webp?hash=mR5v64p-lei_S6g4tUwXEw&expires=1877299200",
+    "thumbnailUrl": "https://app.manga-one.com/secure/1758178951/webp/chapter/310087.webp?hash=cN-Vzv7v9T4A1H8980HYmA&expires=1877385600",
     "title": "お嬢様系底辺ダンジョン配信者、迷惑系をボコったらバズって伝説になってますわ！？\t",
     "url": "https://manga-one.com/manga/27343/chapter/360028",
     "workUrl": "https://manga-one.com/title/27343"
@@ -671,12 +671,13 @@
     "url": "https://comic-walker.com/detail/KC_006917_S/episodes/KC_0069170003300011_E"
   },
   {
-    "foundAt": "12:05",
+    "foundAt": "18:05",
     "siteName": "コミックブースト",
     "siteUrl": "https://comic-boost.com/",
     "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0177_kv_sp.jpg",
     "title": "ゴミクズみたいに捨ててやる！",
-    "url": "https://comic-boost.com/content/01770001"
+    "url": "https://comic-boost.com/product/00980051",
+    "workUrl": "https://comic-boost.com/content/01770001"
   },
   {
     "foundAt": "12:05",
@@ -1367,12 +1368,13 @@
     "workUrl": "https://yanmaga.jp/comics/%E4%BA%9C%E7%AB%A5"
   },
   {
-    "foundAt": "12:05",
+    "foundAt": "18:05",
     "siteName": "コミックブースト",
     "siteUrl": "https://comic-boost.com/",
     "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/S0178_kv_sp.jpg",
     "title": "葵とおねーちゃん",
-    "url": "https://comic-boost.com/content/01780001"
+    "url": "https://comic-boost.com/product/01620022",
+    "workUrl": "https://comic-boost.com/content/01780001"
   },
   {
     "foundAt": "12:05",
@@ -1381,6 +1383,15 @@
     "thumbnailUrl": "https://contents.zerosumonline.com/title_thumbnail/48.webp",
     "title": "悪の華道を行きましょう",
     "url": "https://zerosumonline.com/detail/akunohanamichi"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "ツイ４",
+    "siteUrl": "https://sai-zen-sen.jp/comics/twi4/",
+    "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/res/images/cover.png",
+    "title": "悪役令嬢の四畳半",
+    "url": "https://sai-zen-sen.jp/comics/twi4/yojouhan/0546.html",
+    "workUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/"
   },
   {
     "foundAt": "12:05",
