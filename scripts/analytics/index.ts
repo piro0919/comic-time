@@ -2,6 +2,7 @@ import { execFileSync } from "child_process";
 import fs from "fs/promises";
 import os from "os";
 import path from "path";
+import { favoriteAddEvent } from "../../src/app/funnelEvents.ts";
 
 /**
  * Vercel Web Analytics の数字を端末に出す。
@@ -14,6 +15,8 @@ import path from "path";
  * 使い方: npm run analytics [日数]  （既定は30日）
  */
 const apiBase = "https://api.vercel.com/v1/query/web-analytics/visits";
+const eventsApi =
+  "https://api.vercel.com/v1/query/web-analytics/events/aggregate";
 
 /** Vercel CLI がトークンを置く場所。OS で変わる */
 function authPath(): string {
@@ -81,6 +84,8 @@ type Row = {
 type Client = {
   aggregate: (by: string, limit?: number) => Promise<Row[]>;
   count: (since: string, until: string) => Promise<Totals>;
+  /** カスタムイベントを by で束ねる。filter は eventName などで絞る式 */
+  events: (by: string, filter?: string) => Promise<Row[]>;
 };
 
 function createClient(
@@ -95,7 +100,8 @@ function createClient(
     params: Record<string, string>,
   ): Promise<T> {
     const query = new URLSearchParams({ projectId, teamId, ...params });
-    const response = await fetch(`${apiBase}/${kind}?${query}`, {
+    const url = kind === "events" ? eventsApi : `${apiBase}/${kind}`;
+    const response = await fetch(`${url}?${query}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -112,6 +118,14 @@ function createClient(
     aggregate: async (by, limit = 10) =>
       get<Row[]>("aggregate", { by, limit: String(limit), since, until }),
     count: async (from, to) => get<Totals>("count", { since: from, until: to }),
+    events: async (by, filter) =>
+      get<Row[]>("events", {
+        by,
+        limit: "20",
+        since,
+        until,
+        ...(filter === undefined ? {} : { filter }),
+      }),
   };
 }
 
@@ -166,6 +180,16 @@ async function main(): Promise<void> {
   );
   show("端末", await client.aggregate("deviceType"), "deviceType");
   show("国", await client.aggregate("country"), "country");
+  show("イベント", await client.events("eventName"), "eventName");
+  // 初めての1件は、その端末で道具として使い始めた人の数になる
+  show(
+    "お気に入り登録（first=その端末で最初の1件）",
+    await client.events(
+      "eventData/first",
+      `eventName eq '${favoriteAddEvent}'`,
+    ),
+    "eventData/first",
+  );
 }
 
 await main();

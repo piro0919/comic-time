@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@vercel/analytics";
 import { createContext, useCallback, useContext, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import authClient from "@/app/authClient";
@@ -8,6 +9,7 @@ import {
   unfollowSite,
   unfollowWork,
 } from "@/app/follows";
+import { favoriteAddEvent } from "@/app/funnelEvents";
 import favoritesKey from "./favoritesKey";
 
 /**
@@ -171,6 +173,13 @@ export function useFavoritesState(): Favorites {
   );
   const toggleSite: Favorites["toggleSite"] = useCallback(
     (siteUrl) => {
+      if (!siteSet.has(siteUrl)) {
+        track(favoriteAddEvent, {
+          first: workSet.size + siteSet.size === 0,
+          kind: "site",
+        });
+      }
+
       if (signedIn) {
         void (siteSet.has(siteUrl)
           ? unfollowSite(siteUrl)
@@ -179,13 +188,20 @@ export function useFavoritesState(): Favorites {
 
       setStored((prev) => ({ ...prev, sites: toggle(prev.sites, siteUrl) }));
     },
-    [setStored, signedIn, siteSet],
+    [setStored, signedIn, siteSet, workSet],
   );
   const toggleWork: Favorites["toggleWork"] = useCallback(
     (workKey, legacyKeys) => {
       // どちらへ倒れるかは押す前の状態で決まる。サーバーにも同じ向きを伝える
       const wasAdded =
         workSet.has(workKey) || legacyKeys.some((key) => workSet.has(key));
+
+      if (!wasAdded) {
+        track(favoriteAddEvent, {
+          first: workSet.size + siteSet.size === 0,
+          kind: "work",
+        });
+      }
 
       if (signedIn) {
         void (wasAdded ? unfollowWork(workKey) : followWork(workKey));
@@ -211,7 +227,7 @@ export function useFavoritesState(): Favorites {
         return { ...prev, titles, works: rest };
       });
     },
-    [setStored, signedIn, workSet],
+    [setStored, signedIn, siteSet, workSet],
   );
 
   /**
