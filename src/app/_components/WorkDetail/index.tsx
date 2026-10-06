@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { dayHref } from "@/app/days";
+import { type Episode } from "@/app/episodes/episode";
 import episodeSourceOf from "@/app/episodes/episodeSourceOf";
 import { siteHref } from "@/app/siteCatalog";
 import siteSlug from "@/app/siteSlug";
@@ -11,6 +12,8 @@ import EpisodeList from "../EpisodeList";
 import styles from "./style.module.css";
 
 export type WorkDetailProps = {
+  /** サーバーで取れた話の一覧。鍵はサイトの url。取れなかったサイトは null か無し */
+  episodes: Record<string, Episode[] | null>;
   work: CatalogEntry;
 };
 
@@ -21,6 +24,7 @@ export type WorkDetailProps = {
  * 隔週や月1の作品は曜日が1つしか出ないので、言い切らない書き方にしている。
  */
 export default function WorkDetail({
+  episodes,
   work,
 }: WorkDetailProps): React.JSX.Element {
   const days = daysOf(work.dayBits);
@@ -102,7 +106,11 @@ export default function WorkDetail({
           <h2 className={styles.sectionTitle}>
             {episodeSites.length === 1 ? "話の一覧" : `${site.name}の話の一覧`}
           </h2>
-          <EpisodeList siteUrl={site.siteUrl} slug={work.slug} />
+          <EpisodeList
+            initial={episodes[site.siteUrl] ?? null}
+            siteUrl={site.siteUrl}
+            slug={work.slug}
+          />
         </section>
       ))}
       {/* 曜日を出していない作品に、曜日の断り書きだけ残っても読み手には意味がない */}

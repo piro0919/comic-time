@@ -1,18 +1,20 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
+import episodesForPage from "@/app/episodes/episodesForPage";
 import WorkDetail from "../../_components/WorkDetail";
 import pageMetadata from "../../pageMetadata";
-import { catalog, seenDaysLabel, workOf } from "../../workCatalog";
+import { seenDaysLabel, workOf } from "../../workCatalog";
 import { dateLabel } from "../../worksOfDay";
 
 export type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export const revalidate = 3600;
-
-/** 台帳に無い作品は 404 にする */
-export const dynamicParams = false;
+/**
+ * 作ったページは6時間使い回す。話の一覧の取得元に頼むのも、作品ごとに6時間に1回で済む。
+ * デプロイのたびに作り直しになるので、最後の更新日が古いまま残ることはない
+ */
+export const revalidate = 21600;
 
 export async function generateMetadata({
   params,
@@ -37,8 +39,14 @@ export async function generateMetadata({
   });
 }
 
+/**
+ * ビルドでは1件も作らない。開かれたときに作って保存する。
+ *
+ * 作品ページは話の一覧を HTML に入れている。4千件あまりをビルドで作ると、
+ * そのたびに全作品ぶん取得元へ頼むことになる。台帳に無い作品は Page が 404 にする
+ */
 export function generateStaticParams(): { slug: string }[] {
-  return catalog().map((work) => ({ slug: work.slug }));
+  return [];
 }
 
 export default async function Page({
@@ -51,5 +59,7 @@ export default async function Page({
     notFound();
   }
 
-  return <WorkDetail work={work} />;
+  return (
+    <WorkDetail episodes={await episodesForPage(work.sites)} work={work} />
+  );
 }

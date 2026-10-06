@@ -172,6 +172,13 @@ const config = {
     "/opengraph-image",
     "/settings",
   ],
+  // 作品ページはビルドで作らず、開かれたときに作る。ビルドの記録に載らないので台帳から足す
+  additionalPaths: async (conf) =>
+    Promise.all(
+      readJson(path.join(process.cwd(), "data", "catalog.json"), []).map(
+        (entry) => conf.transform(conf, `/works/${entry.slug}`),
+      ),
+    ),
   transform: async (conf, loc) => ({
     // 作品の住所は日本語のまま。サイトマップには符号化した形で載せる
     loc: encodeURI(loc),

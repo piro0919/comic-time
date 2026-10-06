@@ -36,7 +36,15 @@ export default function WorkIndex({
       <ul className={styles.list}>
         {works.map((work) => (
           <li key={work.slug}>
-            <Link className={styles.link} href={workHref(work.slug)}>
+            {/*
+              先読みしない。作品ページは開かれたときに作るので、索引を開いただけで
+              数百件ぶん取得元へ頼むことになる
+            */}
+            <Link
+              className={styles.link}
+              href={workHref(work.slug)}
+              prefetch={false}
+            >
               {work.title}
             </Link>
           </li>

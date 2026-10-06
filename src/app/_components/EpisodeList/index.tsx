@@ -4,6 +4,8 @@ import { type Episode } from "@/app/episodes/episode";
 import styles from "./style.module.css";
 
 export type EpisodeListProps = {
+  /** ページを作るときにサーバーで取れた一覧。取れなければ null で、開いてから取る */
+  initial: Episode[] | null;
   siteUrl: string;
   slug: string;
 };
@@ -14,16 +16,25 @@ type State =
   | { status: "loading" };
 
 /**
- * 1サイトぶんの話の一覧。開いてから /api/episodes に取りに行く。
- * 作品ページは静的に作っていて、取得元を読むのはこの画面が開かれたときだけにしたい。
+ * 1サイトぶんの話の一覧。ふだんはページを作るときにサーバーで取ったものを出す。
+ * そこで取れなかったときだけ、開いてから /api/episodes に取りに行く。
  */
 export default function EpisodeList({
+  initial,
   siteUrl,
   slug,
 }: EpisodeListProps): React.JSX.Element {
-  const [state, setState] = useState<State>({ status: "loading" });
+  const [state, setState] = useState<State>(
+    initial === null
+      ? { status: "loading" }
+      : { episodes: initial, status: "done" },
+  );
 
   useEffect(() => {
+    if (initial !== null) {
+      return undefined;
+    }
+
     const controller = new AbortController();
     const params = new URLSearchParams({ site: siteUrl, slug });
 
@@ -52,7 +63,7 @@ export default function EpisodeList({
     return (): void => {
       controller.abort();
     };
-  }, [siteUrl, slug]);
+  }, [initial, siteUrl, slug]);
 
   if (state.status === "loading") {
     return <p className={styles.note}>話の一覧を読み込んでいます…</p>;
