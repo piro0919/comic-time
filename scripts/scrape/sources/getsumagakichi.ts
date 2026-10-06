@@ -58,8 +58,15 @@ export default async function getsumagakichi(
     }
 
     const url = href.split("?")[0] ?? href;
-    const image = item.find("img[alt]").first();
-    const title = image.attr("alt")?.trim() ?? "";
+    // 月マガ連載の回には、サムネイルより前に雑誌のロゴの画像が入る。
+    // 話の一覧は題名を見出しから、画像をサムネイルの枠から取る。
+    // ピックアップの枠には見出しが無く、画像の alt が題名になる。
+    const thumb = item.find("[class*='Episode_thumb'] img").first();
+    const image = thumb.length > 0 ? thumb : item.find("img[alt]").first();
+    const heading = item.find("[class*='Episode_title__']").first();
+    const title = (
+      heading.length > 0 ? heading.text() : (image.attr("alt") ?? "")
+    ).trim();
 
     if (title === "" || seen.has(url)) {
       return;
