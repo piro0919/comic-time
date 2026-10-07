@@ -194,7 +194,7 @@
     "foundAt": "00:05",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/cf00f7cc6ede1277c714ae6646917e0b135d58e4/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F9253191256637592489-f49166220b173e6d3243c9a0afb34b7c%3F1791175741",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e2523cda1a2d0d5f2ff75775b3112f68fd767249/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F9253191256637592489-f49166220b173e6d3243c9a0afb34b7c%3F1791345021",
     "title": "エヴァンジェリンは靴を履く",
     "url": "https://shonenjumpplus.com/episode/9253191257069547933"
   },
@@ -719,7 +719,7 @@
     "foundAt": "00:05",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ff6e2c60a638f8b2af34292ce5d0440923bedb2b/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107419589536330256-b9397cd973902bcf56b59386e32abb34%3F1788435005",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/2993b1de2480fab4a1cb8c6a47291d028e19d932/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17107419589536330256-b9397cd973902bcf56b59386e32abb34%3F1791345775",
     "title": "ヒトナー",
     "url": "https://shonenjumpplus.com/episode/9253191257069547881"
   },
@@ -945,6 +945,15 @@
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/019425/resized/78ec3817-5949-4b60-8a11-c294e9c58dfd.jpg",
     "title": "悪役令嬢に転生した私が、なぜか暴君侯爵に溺愛されてるんですけど",
     "url": "https://comic-walker.com/detail/KC_019425_S/episodes/KC_0194250000500011_E"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "ツイ４",
+    "siteUrl": "https://sai-zen-sen.jp/comics/twi4/",
+    "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/res/images/cover.png",
+    "title": "悪役令嬢の四畳半",
+    "url": "https://sai-zen-sen.jp/comics/twi4/yojouhan/0551.html",
+    "workUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/"
   },
   {
     "foundAt": "12:05",
@@ -1213,7 +1222,7 @@
     "foundAt": "00:05",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/b68f57ebf41603e097b531f76ecfcb8b0db7a0aa/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17106567266627400434-bf507b746b25e980d84a96390a267636%3F1785756608",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/c5083002cbf31bbf7e221bc5ce3a5942c5b42583/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F17106567266627400434-bf507b746b25e980d84a96390a267636%3F1791345378",
     "title": "群脳教室",
     "url": "https://shonenjumpplus.com/episode/9253191257069547908"
   },
@@ -1395,6 +1404,14 @@
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/5f44077ba70b2fa92f14054c92e86e92f03d10a1/enlarge=0;height=738;no_unsharpmask=1;quality=90;version=1;width=1040/https%3A%2F%2Fcdn-img.www.sunday-webry.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F12207421983473063420-00e4bf4f54614712dbd798f81244fd46%3F1773636687",
     "title": "史上最強の弟子ケンイチ２〜達人編〜",
     "url": "https://www.sunday-webry.com/episode/12207421984340291483"
+  },
+  {
+    "foundAt": "18:05",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/008386/resized/6bb3930c-8dfc-40cd-a8a3-91db7d9928da.jpg",
+    "title": "死神騎士は運命の婚約者を離さない",
+    "url": "https://comic-walker.com/detail/KC_008386_S/episodes/KC_0083860000700011_E"
   },
   {
     "foundAt": "00:05",
@@ -1850,7 +1867,7 @@
     "foundAt": "00:05",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/b1cb7aa9cd6c97b7262b8b32aa233c14908960a6/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F10833497643049550206-00e6ee049e401f468b607e0686c4797f%3F1773822611",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ce858fa240356803839ee7361329d0013e1afa4c/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F10833497643049550206-00e6ee049e401f468b607e0686c4797f%3F1791345378",
     "title": "猫田びより",
     "url": "https://shonenjumpplus.com/episode/9253191257069547959"
   },
