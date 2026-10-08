@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import episodesForPage from "@/app/episodes/episodesForPage";
+import episodeSourceOf from "@/app/episodes/episodeSourceOf";
 import WorkDetail from "../../_components/WorkDetail";
 import pageMetadata from "../../pageMetadata";
 import { seenDaysLabel, workOf } from "../../workCatalog";
@@ -28,14 +29,24 @@ export async function generateMetadata({
 
   const days = seenDaysLabel(work.dayBits);
   const where = work.sites.map((site) => site.name).join("・");
+  // 題名で検索してくる人が知りたいのは、どこで無料で読めるかと最新話。
+  // 話の一覧を出せるサイトに載っている作品だけ、それを見出しに出す
+  const listsEpisodes = work.sites.some(
+    (site) => episodeSourceOf(site.siteUrl) !== undefined,
+  );
 
   return pageMetadata({
     description:
-      `${work.title}の更新曜日と、読めるサイト。` +
-      `${days === "" ? "" : `更新を見たのは${days}。`}` +
-      `最後の更新は${dateLabel(work.lastSeen)}。${where}で読めます。`,
+      `${where}で読めます。` +
+      `${days === "" ? "" : `更新を見たのは${days}、`}` +
+      `最後の更新は${dateLabel(work.lastSeen)}。` +
+      (listsEpisodes
+        ? "無料で読める話・先読み・有料の回を一覧で確かめられます。"
+        : "更新曜日と読めるサイトをまとめています。"),
     path: `/works/${encodeURIComponent(work.slug)}`,
-    title: `${work.title}の更新曜日`,
+    title: listsEpisodes
+      ? `${work.title}の最新話と無料で読める話・更新曜日`
+      : `${work.title}の更新曜日と読めるサイト`,
   });
 }
 
