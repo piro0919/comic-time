@@ -9280,6 +9280,21 @@
     "title": "お憑かれごはん ～千代といくこのコンビにかけあわせ料理帖～"
   },
   {
+    "dayBits": 32,
+    "firstSeen": "2026-10-09",
+    "lastSeen": "2026-10-09",
+    "sites": [
+      {
+        "name": "カドコミ",
+        "siteUrl": "https://comic-walker.com/",
+        "url": "https://comic-walker.com/detail/KC_020259_S/episodes/KC_0202590000300011_E"
+      }
+    ],
+    "slug": "お憑かれごはん~千代といくこのコンビニかけあわせ料理帖~",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/020259/resized/ab04de62-dcd3-4a70-8905-5d6c7e9e824c.jpg",
+    "title": "お憑かれごはん ～千代といくこのコンビニかけあわせ料理帖～"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-09-22",
     "lastSeen": "2026-09-22",
@@ -19660,9 +19675,9 @@
     "title": "にせもの家族"
   },
   {
-    "dayBits": 95,
+    "dayBits": 127,
     "firstSeen": "2026-10-01",
-    "lastSeen": "2026-10-08",
+    "lastSeen": "2026-10-09",
     "sites": [
       {
         "name": "ツイ４",
