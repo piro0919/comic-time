@@ -14,6 +14,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { fixupPluginRules } from "@eslint/compat";
 import filenamesPlugin from "eslint-plugin-filenames";
+import magicNumbers from "@piro0919/eslint-config";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -276,6 +277,8 @@ const eslintConfig = [
       quotes: "off",
     },
   },
+  // 名前の無い数字を警告する（全リポジトリで共有する piro0919/eslint-config）
+  ...magicNumbers(),
 ];
 
 export default eslintConfig;
