@@ -20,6 +20,14 @@ pre-commit:
       run: npm test
     typescript:
       run: npx tsc --noEmit
+    # 足したマイグレーションの危ない書き方（表や列の削除、型の変更など）を止める（.squawk.toml）
+    squawk:
+      glob: "db/migrations/*.sql"
+      run: npx squawk {staged_files}
+  scripts:
+    # 一度コミットしたマイグレーションの書き換えと削除を止める
+    "migrations.sh":
+      runner: bash
 commit-msg:
   scripts:
     "commitlint.sh":

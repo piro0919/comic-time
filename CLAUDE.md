@@ -67,6 +67,7 @@ All commits are automatically checked for:
 - Stylelint CSS validation with auto-fix
 - TypeScript type checking
 - Secret detection
+- Migration safety (squawk, and no edits to committed migrations)
 - Conventional commit message format (**written in English**, subject and body)
 
 ### サイトの追加と取得
@@ -154,6 +155,12 @@ All commits are automatically checked for:
   `follow_site (user_id, site_url)`。どちらも `neon_auth."user"` へ CASCADE で繋がる
 - マイグレーションは `npm run migrate` で当てる。確かめるだけなら `npm run migrate:check`。
   どれを当てたかは `schema_migrations` に残る。デプロイでは当たらないので、使うコードより先に当てる
+- **当て忘れたまま配備すると、Vercel のビルドの頭で落ちる。** `vercel.json` の buildCommand が
+  `migrate:check` を先に走らせ、当てていない名前を出して止まる。前の版が本番に残る。
+  自動で当てる形にしないのは、本番の表を人の確認なしに書き換えないため
+- コミットの時点で2つ止める。表や列の削除・型の変更などの危ない書き方（squawk、`.squawk.toml`）と、
+  コミット済みのマイグレーションの書き換えや削除（`.lefthook/pre-commit/migrations.sh`）。
+  直したいときは新しい番号のファイルを足す
 - **0001〜0006 は記録より前に本番へ手で当てたもの。** 表の無い DB では、ランナーは何も当てずに止まる。
   0002 は follow_work を作り直すので、当て直すとフォローが消える。`npm run migrate -- --baseline` が
   0006 までの表を確かめてから 0007 を当て、0001〜0006 を当たったものとして記す
