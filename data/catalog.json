@@ -422,7 +422,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-29",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -7222,7 +7222,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-10-06",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -8062,7 +8062,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -10567,7 +10567,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -10672,7 +10672,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -13532,7 +13532,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -16617,21 +16617,21 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-10-06",
+    "lastSeen": "2026-10-13",
     "sites": [
-      {
-        "name": "チャンピオンクロス",
-        "siteUrl": "https://championcross.jp/",
-        "url": "https://championcross.jp/series/be9e11b46afa8"
-      },
       {
         "name": "ヤンチャンWeb",
         "siteUrl": "https://youngchampion.jp/",
         "url": "https://youngchampion.jp/series/d7fffa7610747"
+      },
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/be9e11b46afa8"
       }
     ],
     "slug": "ダストランド",
-    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260106103406479F550E74066A259711F691D91A36A7FB5-sm.webp",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260106103409921F550E74066A259711F691D91A36A7FB5-sm.webp",
     "title": "ダストランド"
   },
   {
@@ -18512,7 +18512,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -19822,7 +19822,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -22483,6 +22483,21 @@
     "slug": "ファンタジー銀河~何で宇宙にゴブリンやオークが居るんだ~",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/202512021036042252C5308041206E91EE79B63534603548C-sm.webp",
     "title": "ファンタジー銀河～何で宇宙にゴブリンやオークが居るんだ～"
+  },
+  {
+    "dayBits": 4,
+    "firstSeen": "2026-10-13",
+    "lastSeen": "2026-10-13",
+    "sites": [
+      {
+        "name": "チャンピオンクロス",
+        "siteUrl": "https://championcross.jp/",
+        "url": "https://championcross.jp/series/b0da406bf82a0"
+      }
+    ],
+    "slug": "ファントムルース~魔女が夢見た最後の楽園~",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1604039/2025050117050408036336125C8EA8E4ADCED2DFFECC31BDF-sm.webp",
+    "title": "ファントムルース～魔女が夢見た最後の楽園～"
   },
   {
     "dayBits": 16,
@@ -25777,7 +25792,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -27857,7 +27872,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -29647,7 +29662,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -30362,7 +30377,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -34582,7 +34597,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-08",
-    "lastSeen": "2026-09-08",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -38872,7 +38887,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -41392,7 +41407,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-08",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -41922,7 +41937,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-22",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -43218,6 +43233,21 @@
     "slug": "最凶の支援職【話術士】である俺は世界最強クランを従える",
     "thumbnailUrl": "https://cdn-img.comic-gardo.com/public/episode-thumbnail/12207421984217047722-eaa5b04d32e02d4701ab49e78afb6ee8?1789005654",
     "title": "最凶の支援職【話術士】である俺は世界最強クランを従える"
+  },
+  {
+    "dayBits": 4,
+    "firstSeen": "2026-10-13",
+    "lastSeen": "2026-10-13",
+    "sites": [
+      {
+        "name": "ヤンチャンWeb",
+        "siteUrl": "https://youngchampion.jp/",
+        "url": "https://youngchampion.jp/series/4dca94f408517"
+      }
+    ],
+    "slug": "最凶の魔王に鍛えられた勇者、異世界帰還者たちの学園で無双する",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/816768/2025110711274619798BA9F927A9BA0983327B8E81379E357-sm.webp",
+    "title": "最凶の魔王に鍛えられた勇者、異世界帰還者たちの学園で無双する"
   },
   {
     "dayBits": 8,
@@ -54322,7 +54352,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-10-06",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -60852,7 +60882,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-29",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
@@ -61477,7 +61507,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-09-29",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -67172,7 +67202,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-10-06",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "COMIC FUZ",
@@ -71762,7 +71792,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-01",
-    "lastSeen": "2026-09-29",
+    "lastSeen": "2026-10-13",
     "sites": [
       {
         "name": "チャンピオンクロス",
