@@ -1,43 +1,38 @@
-import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
+import { fixupPluginRules } from "@eslint/compat";
+import magicNumbers from "@piro0919/eslint-config";
+import tsParser from "@typescript-eslint/parser";
+import prettier from "eslint-config-prettier";
 import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
-import js from "@eslint/js";
-import tsParser from "@typescript-eslint/parser";
 import css from "eslint-plugin-css";
 import cssModules from "eslint-plugin-css-modules";
 import ext from "eslint-plugin-ext";
+import filenamesPlugin from "eslint-plugin-filenames";
+import noUnsanitized from "eslint-plugin-no-unsanitized";
 import perfectionist from "eslint-plugin-perfectionist";
 import promise from "eslint-plugin-promise";
+import security from "eslint-plugin-security";
 import unusedImports from "eslint-plugin-unused-imports";
 import writeGoodComments from "eslint-plugin-write-good-comments";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { fixupPluginRules } from "@eslint/compat";
-import filenamesPlugin from "eslint-plugin-filenames";
-import magicNumbers from "@piro0919/eslint-config";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const compat = new FlatCompat({
-  allConfig: js.configs.all,
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
+/*
+ * どのプラグインも flat config を配っているので、FlatCompat を通さず直に読む。
+ * 共有の決まり（piro0919/eslint-config）は名前の無い数字だけで、ほかの規則はこのリポジトリが持つ
+ */
 const eslintConfig = [
   {
     files: ["**/*.{js,jsx,ts,tsx,mjs}"],
   },
-  ...compat.extends(
-    "eslint:recommended",
-    "plugin:css/recommended",
-    "plugin:no-unsanitized/recommended-legacy",
-    "plugin:promise/recommended",
-    "plugin:security/recommended-legacy",
-  ),
+  js.configs.recommended,
+  css.configs["flat/recommended"],
+  noUnsanitized.configs.recommended,
+  promise.configs["flat/recommended"],
+  security.configs.recommended,
   // eslint-config-next 16 は flat config を配るので、FlatCompat を通さず直に読む
   ...nextCoreWebVitals,
   ...nextTypescript,
-  ...compat.extends("prettier"),
+  prettier,
   {
     languageOptions: {
       ecmaVersion: 2024,
@@ -49,12 +44,10 @@ const eslintConfig = [
       sourceType: "module",
     },
     plugins: {
-      css,
       "css-modules": cssModules,
       ext,
       filenames: fixupPluginRules(filenamesPlugin),
       perfectionist,
-      promise,
       "unused-imports": unusedImports,
       "write-good-comments": writeGoodComments,
     },

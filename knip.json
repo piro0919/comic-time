@@ -10,10 +10,6 @@
   "ignoreDependencies": [
     "@commitlint/cli",
     "@secretlint/secretlint-rule-preset-recommend",
-    "eslint-config-prettier",
-    "eslint-plugin-import",
-    "eslint-plugin-no-unsanitized",
-    "eslint-plugin-security",
     "ress"
   ]
 }

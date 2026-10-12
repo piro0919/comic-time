@@ -34,7 +34,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **TypeScript** - Strict TypeScript configuration with explicit return types required
 - **PWA** - Installable via the web app manifest. No service worker: pages are not cached
 - **Theming** - next-themes for light/dark mode support
-- **Internationalization Ready** - Uses next-intl for translations (manifest.ts references)
 
 ### Key Configuration Files
 
@@ -46,7 +45,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Code Quality Standards
 
 - **ESLint Rules**: Enforces consistent-type-definitions as "type", inline type imports, explicit function return types
-- **Import Restrictions**: Must use `@/i18n/navigation` instead of Next.js navigation imports
+- **Shared rules**: `@piro0919/eslint-config` only supplies the magic-number rule (tests are exempt). Every other rule lives in `eslint.config.mjs`, which reads each plugin's flat config directly (no FlatCompat)
 - **File Naming**: Supports camel, kebab, and pascal case for exports
 - **Code Style**: Double quotes, semicolons required, alphabetical sorting of imports/exports
 - **CSS Modules**: Used for styling with global scope restrictions
