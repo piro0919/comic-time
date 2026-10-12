@@ -73,8 +73,8 @@ All commits are automatically checked for:
 
 - DB（Neon）はシンガポール（ap-southeast-1）、関数の既定も sin1。関数と DB を同じ場所に置く。
   2026-10-13 に us-east-1 の DB から移した。前の DB（neon-cyan-envelope）は消さずに残している
-- 日本の取得元を読む `/works/[slug]`・`/api/episodes`・`/go` だけは `preferredRegion = "hnd1"` で東京に置く。
-  DB をほとんど使わず、取得元への往復の方が多い。取得元を読む経路を足したら、ここにも足す
+- **関数のリージョンは経路ごとに変えられない。** Next.js の `preferredRegion` は Vercel の Node の関数では効かず
+  （2026-10-13 に `/go` が sin1 で動くのを確かめた）、`vercel.json` の `functions` も Next.js ではメモリと実行時間しか受け付けない
 
 ### サイトの追加と取得
 
