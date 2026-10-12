@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import workSlug from "../src/app/workSlug.ts";
+import workSlug from "../src/lib/workSlug.ts";
 
 test("日本語はそのまま住所に使う", () => {
   assert.equal(workSlug("彼岸島"), "彼岸島");

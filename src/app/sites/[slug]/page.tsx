@@ -1,10 +1,10 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
+import pageMetadata from "@/lib/pageMetadata";
+import { siteOf, sites, updateDayLabel, worksOfSite } from "@/lib/siteCatalog";
+import { worksOfSiteUrl } from "@/lib/workCatalog";
 import SiteDetail from "../../_components/SiteDetail";
 import WorkIndex from "../../_components/WorkIndex";
-import pageMetadata from "../../pageMetadata";
-import { siteOf, sites, updateDayLabel, worksOfSite } from "../../siteCatalog";
-import { worksOfSiteUrl } from "../../workCatalog";
 
 export type PageProps = {
   params: Promise<{ slug: string }>;

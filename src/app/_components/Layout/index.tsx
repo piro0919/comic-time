@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { type ReactNode } from "react";
 import { Toaster } from "sonner";
 import useShowWindowSize from "use-show-window-size";
-import useSwipeTabs from "@/app/useSwipeTabs";
+import useSwipeTabs from "@/lib/useSwipeTabs";
 import Header from "../Header";
 import MobileNav from "../MobileNav";
 import Sidebar from "../Sidebar";

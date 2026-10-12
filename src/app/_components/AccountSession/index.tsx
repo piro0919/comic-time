@@ -1,11 +1,11 @@
 "use client";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import authClient, { hasSignInHint, setSignInHint } from "@/app/authClient";
+import authClient, { hasSignInHint, setSignInHint } from "@/lib/authClient";
 import {
   AccountSessionContext,
   pendingSession,
   type AccountSession as Session,
-} from "@/app/useAccountSession";
+} from "@/lib/useAccountSession";
 
 export type AccountSessionProps = {
   children: React.ReactNode;

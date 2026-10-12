@@ -11,7 +11,7 @@ import {
   opensOf,
   stringOf,
   stringsOf,
-} from "../src/app/actionInput.ts";
+} from "../src/lib/actionInput.ts";
 
 test("文字列は空と長すぎるものと文字列でないものを弾く", () => {
   assert.equal(stringOf("abc", 3), "abc");

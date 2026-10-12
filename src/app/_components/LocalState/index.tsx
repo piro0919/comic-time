@@ -1,11 +1,11 @@
 "use client";
 import { track } from "@vercel/analytics";
 import { useEffect } from "react";
-import favoritesKey from "@/app/favoritesKey";
-import { favoritesVisitEvent } from "@/app/funnelEvents";
-import { EarlySitesContext, useEarlySitesState } from "@/app/useEarlySites";
-import { FavoritesContext, useFavoritesState } from "@/app/useFavorites";
-import { OpenedContext, useOpenedState } from "@/app/useOpened";
+import favoritesKey from "@/lib/favoritesKey";
+import { favoritesVisitEvent } from "@/lib/funnelEvents";
+import { EarlySitesContext, useEarlySitesState } from "@/lib/useEarlySites";
+import { FavoritesContext, useFavoritesState } from "@/lib/useFavorites";
+import { OpenedContext, useOpenedState } from "@/lib/useOpened";
 
 export type LocalStateProps = {
   children: React.ReactNode;

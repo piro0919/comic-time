@@ -1,11 +1,15 @@
 import { type Metadata } from "next";
+import { dayLabel } from "@/lib/days";
+import pageMetadata from "@/lib/pageMetadata";
+import { worksOfWeekday } from "@/lib/workCatalog";
+import worksOfDay, {
+  dateLabel,
+  recentDateOf,
+  recentWorks,
+} from "@/lib/worksOfDay";
 import { type Weekday, weekdays } from "@/types/work";
 import Home from "./_components/Home";
 import WorkIndex from "./_components/WorkIndex";
-import { dayLabel } from "./days";
-import pageMetadata from "./pageMetadata";
-import { worksOfWeekday } from "./workCatalog";
-import worksOfDay, { dateLabel, recentDateOf, recentWorks } from "./worksOfDay";
 
 /** 日付が変わったら中身も変わるよう、1時間ごとに作り直す */
 export const revalidate = 3600;

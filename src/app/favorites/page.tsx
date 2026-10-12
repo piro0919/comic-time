@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
+import pageMetadata from "@/lib/pageMetadata";
+import { dateLabel, recentWorks } from "@/lib/worksOfDay";
 import Favorites from "../_components/Favorites";
-import pageMetadata from "../pageMetadata";
-import { dateLabel, recentWorks } from "../worksOfDay";
 
 export const metadata: Metadata = pageMetadata({
   description:

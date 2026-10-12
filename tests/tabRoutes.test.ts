@@ -5,7 +5,7 @@ import {
   tabHrefs,
   tabLabel,
   weekOrder,
-} from "../src/app/tabRoutes.ts";
+} from "../src/lib/tabRoutes.ts";
 
 const hrefs = tabHrefs(weekOrder(5));
 

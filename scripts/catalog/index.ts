@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import workSlug, { titleKey } from "../../src/app/workSlug.ts";
+import workSlug, { titleKey } from "../../src/lib/workSlug.ts";
 import {
   type CatalogEntry,
   type DateKey,

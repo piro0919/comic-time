@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import { type NextRequest, NextResponse } from "next/server";
-import { addLocalOpen, isLocal } from "@/app/localOpens";
+import { addLocalOpen, isLocal } from "@/lib/localOpens";
 
 /**
  * 手元で動かしているときだけ、押された作品を控える。

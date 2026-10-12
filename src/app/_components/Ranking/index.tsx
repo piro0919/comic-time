@@ -1,6 +1,6 @@
 "use client";
-import workCards from "@/app/workCards";
-import { type RankedWork } from "@/app/workRanking";
+import workCards from "@/lib/workCards";
+import { type RankedWork } from "@/lib/workRanking";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";
 

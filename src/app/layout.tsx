@@ -6,12 +6,12 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
+import favoritesKey from "@/lib/favoritesKey";
+import siteOrigin from "@/lib/siteOrigin";
 import AccountSession from "./_components/AccountSession";
 import AccountSync from "./_components/AccountSync";
 import Layout from "./_components/Layout";
 import LocalState from "./_components/LocalState";
-import favoritesKey from "./favoritesKey";
-import siteOrigin from "./siteOrigin";
 
 /**
  * トップでどちらを出すかの印を、最初の描画より前に付ける。

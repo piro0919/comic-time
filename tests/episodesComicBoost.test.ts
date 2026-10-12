@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
-import comicBoost from "../src/app/episodes/comicBoost.ts";
+import comicBoost from "../src/lib/episodes/comicBoost.ts";
 
 const realFetch = globalThis.fetch;
 

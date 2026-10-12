@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { type Site, siteHref } from "@/app/siteCatalog";
+import { type Site, siteHref } from "@/lib/siteCatalog";
 import styles from "./style.module.css";
 
 export type SiteListProps = {

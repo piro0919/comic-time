@@ -2,7 +2,7 @@ import { execFileSync } from "child_process";
 import fs from "fs/promises";
 import os from "os";
 import path from "path";
-import { favoriteAddEvent } from "../../src/app/funnelEvents.ts";
+import { favoriteAddEvent } from "../../src/lib/funnelEvents.ts";
 
 /**
  * Vercel Web Analytics の数字を端末に出す。

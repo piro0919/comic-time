@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { named, refOf } from "../src/app/followKeys.ts";
-import { workKey } from "../src/app/workCards.ts";
-import { catalog } from "../src/app/workCatalog.ts";
+import { named, refOf } from "../src/lib/followKeys.ts";
+import { workKey } from "../src/lib/workCards.ts";
+import { catalog } from "../src/lib/workCatalog.ts";
 
 /**
  * 複数サイトに載っている作品。サイトごとに別の見出しになる。

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
-import twi4 from "../src/app/episodes/twi4.ts";
+import twi4 from "../src/lib/episodes/twi4.ts";
 
 const realFetch = globalThis.fetch;
 const work = "https://sai-zen-sen.jp/comics/twi4/yojouhan/";

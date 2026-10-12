@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { MdInfoOutline } from "react-icons/md";
-import useEarlySites from "@/app/useEarlySites";
-import useIsHydrated from "@/app/useIsHydrated";
+import useEarlySites from "@/lib/useEarlySites";
+import useIsHydrated from "@/lib/useIsHydrated";
 import styles from "./style.module.css";
 
 export type SettingsProps = {

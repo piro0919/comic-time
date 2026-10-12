@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MdLogin } from "react-icons/md";
 import { toast } from "sonner";
-import { deleteAccount, signOut as endSession, signIn } from "@/app/authClient";
-import useAccountSession from "@/app/useAccountSession";
-import useIsHydrated from "@/app/useIsHydrated";
+import { deleteAccount, signOut as endSession, signIn } from "@/lib/authClient";
+import useAccountSession from "@/lib/useAccountSession";
+import useIsHydrated from "@/lib/useIsHydrated";
 import styles from "./style.module.css";
 
 /**

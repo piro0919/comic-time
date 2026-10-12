@@ -1,8 +1,8 @@
 import { type Metadata } from "next";
+import { offersEarly } from "@/lib/episodes/episodeSourceOf";
+import pageMetadata from "@/lib/pageMetadata";
+import { sites } from "@/lib/siteCatalog";
 import Settings from "../_components/Settings";
-import { offersEarly } from "../episodes/episodeSourceOf";
-import pageMetadata from "../pageMetadata";
-import { sites } from "../siteCatalog";
 
 export const metadata: Metadata = {
   ...pageMetadata({

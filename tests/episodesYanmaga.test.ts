@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
-import yanmaga from "../src/app/episodes/yanmaga.ts";
+import yanmaga from "../src/lib/episodes/yanmaga.ts";
 
 const realFetch = globalThis.fetch;
 

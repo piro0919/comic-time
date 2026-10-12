@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { syncedKey } from "@/app/authClient";
-import { mergeEarlySites, readEarlySites } from "@/app/earlySites";
-import { mergeFollows, readFollows } from "@/app/follows";
-import { mergeOpens, readOpens } from "@/app/opens";
-import useAccountSession from "@/app/useAccountSession";
-import useEarlySites from "@/app/useEarlySites";
-import useFavorites from "@/app/useFavorites";
-import useOpened from "@/app/useOpened";
+import { syncedKey } from "@/lib/authClient";
+import { mergeEarlySites, readEarlySites } from "@/lib/earlySites";
+import { mergeFollows, readFollows } from "@/lib/follows";
+import { mergeOpens, readOpens } from "@/lib/opens";
+import useAccountSession from "@/lib/useAccountSession";
+import useEarlySites from "@/lib/useEarlySites";
+import useFavorites from "@/lib/useFavorites";
+import useOpened from "@/lib/useOpened";
 
 /**
  * ログインしているあいだ、開くたびにサーバーの登録と既読と先読みの設定を手元へ取り込む。

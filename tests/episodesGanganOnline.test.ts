@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
-import ganganOnline from "../src/app/episodes/ganganOnline.ts";
+import ganganOnline from "../src/lib/episodes/ganganOnline.ts";
 
 const realFetch = globalThis.fetch;
 

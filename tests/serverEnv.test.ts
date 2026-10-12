@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { readServerEnv } from "../src/app/serverEnv.ts";
+import { readServerEnv } from "../src/lib/serverEnv.ts";
 
 const full = {
   BETTER_AUTH_SECRET: "secret",

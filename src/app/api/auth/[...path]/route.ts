@@ -1,5 +1,5 @@
 import { toNextJsHandler } from "better-auth/next-js";
-import getAuth from "@/app/getAuth";
+import getAuth from "@/lib/getAuth";
 
 /**
  * ログインの受け口。ここがこのサイトの住所にあることが大事で、

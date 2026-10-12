@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { MdInstallMobile } from "react-icons/md";
 import usePwa from "use-pwa";
-import useIsHydrated from "@/app/useIsHydrated";
+import useIsHydrated from "@/lib/useIsHydrated";
 import styles from "./style.module.css";
 
 const PWAPrompt = dynamic(async () => import("react-ios-pwa-prompt"), {

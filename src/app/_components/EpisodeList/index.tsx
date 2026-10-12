@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { type Episode } from "@/app/episodes/episode";
+import { type Episode } from "@/lib/episodes/episode";
 import styles from "./style.module.css";
 
 export type EpisodeListProps = {

@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import useIsHydrated from "@/app/useIsHydrated";
+import useIsHydrated from "@/lib/useIsHydrated";
 import styles from "./style.module.css";
 
 /** globals.css の --background と揃える。ブラウザの上端に出る色 */

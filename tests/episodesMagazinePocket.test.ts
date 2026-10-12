@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
 import magazinePocket, {
   mangaHash,
-} from "../src/app/episodes/magazinePocket.ts";
+} from "../src/lib/episodes/magazinePocket.ts";
 
 const realFetch = globalThis.fetch;
 

@@ -1,8 +1,8 @@
 import { type Metadata } from "next";
 import Link from "next/link";
+import { contactUrl, operator } from "@/lib/legal";
+import pageMetadata from "@/lib/pageMetadata";
 import Legal from "../_components/Legal";
-import { contactUrl, operator } from "../legal";
-import pageMetadata from "../pageMetadata";
 
 export const metadata: Metadata = pageMetadata({
   description: "ComicTime の利用規約です。",

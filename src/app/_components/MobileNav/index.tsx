@@ -3,10 +3,10 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { dayHref, days } from "@/app/days";
-import useDayMenu from "@/app/useDayMenu";
-import useFavorites from "@/app/useFavorites";
-import useSelectedDay from "@/app/useSelectedDay";
+import { dayHref, days } from "@/lib/days";
+import useDayMenu from "@/lib/useDayMenu";
+import useFavorites from "@/lib/useFavorites";
+import useSelectedDay from "@/lib/useSelectedDay";
 import styles from "./style.module.css";
 
 export default function MobileNav(): React.JSX.Element {

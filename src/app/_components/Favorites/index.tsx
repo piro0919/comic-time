@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useMemo } from "react";
 import { FaStar } from "react-icons/fa";
-import useFavorites from "@/app/useFavorites";
-import workCards, { type WorkCard as Card } from "@/app/workCards";
+import useFavorites from "@/lib/useFavorites";
+import workCards, { type WorkCard as Card } from "@/lib/workCards";
 import { type DateKey, type Work } from "@/types/work";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";

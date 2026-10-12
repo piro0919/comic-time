@@ -1,6 +1,6 @@
-import { type Site } from "@/app/siteCatalog";
-import workCards from "@/app/workCards";
-import { dateLabel } from "@/app/worksOfDay";
+import { type Site } from "@/lib/siteCatalog";
+import workCards from "@/lib/workCards";
+import { dateLabel } from "@/lib/worksOfDay";
 import { type DateKey, type Work } from "@/types/work";
 import WorkCard from "../WorkCard";
 import styles from "./style.module.css";

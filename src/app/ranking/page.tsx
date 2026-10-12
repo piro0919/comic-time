@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
+import pageMetadata from "@/lib/pageMetadata";
+import workRanking, { rankingPeriodLabel } from "@/lib/workRanking";
 import Ranking from "../_components/Ranking";
-import pageMetadata from "../pageMetadata";
-import workRanking, { rankingPeriodLabel } from "../workRanking";
 
 /*
  * 押された数は少しずつしか動かない。1週間ぶんの合計なので、

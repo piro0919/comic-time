@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
+import pageMetadata from "@/lib/pageMetadata";
+import { sites } from "@/lib/siteCatalog";
 import SiteList from "../_components/SiteList";
-import pageMetadata from "../pageMetadata";
-import { sites } from "../siteCatalog";
 
 /** 作品の並びは日ごとに変わる。1時間ごとに作り直す */
 export const revalidate = 3600;

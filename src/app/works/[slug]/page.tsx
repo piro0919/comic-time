@@ -1,13 +1,13 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
-import episodesForPage from "@/app/episodes/episodesForPage";
-import episodeSourceOf from "@/app/episodes/episodeSourceOf";
+import episodesForPage from "@/lib/episodes/episodesForPage";
+import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
+import pageMetadata from "@/lib/pageMetadata";
+import siteOrigin from "@/lib/siteOrigin";
+import { seenDaysLabel, workHref, workOf } from "@/lib/workCatalog";
+import { dateLabel } from "@/lib/worksOfDay";
 import JsonLd from "../../_components/JsonLd";
 import WorkDetail from "../../_components/WorkDetail";
-import pageMetadata from "../../pageMetadata";
-import siteOrigin from "../../siteOrigin";
-import { seenDaysLabel, workHref, workOf } from "../../workCatalog";
-import { dateLabel } from "../../worksOfDay";
 
 export type PageProps = {
   params: Promise<{ slug: string }>;

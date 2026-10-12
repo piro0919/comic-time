@@ -1,4 +1,4 @@
-import { readFields, stringOf } from "../../../src/app/protobuf.ts";
+import { readFields, stringOf } from "../../../src/lib/protobuf.ts";
 import { type ParsedWork } from "../../../src/types/work.ts";
 import todayKey from "../date.ts";
 

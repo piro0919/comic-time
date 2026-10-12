@@ -54,7 +54,7 @@ function foundAtOf(date, works) {
 
 /**
  * 住所からサイトを引くための対応表。
- * 住所の作り方は src/app/siteCatalog.ts と揃える
+ * 住所の作り方は src/lib/siteCatalog.ts と揃える
  */
 function siteUrlBySlug() {
   const sites = readJson(

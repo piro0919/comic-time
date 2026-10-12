@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import { type NextRequest, NextResponse } from "next/server";
-import episodeSourceOf from "@/app/episodes/episodeSourceOf";
-import { catalog } from "@/app/workCatalog";
-import { recentWorks } from "@/app/worksOfDay";
+import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
+import { catalog } from "@/lib/workCatalog";
+import { recentWorks } from "@/lib/worksOfDay";
 
 /**
  * カードから無料で読める最新の回へ送る中継。

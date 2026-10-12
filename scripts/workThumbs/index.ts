@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import sharp from "sharp";
-import thumbKey from "../../src/app/thumbKey.ts";
+import thumbKey from "../../src/lib/thumbKey.ts";
 import { type Work } from "../../src/types/work.ts";
 
 /**

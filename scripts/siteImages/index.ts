@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import sharp from "sharp";
-import siteSlug from "../../src/app/siteSlug.ts";
+import siteSlug from "../../src/lib/siteSlug.ts";
 import { type SiteEntry } from "../../src/types/work.ts";
 import fetchHtml from "../scrape/fetchHtml.ts";
 

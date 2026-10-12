@@ -1,9 +1,9 @@
 "use client";
 import { useDeferredValue, useMemo, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import { dayLabel, days } from "@/app/days";
-import useFavorites from "@/app/useFavorites";
-import { workKey } from "@/app/workCards";
+import { dayLabel, days } from "@/lib/days";
+import useFavorites from "@/lib/useFavorites";
+import { workKey } from "@/lib/workCards";
 import { daysOf, type SearchIndex, type Weekday } from "@/types/work";
 import styles from "./style.module.css";
 

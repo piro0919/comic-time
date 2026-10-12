@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
-import gaugauMonster from "../src/app/episodes/gaugauMonster.ts";
+import gaugauMonster from "../src/lib/episodes/gaugauMonster.ts";
 
 const realFetch = globalThis.fetch;
 const work = "https://gaugau.futabanet.jp/list/work/5dce85b27765612448020000";

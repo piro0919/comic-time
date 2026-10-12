@@ -1,12 +1,12 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
+import { dayLabel } from "@/lib/days";
+import pageMetadata from "@/lib/pageMetadata";
+import { worksOfWeekday } from "@/lib/workCatalog";
+import worksOfDay, { dayKeys, recentDateOf } from "@/lib/worksOfDay";
 import { type Weekday } from "@/types/work";
 import App from "../../_components/App";
 import WorkIndex from "../../_components/WorkIndex";
-import { dayLabel } from "../../days";
-import pageMetadata from "../../pageMetadata";
-import { worksOfWeekday } from "../../workCatalog";
-import worksOfDay, { dayKeys, recentDateOf } from "../../worksOfDay";
 
 export type PageProps = {
   params: Promise<{ day: string }>;

@@ -4,12 +4,12 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import rankingEventName from "@/app/rankingEventName";
-import useEarlySites from "@/app/useEarlySites";
-import useFavorites from "@/app/useFavorites";
-import useIsHydrated from "@/app/useIsHydrated";
-import useOpened from "@/app/useOpened";
-import { type CardSite } from "@/app/workCards";
+import rankingEventName from "@/lib/rankingEventName";
+import useEarlySites from "@/lib/useEarlySites";
+import useFavorites from "@/lib/useFavorites";
+import useIsHydrated from "@/lib/useIsHydrated";
+import useOpened from "@/lib/useOpened";
+import { type CardSite } from "@/lib/workCards";
 import { type DateKey } from "@/types/work";
 import styles from "./style.module.css";
 

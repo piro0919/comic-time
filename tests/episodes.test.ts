@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { afterEach, test } from "node:test";
-import comici from "../src/app/episodes/comici.ts";
-import gigaViewer from "../src/app/episodes/gigaViewer.ts";
-import mangaOne from "../src/app/episodes/mangaOne.ts";
+import comici from "../src/lib/episodes/comici.ts";
+import gigaViewer from "../src/lib/episodes/gigaViewer.ts";
+import mangaOne from "../src/lib/episodes/mangaOne.ts";
 
 const realFetch = globalThis.fetch;
 

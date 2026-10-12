@@ -2,10 +2,10 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { dayHref } from "@/app/days";
-import useDayMenu from "@/app/useDayMenu";
-import useFavorites from "@/app/useFavorites";
-import useSelectedDay from "@/app/useSelectedDay";
+import { dayHref } from "@/lib/days";
+import useDayMenu from "@/lib/useDayMenu";
+import useFavorites from "@/lib/useFavorites";
+import useSelectedDay from "@/lib/useSelectedDay";
 import styles from "./style.module.css";
 
 export default function Sidebar(): React.JSX.Element {

@@ -52,7 +52,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Environment and Dependencies
 
-- **Environment Variables**: Server secrets are read through `src/app/serverEnv.ts`, which names any missing variable when login or follows are first used (not at import, so `next build` runs without secrets). The names are listed in `.env.example`
+- **Environment Variables**: Server secrets are read through `src/lib/serverEnv.ts`, which names any missing variable when login or follows are first used (not at import, so `next build` runs without secrets). The names are listed in `.env.example`
 - **Fonts**: Noto Sans JP for Japanese text support
 - **Canvas Fallback**: Webpack configured to handle canvas imports
 - **Development Tools**: Window size display utility in development mode
@@ -99,7 +99,7 @@ All commits are automatically checked for:
   作者は台帳に無い
 - 台帳に無い作品は 404 ではなく 200 と noindex で返る。`layout.tsx` が全体を `Suspense` で包んでいて、
   404 を出す前に応答が始まっているため
-- 取り方は `src/app/episodes/` に仕組みごとに1ファイルで書き、サイトとの対応は `episodeSourceOf.ts` に置く。
+- 取り方は `src/lib/episodes/` に仕組みごとに1ファイルで書き、サイトとの対応は `episodeSourceOf.ts` に置く。
   対応の無いサイトは作品ページに一覧の節が出ない。サイトを足したらここにも足す
 - ゼロサムだけは対応が無い。話の住所を画面側の JavaScript が暗号化して作っていて、サーバーでは組めない
 - 読みに行くのは台帳に控えた住所だけにする。任意の住所を受け取ると、このサイトが他所を叩く踏み台になる
@@ -171,19 +171,20 @@ All commits are automatically checked for:
   0006 までの表を確かめてから 0007 を当て、0001〜0006 を当たったものとして記す
 - **フォローはサイトごと。** 題名だけで持つと、同じ作品を載せている別サイトの更新まで一覧に出る。
   読むのは1つのサイトなので、作品の鍵は台帳の slug とサイトの url の組にする
-- 画面と `useFavorites` は短いハッシュの見出しのままで、slug への変換は `src/app/followKeys.ts` に閉じる
+- 画面と `useFavorites` は短いハッシュの見出しのままで、slug への変換は `src/lib/followKeys.ts` に閉じる
 - セッションは署名付きクッキーに5分キャッシュされる。DB 側で利用者を変えても画面に届くまで間がある
 - アカウントは、ログイン中のメニューの「アカウントを削除」で本人が消せる（Better Auth の deleteUser）。
   フォロー・既読・先読みの設定は CASCADE で一緒に消える。ログインから1日を過ぎたセッションは
   Better Auth が断るので、ログインし直してもらう
 - 預かる情報は `/privacy`、利用の決まりは `/terms` に書いてある。集める情報や Analytics に送るものを
-  変えたら、両方の本文と最終更新日を直す。入り口は設定の画面の一番下。問い合わせ先は GitHub の Issues（`src/app/legal.ts`）
+  変えたら、両方の本文と最終更新日を直す。入り口は設定の画面の一番下。問い合わせ先は GitHub の Issues（`src/lib/legal.ts`）
 - 端末をまたぐ受け渡しは、以前は共有リンクとQRで行っていた。ログインの同期に置き換えて削除した。
   ログインしない人は端末を移せない
 
 ### Application Structure
 
-- `src/app/` - Next.js App Router pages and components
+- `src/app/` - Next.js App Router pages and components. Only routes and Next's special files live here
+- `src/lib/` - Everything else the pages use: hooks, server actions, catalog readers, auth, DB access, and the episode fetchers (`src/lib/episodes/`). Import it as `@/lib/...`
 - `src/app/_components/` - Reusable React components
 - PWA manifest for installable web app experience
 - `src/app/sw.js/route.ts` serves a service worker that removes itself. It is only there

@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { titleKey } from "../src/app/workCards.ts";
+import { titleKey } from "../src/lib/workCards.ts";
 import {
   type EventRow,
   ranked,
   type RankedWork,
   titleColumn,
   totalsByTitle,
-} from "../src/app/workRanking.ts";
+} from "../src/lib/workRanking.ts";
 
 function row(title: null | string, count: number): EventRow {
   return { count, [titleColumn]: title, visitors: count };

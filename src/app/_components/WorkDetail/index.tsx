@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import { dayHref } from "@/app/days";
-import { type Episode } from "@/app/episodes/episode";
-import episodeSourceOf from "@/app/episodes/episodeSourceOf";
-import { siteHref } from "@/app/siteCatalog";
-import siteSlug from "@/app/siteSlug";
-import { dateLabel } from "@/app/worksOfDay";
+import { dayHref } from "@/lib/days";
+import { type Episode } from "@/lib/episodes/episode";
+import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
+import { siteHref } from "@/lib/siteCatalog";
+import siteSlug from "@/lib/siteSlug";
+import { dateLabel } from "@/lib/worksOfDay";
 import { type CatalogEntry, daysOf, weekdayJa } from "@/types/work";
 import EpisodeList from "../EpisodeList";
 import styles from "./style.module.css";

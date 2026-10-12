@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import { type NextRequest, NextResponse } from "next/server";
-import episodeSourceOf from "@/app/episodes/episodeSourceOf";
-import { workOf } from "@/app/workCatalog";
+import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
+import { workOf } from "@/lib/workCatalog";
 
 /**
  * 作品ページの話の一覧の取り直し口。ページを作るときにサーバーで取れなかったサイトだけ、

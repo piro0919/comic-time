@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { workHref } from "@/app/workCatalog";
+import { workHref } from "@/lib/workCatalog";
 import { type CatalogEntry } from "@/types/work";
 import styles from "./style.module.css";
 

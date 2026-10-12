@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import readReceived from "../src/app/readReceived.ts";
+import readReceived from "../src/lib/readReceived.ts";
 
 test("長いままの住所は、断片だけを取り出す", () => {
   assert.deepEqual(readReceived("https://comictime.kkweb.io/import#1H4sIAAA"), {

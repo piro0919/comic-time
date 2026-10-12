@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { afterEach, test } from "node:test";
-import shuro from "../src/app/episodes/shuro.ts";
+import shuro from "../src/lib/episodes/shuro.ts";
 
 const realFetch = globalThis.fetch;
 const work = "https://shuro.world/manga/delicious/";

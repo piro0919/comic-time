@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import workCards, { titleKey, workKey } from "../src/app/workCards.ts";
+import workCards, { titleKey, workKey } from "../src/lib/workCards.ts";
 import { type Work } from "../src/types/work.ts";
 
 function work(siteName: string, siteUrl: string, title: string): Work {

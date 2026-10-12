@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
+import pageMetadata from "@/lib/pageMetadata";
+import searchIndex from "@/lib/searchIndex";
 import Search from "../_components/Search";
-import pageMetadata from "../pageMetadata";
-import searchIndex from "../searchIndex";
 
 export const metadata: Metadata = pageMetadata({
   description: "作品を検索して、お気に入りに追加できます。",
