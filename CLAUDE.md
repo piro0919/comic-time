@@ -71,8 +71,10 @@ All commits are automatically checked for:
 
 ### 置き場所（リージョン）
 
-- DB（Neon）はシンガポール（ap-southeast-1）、関数の既定も sin1。関数と DB を同じ場所に置く。
-  2026-10-13 に us-east-1 の DB から移した。前の DB（neon-cyan-envelope）は消さずに残している
+- DB（Neon）はシンガポール（ap-southeast-1、東京は無い）。2026-10-13 に us-east-1 の DB から移した。
+  前の DB（neon-cyan-envelope）は消さずに残している
+- **関数は東京（hnd1）に置く。DB とは揃えない。** カードを押すたびに走る `/go` と作品ページは、日本の取得元を読む。
+  DB を使うのはログイン中の同期だけで、東京からシンガポールへの往復は前の米国東部の半分ほど。2026-10-13 に本人と決めた
 - **関数のリージョンは経路ごとに変えられない。** Next.js の `preferredRegion` は Vercel の Node の関数では効かず
   （2026-10-13 に `/go` が sin1 で動くのを確かめた）、`vercel.json` の `functions` も Next.js ではメモリと実行時間しか受け付けない
 
