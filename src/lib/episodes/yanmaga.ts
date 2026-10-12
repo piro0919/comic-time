@@ -15,6 +15,7 @@ import fetchText from "@/lib/episodes/fetchText";
  * ここでの無料は「何もせずに読める」なので、これは有料の側に入れる。
  * data-is-free が false の回はポイントで読む。ヤンマガには先読みの印が無く、
  * 最新の数話がポイントだけで読める形なので、一番新しい無料の回より新しいものを先読みとみなす。
+ * 公開前の次回（mod-episode-nopublic）は開いても作品ページへ戻されるので、一覧に入れない。
  */
 const origin = "https://yanmaga.jp";
 /** 1回で頼む数。長い連載でも100話台なので、たいてい1回で済む */
@@ -64,7 +65,12 @@ function itemsOf(html: string): Item[] {
       const path = /data-original-url="([^"]+)"/.exec(head)?.[1];
       const title = /data-episode-title="([^"]*)"/.exec(head)?.[1];
 
-      if (path === undefined || title === undefined) {
+      // 先頭に「次回公開予定」として公開前の回が載る。js-modal が無いので無料に見える
+      if (
+        path === undefined ||
+        title === undefined ||
+        chunk.includes("mod-episode-nopublic")
+      ) {
         return [];
       }
 

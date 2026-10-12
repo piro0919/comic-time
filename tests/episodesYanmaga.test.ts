@@ -123,3 +123,22 @@ test("ヤンマガWeb: 頼んだ数だけ返ったら次を読み、足りなけ
   assert.equal(episodes[150]?.title, "n50");
   assert.equal(asked.length, 2);
 });
+
+test("ヤンマガWeb: 公開前の次回は一覧に入れない", async () => {
+  serve({
+    "0": script([
+      `<li class="mod-episode-item" data-episode-title="第９話" data-is-free="false" data-modal="registration" data-original-url="/comics/%E4%BD%9C%E5%93%81/e9">
+<div class="mod-episode-link mod-episode-nopublic"><p class="mod-episode-date mod-episode-date-before-publication"><span>次回公開予定：</span><time>2026/10/20(火)</time></p></div></li>`,
+      item("e8", { date: "2026/10/13" }),
+    ]),
+  });
+
+  const episodes = await yanmaga(
+    "https://yanmaga.jp/comics/%E4%BD%9C%E5%93%81",
+  );
+
+  assert.deepEqual(
+    episodes.map((episode) => episode.title),
+    ["e8"],
+  );
+});
