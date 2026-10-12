@@ -57,3 +57,25 @@ export async function signOut(): Promise<void> {
   await authClient.signOut();
   setSignInHint(false);
 }
+
+/**
+ * アカウントと預かった情報を消す。
+ * ログインから時間がたったセッションでは断られる（stale）。その場合はログインし直してもらう
+ */
+export async function deleteAccount(): Promise<"deleted" | "failed" | "stale"> {
+  const { error } = await authClient.deleteUser();
+
+  if (error === null) {
+    setSignInHint(false);
+
+    try {
+      localStorage.removeItem(syncedKey);
+    } catch {
+      // 控えが残っても、次に開いたときにセッションが無いと分かって消える
+    }
+
+    return "deleted";
+  }
+
+  return error.code === "SESSION_EXPIRED" ? "stale" : "failed";
+}

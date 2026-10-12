@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MdLogin } from "react-icons/md";
-import { signOut as endSession, signIn } from "@/app/authClient";
+import { toast } from "sonner";
+import { deleteAccount, signOut as endSession, signIn } from "@/app/authClient";
 import useAccountSession from "@/app/useAccountSession";
 import useIsHydrated from "@/app/useIsHydrated";
 import styles from "./style.module.css";
@@ -54,6 +55,31 @@ export default function SignIn(): React.JSX.Element {
   const signOut = useCallback(() => {
     setMenuOpen(false);
     void endSession();
+  }, []);
+  const removeAccount = useCallback(() => {
+    setMenuOpen(false);
+
+    if (
+      !window.confirm(
+        "アカウントを削除します。サーバーに預けたお気に入り・既読・設定もすべて消え、元に戻せません。この端末のお気に入りは残ります。",
+      )
+    ) {
+      return;
+    }
+
+    void deleteAccount().then((result) => {
+      if (result === "deleted") {
+        toast("アカウントを削除しました");
+      } else if (result === "stale") {
+        toast(
+          "確認のため、ログアウトしてもう一度ログインしてから削除してください",
+        );
+      } else {
+        toast("削除できませんでした。時間をおいてもう一度お試しください");
+      }
+
+      return result;
+    });
   }, []);
 
   // 決まる前に入り口を出すと、すでに入っている人の画面で一瞬ちらつく
@@ -107,6 +133,13 @@ export default function SignIn(): React.JSX.Element {
           </p>
           <button className={styles.menuItem} onClick={signOut} type="button">
             ログアウト
+          </button>
+          <button
+            className={styles.menuItem}
+            onClick={removeAccount}
+            type="button"
+          >
+            アカウントを削除
           </button>
         </div>
       ) : null}

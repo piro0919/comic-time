@@ -123,3 +123,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* 規約とポリシー。設定はどの画面からも1回で来られるので、ここに置く */
+.footer {
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  gap: var(--space-4);
+}
+
+.footer a {
+  text-decoration: underline;
+}

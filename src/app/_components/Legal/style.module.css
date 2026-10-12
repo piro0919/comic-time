@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  gap: var(--space-3);
+  line-height: 1.8;
+  max-width: 42em;
+  padding: var(--space-3) clamp(var(--space-3), 2.5dvw, var(--space-5))
+    var(--space-6);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.body {
+  display: grid;
+  font-size: 1.4rem;
+  gap: var(--space-3);
+}
+
+.body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: var(--space-4);
+}
+
+.body ul {
+  display: grid;
+  gap: var(--space-1);
+  list-style: disc;
+  padding-inline-start: 1.5em;
+}
+
+.body a {
+  color: var(--accent);
+  text-decoration: underline;
+}

@@ -19,6 +19,7 @@ type Options = {
   database: Pool;
   secret: string;
   socialProviders: { google: { clientId: string; clientSecret: string } };
+  user: { deleteUser: { enabled: boolean } };
 };
 
 type Auth = ReturnType<typeof betterAuth<Options>>;
@@ -39,6 +40,12 @@ export default function getAuth(): Auth {
           clientSecret: env.GOOGLE_CLIENT_SECRET,
         },
       },
+      /*
+       * 利用者が自分で消せるようにする（プライバシーポリシーで約束している）。
+       * フォロー・既読・先読みの設定は利用者へ CASCADE で繋がっているので、一緒に消える。
+       * ログインから1日を過ぎたセッションでは、Better Auth が SESSION_EXPIRED で断る
+       */
+      user: { deleteUser: { enabled: true } },
     });
   }
 

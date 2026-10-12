@@ -1,6 +1,7 @@
 "use client";
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { MdInfoOutline } from "react-icons/md";
 import useEarlySites from "@/app/useEarlySites";
@@ -109,6 +110,14 @@ export default function Settings({ sites }: SettingsProps): React.JSX.Element {
           })}
         </ul>
       </section>
+      <footer className={styles.footer}>
+        <Link href="/terms" prefetch={false}>
+          利用規約
+        </Link>
+        <Link href="/privacy" prefetch={false}>
+          プライバシーポリシー
+        </Link>
+      </footer>
     </div>
   );
 }
