@@ -25,8 +25,6 @@ import favoritesKey from "./favoritesKey";
  * ログインしていなければ手元だけで完結する。読み出しは今までどおり手元から行うので、
  * サーバーへの書き込みが遅れても画面は待たない。
  */
-export { default as key } from "./favoritesKey";
-
 type Stored = {
   sites: string[];
   /**

@@ -55,7 +55,7 @@ export function workKey(siteUrl: string, title: string): string {
 }
 
 /** どのサイトで読めるかを1つぶん。印の絵は scripts/siteIcons が集めたもの */
-export function siteOf(work: Work): CardSite {
+function siteOf(work: Work): CardSite {
   return {
     iconUrl: `/site-icons/${siteSlug(work.siteUrl)}.png`,
     name: work.siteName,

@@ -10,7 +10,7 @@ const directionRatio = 1.5;
 /** これより小さな横の揺れでは、行き先の札を出さない */
 const hintThreshold = 12;
 
-export type SwipeTabsHandlers = {
+type SwipeTabsHandlers = {
   onTouchCancel: () => void;
   onTouchEnd: (event: TouchEvent) => void;
   onTouchMove: (event: TouchEvent) => void;

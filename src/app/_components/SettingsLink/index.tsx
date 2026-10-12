@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { MdSettings } from "react-icons/md";
 import styles from "../RankingLink/style.module.css";
 
-export const settingsHref = "/settings";
+const settingsHref = "/settings";
 
 /** 設定への入り口。ランキングと同じく、どの画面からも同じ場所にあるヘッダーに置く */
 export default function SettingsLink(): React.JSX.Element {

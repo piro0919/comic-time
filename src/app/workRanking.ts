@@ -25,9 +25,8 @@ const limit = 50;
  * 一覧から消えた作品はこのあと落とすので、出す数より多めに取っておく。
  */
 const fetchLimit = 100;
-
 /** 作り直す間隔。ページの revalidate と揃える */
-export const pageRevalidate = 21600;
+const pageRevalidate = 21600;
 
 export type RankedWork = {
   /** 開かれた回数 */

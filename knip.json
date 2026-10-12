@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["scripts/*/index.ts", "e2e/**/*.ts"],
+  "project": [
+    "src/**/*.{ts,tsx}",
+    "scripts/**/*.ts",
+    "tests/**/*.ts",
+    "e2e/**/*.ts"
+  ],
+  "ignoreDependencies": [
+    "@commitlint/cli",
+    "@secretlint/secretlint-rule-preset-recommend",
+    "eslint-config-prettier",
+    "eslint-plugin-import",
+    "eslint-plugin-no-unsanitized",
+    "eslint-plugin-security",
+    "ress",
+    "squawk-cli"
+  ]
+}

@@ -24,6 +24,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `npm run secretlint` - Run secretlint without masking
 - `npm run postbuild` - Generate sitemap after build (runs automatically)
+- `npm run knip` - Find unused files, exports and dependencies (also runs in CI). Packages that are only named in config strings (ESLint presets, `ress` in CSS, `squawk-cli` in lefthook) are listed in `knip.json`
 
 ## Architecture Overview
 

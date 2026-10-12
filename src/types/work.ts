@@ -43,7 +43,7 @@ export type ParsedWork = {
 };
 
 /** 作品がどこで読めるか。台帳に貯めるぶん */
-export type CatalogSite = {
+type CatalogSite = {
   name: string;
   /** サイトの入り口 */
   siteUrl: string;

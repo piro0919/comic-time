@@ -23,8 +23,6 @@ function coverOf(slug: string): null | string {
   }
 }
 
-export { default as siteSlug } from "./siteSlug";
-
 /** 台帳の並びのまま返す */
 export function sites(): Site[] {
   return (sitesJson as SiteEntry[]).map((site) => {

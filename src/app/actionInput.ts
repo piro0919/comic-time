@@ -16,7 +16,7 @@ export const maxWorks = 10000;
 export const maxSites = 100;
 
 /** 既読は30日ぶん持つ。1日に出る回は300前後なので、その倍を取る */
-export const maxOpens = 20000;
+const maxOpens = 20000;
 
 /** 作品の見出しは36進で14文字ほど */
 export const maxKeyLength = 32;

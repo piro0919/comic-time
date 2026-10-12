@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { FaRankingStar } from "react-icons/fa6";
 import styles from "./style.module.css";
 
-export const rankingHref = "/ranking";
+const rankingHref = "/ranking";
 
 /**
  * ランキングへの入り口。

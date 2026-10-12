@@ -1,9 +1,8 @@
 import { type Weekday, weekdayJa, weekdays } from "@/types/work";
 import { dayHref } from "./days";
 
-export const favoritesHref = "/favorites";
-
-export const sitesHref = "/sites";
+const favoritesHref = "/favorites";
+const sitesHref = "/sites";
 
 /** モバイルのタブの並び。お気に入り → 曜日7つ → サイト一覧 */
 export function tabHrefs(days: Weekday[]): string[] {
