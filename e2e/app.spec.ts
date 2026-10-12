@@ -82,7 +82,7 @@ test.describe("画面の操作", () => {
 
     if (count === 0) {
       // 取得がまだ回っていない日もある。画面が出ていることだけ確かめる
-      await expect(page.locator("h1")).toHaveText("ComicTime");
+      await expect(page.locator("h1")).toHaveText(/曜日の更新$/);
 
       return;
     }
