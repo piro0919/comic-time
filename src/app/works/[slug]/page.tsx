@@ -2,9 +2,11 @@ import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import episodesForPage from "@/app/episodes/episodesForPage";
 import episodeSourceOf from "@/app/episodes/episodeSourceOf";
+import JsonLd from "../../_components/JsonLd";
 import WorkDetail from "../../_components/WorkDetail";
 import pageMetadata from "../../pageMetadata";
-import { seenDaysLabel, workOf } from "../../workCatalog";
+import siteOrigin from "../../siteOrigin";
+import { seenDaysLabel, workHref, workOf } from "../../workCatalog";
 import { dateLabel } from "../../worksOfDay";
 
 export type PageProps = {
@@ -70,7 +72,28 @@ export default async function Page({
     notFound();
   }
 
+  const url = `${siteOrigin}${workHref(encodeURIComponent(work.slug))}`;
+
   return (
-    <WorkDetail episodes={await episodesForPage(work.sites)} work={work} />
+    <>
+      {/*
+       * 作品として読ませる。作者は台帳に無いので入れない。
+       * 各サイトの住所は sameAs に入れない。作品ページの無いサイトでは話の住所を控えていて、作品と同じものではない
+       */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ComicSeries",
+          dateModified: work.lastSeen,
+          ...(work.thumbnailUrl === null
+            ? {}
+            : { image: new URL(work.thumbnailUrl, siteOrigin).href }),
+          inLanguage: "ja",
+          name: work.title,
+          url,
+        }}
+      />
+      <WorkDetail episodes={await episodesForPage(work.sites)} work={work} />
+    </>
   );
 }

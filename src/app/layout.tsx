@@ -11,6 +11,7 @@ import AccountSync from "./_components/AccountSync";
 import Layout from "./_components/Layout";
 import LocalState from "./_components/LocalState";
 import favoritesKey from "./favoritesKey";
+import siteOrigin from "./siteOrigin";
 
 /**
  * トップでどちらを出すかの印を、最初の描画より前に付ける。
@@ -56,7 +57,7 @@ export function generateMetadata(): Metadata {
     formatDetection: {
       telephone: false,
     },
-    metadataBase: new URL("https://comictime.kkweb.io"),
+    metadataBase: new URL(siteOrigin),
     openGraph: {
       description: APP_DESCRIPTION,
       siteName: APP_NAME,
