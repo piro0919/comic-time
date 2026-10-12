@@ -28,7 +28,7 @@ export default async function comicMeteor(url: string): Promise<Episode[]> {
   const html = await fetchText(`${origin}/meteor/titles/${slug}`);
 
   return html
-    .split('<div class="episode-item">')
+    .split("<div class=\"episode-item\">")
     .slice(1)
     .flatMap((chunk) => {
       const id = /\bepisode-read\b[^>]*data-episode-id="(\d+)"/.exec(

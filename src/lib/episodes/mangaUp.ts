@@ -46,7 +46,7 @@ function accessOf(status: number | undefined): Episode["access"] {
 export default async function mangaUp(url: string): Promise<Episode[]> {
   const titleId = titleIdOf(url);
   const flight = flightOf(await fetchText(`${origin}/titles/${titleId}`));
-  const key = '"chapters":';
+  const key = "\"chapters\":";
   const start = flight.indexOf(`${key}[`);
 
   if (start === -1) {

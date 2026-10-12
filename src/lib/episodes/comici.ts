@@ -37,7 +37,7 @@ function canonicalUrl(url: string): URL {
 }
 
 function episodesOf(flight: string): ComiciEpisode[] {
-  const key = '"episodes":';
+  const key = "\"episodes\":";
   const start = flight.indexOf(`${key}[`);
 
   return start === -1
