@@ -2,7 +2,6 @@
 import { track } from "@vercel/analytics";
 import { createContext, useCallback, useContext, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import authClient from "@/app/authClient";
 import {
   followSite,
   followWork,
@@ -10,6 +9,7 @@ import {
   unfollowWork,
 } from "@/app/follows";
 import { favoriteAddEvent } from "@/app/funnelEvents";
+import useAccountSession from "@/app/useAccountSession";
 import favoritesKey from "./favoritesKey";
 
 /**
@@ -79,7 +79,7 @@ function toggle(list: string[], value: string): string[] {
  */
 export function useFavoritesState(): Favorites {
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
-  const { data: session, isPending } = authClient.useSession();
+  const { data: session, isPending } = useAccountSession();
   // 確かめている間に押したぶんも送る。ログインしていなければサーバーが何もせず返す
   const signedIn = session !== null || isPending;
   const [stored, setStored] = useLocalStorage<Stored>(

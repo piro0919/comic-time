@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MdLogin } from "react-icons/md";
-import authClient from "@/app/authClient";
+import { signOut as endSession, signIn } from "@/app/authClient";
+import useAccountSession from "@/app/useAccountSession";
 import useIsHydrated from "@/app/useIsHydrated";
 import styles from "./style.module.css";
 
@@ -15,7 +16,7 @@ import styles from "./style.module.css";
  * 入っていることと、誰として入っているかが同時に分かる。
  */
 export default function SignIn(): React.JSX.Element {
-  const { data: session, isPending } = authClient.useSession();
+  const { data: session, isPending } = useAccountSession();
   // サーバー側では誰が見ているか分からない。組み上がるまでは同じものを描く
   const isMounted = useIsHydrated();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,12 +51,9 @@ export default function SignIn(): React.JSX.Element {
     };
   }, [menuOpen]);
 
-  const signIn = useCallback(() => {
-    void authClient.signIn.social({ provider: "google" });
-  }, []);
   const signOut = useCallback(() => {
     setMenuOpen(false);
-    void authClient.signOut();
+    void endSession();
   }, []);
 
   // 決まる前に入り口を出すと、すでに入っている人の画面で一瞬ちらつく

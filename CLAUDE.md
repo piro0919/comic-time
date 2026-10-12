@@ -149,6 +149,10 @@ All commits are automatically checked for:
 - 別の端末で押したぶんは、開くたびに `AccountSync` がサーバーから読んで取り込む。
   登録は丸ごと置き換え、既読は日付の新しい方を採って足す。既読を置き換えにすると、
   読み出しの往復中に開いた回が消える
+- **ログインしたことのある端末だけがセッションを聞きに行く。** 印は localStorage の `signed-in-v1`
+  （印を入れる前からの端末は `favorites-synced-v1` で見分ける）。全員が聞きに行くと、
+  ログインしていない人でも開くたびに関数が1回動く。セッションは `useAccountSession` で読み、
+  `authClient.useSession` を直に呼ぶのは `_components/AccountSession` だけにする
 - **セッションを取りに行っている間、`useSession` はログイン中でも `null` を返す。**
   そこで「ログインしていない」と判断すると、合流の控えを消したり、押したぶんをサーバーへ送り損ねたりする
 - 表は `db/migrations/` の SQL。`follow_work (user_id, slug, site_url)` と

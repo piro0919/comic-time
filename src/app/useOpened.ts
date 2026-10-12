@@ -1,8 +1,8 @@
 "use client";
 import { createContext, useCallback, useContext, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import authClient from "@/app/authClient";
 import { markOpen } from "@/app/opens";
+import useAccountSession from "@/app/useAccountSession";
 import { type DateKey } from "@/types/work";
 
 /**
@@ -45,7 +45,7 @@ function dateKey(date: Date): string {
  * 理由は useFavorites と同じで、カードごとに購読を持たせない。
  */
 export function useOpenedState(): Opened {
-  const { data: session, isPending } = authClient.useSession();
+  const { data: session, isPending } = useAccountSession();
   // 確かめている間に押したぶんも送る。ログインしていなければサーバーが何もせず返す
   const signedIn = session !== null || isPending;
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）

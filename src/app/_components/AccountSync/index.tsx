@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import authClient from "@/app/authClient";
+import { syncedKey } from "@/app/authClient";
 import { mergeEarlySites, readEarlySites } from "@/app/earlySites";
 import { mergeFollows, readFollows } from "@/app/follows";
 import { mergeOpens, readOpens } from "@/app/opens";
+import useAccountSession from "@/app/useAccountSession";
 import useEarlySites from "@/app/useEarlySites";
 import useFavorites from "@/app/useFavorites";
 import useOpened from "@/app/useOpened";
@@ -23,7 +24,6 @@ import useOpened from "@/app/useOpened";
  * 往復が失敗したら、控えは何も書き換えずに諦め、画面が手前に戻ったときか
  * 回線が戻ったときにやり直す。合流の控えも成功してから付けるので、初回の合流も取りこぼさない。
  */
-const syncedKey = "favorites-synced-v1";
 /** 往復中に登録が押されたとき、読み直す回数の上限 */
 const maxReads = 3;
 
@@ -41,7 +41,7 @@ function sameFollows(
 }
 
 export default function AccountSync(): null {
-  const { data: session, isPending } = authClient.useSession();
+  const { data: session, isPending } = useAccountSession();
   const favorites = useFavorites();
   const opened = useOpened();
   const earlySites = useEarlySites();

@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
+import AccountSession from "./_components/AccountSession";
 import AccountSync from "./_components/AccountSync";
 import Layout from "./_components/Layout";
 import LocalState from "./_components/LocalState";
@@ -88,17 +89,16 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning={true}>
       <body className={notoSansJP.className}>
-        <script
-          dangerouslySetInnerHTML={{ __html: markFavorites }}
-           
-        />
+        <script dangerouslySetInnerHTML={{ __html: markFavorites }} />
         <ThemeProvider>
-          <LocalState>
-            <Suspense>
-              <Layout>{children}</Layout>
-            </Suspense>
-            <AccountSync />
-          </LocalState>
+          <AccountSession>
+            <LocalState>
+              <Suspense>
+                <Layout>{children}</Layout>
+              </Suspense>
+              <AccountSync />
+            </LocalState>
+          </AccountSession>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />

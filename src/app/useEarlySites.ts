@@ -1,8 +1,8 @@
 "use client";
 import { createContext, useCallback, useContext, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import authClient from "@/app/authClient";
 import { setEarlySite } from "@/app/earlySites";
+import useAccountSession from "@/app/useAccountSession";
 
 /**
  * 先読みの回を開くサイト。会員になっていて先読みまで読めるサイトだけを入れる。
@@ -27,7 +27,7 @@ export type EarlySites = {
  * 理由は useFavorites と同じで、カードごとに購読を持たせない。
  */
 export function useEarlySitesState(): EarlySites {
-  const { data: session, isPending } = authClient.useSession();
+  const { data: session, isPending } = useAccountSession();
   // 確かめている間に押したぶんも送る。ログインしていなければサーバーが何もせず返す
   const signedIn = session !== null || isPending;
   // サーバ側では空になるため、読み出しは描画後にする（表示のズレを避ける）
