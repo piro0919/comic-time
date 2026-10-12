@@ -69,6 +69,13 @@ All commits are automatically checked for:
 - Migration safety (squawk, and no edits to committed migrations)
 - Conventional commit message format (**written in English**, subject and body)
 
+### 置き場所（リージョン）
+
+- DB（Neon）はシンガポール（ap-southeast-1）、関数の既定も sin1。関数と DB を同じ場所に置く。
+  2026-10-13 に us-east-1 の DB から移した。前の DB（neon-cyan-envelope）は消さずに残している
+- 日本の取得元を読む `/works/[slug]`・`/api/episodes`・`/go` だけは `preferredRegion = "hnd1"` で東京に置く。
+  DB をほとんど使わず、取得元への往復の方が多い。取得元を読む経路を足したら、ここにも足す
+
 ### サイトの追加と取得
 
 - サイトの台帳は `src/data/sites.json`。名前・更新曜日・更新時刻・URL だけを持つ

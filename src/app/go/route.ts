@@ -1,8 +1,13 @@
-/* eslint-disable import/prefer-default-export */
 import { type NextRequest, NextResponse } from "next/server";
 import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
 import { catalog } from "@/lib/workCatalog";
 import { recentWorks } from "@/lib/worksOfDay";
+
+/**
+ * 取得元はどれも日本のサイトなので、関数は東京に置く。
+ * 既定のシンガポールは DB に合わせたもので、ここは DB をほとんど使わない
+ */
+export const preferredRegion = "hnd1";
 
 /**
  * カードから無料で読める最新の回へ送る中継。

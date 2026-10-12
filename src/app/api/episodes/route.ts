@@ -1,7 +1,12 @@
-/* eslint-disable import/prefer-default-export */
 import { type NextRequest, NextResponse } from "next/server";
 import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
 import { workOf } from "@/lib/workCatalog";
+
+/**
+ * 取得元はどれも日本のサイトなので、関数は東京に置く。
+ * 既定のシンガポールは DB に合わせたもので、ここは DB をほとんど使わない
+ */
+export const preferredRegion = "hnd1";
 
 /**
  * 作品ページの話の一覧の取り直し口。ページを作るときにサーバーで取れなかったサイトだけ、
