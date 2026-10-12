@@ -75,6 +75,8 @@ All commits are automatically checked for:
 - 各ソースは「その日更新された作品」だけを返す。取れなければ例外を投げ、そのサイトはその日が空になる
 - `data/works/<日付>.json` に7日ぶんを保存し、古い日は消す
 - サイトを足したら `npm run scrape:site-icons` も走らせる。複数サイトに載る作品の印に使うファビコンを `public/site-icons/` に集める
+- 同じく `npm run scrape:site-images` も走らせる。サイト一覧の絵は各サイトの OGP 画像を縮めて
+  `public/site-covers/` に置いたもので、取得の workflow には入っていない。走らせないと一覧が no-image のままになる
 - サムネイルは取得のあと `npm run scrape:work-thumbs` が 320px の webp に縮めて
   `public/work-thumbs/` に置く。取得の workflow に入っているので手で走らせるのは試すときだけ
 - **縮めている理由は通信量。** 原寸のまま並べると重い日で1画面 31.7MB、縮めて 8.3MB。
