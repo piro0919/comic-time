@@ -10,7 +10,11 @@ export const size = { height: 630, width: 1200 };
 export const contentType = "image/png";
 
 const TITLE = "ComicTime";
-const DESCRIPTION = "Web 漫画サイトの更新曜日と更新時刻を一覧で確認できます。";
+/** 折り返しを書体に任せると語の途中で割れるので、行を決めて渡す */
+const DESCRIPTION = [
+  "追っている Web 漫画の更新を",
+  "1か所でまとめて確認できます。",
+];
 const DOMAIN = "comictime.kkweb.io";
 /** アイコンと同じ地色。globals.css ではなくアイコン側に合わせる */
 const BACKGROUND = "#87CBFC";
@@ -49,7 +53,7 @@ export default function Image(): ImageResponse {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "0 56px",
+          padding: "0 0 0 100px",
           width: 570,
         }}
       >
@@ -69,6 +73,7 @@ export default function Image(): ImageResponse {
           style={{
             color: INK,
             display: "flex",
+            flexDirection: "column",
             fontFamily: BODY_FONT,
             fontSize: 27,
             lineHeight: 1.5,
@@ -76,7 +81,11 @@ export default function Image(): ImageResponse {
             opacity: 0.78,
           }}
         >
-          {DESCRIPTION}
+          {DESCRIPTION.map((line) => (
+            <div key={line} style={{ display: "flex" }}>
+              {line}
+            </div>
+          ))}
         </div>
         <div
           style={{
