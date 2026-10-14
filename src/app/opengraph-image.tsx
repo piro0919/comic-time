@@ -53,7 +53,7 @@ export default function Image(): ImageResponse {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "0 0 0 100px",
+          padding: "0 0 0 140px",
           width: 570,
         }}
       >
