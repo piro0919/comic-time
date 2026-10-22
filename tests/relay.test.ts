@@ -47,6 +47,22 @@ test("台帳に無いサイトは読みに行かない", async () => {
   }
 });
 
+/** コミプレは台帳が viewer.heros-web.com で、一覧は heros-web.com から読む */
+test("台帳のサイトの親のホストも読める", async () => {
+  process.env.SCRAPE_RELAY_TOKEN = "secret";
+
+  const served = serve({ "/day/1/1": "championCross2.html" });
+
+  try {
+    const url = "https://heros-web.com/category/manga/day/1/1";
+
+    assert.equal((await ask(url, "secret")).status, 200);
+    assert.equal((await ask("https://web.com/", "secret")).status, 400);
+  } finally {
+    served.restore();
+  }
+});
+
 test("台帳のサイトは読んだ中身をそのまま返す", async () => {
   process.env.SCRAPE_RELAY_TOKEN = "secret";
 

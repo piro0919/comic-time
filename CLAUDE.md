@@ -84,12 +84,14 @@ All commits are automatically checked for:
 - 取得の仕方は `scripts/scrape/sources/` に1サイト1ファイルで書き、`sources/index.ts` に URL とともに登録する
 - 各ソースは「その日更新された作品」だけを返す。取れなければ例外を投げ、そのサイトはその日が空になる
 - `data/works/<日付>.json` に7日ぶんを保存し、古い日は消す
-- **comici のサイトは東京の中継口（`/api/relay`）を通して読む。** 2026-10-21 から、チャンピオンクロス・
+- **comici のサイトは5つとも東京の中継口（`/api/relay`）を通して読む。** 2026-10-21 から、チャンピオンクロス・
   ヤンチャンWeb・竹コミ！・コミプレが日本の外からの接続に CloudFront の 403 を返す。取得は米国の
-  GitHub Actions で走るので、そのままでは読めない。中継口は合言葉 `SCRAPE_RELAY_TOKEN`
-  （Vercel の環境変数と GitHub の secrets に同じ値）を持つ要求だけを受け、行き先も台帳のサイトに限る。
+  GitHub Actions で走るので、そのままでは読めない。コミックライドはまだ断っていないが、同じ作りなので一緒に通す。
+  中継口は合言葉 `SCRAPE_RELAY_TOKEN`（Vercel の環境変数と GitHub の secrets に同じ値）を持つ要求だけを受ける。
+  行き先は台帳のサイトと同じホストか、その親のホストに限り、転送は追わない。
   手元で走らせるときは合言葉が無いので直接読む。別のサイトが同じように断ち始めたら、
-  そのソースの `fetchHtml` に `{ viaJapan: true }` を渡す
+  そのソースの `fetchHtml` に `{ viaJapan: true }` を渡す。読む住所のホストが台帳とも親子とも違うサイトは、
+  中継口が 400 で断るので、判定も直す
 - サイトを足したら `npm run scrape:site-icons` も走らせる。複数サイトに載る作品の印に使うファビコンを `public/site-icons/` に集める
 - 同じく `npm run scrape:site-images` も走らせる。サイト一覧の絵は各サイトの OGP 画像を縮めて
   `public/site-covers/` に置いたもので、取得の workflow には入っていない。走らせないと一覧が no-image のままになる

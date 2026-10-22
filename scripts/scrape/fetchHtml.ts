@@ -40,7 +40,10 @@ export default async function fetchHtml(
     const res = await request(url, viaJapan);
 
     if (!res.ok) {
-      throw new Error(`${res.status} ${res.statusText}`);
+      // 中継口は取得先の答えを本文に入れて返す。直接読んだときの本文は長いので載せない
+      const detail = res.url.startsWith(relayUrl) ? ` ${await res.text()}` : "";
+
+      throw new Error(`${res.status} ${res.statusText}${detail}`);
     }
 
     return await res.text();
