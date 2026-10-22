@@ -10,9 +10,7 @@ jobs:
       - run: |
           UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 ComicTimeBot/1.0 (+https://comictime.kkweb.io/)"
           curl -s https://api.ipify.org; echo
-          for o in championcross.jp comicride.jp; do
-            echo "===== $o (bot UA)"
-            curl -s -D - -A "$UA" "https://$o/category/manga/day/4/1" | head -c 3000; echo
-            echo "===== $o (curl UA)"
-            curl -s -D - -o /dev/null "https://$o/robots.txt"
+          for u in "https://championcross.jp/category/manga/day/4/1?nocache=$RANDOM$RANDOM" "https://championcross.jp/no-such-page-$RANDOM" "https://youngchampion.jp/" "https://takecomic.jp/" "https://heros-web.com/" "https://comici.jp/"; do
+            echo "===== $u"
+            curl -s -D - -o /dev/null -A "$UA" "$u" | grep -iE "^(HTTP|x-cache|age|date|server|x-amz-cf-pop)"
           done
