@@ -28,7 +28,10 @@ jobs:
           cache: npm
       - run: npm ci
       # 取れなかったサイトはその日を空にしたうえで、異常終了する
+      # 日本の外からの接続を断つサイトは、東京の関数の中継口を通して読む
       - run: npm run scrape
+        env:
+          SCRAPE_RELAY_TOKEN: ${{ secrets.SCRAPE_RELAY_TOKEN }}
       # 一覧に出す絵を縮めて持つ。原寸のまま並べると iOS のホーム画面アプリが
       # メモリ切れで落ちる。取れなかった絵は元の住所のまま出るので、ここは止めない
       - run: npm run scrape:work-thumbs

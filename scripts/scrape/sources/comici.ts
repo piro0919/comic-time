@@ -10,6 +10,9 @@ import resolveEpisodes from "../resolveEpisodes.ts";
  *
  * 一覧に話への道は無いので、最新話は作品ページから拾う。既定の並びは古い順で、
  * 先頭は第1話になってしまう。新着順の /new を見て、その先頭を最新話とする。
+ *
+ * 2026-10-21 から一部のサイトが日本の外からの接続を断つようになった。
+ * 取得は米国の GitHub Actions で走るので、東京の中継口を通して読む。
  */
 const maxPages = 10;
 /** 月曜=1、日曜=7 */
@@ -22,7 +25,9 @@ async function latestEpisode(
 ): Promise<null | string> {
   try {
     const $ = cheerio.load(
-      await fetchHtml(`${seriesUrl.replace(/\/new$/, "")}/new`),
+      await fetchHtml(`${seriesUrl.replace(/\/new$/, "")}/new`, {
+        viaJapan: true,
+      }),
     );
     const href = $("a[href*='/episodes/']").first().attr("href");
 
@@ -52,7 +57,9 @@ export default async function comici(
 
   for (let page = 1; page <= maxPages; page += 1) {
     const $ = cheerio.load(
-      await fetchHtml(`${origin}category/manga/day/${day}/${page}`),
+      await fetchHtml(`${origin}category/manga/day/${day}/${page}`, {
+        viaJapan: true,
+      }),
     );
     const items = $(".series-list-item");
 

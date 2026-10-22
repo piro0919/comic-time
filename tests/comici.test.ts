@@ -80,3 +80,21 @@ test("住所と絵は絶対URLで返る", async () => {
     assert.match(work.thumbnailUrl ?? "", /^https?:\/\//);
   });
 });
+
+/** 日本の外からの接続を断つサイトがあるので、Actions では東京の中継口を通す */
+test("合言葉があれば中継口を通して読む", async () => {
+  const relayed = serve({ "/api/relay": "championCross2.html" });
+
+  process.env.SCRAPE_RELAY_TOKEN = "secret";
+
+  try {
+    await comici(origin, 1);
+  } finally {
+    delete process.env.SCRAPE_RELAY_TOKEN;
+    relayed.restore();
+  }
+
+  assert.deepEqual(relayed.asked, [
+    `https://comictime.kkweb.io/api/relay?url=${encodeURIComponent(`${origin}category/manga/day/1/1`)}`,
+  ]);
+});
