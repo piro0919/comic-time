@@ -4105,6 +4105,21 @@
     "title": "T.Tラバーズ。"
   },
   {
+    "dayBits": 2,
+    "firstSeen": "2026-11-02",
+    "lastSeen": "2026-11-02",
+    "sites": [
+      {
+        "name": "マグコミ",
+        "siteUrl": "https://magcomi.com/",
+        "url": "https://magcomi.com/episode/12207421984421706719"
+      }
+    ],
+    "slug": "tactics",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984421706719-b8c564d2ac6a83389348e47a1341ac05?1792751506",
+    "title": "tactics"
+  },
+  {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
     "lastSeen": "2026-10-27",
@@ -21420,6 +21435,21 @@
     "title": "ニャイト・オブ・ザ・リビングキャット"
   },
   {
+    "dayBits": 2,
+    "firstSeen": "2026-11-02",
+    "lastSeen": "2026-11-02",
+    "sites": [
+      {
+        "name": "マグコミ",
+        "siteUrl": "https://magcomi.com/",
+        "url": "https://magcomi.com/episode/12207421984421745603"
+      }
+    ],
+    "slug": "ニューパラダイス",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984421745603-52d2c9f0ec0569292866e30ab35a4fa1?1792749048",
+    "title": "ニューパラダイス"
+  },
+  {
     "dayBits": 64,
     "firstSeen": "2026-08-29",
     "lastSeen": "2026-10-17",
@@ -22103,6 +22133,21 @@
     "slug": "バーテックスフォース",
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/021366/resized/ff2e3e8e-3946-4bcf-9b04-a9e428844bd8.jpg",
     "title": "バーテックスフォース"
+  },
+  {
+    "dayBits": 2,
+    "firstSeen": "2026-11-02",
+    "lastSeen": "2026-11-02",
+    "sites": [
+      {
+        "name": "マグコミ",
+        "siteUrl": "https://magcomi.com/",
+        "url": "https://magcomi.com/episode/12207421984421775571"
+      }
+    ],
+    "slug": "ハードボイルドスクランブルエッグ-木下さくら短編集-",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984421775571-cce03e56d253041c218a9ea07d856465?1792749113",
+    "title": "ハードボイルドスクランブルエッグ －木下さくら短編集－"
   },
   {
     "dayBits": 1,
@@ -31477,7 +31522,7 @@
   {
     "dayBits": 127,
     "firstSeen": "2026-08-24",
-    "lastSeen": "2026-11-01",
+    "lastSeen": "2026-11-02",
     "sites": [
       {
         "name": "ツイ４",
@@ -59202,7 +59247,7 @@
   {
     "dayBits": 2,
     "firstSeen": "2026-09-07",
-    "lastSeen": "2026-10-05",
+    "lastSeen": "2026-11-02",
     "sites": [
       {
         "name": "竹コミ！",
@@ -70298,6 +70343,51 @@
     "slug": "魔族の娘たちと送る乱れた異世界生活",
     "thumbnailUrl": "https://cdn-public.comici.jp/series/21480/20260527130924449D218B24A49F7A2D44691831CE970B073-sm.webp",
     "title": "魔族の娘たちと送る乱れた異世界生活"
+  },
+  {
+    "dayBits": 2,
+    "firstSeen": "2026-11-02",
+    "lastSeen": "2026-11-02",
+    "sites": [
+      {
+        "name": "マグコミ",
+        "siteUrl": "https://magcomi.com/",
+        "url": "https://magcomi.com/episode/12207421984421335675"
+      }
+    ],
+    "slug": "魔探偵ロキ新装版",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984421335675-ac89e947bbd01d2322e1be2f9fbe673a?1792753858",
+    "title": "魔探偵ロキ 新装版"
+  },
+  {
+    "dayBits": 2,
+    "firstSeen": "2026-11-02",
+    "lastSeen": "2026-11-02",
+    "sites": [
+      {
+        "name": "マグコミ",
+        "siteUrl": "https://magcomi.com/",
+        "url": "https://magcomi.com/episode/12207421984421335788"
+      }
+    ],
+    "slug": "魔探偵ロキragnarok",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984421335788-4cd54d2b5e48d513cdd24b6b79d7fdd1?1792753858",
+    "title": "魔探偵ロキRAGNAROK"
+  },
+  {
+    "dayBits": 2,
+    "firstSeen": "2026-11-02",
+    "lastSeen": "2026-11-02",
+    "sites": [
+      {
+        "name": "マグコミ",
+        "siteUrl": "https://magcomi.com/",
+        "url": "https://magcomi.com/episode/12207421984421442597"
+      }
+    ],
+    "slug": "魔探偵ロキragnarok~新世界の神々~",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984421442597-df9fda7250f16556a1d9850fc2816677?1792751795",
+    "title": "魔探偵ロキRAGNAROK～新世界の神々～"
   },
   {
     "dayBits": 2,
