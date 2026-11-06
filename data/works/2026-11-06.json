@@ -11,7 +11,7 @@
     "foundAt": "12:06",
     "siteName": "コミックブースト",
     "siteUrl": "https://comic-boost.com/",
-    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/sikimura_kv_sp.jpg",
+    "thumbnailUrl": "https://cdn.comic-boost.com/contents/thum/kokurarematide_kv_sp.jpg",
     "title": "【8P読切企画】ブーストShorts",
     "url": "https://comic-boost.com/product/01350020",
     "workUrl": "https://comic-boost.com/content/01350001"
@@ -739,7 +739,7 @@
     "foundAt": "12:06",
     "siteName": "webアクション",
     "siteUrl": "https://comic-action.com/",
-    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984178375207-9dc6c5176a429314a729c735a771ab2c?1793773976",
+    "thumbnailUrl": "https://cdn-img.comic-action.com/public/episode-thumbnail/12207421984178375207-9dc6c5176a429314a729c735a771ab2c?1793937587",
     "title": "ザムゼクタ",
     "url": "https://comic-action.com/episode/12207421984178375207"
   },
@@ -1468,6 +1468,15 @@
     "url": "https://zerosumonline.com/detail/akunohanamichi"
   },
   {
+    "foundAt": "18:06",
+    "siteName": "ツイ４",
+    "siteUrl": "https://sai-zen-sen.jp/comics/twi4/",
+    "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/res/images/cover.png",
+    "title": "悪役令嬢の四畳半",
+    "url": "https://sai-zen-sen.jp/comics/twi4/yojouhan/0582.html",
+    "workUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/"
+  },
+  {
     "foundAt": "12:06",
     "siteName": "カドコミ",
     "siteUrl": "https://comic-walker.com/",
@@ -1640,7 +1649,7 @@
     "foundAt": "12:06",
     "siteName": "くらげバンチ",
     "siteUrl": "https://kuragebunch.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/d4d01d301458b342d5d38d2581c6fa55cad2c017/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F10834108156739756643-d3c35a109e0d6515fc2ae66853a4388f%3F1770336763",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/a41935f92e2ce9723f9ffc3a9c065fbfda8eafd9/enlarge=0;height=1000;no_unsharpmask=1;quality=90;version=1;width=720/https%3A%2F%2Fcdn-img.kuragebunch.com%2Fpublic%2Fseries-sub-thumbnail-vertical-with-logo%2F10834108156739756643-d3c35a109e0d6515fc2ae66853a4388f%3F1793952927",
     "title": "沖縄で好きになった子が方言すぎてツラすぎる",
     "url": "https://kuragebunch.com/episode/12207421984412058828"
   },
@@ -2965,6 +2974,15 @@
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/004223/resized/fb7e11a1-a657-4bd3-a7b8-795624587129.jpg",
     "title": "両親の借金を肩代わりしてもらう条件は日本一可愛い女子高生と一緒に暮らすことでした。",
     "url": "https://comic-walker.com/detail/KC_004223_S/episodes/KC_0042230005200011_E"
+  },
+  {
+    "foundAt": "18:06",
+    "siteName": "竹コミ！",
+    "siteUrl": "https://takecomic.jp/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/1646812/20250911140305511C7C33AA8AC5FC147826C3F267D7FAB19-sm.webp",
+    "title": "隣の席の陰キャ女子が推し歌い手だった～俺の曲を歌ってくれ！～",
+    "url": "https://takecomic.jp/episodes/a1a903b9359f6",
+    "workUrl": "https://takecomic.jp/series/b73907ab11cf4/new"
   },
   {
     "foundAt": "12:06",
