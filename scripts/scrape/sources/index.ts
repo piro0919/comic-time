@@ -14,6 +14,7 @@ import comiplex from "./comiplex.ts";
 import ganganOnline from "./ganganOnline.ts";
 import gaugauMonster from "./gaugauMonster.ts";
 import getsumagakichi from "./getsumagakichi.ts";
+import ichijinPlus from "./ichijinPlus.ts";
 import kurageBunch from "./kurageBunch.ts";
 import magazinePocket from "./magazinePocket.ts";
 import magcomi from "./magcomi.ts";
@@ -80,6 +81,7 @@ const sources: Source[] = [
   { fetchToday: comicBoost, siteUrl: "https://comic-boost.com/" },
   { fetchToday: comicRide, siteUrl: "https://comicride.jp/" },
   { fetchToday: gaugauMonster, siteUrl: "https://gaugau.futabanet.jp/" },
+  { fetchToday: ichijinPlus, siteUrl: "https://ichicomi.com/" },
 ];
 
 export default sources;

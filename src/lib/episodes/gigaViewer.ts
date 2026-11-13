@@ -3,7 +3,7 @@ import fetchText from "@/lib/episodes/fetchText";
 import japanDate from "@/lib/episodes/japanDate";
 
 /**
- * GigaViewer（少年ジャンプ＋、コミックDAYS、となりのヤングジャンプなど10サイト）の話の一覧。
+ * GigaViewer（少年ジャンプ＋、コミックDAYS、となりのヤングジャンプなど12サイト）の話の一覧。
  *
  * 話のページに作品の番号（data-aggregate-id）が載っている。それを一覧の API に渡すと、
  * 新しい順に50件ずつ JSON で返ってくる。空の配列が返ったら終わり。

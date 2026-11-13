@@ -28,6 +28,7 @@ const sources: Record<string, EpisodeSource> = {
   "https://comicride.jp/": comici,
   "https://gaugau.futabanet.jp/": gaugauMonster,
   "https://getsumagakichi.com/": gigaViewer,
+  "https://ichicomi.com/": gigaViewer,
   "https://kirapo.jp/meteor": comicMeteor,
   "https://kuragebunch.com/": gigaViewer,
   "https://magcomi.com/": gigaViewer,
