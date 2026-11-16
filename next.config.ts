@@ -1,4 +1,4 @@
-// eslint-disable-next-line filenames/match-regex, filenames/match-exported
+/* eslint-disable filenames/match-regex, filenames/match-exported */
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
