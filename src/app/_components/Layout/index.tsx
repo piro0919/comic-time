@@ -3,7 +3,7 @@ import { ProgressProvider } from "@bprogress/next/app";
 import { useTheme } from "next-themes";
 import { type ReactNode } from "react";
 import { Toaster } from "sonner";
-import useShowWindowSize from "use-show-window-size";
+import { useShowWindowSize } from "use-show-window-size";
 import useSwipeTabs from "@/lib/useSwipeTabs";
 import Header from "../Header";
 import MobileNav from "../MobileNav";

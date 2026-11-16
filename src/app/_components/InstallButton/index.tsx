@@ -30,15 +30,15 @@ function isAppleDevice(): boolean {
  * Chrome 系はブラウザの確認、iOS は手順の案内を開く。
  */
 export default function InstallButton(): null | React.JSX.Element {
-  const { canInstallprompt, enabledPwa, isPwa, showInstallPrompt } = usePwa();
+  const { canInstall, install, isInstalled, isSupported } = usePwa();
   const [isGuideShown, setIsGuideShown] = useState(false);
   // 組み上がるまでは window を見られない。サーバー側では Apple 端末と決められない。
   // 端末の種類は変わらないので、組み上がった時点で一度だけ調べる
   const isHydrated = useIsHydrated();
   const isApple = useMemo(() => isHydrated && isAppleDevice(), [isHydrated]);
-  const canPrompt = enabledPwa && canInstallprompt;
+  const canPrompt = isSupported && canInstall;
 
-  if (isPwa || (!canPrompt && !isApple)) {
+  if (isInstalled || (!canPrompt && !isApple)) {
     return null;
   }
 
@@ -47,7 +47,7 @@ export default function InstallButton(): null | React.JSX.Element {
       <button
         onClick={() => {
           if (canPrompt) {
-            showInstallPrompt();
+            install();
 
             return;
           }
