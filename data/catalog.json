@@ -13802,7 +13802,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-10",
+    "lastSeen": "2026-11-17",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -71197,21 +71197,21 @@
   {
     "dayBits": 5,
     "firstSeen": "2026-08-30",
-    "lastSeen": "2026-11-15",
+    "lastSeen": "2026-11-17",
     "sites": [
-      {
-        "name": "マンガUP!",
-        "siteUrl": "https://www.manga-up.com/",
-        "url": "https://www.manga-up.com/titles/1538"
-      },
       {
         "name": "ガンガンONLINE",
         "siteUrl": "https://www.ganganonline.com/",
         "url": "https://www.ganganonline.com/title/2076/chapter/132320"
+      },
+      {
+        "name": "マンガUP!",
+        "siteUrl": "https://www.manga-up.com/",
+        "url": "https://www.manga-up.com/titles/1538"
       }
     ],
     "slug": "捕食者系魔法少女",
-    "thumbnailUrl": "https://www.ganganonline.com/secure/title/2076/title_thumbnail_list_single/441368.webp?hash=s8n_4Fddihkaq8gCWQfgiQ&expires=1795305600",
+    "thumbnailUrl": "https://ja-img.manga-up.com/secure/1746151977/title_small/1538.webp?hash=X6d9UAZRR5mD3tuJajZRPA&expires=2145884400",
     "title": "捕食者系魔法少女"
   },
   {
