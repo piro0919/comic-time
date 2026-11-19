@@ -1097,6 +1097,15 @@
     "url": "https://comic-walker.com/detail/KC_006062_S/episodes/KC_0060620002100021_E"
   },
   {
+    "foundAt": "18:06",
+    "siteName": "ツイ４",
+    "siteUrl": "https://sai-zen-sen.jp/comics/twi4/",
+    "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/res/images/cover.png",
+    "title": "悪役令嬢の四畳半",
+    "url": "https://sai-zen-sen.jp/comics/twi4/yojouhan/0595.html",
+    "workUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/"
+  },
+  {
     "foundAt": "11:44",
     "siteName": "カドコミ",
     "siteUrl": "https://comic-walker.com/",
@@ -1288,6 +1297,15 @@
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/006835/resized/b92cfbbe-f409-4cd4-86a6-c1498527297a.jpg",
     "title": "仮面の黒騎士。正体バレたのでもう学園でも無双する",
     "url": "https://comic-walker.com/detail/KC_006835_S/episodes/KC_0068350001600011_E"
+  },
+  {
+    "foundAt": "18:06",
+    "siteName": "コミプレ",
+    "siteUrl": "https://viewer.heros-web.com/",
+    "thumbnailUrl": "https://cdn-public.comici.jp/series/2448626/20260508160208916BDA42E54A7EBD28178DAE12AD41633D3-sm.webp",
+    "title": "仮面ライダークウガ",
+    "url": "https://heros-web.com/episodes/a1fe84dd615fd",
+    "workUrl": "https://heros-web.com/series/e5c7cc354cc05"
   },
   {
     "foundAt": "11:44",
@@ -2434,7 +2452,7 @@
     "foundAt": "00:06",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/ce858fa240356803839ee7361329d0013e1afa4c/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F10833497643049550206-00e6ee049e401f468b607e0686c4797f%3F1791345378",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/1110ee9db6efdd3342f952b55e615cf2734c4cff/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F10833497643049550206-00e6ee049e401f468b607e0686c4797f%3F1795064883",
     "title": "猫田びより",
     "url": "https://shonenjumpplus.com/episode/9253191257982514017"
   },
@@ -2725,7 +2743,7 @@
     "foundAt": "00:06",
     "siteName": "少年ジャンプ＋",
     "siteUrl": "https://shonenjumpplus.com/",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/8b261d191637b57186ecccc13af7f130c6b026f2/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F4855956445096931069-2d45f0fc4f26befbfe38e3e323196c9c%3F1794817640",
+    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/03c51f8264e62f2fbd682543626a4722571f348a/enlarge=0;height=482;no_unsharpmask=1;quality=90;version=1;width=482/https%3A%2F%2Fcdn-ak-img.shonenjumpplus.com%2Fpublic%2Fseries-thumbnail%2F4855956445096931069-2d45f0fc4f26befbfe38e3e323196c9c%3F1795064883",
     "title": "幼稚園WARS",
     "url": "https://shonenjumpplus.com/episode/9253191257982513929"
   },
