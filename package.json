@@ -1,12 +1,12 @@
 {
   "dependencies": {
     "@bprogress/next": "3.2.12",
-    "@neondatabase/serverless": "1.2.0",
+    "@neondatabase/serverless": "1.2.1",
     "@react-spring/web": "10.1.2",
     "@use-gesture/react": "10.3.1",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.1.0",
-    "better-auth": "1.7.22",
+    "better-auth": "1.7.25",
     "clsx": "2.1.1",
     "dayjs": "1.11.23",
     "next": "16.4.6",
