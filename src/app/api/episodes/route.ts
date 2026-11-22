@@ -7,7 +7,8 @@ import { workOf } from "@/lib/workCatalog";
  * 作品ページの話の一覧の取り直し口。ページを作るときにサーバーで取れなかったサイトだけ、
  * 画面が開かれてからここに取りに来る。
  *
- * 答えは CDN に6時間ためる。取得元に頼むのは、作品とサイトの組ごとに6時間に1回で済む。
+ * 答えは CDN に24時間ためる。作品ページの作り直しの間隔とそろえている。
+ * 取得元に頼むのは、作品とサイトの組ごとに1日1回で済む。
  *
  * 読みに行く先は台帳に控えた住所だけにする。任意の住所を受け取ると、
  * このサイトを踏み台にして他所を叩けてしまう。
@@ -28,7 +29,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       {
         headers: {
           "Cache-Control":
-            "public, s-maxage=21600, stale-while-revalidate=86400",
+            "public, s-maxage=86400, stale-while-revalidate=86400",
         },
       },
     );
