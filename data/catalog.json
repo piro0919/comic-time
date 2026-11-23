@@ -1462,7 +1462,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -7072,12 +7072,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03204/episode/435720"
+        "url": "https://pocket.shonenmagazine.com/title/03204/episode/435721"
       }
     ],
     "slug": "イケオジモンスターと絶対零度男子",
@@ -11902,12 +11902,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-10-27",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03385/episode/446120"
+        "url": "https://pocket.shonenmagazine.com/title/03385/episode/446368"
       }
     ],
     "slug": "ギークラウン",
@@ -13907,12 +13907,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-08",
-    "lastSeen": "2026-11-10",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03329/episode/443270"
+        "url": "https://pocket.shonenmagazine.com/title/03329/episode/443271"
       }
     ],
     "slug": "ゴールデンファントム",
@@ -15762,7 +15762,7 @@
   {
     "dayBits": 20,
     "firstSeen": "2026-08-27",
-    "lastSeen": "2026-11-10",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "コミックDAYS",
@@ -15772,11 +15772,11 @@
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03281/episode/440297"
+        "url": "https://pocket.shonenmagazine.com/title/03281/episode/441134"
       }
     ],
     "slug": "さよなら、英雄になった旦那様~ただ祈るだけの役立たずな妻のはずでしたが......~",
-    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3281/title_grid_wide_20261026130705b7f3e1b176a7f1bd13cd2ea7857562fc.png",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3281/title_grid_wide_20260528134211ffbf658ea1bb3638f82997e8446ba1c5.png",
     "title": "さよなら、英雄になった旦那様　～ただ祈るだけの役立たずな妻のはずでしたが……～"
   },
   {
@@ -20707,12 +20707,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-10-20",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03364/episode/444866"
+        "url": "https://pocket.shonenmagazine.com/title/03364/episode/444867"
       }
     ],
     "slug": "デキる男女のデキない恋",
@@ -25232,12 +25232,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03294/episode/446118"
+        "url": "https://pocket.shonenmagazine.com/title/03294/episode/446365"
       }
     ],
     "slug": "ヒトの心が読める彼女の話",
@@ -33547,7 +33547,7 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-09-15",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "ヤンチャンWeb",
@@ -37187,13 +37187,8 @@
   {
     "dayBits": 13,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-22",
+    "lastSeen": "2026-11-24",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03201/episode/434955"
-      },
       {
         "name": "ヤンマガWeb",
         "siteUrl": "https://yanmaga.jp/",
@@ -37203,10 +37198,15 @@
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983837599027"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03201/episode/434956"
       }
     ],
     "slug": "運命など存在しないので",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/8cc21d5d14f3a1258cefda0c525f92fc348f00b5/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F2551460909596605034-832e0d1c836e4eb76b3033517a602127%3F1759106458",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3201/title_grid_wide_2026031712272674dd93ecef38fc615561ba9dc7e81ce8.png",
     "title": "運命など存在しないので"
   },
   {
@@ -39147,12 +39147,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-11-17",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03403/episode/446369"
+        "url": "https://pocket.shonenmagazine.com/title/03403/episode/446370"
       }
     ],
     "slug": "下層スラムでガラクタを修理していた転生者はあらゆる魔術を〈再現〉し、世界最高の魔術師へと至る~原典魔",
@@ -44247,7 +44247,7 @@
   {
     "dayBits": 12,
     "firstSeen": "2026-09-23",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "コミックDAYS",
@@ -44257,7 +44257,7 @@
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03362/episode/444644"
+        "url": "https://pocket.shonenmagazine.com/title/03362/episode/444645"
       }
     ],
     "slug": "金田一パパの事件簿",
@@ -56442,12 +56442,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03270/episode/439172"
+        "url": "https://pocket.shonenmagazine.com/title/03270/episode/439173"
       }
     ],
     "slug": "昭和元禄落語心中",
@@ -60717,12 +60717,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03247/episode/437776"
+        "url": "https://pocket.shonenmagazine.com/title/03247/episode/437777"
       }
     ],
     "slug": "青夏ao-natsu電子新装版",
@@ -63922,12 +63922,12 @@
   {
     "dayBits": 4,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03260/episode/438568"
+        "url": "https://pocket.shonenmagazine.com/title/03260/episode/438569"
       }
     ],
     "slug": "男子バド部に女子が紛れてるシークレットバドミントンクラブ",
@@ -69582,12 +69582,12 @@
   {
     "dayBits": 68,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-17",
+    "lastSeen": "2026-11-24",
     "sites": [
       {
         "name": "マガポケ",
         "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03322/episode/446119"
+        "url": "https://pocket.shonenmagazine.com/title/03322/episode/446366"
       }
     ],
     "slug": "排水溝につまったスライムを日々かたづけるだけの底辺職、なぜか実力者たちの熱い視線を集めてしまう",
@@ -70492,21 +70492,21 @@
   {
     "dayBits": 20,
     "firstSeen": "2026-08-25",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-24",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03262/episode/439748"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983947537990"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03262/episode/439749"
       }
     ],
     "slug": "彼は友達",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/e17257e6c4beed94ecc4365412a81447498b78e3/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F14079602755643699323-972e3bc02f0129d18e269967bc8c9f93%3F1748568995",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3262/title_grid_wide_20260511170420996558555371a7dd0a94c9f24cfc1980.png",
     "title": "彼は友達"
   },
   {
@@ -81497,21 +81497,21 @@
   {
     "dayBits": 13,
     "firstSeen": "2026-08-26",
-    "lastSeen": "2026-11-18",
+    "lastSeen": "2026-11-24",
     "sites": [
-      {
-        "name": "マガポケ",
-        "siteUrl": "https://pocket.shonenmagazine.com/",
-        "url": "https://pocket.shonenmagazine.com/title/03255/episode/440921"
-      },
       {
         "name": "コミックDAYS",
         "siteUrl": "https://comic-days.com/",
         "url": "https://comic-days.com/episode/12207421983718168112"
+      },
+      {
+        "name": "マガポケ",
+        "siteUrl": "https://pocket.shonenmagazine.com/",
+        "url": "https://pocket.shonenmagazine.com/title/03255/episode/441224"
       }
     ],
     "slug": "冰剣の魔術師が世界を統べるii~世界最強の魔術師である少年は、魔術学院に入学する~",
-    "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/611a642fad320ed30756492b67be8daee0a7127c/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F12207421983659513211-2c8a7486bb84d8fcc88649697f5c55ea%3F1782891061",
+    "thumbnailUrl": "https://mgpk-cdn.magazinepocket.com/static/titles/3255/title_grid_wide_202605141326164f0d862412d0c8a09e92515f7f8e0504.png",
     "title": "冰剣の魔術師が世界を統べるⅡ～世界最強の魔術師である少年は、魔術学院に入学する～"
   },
   {
