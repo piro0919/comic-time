@@ -163,7 +163,10 @@ All commits are automatically checked for:
   同じ回の住所を6日以内に見ていた日は数えない。dropRepeats が入った 9/9 より前は、同じ回が毎日載っていたため。
   「新しい住所を見た日」では数えない。マンガUP!は Web で読めるのが冒頭だけで、隔週の更新でも同じ住所が載る
 - 照合。最後の更新日は台帳の `lastSeen` と1件を除いて一致した。違う1件（相棒に毒がありまして！）は 9/9 まで同じ回（0317）が載り続けていた作品で、
-  `lastSeen` が 9/9 になっていた。2026-11-26 に `lastSeen` を本当の最後の更新の 8/28 に直し、全件一致した
+  `lastSeen` が 9/9 になっていた。2026-11-26 に `lastSeen` を本当の最後の更新の 8/28 に直し、全件一致した。
+  いまは書き起こしを流すたびに `firstSeen` と `lastSeen` を履歴の最初と最後に揃える（`scripts/catalog/mergeBackfill.ts`）。
+  `lastSeen` は前へ戻ることがあり、サイトマップの lastmod と構造化データの dateModified も動く。一致は `tests/catalogUpdates.test.ts` が見る
+- 検索に出す線と間隔の判定は、同じ日を1回と数える（`isIndexed` も `next-sitemap.config.js` も重複を除いた日数）
 - **noindex の線は更新3回（`src/lib/isIndexed.ts`）。2026-11-26 に本人から任されて決めた。**
   隔週・月1・休載の判定に更新の間隔が2つ要るため。新作も3回目で自動的に検索に出る。
   入れた時点で 5,354件のうち 3,906件が残り、1,448件が noindex になってサイトマップからも外れる。

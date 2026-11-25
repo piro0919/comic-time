@@ -34,6 +34,13 @@ test("更新を3回見つけた作品から検索に出す", () => {
   );
 });
 
+test("同じ日が重なっても1回と数える。間隔の判定が出ないページは検索に出さない", () => {
+  assert.equal(
+    isIndexed(entryWith(["2026-11-01", "2026-11-08", "2026-11-08"])),
+    false,
+  );
+});
+
 test("サイトマップには検索に出す作品ページだけを載せる", async () => {
   const paths = await sitemapConfig.additionalPaths({
     transform: async (_conf, loc) => Promise.resolve(loc),

@@ -179,7 +179,7 @@ const config = {
   additionalPaths: async (conf) =>
     Promise.all(
       readJson(path.join(process.cwd(), "data", "catalog.json"), [])
-        .filter((entry) => entry.updates.length >= minUpdatesToIndex)
+        .filter((entry) => new Set(entry.updates).size >= minUpdatesToIndex)
         .map((entry) => conf.transform(conf, `/works/${entry.slug}`)),
     ),
   transform: async (conf, loc) => ({

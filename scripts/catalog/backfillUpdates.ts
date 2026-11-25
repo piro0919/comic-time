@@ -3,6 +3,7 @@ import fs from "fs/promises";
 import path from "path";
 import { titleKey } from "../../src/lib/workSlug.ts";
 import { type CatalogEntry, type DateKey } from "../../src/types/work.ts";
+import mergeBackfill from "./mergeBackfill.ts";
 
 /**
  * 台帳の updates を git の履歴から書き起こす。手元で1回流すためのもの。
@@ -18,6 +19,8 @@ import { type CatalogEntry, type DateKey } from "../../src/types/work.ts";
  *   入ったのが 2026-09-09 で、それより前は同じ回が毎日載っていた
  *
  * 台帳に既にある日付は残して足すだけなので、何度流してもよい。
+ * 足したあと、firstSeen と lastSeen を履歴の最初と最後に揃える（scripts/catalog/mergeBackfill.ts）。
+ * lastSeen は前へ戻ることがある。同じ回が載り続けた日まで進んでいたぶん
  * 取得のコミットと台帳がぶつかったら、相手の台帳を採ってこれを流し直す。
  */
 const rewriteCommit = "7b31153c";
@@ -144,27 +147,15 @@ let filled = 0;
 
 const entries = catalog.map((entry) => {
   const byUrl = seen.get(titleKey(entry.title));
-  const updates = new Set<DateKey>(entry.updates ?? []);
 
   if (byUrl !== undefined) {
     filled += 1;
-    updatesOf(byUrl).forEach((date) => updates.add(date));
   }
 
-  const sorted = [...updates].sort();
-  const first = sorted[0];
-
-  // 台帳は 8/24 から貯めていて、履歴はそれより前まである。初めて見た日も履歴に揃える。
-  // 最後の更新日も履歴の最後に揃える。同じ回が載り続けた日まで lastSeen が進んでいると、
-  // 作品ページの「最後の更新」と「更新を見つけた日」が食い違う（tests/catalogUpdates.test.ts）。
-  // 更新を見た曜日（dayBits）は画面の文言に出るので、ここでは触らない
-  return {
-    ...entry,
-    firstSeen:
-      first !== undefined && first < entry.firstSeen ? first : entry.firstSeen,
-    lastSeen: sorted.at(-1) ?? entry.lastSeen,
-    updates: sorted,
-  };
+  return mergeBackfill(
+    { ...entry, updates: entry.updates ?? [] },
+    byUrl === undefined ? [] : [...updatesOf(byUrl)],
+  );
 });
 
 await fs.writeFile(catalogPath, `${JSON.stringify(entries, null, 2)}\n`);

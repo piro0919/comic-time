@@ -17,6 +17,7 @@ import { type CatalogEntry } from "@/types/work";
  */
 export const minUpdatesToIndex = 3;
 
+/** 同じ日は1回と数える。間隔の判定（updateRhythm）と数を揃え、判定の出ないページを検索に出さない */
 export default function isIndexed(entry: CatalogEntry): boolean {
-  return entry.updates.length >= minUpdatesToIndex;
+  return new Set(entry.updates).size >= minUpdatesToIndex;
 }
