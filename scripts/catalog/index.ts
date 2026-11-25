@@ -82,7 +82,7 @@ export function withDate(updates: DateKey[], date: DateKey): DateKey[] {
   return updates.includes(date) ? updates : [...updates, date].sort();
 }
 
-export default async function buildCatalog(): Promise<void> {
+export default async function catalog(): Promise<void> {
   const previous = await readJson<CatalogEntry[]>(catalogPath, []);
   const byKey = new Map(
     previous.map((entry) => [titleKey(entry.title), entry] as const),
@@ -154,5 +154,5 @@ export default async function buildCatalog(): Promise<void> {
 }
 
 if (process.argv[1]?.endsWith(path.join("catalog", "index.ts")) === true) {
-  await buildCatalog();
+  await catalog();
 }
