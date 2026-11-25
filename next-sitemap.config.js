@@ -9,6 +9,8 @@ const path = require("path");
  */
 const worksDir = path.join(process.cwd(), "data", "works");
 const weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+/** src/lib/isIndexed.ts の minUpdatesToIndex と揃える。ここは TypeScript を読めない */
+const minUpdatesToIndex = 3;
 
 function readJson(filePath, fallback) {
   try {
@@ -172,12 +174,13 @@ const config = {
     "/opengraph-image",
     "/settings",
   ],
-  // 作品ページはビルドで作らず、開かれたときに作る。ビルドの記録に載らないので台帳から足す
+  // 作品ページはビルドで作らず、開かれたときに作る。ビルドの記録に載らないので台帳から足す。
+  // 更新の記録が薄くて noindex にしている作品は載せない（src/lib/isIndexed.ts）
   additionalPaths: async (conf) =>
     Promise.all(
-      readJson(path.join(process.cwd(), "data", "catalog.json"), []).map(
-        (entry) => conf.transform(conf, `/works/${entry.slug}`),
-      ),
+      readJson(path.join(process.cwd(), "data", "catalog.json"), [])
+        .filter((entry) => entry.updates.length >= minUpdatesToIndex)
+        .map((entry) => conf.transform(conf, `/works/${entry.slug}`)),
     ),
   transform: async (conf, loc) => ({
     // 作品の住所は日本語のまま。サイトマップには符号化した形で載せる

@@ -71,6 +71,17 @@ function freeSlug(title: string, taken: Set<string>): string {
   }
 }
 
+/**
+ * 更新を見つけた日に足す。同じ日は1回に数える。
+ *
+ * 取得は1日に何度も走り、同じ日のファイルを書き直す。前の回に見つけて次の回で
+ * 取れなかった作品も、見つけた事実は残す。各ソースはその日に更新された作品だけを返し、
+ * 同じ回が載り続けるものは dropRepeats が外しているので、載った日をそのまま更新と数える
+ */
+export function withDate(updates: DateKey[], date: DateKey): DateKey[] {
+  return updates.includes(date) ? updates : [...updates, date].sort();
+}
+
 export default async function buildCatalog(): Promise<void> {
   const previous = await readJson<CatalogEntry[]>(catalogPath, []);
   const byKey = new Map(
@@ -107,6 +118,7 @@ export default async function buildCatalog(): Promise<void> {
           slug,
           thumbnailUrl: work.thumbnailUrl,
           title: work.title,
+          updates: [date],
         });
 
         return;
@@ -125,6 +137,7 @@ export default async function buildCatalog(): Promise<void> {
         sites: [...sites, site],
         thumbnailUrl: work.thumbnailUrl ?? found.thumbnailUrl,
         title: work.title,
+        updates: withDate(found.updates, date),
       });
     });
   }

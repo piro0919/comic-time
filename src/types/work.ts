@@ -67,6 +67,12 @@ export type CatalogEntry = {
   slug: string;
   thumbnailUrl: null | string;
   title: string;
+  /**
+   * 更新を見つけた日。古い順。
+   * 8/17〜11/26 のぶんは git の履歴から書き起こした（scripts/catalog/backfillUpdates.ts）。
+   * それより後は取得のたびに scripts/catalog が足す
+   */
+  updates: DateKey[];
 };
 
 /**

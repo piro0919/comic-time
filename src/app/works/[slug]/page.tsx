@@ -2,6 +2,7 @@ import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import episodesForPage from "@/lib/episodes/episodesForPage";
 import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
+import isIndexed from "@/lib/isIndexed";
 import pageMetadata from "@/lib/pageMetadata";
 import siteOrigin from "@/lib/siteOrigin";
 import { seenDaysLabel, workHref, workOf } from "@/lib/workCatalog";
@@ -38,8 +39,7 @@ export async function generateMetadata({
   const listsEpisodes = work.sites.some(
     (site) => episodeSourceOf(site.siteUrl) !== undefined,
   );
-
-  return pageMetadata({
+  const metadata = pageMetadata({
     description:
       `${where}で読めます。` +
       `${days === "" ? "" : `更新を見たのは${days}、`}` +
@@ -52,6 +52,11 @@ export async function generateMetadata({
       ? `${work.title}の最新話と無料で読める話・更新曜日`
       : `${work.title}の更新曜日と読めるサイト`,
   });
+
+  // 更新の記録が薄いページは検索に出さない。リンクは辿ってもらう
+  return isIndexed(work)
+    ? metadata
+    : { ...metadata, robots: { follow: true, index: false } };
 }
 
 /**
