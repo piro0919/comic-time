@@ -8,6 +8,7 @@
 
 - 📅 One page per weekday (`/day/mon` … `/day/irregular`), grouped by site
 - 📖 Per-title update days, scraped daily from each site
+- 🗓 Per-title update history (the days an update was found) and rhythm: twice a week or more, weekly, every other week, monthly, or irregular, with a note when a title looks paused
 - ⭐ Follow a title, or a whole site, and see today's updates first
 - 🔍 Search across every title (`/search`)
 - 👁 Titles opened today are dimmed, so a second visit shows what is left

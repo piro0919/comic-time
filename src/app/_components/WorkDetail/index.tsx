@@ -30,10 +30,8 @@ export default function WorkDetail({
   work,
 }: WorkDetailProps): React.JSX.Element {
   const days = daysOf(work.dayBits);
-  const rhythm = updateRhythm(
-    work.updates,
-    catalogLatestDay() ?? work.lastSeen,
-  );
+  const latestDay = catalogLatestDay() ?? work.lastSeen;
+  const rhythm = updateRhythm(work.updates, latestDay);
   const episodeSites = work.sites.filter(
     (site) => episodeSourceOf(site.siteUrl) !== undefined,
   );
@@ -130,7 +128,7 @@ export default function WorkDetail({
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>更新を見つけた日</h2>
         <dl className={styles.history}>
-          {updatesByMonth(work.updates).map((month) => (
+          {updatesByMonth(work.updates, latestDay).map((month) => (
             <div className={styles.historyMonth} key={month.label}>
               <dt className={styles.historyLabel}>{month.label}</dt>
               <dd className={styles.historyDays}>

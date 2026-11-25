@@ -112,20 +112,24 @@
   text-decoration: underline;
 }
 
-/* 事実の行（.fact）と同じ並び。日付が多い月は折り返す */
+/*
+ * 見出しと日付の2列。見出しの列はいちばん長い見出しに揃うので、
+ * 「2026年12月」のように年が付いても日付の始まりがずれない。日付が多い月は折り返す
+ */
+
 .history {
+  column-gap: var(--space-3);
   display: grid;
-  gap: var(--space-2);
+  grid-template-columns: max-content 1fr;
+  row-gap: var(--space-2);
 }
 
 .historyMonth {
-  display: flex;
-  gap: var(--space-3);
+  display: contents;
 }
 
 .historyLabel {
   color: var(--muted);
-  flex-shrink: 0;
   font-size: 1.2rem;
   font-variant-numeric: tabular-nums;
   min-width: 3em;

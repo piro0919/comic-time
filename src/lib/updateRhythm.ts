@@ -46,9 +46,11 @@ function medianOf(values: number[]): number {
 }
 
 export default function updateRhythm(
-  updates: DateKey[],
+  unsorted: DateKey[],
   today: DateKey,
 ): null | UpdateRhythm {
+  // 間隔は古い順で数える。台帳は古い順に足しているが、崩れても判定が狂わないように並べ直す
+  const updates = [...new Set(unsorted)].toSorted();
   const last = updates.at(-1);
 
   if (updates.length < minUpdates || last === undefined) {
@@ -77,8 +79,14 @@ export type MonthOfUpdates = {
   label: string;
 };
 
-/** 月ごとに束ねる。年をまたぐ履歴だけ、見出しに年を付ける */
-export function updatesByMonth(updates: DateKey[]): MonthOfUpdates[] {
+/**
+ * 月ごとに束ねる。年をまたぐ履歴と、基準の日（台帳の最新日）と違う年の月は、見出しに年を付ける。
+ * 1つの年に収まる古い履歴を次の年に見たとき、今年の月と見分けがつかなくならないように
+ */
+export function updatesByMonth(
+  updates: DateKey[],
+  today: DateKey,
+): MonthOfUpdates[] {
   const months = new Map<string, number[]>();
 
   updates.toSorted().forEach((date) => {
@@ -98,7 +106,10 @@ export function updatesByMonth(updates: DateKey[]): MonthOfUpdates[] {
 
     return {
       days: months.get(key) ?? [],
-      label: years.size > 1 ? `${key.slice(0, 4)}年${month}` : month,
+      label:
+        years.size > 1 || !years.has(today.slice(0, 4))
+          ? `${key.slice(0, 4)}年${month}`
+          : month,
     };
   });
 }
