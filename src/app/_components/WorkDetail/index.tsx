@@ -125,19 +125,22 @@ export default function WorkDetail({
           />
         </section>
       ))}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>更新を見つけた日</h2>
-        <dl className={styles.history}>
-          {updatesByMonth(work.updates, latestDay).map((month) => (
-            <div className={styles.historyMonth} key={month.label}>
-              <dt className={styles.historyLabel}>{month.label}</dt>
-              <dd className={styles.historyDays}>
-                {month.days.map((day) => `${day}日`).join("・")}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      {/* 履歴が無ければ見出しごと出さない。下の断り書きと同じ線 */}
+      {work.updates.length === 0 ? null : (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>更新を見つけた日</h2>
+          <dl className={styles.history}>
+            {updatesByMonth(work.updates, latestDay).map((month) => (
+              <div className={styles.historyMonth} key={month.label}>
+                <dt className={styles.historyLabel}>{month.label}</dt>
+                <dd className={styles.historyDays}>
+                  {month.days.map((day) => `${day}日`).join("・")}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
       {/*
        * 曜日だけでなく間隔と履歴も説明するので、履歴がある限り出す。
        * 1つの文字列にしておく。JSX で行を分けると「。」の後ろに空白が入る
