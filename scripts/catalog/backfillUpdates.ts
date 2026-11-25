@@ -31,9 +31,12 @@ function git(args: string[]): string {
   return execFileSync("git", args, { maxBuffer: 2 ** 30 }).toString();
 }
 
-/** 日付ファイルの blob と、その日付。同じ中身の版は1回だけ読む */
-function dateBlobs(): Map<string, DateKey> {
-  const blobs = new Map<string, DateKey>();
+/**
+ * 日付ファイルの blob と、その日付。同じ中身の版は1回だけ読む。
+ * 別の日のファイルが同じ中身になることもあるので、日付は複数持つ
+ */
+function dateBlobs(): Map<string, Set<DateKey>> {
+  const blobs = new Map<string, Set<DateKey>>();
   const commits = git([
     "log",
     "--format=%H",
@@ -55,7 +58,10 @@ function dateBlobs(): Map<string, DateKey> {
           );
 
         if (match !== null && match[2] >= firstDate) {
-          blobs.set(match[1], match[2]);
+          blobs.set(
+            match[1],
+            new Set([...(blobs.get(match[1]) ?? []), match[2]]),
+          );
         }
       });
   });
@@ -65,7 +71,7 @@ function dateBlobs(): Map<string, DateKey> {
 
 /** 題名の鍵 → 回の住所 → その住所が載っていた日 */
 function sightings(
-  blobs: Map<string, DateKey>,
+  blobs: Map<string, Set<DateKey>>,
 ): Map<string, Map<string, Set<DateKey>>> {
   const output = spawnSync("git", ["cat-file", "--batch"], {
     input: `${[...blobs.keys()].join("\n")}\n`,
@@ -82,24 +88,24 @@ function sightings(
       .toString()
       .split(" ");
     const bodyEnd = headerEnd + 1 + Number(size);
-    const date = blobs.get(hash);
+    const dates = blobs.get(hash);
     const works = JSON.parse(
       output.subarray(headerEnd + 1, bodyEnd).toString(),
     ) as { title: string; url: string }[];
 
     position = bodyEnd + 1;
 
-    if (date === undefined) {
+    if (dates === undefined) {
       continue;
     }
 
     works.forEach((work) => {
       const key = titleKey(work.title);
       const byUrl = seen.get(key) ?? new Map<string, Set<DateKey>>();
-      const dates = byUrl.get(work.url) ?? new Set<DateKey>();
+      const listed = byUrl.get(work.url) ?? new Set<DateKey>();
 
-      dates.add(date);
-      byUrl.set(work.url, dates);
+      dates.forEach((date) => listed.add(date));
+      byUrl.set(work.url, listed);
       seen.set(key, byUrl);
     });
   }
@@ -145,7 +151,17 @@ const entries = catalog.map((entry) => {
     updatesOf(byUrl).forEach((date) => updates.add(date));
   }
 
-  return { ...entry, updates: [...updates].sort() };
+  const sorted = [...updates].sort();
+  const first = sorted[0];
+
+  // 台帳は 8/24 から貯めていて、履歴はそれより前まである。初めて見た日も履歴に揃える。
+  // 更新を見た曜日（dayBits）は画面の文言に出るので、ここでは触らない
+  return {
+    ...entry,
+    firstSeen:
+      first !== undefined && first < entry.firstSeen ? first : entry.firstSeen,
+    updates: sorted,
+  };
 });
 
 await fs.writeFile(catalogPath, `${JSON.stringify(entries, null, 2)}\n`);
