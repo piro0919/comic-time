@@ -6,6 +6,7 @@ import { type Episode } from "@/lib/episodes/episode";
 import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
 import { siteHref } from "@/lib/siteCatalog";
 import siteSlug from "@/lib/siteSlug";
+import updateRhythm, { todayInJapan, updatesByMonth } from "@/lib/updateRhythm";
 import { dateLabel } from "@/lib/worksOfDay";
 import { type CatalogEntry, daysOf, weekdayJa } from "@/types/work";
 import EpisodeList from "../EpisodeList";
@@ -28,6 +29,7 @@ export default function WorkDetail({
   work,
 }: WorkDetailProps): React.JSX.Element {
   const days = daysOf(work.dayBits);
+  const rhythm = updateRhythm(work.updates, todayInJapan());
   const episodeSites = work.sites.filter(
     (site) => episodeSourceOf(site.siteUrl) !== undefined,
   );
@@ -61,6 +63,14 @@ export default function WorkDetail({
                       </Link>
                     </Fragment>
                   ))}
+                </dd>
+              </div>
+            )}
+            {rhythm === null ? null : (
+              <div className={styles.fact}>
+                <dt className={styles.factLabel}>更新の間隔</dt>
+                <dd className={styles.factValue}>
+                  {rhythm.paused ? `${rhythm.rhythm}・休載中` : rhythm.rhythm}
                 </dd>
               </div>
             )}
@@ -113,6 +123,19 @@ export default function WorkDetail({
           />
         </section>
       ))}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>更新を見つけた日</h2>
+        <dl className={styles.history}>
+          {updatesByMonth(work.updates).map((month) => (
+            <div className={styles.historyMonth} key={month.label}>
+              <dt className={styles.historyLabel}>{month.label}</dt>
+              <dd className={styles.historyDays}>
+                {month.days.map((day) => `${day}日`).join("・")}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
       {/* 曜日を出していない作品に、曜日の断り書きだけ残っても読み手には意味がない */}
       {days.length === 0 ? null : (
         <p className={styles.note}>
