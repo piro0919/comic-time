@@ -155,11 +155,14 @@ const entries = catalog.map((entry) => {
   const first = sorted[0];
 
   // 台帳は 8/24 から貯めていて、履歴はそれより前まである。初めて見た日も履歴に揃える。
+  // 最後の更新日も履歴の最後に揃える。同じ回が載り続けた日まで lastSeen が進んでいると、
+  // 作品ページの「最後の更新」と「更新を見つけた日」が食い違う（tests/catalogUpdates.test.ts）。
   // 更新を見た曜日（dayBits）は画面の文言に出るので、ここでは触らない
   return {
     ...entry,
     firstSeen:
       first !== undefined && first < entry.firstSeen ? first : entry.firstSeen,
+    lastSeen: sorted.at(-1) ?? entry.lastSeen,
     updates: sorted,
   };
 });

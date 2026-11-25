@@ -89,7 +89,7 @@ export function updatesByMonth(
 ): MonthOfUpdates[] {
   const months = new Map<string, number[]>();
 
-  updates.toSorted().forEach((date) => {
+  [...new Set(updates)].toSorted().forEach((date) => {
     const month = date.slice(0, 7);
 
     months.set(month, [
