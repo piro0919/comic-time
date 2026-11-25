@@ -13,7 +13,7 @@ import { type DateKey } from "@/types/work";
 type Rhythm = "不定期" | "月1" | "週1" | "週2回以上" | "隔週";
 
 export type UpdateRhythm = {
-  /** 最後の更新から、いつもの間隔の2.5倍を過ぎた */
+  /** 最後の更新から、いつもの間隔の2.5倍を過ぎた。2日続けての更新は1回と数える */
   paused: boolean;
   rhythm: Rhythm;
 };
@@ -45,13 +45,6 @@ function medianOf(values: number[]): number {
   return sorted[Math.floor(sorted.length / 2)] ?? 0;
 }
 
-/** 日本時間の今日 */
-export function todayInJapan(now = new Date()): DateKey {
-  return new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo" }).format(
-    now,
-  );
-}
-
 export default function updateRhythm(
   updates: DateKey[],
   today: DateKey,
@@ -67,9 +60,13 @@ export default function updateRhythm(
     .map((date, index) => daysBetween(updates[index], date));
   const median = medianOf(gaps);
   const band = bands.find(([low, high]) => median >= low && median <= high);
+  // 休載の線は、2日続けての更新を1回と数えて引く。木金に更新する作品は間隔が
+  // 1日・6日・1日…と並び、中央値が1日になる。それで線を引くと決まった休みの間に休載中と出る
+  const spaced = gaps.filter((gap) => gap > 1);
+  const usual = spaced.length > 0 ? medianOf(spaced) : median;
 
   return {
-    paused: daysBetween(last, today) > median * pausedRatio,
+    paused: daysBetween(last, today) > usual * pausedRatio,
     rhythm: band?.[2] ?? "不定期",
   };
 }

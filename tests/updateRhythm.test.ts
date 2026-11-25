@@ -1,9 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import updateRhythm, {
-  todayInJapan,
-  updatesByMonth,
-} from "../src/lib/updateRhythm.ts";
+import updateRhythm, { updatesByMonth } from "../src/lib/updateRhythm.ts";
 
 test("更新が3回に満たなければ判定しない", () => {
   assert.equal(updateRhythm(["2026-11-04", "2026-11-11"], "2026-11-12"), null);
@@ -48,6 +45,24 @@ test("年をまたぐ履歴だけ見出しに年を付ける", () => {
   );
 });
 
-test("今日は日本時間で読む", () => {
-  assert.equal(todayInJapan(new Date("2026-11-25T15:30:00Z")), "2026-11-26");
+test("2日続けての更新は、休載の線を引くとき1回と数える", () => {
+  // 木金に更新する作品。間隔は 1・6・1 で中央値は1日だが、決まった休みの間は休載中にしない
+  const thursdayFriday = [
+    "2026-11-12",
+    "2026-11-13",
+    "2026-11-19",
+    "2026-11-20",
+  ];
+
+  assert.equal(updateRhythm(thursdayFriday, "2026-11-26")?.paused, false);
+  // 6日 × 2.5 = 15日
+  assert.equal(updateRhythm(thursdayFriday, "2026-12-05")?.paused, false);
+  assert.equal(updateRhythm(thursdayFriday, "2026-12-06")?.paused, true);
+});
+
+test("毎日更新の作品は1日の間隔のまま線を引く", () => {
+  const daily = ["2026-11-18", "2026-11-19", "2026-11-20"];
+
+  assert.equal(updateRhythm(daily, "2026-11-22")?.paused, false);
+  assert.equal(updateRhythm(daily, "2026-11-23")?.paused, true);
 });

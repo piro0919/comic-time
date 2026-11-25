@@ -3,6 +3,7 @@ import path from "path";
 import localThumb from "@/lib/localThumb";
 import {
   type CatalogEntry,
+  type DateKey,
   daysOf,
   type Weekday,
   weekdayJa,
@@ -31,6 +32,19 @@ export function catalog(): CatalogEntry[] {
   }
 
   return loaded;
+}
+
+/**
+ * 台帳でいちばん新しい更新の日。休載中かどうかはこの日から数える。
+ * ページを作った日から数えると、取得やデプロイが1日遅れたり、使い回しの古いページが
+ * 返ったりするだけで、毎日更新の作品が休載中と出てしまう
+ */
+export function catalogLatestDay(): DateKey | undefined {
+  return catalog().reduce<DateKey | undefined>(
+    (latest, entry) =>
+      latest === undefined || entry.lastSeen > latest ? entry.lastSeen : latest,
+    undefined,
+  );
 }
 
 /**

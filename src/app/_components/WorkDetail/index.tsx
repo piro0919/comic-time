@@ -6,7 +6,8 @@ import { type Episode } from "@/lib/episodes/episode";
 import episodeSourceOf from "@/lib/episodes/episodeSourceOf";
 import { siteHref } from "@/lib/siteCatalog";
 import siteSlug from "@/lib/siteSlug";
-import updateRhythm, { todayInJapan, updatesByMonth } from "@/lib/updateRhythm";
+import updateRhythm, { updatesByMonth } from "@/lib/updateRhythm";
+import { catalogLatestDay } from "@/lib/workCatalog";
 import { dateLabel } from "@/lib/worksOfDay";
 import { type CatalogEntry, daysOf, weekdayJa } from "@/types/work";
 import EpisodeList from "../EpisodeList";
@@ -29,7 +30,10 @@ export default function WorkDetail({
   work,
 }: WorkDetailProps): React.JSX.Element {
   const days = daysOf(work.dayBits);
-  const rhythm = updateRhythm(work.updates, todayInJapan());
+  const rhythm = updateRhythm(
+    work.updates,
+    catalogLatestDay() ?? work.lastSeen,
+  );
   const episodeSites = work.sites.filter(
     (site) => episodeSourceOf(site.siteUrl) !== undefined,
   );
