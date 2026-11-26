@@ -17,6 +17,8 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   testDir: "./e2e",
   use: {
+    // ブラウザは Chrome 本体を使う。Chrome for Testing は入れない
+    channel: "chrome",
     baseURL,
     trace: "retain-on-failure",
   },
