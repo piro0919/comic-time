@@ -93,6 +93,7 @@
     "lint:style": "stylelint --fix '**/*.css'",
     "migrate": "node --env-file-if-exists=.env.local scripts/migrate/index.ts",
     "migrate:check": "node --env-file-if-exists=.env.local scripts/migrate/index.ts --check",
+    "promote": "node scripts/promote/index.ts",
     "postbuild": "next-sitemap",
     "prettier": "prettier --write .",
     "scrape": "node scripts/scrape/index.ts",

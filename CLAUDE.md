@@ -10,6 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` - Build the application for production
 - `npm run start` - Start production server
 - `npm run type-check` - Run TypeScript type checking without emitting files
+- `npm run promote` - Promote the deployment of origin/main's head commit to production. Use it when a scrape push and a local push deploy together and the older one ends up on production
 
 ### Linting and Formatting
 
