@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import workCards, { titleKey, workKey } from "../src/lib/workCards.ts";
+import workCards, {
+  legacyKeysOf,
+  titleKey,
+  workKey,
+} from "../src/lib/workCards.ts";
 import { type Work } from "../src/types/work.ts";
 
 function work(siteName: string, siteUrl: string, title: string): Work {
@@ -50,4 +54,22 @@ test("題名が切られていると、複数サイトの作品として揃わ�
   const full = "あきらめ令嬢は恋心なんていらない。～裏切られたはずなのに～";
 
   assert.notEqual(titleKey(full), titleKey("あきらめ令嬢は恋心なんてい..."));
+});
+
+test("昔の形の見出しは、作品URLとサイト名の見出しの両方を持つ", () => {
+  const url = `${kadokomi}works/1`;
+
+  assert.deepEqual(legacyKeysOf("カドコミ", "作品", url), [
+    url,
+    workKey("カドコミ", "作品"),
+  ]);
+});
+
+test("カードは検索と同じ昔の形で照合する", () => {
+  const [card] = workCards([work("カドコミ", kadokomi, "作品")]);
+
+  assert.deepEqual(
+    card?.legacyKeys,
+    legacyKeysOf("カドコミ", "作品", `${kadokomi}works/1`),
+  );
 });

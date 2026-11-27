@@ -65,6 +65,18 @@ function siteOf(work: Work): CardSite {
 }
 
 /**
+ * 昔の形での登録の見出し。作品URLで持っていた頃と、サイト名で見出しを作っていた頃のぶん。
+ * どちらも 2026-08-21 に今の形へ替えた。カードと検索で同じものを照合する
+ */
+export function legacyKeysOf(
+  siteName: string,
+  title: string,
+  url: string,
+): string[] {
+  return [url, workKey(siteName, title)];
+}
+
+/**
  * 作品をカードに移す。並びは渡された順のまま。
  * どのサイトのぶんかを印で出す。登録はサイトごとに分けたままにする。
  */
@@ -73,8 +85,7 @@ export default function workCards(works: Work[]): WorkCard[] {
     return {
       badge: siteOf(work),
       foundAt: work.foundAt,
-      // 作品URLで持っていた頃と、サイト名で見出しを作っていた頃のぶん
-      legacyKeys: [work.url, workKey(work.siteName, work.title)],
+      legacyKeys: legacyKeysOf(work.siteName, work.title, work.url),
       thumbnailUrl: work.thumbnailUrl,
       title: work.title,
       url: work.url,

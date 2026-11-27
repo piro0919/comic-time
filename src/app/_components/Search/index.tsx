@@ -4,8 +4,13 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { dayLabel, days } from "@/lib/days";
 import useEarlySites from "@/lib/useEarlySites";
 import useFavorites from "@/lib/useFavorites";
-import { workKey } from "@/lib/workCards";
-import { daysOf, type SearchIndex, type Weekday } from "@/types/work";
+import { legacyKeysOf, workKey } from "@/lib/workCards";
+import {
+  daysOf,
+  type IndexedWork,
+  type SearchIndex,
+  type Weekday,
+} from "@/types/work";
 import styles from "./style.module.css";
 
 export type SearchProps = {
@@ -24,6 +29,17 @@ function daysText(dayKeys: Weekday[]): string {
     .join("・");
 }
 
+/** お気に入りの見出し。今の形と、昔の形のぶん */
+function keysOf(
+  { siteNames, siteUrls }: SearchIndex,
+  [title, url, siteIndex]: IndexedWork,
+): [string, string[]] {
+  return [
+    workKey(siteUrls[siteIndex] ?? "", title),
+    legacyKeysOf(siteNames[siteIndex] ?? "", title, url),
+  ];
+}
+
 function normalize(text: string): string {
   return text.toLowerCase().replace(/\s+/g, "");
 }
@@ -37,11 +53,10 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
   const [onlyFavorite, setOnlyFavorite] = useState(false);
   const found = useMemo(() => {
     const needle = normalize(deferred);
-    const filtered = works.filter(([title, url, siteIndex]) => {
-      if (
-        onlyFavorite &&
-        !favorites.hasWork(workKey(siteUrls[siteIndex] ?? "", title), [url])
-      ) {
+    const filtered = works.filter((work) => {
+      const [title, , siteIndex] = work;
+
+      if (onlyFavorite && !favorites.hasWork(...keysOf(index, work))) {
         return false;
       }
 
@@ -54,7 +69,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
 
     // 未入力のまま全件並べても読めないので、絞り込むまでは件数だけ伝える
     return needle === "" && !onlyFavorite ? [] : filtered;
-  }, [deferred, favorites, onlyFavorite, siteNames, siteUrls, works]);
+  }, [deferred, favorites, index, onlyFavorite, siteNames, works]);
 
   return (
     <div className={styles.container}>
@@ -85,48 +100,48 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
           : `${found.length} 件`}
       </p>
       <ul className={styles.list}>
-        {found.slice(0, 200).map(([title, url, siteIndex, dayBits]) => (
-          <li className={styles.item} key={`${title}\u0000${url}`}>
-            <button
-              onClick={() => {
-                favorites.toggleWork(
-                  workKey(siteUrls[siteIndex] ?? "", title),
-                  [url],
-                );
-              }}
-              className={styles.favoriteButton}
-              type="button"
-            >
-              {favorites.hasWork(workKey(siteUrls[siteIndex] ?? "", title), [
-                url,
-              ]) ? (
-                <FaStar color="#ffcd3b" size={21} />
-              ) : (
-                <FaRegStar color="#ffcd3b" size={21} />
-              )}
-            </button>
-            <div className={styles.body}>
-              <a
-                href={
-                  // カードと同じく、先読みを開くと決めたサイト以外は無料で読める最新の回へ送る
-                  earlySites.isEarly(siteUrls[siteIndex] ?? "")
-                    ? url
-                    : `/go?${new URLSearchParams({ site: siteUrls[siteIndex] ?? "", url }).toString()}`
-                }
-                className={styles.title}
-                rel="noopener noreferrer"
-                target="_blank"
+        {found.slice(0, 200).map((work) => {
+          const [title, url, siteIndex, dayBits] = work;
+          const keys = keysOf(index, work);
+
+          return (
+            <li className={styles.item} key={`${title}\u0000${url}`}>
+              <button
+                onClick={() => {
+                  favorites.toggleWork(...keys);
+                }}
+                className={styles.favoriteButton}
+                type="button"
               >
-                {title}
-              </a>
-              <div className={styles.meta}>
-                {[siteNames[siteIndex], daysText(daysOf(dayBits))]
-                  .filter((text) => text !== undefined && text !== "")
-                  .join(" / ")}
+                {favorites.hasWork(...keys) ? (
+                  <FaStar color="#ffcd3b" size={21} />
+                ) : (
+                  <FaRegStar color="#ffcd3b" size={21} />
+                )}
+              </button>
+              <div className={styles.body}>
+                <a
+                  href={
+                    // カードと同じく、先読みを開くと決めたサイト以外は無料で読める最新の回へ送る
+                    earlySites.isEarly(siteUrls[siteIndex] ?? "")
+                      ? url
+                      : `/go?${new URLSearchParams({ site: siteUrls[siteIndex] ?? "", url }).toString()}`
+                  }
+                  className={styles.title}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {title}
+                </a>
+                <div className={styles.meta}>
+                  {[siteNames[siteIndex], daysText(daysOf(dayBits))]
+                    .filter((text) => text !== undefined && text !== "")
+                    .join(" / ")}
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
       {found.length > 200 ? (
         <p className={styles.count}>
