@@ -1,74 +1,23 @@
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Scripts are in `package.json`. Only what you cannot read from the scripts and configs is written here.
 
-## Development Commands
+## Commands and checks
 
-### Core Commands
-
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build the application for production
-- `npm run start` - Start production server
-- `npm run type-check` - Run TypeScript type checking without emitting files
 - `npm run promote` - Promote the deployment of origin/main's head commit to production. Use it when a scrape push and a local push deploy together and the older one ends up on production
+- `npm run knip` also runs in CI. Packages that are only named in config strings (ESLint presets, `ress` in CSS, `squawk-cli` in lefthook) are listed in `knip.json`
+- `@piro0919/eslint-config` only supplies the magic-number rule (tests are exempt). Every other rule lives in `eslint.config.mjs`, which reads each plugin's flat config directly (no FlatCompat)
+- Server secrets are read through `src/lib/serverEnv.ts`, which names any missing variable when login or follows are first used (not at import, so `next build` runs without secrets). The names are listed in `.env.example`
+- Pre-commit (lefthook) also checks migration safety (squawk, and no edits to committed migrations). Commit messages are Conventional Commits **written in English**, subject and body
 
-### Linting and Formatting
+## Layout
 
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Run ESLint with auto-fix
-- `npm run lint:style` - Run Stylelint on CSS files with auto-fix
-- `npm run lint:secret` - Run secretlint to detect secrets (with masking)
-- `npm run prettier` - Format all files with Prettier
-- `npm run lefthook` - Run pre-commit hooks manually
+- `src/app/` holds only routes and Next's special files. Reusable components are in `src/app/_components/`
+- `src/lib/` holds everything else the pages use: hooks, server actions, catalog readers, auth, DB access, and the episode fetchers (`src/lib/episodes/`). Import it as `@/lib/...`
+- PWA via the web app manifest only. `src/app/sw.js/route.ts` serves a service worker that removes itself, to clear out the caching one that used to live at the same path
 
-### Quality Assurance
-
-- `npm run secretlint` - Run secretlint without masking
-- `npm run postbuild` - Generate sitemap after build (runs automatically)
-- `npm run knip` - Find unused files, exports and dependencies (also runs in CI). Packages that are only named in config strings (ESLint presets, `ress` in CSS, `squawk-cli` in lefthook) are listed in `knip.json`
-
-## Architecture Overview
-
-### Project Structure
-
-- **Next.js 15 App Router** - Uses the modern App Router with React 19
-- **TypeScript** - Strict TypeScript configuration with explicit return types required
-- **PWA** - Installable via the web app manifest. No service worker: pages are not cached
-- **Theming** - next-themes for light/dark mode support
-
-### Key Configuration Files
-
-- `next.config.ts` - Next.js configuration with image optimization disabled
-- `tsconfig.json` - TypeScript config with strict mode, path aliases (`@/*` → `./src/*`)
-- `eslint.config.mjs` - Comprehensive ESLint setup with multiple plugins for code quality
-- `lefthook.yml` - Git hooks for pre-commit linting, formatting, and type checking
-
-### Code Quality Standards
-
-- **ESLint Rules**: Enforces consistent-type-definitions as "type", inline type imports, explicit function return types
-- **Shared rules**: `@piro0919/eslint-config` only supplies the magic-number rule (tests are exempt). Every other rule lives in `eslint.config.mjs`, which reads each plugin's flat config directly (no FlatCompat)
-- **File Naming**: Supports camel, kebab, and pascal case for exports
-- **Code Style**: Double quotes, semicolons required, alphabetical sorting of imports/exports
-- **CSS Modules**: Used for styling with global scope restrictions
-
-### Environment and Dependencies
-
-- **Environment Variables**: Server secrets are read through `src/lib/serverEnv.ts`, which names any missing variable when login or follows are first used (not at import, so `next build` runs without secrets). The names are listed in `.env.example`
-- **Fonts**: Noto Sans JP for Japanese text support
-- **Canvas Fallback**: Webpack configured to handle canvas imports
-- **Development Tools**: Window size display utility in development mode
-
-### Pre-commit Quality Gates
-
-All commits are automatically checked for:
-
-- ESLint compliance with auto-fix
-- Prettier formatting with auto-fix
-- Stylelint CSS validation with auto-fix
-- TypeScript type checking
-- Secret detection
-- Migration safety (squawk, and no edits to committed migrations)
-- Conventional commit message format (**written in English**, subject and body)
+## 決まりと経緯
 
 ### 置き場所（リージョン）
 
@@ -113,7 +62,7 @@ All commits are automatically checked for:
 - サーバーで5秒以内に取れなかったサイトだけ、画面が `/api/episodes` を呼んで取り直す。答えは CDN に24時間ためる
 - 4千件あまりをビルドで作ると全作品ぶん取得元へ頼むことになるので、ビルドの中では読まない。
   サイトマップには台帳（`data/catalog.json`）から作品ページを足している。更新を3回見つけていない作品は
-  noindex にしていて、サイトマップにも載せない（下の「検索からの急落と立て直し」）
+  noindex にしていて、サイトマップにも載せない（「検索からの急落と立て直し」）
 - 作品の索引のリンクは先読みしない。開いただけで数百件のページ作りが走る
 - 作品ページは構造化データ（JSON-LD の `ComicSeries`）を出す。題名・作品ページの住所・サムネイル・最後の更新日だけ。
   作者は台帳に無い
@@ -131,63 +80,18 @@ All commits are automatically checked for:
   設定は localStorage と `early_site (user_id, site_url)` に置き、同期はお気に入りと同じく `AccountSync` が行う
 - `/go` が受け取る住所は、7日ぶんの一覧と台帳に控えたものに限る。任意の住所を受けると誰でも使える転送口になる
 
-### 検索からの急落と立て直し（2026-11-26 に本人と合意。2 の noindex は入れた、1 は履歴と間隔の判定を入れた）
+### 検索からの急落と立て直し
 
-**何が起きたか。** 9/12〜10/7 は作品ページが作品名の検索で8〜10位に出て、多い日で表示1,100・クリック58あった。
-10/8 から表示がほぼ0。URL 検査ではトップも上位だった作品ページも「クロール済み - インデックス未登録」で、
-最終クロールは7〜9月。手動による対策は「問題は検出されませんでした」。
-落ちた日は Google の September 2026 spam update（9/24〜10/8）の完了日と一致する。因果は未確定。
-10/7 の `4fed40e3`（一覧を HTML に入れた変更）は、落ちたページがそれ以降クロールされていないので原因の線は薄い。
+経緯・見立て・決めた見せ方の全文は `docs/search-recovery.md`。2026-10-08 から作品ページが検索に出なくなり、
+薄い作品ページが Google のスパムポリシーの Scraping に当たると見られた可能性があるとして、2026-11-26 に本人と2つ決めた。
 
-**見立て。** 作品ページの本文は約315文字で、作品固有の中身は掲載サイト名・最後の更新日・更新曜日・話の題名だけ。
-それが約5,400件ある。スパムポリシーの Scraping の例
-"Republishing content feeds from other sites without providing some type of unique benefit to the user" に
-当てはまると見られた可能性がある。Google の案内は「ポリシーに沿うよう直せば、自動の仕組みが数か月かけて学び直す」で、戻る保証は無い。
-
-**やること（2つとも本人が了承）。**
-
-1. **作品ページに ComicTime だけが持つ観測データを出す。** 他サイトに無いのは、毎日見に行って記録した事実。
-   - 過去の更新日の履歴（いつ更新を見つけたか）
-   - 隔週・月1・休載の判定
-   - 無料・先読み・有料の切り替わりの記録
-2. **データが薄い作品は noindex にし、サイトマップからも外す。** 1を入れても薄いままのページを検索に出さない。
-   ポリシーにも "If you're hosting such content on your site, exclude it from Search." とある
-
-**手元の事実と未決。**
-
-- **更新の履歴は台帳の `updates` に持つ（2026-11-26 に入れた）。** 更新を見つけた日を古い順に並べたもの。
-  8/17〜11/26 のぶんは `npm run catalog:backfill-updates` で git の履歴から書き起こし、それより後は取得のたびに
-  `scripts/catalog` が足す。取得の workflow は浅く clone するので、書き起こしは手元でしか走らない。
-  push で取得のコミットと台帳がぶつかったら、相手の台帳を採って流し直す。何度流してもよい
-- 書き起こしの決まり。8/16 までの日付ファイルは曜日の一覧から作っていて、更新していない作品も入っているので読まない。
-  1日のうちに何度も書き直されるので、全版を合わせて読む。最後の版だけだと 10/21 のように取れなかったサイトのぶんが抜ける。
-  同じ回の住所を6日以内に見ていた日は数えない。dropRepeats が入った 9/9 より前は、同じ回が毎日載っていたため。
-  「新しい住所を見た日」では数えない。マンガUP!は Web で読めるのが冒頭だけで、隔週の更新でも同じ住所が載る
-- 照合。最後の更新日は台帳の `lastSeen` と1件を除いて一致した。違う1件（相棒に毒がありまして！）は 9/9 まで同じ回（0317）が載り続けていた作品で、
-  `lastSeen` が 9/9 になっていた。2026-11-26 に `lastSeen` を本当の最後の更新の 8/28 に直し、全件一致した。
-  いまは書き起こしを流すたびに `firstSeen` と `lastSeen` を履歴の最初と最後に揃える（`scripts/catalog/mergeBackfill.ts`）。
-  `lastSeen` は前へ戻ることがあり、サイトマップの lastmod と構造化データの dateModified も動く。一致は `tests/catalogUpdates.test.ts` が見る
-- 検索に出す線と間隔の判定は、同じ日を1回と数える（`isIndexed` も `next-sitemap.config.js` も重複を除いた日数）
-- **noindex の線は更新3回（`src/lib/isIndexed.ts`）。2026-11-26 に本人から任されて決めた。**
-  隔週・月1・休載の判定に更新の間隔が2つ要るため。新作も3回目で自動的に検索に出る。
-  入れた時点で 5,354件のうち 3,906件が残り、1,448件が noindex になってサイトマップからも外れる。
-  サイトマップの側（`next-sitemap.config.js`）は TypeScript を読めないので同じ数を書いている。食い違えばテストが落ちる
-- 無料・先読み・有料の切り替わりも、いまは作品ページを開いたときに取得元から読むだけで記録していない
-- 画面にどう見せるかは、2026-11-26 に本人が「すべて良い感じに直して」と任せた。今の作品ページの見た目と部品に合わせて作り、push の前に画面を撮って本人に見せる
-- **作品ページに出す形（2026-11-26 に本人と1つずつ決めた）。** 今回は更新の履歴と間隔の判定の2つ。
-  切り替わりの記録は、取得の側で記録を始めてから
-  - 判定は `src/lib/updateRhythm.ts`。間隔の中央値が5日以下なら週2回以上、6〜8日なら週1、13〜15日なら隔週、
-    26〜35日なら月1、それ以外は不定期。最後の更新から中央値の2.5倍を過ぎたら休載中を添える。更新3回未満は判定しない
-  - 休載の線を引く中央値は、1日の間隔を除いて取る（2日続けての更新を1回と数える）。木金に更新する作品は間隔が
-    1・6・1…と並んで中央値が1日になり、決まった休みの間ずっと休載中と出ていた。間隔が全部1日の作品はそのまま
-  - 休載の日数は、ページを作った日ではなく台帳の最新日（全作品の `lastSeen` の最大）から数える。ページは24時間使い回すので、
-    今日から数えると取得やデプロイが1日遅れただけで毎日更新の作品が休載中と出る
-  - 事実の行の「更新を見た曜日」と「最後の更新」の間に「更新の間隔　隔週」の行を足す。休載中は「隔週・休載中」
-  - 「話の一覧」の後、断り書きの前に「更新を見つけた日」の節を置き、月ごとに新しい順で「11月　18日・11日・4日」と並べる。
-    升目の暦にしなかったのは、文字なら検索にも本文として読まれ、毎日更新の作品でも1か月が1行に収まるため
-  - 断り書きは本人が決めた文言。「更新の曜日・間隔・日付は、ComicTime が毎日見に行って更新を見つけた日から
-    作っています。隔週・月1の作品は曜日が1つだけ出ます。更新を見つけた日は、2026年8月17日から記録しています。」
-- 入れたら、残すページの URL を Search Console から再クロールしてもらう。効果の判定は数か月単位
+- **作品ページに ComicTime だけが持つ観測データを出す。** 更新を見つけた日の履歴と、隔週・月1・休載の判定は入れた。
+  無料・先読み・有料の切り替わりは、取得の側で記録を始めてから
+- **更新を3回見つけていない作品は noindex にし、サイトマップからも外す（`src/lib/isIndexed.ts`）。**
+  `next-sitemap.config.js` は TypeScript を読めないので同じ数を書いている。食い違えばテストが落ちる。同じ日は1回と数える
+- 更新の履歴は台帳の `updates`。8/17〜11/26 は `npm run catalog:backfill-updates` で git の履歴から書き起こした（手元でしか走らない）。
+  取得のコミットと台帳がぶつかったら、相手の台帳を採って流し直す。流すたびに `firstSeen`・`lastSeen` を履歴に揃える
+- 間隔の判定は `src/lib/updateRhythm.ts`。休載の日数はページを作った日ではなく台帳の最新日から数える
 
 ### 手元の状態（登録と既読）
 
@@ -258,12 +162,3 @@ All commits are automatically checked for:
   変えたら、両方の本文と最終更新日を直す。入り口は設定の画面の一番下。問い合わせ先は GitHub の Issues（`src/lib/legal.ts`）
 - 端末をまたぐ受け渡しは、以前は共有リンクとQRで行っていた。ログインの同期に置き換えて削除した。
   ログインしない人は端末を移せない
-
-### Application Structure
-
-- `src/app/` - Next.js App Router pages and components. Only routes and Next's special files live here
-- `src/lib/` - Everything else the pages use: hooks, server actions, catalog readers, auth, DB access, and the episode fetchers (`src/lib/episodes/`). Import it as `@/lib/...`
-- `src/app/_components/` - Reusable React components
-- PWA manifest for installable web app experience
-- `src/app/sw.js/route.ts` serves a service worker that removes itself. It is only there
-  to clear out the caching one that used to live at the same path
