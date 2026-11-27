@@ -1597,7 +1597,7 @@
     "foundAt": "12:06",
     "siteName": "マグコミ",
     "siteUrl": "https://magcomi.com/",
-    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984576526866-c03c1dfe70a9d05ea90bdf97ddf60e3c?1795687056",
+    "thumbnailUrl": "https://cdn-img.magcomi.com/public/episode-thumbnail/12207421984576526866-c03c1dfe70a9d05ea90bdf97ddf60e3c?1795766355",
     "title": "リィンカーネーションの花弁",
     "url": "https://magcomi.com/episode/12207421984576526866"
   },
@@ -1684,6 +1684,15 @@
     "url": "https://comic-walker.com/detail/KC_002884_S/episodes/KC_0028840002100021_E"
   },
   {
+    "foundAt": "18:06",
+    "siteName": "ツイ４",
+    "siteUrl": "https://sai-zen-sen.jp/comics/twi4/",
+    "thumbnailUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/res/images/cover.png",
+    "title": "悪役令嬢の四畳半",
+    "url": "https://sai-zen-sen.jp/comics/twi4/yojouhan/0603.html",
+    "workUrl": "https://sai-zen-sen.jp/comics/twi4/yojouhan/"
+  },
+  {
     "foundAt": "12:06",
     "siteName": "ゼロサムオンライン",
     "siteUrl": "https://zerosumonline.com/",
@@ -1722,6 +1731,14 @@
     "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/021702/resized/83506f1a-7bbe-4c10-ab10-1d472df7465c.jpg",
     "title": "異世界、一日千円で生き抜きます",
     "url": "https://comic-walker.com/detail/KC_021702_S/episodes/KC_0217020000200011_E"
+  },
+  {
+    "foundAt": "18:06",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003631/resized/2f7b7b30-e723-4aea-9c96-ebc3749ed835.jpg",
+    "title": "異世界おじさん",
+    "url": "https://comic-walker.com/detail/KC_003631_S/episodes/KC_0036310013500011_E"
   },
   {
     "foundAt": "12:06",
@@ -2696,6 +2713,14 @@
     "thumbnailUrl": "https://cdn-scissors.gigaviewer.com/image/scale/922b7ce3e98efa7dc48044ca53dc264398a953a2/enlarge=0;height=274;no_unsharpmask=1;type=max;variable_params=height,width;version=1;width=448/https%3A%2F%2Fcdn-img.comic-days.com%2Fpublic%2Fseries-thumbnail%2F10834108156644566999-ed76ab833f2eedd545ad8440a1952b11%3F1742363760",
     "title": "獣の奏者",
     "url": "https://comic-days.com/episode/10834108156644623153"
+  },
+  {
+    "foundAt": "18:06",
+    "siteName": "カドコミ",
+    "siteUrl": "https://comic-walker.com/",
+    "thumbnailUrl": "https://cdn.comic-walker.com/integration/cdpf/resources/003997/resized/c183fbe9-e5d9-4847-9056-99eda8d20cc2.jpg",
+    "title": "出遅れテイマーのその日暮らし",
+    "url": "https://comic-walker.com/detail/KC_003997_S/episodes/KC_0039970008600011_E"
   },
   {
     "foundAt": "00:06",
