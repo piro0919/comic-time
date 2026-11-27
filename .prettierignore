@@ -19,6 +19,9 @@ tests/fixtures
 # 短い配列（台帳の updates）の畳み方が取得のたびに入れ替わり、全作品ぶんの差分になる
 data
 
+# Bubblewrap が生成するもの。整形すると update のたびに差分になる
+android
+
 # Prettier に SQL の整形は無い。渡すと pre-commit が落ちる
 *.sql
 

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.kkweb.comictime",
+      "sha256_cert_fingerprints": [
+        "4C:3C:E8:28:A3:DE:0C:D5:1F:55:2F:3F:75:70:BB:A6:2A:37:D2:9D:8B:9E:02:E9:96:97:42:71:42:89:88:F1"
+      ]
+    }
+  }
+]
