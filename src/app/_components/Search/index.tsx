@@ -2,6 +2,7 @@
 import { useDeferredValue, useMemo, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { dayLabel, days } from "@/lib/days";
+import useEarlySites from "@/lib/useEarlySites";
 import useFavorites from "@/lib/useFavorites";
 import { workKey } from "@/lib/workCards";
 import { daysOf, type SearchIndex, type Weekday } from "@/types/work";
@@ -32,6 +33,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
   const [keyword, setKeyword] = useState("");
   const deferred = useDeferredValue(keyword);
   const favorites = useFavorites();
+  const earlySites = useEarlySites();
   const [onlyFavorite, setOnlyFavorite] = useState(false);
   const found = useMemo(() => {
     const needle = normalize(deferred);
@@ -105,8 +107,13 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
             </button>
             <div className={styles.body}>
               <a
+                href={
+                  // カードと同じく、先読みを開くと決めたサイト以外は無料で読める最新の回へ送る
+                  earlySites.isEarly(siteUrls[siteIndex] ?? "")
+                    ? url
+                    : `/go?${new URLSearchParams({ site: siteUrls[siteIndex] ?? "", url }).toString()}`
+                }
                 className={styles.title}
-                href={url}
                 rel="noopener noreferrer"
                 target="_blank"
               >
