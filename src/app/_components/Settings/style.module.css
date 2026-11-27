@@ -124,7 +124,7 @@
   white-space: nowrap;
 }
 
-/* 規約とポリシー。設定はどの画面からも1回で来られるので、ここに置く */
+/* 規約とポリシーと Android アプリ。設定はどの画面からも1回で来られるので、ここに置く */
 .footer {
   color: var(--muted);
   display: flex;

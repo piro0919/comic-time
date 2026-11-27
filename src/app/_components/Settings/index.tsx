@@ -2,11 +2,18 @@
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { MdInfoOutline } from "react-icons/md";
 import useEarlySites from "@/lib/useEarlySites";
 import useIsHydrated from "@/lib/useIsHydrated";
 import styles from "./style.module.css";
+
+/**
+ * Android アプリ（TWA）の APK。GitHub が最新の Release の添付へ転送するので、
+ * Release ごとに同じ名前で添付していれば書き換えなくてよい
+ */
+const APK_URL =
+  "https://github.com/piro0919/comic-time/releases/latest/download/app-release-signed.apk";
 
 export type SettingsProps = {
   sites: { name: string; slug: string; url: string }[];
@@ -26,6 +33,17 @@ export default function Settings({ sites }: SettingsProps): React.JSX.Element {
    * 組み上がる前から選んだ色で描くとサーバーの描画と食い違い、React はそれを直さない
    */
   const hydrated = useIsHydrated();
+  /*
+   * APK の入り口は Android の端末だけに出す。ホーム画面に置いた版やアプリの中で
+   * 開いているときは、もう入っているので出さない。端末はサーバーでは分からない
+   */
+  const showsAndroidApp = useMemo(
+    () =>
+      hydrated &&
+      /\bAndroid\b/.test(navigator.userAgent) &&
+      !matchMedia("(display-mode: standalone)").matches,
+    [hydrated],
+  );
   // 説明は知りたい人だけが開く。常に出しておくと、札より先に文章を読まされる
   const [explained, setExplained] = useState(false);
   const noteId = useId();
@@ -117,6 +135,7 @@ export default function Settings({ sites }: SettingsProps): React.JSX.Element {
         <Link href="/privacy" prefetch={false}>
           プライバシーポリシー
         </Link>
+        {showsAndroidApp ? <a href={APK_URL}>Android アプリ</a> : null}
       </footer>
     </div>
   );
