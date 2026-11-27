@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import InstallButton from "../InstallButton";
 import RankingLink from "../RankingLink";
+import SearchLink from "../SearchLink";
 import SettingsLink from "../SettingsLink";
 import SignIn from "../SignIn";
 import ThemeToggle from "../ThemeToggle";
@@ -52,6 +53,7 @@ export default function Header(): React.JSX.Element {
         </Link>
       </div>
       <div className={styles.actions}>
+        <SearchLink />
         <RankingLink />
         <InstallButton />
         <ThemeToggle />

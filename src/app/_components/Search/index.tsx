@@ -63,7 +63,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
             setKeyword(e.target.value);
           }}
           className={styles.input}
-          placeholder="作品名、作者名、サイト名で検索"
+          placeholder="作品名、サイト名で検索"
           type="search"
           value={keyword}
         />
@@ -84,7 +84,7 @@ export default function Search({ index }: SearchProps): React.JSX.Element {
       </p>
       <ul className={styles.list}>
         {found.slice(0, 200).map(([title, url, siteIndex, dayBits]) => (
-          <li className={styles.item} key={url}>
+          <li className={styles.item} key={`${title}\u0000${url}`}>
             <button
               onClick={() => {
                 favorites.toggleWork(

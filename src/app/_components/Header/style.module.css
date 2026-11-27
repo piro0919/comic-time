@@ -37,6 +37,22 @@
   position: relative;
 }
 
+/*
+ * 携帯の幅では右のアイコンが入りきらず、ログインが画面の外へ切れる。
+ * アイコンを詰めると押す的が小さくなるので、題字の文字を隠してアプリのアイコンだけにする。
+ * 帰り道の名前として読み上げには残す
+ */
+@media (width < 440px) {
+  .wordmark {
+    block-size: 1px;
+    clip-path: inset(50%);
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
 /* 飾りの星。題字の外側に散らし、文字の並びには干渉させない */
 .star {
   animation: twinkle 3.2s ease-in-out infinite;

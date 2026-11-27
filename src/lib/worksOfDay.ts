@@ -58,7 +58,7 @@ function forScreen(work: Work): Work {
 }
 
 /** その日に更新された作品。ファイルが無ければ空 */
-export function worksOfDate(date: DateKey): Work[] {
+function worksOfDate(date: DateKey): Work[] {
   try {
     return JSON.parse(
       fs.readFileSync(path.join(dataDir, `${date}.json`), "utf-8"),

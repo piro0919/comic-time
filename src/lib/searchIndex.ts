@@ -1,32 +1,29 @@
-import { recentDateOf, worksOfDate } from "@/lib/worksOfDay";
-import { type IndexedWork, type SearchIndex, weekdays } from "@/types/work";
+import { catalog } from "@/lib/workCatalog";
+import { type IndexedWork, type SearchIndex } from "@/types/work";
 
-/** 直近7日ぶんの更新から、検索用の一覧を組み立てる */
+/**
+ * 台帳の全作品から、検索用の一覧を組み立てる。
+ *
+ * data/works の7日ぶんから作ると、隔週や月1の作品が更新の無い週に見つからない。
+ * お気に入りはサイトごとなので、複数のサイトに載る作品はサイトの数だけ並べる。
+ */
 export default function searchIndex(): SearchIndex {
   const siteNames: string[] = [];
   const siteUrls: string[] = [];
-  const byUrl = new Map<string, IndexedWork>();
+  const works: IndexedWork[] = [];
 
-  weekdays.forEach((weekday, index) => {
-    worksOfDate(recentDateOf(weekday)).forEach((work) => {
-      const found = byUrl.get(work.url);
-
-      if (found !== undefined) {
-        found[3] |= 1 << index;
-
-        return;
+  catalog().forEach((entry) => {
+    entry.sites.forEach((site) => {
+      if (!siteUrls.includes(site.siteUrl)) {
+        siteNames.push(site.name);
+        siteUrls.push(site.siteUrl);
       }
 
-      if (!siteNames.includes(work.siteName)) {
-        siteNames.push(work.siteName);
-        siteUrls.push(work.siteUrl);
-      }
-
-      byUrl.set(work.url, [
-        work.title,
-        work.url,
-        siteNames.indexOf(work.siteName),
-        1 << index,
+      works.push([
+        entry.title,
+        site.url,
+        siteUrls.indexOf(site.siteUrl),
+        entry.dayBits,
       ]);
     });
   });
@@ -34,8 +31,6 @@ export default function searchIndex(): SearchIndex {
   return {
     siteNames,
     siteUrls,
-    works: [...byUrl.values()].toSorted((a, b) =>
-      a[0].localeCompare(b[0], "ja"),
-    ),
+    works: works.toSorted((a, b) => a[0].localeCompare(b[0], "ja")),
   };
 }
